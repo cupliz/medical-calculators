@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "material-ui": "^0.19.4",
+    "muicss": "^0.9.27",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14",
-    "semantic-ui-css": "^2.2.12"
+    "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "react-scripts start",
