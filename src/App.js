@@ -1,14 +1,15 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar'
 import { Tabs, Tab } from 'material-ui/Tabs'
-import { grey900, cyan500, lightBlue500 } from 'material-ui/styles/colors'
+import { grey900, cyan500 } from 'material-ui/styles/colors'
 import Calculate from './components/Calculate'
 import Reference from './components/Reference'
+import { DOC_BLUE_DEFAULT } from './colors/colors'
 
 const App = () => {
   const buttonStyle = { backgroundColor: '#fff', color: grey900 }
   const inkBarStyle = { backgroundColor: cyan500 }
-  const appBarStyle = { backgroundColor: lightBlue500 }
+  const appBarStyle = { backgroundColor: DOC_BLUE_DEFAULT }
   return (
     <div>
       <AppBar
