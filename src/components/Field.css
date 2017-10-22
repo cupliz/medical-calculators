@@ -1,0 +1,23 @@
+.badge {
+  border-radius: 5px;
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 3px 7px;
+  margin-left: 10px;
+}
+
+.description {
+  margin-bottom: 10px;
+  display: block;
+  color: #616161;
+}
+
+.field-wrapper {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width : 768px) {
+  .field-wrapper {
+    margin: 0 50px 20px 0;
+  }
+}

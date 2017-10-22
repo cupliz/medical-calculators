@@ -1,0 +1,29 @@
+.calculate-wrapper {
+  margin-top: 25px;
+  display: flex;
+}
+
+.fields-wrapper {
+  flex-shrink: 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reference-wrapper {
+  padding: 25px;
+}
+
+.result-wrapper {
+  padding: 25px;
+}
+
+@media only screen and (max-width : 768px) {
+  .calculate-wrapper {
+    flex-direction: column;
+  }
+  .fields-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
