@@ -25,3 +25,6 @@ export const FAB = '#1565C0'
 
 // Used for ’No Interaction’ search results
 export const CLEAR_GREEN = '#00D7CC'
+
+// Used for ’Significant’ drug results
+export const MID_ORANGE = '#F9AF14'
