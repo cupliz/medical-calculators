@@ -6,7 +6,8 @@
     "material-ui": "^0.19.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "semantic-ui-css": "^2.2.12"
   },
   "scripts": {
     "start": "react-scripts start",
