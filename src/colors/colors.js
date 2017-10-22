@@ -34,3 +34,6 @@ export const ALERT_RED = '#FF616F'
 
 // Used in Icons
 export const ICON_TURQUOISE = '#34C1D6'
+
+// Used in Icons
+export const ICON_YELLOW = '#FDCA73'
