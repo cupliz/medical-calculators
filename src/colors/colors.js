@@ -31,3 +31,6 @@ export const MID_ORANGE = '#F9AF14'
 
 // Used for ’Serious’ drug results
 export const ALERT_RED = '#FF616F'
+
+// Used in Icons
+export const ICON_TURQUOISE = '#34C1D6'
