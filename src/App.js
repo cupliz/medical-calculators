@@ -8,9 +8,11 @@ import Reference from './components/Reference'
 const App = () => {
   const buttonStyle = { backgroundColor: '#fff', color: grey900 }
   const inkBarStyle = { backgroundColor: cyan500 }
+  const appBarStyle = {  }
   return (
     <div>
       <AppBar
+        style={appBarStyle}
         title={
           <span>
             CHADS<sub>2</sub> Score for Atrial Fibrillation
