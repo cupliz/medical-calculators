@@ -16,3 +16,6 @@ export const DEEP_BLUE = '#1496EA'
 // Blue highlight text
 // TODO CHECK THE SAME NAMING
 export const DOC_BLUE_700_2 = '#E1F5FE'
+
+// Bot speech bubble
+export const WARM_GREY = '#F5F5F5'
