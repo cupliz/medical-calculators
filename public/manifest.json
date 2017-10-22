@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Medical Calculators",
+  "name": "Doc Bot - Medical Calculators",
   "icons": [
     {
       "src": "favicon.ico",
