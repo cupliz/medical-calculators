@@ -28,6 +28,7 @@ chrome-user-data
 *.sublime-workspace
 .idea
 *.iml#
+.vscode
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
