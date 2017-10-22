@@ -22,3 +22,6 @@ export const WARM_GREY = '#F5F5F5'
 
 // Secondary Color (FAB)
 export const FAB = '#1565C0'
+
+// Used for ’No Interaction’ search results
+export const CLEAR_GREEN = '#00D7CC'
