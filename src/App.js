@@ -1,21 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import AppBar from 'material-ui/AppBar'
+import { Tabs, Tab } from 'material-ui/Tabs'
+import { grey900, cyan500 } from 'material-ui/styles/colors'
+import Calculate from './components/Calculate'
+import Reference from './components/Reference'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+const App = () => {
+  const buttonStyle = { backgroundColor: '#fff', color: grey900 }
+  const inkBarStyle = { backgroundColor: cyan500 }
+  return (
+    <div>
+      <AppBar
+        title={
+          <span>
+            CHADS<sub>2</sub> Score for Atrial Fibrillation
+          </span>
+        }
+      />
+      <Tabs inkBarStyle={inkBarStyle}>
+        <Tab label='Calculate' buttonStyle={buttonStyle}>
+          <Calculate />
+        </Tab>
+        <Tab label='Reference' buttonStyle={buttonStyle}>
+          <Reference />
+        </Tab>
+      </Tabs>
+    </div>
+  )
 }
 
-export default App;
+export default App
