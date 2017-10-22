@@ -40,3 +40,6 @@ export const ICON_YELLOW = '#FDCA73'
 
 // Used in Icons
 export const ICON_RED = '#FF616F'
+
+// Used in Icons
+export const ICON_DARK_GREY = '#5C6474'
