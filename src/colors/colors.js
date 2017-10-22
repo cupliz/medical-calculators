@@ -28,3 +28,6 @@ export const CLEAR_GREEN = '#00D7CC'
 
 // Used for ’Significant’ drug results
 export const MID_ORANGE = '#F9AF14'
+
+// Used for ’Serious’ drug results
+export const ALERT_RED = '#FF616F'
