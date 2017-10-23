@@ -65,7 +65,7 @@ const Result = props => {
             Points
           </Typography>
           <Typography type='title' className={classes.resultText}>
-            {this.props.points}
+            {props.points}
           </Typography>
           <Typography type='caption' className={classes.resultText}>
             Stroke risk was 3.2% per year in >90,000 patients (the Swedish
