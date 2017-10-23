@@ -46,8 +46,8 @@ class Field extends React.Component {
           </FormLabel>
           <RadioGroup
             row
-            aria-label='gender'
-            name='gender'
+            aria-label={this.props.label}
+            name={this.props.yesPoints.toString()}
             className={classes.group}
             value={this.state.value}
             onChange={this.handleChange}
