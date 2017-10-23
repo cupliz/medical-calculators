@@ -41,7 +41,7 @@ class Body extends React.Component {
     const { classes, theme } = this.props
 
     return (
-      <div className={classes.root} style={{ width: 500 }}>
+      <div className={classes.root}>
         <AppBar position='static' color='default'>
           <Tabs
             value={this.state.value}
