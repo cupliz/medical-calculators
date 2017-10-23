@@ -9,10 +9,6 @@ import CloseIcon from 'material-ui-icons/Close'
 import MoreIcon from 'material-ui-icons/MoreVert'
 
 const styles = theme => ({
-  root: {
-    marginTop: theme.spacing.unit * 3,
-    width: '100%'
-  },
   flex: {
     flex: 1
   },
@@ -25,7 +21,7 @@ const styles = theme => ({
 function ButtonAppBar (props) {
   const { classes } = props
   return (
-    <div className={classes.root}>
+    <div>
       <AppBar position='static'>
         <Toolbar>
           <IconButton
