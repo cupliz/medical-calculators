@@ -17,7 +17,10 @@ const styles = theme => ({
   },
   title: {
     flex: 1,
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    letterSpacing: 1.5,
+    fontSize: 14,
+    fontWeight: 'bold'
   },
   pos: {
     marginBottom: 12,
