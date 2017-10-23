@@ -27,7 +27,8 @@ const styles = theme => ({
     color: theme.palette.text.secondary
   },
   shareIcon: {
-    width: 16
+    width: 16,
+    height: 16
   }
 })
 
