@@ -33,6 +33,8 @@ class Field extends React.Component {
 
   handleChange = (event, value) => {
     this.setState({ value })
+    console.log(value, 'value')
+    this.props.onChange(value)
   }
 
   render () {
@@ -53,7 +55,7 @@ class Field extends React.Component {
             onChange={this.handleChange}
           >
             <FormControlLabel
-              value={0}
+              value={'0'}
               control={<Radio />}
               label={
                 <span>
@@ -62,7 +64,7 @@ class Field extends React.Component {
               }
             />
             <FormControlLabel
-              value={this.props.yesPoints}
+              value={this.props.yesPoints.toString()}
               control={<Radio />}
               label={
                 <span>
