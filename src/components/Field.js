@@ -53,7 +53,7 @@ class Field extends React.Component {
             onChange={this.handleChange}
           >
             <FormControlLabel
-              value='no'
+              value={0}
               control={<Radio />}
               label={
                 <span>
@@ -62,7 +62,7 @@ class Field extends React.Component {
               }
             />
             <FormControlLabel
-              value='yes'
+              value={this.props.yesPoints}
               control={<Radio />}
               label={
                 <span>
