@@ -16,7 +16,10 @@ const styles = theme => ({
   },
   badge: {
     borderRadius: '5px',
-    backgroundColor: '#00bcd4'
+    backgroundColor: '#00bcd4',
+    color: '#fff',
+    padding: '3px 7px',
+    marginLeft: '10px'
   }
 })
 
