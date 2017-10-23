@@ -32,7 +32,6 @@ class Field extends React.Component {
       <div className={classes.root}>
         <FormControl
           component='fieldset'
-          required
           className={classes.formControl}
         >
           <FormLabel component='legend'>
