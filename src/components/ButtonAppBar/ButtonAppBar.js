@@ -6,7 +6,7 @@ import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
 import Button from 'material-ui/Button'
 import IconButton from 'material-ui/IconButton'
-import MenuIcon from 'material-ui-icons/Menu'
+import CloseIcon from 'material-ui-icons/Close'
 
 const styles = theme => ({
   root: {
@@ -33,7 +33,7 @@ function ButtonAppBar (props) {
             color='contrast'
             aria-label='Close'
           >
-            <MenuIcon />
+            <CloseIcon />
           </IconButton>
           <Typography type='title' color='inherit' className={classes.flex}>
             Title
