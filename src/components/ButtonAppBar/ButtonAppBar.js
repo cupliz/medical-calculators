@@ -16,7 +16,7 @@ const styles = theme => ({
   flex: {
     flex: 1
   },
-  menuButton: {
+  closeButton: {
     marginLeft: -12,
     marginRight: 20
   }
@@ -29,7 +29,7 @@ function ButtonAppBar (props) {
       <AppBar position='static'>
         <Toolbar>
           <IconButton
-            className={classes.menuButton}
+            className={classes.closeButton}
             color='contrast'
             aria-label='Menu'
           >
