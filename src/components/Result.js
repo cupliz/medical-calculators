@@ -25,6 +25,9 @@ const styles = theme => ({
   pos: {
     marginBottom: 12,
     color: theme.palette.text.secondary
+  },
+  shareIcon: {
+    width: 16
   }
 })
 
@@ -41,7 +44,7 @@ const Result = props => {
                 Result
               </Typography>
               <IconButton aria-label='Share'>
-                <ShareIcon />
+                <ShareIcon className={classes.shareIcon} />
               </IconButton>
             </div>
           }
