@@ -33,7 +33,7 @@ class Field extends React.Component {
 
   handleChange = (event, value) => {
     this.setState({ value })
-    this.props.onChange(value)
+    this.props.onChange(event, value)
   }
 
   render () {

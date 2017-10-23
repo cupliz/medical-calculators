@@ -7,14 +7,14 @@ class Calculate extends Component {
   }
 
   handleChange = (e, value) => {
-    if (value === 0) {
+    if (value === '0') {
       const maxValue = parseInt(e.target.name, 10)
       this.setState(prevState => {
         return { points: prevState.points - maxValue }
       })
     } else {
       this.setState(prevState => {
-        return { points: prevState.points + value }
+        return { points: prevState.points + parseInt(value, 10) }
       })
     }
   }
