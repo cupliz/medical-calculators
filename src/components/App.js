@@ -1,9 +1,9 @@
 import React from 'react'
-import AppBar from './ButtonAppBar/ButtonAppBar'
+import ButtonAppBar from './ButtonAppBar/ButtonAppBar'
 
 const App = () => (
   <div className='app'>
-    <AppBar />
+    <ButtonAppBar />
   </div>
 )
 
