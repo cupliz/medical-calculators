@@ -41,11 +41,11 @@ const styles = theme => ({
   }
 })
 
-const Result = props => {
-  const { classes } = props
-
-  return (
-    <div>
+const renderResult = (classes, points) => {
+  if (points === 0) {
+    return <p>test</p>
+  } else {
+    return (
       <Card className={classes.card}>
         <CardHeader
           className={classes.header}
@@ -65,7 +65,7 @@ const Result = props => {
             Points
           </Typography>
           <Typography type='title' className={classes.resultText}>
-            {props.points}
+            {points}
           </Typography>
           <Typography type='caption' className={classes.resultText}>
             Stroke risk was 3.2% per year in >90,000 patients (the Swedish
@@ -74,8 +74,14 @@ const Result = props => {
           </Typography>
         </CardContent>
       </Card>
-    </div>
-  )
+    )
+  }
+}
+
+const Result = props => {
+  const { classes, points } = props
+
+  return <div>{renderResult(classes, points)}</div>
 }
 
 Result.propTypes = {
