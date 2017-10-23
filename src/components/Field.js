@@ -20,6 +20,9 @@ const styles = theme => ({
     color: '#fff',
     padding: '3px 7px',
     marginLeft: '10px'
+  },
+  focusedLabel: {
+    color: 'rgba(0, 0, 0, 0.54)'
   }
 })
 
@@ -38,7 +41,7 @@ class Field extends React.Component {
     return (
       <div className={classes.root}>
         <FormControl component='fieldset' className={classes.formControl}>
-          <FormLabel component='legend'>
+          <FormLabel component='legend' classes={{ focused: classes.focusedLabel }}>
             Congestive Heart Failure History
           </FormLabel>
           <RadioGroup
