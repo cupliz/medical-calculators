@@ -1,8 +1,9 @@
 import React from 'react'
+import AppBar from './AppBar/AppBar'
 
 const App = () => (
   <div className='app'>
-    Inside App
+    <AppBar />
   </div>
 )
 
