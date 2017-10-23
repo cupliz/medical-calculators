@@ -66,7 +66,7 @@ class Field extends React.Component {
               control={<Radio />}
               label={
                 <span>
-                  Yes <small className={classes.badge}>1</small>
+                  Yes <small className={classes.badge}>{this.props.yesPoints}</small>
                 </span>
               }
             />
