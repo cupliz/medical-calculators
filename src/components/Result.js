@@ -11,9 +11,12 @@ const styles = theme => ({
   card: {
     minWidth: 275
   },
-  title: {
+  titleWrapper: {
     display: 'flex',
     alignItems: 'center'
+  },
+  title: {
+    flex: 1
   },
   pos: {
     marginBottom: 12,
@@ -29,8 +32,10 @@ const Result = props => {
       <Card className={classes.card}>
         <CardHeader
           title={
-            <div className={classes.title}>
-              <Typography type='title'>Result</Typography>
+            <div className={classes.titleWrapper}>
+              <Typography type='title' className={classes.title}>
+                Result
+              </Typography>
               <IconButton aria-label='Share'>
                 <ShareIcon />
               </IconButton>
