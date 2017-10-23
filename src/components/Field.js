@@ -2,12 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Radio, { RadioGroup } from 'material-ui/Radio'
-import {
-  FormLabel,
-  FormControl,
-  FormControlLabel,
-  FormHelperText
-} from 'material-ui/Form'
+import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
 
 const styles = theme => ({
   root: {
@@ -40,7 +35,9 @@ class Field extends React.Component {
           required
           className={classes.formControl}
         >
-          <FormLabel component='legend'>Gender</FormLabel>
+          <FormLabel component='legend'>
+            Congestive Heart Failure History
+          </FormLabel>
           <RadioGroup
             aria-label='gender'
             name='gender'
@@ -48,50 +45,9 @@ class Field extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           >
-            <FormControlLabel value='male' control={<Radio />} label='Male' />
-            <FormControlLabel
-              value='female'
-              control={<Radio />}
-              label='Female'
-            />
-            <FormControlLabel value='other' control={<Radio />} label='Other' />
-            <FormControlLabel
-              value='disabled'
-              disabled
-              control={<Radio />}
-              label='Disabled'
-            />
+            <FormControlLabel value='no' control={<Radio />} label='No' />
+            <FormControlLabel value='yes' control={<Radio />} label='Yes' />
           </RadioGroup>
-        </FormControl>
-        <FormControl
-          component='fieldset'
-          required
-          error
-          className={classes.formControl}
-        >
-          <FormLabel component='legend'>Gender</FormLabel>
-          <RadioGroup
-            aria-label='gender'
-            name='gender'
-            className={classes.group}
-            value={this.state.value}
-            onChange={this.handleChange}
-          >
-            <FormControlLabel value='male' control={<Radio />} label='Male' />
-            <FormControlLabel
-              value='female'
-              control={<Radio />}
-              label='Female'
-            />
-            <FormControlLabel value='other' control={<Radio />} label='Other' />
-            <FormControlLabel
-              value='disabled'
-              disabled
-              control={<Radio />}
-              label='Disabled'
-            />
-          </RadioGroup>
-          <FormHelperText>You can display an error</FormHelperText>
         </FormControl>
       </div>
     )
