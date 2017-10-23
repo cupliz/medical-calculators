@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import Card, { CardActions, CardContent, CardHeader } from 'material-ui/Card'
-import Button from 'material-ui/Button'
+import Card, { CardContent, CardHeader } from 'material-ui/Card'
 import IconButton from 'material-ui/IconButton'
 import ShareIcon from 'material-ui-icons/Share'
 import Typography from 'material-ui/Typography'
@@ -43,7 +42,7 @@ const styles = theme => ({
 
 const renderResult = (classes, points) => {
   if (points === 0) {
-    return <p>test</p>
+    return null
   } else {
     return (
       <Card className={classes.card}>
