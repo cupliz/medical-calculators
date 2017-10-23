@@ -5,7 +5,7 @@ import SwipeableViews from 'react-swipeable-views'
 import AppBar from 'material-ui/AppBar'
 import Tabs, { Tab } from 'material-ui/Tabs'
 
-function TabContainer ({ children, dir }) {
+const TabContainer = ({ children, dir }) => {
   return (
     <div dir={dir} style={{ padding: 8 * 3 }}>
       {children}
