@@ -50,9 +50,8 @@ class Body extends React.Component {
             textColor='primary'
             fullWidth
           >
-            <Tab label='Item One' />
-            <Tab label='Item Two' />
-            <Tab label='Item Three' />
+            <Tab label='Calculate' />
+            <Tab label='References' />
           </Tabs>
         </AppBar>
         <SwipeableViews
