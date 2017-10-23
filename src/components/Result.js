@@ -33,6 +33,9 @@ const styles = theme => ({
     width: 16,
     height: 16
   },
+  content: {
+    paddingTop: 10
+  },
   resultText: {
     marginBottom: 15
   }
@@ -57,7 +60,7 @@ const Result = props => {
             </div>
           }
         />
-        <CardContent {classes.content}>
+        <CardContent className={classes.content}>
           <Typography type='caption' className={classes.resultText}>
             Points
           </Typography>
