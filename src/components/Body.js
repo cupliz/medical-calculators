@@ -7,7 +7,7 @@ import Tabs, { Tab } from 'material-ui/Tabs'
 
 const TabContainer = ({ children, dir }) => {
   return (
-    <div dir={dir} style={{ padding: 8 * 3 }}>
+    <div dir={dir} style={{ padding: 8 * 2 }}>
       {children}
     </div>
   )
