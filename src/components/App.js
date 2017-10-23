@@ -1,9 +1,9 @@
 import React from 'react'
-import ButtonAppBar from './ButtonAppBar/ButtonAppBar'
+import Header from './Header/Header'
 
 const App = () => (
   <div className='app'>
-    <ButtonAppBar />
+    <Header />
   </div>
 )
 

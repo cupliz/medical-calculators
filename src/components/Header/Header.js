@@ -18,7 +18,7 @@ const styles = theme => ({
   }
 })
 
-function ButtonAppBar (props) {
+function Header (props) {
   const { classes } = props
   return (
     <div>
@@ -46,8 +46,8 @@ function ButtonAppBar (props) {
   )
 }
 
-ButtonAppBar.propTypes = {
+Header.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(ButtonAppBar)
+export default withStyles(styles)(Header)
