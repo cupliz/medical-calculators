@@ -32,6 +32,9 @@ const styles = theme => ({
   shareIcon: {
     width: 16,
     height: 16
+  },
+  resultText: {
+    marginBottom: 15
   }
 })
 
@@ -54,10 +57,14 @@ const Result = props => {
             </div>
           }
         />
-        <CardContent>
-          <Typography type='caption'>Points</Typography>
-          <Typography type='title'>3</Typography>
-          <Typography type='caption'>
+        <CardContent {classes.content}>
+          <Typography type='caption' className={classes.resultText}>
+            Points
+          </Typography>
+          <Typography type='title' className={classes.resultText}>
+            3
+          </Typography>
+          <Typography type='caption' className={classes.resultText}>
             Stroke risk was 3.2% per year in >90,000 patients (the Swedish
             Atrial Fibrillation Cohort Study) and 4.6% risk of
             stroke/TIA/systemic embolism.
