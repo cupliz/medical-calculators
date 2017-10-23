@@ -38,6 +38,7 @@ class Field extends React.Component {
             Congestive Heart Failure History
           </FormLabel>
           <RadioGroup
+            row
             aria-label='gender'
             name='gender'
             className={classes.group}
