@@ -16,7 +16,8 @@ const styles = theme => ({
     alignItems: 'center'
   },
   title: {
-    flex: 1
+    flex: 1,
+    textTransform: 'uppercase'
   },
   pos: {
     marginBottom: 12,
