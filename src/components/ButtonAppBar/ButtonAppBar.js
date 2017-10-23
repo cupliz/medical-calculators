@@ -31,7 +31,7 @@ function ButtonAppBar (props) {
           <IconButton
             className={classes.closeButton}
             color='contrast'
-            aria-label='Menu'
+            aria-label='Close'
           >
             <MenuIcon />
           </IconButton>
