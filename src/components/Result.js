@@ -25,7 +25,7 @@ const styles = theme => ({
   }
 })
 
-function Result (props) {
+const Result = props => {
   const { classes } = props
   const bull = <span className={classes.bullet}>•</span>
 
