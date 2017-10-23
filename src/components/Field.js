@@ -30,10 +30,7 @@ class Field extends React.Component {
 
     return (
       <div className={classes.root}>
-        <FormControl
-          component='fieldset'
-          className={classes.formControl}
-        >
+        <FormControl component='fieldset' className={classes.formControl}>
           <FormLabel component='legend'>
             Congestive Heart Failure History
           </FormLabel>
@@ -45,8 +42,24 @@ class Field extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           >
-            <FormControlLabel value='no' control={<Radio />} label='No' />
-            <FormControlLabel value='yes' control={<Radio />} label='Yes' />
+            <FormControlLabel
+              value='no'
+              control={<Radio />}
+              label={
+                <span>
+                  No <small className='badge'>0</small>
+                </span>
+              }
+            />
+            <FormControlLabel
+              value='yes'
+              control={<Radio />}
+              label={
+                <span>
+                  Yes <small className='badge'>1</small>
+                </span>
+              }
+            />
           </RadioGroup>
         </FormControl>
       </div>
