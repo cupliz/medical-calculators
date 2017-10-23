@@ -9,7 +9,7 @@ import References from './References'
 
 const TabContainer = ({ children, dir }) => {
   return (
-    <div dir={dir} style={{ padding: 8 * 2 }}>
+    <div dir={dir}>
       {children}
     </div>
   )
