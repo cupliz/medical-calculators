@@ -32,7 +32,7 @@ function Header (props) {
             <CloseIcon />
           </IconButton>
           <Typography type='title' color='inherit' className={classes.flex}>
-            Title
+            CHADS<sub>2</sub> Score for Atrial Fibrillation
           </Typography>
           <IconButton
             color='contrast'
