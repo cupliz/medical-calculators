@@ -25,31 +25,31 @@ class Calculate extends Component {
     return (
       <div className='calculate-wrapper'>
         <div className='fields-wrapper'>
-          {/* <Field */}
-          {/* label='Congestive Heart Failure History' */}
-          {/* yesPoints={1} */}
-          {/* onChange={this.handleChange} */}
-          {/* /> */}
-          {/* <Field */}
-          {/* label='Hypertension history' */}
-          {/* yesPoints={1} */}
-          {/* onChange={this.handleChange} */}
-          {/* /> */}
-          {/* <Field */}
-          {/* label='Age ≥ 75 years' */}
-          {/* yesPoints={1} */}
-          {/* onChange={this.handleChange} */}
-          {/* /> */}
-          {/* <Field */}
-          {/* label='Diabetes melitus history' */}
-          {/* yesPoints={1} */}
-          {/* onChange={this.handleChange} */}
-          {/* /> */}
-          {/* <Field */}
-          {/* label='Stroke or TIA symptoms previously' */}
-          {/* yesPoints={2} */}
-          {/* onChange={this.handleChange} */}
-          {/* /> */}
+          <Field
+            label='Congestive Heart Failure History'
+            yesPoints={1}
+            onChange={this.handleChange}
+          />
+          <Field
+            label='Hypertension history'
+            yesPoints={1}
+            onChange={this.handleChange}
+          />
+          <Field
+            label='Age ≥ 75 years'
+            yesPoints={1}
+            onChange={this.handleChange}
+          />
+          <Field
+            label='Diabetes melitus history'
+            yesPoints={1}
+            onChange={this.handleChange}
+          />
+          <Field
+            label='Stroke or TIA symptoms previously'
+            yesPoints={2}
+            onChange={this.handleChange}
+          />
         </div>
         <div className='result-wrapper'>
           <Result points={this.state.points} />
