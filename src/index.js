@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import 'muicss/dist/css/mui.min.css'
-import App from './App'
+import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 
 const theme = createMuiTheme()
