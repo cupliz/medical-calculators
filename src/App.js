@@ -6,8 +6,8 @@ import Reference from './components/Reference'
 import { DEEP_BLUE, DOC_BLUE_DEFAULT } from './colors/colors'
 
 const App = () => {
-  const inkBarStyle = { backgroundColor: DEEP_BLUE }
   const appBarStyle = { backgroundColor: DOC_BLUE_DEFAULT }
+  const inkBarStyle = { backgroundColor: DEEP_BLUE }
   return (
     <div>
       <AppBar
