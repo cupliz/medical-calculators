@@ -9,7 +9,7 @@ const styles = theme => ({
     display: 'flex'
   },
   formControl: {
-    margin: theme.spacing.unit * 3
+    margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme.spacing.unit * 2}px`
   },
   group: {
     margin: `${theme.spacing.unit}px 0`
@@ -42,7 +42,10 @@ class Field extends React.Component {
     return (
       <div className={classes.root}>
         <FormControl component='fieldset' className={classes.formControl}>
-          <FormLabel component='legend' classes={{ focused: classes.focusedLabel }}>
+          <FormLabel
+            component='legend'
+            classes={{ focused: classes.focusedLabel }}
+          >
             {this.props.label}
           </FormLabel>
           <RadioGroup
@@ -67,7 +70,10 @@ class Field extends React.Component {
               control={<Radio />}
               label={
                 <span>
-                  Yes <small className={classes.badge}>{this.props.yesPoints}</small>
+                  Yes{' '}
+                  <small className={classes.badge}>
+                    {this.props.yesPoints}
+                  </small>
                 </span>
               }
             />
