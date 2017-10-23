@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Field from './Field'
+import Result from './Result'
 
 class Calculate extends Component {
   state = {
@@ -22,33 +23,32 @@ class Calculate extends Component {
   render () {
     return (
       <div className='calculate'>
-        <div className='fields'>
-          <Field
-            label='Congestive Heart Failure History'
-            yesPoints={1}
-            onChange={this.handleChange}
-          />
-          <Field
-            label='Hypertension history'
-            yesPoints={1}
-            onChange={this.handleChange}
-          />
-          <Field
-            label='Age ≥ 75 years'
-            yesPoints={1}
-            onChange={this.handleChange}
-          />
-          <Field
-            label='Diabetes melitus history'
-            yesPoints={1}
-            onChange={this.handleChange}
-          />
-          <Field
-            label='Stroke or TIA symptoms previously'
-            yesPoints={2}
-            onChange={this.handleChange}
-          />
-        </div>
+        <Field
+          label='Congestive Heart Failure History'
+          yesPoints={1}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Hypertension history'
+          yesPoints={1}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Age ≥ 75 years'
+          yesPoints={1}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Diabetes melitus history'
+          yesPoints={1}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        <Result />
       </div>
     )
   }
