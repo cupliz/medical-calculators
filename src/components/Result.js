@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Card, { CardActions, CardContent, CardHeader } from 'material-ui/Card'
 import Button from 'material-ui/Button'
+import IconButton from 'material-ui/IconButton'
+import ShareIcon from 'material-ui-icons/Share'
 import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
@@ -26,7 +28,16 @@ const Result = props => {
   return (
     <div>
       <Card className={classes.card}>
-        <CardHeader title={<Typography type='title'>Result</Typography>} />
+        <CardHeader
+          title={
+            <div>
+              <Typography type='title'>Result</Typography>
+              <IconButton aria-label='Share'>
+                <ShareIcon />
+              </IconButton>
+            </div>
+          }
+        />
         <CardContent>
           <Typography type='caption'>Points</Typography>
           <Typography type='title'>3</Typography>
