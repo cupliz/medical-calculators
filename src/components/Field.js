@@ -28,11 +28,16 @@ const styles = theme => ({
 
 class Field extends React.Component {
   state = {
-    value: ''
+    value: '',
+    checked: false
   }
 
   handleChange = (event, value) => {
-    this.setState({ value })
+    let checked = false
+    if (value === this.props.yesPoints.toString()) {
+      checked = true
+    }
+    this.setState({ value, checked })
     this.props.onChange(event, value)
   }
 
@@ -58,7 +63,7 @@ class Field extends React.Component {
           >
             <FormControlLabel
               value={'0'}
-              control={<Radio />}
+              control={<Radio checked={!this.state.checked} />}
               label={
                 <span>
                   No <small className={classes.badge}>0</small>
@@ -67,7 +72,7 @@ class Field extends React.Component {
             />
             <FormControlLabel
               value={this.props.yesPoints.toString()}
-              control={<Radio />}
+              control={<Radio checked={this.state.checked} />}
               label={
                 <span>
                   Yes{' '}
