@@ -15,6 +15,9 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center'
   },
+  header: {
+    paddingBottom: 0
+  },
   title: {
     flex: 1,
     textTransform: 'uppercase',
@@ -39,6 +42,7 @@ const Result = props => {
     <div>
       <Card className={classes.card}>
         <CardHeader
+          className={classes.header}
           title={
             <div className={classes.titleWrapper}>
               <Typography type='title' className={classes.title}>
