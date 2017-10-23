@@ -42,7 +42,7 @@ class Field extends React.Component {
       <div className={classes.root}>
         <FormControl component='fieldset' className={classes.formControl}>
           <FormLabel component='legend' classes={{ focused: classes.focusedLabel }}>
-            Congestive Heart Failure History
+            {this.props.label}
           </FormLabel>
           <RadioGroup
             row
