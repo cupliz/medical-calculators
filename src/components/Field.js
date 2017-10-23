@@ -13,6 +13,10 @@ const styles = theme => ({
   },
   group: {
     margin: `${theme.spacing.unit}px 0`
+  },
+  badge: {
+    borderRadius: '5px',
+    backgroundColor: '#00bcd4'
   }
 })
 
@@ -47,7 +51,7 @@ class Field extends React.Component {
               control={<Radio />}
               label={
                 <span>
-                  No <small className='badge'>0</small>
+                  No <small className={classes.badge}>0</small>
                 </span>
               }
             />
@@ -56,7 +60,7 @@ class Field extends React.Component {
               control={<Radio />}
               label={
                 <span>
-                  Yes <small className='badge'>1</small>
+                  Yes <small className={classes.badge}>1</small>
                 </span>
               }
             />
