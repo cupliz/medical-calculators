@@ -26,22 +26,16 @@ const Result = props => {
   return (
     <div>
       <Card className={classes.card}>
-        <CardHeader title={<Typography type='body1'>Result</Typography>} />
+        <CardHeader title={<Typography type='title'>Result</Typography>} />
         <CardContent>
-          <Typography type='body1' className={classes.title}>
-            Word of the Day
+          <Typography type='caption'>Points</Typography>
+          <Typography type='title'>3</Typography>
+          <Typography type='caption'>
+            Stroke risk was 3.2% per year in >90,000 patients (the Swedish
+            Atrial Fibrillation Cohort Study) and 4.6% risk of
+            stroke/TIA/systemic embolism.
           </Typography>
-          <Typography type='headline' component='h2'>
-            123
-          </Typography>
-          <Typography type='body1' className={classes.pos}>
-            adjective
-          </Typography>
-          <Typography component='p'>well meaning and kindly</Typography>
         </CardContent>
-        <CardActions>
-          <Button dense>Learn More</Button>
-        </CardActions>
       </Card>
     </div>
   )
