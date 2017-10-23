@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import Card, { CardActions, CardContent } from 'material-ui/Card'
+import Card, { CardActions, CardContent, CardHeader } from 'material-ui/Card'
 import Button from 'material-ui/Button'
 import Typography from 'material-ui/Typography'
 
@@ -26,6 +26,7 @@ const Result = props => {
   return (
     <div>
       <Card className={classes.card}>
+        <CardHeader title={<Typography type='body1'>Result</Typography>} />
         <CardContent>
           <Typography type='body1' className={classes.title}>
             Word of the Day
@@ -36,9 +37,7 @@ const Result = props => {
           <Typography type='body1' className={classes.pos}>
             adjective
           </Typography>
-          <Typography component='p'>
-            well meaning and kindly
-          </Typography>
+          <Typography component='p'>well meaning and kindly</Typography>
         </CardContent>
         <CardActions>
           <Button dense>Learn More</Button>
