@@ -13,6 +13,7 @@ const data = [
   },
   {
     title: 'References',
+    type: 'paragraph',
     content:
       'Gage BF, Waterman AD, Shannon W, et. al. Validation of clinical classification schemes for predicting stroke: results from the National Registry of Atrial Fibrillation, JAMA, 2001 Jun 13;285(22):2864-70'
   }
