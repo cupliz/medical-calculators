@@ -18,11 +18,7 @@ const styles = theme => ({
     paddingBottom: 0
   },
   title: {
-    flex: 1,
-    textTransform: 'uppercase',
-    letterSpacing: 1.5,
-    fontSize: 14,
-    fontWeight: 'bold'
+    flex: 1
   },
   pos: {
     marginBottom: 12,
@@ -49,7 +45,7 @@ const ClosableCard = props => {
         className={classes.header}
         title={
           <div className={classes.titleWrapper}>
-            <Typography type='title' className={classes.title}>
+            <Typography type='subheading' className={classes.title}>
               Result
             </Typography>
             <IconButton aria-label='Share'>
