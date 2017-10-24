@@ -4,7 +4,8 @@ import ClosableCard from './ClosableCard'
 const data = [
   {
     title: 'Notes',
-    list: [
+    type: 'list',
+    content: [
       'Estimates stroke risk in patients with atrial fibrillation',
       'The CHADS2 score is one of several risk stratification schemes that can help determine the 1 year risk of an ischemic stroke in a non-anticoagulated patient with non-valvular atrial fibrillation and determine which antithrombotic therapy is most appropriate',
       'The CHA2-DS2-VASC score may be a better tool to assess stroke risk in patients with atrial fibrillation.  It risk stratifies these patients better than the CHADS2 score'
@@ -23,6 +24,7 @@ const renderCards = () => {
       <ClosableCard
         key={item.title}
         title={item.title}
+        type={item.type}
         content={item.content}
       />
     )
