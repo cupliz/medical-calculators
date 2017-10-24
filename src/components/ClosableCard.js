@@ -38,7 +38,7 @@ const styles = theme => ({
 })
 
 const ClosableCard = props => {
-  const { classes, points } = props
+  const { classes, title, content } = props
 
   return (
     <Card className={classes.card}>
@@ -47,7 +47,7 @@ const ClosableCard = props => {
         title={
           <div className={classes.titleWrapper}>
             <Typography type='subheading' className={classes.title}>
-              Notes
+              {title}
             </Typography>
             <IconButton aria-label='Share'>
               <CloseIcon className={classes.shareIcon} />
@@ -57,15 +57,7 @@ const ClosableCard = props => {
       />
       <CardContent className={classes.content}>
         <Typography type='caption' className={classes.resultText}>
-          Points
-        </Typography>
-        <Typography type='title' className={classes.resultText}>
-          {points}
-        </Typography>
-        <Typography type='caption' className={classes.resultText}>
-          Stroke risk was 3.2% per year in >90,000 patients (the Swedish
-          Atrial Fibrillation Cohort Study) and 4.6% risk of
-          stroke/TIA/systemic embolism.
+          {content}
         </Typography>
       </CardContent>
     </Card>
