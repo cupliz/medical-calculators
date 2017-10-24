@@ -33,7 +33,7 @@ const styles = theme => ({
   }
 })
 
-const renderContent = (type, content, classes) => {
+const renderContent = (type, content, id, classes) => {
   if (type === 'paragraph') {
     return (
       <Typography type='caption' className={classes.resultText}>
@@ -43,8 +43,8 @@ const renderContent = (type, content, classes) => {
   } else if (type === 'list') {
     return (
       <ul>
-        {content.map(item => (
-          <li>
+        {content.map((item, index) => (
+          <li key={`${id} - ${index}`}>
             <Typography type='caption' className={classes.resultText}>
               {item}
             </Typography>
@@ -56,7 +56,7 @@ const renderContent = (type, content, classes) => {
 }
 
 const ClosableCard = props => {
-  const { classes, title, type, content } = props
+  const { classes, title, type, id, content } = props
 
   return (
     <Card className={classes.card}>
@@ -74,7 +74,7 @@ const ClosableCard = props => {
         }
       />
       <CardContent className={classes.content}>
-        {renderContent(type, content, classes)}
+        {renderContent(type, content, id, classes)}
       </CardContent>
     </Card>
   )

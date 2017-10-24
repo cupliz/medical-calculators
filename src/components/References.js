@@ -3,6 +3,7 @@ import ClosableCard from './ClosableCard'
 
 const data = [
   {
+    id: 1,
     title: 'Notes',
     type: 'list',
     content: [
@@ -12,6 +13,7 @@ const data = [
     ]
   },
   {
+    id: 2,
     title: 'References',
     type: 'paragraph',
     content:
@@ -27,6 +29,7 @@ const renderCards = () => {
         title={item.title}
         type={item.type}
         content={item.content}
+        id={item.id}
       />
     )
   })
