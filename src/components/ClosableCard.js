@@ -40,47 +40,39 @@ const styles = theme => ({
   }
 })
 
-const renderResult = (classes, points) => {
-  if (points === 0) {
-    return null
-  } else {
-    return (
-      <Card className={classes.card}>
-        <CardHeader
-          className={classes.header}
-          title={
-            <div className={classes.titleWrapper}>
-              <Typography type='title' className={classes.title}>
-                Result
-              </Typography>
-              <IconButton aria-label='Share'>
-                <CloseIcon className={classes.shareIcon} />
-              </IconButton>
-            </div>
-          }
-        />
-        <CardContent className={classes.content}>
-          <Typography type='caption' className={classes.resultText}>
-            Points
-          </Typography>
-          <Typography type='title' className={classes.resultText}>
-            {points}
-          </Typography>
-          <Typography type='caption' className={classes.resultText}>
-            Stroke risk was 3.2% per year in >90,000 patients (the Swedish
-            Atrial Fibrillation Cohort Study) and 4.6% risk of
-            stroke/TIA/systemic embolism.
-          </Typography>
-        </CardContent>
-      </Card>
-    )
-  }
-}
-
 const ClosableCard = props => {
   const { classes, points } = props
 
-  return <div>{renderResult(classes, points)}</div>
+  return (
+    <Card className={classes.card}>
+      <CardHeader
+        className={classes.header}
+        title={
+          <div className={classes.titleWrapper}>
+            <Typography type='title' className={classes.title}>
+              Result
+            </Typography>
+            <IconButton aria-label='Share'>
+              <CloseIcon className={classes.shareIcon} />
+            </IconButton>
+          </div>
+        }
+      />
+      <CardContent className={classes.content}>
+        <Typography type='caption' className={classes.resultText}>
+          Points
+        </Typography>
+        <Typography type='title' className={classes.resultText}>
+          {points}
+        </Typography>
+        <Typography type='caption' className={classes.resultText}>
+          Stroke risk was 3.2% per year in >90,000 patients (the Swedish
+          Atrial Fibrillation Cohort Study) and 4.6% risk of
+          stroke/TIA/systemic embolism.
+        </Typography>
+      </CardContent>
+    </Card>
+  )
 }
 
 ClosableCard.propTypes = {
