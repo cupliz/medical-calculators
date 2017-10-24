@@ -54,7 +54,7 @@ const renderResult = (classes, points) => {
                 Result
               </Typography>
               <IconButton aria-label='Share'>
-                <ShareIcon className={classes.shareIcon} />
+                <CloseIcon className={classes.shareIcon} />
               </IconButton>
             </div>
           }
@@ -77,14 +77,14 @@ const renderResult = (classes, points) => {
   }
 }
 
-const Result = props => {
+const ClosableCard = props => {
   const { classes, points } = props
 
   return <div>{renderResult(classes, points)}</div>
 }
 
-Result.propTypes = {
+ClosableCard.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Result)
+export default withStyles(styles)(ClosableCard)
