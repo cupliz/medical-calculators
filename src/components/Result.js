@@ -24,10 +24,6 @@ const styles = theme => ({
     fontSize: 14,
     fontWeight: 'bold'
   },
-  pos: {
-    marginBottom: 12,
-    color: theme.palette.text.secondary
-  },
   shareIcon: {
     width: 16,
     height: 16

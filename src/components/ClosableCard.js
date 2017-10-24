@@ -21,10 +21,6 @@ const styles = theme => ({
     flex: 1,
     fontWeight: '500'
   },
-  pos: {
-    marginBottom: 12,
-    color: theme.palette.text.secondary
-  },
   shareIcon: {
     width: 16,
     height: 16
