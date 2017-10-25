@@ -15,7 +15,7 @@ const styles = theme => ({
       .spacing.unit * 2}px`
   },
   group: {
-    margin: `${theme.spacing.unit}px 0`
+    margin: 0
   },
   badge: {
     borderRadius: '5px',
