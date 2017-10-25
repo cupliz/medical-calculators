@@ -8,11 +8,7 @@ import Calculate from './Calculate'
 import References from './References'
 
 const TabContainer = ({ children, dir }) => {
-  return (
-    <div dir={dir}>
-      {children}
-    </div>
-  )
+  return <div dir={dir}>{children}</div>
 }
 
 TabContainer.propTypes = {
@@ -23,7 +19,8 @@ TabContainer.propTypes = {
 const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper
-  }
+  },
+  tabSelected: { border: '1px solid red' }
 })
 
 class Body extends React.Component {
@@ -52,7 +49,12 @@ class Body extends React.Component {
             textColor='primary'
             fullWidth
           >
-            <Tab label='Calculate' />
+            <Tab
+              label='Calculate'
+              classes={{
+                rootPrimarySelected: classes.tabSelected
+              }}
+            />
             <Tab label='References' />
           </Tabs>
         </AppBar>
