@@ -29,6 +29,9 @@ const styles = theme => ({
   },
   focusedLabel: {
     color: 'rgba(0, 0, 0, 0.54)'
+  },
+  formControlLabel: {
+    marginRight: `${theme.spacing.unit * 4}px`
   }
 })
 
@@ -69,6 +72,7 @@ class Field extends React.Component {
           >
             <FormControlLabel
               value={'0'}
+              className={classes.formControlLabel}
               control={<Radio checked={!this.state.checked} />}
               label={
                 <span>
@@ -78,6 +82,7 @@ class Field extends React.Component {
             />
             <FormControlLabel
               value={this.props.yesPoints.toString()}
+              className={classes.formControlLabel}
               control={<Radio checked={this.state.checked} />}
               label={
                 <span>
