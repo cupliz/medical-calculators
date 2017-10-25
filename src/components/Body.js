@@ -20,7 +20,8 @@ const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper
   },
-  tabSelected: { color: '#000' }
+  tabSelected: { color: '#000' },
+  tabContainer: { textTransform: 'capitalize' }
 })
 
 class Body extends React.Component {
@@ -52,7 +53,8 @@ class Body extends React.Component {
             <Tab
               label='Calculate'
               classes={{
-                rootPrimarySelected: classes.tabSelected
+                rootPrimarySelected: classes.tabSelected,
+                labelContainer: classes.tabContainer
               }}
             />
             <Tab label='References' />
