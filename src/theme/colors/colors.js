@@ -46,3 +46,6 @@ export const ICON_DARK_GREY = '#5C6474'
 
 // Separator Grey Color
 export const SEPARATOR_GREY = '#e5e6e8'
+
+// Field Grey Bg Color
+export const FIELD_GREY_BG = '#fafbfd'
