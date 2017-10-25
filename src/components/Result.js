@@ -63,7 +63,7 @@ const renderResult = (classes, points, data) => {
             {points}
           </Typography>
           {data.map(item => (
-            <Typography type='caption' className={classes.resultText}>
+            <Typography key={`${points}-${item}`} type='caption' className={classes.resultText}>
               {item}
             </Typography>
           ))}
