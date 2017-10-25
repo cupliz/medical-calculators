@@ -8,7 +8,7 @@ const styles = theme => ({
   root: {
     display: 'flex',
     borderBottom: `1px solid ${theme.brand.colors.separatorGrey}`,
-    backgroundColor: theme.brand.colors.fieldGreyBg
+    backgroundColor: theme.brand.colors.greyBg
   },
   formControl: {
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme

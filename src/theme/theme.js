@@ -10,7 +10,7 @@ import {
   DOC_BLUE_700_2,
   DOC_BLUE_DEFAULT,
   FAB,
-  FIELD_GREY_BG,
+  GREY_BG,
   ICON_DARK_GREY,
   ICON_RED,
   ICON_TURQUOISE,
@@ -42,7 +42,7 @@ const theme = createMuiTheme({
       iconRed: ICON_RED,
       iconDarkGrey: ICON_DARK_GREY,
       separatorGrey: SEPARATOR_GREY,
-      fieldGreyBg: FIELD_GREY_BG
+      greyBg: GREY_BG
     }
   }
 })
