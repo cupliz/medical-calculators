@@ -35,6 +35,6 @@ const renderCards = () => {
   })
 }
 
-const References = () => <div>{renderCards()}</div>
+const References = () => renderCards()
 
 export default References
