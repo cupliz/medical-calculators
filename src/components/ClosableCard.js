@@ -31,6 +31,12 @@ const styles = theme => ({
   },
   resultText: {
     marginBottom: 15
+  },
+  listWrapper: {
+    paddingLeft: 16
+  },
+  list: {
+
   }
 })
 
@@ -43,9 +49,9 @@ const renderContent = (type, content, id, classes) => {
     )
   } else if (type === 'list') {
     return (
-      <ul>
+      <ul className={classes.listWrapper}>
         {content.map((item, index) => (
-          <li key={`${id} - ${index}`}>
+          <li key={`${id} - ${index}`} className={classes.list}>
             <Typography type='caption' className={classes.resultText}>
               {item}
             </Typography>
