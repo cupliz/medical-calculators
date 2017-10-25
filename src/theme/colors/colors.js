@@ -44,5 +44,5 @@ export const ICON_RED = '#FF616F'
 // Used in Icons
 export const ICON_DARK_GREY = '#5C6474'
 
-// Separator Gray Color
-export const SEPARATOR_GRAY = '#e5e6e8'
+// Separator Grey Color
+export const SEPARATOR_GREY = '#e5e6e8'
