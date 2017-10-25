@@ -12,6 +12,9 @@ const styles = theme => ({
   flex: {
     flex: 1
   },
+  appBar: {
+    backgroundColor: theme.brand.colors.primary
+  },
   closeButton: {
     marginLeft: -12,
     marginRight: 20
@@ -22,7 +25,7 @@ function Header (props) {
   const { classes } = props
   return (
     <div>
-      <AppBar position='static'>
+      <AppBar position='static' className={classes.appBar}>
         <Toolbar>
           <IconButton
             className={classes.closeButton}
