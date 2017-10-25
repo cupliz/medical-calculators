@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Radio, { RadioGroup } from 'material-ui/Radio'
 import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
+import { SEPARATOR_GREY } from '../theme/colors/colors'
 
 const styles = theme => ({
   root: {
-    display: 'flex'
+    display: 'flex',
+    borderBottom: `1px solid ${SEPARATOR_GREY}`
   },
   formControl: {
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme.spacing.unit * 2}px`
