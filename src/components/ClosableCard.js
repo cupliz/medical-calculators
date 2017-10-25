@@ -35,7 +35,8 @@ const styles = theme => ({
     marginBottom: 15
   },
   listWrapper: {
-    paddingLeft: 16
+    paddingLeft: 16,
+    marginTop: 0
   },
   list: {
 
