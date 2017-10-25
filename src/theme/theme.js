@@ -1,5 +1,5 @@
 import { createMuiTheme } from 'material-ui/styles'
-import lightBlue from 'material-ui/colors/lightBlue'
+import blue from 'material-ui/colors/blue'
 import {
   ALERT_RED,
   CLEAR_GREEN,
@@ -22,7 +22,7 @@ import {
 
 const theme = createMuiTheme({
   palette: {
-    primary: lightBlue
+    primary: blue
   },
   brand: {
     primary: DOC_BLUE_DEFAULT,
