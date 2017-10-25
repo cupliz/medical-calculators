@@ -7,8 +7,8 @@ import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
 const styles = theme => ({
   root: {
     display: 'flex',
-    borderBottom: `1px solid ${theme.brand.separatorGrey}`,
-    backgroundColor: theme.brand.fieldGreyBg
+    borderBottom: `1px solid ${theme.brand.colors.separatorGrey}`,
+    backgroundColor: theme.brand.colors.fieldGreyBg
   },
   formControl: {
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme.spacing.unit * 2}px`

@@ -25,23 +25,25 @@ const theme = createMuiTheme({
     primary: blue
   },
   brand: {
-    primary: DOC_BLUE_DEFAULT,
-    darkPrimary: DOC_BLUE_700,
-    userSpeech: DOC_BLUE_400,
-    50: DOC_BLUE_50,
-    icons: DEEP_BLUE,
-    highlight: DOC_BLUE_700_2,
-    botSpeech: WARM_GREY,
-    secondary: FAB,
-    noInteraction: CLEAR_GREEN,
-    significant: MID_ORANGE,
-    serious: ALERT_RED,
-    iconTurquoise: ICON_TURQUOISE,
-    iconYellow: ICON_YELLOW,
-    iconRed: ICON_RED,
-    iconDarkGrey: ICON_DARK_GREY,
-    separatorGrey: SEPARATOR_GREY,
-    fieldGreyBg: FIELD_GREY_BG
+    colors: {
+      primary: DOC_BLUE_DEFAULT,
+      darkPrimary: DOC_BLUE_700,
+      userSpeech: DOC_BLUE_400,
+      50: DOC_BLUE_50,
+      icons: DEEP_BLUE,
+      highlight: DOC_BLUE_700_2,
+      botSpeech: WARM_GREY,
+      secondary: FAB,
+      noInteraction: CLEAR_GREEN,
+      significant: MID_ORANGE,
+      serious: ALERT_RED,
+      iconTurquoise: ICON_TURQUOISE,
+      iconYellow: ICON_YELLOW,
+      iconRed: ICON_RED,
+      iconDarkGrey: ICON_DARK_GREY,
+      separatorGrey: SEPARATOR_GREY,
+      fieldGreyBg: FIELD_GREY_BG
+    }
   }
 })
 
