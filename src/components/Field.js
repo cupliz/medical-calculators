@@ -26,7 +26,7 @@ const styles = theme => ({
   },
   unCheckedBadge: {
     borderRadius: '5px',
-    backgroundColor: 'gray',
+    backgroundColor: '#c1c7cd',
     color: '#fff',
     padding: '3px 7px',
     marginLeft: '10px'
