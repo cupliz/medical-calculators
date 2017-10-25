@@ -81,7 +81,7 @@ class Calculate extends Component {
           yesPoints={2}
           onChange={this.handleChange}
         />
-        <Result points={this.state.points} />
+        <Result points={this.state.points} data={data[this.state.points]} />
       </div>
     )
   }
