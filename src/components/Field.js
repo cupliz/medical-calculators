@@ -83,7 +83,7 @@ class Field extends React.Component {
                 <span>
                   Yes{' '}
                   <small className={classes.badge}>
-                    {this.props.yesPoints}
+                    +{this.props.yesPoints}
                   </small>
                 </span>
               }
