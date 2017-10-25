@@ -22,7 +22,10 @@ const styles = theme => ({
   },
   tabSelected: { color: '#000' },
   labelContainer: { textTransform: 'capitalize' },
-  label: { fontSize: 17 }
+  label: { fontSize: 17 },
+  tabs: {
+    backgroundColor: '#fff'
+  }
 })
 
 class Body extends React.Component {
@@ -46,6 +49,7 @@ class Body extends React.Component {
         <AppBar position='static' color='default'>
           <Tabs
             value={this.state.value}
+            className={classes.tabs}
             onChange={this.handleChange}
             indicatorColor='primary'
             textColor='primary'
