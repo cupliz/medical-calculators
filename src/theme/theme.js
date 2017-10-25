@@ -1,4 +1,5 @@
 import { createMuiTheme } from 'material-ui/styles'
+import lightBlue from 'material-ui/colors/lightBlue'
 import {
   ALERT_RED,
   CLEAR_GREEN,
@@ -8,16 +9,21 @@ import {
   DOC_BLUE_700,
   DOC_BLUE_700_2,
   DOC_BLUE_DEFAULT,
-  FAB, FIELD_GREY_BG,
+  FAB,
+  FIELD_GREY_BG,
   ICON_DARK_GREY,
   ICON_RED,
   ICON_TURQUOISE,
   ICON_YELLOW,
-  MID_ORANGE, SEPARATOR_GREY,
+  MID_ORANGE,
+  SEPARATOR_GREY,
   WARM_GREY
 } from './colors/colors'
 
 const theme = createMuiTheme({
+  palette: {
+    primary: lightBlue
+  },
   brand: {
     primary: DOC_BLUE_DEFAULT,
     darkPrimary: DOC_BLUE_700,
