@@ -57,7 +57,13 @@ class Body extends React.Component {
                 labelContainer: classes.tabContainer
               }}
             />
-            <Tab label='References' />
+            <Tab
+              label='References'
+              classes={{
+                rootPrimarySelected: classes.tabSelected,
+                labelContainer: classes.tabContainer
+              }}
+            />
           </Tabs>
         </AppBar>
         <SwipeableViews
