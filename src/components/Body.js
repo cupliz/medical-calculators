@@ -21,7 +21,8 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper
   },
   tabSelected: { color: '#000' },
-  tabContainer: { textTransform: 'capitalize' }
+  labelContainer: { textTransform: 'capitalize' },
+  label: { fontSize: 17 }
 })
 
 class Body extends React.Component {
@@ -54,14 +55,16 @@ class Body extends React.Component {
               label='Calculate'
               classes={{
                 rootPrimarySelected: classes.tabSelected,
-                labelContainer: classes.tabContainer
+                labelContainer: classes.labelContainer,
+                label: classes.label
               }}
             />
             <Tab
               label='References'
               classes={{
                 rootPrimarySelected: classes.tabSelected,
-                labelContainer: classes.tabContainer
+                labelContainer: classes.labelContainer,
+                label: classes.label
               }}
             />
           </Tabs>
