@@ -8,12 +8,12 @@ import {
   DOC_BLUE_700,
   DOC_BLUE_700_2,
   DOC_BLUE_DEFAULT,
-  FAB,
+  FAB, FIELD_GREY_BG,
   ICON_DARK_GREY,
   ICON_RED,
   ICON_TURQUOISE,
   ICON_YELLOW,
-  MID_ORANGE,
+  MID_ORANGE, SEPARATOR_GREY,
   WARM_GREY
 } from './colors/colors'
 
@@ -33,7 +33,9 @@ const theme = createMuiTheme({
     iconTurquoise: ICON_TURQUOISE,
     iconYellow: ICON_YELLOW,
     iconRed: ICON_RED,
-    iconDarkGrey: ICON_DARK_GREY
+    iconDarkGrey: ICON_DARK_GREY,
+    separatorGrey: SEPARATOR_GREY,
+    fieldGreyBg: FIELD_GREY_BG
   }
 })
 
