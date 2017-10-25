@@ -17,9 +17,16 @@ const styles = theme => ({
   group: {
     margin: 0
   },
-  badge: {
+  checkedBadge: {
     borderRadius: '5px',
     backgroundColor: '#00bcd4',
+    color: '#fff',
+    padding: '3px 7px',
+    marginLeft: '10px'
+  },
+  unCheckedBadge: {
+    borderRadius: '5px',
+    backgroundColor: 'gray',
     color: '#fff',
     padding: '3px 7px',
     marginLeft: '10px'
@@ -76,7 +83,7 @@ class Field extends React.Component {
               control={<Radio checked={!this.state.checked} />}
               label={
                 <span>
-                  No <small className={classes.badge}>0</small>
+                  No <small className={this.state.checked ? classes.unCheckedBadge : classes.checkedBadge}>0</small>
                 </span>
               }
             />
@@ -87,7 +94,7 @@ class Field extends React.Component {
               label={
                 <span>
                   Yes{' '}
-                  <small className={classes.badge}>
+                  <small className={!this.state.checked ? classes.unCheckedBadge : classes.checkedBadge}>
                     +{this.props.yesPoints}
                   </small>
                 </span>
