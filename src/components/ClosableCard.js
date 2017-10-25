@@ -11,7 +11,8 @@ const styles = theme => ({
     minWidth: 275,
     backgroundColor: theme.brand.colors.greyBg,
     boxShadow: 'none',
-    borderBottom: `1px solid ${theme.brand.colors.separatorGrey}`
+    borderBottom: `1px solid ${theme.brand.colors.separatorGrey}`,
+    borderTop: `1px solid ${theme.brand.colors.separatorGrey}`
   },
   titleWrapper: {
     display: 'flex',
