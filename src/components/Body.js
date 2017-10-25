@@ -20,7 +20,7 @@ const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper
   },
-  tabSelected: { border: '1px solid red' }
+  tabSelected: { color: '#000' }
 })
 
 class Body extends React.Component {
