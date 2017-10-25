@@ -51,7 +51,7 @@ const renderContent = (type, content, id, classes) => {
         {content}
       </Typography>
     )
-  } else if (type === 'list') {
+  } else if (type === 'unordered-list') {
     return (
       <ul className={classes.listWrapper}>
         {content.map((item, index) => (
@@ -62,6 +62,18 @@ const renderContent = (type, content, id, classes) => {
           </li>
         ))}
       </ul>
+    )
+  } else if (type === 'ordered-list') {
+    return (
+      <ol className={classes.listWrapper}>
+        {content.map((item, index) => (
+          <li key={`${id} - ${index}`} className={classes.list}>
+            <Typography type='caption' className={classes.resultText}>
+              {item}
+            </Typography>
+          </li>
+        ))}
+      </ol>
     )
   }
 }
