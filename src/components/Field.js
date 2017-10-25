@@ -11,7 +11,8 @@ const styles = theme => ({
     backgroundColor: theme.brand.colors.fieldGreyBg
   },
   formControl: {
-    margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme.spacing.unit * 2}px`
+    margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
+      .spacing.unit * 2}px`
   },
   group: {
     margin: `${theme.spacing.unit}px 0`
@@ -22,6 +23,9 @@ const styles = theme => ({
     color: '#fff',
     padding: '3px 7px',
     marginLeft: '10px'
+  },
+  label: {
+    fontSize: 14
   },
   focusedLabel: {
     color: 'rgba(0, 0, 0, 0.54)'
@@ -51,7 +55,7 @@ class Field extends React.Component {
         <FormControl component='fieldset' className={classes.formControl}>
           <FormLabel
             component='legend'
-            classes={{ focused: classes.focusedLabel }}
+            classes={{ root: classes.label, focused: classes.focusedLabel }}
           >
             {this.props.label}
           </FormLabel>
