@@ -9,7 +9,9 @@ import Typography from 'material-ui/Typography'
 const styles = theme => ({
   card: {
     minWidth: 275,
-    backgroundColor: theme.brand.colors.greyBg
+    backgroundColor: theme.brand.colors.greyBg,
+    boxShadow: 'none',
+    borderBottom: `1px solid ${theme.brand.colors.separatorGrey}`
   },
   titleWrapper: {
     display: 'flex',
