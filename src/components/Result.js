@@ -40,6 +40,7 @@ const renderResult = (classes, points, data) => {
   if (points === 0) {
     return null
   } else {
+    console.log(data)
     return (
       <Card className={classes.card}>
         <CardHeader
@@ -62,9 +63,11 @@ const renderResult = (classes, points, data) => {
           <Typography type='title' className={classes.resultText}>
             {points}
           </Typography>
-          <Typography type='caption' className={classes.resultText}>
-            {data}
-          </Typography>
+          {data.map(item => (
+            <Typography type='caption' className={classes.resultText}>
+              {item}
+            </Typography>
+          ))}
         </CardContent>
       </Card>
     )
