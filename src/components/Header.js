@@ -10,7 +10,10 @@ import MoreIcon from 'material-ui-icons/MoreVert'
 
 const styles = theme => ({
   title: {
-    flex: 1
+    // flex: 1
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   },
   appBar: {
     backgroundColor: theme.brand.colors.primary
