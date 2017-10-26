@@ -8,7 +8,9 @@ import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
   card: {
-    minWidth: 275
+    minWidth: 275,
+    position: 'absolute',
+    bottom: 0
   },
   titleWrapper: {
     display: 'flex',
