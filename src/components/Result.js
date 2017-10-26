@@ -9,7 +9,7 @@ import Typography from 'material-ui/Typography'
 const styles = theme => ({
   card: {
     minWidth: 275,
-    position: 'absolute',
+    position: 'fixed',
     bottom: 0,
     left: 0,
     right: 0
