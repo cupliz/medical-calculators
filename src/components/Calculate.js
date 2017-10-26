@@ -56,7 +56,7 @@ class Calculate extends Component {
 
   render () {
     return (
-      <div className='calculate'>
+      <StickyContainer className='calculate'>
         <Field
           label='Congestive Heart Failure History'
           yesPoints={1}
@@ -82,6 +82,28 @@ class Calculate extends Component {
           yesPoints={2}
           onChange={this.handleChange}
         />
+        {/* Sticky Begin */}
+        <Sticky>
+          {
+            ({
+               style,
+
+               // the following are also available but unused in this example
+               isSticky,
+               wasSticky,
+               distanceFromTop,
+               distanceFromBottom,
+               calculatedHeight
+             }) => {
+              return (
+                <header style={style}>
+                  ...
+                </header>
+              )
+            }
+          }
+        </Sticky>
+        {/* Sticky End */}
         {/* TODO DELETE */}
         <Field
           label='Stroke or TIA symptoms previously'
@@ -125,7 +147,7 @@ class Calculate extends Component {
         />
         {/* TODO DELETE */}
         <Result points={this.state.points} data={data[this.state.points]} />
-      </div>
+      </StickyContainer>
     )
   }
 }
