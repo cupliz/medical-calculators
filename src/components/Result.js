@@ -9,10 +9,10 @@ import Typography from 'material-ui/Typography'
 const styles = theme => ({
   card: {
     minWidth: 275,
-    position: 'fixed',
-    bottom: 0,
-    left: 0,
-    right: 0
+    // position: 'fixed',
+    // bottom: 0,
+    // left: 0,
+    // right: 0
   },
   titleWrapper: {
     display: 'flex',

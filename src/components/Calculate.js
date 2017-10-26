@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Field from './Field'
 import Result from './Result'
+import { StickyContainer, Sticky } from 'react-sticky'
 
 const data = {
   0: [
