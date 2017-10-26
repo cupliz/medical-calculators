@@ -38,7 +38,7 @@ function Header (props) {
             <CloseIcon />
           </IconButton>
           <Typography type='title' color='inherit' className={classes.title}>
-            CHADS<sub>2</sub> Score for Atrial Fibrillation
+            CHADS<sub>2</sub> Score for Atrial Fibrillation Lorem ipsum dolor sit amet.
           </Typography>
           <IconButton
             color='contrast'
