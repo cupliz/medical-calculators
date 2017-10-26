@@ -10,7 +10,7 @@ import MoreIcon from 'material-ui-icons/MoreVert'
 
 const styles = theme => ({
   title: {
-    // flex: 1
+    flex: 1,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis'
@@ -38,7 +38,7 @@ function Header (props) {
             <CloseIcon />
           </IconButton>
           <Typography type='title' color='inherit' className={classes.title}>
-            CHADS<sub>2</sub> Score for Atrial Fibrillation Lorem ipsum dolor sit amet.
+            CHADS2 Score for Atrial Fibrillation Lorem ipsum dolor sit amet.
           </Typography>
           <IconButton
             color='contrast'
