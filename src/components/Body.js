@@ -6,6 +6,7 @@ import AppBar from 'material-ui/AppBar'
 import Tabs, { Tab } from 'material-ui/Tabs'
 import Calculate from './Calculate'
 import References from './References'
+import Result from './Result'
 
 const TabContainer = ({ children, dir }) => {
   return <div dir={dir}>{children}</div>
@@ -85,6 +86,11 @@ class Body extends React.Component {
             <References />
           </TabContainer>
         </SwipeableViews>
+        <Result points={1} data={[
+          'Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)',
+          'By points directly: High risk of thromboembolic event. 18.2% risk of event per year if no coumadin.',
+          'The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken.'
+        ]} />
       </div>
     )
   }
