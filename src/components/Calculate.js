@@ -82,6 +82,48 @@ class Calculate extends Component {
           yesPoints={2}
           onChange={this.handleChange}
         />
+        {/* TODO DELETE */}
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        <Field
+          label='Stroke or TIA symptoms previously'
+          yesPoints={2}
+          onChange={this.handleChange}
+        />
+        {/* TODO DELETE */}
         <Result points={this.state.points} data={data[this.state.points]} />
       </div>
     )
