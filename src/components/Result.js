@@ -10,7 +10,9 @@ const styles = theme => ({
   card: {
     minWidth: 275,
     position: 'absolute',
-    bottom: 0
+    bottom: 0,
+    left: 0,
+    right: 0
   },
   titleWrapper: {
     display: 'flex',
