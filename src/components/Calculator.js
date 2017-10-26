@@ -2,13 +2,13 @@ import React from 'react'
 import Header from './Header'
 import Body from './Body'
 import Result from './Result'
-import data from './data.json'
+import resultData from './resultData.json'
 
 const Calculator = () => (
   <div className='calculator'>
     <Header />
     <Body />
-    <Result points={1} data={data[1]} />
+    <Result points={1} data={resultData[1]} />
   </div>
 )
 
