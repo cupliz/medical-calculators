@@ -9,7 +9,7 @@ import CloseIcon from 'material-ui-icons/Close'
 import MoreIcon from 'material-ui-icons/MoreVert'
 
 const styles = theme => ({
-  flex: {
+  title: {
     flex: 1
   },
   appBar: {
@@ -34,7 +34,7 @@ function Header (props) {
           >
             <CloseIcon />
           </IconButton>
-          <Typography type='title' color='inherit' className={classes.flex}>
+          <Typography type='title' color='inherit' className={classes.title}>
             CHADS<sub>2</sub> Score for Atrial Fibrillation
           </Typography>
           <IconButton
