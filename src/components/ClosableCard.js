@@ -37,7 +37,8 @@ const styles = theme => ({
   },
   listWrapper: {
     paddingLeft: 16,
-    marginTop: 0
+    marginTop: 0,
+    fontSize: '0.75rem'
   },
   list: {
 
