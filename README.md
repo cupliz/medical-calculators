@@ -1,5 +1,13 @@
 ## Project notes
 
+You can check `package.json` file with `scripts` of it.
+
+Starting a local dev server and running a web app is `yarn start` or `npm run start`.
+
+Server (`json-server`) is `yarn server` or `npm run server`. Keep in mind that this is by default serving on `:3001` port so if taken it will fail. You can either empty this port of update `package.json`
+
+Local react and json-server is `yarn dev` or `npm run dev` which runs 2 above scripts in parallel.
+
 Stable web version. Usually `gbarkhatov` branch:
 
 http://medical-calc.surge.sh/
