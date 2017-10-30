@@ -16,9 +16,9 @@ export const PICK_ANSWER_ERROR = 'calculator/PICK_ANSWER_ERROR'
 // ------------------------------------
 
 const initialState = {
-  points: 0,
-  isFetchingCalcData: false,
-  isPickingAnswer: false
+  // points: 0,
+  // isFetchingCalcData: false,
+  // isPickingAnswer: false
 }
 
 // ------------------------------------
