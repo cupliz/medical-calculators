@@ -1,4 +1,4 @@
-export const updateState = (state, item, value) => {
+export const updateObject = (state, item, value) => {
   return {
     ...state,
     [item]: value
