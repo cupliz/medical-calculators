@@ -31,5 +31,6 @@
   "standard": {
     "parser": "babel-eslint",
     "globals": []
-  }
+  },
+  "homepage" : "http://medical-calc.surge.sh"
 }
