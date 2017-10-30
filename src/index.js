@@ -4,7 +4,7 @@ import { MuiThemeProvider } from 'material-ui/styles'
 import 'normalize.css'
 import theme from './theme/theme'
 import './index.css'
-import Calculator from './components/Calculator'
+import Calculator from './calculator/Calculator'
 import registerServiceWorker from './registerServiceWorker'
 
 ReactDOM.render(
