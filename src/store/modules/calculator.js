@@ -38,7 +38,7 @@ export const fetchCalcDataSuccess = (calculator = {}) => {
   return {
     type: FETCH_CALC_DATA_SUCCESS,
     payload: {
-      calc,
+      calculator,
       receivedAt: new Date().toISOString()
     }
   }
