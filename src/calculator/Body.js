@@ -4,7 +4,7 @@ import { withStyles } from 'material-ui/styles'
 import SwipeableViews from 'react-swipeable-views'
 import AppBar from 'material-ui/AppBar'
 import Tabs, { Tab } from 'material-ui/Tabs'
-import Calculate from '../components/Calculate'
+import Calculate from './Calculate'
 import References from '../components/References'
 
 const TabContainer = ({ children, dir }) => {
