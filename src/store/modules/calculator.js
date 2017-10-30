@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { deleteProperty, updateState } from '../../utils/immutable'
+import { deleteProperty } from '../../utils/immutable'
 
 // ------------------------------------
 // Constants
@@ -190,11 +190,7 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CALC_DATA_REQUEST:
       if (action.payload.isLoaded) {
-        return {
-          ...state,
-          errorMessage: null,
-          ...action.payload
-        }
+        return deleteProperty(state, 'errorMessage')
       } else {
         return {
           ...state,
