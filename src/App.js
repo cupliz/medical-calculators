@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import Calculator from './components/Calculator/Calculator'
 import { connect } from 'react-redux'
+import Home from './components/Home/Home'
 
 const App = props => (
   <div>
