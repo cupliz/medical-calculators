@@ -10,8 +10,9 @@ export const PICK_ANSWER_SUCCESS = 'calculator/PICK_ANSWER_SUCCESS'
 export const PICK_ANSWER_ERROR = 'calculator/PICK_ANSWER_ERROR'
 
 const initialState = {
-  poinsts: 0,
-  isFetchingCalcData: false
+  points: 0,
+  isFetchingCalcData: false,
+  isPickingAnswer: false
 }
 
 export default (state = initialState, action) => {
