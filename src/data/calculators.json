@@ -61,6 +61,14 @@
         "By points directly: High risk of thromboembolic event. 18.2% risk of event per year if no coumadin.",
         "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
       ]
+    },
+    "notes": {
+      "type": "unordered-list",
+      "content": [
+        "Estimates stroke risk in patients with atrial fibrillation",
+        "The CHADS2 score is one of several risk stratification schemes that can help determine the 1 year risk of an ischemic stroke in a non-anticoagulated patient with non-valvular atrial fibrillation and determine which antithrombotic therapy is most appropriate",
+        "The CHA2-DS2-VASC score may be a better tool to assess stroke risk in patients with atrial fibrillation.  It risk stratifies these patients better than the CHADS2 score"
+      ]
     }
   }
 ]
