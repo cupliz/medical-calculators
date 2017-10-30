@@ -116,7 +116,34 @@ export const fetchCalcDataFetch = () => {
   }
 }
 
-export const fetchCalcDataAxios = () => {
+export const fetchCalcDataErrorFetch = () => {
+  return (dispatch, getState) => {
+    dispatch(fetchCalcDataRequest())
+    const url = `http://localhost:3001/calculators/`
+    return fetch(url, {
+      method: 'GET'
+    })
+      .then(response => {
+        if (response.status >= 400) {
+          dispatch(fetchCalcDataError(response.status + ' Error'))
+          dispatch(fetchCalcDataRequest(false))
+        }
+        return response.json()
+      })
+      .then(json => {
+        dispatch(fetchCalcDataSuccess(json))
+      })
+      .then(() => {
+        dispatch(fetchCalcDataRequest(true))
+      })
+      .catch(error => {
+        dispatch(fetchCalcDataError(error))
+        dispatch(fetchCalcDataRequest(false))
+      })
+  }
+}
+
+export const fetchCalcDataErrorAxios = () => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest())
     const url = `http://localhost:3001/calculators/`
