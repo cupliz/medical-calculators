@@ -2,6 +2,7 @@
   {
     "id": 0,
     "title": "CHADS2 Score for Atrial Fibrillation",
+    "type": "points",
     "questions": [
       {
         "type": "radio",
