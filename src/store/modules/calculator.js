@@ -23,55 +23,32 @@ const initialState = {
 // Actions
 // ------------------------------------
 
-export const increment = () => {
-  return dispatch => {
-    dispatch({
-      type: INCREMENT_REQUESTED
-    })
-
-    dispatch({
-      type: INCREMENT
-    })
+export const fetchCalcDataRequest = (isLoaded = false) => {
+  return {
+    type: FETCH_CALC_DATA_REQUEST,
+    payload: {
+      isLoaded
+    }
   }
 }
 
-export const incrementAsync = () => {
-  return dispatch => {
-    dispatch({
-      type: INCREMENT_REQUESTED
-    })
-
-    return setTimeout(() => {
-      dispatch({
-        type: INCREMENT
-      })
-    }, 3000)
+export const fetchCalcDataSuccess = (calc = {}) => {
+  return {
+    type: FETCH_CALC_DATA_SUCCESS,
+    payload: {
+      calc,
+      receivedAt: new Date().toISOString()
+    }
   }
 }
 
-export const decrement = () => {
-  return dispatch => {
-    dispatch({
-      type: DECREMENT_REQUESTED
-    })
-
-    dispatch({
-      type: DECREMENT
-    })
-  }
-}
-
-export const decrementAsync = () => {
-  return dispatch => {
-    dispatch({
-      type: DECREMENT_REQUESTED
-    })
-
-    return setTimeout(() => {
-      dispatch({
-        type: DECREMENT
-      })
-    }, 3000)
+export const fetchCalcDataError = (errorMessage = '') => {
+  return {
+    type: FETCH_CALC_DATA_ERROR,
+    payload: {
+      errorMessage,
+      receivedAt: new Date().toISOString()
+    }
   }
 }
 
