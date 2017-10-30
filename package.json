@@ -36,7 +36,7 @@
     "predeploy:dev": "yarn build",
     "deploy:dev": "surge build -d medical-calc-dev.surge.sh",
     "postdeploy:dev": "yarn clean",
-    "server": "json-server ./src/data/calculators.json"
+    "server": "json-server ./src/data/db.json"
   },
   "standard": {
     "parser": "babel-eslint",
