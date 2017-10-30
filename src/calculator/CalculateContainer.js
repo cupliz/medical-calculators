@@ -35,7 +35,7 @@ const data = {
   ]
 }
 
-class Calculate extends Component {
+class CalculateContainer extends Component {
   state = {
     points: 0
   }
@@ -87,4 +87,4 @@ class Calculate extends Component {
   }
 }
 
-export default Calculate
+export default CalculateContainer

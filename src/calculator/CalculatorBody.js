@@ -4,7 +4,7 @@ import { withStyles } from 'material-ui/styles'
 import SwipeableViews from 'react-swipeable-views'
 import AppBar from 'material-ui/AppBar'
 import Tabs, { Tab } from 'material-ui/Tabs'
-import Calculate from './Calculate'
+import CalculateContainer from './CalculateContainer'
 import References from './References'
 
 const TabContainer = ({ children, dir }) => {
@@ -79,7 +79,7 @@ class CalculatorBody extends React.Component {
           onChangeIndex={this.handleChangeIndex}
         >
           <TabContainer dir={theme.direction}>
-            <Calculate />
+            <CalculateContainer />
           </TabContainer>
           <TabContainer dir={theme.direction}>
             <References />
