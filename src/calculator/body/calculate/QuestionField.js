@@ -5,7 +5,7 @@ import Radio, { RadioGroup } from 'material-ui/Radio'
 import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
 
 const styles = theme => ({
-  root: {
+  questionField: {
     display: 'flex',
     borderBottom: `1px solid ${theme.brand.colors.separatorGrey}`,
     borderTop: `1px solid ${theme.brand.colors.separatorGrey}`,
@@ -62,7 +62,7 @@ class QuestionField extends React.Component {
     const { classes } = this.props
 
     return (
-      <div className={classes.root}>
+      <div className={classes.questionField}>
         <FormControl component='fieldset' className={classes.formControl}>
           <FormLabel
             component='legend'
