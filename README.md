@@ -6,7 +6,7 @@ Local web app: `yarn start` or `npm run start`.
 
 Local web server (`json-server`): `yarn server` or `npm run server`. Keep in mind that this is by default serving on `:3001` port so if taken it will fail. You can either empty this port of update `package.json`
 
-Local react and json-server is `yarn dev` or `npm run dev` which runs 2 above scripts in parallel.
+Local web app +  local web server: `yarn dev` or `npm run dev` which runs 2 above scripts in parallel. You can also run above scripts  2 different terminals or in parallel with `&&`
 
 Stable web version. Usually `gbarkhatov` branch:
 
