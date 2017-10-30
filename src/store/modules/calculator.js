@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { deleteProperty, updateState } from '../../utils/immutable'
+import { deleteProperty } from '../../utils/immutable'
 
 // ------------------------------------
 // Constants
