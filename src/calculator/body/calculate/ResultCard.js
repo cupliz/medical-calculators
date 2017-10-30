@@ -10,12 +10,12 @@ const styles = theme => ({
   card: {
     minWidth: 275
   },
+  header: {
+    paddingBottom: 0
+  },
   titleWrapper: {
     display: 'flex',
     alignItems: 'center'
-  },
-  header: {
-    paddingBottom: 0
   },
   title: {
     flex: 1,
@@ -31,7 +31,7 @@ const styles = theme => ({
   content: {
     paddingTop: 10
   },
-  resultText: {
+  contentText: {
     marginBottom: 15
   }
 })
@@ -56,14 +56,14 @@ const renderResult = (classes, points, data) => {
           }
         />
         <CardContent className={classes.content}>
-          <Typography type='caption' className={classes.resultText}>
+          <Typography type='caption' className={classes.contentText}>
             Points
           </Typography>
-          <Typography type='title' className={classes.resultText}>
+          <Typography type='title' className={classes.contentText}>
             {points}
           </Typography>
           {data.map(item => (
-            <Typography key={`${points}-${item}`} type='caption' className={classes.resultText}>
+            <Typography key={`${points}-${item}`} type='caption' className={classes.contentText}>
               {item}
             </Typography>
           ))}
