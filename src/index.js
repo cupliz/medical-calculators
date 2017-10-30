@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 import theme from './theme/theme'
-import './index.css'
+import './theme/index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 
