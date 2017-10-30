@@ -119,7 +119,7 @@ export const fetchCalcDataFetch = () => {
 export const fetchCalcDataErrorFetch = () => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest())
-    const url = `http://localhost:3001/calculators/`
+    const url = `http://localhost:3001/calculators/2`
     return fetch(url, {
       method: 'GET'
     })
@@ -146,7 +146,7 @@ export const fetchCalcDataErrorFetch = () => {
 export const fetchCalcDataErrorAxios = () => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest())
-    const url = `http://localhost:3001/calculators/`
+    const url = `http://localhost:3001/calculators/2`
     return axios
       .get(url)
       .then(response => {
