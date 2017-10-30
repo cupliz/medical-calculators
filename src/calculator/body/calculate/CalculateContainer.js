@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import QuestionField from './QuestionField'
-import ResultCard from './ResultCard'
+import QuestionField from '../../QuestionField'
+import ResultCard from '../../ResultCard'
 
 const data = {
   0: [
