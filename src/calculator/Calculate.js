@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Field from '../components/Field'
+import Field from './Field'
 import Result from '../components/Result'
 
 const data = {
