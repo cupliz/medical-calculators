@@ -29,6 +29,5 @@
   "standard": {
     "parser": "babel-eslint",
     "globals": []
-  },
-  "homepage" : "https://medical-calc.surge.sh/"
+  }
 }
