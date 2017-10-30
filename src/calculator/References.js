@@ -1,5 +1,5 @@
 import React from 'react'
-import ClosableCard from './ClosableCard'
+import ClosableCard from '../components/ClosableCard'
 
 const data = [
   {
