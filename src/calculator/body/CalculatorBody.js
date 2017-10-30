@@ -5,7 +5,7 @@ import SwipeableViews from 'react-swipeable-views'
 import AppBar from 'material-ui/AppBar'
 import Tabs, { Tab } from 'material-ui/Tabs'
 import CalculateContainer from './calculate/CalculateContainer'
-import ReferencesContainer from '../ReferencesContainer'
+import ReferencesContainer from './references/ReferencesContainer'
 
 const TabContainer = ({ children, dir }) => {
   return <div dir={dir}>{children}</div>
