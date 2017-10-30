@@ -28,7 +28,7 @@ const styles = theme => ({
   }
 })
 
-class Body extends React.Component {
+class CalculatorBody extends React.Component {
   state = {
     value: 0
   }
@@ -90,9 +90,9 @@ class Body extends React.Component {
   }
 }
 
-Body.propTypes = {
+CalculatorBody.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired
 }
 
-export default withStyles(styles, { withTheme: true })(Body)
+export default withStyles(styles, { withTheme: true })(CalculatorBody)
