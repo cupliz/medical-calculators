@@ -20,12 +20,12 @@ const styles = theme => ({
   calculatorBody: {
     backgroundColor: theme.palette.background.paper
   },
-  tabSelected: { color: '#000' },
-  labelContainer: { textTransform: 'capitalize' },
-  label: { fontSize: 17 },
   tabs: {
     backgroundColor: '#fff'
-  }
+  },
+  tabSelected: { color: '#000' },
+  labelContainer: { textTransform: 'capitalize' },
+  label: { fontSize: 17 }
 })
 
 class CalculatorBody extends React.Component {
