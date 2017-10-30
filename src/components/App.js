@@ -2,7 +2,10 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import Calculator from './calculator/Calculator'
 import { connect } from 'react-redux'
-import { fetchCalcDataAxios, fetchCalcDataFetch } from '../store/modules/calculator'
+import {
+  fetchCalcDataAxios, fetchCalcDataErrorAxios, fetchCalcDataErrorFetch,
+  fetchCalcDataFetch
+} from '../store/modules/calculator'
 
 const App = props => (
   <div>
@@ -11,8 +14,15 @@ const App = props => (
       <Link to='/chad2-calc'>Calculator</Link>
     </header>
 
-    <button onClick={props.fetchCalcDataFetch}>Fetch using Fetch</button>
-    <button onClick={props.fetchCalcDataAxios}>Fetch using Axios</button>
+    <div>
+      <button onClick={props.fetchCalcDataFetch}>Fetch using Fetch</button>
+      <button onClick={props.fetchCalcDataAxios}>Fetch using Axios</button>
+    </div>
+
+    <div>
+      <button onClick={props.fetchCalcDataErrorFetch}>Fetch Error using Fetch</button>
+      <button onClick={props.fetchCalcDataErrorAxios}>Fetch Error using Axios</button>
+    </div>
 
     <main>
       <Route exact path='/chad2-calc' component={Calculator} />
@@ -26,7 +36,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchCalcDataFetch,
-  fetchCalcDataAxios
+  fetchCalcDataAxios,
+  fetchCalcDataErrorFetch,
+  fetchCalcDataErrorAxios
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
