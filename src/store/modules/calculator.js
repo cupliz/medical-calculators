@@ -23,40 +23,6 @@ const initialState = {
 // Actions
 // ------------------------------------
 
-
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case FETCH_CALC_DATA_REQUEST:
-      return {
-        ...state,
-        isFetchingCalcData: true
-      }
-
-    case FETCH_CALC_DATA_SUCCESS:
-      return {
-        ...state,
-        count: state.count + 1,
-        isIncrementing: !state.isIncrementing
-      }
-
-    case FETCH_CALC_DATA_ERROR:
-      return {
-        ...state,
-        isDecrementing: true
-      }
-
-    case DECREMENT:
-      return {
-        ...state,
-        count: state.count - 1,
-        isDecrementing: !state.isDecrementing
-      }
-
-    default:
-      return state
-  }
-}
-
 export const increment = () => {
   return dispatch => {
     dispatch({
@@ -106,5 +72,38 @@ export const decrementAsync = () => {
         type: DECREMENT
       })
     }, 3000)
+  }
+}
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_CALC_DATA_REQUEST:
+      return {
+        ...state,
+        isFetchingCalcData: true
+      }
+
+    case FETCH_CALC_DATA_SUCCESS:
+      return {
+        ...state,
+        count: state.count + 1,
+        isIncrementing: !state.isIncrementing
+      }
+
+    case FETCH_CALC_DATA_ERROR:
+      return {
+        ...state,
+        isDecrementing: true
+      }
+
+    case DECREMENT:
+      return {
+        ...state,
+        count: state.count - 1,
+        isDecrementing: !state.isDecrementing
+      }
+
+    default:
+      return state
   }
 }
