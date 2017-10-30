@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import QuestionField from '../../QuestionField'
+import QuestionField from './QuestionField'
 import ResultCard from '../../ResultCard'
 
 const data = {
