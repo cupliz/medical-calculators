@@ -24,7 +24,7 @@ const styles = theme => ({
   }
 })
 
-function Header (props) {
+function CalculatorHeader (props) {
   const { classes } = props
   return (
     <div>
@@ -52,8 +52,8 @@ function Header (props) {
   )
 }
 
-Header.propTypes = {
+CalculatorHeader.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Header)
+export default withStyles(styles)(CalculatorHeader)

@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from './Header'
+import CalculatorHeader from './CalculatorHeader'
 import CalculatorBody from './CalculatorBody'
 
 const Calculator = () => (
   <div className='calculator'>
-    <Header />
+    <CalculatorHeader />
     <CalculatorBody />
   </div>
 )
