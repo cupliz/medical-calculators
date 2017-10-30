@@ -74,7 +74,7 @@ const renderContent = (type, content, id, classes) => {
 }
 
 const InfoCard = props => {
-  const { classes, title, type, id, content } = props
+  const { type, content, id, classes, title } = props
 
   return (
     <Card className={classes.card}>
