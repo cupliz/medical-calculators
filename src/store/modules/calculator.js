@@ -85,6 +85,34 @@ export const pickAnswerError = (errorMessage = '') => {
 // Specialized Actions
 // ------------------------------------
 
+export const fetchCalcData = () => {
+  return (dispatch, getState) => {
+    dispatch(fetchCalcDataRequest())
+    const url = `http://localhost:3001/calculators/`
+    return fetch(url, {
+      method: 'GET'
+    })
+      .then(response => {
+        if (response.status >= 400) {
+          dispatch(fetchCalcDataError(response.status + ' Error'))
+          dispatch(fetchCalcDataRequest(false))
+        }
+        return response.json()
+      })
+      .then(json => {
+        dispatch(fetchCalcDataSuccess(json))
+        return json
+      })
+      .then(json => {
+        dispatch(fetchCalcDataRequest(true))
+      })
+      .catch(error => {
+        dispatch(fetchCalcDataError(error))
+        dispatch(fetchCalcDataRequest(false))
+      })
+  }
+}
+
 // ------------------------------------
 // Reducer
 // ------------------------------------
