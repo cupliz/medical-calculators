@@ -150,16 +150,11 @@ export const fetchCalcDataAxios = () => {
     return axios
       .get(url)
       .then(response => {
-        return response.data
-      })
-      .then(data => {
-        dispatch(fetchCalcDataSuccess(data))
-      })
-      .then(() => {
+        dispatch(fetchCalcDataSuccess(response.data))
         dispatch(fetchCalcDataRequest(true))
       })
-      .catch(error => {
-        dispatch(fetchCalcDataError(error))
+      .catch(({ response }) => {
+        dispatch(fetchCalcDataError(`${response.status} ${response.statusText}`))
         dispatch(fetchCalcDataRequest(false))
       })
   }
@@ -172,16 +167,11 @@ export const fetchCalcDataErrorAxios = () => {
     return axios
       .get(url)
       .then(response => {
-        return response.data
-      })
-      .then(data => {
-        dispatch(fetchCalcDataSuccess(data))
-      })
-      .then(() => {
+        dispatch(fetchCalcDataSuccess(response.data))
         dispatch(fetchCalcDataRequest(true))
       })
-      .catch(error => {
-        dispatch(fetchCalcDataError(error))
+      .catch(({ response }) => {
+        dispatch(fetchCalcDataError(`${response.status} ${response.statusText}`))
         dispatch(fetchCalcDataRequest(false))
       })
   }
