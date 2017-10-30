@@ -37,7 +37,7 @@ function CalculatorHeader (props) {
           <CloseIcon />
         </IconButton>
         <Typography type='title' color='inherit' className={classes.title}>
-          CHADS2 Score for Atrial Fibrillation Lorem ipsum dolor sit amet.
+          CHADS2 Score for Atrial Fibrillation
         </Typography>
         <IconButton color='contrast' aria-label='More'>
           <MoreIcon />
