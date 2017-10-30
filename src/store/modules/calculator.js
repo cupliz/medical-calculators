@@ -120,7 +120,8 @@ export const fetchCalcDataAxios = () => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest())
     const url = `http://localhost:3001/calculators/`
-    return axios.get(url)
+    return axios
+      .get(url)
       .then(response => {
         return response.data
       })
