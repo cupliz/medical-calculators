@@ -154,7 +154,9 @@ export const fetchCalcDataAxios = () => {
         dispatch(fetchCalcDataRequest(true))
       })
       .catch(({ response }) => {
-        dispatch(fetchCalcDataError(`${response.status} ${response.statusText}`))
+        dispatch(
+          fetchCalcDataError(`${response.status} ${response.statusText}`)
+        )
         dispatch(fetchCalcDataRequest(false))
       })
   }
@@ -171,7 +173,9 @@ export const fetchCalcDataErrorAxios = () => {
         dispatch(fetchCalcDataRequest(true))
       })
       .catch(({ response }) => {
-        dispatch(fetchCalcDataError(`${response.status} ${response.statusText}`))
+        dispatch(
+          fetchCalcDataError(`${response.status} ${response.statusText}`)
+        )
         dispatch(fetchCalcDataRequest(false))
       })
   }
@@ -184,9 +188,17 @@ export const fetchCalcDataErrorAxios = () => {
 export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CALC_DATA_REQUEST:
-      return {
-        ...state,
-        ...action.payload
+      if (action.payload.isLoaded) {
+        return {
+          ...state,
+          errorMessage: null,
+          ...action.payload
+        }
+      } else {
+        return {
+          ...state,
+          ...action.payload
+        }
       }
 
     case FETCH_CALC_DATA_SUCCESS:
