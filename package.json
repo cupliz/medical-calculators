@@ -26,8 +26,10 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
     "deploy": "surge build -d medical-calc.surge.sh",
+    "postdeploy": "yarn rimraf build",
     "predeploy:dev": "yarn build",
-    "deploy:dev": "surge build -d medical-calc-dev.surge.sh"
+    "deploy:dev": "surge build -d medical-calc-dev.surge.sh",
+    "postdeploy:dev": "yarn rimraf build"
   },
   "standard": {
     "parser": "babel-eslint",
