@@ -4,9 +4,8 @@ export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
 export const PICK_ANSWER = 'calculator/PICK_ANSWER'
 
 const initialState = {
-  count: 0,
-  isIncrementing: false,
-  isDecrementing: false
+  poinsts: 0,
+  isFetchingCalcData: false
 }
 
 export default (state = initialState, action) => {
