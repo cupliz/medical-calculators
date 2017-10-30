@@ -8,6 +8,8 @@ Local web server (`json-server`): `yarn server` or `npm run server`. Keep in min
 
 Local web app +  local web server: `yarn dev` or `npm run dev` which runs 2 above scripts in parallel. You can also run above scripts  2 different terminals or in parallel with `&&`
 
+Deploy to http://medical-calc.surge.sh: `yarn deploy` or `npm run deploy`. This builds the project with `yarn build` or `npm run build`, then deploys with `yarn deploy` or `npm run deploy`, then removes `/build` dist with `yarn clean` or `npm run clean`
+
 Stable web version. Usually `gbarkhatov` branch:
 
 http://medical-calc.surge.sh/
