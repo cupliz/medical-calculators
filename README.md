@@ -10,7 +10,9 @@ Local web app +  local web server: `yarn dev` or `npm run dev` which runs 2 abov
 
 You can ask me about access rights to surge in Slack or email (gbarkhatov@gmail.com).
 
-Deploy to http://medical-calc.surge.sh: `yarn deploy` or `npm run deploy`. This builds the project with `yarn build` or `npm run build`, then deploys with `yarn deploy` or `npm run deploy`, then removes `/build` dist with `yarn clean` or `npm run clean`
+Deploy to stable http://medical-calc.surge.sh: `yarn deploy` or `npm run deploy`. This builds the project with `yarn build` or `npm run build`, then deploys with `yarn surge` or `npm run surge`, then removes `/build` dist with `yarn clean` or `npm run clean`
+
+Deploy to dev http://medical-calc-dev.surge.sh: `yarn deploy:dev` or `npm run deploy:dev`. This builds the project with `yarn build` or `npm run build`, then deploys with `yarn surge:dev` or `npm run surge:dev`, then removes `/build` dist with `yarn clean` or `npm run clean`
 
 Stable web version. Usually `gbarkhatov` branch:
 
