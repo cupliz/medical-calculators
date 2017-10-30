@@ -11,6 +11,7 @@ const App = props => (
     </header>
 
     <main>
+      <Route exact path='/' component={Home} />
       <Route exact path='/chad2-calc' component={Calculator} />
     </main>
   </div>
