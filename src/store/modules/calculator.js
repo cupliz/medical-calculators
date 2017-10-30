@@ -146,20 +146,19 @@ export default (state = initialState, action) => {
     case FETCH_CALC_DATA_REQUEST:
       return {
         ...state,
-        isFetchingCalcData: true
+        ...action.payload
       }
 
     case FETCH_CALC_DATA_SUCCESS:
       return {
         ...state,
-        count: state.count + 1,
-        isIncrementing: !state.isIncrementing
+        ...action.payload
       }
 
     case FETCH_CALC_DATA_ERROR:
       return {
         ...state,
-        isDecrementing: true
+        ...action.payload
       }
 
     default:
