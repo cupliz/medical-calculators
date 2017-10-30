@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Card, { CardContent, CardHeader } from 'material-ui/Card'
-import IconButton from 'material-ui/IconButton'
-import CloseIcon from 'material-ui-icons/Close'
 import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
@@ -24,10 +22,6 @@ const styles = theme => ({
   title: {
     flex: 1,
     fontWeight: '500'
-  },
-  shareIcon: {
-    width: 16,
-    height: 16
   },
   content: {
     paddingTop: 10
@@ -91,9 +85,6 @@ const InfoCard = props => {
             <Typography type='subheading' className={classes.title}>
               {title}
             </Typography>
-            <IconButton aria-label='Share'>
-              <CloseIcon className={classes.shareIcon} />
-            </IconButton>
           </div>
         }
       />
