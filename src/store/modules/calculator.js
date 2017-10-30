@@ -116,6 +116,27 @@ export const fetchCalcDataFetch = () => {
   }
 }
 
+export const fetchCalcDataAxios = () => {
+  return (dispatch, getState) => {
+    dispatch(fetchCalcDataRequest())
+    const url = `http://localhost:3001/calculators/`
+    return axios.get(url)
+      .then(response => {
+        return response.data
+      })
+      .then(data => {
+        dispatch(fetchCalcDataSuccess(data))
+      })
+      .then(() => {
+        dispatch(fetchCalcDataRequest(true))
+      })
+      .catch(error => {
+        dispatch(fetchCalcDataError(error))
+        dispatch(fetchCalcDataRequest(false))
+      })
+  }
+}
+
 // ------------------------------------
 // Reducer
 // ------------------------------------
