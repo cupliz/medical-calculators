@@ -1,6 +1,13 @@
 [
   {
     "id": 0,
-    "title": "CHADS2 Score for Atrial Fibrillation"
+    "title": "CHADS2 Score for Atrial Fibrillation",
+    "questions": [
+      {
+        "type": "radio",
+        "label": "Congestive Heart Failure History",
+        "points": "0/1"
+      }
+    ]
   }
 ]
