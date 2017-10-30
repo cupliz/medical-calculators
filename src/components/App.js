@@ -3,7 +3,9 @@ import { Link, Route } from 'react-router-dom'
 import Calculator from './calculator/Calculator'
 import { connect } from 'react-redux'
 import {
-  fetchCalcDataAxios, fetchCalcDataErrorAxios, fetchCalcDataErrorFetch,
+  fetchCalcDataAxios,
+  fetchCalcDataErrorAxios,
+  fetchCalcDataErrorFetch,
   fetchCalcDataFetch
 } from '../store/modules/calculator'
 
@@ -20,8 +22,12 @@ const App = props => (
     </div>
 
     <div>
-      <button onClick={props.fetchCalcDataErrorFetch}>Fetch Error using Fetch</button>
-      <button onClick={props.fetchCalcDataErrorAxios}>Fetch Error using Axios</button>
+      <button onClick={props.fetchCalcDataErrorFetch}>
+        Fetch Error using Fetch
+      </button>
+      <button onClick={props.fetchCalcDataErrorAxios}>
+        Fetch Error using Axios
+      </button>
     </div>
 
     <main>
