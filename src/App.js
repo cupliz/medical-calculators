@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom'
-import Calculator from './components/calculator/Calculator'
+import Calculator from './components/Calculator/Calculator'
 import { connect } from 'react-redux'
 
 const App = props => (
