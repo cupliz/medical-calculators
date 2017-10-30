@@ -34,9 +34,7 @@ const styles = theme => ({
     marginTop: 0,
     fontSize: '0.75rem'
   },
-  list: {
-
-  }
+  list: {}
 })
 
 const renderContent = (type, content, id, classes) => {
