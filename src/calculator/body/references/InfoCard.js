@@ -12,12 +12,12 @@ const styles = theme => ({
     borderBottom: `1px solid ${theme.brand.colors.separatorGrey}`,
     borderTop: `1px solid ${theme.brand.colors.separatorGrey}`
   },
+  header: {
+    paddingBottom: 0
+  },
   titleWrapper: {
     display: 'flex',
     alignItems: 'center'
-  },
-  header: {
-    paddingBottom: 0
   },
   title: {
     flex: 1,
@@ -26,21 +26,20 @@ const styles = theme => ({
   content: {
     paddingTop: 10
   },
-  resultText: {
+  contentText: {
     marginBottom: 15
   },
   listWrapper: {
     paddingLeft: 16,
     marginTop: 0,
     fontSize: '0.75rem'
-  },
-  list: {}
+  }
 })
 
 const renderContent = (type, content, id, classes) => {
   if (type === 'paragraph') {
     return (
-      <Typography type='caption' className={classes.resultText}>
+      <Typography type='caption' className={classes.contentText}>
         {content}
       </Typography>
     )
@@ -48,8 +47,8 @@ const renderContent = (type, content, id, classes) => {
     return (
       <ul className={classes.listWrapper}>
         {content.map((item, index) => (
-          <li key={`${id} - ${index}`} className={classes.list}>
-            <Typography type='caption' className={classes.resultText}>
+          <li key={`${id} - ${index}`}>
+            <Typography type='caption' className={classes.contentText}>
               {item}
             </Typography>
           </li>
@@ -61,7 +60,7 @@ const renderContent = (type, content, id, classes) => {
       <ol className={classes.listWrapper}>
         {content.map((item, index) => (
           <li key={`${id} - ${index}`} className={classes.list}>
-            <Typography type='caption' className={classes.resultText}>
+            <Typography type='caption' className={classes.contentText}>
               {item}
             </Typography>
           </li>
