@@ -85,6 +85,10 @@ export const pickAnswerError = (errorMessage = '') => {
 // Specialized Actions
 // ------------------------------------
 
+// ------------------------------------
+// Reducer
+// ------------------------------------
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CALC_DATA_REQUEST:
