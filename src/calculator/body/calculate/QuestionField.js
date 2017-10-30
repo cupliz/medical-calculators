@@ -84,7 +84,16 @@ class QuestionField extends React.Component {
               control={<Radio checked={!this.state.checked} />}
               label={
                 <span>
-                  No <small className={this.state.checked ? classes.unCheckedBadge : classes.checkedBadge}>0</small>
+                  No{' '}
+                  <small
+                    className={
+                      this.state.checked
+                        ? classes.unCheckedBadge
+                        : classes.checkedBadge
+                    }
+                  >
+                    0
+                  </small>
                 </span>
               }
             />
@@ -95,7 +104,13 @@ class QuestionField extends React.Component {
               label={
                 <span>
                   Yes{' '}
-                  <small className={!this.state.checked ? classes.unCheckedBadge : classes.checkedBadge}>
+                  <small
+                    className={
+                      !this.state.checked
+                        ? classes.unCheckedBadge
+                        : classes.checkedBadge
+                    }
+                  >
                     +{this.props.yesPoints}
                   </small>
                 </span>
