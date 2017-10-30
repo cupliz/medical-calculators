@@ -111,9 +111,8 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CALC_DATA_REQUEST:
       if (action.payload.isLoaded) {
-        let stateWithoutErrorMessage = deleteProperty(state, 'errorMessage')
         return {
-          ...stateWithoutErrorMessage,
+          ...deleteProperty(state, 'errorMessage'),
           ...action.payload
         }
       } else {

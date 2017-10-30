@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import Calculator from './calculator/Calculator'
 import { connect } from 'react-redux'
-import { fetchCalcData } from '../store/modules/calculator'
 
 const App = props => (
   <div>
@@ -22,7 +21,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  fetchCalcDataAxios: fetchCalcData
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
