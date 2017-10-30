@@ -1,5 +1,5 @@
 import React from 'react'
-import ClosableCard from './ClosableCard'
+import InfoCard from './InfoCard'
 
 const data = [
   {
@@ -26,7 +26,7 @@ const data = [
 const renderCards = () => {
   return data.map(item => {
     return (
-      <ClosableCard
+      <InfoCard
         key={item.title}
         title={item.title}
         type={item.type}

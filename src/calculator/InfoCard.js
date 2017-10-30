@@ -79,7 +79,7 @@ const renderContent = (type, content, id, classes) => {
   }
 }
 
-const ClosableCard = props => {
+const InfoCard = props => {
   const { classes, title, type, id, content } = props
 
   return (
@@ -104,8 +104,8 @@ const ClosableCard = props => {
   )
 }
 
-ClosableCard.propTypes = {
+InfoCard.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(ClosableCard)
+export default withStyles(styles)(InfoCard)
