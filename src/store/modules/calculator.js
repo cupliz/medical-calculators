@@ -101,9 +101,8 @@ export const fetchCalcData = () => {
       })
       .then(json => {
         dispatch(fetchCalcDataSuccess(json))
-        return json
       })
-      .then(json => {
+      .then(() => {
         dispatch(fetchCalcDataRequest(true))
       })
       .catch(error => {
