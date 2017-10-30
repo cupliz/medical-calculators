@@ -37,6 +37,6 @@ const renderCards = () => {
   })
 }
 
-const References = () => renderCards()
+const CalculateReferences = () => renderCards()
 
-export default References
+export default CalculateReferences
