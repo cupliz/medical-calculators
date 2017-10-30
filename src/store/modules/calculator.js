@@ -87,7 +87,9 @@ export const pickAnswerError = (errorMessage = '') => {
 // Specialized Actions
 // ------------------------------------
 
-export const fetchCalcData = () => {
+// TODO RENAME AND CHOOSE AXIOS VS FETCH
+
+export const fetchCalcDataFetch = () => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest())
     const url = `http://localhost:3001/calculators/`
