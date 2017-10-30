@@ -27,28 +27,23 @@ const styles = theme => ({
 function CalculatorHeader (props) {
   const { classes } = props
   return (
-    <div>
-      <AppBar position='static' className={classes.appBar}>
-        <Toolbar>
-          <IconButton
-            className={classes.closeButton}
-            color='contrast'
-            aria-label='Close'
-          >
-            <CloseIcon />
-          </IconButton>
-          <Typography type='title' color='inherit' className={classes.title}>
-            CHADS2 Score for Atrial Fibrillation Lorem ipsum dolor sit amet.
-          </Typography>
-          <IconButton
-            color='contrast'
-            aria-label='More'
-          >
-            <MoreIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar position='static' className={classes.appBar}>
+      <Toolbar>
+        <IconButton
+          className={classes.closeButton}
+          color='contrast'
+          aria-label='Close'
+        >
+          <CloseIcon />
+        </IconButton>
+        <Typography type='title' color='inherit' className={classes.title}>
+          CHADS2 Score for Atrial Fibrillation Lorem ipsum dolor sit amet.
+        </Typography>
+        <IconButton color='contrast' aria-label='More'>
+          <MoreIcon />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   )
 }
 
