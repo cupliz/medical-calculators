@@ -162,13 +162,6 @@ export default (state = initialState, action) => {
         isDecrementing: true
       }
 
-    case DECREMENT:
-      return {
-        ...state,
-        count: state.count - 1,
-        isDecrementing: !state.isDecrementing
-      }
-
     default:
       return state
   }
