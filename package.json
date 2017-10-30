@@ -24,12 +24,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "clean": "yarn rimraf build",
     "predeploy": "yarn build",
     "deploy": "surge build -d medical-calc.surge.sh",
-    "postdeploy": "yarn rimraf build",
+    "postdeploy": "yarn clean",
     "predeploy:dev": "yarn build",
     "deploy:dev": "surge build -d medical-calc-dev.surge.sh",
-    "postdeploy:dev": "yarn rimraf build"
+    "postdeploy:dev": "yarn clean"
   },
   "standard": {
     "parser": "babel-eslint",
