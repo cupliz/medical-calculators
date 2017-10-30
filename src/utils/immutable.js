@@ -1,7 +1,7 @@
-export const updateState = (state, item, id) => {
+export const updateState = (state, item, value) => {
   return {
     ...state,
-    [item[id]]: item
+    [item]: value
   }
 }
 
