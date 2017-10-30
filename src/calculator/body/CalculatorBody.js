@@ -17,7 +17,7 @@ TabContainer.propTypes = {
 }
 
 const styles = theme => ({
-  root: {
+  calculatorBody: {
     backgroundColor: theme.palette.background.paper
   },
   tabSelected: { color: '#000' },
@@ -45,7 +45,7 @@ class CalculatorBody extends React.Component {
     const { classes, theme } = this.props
 
     return (
-      <div className={classes.root}>
+      <div className={classes.calculatorBody}>
         <AppBar position='static' color='default'>
           <Tabs
             value={this.state.value}
