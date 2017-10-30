@@ -21,20 +21,20 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case INCREMENT_REQUESTED:
+    case FETCH_CALC_DATA_REQUEST:
       return {
         ...state,
-        isIncrementing: true
+        isFetchingCalcData: true
       }
 
-    case INCREMENT:
+    case FETCH_CALC_DATA_SUCCESS:
       return {
         ...state,
         count: state.count + 1,
         isIncrementing: !state.isIncrementing
       }
 
-    case DECREMENT_REQUESTED:
+    case FETCH_CALC_DATA_ERROR:
       return {
         ...state,
         isDecrementing: true
