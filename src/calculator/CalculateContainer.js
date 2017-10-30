@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Field from './Field'
+import QuestionField from './QuestionField'
 import Result from './Result'
 
 const data = {
@@ -56,27 +56,27 @@ class CalculateContainer extends Component {
   render () {
     return (
       <div className='calculate'>
-        <Field
+        <QuestionField
           label='Congestive Heart Failure History'
           yesPoints={1}
           onChange={this.handleChange}
         />
-        <Field
+        <QuestionField
           label='Hypertension history'
           yesPoints={1}
           onChange={this.handleChange}
         />
-        <Field
+        <QuestionField
           label='Age ≥ 75 years'
           yesPoints={1}
           onChange={this.handleChange}
         />
-        <Field
+        <QuestionField
           label='Diabetes melitus history'
           yesPoints={1}
           onChange={this.handleChange}
         />
-        <Field
+        <QuestionField
           label='Stroke or TIA symptoms previously'
           yesPoints={2}
           onChange={this.handleChange}

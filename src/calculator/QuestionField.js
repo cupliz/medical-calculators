@@ -43,7 +43,7 @@ const styles = theme => ({
   }
 })
 
-class Field extends React.Component {
+class QuestionField extends React.Component {
   state = {
     value: '',
     checked: false
@@ -108,8 +108,8 @@ class Field extends React.Component {
   }
 }
 
-Field.propTypes = {
+QuestionField.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Field)
+export default withStyles(styles)(QuestionField)
