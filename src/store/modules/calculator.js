@@ -1,7 +1,13 @@
+// ------------------------------------
+// Constants
+// ------------------------------------
+
 export const FETCH_CALC_DATA_REQUEST = 'calculator/FETCH_CALC_DATA_REQUEST'
 export const FETCH_CALC_DATA_SUCCESS = 'calculator/FETCH_CALC_DATA_SUCCESS'
 export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
-export const PICK_ANSWER = 'calculator/PICK_ANSWER'
+export const PICK_ANSWER_REQUEST = 'calculator/PICK_ANSWER_REQUEST'
+export const PICK_ANSWER_SUCCESS = 'calculator/PICK_ANSWER_SUCCESS'
+export const PICK_ANSWER_ERROR = 'calculator/PICK_ANSWER_ERROR'
 
 const initialState = {
   poinsts: 0,
