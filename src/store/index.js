@@ -18,8 +18,6 @@ if (process.env.NODE_ENV === 'development') {
   }
 }
 
-console.log(1)
-
 const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers)
 
 const store = createStore(rootReducer, initialState, composedEnhancers)
