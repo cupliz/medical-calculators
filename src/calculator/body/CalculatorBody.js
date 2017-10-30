@@ -30,15 +30,15 @@ const styles = theme => ({
 
 class CalculatorBody extends React.Component {
   state = {
-    value: 0
+    tabIndex: 0
   }
 
   handleChange = (event, value) => {
-    this.setState({ value })
+    this.setState({ tabIndex: value })
   }
 
   handleChangeIndex = index => {
-    this.setState({ value: index })
+    this.setState({ tabIndex: index })
   }
 
   render () {
@@ -48,7 +48,7 @@ class CalculatorBody extends React.Component {
       <div className={classes.calculatorBody}>
         <AppBar position='static' color='default'>
           <Tabs
-            value={this.state.value}
+            value={this.state.tabIndex}
             className={classes.tabs}
             onChange={this.handleChange}
             indicatorColor='primary'
@@ -75,7 +75,7 @@ class CalculatorBody extends React.Component {
         </AppBar>
         <SwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={this.state.value}
+          index={this.state.tabIndex}
           onChangeIndex={this.handleChangeIndex}
         >
           <TabContainer dir={theme.direction}>
