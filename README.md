@@ -1,6 +1,12 @@
 ## Project notes
 
-Stable web version (usually `gbarkhatov` branch): http://medical-calc.surge.sh/
+Stable web version. Usually `gbarkhatov` branch:
+
+http://medical-calc.surge.sh/
+
+Dev web version I am working on. Keep in mind that this is not updating constantly as I usually don't need to check how web app behaves remotely and can work locally:
+
+http://medical-calc.surge.sh/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
