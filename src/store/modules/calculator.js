@@ -1,7 +1,7 @@
-export const INCREMENT_REQUESTED = 'counter/INCREMENT_REQUESTED'
-export const INCREMENT = 'counter/INCREMENT'
-export const DECREMENT_REQUESTED = 'counter/DECREMENT_REQUESTED'
-export const DECREMENT = 'counter/DECREMENT'
+export const FETCH_CALC_DATA_REQUEST = 'calculator/FETCH_CALC_DATA_REQUEST'
+export const FETCH_CALC_DATA_SUCCESS = 'calculator/FETCH_CALC_DATA_SUCCESS'
+export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
+export const PICK_ANSWER = 'calculator/PICK_ANSWER'
 
 const initialState = {
   count: 0,
