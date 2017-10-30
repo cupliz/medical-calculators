@@ -1,84 +1,9 @@
 {
-  "calculators": [
-    {
-      "id": 0,
-      "url": "chads2-score-for-atrial-fibrillation",
-      "title": "CHADS2 Score for Atrial Fibrillation",
-      "type": "points",
-      "questions": [
-        {
-          "type": "radio",
-          "label": "Congestive Heart Failure History",
-          "points": "0/1"
-        },
-        {
-          "type": "radio",
-          "label": "Hypertension history",
-          "points": "0/1"
-        },
-        {
-          "type": "radio",
-          "label": "Age ≥ 75 years",
-          "points": "0/1"
-        },
-        {
-          "type": "radio",
-          "label": "Diabetes melitus history",
-          "points": "0/1"
-        },
-        {
-          "type": "radio",
-          "label": "Stroke or TIA symptoms previously",
-          "points": "0/1"
-        }
-      ],
-      "results": {
-        "0": [
-          "Low risk of thromboembolic event. 1.9% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "1": [
-          "Intermediate risk of thromboembolic event. 2.8% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "2": [
-          "Intermediate risk of thromboembolic event. 4.0% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "3": [
-          "High risk of thromboembolic event. 5.9% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "4": [
-          "High risk of thromboembolic event. 8.5% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "5": [
-          "Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)",
-          "By points directly: High risk of thromboembolic event. 12.5% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "6": [
-          "Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)",
-          "By points directly: High risk of thromboembolic event. 18.2% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ]
-      },
-      "notes": {
-        "type": "unordered-list",
-        "content": [
-          "Estimates stroke risk in patients with atrial fibrillation",
-          "The CHADS2 score is one of several risk stratification schemes that can help determine the 1 year risk of an ischemic stroke in a non-anticoagulated patient with non-valvular atrial fibrillation and determine which antithrombotic therapy is most appropriate",
-          "The CHA2-DS2-VASC score may be a better tool to assess stroke risk in patients with atrial fibrillation.  It risk stratifies these patients better than the CHADS2 score"
-        ]
-      },
-      "references": {
-        "type": "ordered-list",
-        "content": [
-          "Gage BF, Waterman AD, Shannon W, et. al. Validation of clinical classification schemes for predicting stroke: results from the National Registry of Atrial Fibrillation. JAMA. 2001 Jun 13;285(22):2864-70.",
-          "Go AS, Hylek EM, Chang Y, et. al. Anticoagulation therapy for stroke prevention in atrial fibrillation: how well do randomized trials translate into clinical practice?. JAMA. 2003 Nov 26;290(20):2685-92."
-        ]
-      }
-    }
-  ]
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
 }
