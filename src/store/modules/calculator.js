@@ -52,6 +52,35 @@ export const fetchCalcDataError = (errorMessage = '') => {
   }
 }
 
+export const pickAnswerRequest = (isLoaded = false) => {
+  return {
+    type: PICK_ANSWER_REQUEST,
+    payload: {
+      isLoaded
+    }
+  }
+}
+
+export const pickAnswerSuccess = (answer = {}) => {
+  return {
+    type: PICK_ANSWER_SUCCESS,
+    payload: {
+      answer,
+      receivedAt: new Date().toISOString()
+    }
+  }
+}
+
+export const pickAnswerError = (errorMessage = '') => {
+  return {
+    type: PICK_ANSWER_ERROR,
+    payload: {
+      errorMessage,
+      receivedAt: new Date().toISOString()
+    }
+  }
+}
+
 // ------------------------------------
 // Specialized Actions
 // ------------------------------------
