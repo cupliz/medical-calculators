@@ -16,11 +16,7 @@ export const PICK_ANSWER_ERROR = 'calculator/PICK_ANSWER_ERROR'
 // Initial State
 // ------------------------------------
 
-const initialState = {
-  // points: 0,
-  // isFetchingCalcData: false,
-  // isPickingAnswer: false
-}
+const initialState = {}
 
 // ------------------------------------
 // Actions
@@ -88,89 +84,14 @@ export const pickAnswerError = (errorMessage = '') => {
 // Specialized Actions
 // ------------------------------------
 
-// TODO RENAME AND CHOOSE AXIOS VS FETCH
-
-export const fetchCalcDataFetch = () => {
-  return (dispatch, getState) => {
-    dispatch(fetchCalcDataRequest())
-    const url = `http://localhost:3001/calculators/`
-    return fetch(url, {
-      method: 'GET'
-    })
-      .then(response => {
-        if (response.status >= 400) {
-          dispatch(fetchCalcDataError(response.status + ' Error'))
-          dispatch(fetchCalcDataRequest(false))
-        }
-        return response.json()
-      })
-      .then(json => {
-        dispatch(fetchCalcDataSuccess(json))
-      })
-      .then(() => {
-        dispatch(fetchCalcDataRequest(true))
-      })
-      .catch(error => {
-        dispatch(fetchCalcDataError(error))
-        dispatch(fetchCalcDataRequest(false))
-      })
-  }
-}
-
-export const fetchCalcDataErrorFetch = () => {
-  return (dispatch, getState) => {
-    dispatch(fetchCalcDataRequest())
-    const url = `http://localhost:3001/calculators/2`
-    return fetch(url, {
-      method: 'GET'
-    })
-      .then(response => {
-        if (response.status >= 400) {
-          dispatch(fetchCalcDataError(response.status + ' Error'))
-          dispatch(fetchCalcDataRequest(false))
-        }
-        return response.json()
-      })
-      .then(json => {
-        dispatch(fetchCalcDataSuccess(json))
-      })
-      .then(() => {
-        dispatch(fetchCalcDataRequest(true))
-      })
-      .catch(error => {
-        dispatch(fetchCalcDataError(error))
-        dispatch(fetchCalcDataRequest(false))
-      })
-  }
-}
-
-export const fetchCalcDataAxios = () => {
+export const fetchCalcData = () => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest())
     const url = `http://localhost:3001/calculators/`
     return axios
       .get(url)
-      .then(response => {
-        dispatch(fetchCalcDataSuccess(response.data))
-        dispatch(fetchCalcDataRequest(true))
-      })
-      .catch(({ response }) => {
-        dispatch(
-          fetchCalcDataError(`${response.status} ${response.statusText}`)
-        )
-        dispatch(fetchCalcDataRequest(false))
-      })
-  }
-}
-
-export const fetchCalcDataErrorAxios = () => {
-  return (dispatch, getState) => {
-    dispatch(fetchCalcDataRequest())
-    const url = `http://localhost:3001/calculators/2`
-    return axios
-      .get(url)
-      .then(response => {
-        dispatch(fetchCalcDataSuccess(response.data))
+      .then(({ data }) => {
+        dispatch(fetchCalcDataSuccess(data))
         dispatch(fetchCalcDataRequest(true))
       })
       .catch(({ response }) => {

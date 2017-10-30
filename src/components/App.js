@@ -3,10 +3,7 @@ import { Link, Route } from 'react-router-dom'
 import Calculator from './calculator/Calculator'
 import { connect } from 'react-redux'
 import {
-  fetchCalcDataAxios,
-  fetchCalcDataErrorAxios,
-  fetchCalcDataErrorFetch,
-  fetchCalcDataFetch
+  fetchCalcData
 } from '../store/modules/calculator'
 
 const App = props => (
@@ -41,10 +38,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  fetchCalcDataFetch,
-  fetchCalcDataAxios,
-  fetchCalcDataErrorFetch,
-  fetchCalcDataErrorAxios
+  fetchCalcDataAxios: fetchCalcData
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
