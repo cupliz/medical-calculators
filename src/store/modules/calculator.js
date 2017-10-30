@@ -34,7 +34,7 @@ export const fetchCalcDataRequest = (isLoaded = false) => {
   }
 }
 
-export const fetchCalcDataSuccess = (calc = {}) => {
+export const fetchCalcDataSuccess = (calculator = {}) => {
   return {
     type: FETCH_CALC_DATA_SUCCESS,
     payload: {
