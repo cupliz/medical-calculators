@@ -24,7 +24,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "surge build -d medical-calc.surge.sh"
+    "deploy": "surge build -d medical-calc.surge.sh",
+    "predeploy:dev": "yarn build",
+    "deploy:dev": "surge build -d medical-calc-dev.surge.sh"
   },
   "standard": {
     "parser": "babel-eslint",
