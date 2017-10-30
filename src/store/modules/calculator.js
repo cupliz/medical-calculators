@@ -52,6 +52,10 @@ export const fetchCalcDataError = (errorMessage = '') => {
   }
 }
 
+// ------------------------------------
+// Specialized Actions
+// ------------------------------------
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CALC_DATA_REQUEST:
