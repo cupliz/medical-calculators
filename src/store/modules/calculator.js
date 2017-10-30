@@ -9,6 +9,10 @@ export const PICK_ANSWER_REQUEST = 'calculator/PICK_ANSWER_REQUEST'
 export const PICK_ANSWER_SUCCESS = 'calculator/PICK_ANSWER_SUCCESS'
 export const PICK_ANSWER_ERROR = 'calculator/PICK_ANSWER_ERROR'
 
+// ------------------------------------
+// Initial State
+// ------------------------------------
+
 const initialState = {
   points: 0,
   isFetchingCalcData: false,
