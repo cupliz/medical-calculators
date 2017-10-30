@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Field from './Field'
-import Result from '../components/Result'
+import Result from './Result'
 
 const data = {
   0: [
