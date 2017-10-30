@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import Body from '../components/Body'
+import Body from './Body'
 
 const Calculator = () => (
   <div className='calculator'>
