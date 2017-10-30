@@ -2,9 +2,7 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import Calculator from './calculator/Calculator'
 import { connect } from 'react-redux'
-import {
-  fetchCalcData
-} from '../store/modules/calculator'
+import { fetchCalcData } from '../store/modules/calculator'
 
 const App = props => (
   <div>
@@ -12,20 +10,6 @@ const App = props => (
       <Link to='/'>Home</Link> {}
       <Link to='/chad2-calc'>Calculator</Link>
     </header>
-
-    <div>
-      <button onClick={props.fetchCalcDataFetch}>Fetch using Fetch</button>
-      <button onClick={props.fetchCalcDataAxios}>Fetch using Axios</button>
-    </div>
-
-    <div>
-      <button onClick={props.fetchCalcDataErrorFetch}>
-        Fetch Error using Fetch
-      </button>
-      <button onClick={props.fetchCalcDataErrorAxios}>
-        Fetch Error using Axios
-      </button>
-    </div>
 
     <main>
       <Route exact path='/chad2-calc' component={Calculator} />
