@@ -6,7 +6,7 @@ import {
   incrementAsync,
   decrement,
   decrementAsync
-} from '../redux/modules/counter'
+} from '../store/modules/counter'
 
 const Home = props => (
   <div>
