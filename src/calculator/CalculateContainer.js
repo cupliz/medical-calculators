@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import QuestionField from './QuestionField'
-import Result from './Result'
+import ResultCard from './ResultCard'
 
 const data = {
   0: [
@@ -81,7 +81,7 @@ class CalculateContainer extends Component {
           yesPoints={2}
           onChange={this.handleChange}
         />
-        <Result points={this.state.points} data={data[this.state.points]} />
+        <ResultCard points={this.state.points} data={data[this.state.points]} />
       </div>
     )
   }

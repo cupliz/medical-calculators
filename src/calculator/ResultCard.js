@@ -73,14 +73,14 @@ const renderResult = (classes, points, data) => {
   }
 }
 
-const Result = props => {
+const ResultCard = props => {
   const { classes, points, data } = props
 
   return renderResult(classes, points, data)
 }
 
-Result.propTypes = {
+ResultCard.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(Result)
+export default withStyles(styles)(ResultCard)
