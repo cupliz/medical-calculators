@@ -14,7 +14,7 @@ class Calculator extends Component {
   state = { loading: true }
 
   componentDidMount () {
-    // do fetch there
+    this.props.fetchCalcData()
   }
 
   render () {
