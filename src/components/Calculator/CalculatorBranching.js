@@ -17,30 +17,31 @@ const ComponentView = ({ name, climate, terrain }) => (
 )
 
 const CalculatorBranch = props => {
-  if (props.loading) {
+  if (!props.isLoaded) {
     return <LoadingView />
   } else if (props.data) {
-    return <ComponentView {...props.data} />
+    return <ComponentView data={props.data[0]} />
   } else {
-    return <ErrorView />
+    return <ErrorView errorMessage={props.errorMessage} />
   }
 }
 
 class Calculator extends Component {
-  state = { loading: true }
-
   componentDidMount () {
-    fetch('https://swapi.co/api/planets/5')
-      .then(res => res.json())
-      .then(
-        planet => this.setState({ loading: false, planet }),
-        error => this.setState({ loading: false, error })
-      )
+    this.props.fetchCalcData()
   }
 
   render () {
-    return <CalculatorBranch {...this.state} />
+    return <CalculatorBranch {...this.props.calculator} />
   }
 }
 
-export default Calculator
+const mapStateToProps = state => ({
+  calculator: state.calculator
+})
+
+const mapDispatchToProps = {
+  fetchCalcData
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Calculator)
