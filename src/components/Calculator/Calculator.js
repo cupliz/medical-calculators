@@ -12,15 +12,23 @@ class Calculator extends Component {
   render () {
     return (
       <div className='calculator'>
-        <CalculatorHeader title={this.props.title} />
+        <CalculatorHeader title={this.props.calculator} />
         <CalculatorBody />
       </div>
     )
   }
 }
 
+const getCalculator = (state) => {
+  if (state.calculator.data) {
+    return state.calculator.data[0]
+  } else {
+    return null
+  }
+}
+
 const mapStateToProps = state => ({
-  calculators: state.calculator
+  calculator: getCalculator(state)
 })
 
 const mapDispatchToProps = {
