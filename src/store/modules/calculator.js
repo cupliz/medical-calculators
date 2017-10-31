@@ -123,7 +123,7 @@ export const fetchCalcData = () => {
         } else {
           // Something happened in setting up the request that triggered an Error
           // console.log('Error', error.message)
-          dispatch(fetchCalcDataError(`Error: ${error.message}`))
+          dispatch(fetchCalcDataError(error.message))
         }
       })
   }
