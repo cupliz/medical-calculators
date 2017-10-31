@@ -6,7 +6,9 @@ import { fetchCalcData } from '../../store/modules/calculator'
 
 const LoadingView = () => <div>Loading...</div>
 
-const ErrorView = ({errorMessage}) => <div>I'm sorry! Please try again. Error: {errorMessage}</div>
+const ErrorView = ({ errorMessage }) => (
+  <div>I'm sorry! Please try again. Error: {errorMessage}</div>
+)
 
 const ComponentView = data => <div>Inside ComponentView</div>
 
