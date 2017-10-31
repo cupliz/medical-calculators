@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import Calculator from './components/Calculator/Calculator'
 import Home from './components/Home/Home'
+import CalculatorBranching from './components/Calculator/CalculatorBranching'
 
 const App = props => (
   <main>
@@ -11,7 +12,7 @@ const App = props => (
     </header>
 
     <Route exact path='/' component={Home} />
-    <Route exact path='/chad2-calc' component={Calculator} />
+    <Route exact path='/chad2-calc' component={CalculatorBranching} />
   </main>
 )
 
