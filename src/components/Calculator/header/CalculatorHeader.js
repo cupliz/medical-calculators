@@ -25,7 +25,7 @@ const styles = theme => ({
 })
 
 const CalculatorHeader = props => {
-  const { classes } = props
+  const { classes, title } = props
   return (
     <AppBar position='static' className={classes.appBar}>
       <Toolbar>
@@ -37,7 +37,7 @@ const CalculatorHeader = props => {
           <CloseIcon />
         </IconButton>
         <Typography type='title' color='inherit' className={classes.title}>
-          CHADS2 Score for Atrial Fibrillation
+          {title}
         </Typography>
         <IconButton color='contrast' aria-label='More'>
           <MoreIcon />
