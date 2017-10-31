@@ -10,14 +10,14 @@ class Calculator extends Component {
   state = { loading: true }
 
   componentDidMount () {
-    this.props.fetchCalcData()
+    console.log(1)
   }
 
   render () {
     if (this.state.loading) {
       return this.props.renderLoading()
     } else if (this.state.planet) {
-      return this.props.renderPlanet(this.state.planet)
+      return this.props.renderComponent(this.state.data)
     } else {
       return this.props.renderError(this.state.error)
     }
@@ -28,6 +28,6 @@ export default () => (
   <Calculator
     renderLoading={() => <LoadingView />}
     renderError={errorMessage => <ErrorView />}
-    renderPlanet={planet => <ComponentView {...planet} />}
+    renderComponent={data => <ComponentView {...data} />}
   />
 )
