@@ -28,10 +28,18 @@ class Calculator extends Component {
   }
 }
 
-export default () => (
+const mapStateToProps = state => ({
+  calculator: state.calculator
+})
+
+const mapDispatchToProps = {
+  fetchCalcData
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(() => (
   <Calculator
     renderLoading={() => <LoadingView />}
     renderError={errorMessage => <ErrorView />}
     renderPlanet={planet => <ComponentView {...planet} />}
   />
-)
+))
