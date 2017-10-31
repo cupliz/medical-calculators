@@ -24,7 +24,7 @@ const styles = theme => ({
   }
 })
 
-function CalculatorHeader (props) {
+const CalculatorHeader = props => {
   const { classes } = props
   return (
     <AppBar position='static' className={classes.appBar}>
