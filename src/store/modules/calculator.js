@@ -22,11 +22,11 @@ const initialState = {}
 // Actions
 // ------------------------------------
 
-export const fetchCalcDataRequest = (isLoaded = false) => {
+export const fetchCalcDataRequest = (loading = true) => {
   return {
     type: FETCH_CALC_DATA_REQUEST,
     payload: {
-      isLoaded
+      loading
     }
   }
 }
@@ -51,11 +51,11 @@ export const fetchCalcDataError = (errorMessage = '') => {
   }
 }
 
-export const pickAnswerRequest = (isLoaded = false) => {
+export const pickAnswerRequest = (loading = true) => {
   return {
     type: PICK_ANSWER_REQUEST,
     payload: {
-      isLoaded
+      loading
     }
   }
 }
@@ -86,13 +86,13 @@ export const pickAnswerError = (errorMessage = '') => {
 
 export const fetchCalcData = () => {
   return (dispatch, getState) => {
-    dispatch(fetchCalcDataRequest())
+    dispatch(fetchCalcDataRequest(true))
     const url = `http://localhost:3001/calculators/`
     return axios
       .get(url)
       .then(({ data }) => {
         dispatch(fetchCalcDataSuccess(data))
-        dispatch(fetchCalcDataRequest(true))
+        dispatch(fetchCalcDataRequest(false))
       })
       .catch(error => {
         dispatch(fetchCalcDataRequest(false))
@@ -133,7 +133,7 @@ export const fetchCalcData = () => {
 export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CALC_DATA_REQUEST:
-      if (action.payload.isLoaded) {
+      if (!action.payload.loading) {
         return {
           ...deleteProperty(state, 'errorMessage'),
           ...action.payload
