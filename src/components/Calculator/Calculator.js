@@ -12,7 +12,7 @@ class Calculator extends Component {
   render () {
     return (
       <div className='calculator'>
-        <CalculatorHeader />
+        <CalculatorHeader title={this.props.title} />
         <CalculatorBody />
       </div>
     )
