@@ -95,12 +95,6 @@ export const fetchCalcData = () => {
           dispatch(fetchCalcDataSuccess(data))
           dispatch(fetchCalcDataRequest(true))
         })
-        // .catch(({ response }) => {
-        //   dispatch(
-        //     fetchCalcDataError(`${response.status} ${response.statusText}`)
-        //   )
-        //   dispatch(fetchCalcDataRequest(false))
-        // })
         .catch(error => {
           dispatch(fetchCalcDataRequest(false))
           if (error.response) {
