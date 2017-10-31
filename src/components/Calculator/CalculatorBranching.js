@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-import CalculatorHeader from './header/CalculatorHeader'
-import CalculatorBody from './body/CalculatorBody'
-import { connect } from 'react-redux'
-import { fetchCalcData } from '../../store/modules/calculator'
 
 const LoadingView = () => <div>Loading...</div>
 
@@ -28,18 +24,10 @@ class Calculator extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  calculator: state.calculator
-})
-
-const mapDispatchToProps = {
-  fetchCalcData
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(() => (
+export default () => (
   <Calculator
     renderLoading={() => <LoadingView />}
     renderError={errorMessage => <ErrorView />}
     renderPlanet={planet => <ComponentView {...planet} />}
   />
-))
+)
