@@ -16,7 +16,7 @@ const ComponentView = ({ name, climate, terrain }) => (
   </div>
 )
 
-const PlanetBranch = props => {
+const CalculatorBranch = props => {
   if (props.loading) {
     return <LoadingView />
   } else if (props.data) {
@@ -39,7 +39,7 @@ class Calculator extends Component {
   }
 
   render () {
-    return <PlanetBranch {...this.state} />
+    return <CalculatorBranch {...this.state} />
   }
 }
 
