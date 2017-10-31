@@ -87,7 +87,7 @@ export const pickAnswerError = (errorMessage = '') => {
 export const fetchCalcData = () => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest(true))
-    const url = `http://localhost:3001/calculators/`
+    const url = `http://localhost:3001/calculators/2`
     return axios
       .get(url)
       .then(({ data }) => {
