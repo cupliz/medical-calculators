@@ -91,13 +91,12 @@ export const fetchCalcData = () => {
     return axios
       .get(url)
       .then(({ data }) => {
-        // dispatch(fetchCalcDataSuccess(data))
-        // dispatch(fetchCalcDataRequest(false))
-        // TODO delete
-        return setTimeout(() => {
-          dispatch(fetchCalcDataSuccess(data))
-          dispatch(fetchCalcDataRequest(false))
-        }, 2000)
+        dispatch(fetchCalcDataSuccess(data))
+        dispatch(fetchCalcDataRequest(false))
+        // return setTimeout(() => {
+        //   dispatch(fetchCalcDataSuccess(data))
+        //   dispatch(fetchCalcDataRequest(false))
+        // }, 2000)
       })
       .catch(error => {
         dispatch(fetchCalcDataRequest(false))
