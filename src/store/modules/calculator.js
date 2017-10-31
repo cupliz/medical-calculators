@@ -31,11 +31,11 @@ export const fetchCalcDataRequest = (isLoaded = false) => {
   }
 }
 
-export const fetchCalcDataSuccess = (calculator = {}) => {
+export const fetchCalcDataSuccess = (data = {}) => {
   return {
     type: FETCH_CALC_DATA_SUCCESS,
     payload: {
-      calculator,
+      data,
       receivedAt: new Date().toISOString()
     }
   }
