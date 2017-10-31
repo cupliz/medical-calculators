@@ -6,15 +6,9 @@ import { fetchCalcData } from '../../store/modules/calculator'
 
 const LoadingView = () => <div>Loading...</div>
 
-const ErrorView = () => <div>I'm sorry! Please try again.</div>
+const ErrorView = errorMessage => <div>I'm sorry! Please try again. Error: {errorMessage}</div>
 
-const ComponentView = ({ name, climate, terrain }) => (
-  <div>
-    <h2>{name}</h2>
-    <div>Climate: {climate}</div>
-    <div>Terrain: {terrain}</div>
-  </div>
-)
+const ComponentView = data => <div>Inside ComponentView</div>
 
 const CalculatorBranch = props => {
   if (!props.isLoaded) {
