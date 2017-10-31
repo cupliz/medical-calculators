@@ -110,7 +110,9 @@ export const fetchCalcData = () => {
             // console.log(error.response.status);
             // console.log(error.response.headers);
             dispatch(
-              fetchCalcDataError(`${error.response.status} ${error.response.statusText}`)
+              fetchCalcDataError(
+                `${error.response.status} ${error.response.statusText}`
+              )
             )
           } else if (error.request) {
             // The request was made but no response was received
