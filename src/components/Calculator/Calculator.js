@@ -20,7 +20,7 @@ class Calculator extends Component {
 }
 
 const mapStateToProps = state => ({
-  calculators: state.data
+  calculators: state.calculator
 })
 
 const mapDispatchToProps = {
