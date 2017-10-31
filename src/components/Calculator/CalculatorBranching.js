@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import CalculatorHeader from './header/CalculatorHeader'
+import CalculatorBody from './body/CalculatorBody'
+import { connect } from 'react-redux'
+import { fetchCalcData } from '../../store/modules/calculator'
 
 const LoadingView = () => <div>Loading...</div>
 
