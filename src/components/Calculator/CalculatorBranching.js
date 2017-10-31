@@ -11,12 +11,13 @@ const ErrorView = errorMessage => <div>I'm sorry! Please try again. Error: {erro
 const ComponentView = data => <div>Inside ComponentView</div>
 
 const CalculatorBranch = props => {
-  if (props.isLoaded) {
+  if (!props.isLoaded) {
     return <LoadingView />
   } else if (props.data) {
     return <ComponentView data={props.data[0]} />
   } else {
-    return <ErrorView errorMessage={props.errorMessage} />
+    // return <ErrorView errorMessage={props.errorMessage} />
+    return null
   }
 }
 
