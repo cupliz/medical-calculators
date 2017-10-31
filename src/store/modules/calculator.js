@@ -97,7 +97,7 @@ export const fetchCalcData = () => {
         return setTimeout(() => {
           dispatch(fetchCalcDataSuccess(data))
           dispatch(fetchCalcDataRequest(false))
-        }, 2000)
+        }, 100000)
       })
       .catch(error => {
         dispatch(fetchCalcDataRequest(false))

@@ -3,8 +3,9 @@ import CalculatorHeader from './header/CalculatorHeader'
 import CalculatorBody from './body/CalculatorBody'
 import { connect } from 'react-redux'
 import { fetchCalcData } from '../../store/modules/calculator'
+import Loader from '../Loader/Loader'
 
-const LoadingView = () => <div>Loading...</div>
+const LoadingView = () => <Loader />
 
 const ErrorView = props => (
   <div>I'm sorry! Error: {props.errorMessage}. Please try again.</div>
