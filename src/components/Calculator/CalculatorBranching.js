@@ -8,7 +8,7 @@ const LoadingView = () => <div>Loading...</div>
 
 const ErrorView = () => <div>I'm sorry! Please try again.</div>
 
-const PlanetView = ({ name, climate, terrain }) => (
+const ComponentView = ({ name, climate, terrain }) => (
   <div>
     <h2>{name}</h2>
     <div>Climate: {climate}</div>
@@ -16,11 +16,11 @@ const PlanetView = ({ name, climate, terrain }) => (
   </div>
 )
 
-const PlanetBranch = ({ loading, planet }) => {
-  if (loading) {
+const PlanetBranch = props => {
+  if (props.loading) {
     return <LoadingView />
-  } else if (planet) {
-    return <PlanetView {...planet} />
+  } else if (props.data) {
+    return <ComponentView {...props.data} />
   } else {
     return <ErrorView />
   }
