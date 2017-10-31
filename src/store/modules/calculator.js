@@ -88,18 +88,43 @@ export const fetchCalcData = () => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest())
     const url = `http://localhost:3001/calculators/`
-    return axios
-      .get(url)
-      .then(({ data }) => {
-        dispatch(fetchCalcDataSuccess(data))
-        dispatch(fetchCalcDataRequest(true))
-      })
-      .catch(({ response }) => {
-        dispatch(
-          fetchCalcDataError(`${response.status} ${response.statusText}`)
-        )
-        dispatch(fetchCalcDataRequest(false))
-      })
+    return (
+      axios
+        .get(url)
+        .then(({ data }) => {
+          dispatch(fetchCalcDataSuccess(data))
+          dispatch(fetchCalcDataRequest(true))
+        })
+        // .catch(({ response }) => {
+        //   dispatch(
+        //     fetchCalcDataError(`${response.status} ${response.statusText}`)
+        //   )
+        //   dispatch(fetchCalcDataRequest(false))
+        // })
+        .catch(error => {
+          dispatch(fetchCalcDataRequest(false))
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            // console.log(error.response.data);
+            // console.log(error.response.status);
+            // console.log(error.response.headers);
+            dispatch(
+              fetchCalcDataError(`${error.response.status} ${error.response.statusText}`)
+            )
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            // console.log(error.request)
+            fetchCalcDataError(error.request)
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            // console.log('Error', error.message)
+            fetchCalcDataError(`Error: ${error.message}`)
+          }
+        })
+    )
   }
 }
 
