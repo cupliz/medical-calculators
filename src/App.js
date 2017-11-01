@@ -19,7 +19,11 @@ const ComponentView = props => (
       <Link to='/chad2-calc'>CHADS2 Score for Atrial Fibrillation</Link>
     </header>
 
-    <Route exact path='/' render={props => <Home someProp={2} {...props} />} />
+    <Route
+      exact
+      path='/'
+      render={routeProps => <Home list={props.data} {...routeProps} />}
+    />
     <Route exact path='/chad2-calc' component={Calculator} />
   </main>
 )
