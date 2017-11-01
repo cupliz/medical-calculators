@@ -20,11 +20,15 @@ class CalculateContainer extends Component {
     }
   }
 
-  renderQuestionFields = questions => {
+  renderQuestionFields = (questions, changeHandler) => {
     return questions.map(question => {
-      const { label } = question
       return (
-        <QuestionField label />
+        <QuestionField
+          key={question.label}
+          label={question.label}
+          points={question.points}
+          onChange={changeHandler}
+        />
       )
     })
   }
@@ -34,32 +38,7 @@ class CalculateContainer extends Component {
 
     return (
       <div className='calculate'>
-        <QuestionField
-          label='Congestive Heart Failure History'
-          points='0/1'
-          onChange={this.handleChange}
-        />
-        <QuestionField
-          label='Hypertension history'
-          points='0/1'
-          onChange={this.handleChange}
-        />
-        <QuestionField
-          label='Age ≥ 75 years'
-          points='0/1'
-          onChange={this.handleChange}
-        />
-        <QuestionField
-          label='Diabetes melitus history'
-          points='0/1'
-          onChange={this.handleChange}
-        />
-        <QuestionField
-          label='Stroke or TIA symptoms previously'
-          points='0/2'
-          onChange={this.handleChange}
-        />
-        {/*{this.renderQuestionFields(questions)}*/}
+        {this.renderQuestionFields(questions, this.handleChange)}
         <ResultCard points={points} data={results[points]} />
       </div>
     )
