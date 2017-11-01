@@ -25,7 +25,7 @@ const ComponentView = props => (
         key={calculator.id}
         path={`/${calculator.id}`}
         render={routeProps => (
-          <Calculator data={props.data} id={calculator.id} {...routeProps} />
+          <Calculator data={props.data} calculatorId={calculator.id} {...routeProps} />
         )}
       />
     ))}
