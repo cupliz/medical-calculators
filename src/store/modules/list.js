@@ -55,7 +55,7 @@ export const fetchListDataError = (errorMessage = '') => {
 export const fetchListData = () => {
   return (dispatch, getState) => {
     dispatch(fetchListDataRequest(true))
-    const url = `http://localhost:3001/calculators/`
+    const url = `http://localhost:3001/list/`
     return axios
       .get(url)
       .then(({ data }) => {
