@@ -19,28 +19,16 @@ const ComponentView = props => (
       path='/'
       render={routeProps => <Home data={props.data} {...routeProps} />}
     />
-    <Route
-      exact
-      path='/chads2-score-for-atrial-fibrillation'
-      render={routeProps => (
-        <Calculator
-          data={props.data}
-          id={'chads2-score-for-atrial-fibrillation'}
-          {...routeProps}
-        />
-      )}
-    />
-    <Route
-      exact
-      path='/curb-65-pneumonia-severity-score'
-      render={routeProps => (
-        <Calculator
-          data={props.data}
-          id={'curb-65-pneumonia-severity-score'}
-          {...routeProps}
-        />
-      )}
-    />
+    {props.data.map(calculator => (
+      <Route
+        exact
+        key={calculator.id}
+        path={`/${calculator.id}`}
+        render={routeProps => (
+          <Calculator data={props.data} id={calculator.id} {...routeProps} />
+        )}
+      />
+    ))}
   </main>
 )
 
