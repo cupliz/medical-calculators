@@ -82,7 +82,10 @@ class CalculatorBody extends React.Component {
             <CalculateContainer />
           </TabContainer>
           <TabContainer dir={theme.direction}>
-            <ReferencesContainer />
+            <ReferencesContainer
+              references={this.props.data.references}
+              notes={this.props.data.notes}
+            />
           </TabContainer>
         </SwipeableViews>
       </div>
