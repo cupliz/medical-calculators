@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, withRouter } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Calculator from './components/Calculator/Calculator'
+import { connect } from 'react-redux'
 
 const App = props => (
   <main>
@@ -15,4 +16,4 @@ const App = props => (
   </main>
 )
 
-export default App
+export default withRouter(connect()(App))
