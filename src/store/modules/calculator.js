@@ -8,9 +8,7 @@ import { deleteProperty } from '../../utils/immutable'
 export const FETCH_CALC_DATA_REQUEST = 'calculator/FETCH_CALC_DATA_REQUEST'
 export const FETCH_CALC_DATA_SUCCESS = 'calculator/FETCH_CALC_DATA_SUCCESS'
 export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
-export const PICK_ANSWER_REQUEST = 'calculator/PICK_ANSWER_REQUEST'
-export const PICK_ANSWER_SUCCESS = 'calculator/PICK_ANSWER_SUCCESS'
-export const PICK_ANSWER_ERROR = 'calculator/PICK_ANSWER_ERROR'
+export const PICK_ANSWER = 'calculator/PICK_ANSWER'
 
 // ------------------------------------
 // Initial State
@@ -51,30 +49,11 @@ export const fetchCalcDataError = (errorMessage = '') => {
   }
 }
 
-export const pickAnswerRequest = (loading = true) => {
+export const pickAnswer = (answer = {}) => {
   return {
-    type: PICK_ANSWER_REQUEST,
-    payload: {
-      loading
-    }
-  }
-}
-
-export const pickAnswerSuccess = (answer = {}) => {
-  return {
-    type: PICK_ANSWER_SUCCESS,
+    type: PICK_ANSWER,
     payload: {
       answer,
-      receivedAt: new Date().toISOString()
-    }
-  }
-}
-
-export const pickAnswerError = (errorMessage = '') => {
-  return {
-    type: PICK_ANSWER_ERROR,
-    payload: {
-      errorMessage,
       receivedAt: new Date().toISOString()
     }
   }
