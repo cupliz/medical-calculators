@@ -22,7 +22,24 @@ const ComponentView = props => (
     <Route
       exact
       path='/chads2-score-for-atrial-fibrillation'
-      render={routeProps => <Calculator data={props.data} {...routeProps} />}
+      render={routeProps => (
+        <Calculator
+          data={props.data}
+          id={'chads2-score-for-atrial-fibrillation'}
+          {...routeProps}
+        />
+      )}
+    />
+    <Route
+      exact
+      path='/curb-65-pneumonia-severity-score'
+      render={routeProps => (
+        <Calculator
+          data={props.data}
+          id={'curb-65-pneumonia-severity-score'}
+          {...routeProps}
+        />
+      )}
     />
   </main>
 )
