@@ -2,17 +2,18 @@ import React from 'react'
 import InfoCard from './InfoCard'
 
 const ReferencesContainer = props => {
+  const { notes, references } = props
   return (
     <div>
       <InfoCard
         title='Notes'
-        type={props.notes.type}
-        content={props.notes.content}
+        type={notes.type}
+        content={notes.content}
       />
       <InfoCard
         title='References'
-        type={props.references.type}
-        content={props.references.content}
+        type={references.type}
+        content={references.content}
       />
     </div>
   )
