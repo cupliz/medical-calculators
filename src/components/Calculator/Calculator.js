@@ -14,7 +14,7 @@ const ErrorView = props => (
 const ComponentView = props => (
   <div className='calculator'>
     <CalculatorHeader title={props.data.title} />
-    <CalculatorBody data={props.data} />
+    <CalculatorBody data={props.data} pickAnswer={props.pickAnswer} />
   </div>
 )
 
@@ -22,7 +22,7 @@ const CalculatorBranch = props => {
   if (props.loading) {
     return <LoadingView />
   } else if (props.data) {
-    return <ComponentView data={props.data[0]} />
+    return <ComponentView data={props.data[0]} pickAnswer={props.pickAnswer} />
   } else if (props.errorMessage) {
     return <ErrorView errorMessage={props.errorMessage} />
   } else {
@@ -36,7 +36,7 @@ class Calculator extends Component {
   }
 
   render () {
-    return <CalculatorBranch {...this.props.calculator} />
+    return <CalculatorBranch {...this.props.calculator} pickAnswer={this.props.pickAnswer} />
   }
 }
 
