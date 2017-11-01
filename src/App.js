@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Route, withRouter } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Calculator from './components/Calculator/Calculator'
 import { connect } from 'react-redux'
@@ -19,7 +19,11 @@ const ComponentView = props => (
       path='/'
       render={routeProps => <Home data={props.data} {...routeProps} />}
     />
-    <Route exact path='/chads2-score-for-atrial-fibrillation' component={Calculator} />
+    <Route
+      exact
+      path='/chads2-score-for-atrial-fibrillation'
+      render={routeProps => <Calculator data={props.data} {...routeProps} />}
+    />
   </main>
 )
 
