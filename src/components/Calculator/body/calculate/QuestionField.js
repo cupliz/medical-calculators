@@ -60,6 +60,7 @@ class QuestionField extends React.Component {
 
   render () {
     const { classes } = this.props
+    const answerPoints = this.props.points.split('/')
 
     return (
       <div className={classes.questionField}>
