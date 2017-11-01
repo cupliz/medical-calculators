@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import QuestionField from './QuestionField'
 import ResultCard from './ResultCard'
+import { connect } from 'react-redux'
+import { pickAnswer } from '../../../../store/modules/calculator'
 
 class CalculateContainer extends Component {
   state = {
@@ -48,4 +50,4 @@ class CalculateContainer extends Component {
   }
 }
 
-export default CalculateContainer
+export default connect(null, { pickAnswer })(CalculateContainer)

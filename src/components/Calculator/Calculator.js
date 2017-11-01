@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CalculatorHeader from './header/CalculatorHeader'
 import CalculatorBody from './body/CalculatorBody'
 import { connect } from 'react-redux'
-import { fetchCalcData, pickAnswer } from '../../store/modules/calculator'
+import { fetchCalcData } from '../../store/modules/calculator'
 import Loader from '../Loader/Loader'
 
 const LoadingView = () => <Loader />
@@ -14,7 +14,7 @@ const ErrorView = props => (
 const ComponentView = props => (
   <div className='calculator'>
     <CalculatorHeader title={props.data.title} />
-    <CalculatorBody data={props.data} pickAnswer={props.pickAnswer} />
+    <CalculatorBody data={props.data} />
   </div>
 )
 
@@ -22,7 +22,7 @@ const CalculatorBranch = props => {
   if (props.loading) {
     return <LoadingView />
   } else if (props.data) {
-    return <ComponentView data={props.data} pickAnswer={props.pickAnswer} />
+    return <ComponentView data={props.data} />
   } else if (props.errorMessage) {
     return <ErrorView errorMessage={props.errorMessage} />
   } else {
@@ -36,7 +36,7 @@ class Calculator extends Component {
   }
 
   render () {
-    return <CalculatorBranch {...this.props.calculator} pickAnswer={this.props.pickAnswer} />
+    return <CalculatorBranch {...this.props.calculator} />
   }
 }
 
@@ -45,8 +45,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  fetchCalcData,
-  pickAnswer
+  fetchCalcData
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Calculator)
