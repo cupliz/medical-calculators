@@ -2,7 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Radio, { RadioGroup } from 'material-ui/Radio'
-import { FormGroup, FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
+import {
+  FormGroup,
+  FormLabel,
+  FormControl,
+  FormControlLabel
+} from 'material-ui/Form'
+import Checkbox from 'material-ui/Checkbox'
 
 const styles = theme => ({
   questionField: {
@@ -126,38 +132,45 @@ class QuestionField extends React.Component {
             <Checkbox
               checked={this.state.checkedA}
               onChange={this.handleChange('checkedA')}
-              value="checkedA"
+              value='checkedA'
             />
           }
-          label="Option A"
+          label='Option A'
         />
         <FormControlLabel
           control={
             <Checkbox
               checked={this.state.checkedB}
               onChange={this.handleChange('checkedB')}
-              value="checkedB"
+              value='checkedB'
             />
           }
-          label="Option B"
+          label='Option B'
         />
-        <FormControlLabel control={<Checkbox value="checkedC" />} label="Option C" />
-        <FormControlLabel disabled control={<Checkbox value="checkedD" />} label="Disabled" />
+        <FormControlLabel
+          control={<Checkbox value='checkedC' />}
+          label='Option C'
+        />
         <FormControlLabel
           disabled
-          control={<Checkbox checked value="checkedE" />}
-          label="Disabled"
+          control={<Checkbox value='checkedD' />}
+          label='Disabled'
+        />
+        <FormControlLabel
+          disabled
+          control={<Checkbox checked value='checkedE' />}
+          label='Disabled'
         />
         <FormControlLabel
           control={
             <Checkbox
               checked={this.state.checkedF}
               onChange={this.handleChange('checkedF')}
-              value="checkedF"
+              value='checkedF'
               indeterminate
             />
           }
-          label="Indeterminate"
+          label='Indeterminate'
         />
         <FormControlLabel
           control={
@@ -165,12 +178,12 @@ class QuestionField extends React.Component {
               checked={this.state.checkedG}
               onChange={this.handleChange('checkedG')}
               classes={{
-                checked: classes.checked,
+                checked: classes.checked
               }}
-              value="checkedG"
+              value='checkedG'
             />
           }
-          label="Custom color"
+          label='Custom color'
         />
       </FormGroup>
     )
