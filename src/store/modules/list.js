@@ -28,11 +28,11 @@ export const fetchListDataRequest = (loading = true) => {
   }
 }
 
-export const fetchListDataSuccess = (list = []) => {
+export const fetchListDataSuccess = (data = []) => {
   return {
     type: FETCH_LIST_DATA_SUCCESS,
     payload: {
-      list,
+      data,
       receivedAt: new Date().toISOString()
     }
   }
