@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Radio, { RadioGroup } from 'material-ui/Radio'
-import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
+import { FormGroup, FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
 
 const styles = theme => ({
   questionField: {
@@ -119,7 +119,61 @@ class QuestionField extends React.Component {
   )
 
   renderCheckboxQuestion = () => {
-    return <div>1</div>
+    return (
+      <FormGroup row>
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={this.state.checkedA}
+              onChange={this.handleChange('checkedA')}
+              value="checkedA"
+            />
+          }
+          label="Option A"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={this.state.checkedB}
+              onChange={this.handleChange('checkedB')}
+              value="checkedB"
+            />
+          }
+          label="Option B"
+        />
+        <FormControlLabel control={<Checkbox value="checkedC" />} label="Option C" />
+        <FormControlLabel disabled control={<Checkbox value="checkedD" />} label="Disabled" />
+        <FormControlLabel
+          disabled
+          control={<Checkbox checked value="checkedE" />}
+          label="Disabled"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={this.state.checkedF}
+              onChange={this.handleChange('checkedF')}
+              value="checkedF"
+              indeterminate
+            />
+          }
+          label="Indeterminate"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={this.state.checkedG}
+              onChange={this.handleChange('checkedG')}
+              classes={{
+                checked: classes.checked,
+              }}
+              value="checkedG"
+            />
+          }
+          label="Custom color"
+        />
+      </FormGroup>
+    )
   }
 
   render () {
