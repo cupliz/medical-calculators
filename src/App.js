@@ -14,11 +14,6 @@ const ErrorView = props => (
 
 const ComponentView = props => (
   <main className='app'>
-    <header>
-      <Link to='/'>Home</Link> {' - '}
-      <Link to='/chad2-calc'>CHADS2 Score for Atrial Fibrillation</Link>
-    </header>
-
     <Route
       exact
       path='/'
