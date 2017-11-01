@@ -1,8 +1,11 @@
 {
+  "list": [
+    "chads2-score-for-atrial-fibrillation",
+    "curb-65-pneumonia-severity-score"
+  ],
   "calculators": [
     {
-      "id": 0,
-      "url": "chads2-score-for-atrial-fibrillation",
+      "id": "chads2-score-for-atrial-fibrillation",
       "title": "CHADS2 Score for Atrial Fibrillation",
       "type": "points",
       "points": 0,
@@ -82,8 +85,7 @@
       }
     },
     {
-      "id": 1,
-      "url": "curb-65-pneumonia-severity-score",
+      "id": "curb-65-pneumonia-severity-score",
       "title": "CURB-65 Pneumonia Severity Score",
       "type": "points",
       "points": 0,
