@@ -12,10 +12,12 @@ class CalculateContainer extends Component {
     if (value === answerPoints[0]) {
       this.setState(prevState => {
         const maxValue = parseInt(answerPoints[1], 10)
+        this.props.pickAnswer(prevState.points - maxValue)
         return { points: prevState.points - maxValue }
       })
     } else {
       this.setState(prevState => {
+        this.props.pickAnswer(prevState.points + parseInt(value, 10))
         return { points: prevState.points + parseInt(value, 10) }
       })
     }
