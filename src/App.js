@@ -7,7 +7,7 @@ const App = props => (
   <main>
     <header>
       <Link to='/'>Home</Link> {}
-      <Link to='/chad2-calc'>Calculator</Link>
+      <Link to='/chad2-calc'>CHADS2 Score for Atrial Fibrillation</Link>
     </header>
 
     <Route exact path='/' component={Home} />
