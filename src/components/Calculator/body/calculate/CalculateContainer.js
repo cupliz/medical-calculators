@@ -50,6 +50,7 @@ class CalculateContainer extends Component {
           yesPoints={2}
           onChange={this.handleChange}
         />
+        { this.renderQuestionFields() }
         <ResultCard points={points} data={results[points]} />
       </div>
     )
