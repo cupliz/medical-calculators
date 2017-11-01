@@ -6,11 +6,7 @@ const ReferencesContainer = props => {
 
   return (
     <div>
-      <InfoCard
-        title='Notes'
-        type={notes.type}
-        content={notes.content}
-      />
+      <InfoCard title='Notes' type={notes.type} content={notes.content} />
       <InfoCard
         title='References'
         type={references.type}
