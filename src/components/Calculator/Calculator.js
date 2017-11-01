@@ -22,7 +22,7 @@ const CalculatorBranch = props => {
   if (props.loading) {
     return <LoadingView />
   } else if (props.data) {
-    return <ComponentView data={props.data[0]} pickAnswer={props.pickAnswer} />
+    return <ComponentView data={props.data} pickAnswer={props.pickAnswer} />
   } else if (props.errorMessage) {
     return <ErrorView errorMessage={props.errorMessage} />
   } else {
