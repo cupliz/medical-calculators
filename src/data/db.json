@@ -83,8 +83,8 @@
     },
     {
       "id": 1,
-      "url": "chads2-score-for-atrial-fibrillation",
-      "title": "CHADS2 Score for Atrial Fibrillation",
+      "url": "curb-65-pneumonia-severity-score",
+      "title": "CURB-65 Pneumonia Severity Score",
       "type": "points",
       "points": 0,
       "questions": [
