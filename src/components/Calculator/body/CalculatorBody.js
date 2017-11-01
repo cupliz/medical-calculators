@@ -79,7 +79,10 @@ class CalculatorBody extends React.Component {
           onChangeIndex={this.handleChangeIndex}
         >
           <TabContainer dir={theme.direction}>
-            <CalculateContainer />
+            <CalculateContainer
+              questions={this.props.data.questions}
+              results={this.props.data.results}
+            />
           </TabContainer>
           <TabContainer dir={theme.direction}>
             <ReferencesContainer
