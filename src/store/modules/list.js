@@ -59,7 +59,7 @@ export const fetchListData = () => {
     return axios
       .get(url)
       .then(({ data }) => {
-        dispatch(fetchListDataSuccess(data[0]))
+        dispatch(fetchListDataSuccess(data))
         dispatch(fetchListDataRequest(false))
         // return setTimeout(() => {
         //   dispatch(fetchCalcDataSuccess(data))
