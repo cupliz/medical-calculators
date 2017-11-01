@@ -6,7 +6,7 @@ import Calculator from './components/Calculator/Calculator'
 const App = props => (
   <main>
     <header>
-      <Link to='/'>Home</Link> {}
+      <Link to='/'>Home</Link> {' - '}
       <Link to='/chad2-calc'>CHADS2 Score for Atrial Fibrillation</Link>
     </header>
 
