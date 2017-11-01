@@ -51,7 +51,7 @@ class QuestionField extends React.Component {
 
   handleChange = (event, value) => {
     let checked = false
-    if (value === this.props.yesPoints.toString()) {
+    if (value === this.props.points.split('/')[1]) {
       checked = true
     }
     this.setState({ value, checked })
