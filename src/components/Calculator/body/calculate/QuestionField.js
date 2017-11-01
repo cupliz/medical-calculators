@@ -124,66 +124,17 @@ class QuestionField extends React.Component {
     </div>
   )
 
-  renderCheckboxQuestion = () => {
+  renderCheckboxQuestion = (classes, answerPoints) => {
     return (
       <FormGroup row>
         <FormControlLabel
           control={
             <Checkbox
-              checked={this.state.checkedA}
-              onChange={this.handleChange('checkedA')}
+              checked={this.state.checked}
               value='checkedA'
             />
           }
           label='Option A'
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={this.state.checkedB}
-              onChange={this.handleChange('checkedB')}
-              value='checkedB'
-            />
-          }
-          label='Option B'
-        />
-        <FormControlLabel
-          control={<Checkbox value='checkedC' />}
-          label='Option C'
-        />
-        <FormControlLabel
-          disabled
-          control={<Checkbox value='checkedD' />}
-          label='Disabled'
-        />
-        <FormControlLabel
-          disabled
-          control={<Checkbox checked value='checkedE' />}
-          label='Disabled'
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={this.state.checkedF}
-              onChange={this.handleChange('checkedF')}
-              value='checkedF'
-              indeterminate
-            />
-          }
-          label='Indeterminate'
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={this.state.checkedG}
-              onChange={this.handleChange('checkedG')}
-              classes={{
-                checked: classes.checked
-              }}
-              value='checkedG'
-            />
-          }
-          label='Custom color'
         />
       </FormGroup>
     )
