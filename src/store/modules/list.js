@@ -19,7 +19,7 @@ const initialState = []
 // Actions
 // ------------------------------------
 
-export const fetchCalcDataRequest = (loading = true) => {
+export const fetchListDataRequest = (loading = true) => {
   return {
     type: FETCH_LIST_DATA_REQUEST,
     payload: {
@@ -28,7 +28,7 @@ export const fetchCalcDataRequest = (loading = true) => {
   }
 }
 
-export const fetchCalcDataSuccess = (list = []) => {
+export const fetchListDataSuccess = (list = []) => {
   return {
     type: FETCH_LIST_DATA_SUCCESS,
     payload: {
@@ -38,7 +38,7 @@ export const fetchCalcDataSuccess = (list = []) => {
   }
 }
 
-export const fetchCalcDataError = (errorMessage = '') => {
+export const fetchListDataError = (errorMessage = '') => {
   return {
     type: FETCH_LIST_DATA_ERROR,
     payload: {
@@ -52,22 +52,22 @@ export const fetchCalcDataError = (errorMessage = '') => {
 // Specialized Actions
 // ------------------------------------
 
-export const fetchCalcData = () => {
+export const fetchListData = () => {
   return (dispatch, getState) => {
-    dispatch(fetchCalcDataRequest(true))
+    dispatch(fetchListDataRequest(true))
     const url = `http://localhost:3001/calculators/`
     return axios
       .get(url)
       .then(({ data }) => {
-        dispatch(fetchCalcDataSuccess(data[0]))
-        dispatch(fetchCalcDataRequest(false))
+        dispatch(fetchListDataSuccess(data[0]))
+        dispatch(fetchListDataRequest(false))
         // return setTimeout(() => {
         //   dispatch(fetchCalcDataSuccess(data))
         //   dispatch(fetchCalcDataRequest(false))
         // }, 2000)
       })
       .catch(error => {
-        dispatch(fetchCalcDataRequest(false))
+        dispatch(fetchListDataRequest(false))
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
@@ -75,7 +75,7 @@ export const fetchCalcData = () => {
           // console.log(error.response.status);
           // console.log(error.response.headers);
           dispatch(
-            fetchCalcDataError(
+            fetchListDataError(
               `${error.response.status} ${error.response.statusText}`
             )
           )
@@ -85,14 +85,14 @@ export const fetchCalcData = () => {
           // http.ClientRequest in node.js
           // console.log(error.request)
           dispatch(
-            fetchCalcDataError(
+            fetchListDataError(
               'The request was made but no response was received'
             )
           )
         } else {
           // Something happened in setting up the request that triggered an Error
           // console.log('Error', error.message)
-          dispatch(fetchCalcDataError(error.message))
+          dispatch(fetchListDataError(error.message))
         }
       })
   }
