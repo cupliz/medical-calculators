@@ -132,7 +132,13 @@ export default (state = initialState, action) => {
       return { ...state, ...action.payload }
 
     case PICK_ANSWER:
-      return { ...state, ...action.payload }
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          points: action.payload.points
+        }
+      }
 
     default:
       return state
