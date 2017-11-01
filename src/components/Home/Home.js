@@ -1,5 +1,9 @@
 import React from 'react'
 
-const Home = props => <div>List of calculators will be here <span role='img' aria-label='cool'>😎</span></div>
+const renderList = list => {
+  return list.map(listItem => <li key={listItem}>{listItem}</li>)
+}
+
+const Home = props => <ul>{renderList(props.list)}</ul>
 
 export default Home
