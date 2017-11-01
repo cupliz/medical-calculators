@@ -32,7 +32,7 @@ const CalculatorBranch = props => {
 
 class Calculator extends Component {
   componentDidMount () {
-    this.props.fetchCalcData()
+    this.props.fetchCalcData(this.props.calculatorId)
   }
 
   render () {
