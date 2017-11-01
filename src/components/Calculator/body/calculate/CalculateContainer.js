@@ -36,27 +36,27 @@ class CalculateContainer extends Component {
       <div className='calculate'>
         <QuestionField
           label='Congestive Heart Failure History'
-          yesPoints={1}
+          points='0/1'
           onChange={this.handleChange}
         />
         <QuestionField
           label='Hypertension history'
-          yesPoints={1}
+          points='0/1'
           onChange={this.handleChange}
         />
         <QuestionField
           label='Age ≥ 75 years'
-          yesPoints={1}
+          points='0/1'
           onChange={this.handleChange}
         />
         <QuestionField
           label='Diabetes melitus history'
-          yesPoints={1}
+          points='0/1'
           onChange={this.handleChange}
         />
         <QuestionField
           label='Stroke or TIA symptoms previously'
-          yesPoints={2}
+          points='0/2'
           onChange={this.handleChange}
         />
         {/*{this.renderQuestionFields(questions)}*/}
