@@ -7,10 +7,11 @@ class CalculateContainer extends Component {
     points: 0
   }
 
-  handleChange = (e, value) => {
-    if (value === '0') {
-      const maxValue = parseInt(e.target.name, 10)
+  handleChange = (value, points) => {
+    const answerPoints = points.split('/')
+    if (value === answerPoints[0]) {
       this.setState(prevState => {
+        const maxValue = parseInt(answerPoints[1], 10)
         return { points: prevState.points - maxValue }
       })
     } else {

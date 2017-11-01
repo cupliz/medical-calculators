@@ -55,7 +55,7 @@ class QuestionField extends React.Component {
       checked = true
     }
     this.setState({ value, checked })
-    this.props.onChange(event, value)
+    this.props.onChange(value, this.props.points)
   }
 
   render () {
