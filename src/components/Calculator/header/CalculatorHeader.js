@@ -7,6 +7,8 @@ import Typography from 'material-ui/Typography'
 import IconButton from 'material-ui/IconButton'
 import CloseIcon from 'material-ui-icons/Close'
 import MoreIcon from 'material-ui-icons/MoreVert'
+import { push } from 'react-router-redux'
+import { connect } from 'react-redux'
 
 const styles = theme => ({
   title: {
@@ -33,6 +35,7 @@ const CalculatorHeader = props => {
           className={classes.closeButton}
           color='contrast'
           aria-label='Close'
+          onClick={() => props.changePage()}
         >
           <CloseIcon />
         </IconButton>
@@ -51,4 +54,10 @@ CalculatorHeader.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(CalculatorHeader)
+const mapDispatchToProps = {
+  changePage: () => push('/')
+}
+
+export default connect(null, mapDispatchToProps)(
+  withStyles(styles)(CalculatorHeader)
+)
