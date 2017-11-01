@@ -118,12 +118,18 @@ class QuestionField extends React.Component {
     </div>
   )
 
+  renderCheckboxQuestion = () => {
+    return <div>1</div>
+  }
+
   render () {
     const { classes, type } = this.props
     const answerPoints = this.props.points.split('/')
 
     if (type === 'radio') {
       return this.renderRadioQuestion(classes, answerPoints)
+    } else if (type === 'checkbox') {
+      return this.renderCheckboxQuestion(classes, answerPoints)
     } else {
       return <div>Please check 'type' of question</div>
     }
