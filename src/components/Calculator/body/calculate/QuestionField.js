@@ -134,7 +134,7 @@ class QuestionField extends React.Component {
               value='checkedA'
             />
           }
-          label='Option A'
+          label={this.props.label}
         />
       </FormGroup>
     )
