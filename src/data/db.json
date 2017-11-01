@@ -111,7 +111,7 @@
         {
           "type": "checkbox",
           "label": "Age >= 65 years",
-          "points": "0/2"
+          "points": "0/1"
         }
       ],
       "results": {
