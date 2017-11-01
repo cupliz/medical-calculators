@@ -3,6 +3,32 @@ import CalculatorHeader from './header/CalculatorHeader'
 import CalculatorBody from './body/CalculatorBody'
 import { connect } from 'react-redux'
 import { fetchCalcData } from '../../store/modules/calculator'
+import Loader from '../Loader/Loader'
+
+const LoadingView = () => <Loader />
+
+const ErrorView = props => (
+  <div>I'm sorry! Error: {props.errorMessage}. Please try again.</div>
+)
+
+const ComponentView = props => (
+  <div className='calculator'>
+    <CalculatorHeader title={props.data.title} />
+    <CalculatorBody />
+  </div>
+)
+
+const CalculatorBranch = props => {
+  if (props.loading) {
+    return <LoadingView />
+  } else if (props.data) {
+    return <ComponentView data={props.data[0]} />
+  } else if (props.errorMessage) {
+    return <ErrorView errorMessage={props.errorMessage} />
+  } else {
+    return null
+  }
+}
 
 class Calculator extends Component {
   componentDidMount () {
@@ -10,25 +36,12 @@ class Calculator extends Component {
   }
 
   render () {
-    return (
-      <div className='calculator'>
-        <CalculatorHeader title={this.props.calculator} />
-        <CalculatorBody />
-      </div>
-    )
-  }
-}
-
-const getCalculator = (state) => {
-  if (state.calculator.data) {
-    return state.calculator.data[0]
-  } else {
-    return null
+    return <CalculatorBranch {...this.props.calculator} />
   }
 }
 
 const mapStateToProps = state => ({
-  calculator: getCalculator(state)
+  calculator: state.calculator
 })
 
 const mapDispatchToProps = {
