@@ -49,11 +49,11 @@ export const fetchCalcDataError = (errorMessage = '') => {
   }
 }
 
-export const pickAnswer = (answer = {}) => {
+export const pickAnswer = (points = 0) => {
   return {
     type: PICK_ANSWER,
     payload: {
-      answer,
+      points,
       receivedAt: new Date().toISOString()
     }
   }
