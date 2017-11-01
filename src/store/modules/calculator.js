@@ -66,7 +66,10 @@ export const pickAnswer = (points = 0) => {
 export const fetchCalcData = calculatorId => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest(true))
-    const url = `http://localhost:3001/calculators/${calculatorId}`
+    let url = `http://localhost:3001/calculators/${calculatorId}`
+    if (process.env.NODE_ENV === 'production') {
+      url = `https://medical-calc.now.sh/calculators/${calculatorId}`
+    }
     return axios
       .get(url)
       .then(({ data }) => {
