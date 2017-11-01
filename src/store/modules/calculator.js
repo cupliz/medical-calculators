@@ -143,23 +143,14 @@ export default (state = initialState, action) => {
           ...action.payload
         }
       } else {
-        return {
-          ...state,
-          ...action.payload
-        }
+        return { ...state, ...action.payload }
       }
 
     case FETCH_CALC_DATA_SUCCESS:
-      return {
-        ...state,
-        ...action.payload
-      }
+      return { ...state, ...action.payload }
 
     case FETCH_CALC_DATA_ERROR:
-      return {
-        ...state,
-        ...action.payload
-      }
+      return { ...state, ...action.payload }
 
     default:
       return state
