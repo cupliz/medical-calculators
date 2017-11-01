@@ -55,7 +55,10 @@ export const fetchListDataError = (errorMessage = '') => {
 export const fetchListData = () => {
   return (dispatch, getState) => {
     dispatch(fetchListDataRequest(true))
-    const url = `http://localhost:3001/list/`
+    let url = `http://localhost:3001/list/`
+    if (process.env.NODE_ENV === 'production') {
+      url = `https://medical-calc.now.sh/list/`
+    }
     return axios
       .get(url)
       .then(({ data }) => {
