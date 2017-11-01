@@ -4,20 +4,45 @@ import Home from './components/Home/Home'
 import Calculator from './components/Calculator/Calculator'
 import { connect } from 'react-redux'
 import { fetchListData } from './store/modules/list'
+import Loader from './components/Loader/Loader'
+
+const LoadingView = () => <Loader />
+
+const ErrorView = props => (
+  <div>I'm sorry! Error: {props.errorMessage}. Please try again.</div>
+)
+
+const ComponentView = props => (
+  <main className='app'>
+    <header>
+      <Link to='/'>Home</Link> {' - '}
+      <Link to='/chad2-calc'>CHADS2 Score for Atrial Fibrillation</Link>
+    </header>
+
+    <Route exact path='/' component={Home} />
+    <Route exact path='/chad2-calc' component={Calculator} />
+  </main>
+)
+
+const AppBranch = props => {
+  if (props.loading) {
+    return <LoadingView />
+  } else if (props.data) {
+    return <ComponentView data={props.data} />
+  } else if (props.errorMessage) {
+    return <ErrorView errorMessage={props.errorMessage} />
+  } else {
+    return null
+  }
+}
 
 class App extends Component {
-  render () {
-    return (
-      <main>
-        <header>
-          <Link to='/'>Home</Link> {' - '}
-          <Link to='/chad2-calc'>CHADS2 Score for Atrial Fibrillation</Link>
-        </header>
+  componentDidMount () {
+    this.props.fetchListData()
+  }
 
-        <Route exact path='/' component={Home} />
-        <Route exact path='/chad2-calc' component={Calculator} />
-      </main>
-    )
+  render () {
+    return <AppBranch {...this.props.list} />
   }
 }
 
