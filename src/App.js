@@ -22,7 +22,7 @@ const ComponentView = props => (
     <Route
       exact
       path='/'
-      render={routeProps => <Home list={props.data} {...routeProps} />}
+      render={routeProps => <Home data={props.data} {...routeProps} />}
     />
     <Route exact path='/chads2-score-for-atrial-fibrillation' component={Calculator} />
   </main>
