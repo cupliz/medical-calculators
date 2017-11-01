@@ -89,28 +89,28 @@
       "points": 0,
       "questions": [
         {
-          "type": "radio",
-          "label": "Congestive Heart Failure History",
+          "type": "checkbox",
+          "label": "Confusion (abbreviated Mental Test Score <=8)",
           "points": "0/1"
         },
         {
-          "type": "radio",
-          "label": "Hypertension history",
+          "type": "checkbox",
+          "label": "Urea (BUN > 19 mg/dL or 7 mmol/L)",
           "points": "0/1"
         },
         {
-          "type": "radio",
-          "label": "Age ≥ 75 years",
+          "type": "checkbox",
+          "label": "Respiratory Rate > 30 per minute",
           "points": "0/1"
         },
         {
-          "type": "radio",
-          "label": "Diabetes melitus history",
+          "type": "checkbox",
+          "label": "Blood Pressure: diastolic < 60 or systeolic < 90 mmHg",
           "points": "0/1"
         },
         {
-          "type": "radio",
-          "label": "Stroke or TIA symptoms previously",
+          "type": "checkbox",
+          "label": "Age >= 65 years",
           "points": "0/2"
         }
       ],
