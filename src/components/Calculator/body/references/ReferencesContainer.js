@@ -22,21 +22,19 @@ const data = [
     ]
   }
 ]
-
-const renderCards = () => {
-  return data.map(item => {
-    return (
-      <InfoCard
-        key={item.title}
-        title={item.title}
-        type={item.type}
-        content={item.content}
-        id={item.id}
-      />
-    )
-  })
-}
-
-const ReferencesContainer = () => renderCards()
+const ReferencesContainer = props => (
+  <div>
+    <InfoCard
+      title='Notes'
+      type={props.notes.type}
+      content={props.notes.content}
+    />
+    <InfoCard
+      title='References'
+      type={props.references.type}
+      content={props.references.content}
+    />
+  </div>
+)
 
 export default ReferencesContainer
