@@ -73,7 +73,7 @@ class QuestionField extends React.Component {
           <RadioGroup
             row
             aria-label={this.props.label}
-            name={this.props.yesPoints.toString()}
+            name={this.props.points}
             className={classes.group}
             value={this.state.value}
             onChange={this.handleChange}
@@ -98,7 +98,7 @@ class QuestionField extends React.Component {
               }
             />
             <FormControlLabel
-              value={this.props.yesPoints.toString()}
+              value={this.props.points}
               className={classes.formControlLabel}
               control={<Radio checked={this.state.checked} />}
               label={
@@ -111,7 +111,7 @@ class QuestionField extends React.Component {
                         : classes.checkedBadge
                     }
                   >
-                    +{this.props.yesPoints}
+                    +{this.props.points}
                   </small>
                 </span>
               }
