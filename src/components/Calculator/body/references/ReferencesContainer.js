@@ -3,6 +3,7 @@ import InfoCard from './InfoCard'
 
 const ReferencesContainer = props => {
   const { notes, references } = props
+
   return (
     <div>
       <InfoCard
