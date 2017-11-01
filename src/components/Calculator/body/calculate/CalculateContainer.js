@@ -20,6 +20,15 @@ class CalculateContainer extends Component {
     }
   }
 
+  renderQuestionFields = questions => {
+    return questions.map(question => {
+      const { label } = question
+      return (
+        <QuestionField label />
+      )
+    })
+  }
+
   render () {
     const { questions, results, points } = this.props
 
@@ -50,7 +59,7 @@ class CalculateContainer extends Component {
           yesPoints={2}
           onChange={this.handleChange}
         />
-        { this.renderQuestionFields() }
+        {/*{this.renderQuestionFields(questions)}*/}
         <ResultCard points={points} data={results[points]} />
       </div>
     )

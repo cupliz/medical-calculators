@@ -30,7 +30,7 @@
         {
           "type": "radio",
           "label": "Stroke or TIA symptoms previously",
-          "points": "0/1"
+          "points": "0/2"
         }
       ],
       "results": {
