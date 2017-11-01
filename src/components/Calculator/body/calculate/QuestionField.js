@@ -58,69 +58,71 @@ class QuestionField extends React.Component {
     this.props.onChange(value, this.props.points)
   }
 
+  renderRadioQuestion = (classes, answerPoints) => (
+    <div className={classes.questionField}>
+      <FormControl component='fieldset' className={classes.formControl}>
+        <FormLabel
+          component='legend'
+          classes={{ root: classes.label, focused: classes.focusedLabel }}
+        >
+          {this.props.label}
+        </FormLabel>
+        <RadioGroup
+          row
+          aria-label={this.props.label}
+          name={answerPoints[1]}
+          className={classes.group}
+          value={this.state.value}
+          onChange={this.handleChange}
+        >
+          <FormControlLabel
+            value={answerPoints[0]}
+            className={classes.formControlLabel}
+            control={<Radio checked={!this.state.checked} />}
+            label={
+              <span>
+                No{' '}
+                <small
+                  className={
+                    this.state.checked
+                      ? classes.unCheckedBadge
+                      : classes.checkedBadge
+                  }
+                >
+                  {answerPoints[0]}
+                </small>
+              </span>
+            }
+          />
+          <FormControlLabel
+            value={answerPoints[1]}
+            className={classes.formControlLabel}
+            control={<Radio checked={this.state.checked} />}
+            label={
+              <span>
+                Yes{' '}
+                <small
+                  className={
+                    !this.state.checked
+                      ? classes.unCheckedBadge
+                      : classes.checkedBadge
+                  }
+                >
+                  +{answerPoints[1]}
+                </small>
+              </span>
+            }
+          />
+        </RadioGroup>
+      </FormControl>
+    </div>
+  )
+
   render () {
     const { classes } = this.props
     const answerPoints = this.props.points.split('/')
 
-    return (
-      <div className={classes.questionField}>
-        <FormControl component='fieldset' className={classes.formControl}>
-          <FormLabel
-            component='legend'
-            classes={{ root: classes.label, focused: classes.focusedLabel }}
-          >
-            {this.props.label}
-          </FormLabel>
-          <RadioGroup
-            row
-            aria-label={this.props.label}
-            name={answerPoints[1]}
-            className={classes.group}
-            value={this.state.value}
-            onChange={this.handleChange}
-          >
-            <FormControlLabel
-              value={answerPoints[0]}
-              className={classes.formControlLabel}
-              control={<Radio checked={!this.state.checked} />}
-              label={
-                <span>
-                  No{' '}
-                  <small
-                    className={
-                      this.state.checked
-                        ? classes.unCheckedBadge
-                        : classes.checkedBadge
-                    }
-                  >
-                    {answerPoints[0]}
-                  </small>
-                </span>
-              }
-            />
-            <FormControlLabel
-              value={answerPoints[1]}
-              className={classes.formControlLabel}
-              control={<Radio checked={this.state.checked} />}
-              label={
-                <span>
-                  Yes{' '}
-                  <small
-                    className={
-                      !this.state.checked
-                        ? classes.unCheckedBadge
-                        : classes.checkedBadge
-                    }
-                  >
-                    +{answerPoints[1]}
-                  </small>
-                </span>
-              }
-            />
-          </RadioGroup>
-        </FormControl>
-      </div>
-    )
+    return this.renderRadioQuestion(classes, answerPoints)
   }
 }
 
