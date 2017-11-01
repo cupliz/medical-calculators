@@ -36,7 +36,8 @@
     "surge:dev": "surge build -d medical-calc-dev.surge.sh",
     "deploy": "npm-run-all -s build surge clean",
     "deploy:dev": "npm-run-all -s build surge:dev clean",
-    "server": "json-server --watch --port 3001 ./src/data/db.json --routes routes.json"
+    "server": "json-server --watch --port 3001 ./src/data/db.json --routes routes.json",
+    "now": "now ./src/data"
   },
   "standard": {
     "parser": "babel-eslint",
