@@ -28,11 +28,11 @@ export const fetchCalcDataRequest = (loading = true) => {
   }
 }
 
-export const fetchCalcDataSuccess = (data = {}) => {
+export const fetchCalcDataSuccess = (list = []) => {
   return {
     type: FETCH_LIST_DATA_SUCCESS,
     payload: {
-      data,
+      list,
       receivedAt: new Date().toISOString()
     }
   }
@@ -43,16 +43,6 @@ export const fetchCalcDataError = (errorMessage = '') => {
     type: FETCH_LIST_DATA_ERROR,
     payload: {
       errorMessage,
-      receivedAt: new Date().toISOString()
-    }
-  }
-}
-
-export const pickAnswer = (points = 0) => {
-  return {
-    type: PICK_ANSWER,
-    payload: {
-      points,
       receivedAt: new Date().toISOString()
     }
   }
