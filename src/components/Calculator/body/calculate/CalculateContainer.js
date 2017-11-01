@@ -2,39 +2,6 @@ import React, { Component } from 'react'
 import QuestionField from './QuestionField'
 import ResultCard from './ResultCard'
 
-const data = {
-  0: [
-    'Low risk of thromboembolic event. 1.9% risk of event per year if no coumadin.',
-    'The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken.'
-  ],
-  1: [
-    'Intermediate risk of thromboembolic event. 2.8% risk of event per year if no coumadin.',
-    'The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken.'
-  ],
-  2: [
-    'Intermediate risk of thromboembolic event. 4.0% risk of event per year if no coumadin.',
-    'The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken.'
-  ],
-  3: [
-    'High risk of thromboembolic event. 5.9% risk of event per year if no coumadin.',
-    'The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken.'
-  ],
-  4: [
-    'High risk of thromboembolic event. 8.5% risk of event per year if no coumadin.',
-    'The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken.'
-  ],
-  5: [
-    'Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)',
-    'By points directly: High risk of thromboembolic event. 12.5% risk of event per year if no coumadin.',
-    'The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken.'
-  ],
-  6: [
-    'Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)',
-    'By points directly: High risk of thromboembolic event. 18.2% risk of event per year if no coumadin.',
-    'The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken.'
-  ]
-}
-
 class CalculateContainer extends Component {
   state = {
     points: 0
@@ -54,6 +21,8 @@ class CalculateContainer extends Component {
   }
 
   render () {
+    const { questions, results, points } = this.props
+
     return (
       <div className='calculate'>
         <QuestionField
@@ -81,7 +50,7 @@ class CalculateContainer extends Component {
           yesPoints={2}
           onChange={this.handleChange}
         />
-        <ResultCard points={this.state.points} data={data[this.state.points]} />
+        <ResultCard points={points} data={results[points]} />
       </div>
     )
   }
