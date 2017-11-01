@@ -5,16 +5,15 @@ import { deleteProperty } from '../../utils/immutable'
 // Constants
 // ------------------------------------
 
-export const FETCH_CALC_DATA_REQUEST = 'calculator/FETCH_CALC_DATA_REQUEST'
-export const FETCH_CALC_DATA_SUCCESS = 'calculator/FETCH_CALC_DATA_SUCCESS'
-export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
-export const PICK_ANSWER = 'calculator/PICK_ANSWER'
+export const FETCH_LIST_DATA_REQUEST = 'calculator/FETCH_LIST_DATA_REQUEST'
+export const FETCH_LIST_DATA_SUCCESS = 'calculator/FETCH_LIST_DATA_SUCCESS'
+export const FETCH_LIST_DATA_ERROR = 'calculator/FETCH_LIST_DATA_ERROR'
 
 // ------------------------------------
 // Initial State
 // ------------------------------------
 
-const initialState = {}
+const initialState = []
 
 // ------------------------------------
 // Actions
@@ -22,7 +21,7 @@ const initialState = {}
 
 export const fetchCalcDataRequest = (loading = true) => {
   return {
-    type: FETCH_CALC_DATA_REQUEST,
+    type: FETCH_LIST_DATA_REQUEST,
     payload: {
       loading
     }
@@ -31,7 +30,7 @@ export const fetchCalcDataRequest = (loading = true) => {
 
 export const fetchCalcDataSuccess = (data = {}) => {
   return {
-    type: FETCH_CALC_DATA_SUCCESS,
+    type: FETCH_LIST_DATA_SUCCESS,
     payload: {
       data,
       receivedAt: new Date().toISOString()
@@ -41,7 +40,7 @@ export const fetchCalcDataSuccess = (data = {}) => {
 
 export const fetchCalcDataError = (errorMessage = '') => {
   return {
-    type: FETCH_CALC_DATA_ERROR,
+    type: FETCH_LIST_DATA_ERROR,
     payload: {
       errorMessage,
       receivedAt: new Date().toISOString()
@@ -115,7 +114,7 @@ export const fetchCalcData = () => {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_CALC_DATA_REQUEST:
+    case FETCH_LIST_DATA_REQUEST:
       if (!action.payload.loading) {
         return {
           ...deleteProperty(state, 'errorMessage'),
@@ -125,10 +124,10 @@ export default (state = initialState, action) => {
         return { ...state, ...action.payload }
       }
 
-    case FETCH_CALC_DATA_SUCCESS:
+    case FETCH_LIST_DATA_SUCCESS:
       return { ...state, ...action.payload }
 
-    case FETCH_CALC_DATA_ERROR:
+    case FETCH_LIST_DATA_ERROR:
       return { ...state, ...action.payload }
 
     case PICK_ANSWER:
