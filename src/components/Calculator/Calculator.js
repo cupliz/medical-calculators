@@ -14,7 +14,7 @@ const ErrorView = props => (
 const ComponentView = props => (
   <div className='calculator'>
     <CalculatorHeader title={props.data.title} />
-    <CalculatorBody />
+    <CalculatorBody data={props.data} />
   </div>
 )
 
