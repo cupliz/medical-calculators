@@ -74,13 +74,13 @@ class QuestionField extends React.Component {
           <RadioGroup
             row
             aria-label={this.props.label}
-            name={this.props.points}
+            name={answerPoints[1]}
             className={classes.group}
             value={this.state.value}
             onChange={this.handleChange}
           >
             <FormControlLabel
-              value={'0'}
+              value={answerPoints[0]}
               className={classes.formControlLabel}
               control={<Radio checked={!this.state.checked} />}
               label={
@@ -93,13 +93,13 @@ class QuestionField extends React.Component {
                         : classes.checkedBadge
                     }
                   >
-                    0
+                    {answerPoints[0]}
                   </small>
                 </span>
               }
             />
             <FormControlLabel
-              value={this.props.points}
+              value={answerPoints[1]}
               className={classes.formControlLabel}
               control={<Radio checked={this.state.checked} />}
               label={
@@ -112,7 +112,7 @@ class QuestionField extends React.Component {
                         : classes.checkedBadge
                     }
                   >
-                    +{this.props.points}
+                    +{answerPoints[1]}
                   </small>
                 </span>
               }
