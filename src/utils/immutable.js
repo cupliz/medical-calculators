@@ -1,10 +1,3 @@
-export const updateObject = (state, item, value) => {
-  return {
-    ...state,
-    [item]: value
-  }
-}
-
 export const deleteProperty = (state, id) => {
   let newState = Object.assign({}, state)
   delete newState[id]
