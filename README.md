@@ -22,6 +22,12 @@ Dev web version I am working on. Keep in mind that this is not updating constant
 
 http://medical-calc.surge.sh/
 
+Now.sh Database:
+
+https://medical-calc.now.sh/
+
+ https://medical-calc-db-lpuvbbifvf.now.sh
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
