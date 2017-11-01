@@ -63,14 +63,14 @@ export const pickAnswer = (points = 0) => {
 // Specialized Actions
 // ------------------------------------
 
-export const fetchCalcData = () => {
+export const fetchCalcData = calculatorId => {
   return (dispatch, getState) => {
     dispatch(fetchCalcDataRequest(true))
-    const url = `http://localhost:3001/calculators/`
+    const url = `http://localhost:3001/calculators/${calculatorId}`
     return axios
       .get(url)
       .then(({ data }) => {
-        dispatch(fetchCalcDataSuccess(data[0]))
+        dispatch(fetchCalcDataSuccess(data))
         dispatch(fetchCalcDataRequest(false))
         // return setTimeout(() => {
         //   dispatch(fetchCalcDataSuccess(data))
