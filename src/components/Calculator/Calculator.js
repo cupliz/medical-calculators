@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CalculatorHeader from './header/CalculatorHeader'
 import CalculatorBody from './body/CalculatorBody'
 import { connect } from 'react-redux'
-import { fetchCalcData } from '../../store/modules/calculator'
+import { fetchCalcData, pickAnswer } from '../../store/modules/calculator'
 import Loader from '../Loader/Loader'
 
 const LoadingView = () => <Loader />
@@ -45,7 +45,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  fetchCalcData
+  fetchCalcData,
+  pickAnswer
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Calculator)
