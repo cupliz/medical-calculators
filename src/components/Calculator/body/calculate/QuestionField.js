@@ -2,13 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Radio, { RadioGroup } from 'material-ui/Radio'
-import {
-  FormGroup,
-  FormLabel,
-  FormControl,
-  FormControlLabel
-} from 'material-ui/Form'
-import Checkbox from 'material-ui/Checkbox'
+import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
 
 const styles = theme => ({
   questionField: {
@@ -64,93 +58,69 @@ class QuestionField extends React.Component {
     this.props.onChange(value, this.props.points)
   }
 
-  renderRadioQuestion = (classes, answerPoints) => (
-    <div className={classes.questionField}>
-      <FormControl component='fieldset' className={classes.formControl}>
-        <FormLabel
-          component='legend'
-          classes={{ root: classes.label, focused: classes.focusedLabel }}
-        >
-          {this.props.label}
-        </FormLabel>
-        <RadioGroup
-          row
-          aria-label={this.props.label}
-          name={answerPoints[1]}
-          className={classes.group}
-          value={this.state.value}
-          onChange={this.handleChange}
-        >
-          <FormControlLabel
-            value={answerPoints[0]}
-            className={classes.formControlLabel}
-            control={<Radio checked={!this.state.checked} />}
-            label={
-              <span>
-                No{' '}
-                <small
-                  className={
-                    this.state.checked
-                      ? classes.unCheckedBadge
-                      : classes.checkedBadge
-                  }
-                >
-                  {answerPoints[0]}
-                </small>
-              </span>
-            }
-          />
-          <FormControlLabel
-            value={answerPoints[1]}
-            className={classes.formControlLabel}
-            control={<Radio checked={this.state.checked} />}
-            label={
-              <span>
-                Yes{' '}
-                <small
-                  className={
-                    !this.state.checked
-                      ? classes.unCheckedBadge
-                      : classes.checkedBadge
-                  }
-                >
-                  +{answerPoints[1]}
-                </small>
-              </span>
-            }
-          />
-        </RadioGroup>
-      </FormControl>
-    </div>
-  )
-
-  renderCheckboxQuestion = (classes, answerPoints) => {
-    return (
-      <FormGroup row>
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={this.state.checked}
-              value='checkedA'
-            />
-          }
-          label={this.props.label}
-        />
-      </FormGroup>
-    )
-  }
-
   render () {
-    const { classes, type } = this.props
+    const { classes } = this.props
     const answerPoints = this.props.points.split('/')
 
-    if (type === 'radio') {
-      return this.renderRadioQuestion(classes, answerPoints)
-    } else if (type === 'checkbox') {
-      return this.renderCheckboxQuestion(classes, answerPoints)
-    } else {
-      return <div>Please check 'type' of question</div>
-    }
+    return (
+      <div className={classes.questionField}>
+        <FormControl component='fieldset' className={classes.formControl}>
+          <FormLabel
+            component='legend'
+            classes={{ root: classes.label, focused: classes.focusedLabel }}
+          >
+            {this.props.label}
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-label={this.props.label}
+            name={answerPoints[1]}
+            className={classes.group}
+            value={this.state.value}
+            onChange={this.handleChange}
+          >
+            <FormControlLabel
+              value={answerPoints[0]}
+              className={classes.formControlLabel}
+              control={<Radio checked={!this.state.checked} />}
+              label={
+                <span>
+                  No{' '}
+                  <small
+                    className={
+                      this.state.checked
+                        ? classes.unCheckedBadge
+                        : classes.checkedBadge
+                    }
+                  >
+                    {answerPoints[0]}
+                  </small>
+                </span>
+              }
+            />
+            <FormControlLabel
+              value={answerPoints[1]}
+              className={classes.formControlLabel}
+              control={<Radio checked={this.state.checked} />}
+              label={
+                <span>
+                  Yes{' '}
+                  <small
+                    className={
+                      !this.state.checked
+                        ? classes.unCheckedBadge
+                        : classes.checkedBadge
+                    }
+                  >
+                    +{answerPoints[1]}
+                  </small>
+                </span>
+              }
+            />
+          </RadioGroup>
+        </FormControl>
+      </div>
+    )
   }
 }
 
