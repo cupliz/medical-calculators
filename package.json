@@ -29,14 +29,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:200": "mv build/index.html build/200.html",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "dev": "npm-run-all -p start server",
     "clean": "yarn rimraf build",
     "surge": "surge build -d medical-calc.surge.sh",
     "surge:dev": "surge build -d medical-calc-dev.surge.sh",
-    "deploy": "npm-run-all -s build surge clean",
-    "deploy:dev": "npm-run-all -s build surge:dev clean",
+    "deploy": "npm-run-all -s build surge clean build:200",
+    "deploy:dev": "npm-run-all -s build surge:dev clean build:200",
     "server": "json-server --watch --port 3001 ./src/data/db.json --routes routes.json"
   },
   "standard": {
