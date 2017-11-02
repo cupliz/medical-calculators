@@ -22,6 +22,7 @@ const ComponentView = props => (
       />
       {props.data.map(calculator => (
         <Route
+          exact
           key={calculator.id}
           path={`/${calculator.id}`}
           render={routeProps => (
@@ -29,6 +30,7 @@ const ComponentView = props => (
           )}
         />
       ))}
+      <Route render={() => <p>Not Found</p>} />
     </Switch>
   </main>
 )
