@@ -44,6 +44,5 @@
     "globals": [
       "fetch"
     ]
-  },
-  "homepage": "http://medical-calc.surge.sh/"
+  }
 }
