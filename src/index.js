@@ -8,7 +8,7 @@ import store, { history } from './store'
 import theme from './theme/theme'
 import './theme/theme.css'
 import App from './App'
-import registerServiceWorker from './registerServiceWorker'
+// import registerServiceWorker from './registerServiceWorker'
 
 render(
   <Provider store={store}>
@@ -21,4 +21,4 @@ render(
   document.getElementById('root')
 )
 
-registerServiceWorker()
+// registerServiceWorker()
