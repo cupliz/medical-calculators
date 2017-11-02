@@ -36,8 +36,8 @@
     "clean": "yarn rimraf build",
     "surge": "surge build -d medical-calc.surge.sh",
     "surge:dev": "surge build -d medical-calc-dev.surge.sh",
-    "deploy": "npm-run-all -s build surge clean build:200",
-    "deploy:dev": "npm-run-all -s build surge:dev clean build:200",
+    "deploy": "npm-run-all -s build surge build:200 clean",
+    "deploy:dev": "npm-run-all -s build surge:dev build:200 clean",
     "server": "json-server --watch --port 3001 ./src/data/db.json --routes routes.json"
   },
   "standard": {
