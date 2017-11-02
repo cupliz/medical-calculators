@@ -14,7 +14,6 @@ const ErrorView = props => (
 
 const ComponentView = props => (
   <main className='app'>
-    123
     <Switch>
       <Route
         exact
