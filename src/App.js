@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, withRouter } from 'react-router-dom'
+import { Route, withRouter, Switch } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Calculator from './components/Calculator/Calculator'
 import { connect } from 'react-redux'
@@ -14,21 +14,22 @@ const ErrorView = props => (
 
 const ComponentView = props => (
   <main className='app'>
-    <Route
-      exact
-      path='/'
-      render={routeProps => <Home data={props.data} {...routeProps} />}
-    />
-    {props.data.map(calculator => (
+    <Switch>
       <Route
         exact
-        key={calculator.id}
-        path={`/${calculator.id}`}
-        render={routeProps => (
-          <Calculator data={props.data} calculatorId={calculator.id} {...routeProps} />
-        )}
+        path='/'
+        render={routeProps => <Home data={props.data} {...routeProps} />}
       />
-    ))}
+      {props.data.map(calculator => (
+        <Route
+          key={calculator.id}
+          path={`/${calculator.id}`}
+          render={routeProps => (
+            <Calculator data={props.data} calculatorId={calculator.id} {...routeProps} />
+          )}
+        />
+      ))}
+    </Switch>
   </main>
 )
 
