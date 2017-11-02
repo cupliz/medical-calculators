@@ -23,6 +23,7 @@
     "json-schema-faker": "^0.4.6",
     "json-server": "^0.12.0",
     "npm-run-all": "^4.1.1",
+    "redux-logger": "^3.0.6",
     "rimraf": "^2.6.2"
   },
   "scripts": {
@@ -40,6 +41,8 @@
   },
   "standard": {
     "parser": "babel-eslint",
-    "globals": ["fetch"]
+    "globals": [
+      "fetch"
+    ]
   }
 }
