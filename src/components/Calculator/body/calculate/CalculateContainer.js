@@ -31,7 +31,7 @@ class CalculateContainer extends Component {
       return (
         <QuestionGroup
           key={questionGroup.group}
-          data={questionGroup}
+          {...questionGroup}
         />
       )
     })
