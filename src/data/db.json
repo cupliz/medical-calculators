@@ -103,26 +103,31 @@
       "questions": [
         {
           "type": "checkbox",
+          "group": "Criteria",
           "label": "Confusion (abbreviated Mental Test Score <=8)",
           "points": "1"
         },
         {
           "type": "checkbox",
+          "group": "Criteria",
           "label": "Urea (BUN > 19 mg/dL or 7 mmol/L)",
           "points": "1"
         },
         {
           "type": "checkbox",
+          "group": "Criteria",
           "label": "Respiratory Rate > 30 per minute",
           "points": "1"
         },
         {
           "type": "checkbox",
+          "group": "Criteria",
           "label": "Blood Pressure: diastolic < 60 or systeolic < 90 mmHg",
           "points": "1"
         },
         {
           "type": "checkbox",
+          "group": "Criteria",
           "label": "Age >= 65 years",
           "points": "1"
         }
