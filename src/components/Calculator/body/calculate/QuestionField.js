@@ -69,7 +69,7 @@ class QuestionField extends React.Component {
       return (
         <RadioField
           answerPoints={answerPoints}
-          group={this.props.group}
+          ariaLabel={this.props.group}
           classes={this.props.classes}
           value={this.state.value}
           onChange={this.handleChange}
@@ -100,7 +100,7 @@ class QuestionField extends React.Component {
             component='legend'
             classes={{ root: classes.label, focused: classes.focusedLabel }}
           >
-            {this.props.label}
+            {this.props.group}
           </FormLabel>
           {this.renderQuestion(this.props.type)}
         </FormControl>
