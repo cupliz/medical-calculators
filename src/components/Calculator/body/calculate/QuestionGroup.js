@@ -4,7 +4,7 @@ import { withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
 
 const styles = theme => ({
-  questionField: {
+  questionGroup: {
     display: 'flex',
     borderBottom: `1px solid ${theme.brand.colors.separatorGrey}`,
     borderTop: `1px solid ${theme.brand.colors.separatorGrey}`,
@@ -47,7 +47,7 @@ class QuestionGroup extends Component {
     const { classes } = this.props
 
     return (
-      <div className={classes.questionField}>
+      <div className={classes.questionGroup}>
         <FormControl component='fieldset' className={classes.formControl}>
           <FormLabel
             component='legend'
