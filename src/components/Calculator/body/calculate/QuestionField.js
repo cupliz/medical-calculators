@@ -91,8 +91,6 @@ class QuestionField extends React.Component {
   }
 
   render () {
-    const { classes } = this.props
-
     return this.renderQuestion(this.props.type)
   }
 }
