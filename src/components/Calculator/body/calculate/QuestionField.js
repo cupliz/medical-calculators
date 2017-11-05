@@ -34,7 +34,6 @@ class QuestionField extends React.Component {
   }
 
   handleChange = (event, value) => {
-    console.log(event, 'event')
     console.log(event.target.value, 'event.target.value')
     console.log(value, 'value')
     let checked = false
