@@ -64,7 +64,7 @@ class QuestionField extends React.Component {
 
   render () {
     const { classes } = this.props
-    let answerPoints = [0, 1]
+    let answerPoints = ['0', '1']
     if (this.props.type === 'radio') {
       answerPoints = this.props.points.split('/')
     }
