@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Radio, { RadioGroup } from 'material-ui/Radio'
 import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
+import RadioField from './fields/RadioField'
 
 const styles = theme => ({
   questionField: {
@@ -58,8 +59,12 @@ class QuestionField extends React.Component {
     this.props.onChange(value, this.props.points)
   }
 
-  renderQuestion = () => {
-    return <div>123</div>
+  renderQuestion = type => {
+    if (type === 'radio') {
+      return (
+        <RadioField />
+      )
+    }
   }
 
   render () {
@@ -79,53 +84,6 @@ class QuestionField extends React.Component {
             {this.props.label}
           </FormLabel>
           {this.renderQuestion(this.props.type)}
-          <RadioGroup
-            row
-            aria-label={this.props.label}
-            name={answerPoints[1]}
-            className={classes.group}
-            value={this.state.value}
-            onChange={this.handleChange}
-          >
-            <FormControlLabel
-              value={answerPoints[0]}
-              className={classes.formControlLabel}
-              control={<Radio checked={!this.state.checked} />}
-              label={
-                <span>
-                  No{' '}
-                  <small
-                    className={
-                      this.state.checked
-                        ? classes.unCheckedBadge
-                        : classes.checkedBadge
-                    }
-                  >
-                    {answerPoints[0]}
-                  </small>
-                </span>
-              }
-            />
-            <FormControlLabel
-              value={answerPoints[1]}
-              className={classes.formControlLabel}
-              control={<Radio checked={this.state.checked} />}
-              label={
-                <span>
-                  Yes{' '}
-                  <small
-                    className={
-                      !this.state.checked
-                        ? classes.unCheckedBadge
-                        : classes.checkedBadge
-                    }
-                  >
-                    +{answerPoints[1]}
-                  </small>
-                </span>
-              }
-            />
-          </RadioGroup>
         </FormControl>
       </div>
     )
