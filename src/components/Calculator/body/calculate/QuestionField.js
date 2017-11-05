@@ -63,6 +63,9 @@ class QuestionField extends React.Component {
     let answerPoints = null
     if (this.props.type === 'radio') {
       answerPoints = this.props.points.split('/')
+    } else if (this.props.type === 'checkbox') {
+      answerPoints[0] = 0
+      answerPoints[1] = 1
     }
 
     return (
