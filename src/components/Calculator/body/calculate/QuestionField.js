@@ -80,7 +80,7 @@ class QuestionField extends React.Component {
       return (
         <CheckboxField
           answerPoints={answerPoints}
-          label={this.props.label}
+          ariaLabel={this.props.label}
           classes={this.props.classes}
           value={this.state.value}
           onChange={this.handleChange}
