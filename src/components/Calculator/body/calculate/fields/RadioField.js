@@ -3,12 +3,12 @@ import Radio, { RadioGroup } from 'material-ui/Radio'
 import { FormControlLabel } from 'material-ui/Form'
 
 const RadioField = props => {
-  const { answerPoints } = props
+  const { answerPoints, label } = props
   return (
     <RadioGroup
       row
       name={answerPoints[1]}
-      aria-label={props.label}
+      aria-label={label}
       className={props.classes.group}
       value={props.value}
       onChange={props.onChange}
