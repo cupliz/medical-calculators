@@ -194,7 +194,7 @@
       "points": 0,
       "questions": [
         {
-          "group": "Criteria",
+          "group": "Criteria at time of patient admission to hospital",
           "data": [
             {
               "type": "checkbox",
