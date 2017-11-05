@@ -58,6 +58,10 @@ class QuestionField extends React.Component {
     this.props.onChange(value, this.props.points)
   }
 
+  renderQuestion = () => {
+    return <div>123</div>
+  }
+
   render () {
     const { classes } = this.props
     let answerPoints = [0, 1]
@@ -74,6 +78,7 @@ class QuestionField extends React.Component {
           >
             {this.props.label}
           </FormLabel>
+          {this.renderQuestion()}
           <RadioGroup
             row
             aria-label={this.props.label}
