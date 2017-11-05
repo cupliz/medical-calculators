@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { FormLabel, FormControl } from 'material-ui/Form'
 import { withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
+import QuestionField from './QuestionField'
 
 const styles = theme => ({
   questionGroup: {
@@ -23,6 +24,14 @@ const styles = theme => ({
 })
 
 class QuestionGroup extends Component {
+  renderQuestionFields = data => {
+    if (Array.isArray(data)) {
+      return data.map(question => (
+        <QuestionField {...question} />
+      ))
+    } else return <QuestionField {...data} />
+  }
+
   render () {
     const { classes } = this.props
 
@@ -35,7 +44,7 @@ class QuestionGroup extends Component {
           >
             {this.props.group}
           </FormLabel>
-          Content
+          {this.renderQuestionFields(this.props.data)}
         </FormControl>
       </div>
     )
