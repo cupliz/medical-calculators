@@ -17,34 +17,44 @@
       "points": 0,
       "questions": [
         {
-          "type": "radio",
           "group": "Congestive Heart Failure History",
-          "options": "no/yes",
-          "points": "0/1"
+          "data": {
+            "type": "radio",
+            "options": "no/yes",
+            "points": "0/1"
+          }
         },
         {
-          "type": "radio",
           "group": "Hypertension history",
-          "options": "no/yes",
-          "points": "0/1"
+          "data": {
+            "type": "radio",
+            "options": "no/yes",
+            "points": "0/1"
+          }
         },
         {
-          "type": "radio",
           "group": "Age ≥ 75 years",
-          "options": "no/yes",
-          "points": "0/1"
+          "data": {
+            "type": "radio",
+            "options": "no/yes",
+            "points": "0/1"
+          }
         },
         {
-          "type": "radio",
           "group": "Diabetes melitus history",
-          "options": "no/yes",
-          "points": "0/1"
+          "data": {
+            "type": "radio",
+            "options": "no/yes",
+            "points": "0/1"
+          }
         },
         {
-          "type": "radio",
           "group": "Stroke or TIA symptoms previously",
-          "options": "no/yes",
-          "points": "0/2"
+          "data": {
+            "type": "radio",
+            "options": "no/yes",
+            "points": "0/2"
+          }
         }
       ],
       "results": {
