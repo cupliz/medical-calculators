@@ -17,8 +17,10 @@ if (process.env.NODE_ENV === 'development') {
     enhancers.push(devToolsExtension())
   }
 
-  const { logger } = require(`redux-logger`)
-  middleware.push(logger)
+  // Comment this out to use redux logger
+
+  // const { logger } = require(`redux-logger`)
+  // middleware.push(logger)
 }
 
 const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers)
