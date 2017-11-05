@@ -14,31 +14,11 @@ const styles = theme => ({
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
       .spacing.unit * 2}px`
   },
-  group: {
-    margin: 0
-  },
-  checkedBadge: {
-    borderRadius: '5px',
-    backgroundColor: '#00bcd4',
-    color: '#fff',
-    padding: '3px 7px',
-    marginLeft: '10px'
-  },
-  unCheckedBadge: {
-    borderRadius: '5px',
-    backgroundColor: '#c1c7cd',
-    color: '#fff',
-    padding: '3px 7px',
-    marginLeft: '10px'
-  },
   label: {
     fontSize: 14
   },
   focusedLabel: {
     color: 'rgba(0, 0, 0, 0.54)'
-  },
-  formControlLabel: {
-    marginRight: `${theme.spacing.unit * 4}px`
   }
 })
 
