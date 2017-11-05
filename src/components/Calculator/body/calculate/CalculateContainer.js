@@ -28,7 +28,7 @@ class CalculateContainer extends Component {
       console.log(value, points, type)
       if (value === '0') {
         this.setState(prevState => {
-          const maxValue = parseInt(points)
+          const maxValue = parseInt(points, 10)
           this.props.pickAnswer(prevState.points - maxValue)
           return { points: prevState.points - maxValue }
         })
