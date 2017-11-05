@@ -39,16 +39,16 @@ class QuestionField extends React.Component {
       checked = true
     }
     this.setState({ value, checked })
-    this.props.onChange(value, this.props.points)
+    this.props.onChange(value, this.props.points, this.props.type)
   }
 
   handleCheckboxChange = (maxValue) => {
     if (this.state.checked) {
       this.setState({ checked: false, value: '0' })
-      this.props.onChange('0', this.props.points)
+      this.props.onChange('0', this.props.points, this.props.type)
     } else {
       this.setState({ checked: true, value: maxValue })
-      this.props.onChange(maxValue, this.props.points)
+      this.props.onChange(maxValue, this.props.points, this.props.type)
     }
   }
 

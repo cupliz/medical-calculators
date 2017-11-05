@@ -9,19 +9,23 @@ class CalculateContainer extends Component {
     points: 0
   }
 
-  handleChange = (value, points) => {
-    const answerPoints = points.split('/')
-    if (value === answerPoints[0]) {
-      this.setState(prevState => {
-        const maxValue = parseInt(answerPoints[1], 10)
-        this.props.pickAnswer(prevState.points - maxValue)
-        return { points: prevState.points - maxValue }
-      })
-    } else {
-      this.setState(prevState => {
-        this.props.pickAnswer(prevState.points + parseInt(value, 10))
-        return { points: prevState.points + parseInt(value, 10) }
-      })
+  handleChange = (value, points, type) => {
+    if (type === 'radio') {
+      const answerPoints = points.split('/')
+      if (value === answerPoints[0]) {
+        this.setState(prevState => {
+          const maxValue = parseInt(answerPoints[1], 10)
+          this.props.pickAnswer(prevState.points - maxValue)
+          return { points: prevState.points - maxValue }
+        })
+      } else {
+        this.setState(prevState => {
+          this.props.pickAnswer(prevState.points + parseInt(value, 10))
+          return { points: prevState.points + parseInt(value, 10) }
+        })
+      }
+    } else if (type === 'checkbox') {
+      console.log(value, points, type)
     }
   }
 
