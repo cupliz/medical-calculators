@@ -127,7 +127,7 @@
             {
               "type": "checkbox",
               "label": "Respiratory Rate > 30 per minute",
-              "points": "1"
+              "points": "2"
             },
             {
               "type": "checkbox",
