@@ -22,7 +22,7 @@ const CheckboxField = props => {
             {questionLabel}
             <small
               className={
-                checked ? classes.unCheckedBadge : classes.checkedBadge
+                checked ? classes.checkedBadge : classes.unCheckedBadge
               }
             >
               {`${answerPoints[1]} Point`}
