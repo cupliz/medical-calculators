@@ -3,7 +3,7 @@ import { FormGroup, FormControlLabel } from 'material-ui/Form'
 import Checkbox from 'material-ui/Checkbox'
 
 const CheckboxField = props => {
-  const { answerPoints, ariaLabel, classes, value, onChange, checked, label } = props
+  const { answerPoints, ariaLabel, classes, value, onChange, checked, questionLabel } = props
   return (
     <FormGroup
       row
@@ -19,30 +19,13 @@ const CheckboxField = props => {
         control={<Checkbox checked={!checked} />}
         label={
           <span>
-            No{' '}
+            {questionLabel}
             <small
               className={
                 checked ? classes.unCheckedBadge : classes.checkedBadge
               }
             >
               {answerPoints[0]}
-            </small>
-          </span>
-        }
-      />
-      <FormControlLabel
-        value={answerPoints[1]}
-        className={classes.formControlLabel}
-        control={<Checkbox checked={checked} />}
-        label={
-          <span>
-            Yes{' '}
-            <small
-              className={
-                !checked ? classes.unCheckedBadge : classes.checkedBadge
-              }
-            >
-              +{answerPoints[1]}
             </small>
           </span>
         }
