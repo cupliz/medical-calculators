@@ -29,7 +29,7 @@ const styles = theme => ({
 
 class QuestionField extends React.Component {
   state = {
-    value: '',
+    value: '0',
     checked: false
   }
 
@@ -40,6 +40,14 @@ class QuestionField extends React.Component {
     }
     this.setState({ value, checked })
     this.props.onChange(value, this.props.points)
+  }
+
+  handleCheckboxChange = (maxValue) => {
+    if (this.state.checked) {
+      this.setState({ checked: false, value: '0' })
+    } else {
+      this.setState({ checked: true, value: maxValue })
+    }
   }
 
   renderQuestion = () => {
@@ -67,7 +75,7 @@ class QuestionField extends React.Component {
           questionLabel={this.props.label}
           classes={this.props.classes}
           value={this.state.value}
-          onChange={this.handleChange}
+          onChange={this.handleCheckboxChange}
           checked={this.state.checked}
         />
       )

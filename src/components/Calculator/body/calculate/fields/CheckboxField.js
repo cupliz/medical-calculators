@@ -20,7 +20,7 @@ const CheckboxField = props => {
         control={
           <Checkbox
             value={value}
-            onChange={onChange}
+            onChange={() => onChange(answerPoints[1])}
             name={answerPoints[1]}
             checked={checked}
           />
