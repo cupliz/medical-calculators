@@ -1,3 +1,5 @@
 Dropdown: https://i.imgur.com/ansowjJ.png
 Number input: https://i.imgur.com/X0aLfjW.png
 Long 4x radio: https://i.imgur.com/aQH26mt.png
+Short 2x radio (implemented): https://i.imgur.com/3amaTJK.png
+
