@@ -26,8 +26,6 @@ Now.sh Database:
 
 https://medical-calc.now.sh/
 
-https://medical-calc-aupufyxoww.now.sh/
-
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
