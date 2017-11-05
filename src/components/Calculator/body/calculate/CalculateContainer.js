@@ -30,6 +30,7 @@ class CalculateContainer extends Component {
       return (
         <QuestionGroup
           key={questionGroup.group}
+          onChange={this.handleChange}
           {...questionGroup}
         />
       )
