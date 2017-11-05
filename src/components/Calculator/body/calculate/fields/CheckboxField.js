@@ -25,7 +25,7 @@ const CheckboxField = props => {
                 checked ? classes.unCheckedBadge : classes.checkedBadge
               }
             >
-              {answerPoints[0]}
+              {`${answerPoints[1]} Point`}
             </small>
           </span>
         }
