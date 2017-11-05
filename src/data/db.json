@@ -7,6 +7,10 @@
     {
       "id": "curb-65-pneumonia-severity-score",
       "title": "CURB-65 Pneumonia Severity Score"
+    },
+    {
+      "id": "ransons-criteria-for-pancreatitis-mortality",
+      "title": "Ranson's Criteria for Pancreatitis Mortality"
     }
   ],
   "calculators": [
