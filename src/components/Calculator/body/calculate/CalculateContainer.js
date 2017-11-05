@@ -3,6 +3,7 @@ import QuestionField from './QuestionField'
 import ResultCard from './ResultCard'
 import { connect } from 'react-redux'
 import { pickAnswer } from '../../../../store/modules/calculator'
+import QuestionGroup from './QuestionGroup'
 
 class CalculateContainer extends Component {
   state = {
