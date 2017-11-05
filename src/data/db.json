@@ -261,28 +261,52 @@
       ],
       "results": {
         "0": [
-          "Low risk group: 0.6% 30-day mortality.",
-          "Consider outpatient treatment."
+          "To be implemented",
+          "Need to add split counting"
         ],
         "1": [
-          "Low risk group: 2.7% 30-day mortality.",
-          "Consider outpatient treatment."
+          "To be implemented",
+          "Need to add split counting"
         ],
         "2": [
-          "Moderate risk group: 6.8% 30-day mortality.",
-          "Consider inpatient treatment or outpatient with close followup."
+          "To be implemented",
+          "Need to add split counting"
         ],
         "3": [
-          "Severe risk group: 14.0% 30-day mortality.",
-          "Consider inpatient treatment with possible intensive care admission."
+          "To be implemented",
+          "Need to add split counting"
         ],
         "4": [
-          "Highest risk group: 27.8% 30-day mortality.",
-          "Consider inpatient treatment with possible intensive care admission."
+          "To be implemented",
+          "Need to add split counting"
         ],
         "5": [
-          "Highest risk group: 27.8% 30-day mortality.",
-          "Consider inpatient treatment with possible intensive care admission."
+          "To be implemented",
+          "Need to add split counting"
+        ],
+        "6": [
+          "To be implemented",
+          "Need to add split counting"
+        ],
+        "7": [
+          "To be implemented",
+          "Need to add split counting"
+        ],
+        "8": [
+          "To be implemented",
+          "Need to add split counting"
+        ],
+        "9": [
+          "To be implemented",
+          "Need to add split counting"
+        ],
+        "10": [
+          "To be implemented",
+          "Need to add split counting"
+        ],
+        "11": [
+          "To be implemented",
+          "Need to add split counting"
         ]
       },
       "notes": {
