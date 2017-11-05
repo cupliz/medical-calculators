@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import QuestionField from './QuestionField'
 import ResultCard from './ResultCard'
 import { connect } from 'react-redux'
 import { pickAnswer } from '../../../../store/modules/calculator'
@@ -32,22 +31,6 @@ class CalculateContainer extends Component {
         <QuestionGroup
           key={questionGroup.group}
           {...questionGroup}
-        />
-      )
-    })
-  }
-
-  renderQuestionFields = (questions, changeHandler) => {
-    return questions.map(question => {
-      return (
-        <QuestionField
-          key={question.label || question.group}
-          type={question.type}
-          label={question.label}
-          group={question.group}
-          options={question.options}
-          points={question.points}
-          onChange={changeHandler}
         />
       )
     })
