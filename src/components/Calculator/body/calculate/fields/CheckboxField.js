@@ -1,11 +1,11 @@
 import React from 'react'
-import Radio, { RadioGroup } from 'material-ui/Radio'
-import { FormControlLabel } from 'material-ui/Form'
+import { FormGroup, FormControlLabel } from 'material-ui/Form'
+import Checkbox from 'material-ui/Checkbox';
 
-const RadioField = props => {
+const CheckboxField = props => {
   const { answerPoints, label, classes, value, onChange, checked } = props
   return (
-    <RadioGroup
+    <FormGroup
       row
       name={answerPoints[1]}
       aria-label={label}
@@ -16,7 +16,7 @@ const RadioField = props => {
       <FormControlLabel
         value={answerPoints[0]}
         className={classes.formControlLabel}
-        control={<Radio checked={!checked} />}
+        control={<Checkbox checked={!checked} />}
         label={
           <span>
             No{' '}
@@ -35,7 +35,7 @@ const RadioField = props => {
       <FormControlLabel
         value={answerPoints[1]}
         className={classes.formControlLabel}
-        control={<Radio checked={checked} />}
+        control={<Checkbox checked={checked} />}
         label={
           <span>
             Yes{' '}
@@ -51,8 +51,8 @@ const RadioField = props => {
           </span>
         }
       />
-    </RadioGroup>
+    </FormGroup>
   )
 }
 
-export default RadioField
+export default CheckboxField
