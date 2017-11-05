@@ -29,7 +29,7 @@ class CalculateContainer extends Component {
     return questions.map(question => {
       return (
         <QuestionField
-          key={question.label}
+          key={question.label || question.group}
           type={question.type}
           label={question.label}
           group={question.group}
