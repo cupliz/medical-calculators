@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormGroup, FormControlLabel } from 'material-ui/Form'
-import Checkbox from 'material-ui/Checkbox';
+import Checkbox from 'material-ui/Checkbox'
 
 const CheckboxField = props => {
   const { answerPoints, label, classes, value, onChange, checked } = props
@@ -22,9 +22,7 @@ const CheckboxField = props => {
             No{' '}
             <small
               className={
-                checked
-                  ? classes.unCheckedBadge
-                  : classes.checkedBadge
+                checked ? classes.unCheckedBadge : classes.checkedBadge
               }
             >
               {answerPoints[0]}
@@ -41,9 +39,7 @@ const CheckboxField = props => {
             Yes{' '}
             <small
               className={
-                !checked
-                  ? classes.unCheckedBadge
-                  : classes.checkedBadge
+                !checked ? classes.unCheckedBadge : classes.checkedBadge
               }
             >
               +{answerPoints[1]}
