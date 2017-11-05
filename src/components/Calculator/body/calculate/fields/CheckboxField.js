@@ -16,7 +16,7 @@ const CheckboxField = props => {
       <FormControlLabel
         value={answerPoints[0]}
         className={classes.formControlLabel}
-        control={<Checkbox checked={!checked} />}
+        control={<Checkbox checked={checked} />}
         label={
           <span>
             {questionLabel}
