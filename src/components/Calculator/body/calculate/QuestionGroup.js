@@ -27,7 +27,7 @@ class QuestionGroup extends Component {
   renderQuestionFields = data => {
     if (Array.isArray(data)) {
       return data.map(question => (
-        <QuestionField {...question} />
+        <QuestionField key={question.label} {...question} />
       ))
     } else return <QuestionField {...data} />
   }
