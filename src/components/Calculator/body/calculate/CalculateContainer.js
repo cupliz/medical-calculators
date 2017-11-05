@@ -26,6 +26,18 @@ class CalculateContainer extends Component {
       }
     } else if (type === 'checkbox') {
       console.log(value, points, type)
+      if (value === '0') {
+        this.setState(prevState => {
+          const maxValue = parseInt(points)
+          this.props.pickAnswer(prevState.points - maxValue)
+          return { points: prevState.points - maxValue }
+        })
+      } else {
+        this.setState(prevState => {
+          this.props.pickAnswer(prevState.points + parseInt(value, 10))
+          return { points: prevState.points + parseInt(value, 10) }
+        })
+      }
     }
   }
 
