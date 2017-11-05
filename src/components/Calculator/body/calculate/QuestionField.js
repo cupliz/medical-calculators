@@ -1,15 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import { FormLabel, FormControl } from 'material-ui/Form'
 import RadioField from './fields/RadioField'
 import CheckboxField from './fields/CheckboxField'
 
 const styles = theme => ({
-  formControl: {
-    margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
-      .spacing.unit * 2}px`
-  },
   group: {
     margin: 0
   },
@@ -26,12 +21,6 @@ const styles = theme => ({
     color: '#fff',
     padding: '3px 7px',
     marginLeft: '10px'
-  },
-  label: {
-    fontSize: 14
-  },
-  focusedLabel: {
-    color: 'rgba(0, 0, 0, 0.54)'
   },
   formControlLabel: {
     marginRight: `${theme.spacing.unit * 4}px`
