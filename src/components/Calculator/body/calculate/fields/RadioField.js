@@ -5,44 +5,44 @@ import { FormControlLabel } from 'material-ui/Form'
 const RadioField = props => (
   <RadioGroup
     row
-    name={this.props.answerPoints[1]}
-    aria-label={this.props.label}
-    className={this.props.classes.group}
-    value={this.props.value}
-    onChange={this.props.onChange}
+    name={props.answerPoints[1]}
+    aria-label={props.label}
+    className={props.classes.group}
+    value={props.value}
+    onChange={props.onChange}
   >
     <FormControlLabel
-      value={this.props.answerPoints[0]}
-      className={this.props.classes.formControlLabel}
-      control={<Radio checked={!this.props.checked} />}
+      value={props.answerPoints[0]}
+      className={props.classes.formControlLabel}
+      control={<Radio checked={!props.checked} />}
       label={
         <span>
           No{' '}
           <small
             className={
-              this.props.checked ? this.props.classes.unCheckedBadge : this.props.classes.checkedBadge
+              props.checked ? props.classes.unCheckedBadge : props.classes.checkedBadge
             }
           >
-            {this.props.answerPoints[0]}
+            {props.answerPoints[0]}
           </small>
         </span>
       }
     />
     <FormControlLabel
-      value={this.props.answerPoints[1]}
-      className={this.props.classes.formControlLabel}
-      control={<Radio checked={this.props.checked} />}
+      value={props.answerPoints[1]}
+      className={props.classes.formControlLabel}
+      control={<Radio checked={props.checked} />}
       label={
         <span>
           Yes{' '}
           <small
             className={
-              !this.props.checked
-                ? this.props.classes.unCheckedBadge
-                : this.props.classes.checkedBadge
+              !props.checked
+                ? props.classes.unCheckedBadge
+                : props.classes.checkedBadge
             }
           >
-            +{this.props.answerPoints[1]}
+            +{props.answerPoints[1]}
           </small>
         </span>
       }
