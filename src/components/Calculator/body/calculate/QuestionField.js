@@ -93,19 +93,7 @@ class QuestionField extends React.Component {
   render () {
     const { classes } = this.props
 
-    return (
-      <div className={classes.questionField}>
-        <FormControl component='fieldset' className={classes.formControl}>
-          <FormLabel
-            component='legend'
-            classes={{ root: classes.label, focused: classes.focusedLabel }}
-          >
-            {this.props.group}
-          </FormLabel>
-          {this.renderQuestion(this.props.type)}
-        </FormControl>
-      </div>
-    )
+    return this.renderQuestion(this.props.type)
   }
 }
 
