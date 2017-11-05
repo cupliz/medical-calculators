@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles'
 import Radio, { RadioGroup } from 'material-ui/Radio'
 import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
 import RadioField from './fields/RadioField'
+import CheckboxField from './fields/CheckboxField'
 
 const styles = theme => ({
   questionField: {
@@ -68,6 +69,17 @@ class QuestionField extends React.Component {
     if (type === 'radio') {
       return (
         <RadioField
+          answerPoints={answerPoints}
+          label={this.props.label}
+          classes={this.props.classes}
+          value={this.state.value}
+          onChange={this.handleChange}
+          checked={this.state.checked}
+        />
+      )
+    } if (type === 'checkbox') {
+      return (
+        <CheckboxField
           answerPoints={answerPoints}
           label={this.props.label}
           classes={this.props.classes}
