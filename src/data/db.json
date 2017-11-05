@@ -198,27 +198,27 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Confusion (abbreviated Mental Test Score <=8)",
+              "label": "Age > 55",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Urea (BUN > 19 mg/dL or 7 mmol/L)",
+              "label": "Glucose >200 mg/dL (>10 mmol/L)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Respiratory Rate > 30 per minute",
+              "label": "WBC > 16,000",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Blood Pressure: diastolic < 60 or systeolic < 90 mmHg",
+              "label": "AST > 250",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Age >= 65 years",
+              "label": "LDH > 350",
               "points": "1"
             }
           ]
