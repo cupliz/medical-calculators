@@ -30,9 +30,10 @@ class CalculateContainer extends Component {
       return (
         <QuestionField
           key={question.label}
-          label={question.label}
-          points={question.points}
           type={question.type}
+          label={question.label}
+          options={question.options}
+          points={question.points}
           onChange={changeHandler}
         />
       )
