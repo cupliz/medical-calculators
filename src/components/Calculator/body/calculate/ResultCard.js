@@ -62,15 +62,15 @@ const renderResult = (classes, points, data) => {
           <Typography type='title' className={classes.contentText}>
             {points}
           </Typography>
-          {/*{data.map(item => (*/}
-            {/*<Typography*/}
-              {/*key={`${points}-${item}`}*/}
-              {/*type='caption'*/}
-              {/*className={classes.contentText}*/}
-            {/*>*/}
-              {/*{item}*/}
-            {/*</Typography>*/}
-          {/*))}*/}
+          {data.map(item => (
+            <Typography
+              key={`${points}-${item}`}
+              type='caption'
+              className={classes.contentText}
+            >
+              {item}
+            </Typography>
+          ))}
         </CardContent>
       </Card>
     )
