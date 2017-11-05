@@ -20,7 +20,9 @@ const RadioField = props => (
           No{' '}
           <small
             className={
-              props.checked ? props.classes.unCheckedBadge : props.classes.checkedBadge
+              props.checked
+                ? props.classes.unCheckedBadge
+                : props.classes.checkedBadge
             }
           >
             {props.answerPoints[0]}
