@@ -288,8 +288,8 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "CURB-65 estimates the mortality of community-acquired pneumonia to help determine inpatient vs outpatient treatment",
-          "Compared to the Pneumonia Severity Index (PSI), CURB-65 offers equal sensitivity of mortality prediction due to community-acquired pneumonia.  In fact, CURB-65 has a higher specificity than PSI"
+          "Estimates mortality of patients with pancreatitis based on initial and 48 hour lab values",
+          "The BISAP score is another alternative to estimate pancreatitis mortality with fewer variables that is as accurate"
         ]
       },
       "references": {
