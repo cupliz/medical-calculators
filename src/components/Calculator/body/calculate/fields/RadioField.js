@@ -3,19 +3,19 @@ import Radio, { RadioGroup } from 'material-ui/Radio'
 import { FormControlLabel } from 'material-ui/Form'
 
 const RadioField = props => {
-  const { answerPoints, label } = props
+  const { answerPoints, label, classes } = props
   return (
     <RadioGroup
       row
       name={answerPoints[1]}
       aria-label={label}
-      className={props.classes.group}
+      className={classes.group}
       value={props.value}
       onChange={props.onChange}
     >
       <FormControlLabel
         value={answerPoints[0]}
-        className={props.classes.formControlLabel}
+        className={classes.formControlLabel}
         control={<Radio checked={!props.checked} />}
         label={
           <span>
@@ -23,8 +23,8 @@ const RadioField = props => {
             <small
               className={
                 props.checked
-                  ? props.classes.unCheckedBadge
-                  : props.classes.checkedBadge
+                  ? classes.unCheckedBadge
+                  : classes.checkedBadge
               }
             >
               {answerPoints[0]}
@@ -34,7 +34,7 @@ const RadioField = props => {
       />
       <FormControlLabel
         value={answerPoints[1]}
-        className={props.classes.formControlLabel}
+        className={classes.formControlLabel}
         control={<Radio checked={props.checked} />}
         label={
           <span>
@@ -42,8 +42,8 @@ const RadioField = props => {
             <small
               className={
                 !props.checked
-                  ? props.classes.unCheckedBadge
-                  : props.classes.checkedBadge
+                  ? classes.unCheckedBadge
+                  : classes.checkedBadge
               }
             >
               +{answerPoints[1]}
