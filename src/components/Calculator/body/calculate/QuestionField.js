@@ -78,7 +78,7 @@ class QuestionField extends React.Component {
           >
             {this.props.label}
           </FormLabel>
-          {this.renderQuestion()}
+          {this.renderQuestion(this.props.type)}
           <RadioGroup
             row
             aria-label={this.props.label}
