@@ -38,6 +38,7 @@
     "surge:dev": "surge build -d medical-calc-dev.surge.sh",
     "deploy": "npm-run-all -s build build:200 surge clean",
     "deploy:dev": "npm-run-all -s build build:200 surge:dev clean",
+    "deploy:full": "npm-run-all -s build build:200 surge surge:dev clean",
     "server": "json-server --watch --port 3001 ./src/data/db.json --routes routes.json"
   },
   "standard": {
