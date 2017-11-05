@@ -4,7 +4,7 @@ class QuestionGroup extends Component {
   render () {
     return (
       <div>
-        Inside QuestionGroup
+        {this.props.group}
       </div>
     )
   }
