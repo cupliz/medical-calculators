@@ -19,26 +19,31 @@
         {
           "type": "radio",
           "label": "Congestive Heart Failure History",
+          "options": "no/yes",
           "points": "0/1"
         },
         {
           "type": "radio",
           "label": "Hypertension history",
+          "options": "no/yes",
           "points": "0/1"
         },
         {
           "type": "radio",
           "label": "Age ≥ 75 years",
+          "options": "no/yes",
           "points": "0/1"
         },
         {
           "type": "radio",
           "label": "Diabetes melitus history",
+          "options": "no/yes",
           "points": "0/1"
         },
         {
           "type": "radio",
           "label": "Stroke or TIA symptoms previously",
+          "options": "no/yes",
           "points": "0/2"
         }
       ],
