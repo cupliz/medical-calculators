@@ -33,11 +33,7 @@ class QuestionField extends React.Component {
     checked: false
   }
 
-  handleChange = (event, value) => {
-    console.log(event.target, 'event.target')
-    console.log(event.target.value, 'event.target.value')
-    console.log(event.target.name, 'event.target.name')
-    console.log(value, 'value')
+  handleRadioChange = (event, value) => {
     let checked = false
     if (value === this.props.points.split('/')[1]) {
       checked = true
@@ -59,7 +55,7 @@ class QuestionField extends React.Component {
           ariaLabel={this.props.group}
           classes={this.props.classes}
           value={this.state.value}
-          onChange={this.handleChange}
+          onChange={this.handleRadioChange}
           checked={this.state.checked}
         />
       )
