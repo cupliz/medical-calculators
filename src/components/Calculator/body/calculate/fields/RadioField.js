@@ -5,11 +5,7 @@ import { FormControlLabel } from 'material-ui/Form'
 const RadioField = props => (
   <RadioGroup
     row
-    aria-label={this.props.label}
-    name={answerPoints[1]}
-    className={classes.group}
-    value={this.state.value}
-    onChange={this.handleChange}
+    {...this.props}
   >
     <FormControlLabel
       value={answerPoints[0]}

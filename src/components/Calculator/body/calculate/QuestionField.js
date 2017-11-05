@@ -60,19 +60,26 @@ class QuestionField extends React.Component {
   }
 
   renderQuestion = type => {
+    let answerPoints = ['0', '1']
+    if (this.props.type === 'radio') {
+      answerPoints = this.props.points.split('/')
+    }
+
     if (type === 'radio') {
       return (
-        <RadioField />
+        <RadioField
+          name={answerPoints[1]}
+          aria-label={this.props.label}
+          className={this.props.classes.group}
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
       )
     }
   }
 
   render () {
     const { classes } = this.props
-    let answerPoints = ['0', '1']
-    if (this.props.type === 'radio') {
-      answerPoints = this.props.points.split('/')
-    }
 
     return (
       <div className={classes.questionField}>
