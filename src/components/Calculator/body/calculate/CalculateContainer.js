@@ -25,6 +25,16 @@ class CalculateContainer extends Component {
     }
   }
 
+  renderGroups = questions => {
+    return questions.map(questionGroup => {
+      return (
+        <QuestionGroup
+          data={questionGroup}
+        />
+      )
+    })
+  }
+
   renderQuestionFields = (questions, changeHandler) => {
     return questions.map(question => {
       return (
@@ -46,7 +56,7 @@ class CalculateContainer extends Component {
 
     return (
       <div className='calculate'>
-        {this.renderQuestionFields(questions, this.handleChange)}
+        {this.renderGroups(questions)}
         <ResultCard points={points} data={results[points]} />
       </div>
     )
