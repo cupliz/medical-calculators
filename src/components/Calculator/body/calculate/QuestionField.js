@@ -59,13 +59,11 @@ class QuestionField extends React.Component {
     this.props.onChange(value, this.props.points)
   }
 
-  renderQuestion = type => {
+  renderQuestion = () => {
     let answerPoints = ['0', '1']
+
     if (this.props.type === 'radio') {
       answerPoints = this.props.points.split('/')
-    }
-
-    if (type === 'radio') {
       return (
         <RadioField
           answerPoints={answerPoints}
@@ -76,7 +74,7 @@ class QuestionField extends React.Component {
           checked={this.state.checked}
         />
       )
-    } if (type === 'checkbox') {
+    } if (this.props.type === 'checkbox') {
       return (
         <CheckboxField
           answerPoints={answerPoints}
@@ -91,7 +89,7 @@ class QuestionField extends React.Component {
   }
 
   render () {
-    return this.renderQuestion(this.props.type)
+    return this.renderQuestion()
   }
 }
 
