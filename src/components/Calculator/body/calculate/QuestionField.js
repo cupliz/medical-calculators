@@ -69,7 +69,7 @@ class QuestionField extends React.Component {
       return (
         <RadioField
           name={answerPoints[1]}
-          aria-label={this.props.label}
+          ariaLabel={this.props.label}
           className={this.props.classes.group}
           value={this.state.value}
           onChange={this.handleChange}
