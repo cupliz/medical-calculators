@@ -1,6 +1,6 @@
 import React from 'react'
 import Radio, { RadioGroup } from 'material-ui/Radio'
-import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
+import { FormControlLabel } from 'material-ui/Form'
 
 const RadioField = props => (
   <RadioGroup
