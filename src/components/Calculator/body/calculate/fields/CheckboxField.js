@@ -3,20 +3,28 @@ import { FormGroup, FormControlLabel } from 'material-ui/Form'
 import Checkbox from 'material-ui/Checkbox'
 
 const CheckboxField = props => {
-  const { answerPoints, ariaLabel, classes, value, onChange, checked, questionLabel } = props
+  const {
+    answerPoints,
+    ariaLabel,
+    classes,
+    value,
+    onChange,
+    checked,
+    questionLabel
+  } = props
   return (
-    <FormGroup
-      row
-      name={answerPoints[1]}
-      aria-label={ariaLabel}
-      className={classes.group}
-      value={value}
-      onChange={onChange}
-    >
+    <FormGroup row aria-label={ariaLabel} className={classes.group}>
       <FormControlLabel
         value={answerPoints[0]}
         className={classes.formControlLabel}
-        control={<Checkbox checked={checked} />}
+        control={
+          <Checkbox
+            value={value}
+            onChange={onChange}
+            name={answerPoints[1]}
+            checked={checked}
+          />
+        }
         label={
           <span>
             {questionLabel}
