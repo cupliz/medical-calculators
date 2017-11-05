@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import Radio, { RadioGroup } from 'material-ui/Radio'
-import { FormLabel, FormControl, FormControlLabel } from 'material-ui/Form'
+import { FormLabel, FormControl } from 'material-ui/Form'
 import RadioField from './fields/RadioField'
 import CheckboxField from './fields/CheckboxField'
 
