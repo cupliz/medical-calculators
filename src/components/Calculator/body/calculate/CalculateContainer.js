@@ -29,6 +29,7 @@ class CalculateContainer extends Component {
     return questions.map(questionGroup => {
       return (
         <QuestionGroup
+          key={questionGroup.group}
           data={questionGroup}
         />
       )
