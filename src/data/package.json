@@ -1,5 +1,5 @@
 {
-  "name": "medical-calc-db",
+  "name": "medical-calc",
   "version": "1.0.0",
   "description": "Simple json-base database to deploy to now.sh",
   "main": "server.js",
