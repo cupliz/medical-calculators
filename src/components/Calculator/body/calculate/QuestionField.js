@@ -67,8 +67,8 @@ class QuestionField extends React.Component {
       const answerOptions = this.props.options.split('/')
       return (
         <RadioField
-          answerPoints={answerPoints}
           options={answerOptions}
+          answerPoints={answerPoints}
           ariaLabel={this.props.group}
           classes={this.props.classes}
           value={this.state.value}
