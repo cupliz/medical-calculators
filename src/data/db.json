@@ -18,31 +18,31 @@
       "questions": [
         {
           "type": "radio",
-          "label": "Congestive Heart Failure History",
+          "group": "Congestive Heart Failure History",
           "options": "no/yes",
           "points": "0/1"
         },
         {
           "type": "radio",
-          "label": "Hypertension history",
+          "group": "Hypertension history",
           "options": "no/yes",
           "points": "0/1"
         },
         {
           "type": "radio",
-          "label": "Age ≥ 75 years",
+          "group": "Age ≥ 75 years",
           "options": "no/yes",
           "points": "0/1"
         },
         {
           "type": "radio",
-          "label": "Diabetes melitus history",
+          "group": "Diabetes melitus history",
           "options": "no/yes",
           "points": "0/1"
         },
         {
           "type": "radio",
-          "label": "Stroke or TIA symptoms previously",
+          "group": "Stroke or TIA symptoms previously",
           "options": "no/yes",
           "points": "0/2"
         }
