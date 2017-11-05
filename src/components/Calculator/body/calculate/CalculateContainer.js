@@ -32,6 +32,7 @@ class CalculateContainer extends Component {
           key={question.label}
           type={question.type}
           label={question.label}
+          group={question.group}
           options={question.options}
           points={question.points}
           onChange={changeHandler}
