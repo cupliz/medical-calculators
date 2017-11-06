@@ -11,7 +11,8 @@ const styles = theme => ({
     justifyContent: 'center'
   },
   headline: {
-    marginBottom: theme.spacing.unit * 3
+    marginBottom: theme.spacing.unit * 3,
+    fontWeight: 'bold'
   },
   title: {
     marginBottom: theme.spacing.unit * 2
