@@ -259,56 +259,37 @@
           ]
         }
       ],
-      "results": {
-        "0": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "1": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "2": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "3": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "4": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "5": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "6": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "7": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "8": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "9": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "10": [
-          "To be implemented",
-          "Need to add split counting"
-        ],
-        "11": [
-          "To be implemented",
-          "Need to add split counting"
-        ]
-      },
+      "results": [
+        {
+          "group": "Criteria at time of patient admission to hospital",
+          "data": {
+            "0": [
+              "Ranson’s Criteria (On Admission)",
+              "Severe pancreatitis unlikely."
+            ],
+            "1": [
+              "Ranson’s Criteria (On Admission)",
+              "Severe pancreatitis unlikely."
+            ],
+            "2": [
+              "Ranson’s Criteria (On Admission)",
+              "Severe pancreatitis unlikely."
+            ],
+            "3": [
+              "Ranson’s Criteria (On Admission)",
+              "Severe pancreatitis likely. Consider ICU admission."
+            ],
+            "4": [
+              "Ranson’s Criteria (On Admission)",
+              "Severe pancreatitis likely. Consider ICU admission."
+            ],
+            "5": [
+              "Ranson’s Criteria (On Admission)",
+              "Severe pancreatitis likely. Consider ICU admission."
+            ]
+          }
+        }
+      ],
       "notes": {
         "type": "unordered-list",
         "content": [
