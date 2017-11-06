@@ -14,13 +14,13 @@ const styles = theme => ({
 
 const FOF = props => (
   <div className={props.classes.fofWrapper}>
-    <Typography type='headline' align='center'>
+    <Typography type='headline' align='center' className={props.classes.headline}>
       Oops!
     </Typography>
-    <Typography type='title' align='center'>
+    <Typography type='title' align='center' className={props.classes.title}>
       We can’t seem to find the page you are looking for.
     </Typography>
-    <Typography type='caption' align='center'>
+    <Typography type='caption' align='center' className={props.classes.caption}>
       Error code 404
     </Typography>
   </div>
