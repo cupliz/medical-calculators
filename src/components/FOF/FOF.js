@@ -21,7 +21,8 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 6
   },
   img: {
-    alignSelf: 'center'
+    alignSelf: 'center',
+    maxWidth: '100%'
   }
 })
 
