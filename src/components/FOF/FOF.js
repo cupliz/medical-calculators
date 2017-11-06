@@ -24,7 +24,11 @@ const styles = theme => ({
 
 const FOF = props => (
   <div className={props.classes.fofWrapper}>
-    <Typography type='headline' align='center' className={props.classes.headline}>
+    <Typography
+      type='headline'
+      align='center'
+      className={props.classes.headline}
+    >
       Oops!
     </Typography>
     <Typography type='title' align='center' className={props.classes.title}>
@@ -33,6 +37,10 @@ const FOF = props => (
     <Typography type='caption' align='center' className={props.classes.caption}>
       Error code 404
     </Typography>
+    <img
+      src='http://lorempicsum.com/simpsons/627/300/4'
+      alt='Simpsons chilling'
+    />
   </div>
 )
 
