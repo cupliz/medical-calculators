@@ -5,6 +5,7 @@ import Calculator from './components/Calculator/Calculator'
 import { connect } from 'react-redux'
 import { fetchListData } from './store/modules/list'
 import Loader from './components/Loader/Loader'
+import FOF from './components/FOF/FOF'
 
 const LoadingView = () => <Loader />
 
@@ -30,7 +31,7 @@ const ComponentView = props => (
           )}
         />
       ))}
-      <Route render={() => <p>Not Found</p>} />
+      <Route render={() => <FOF />} />
     </Switch>
   </main>
 )
