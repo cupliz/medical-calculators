@@ -18,7 +18,7 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 3
   },
   caption: {
-    marginBottom: theme.spacing.unit * 3
+    marginBottom: theme.spacing.unit * 6
   },
   img: {
     alignSelf: 'center'
