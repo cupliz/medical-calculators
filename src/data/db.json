@@ -288,6 +288,59 @@
               "Severe pancreatitis likely. Consider ICU admission."
             ]
           }
+        },
+        {
+          "group": "Cumulative",
+          "data": {
+            "0": [
+              "Ranson’s Criteria (Cumulative)",
+              "1% predicted mortality."
+            ],
+            "1": [
+              "Ranson’s Criteria (Cumulative)",
+              "1% predicted mortality."
+            ],
+            "2": [
+              "Ranson’s Criteria (Cumulative)",
+              "1% predicted mortality."
+            ],
+            "3": [
+              "Ranson’s Criteria (Cumulative)",
+              "15% predicted mortality."
+            ],
+            "4": [
+              "Ranson’s Criteria (Cumulative)",
+              "15% predicted mortality."
+            ],
+            "5": [
+              "Ranson’s Criteria (Cumulative)",
+              "50% predicted mortality."
+            ],
+            "6": [
+              "Ranson’s Criteria (Cumulative)",
+              "40% predicted mortality."
+            ],
+            "7": [
+              "Ranson’s Criteria (Cumulative)",
+              "100% predicted mortality."
+            ],
+            "8": [
+              "Ranson’s Criteria (Cumulative)",
+              "100% predicted mortality."
+            ],
+            "9": [
+              "Ranson’s Criteria (Cumulative)",
+              "100% predicted mortality."
+            ],
+            "10": [
+              "Ranson’s Criteria (Cumulative)",
+              "100% predicted mortality."
+            ],
+            "11": [
+              "Ranson’s Criteria (Cumulative)",
+              "100% predicted mortality."
+            ]
+          }
         }
       ],
       "notes": {
