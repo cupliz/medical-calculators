@@ -22,7 +22,8 @@ const styles = theme => ({
   },
   img: {
     alignSelf: 'center',
-    maxWidth: '100%'
+    maxWidth: '100%',
+    borderRadius: '25px'
   }
 })
 
