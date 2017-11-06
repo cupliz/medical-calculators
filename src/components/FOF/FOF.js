@@ -7,7 +7,8 @@ const styles = theme => ({
   fofWrapper: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh'
+    minHeight: '100vh',
+    justifyContent: 'center'
   }
 })
 
