@@ -13,14 +13,18 @@ const styles = theme => ({
     backgroundColor: '#00bcd4',
     color: '#fff',
     padding: '3px 7px',
-    marginLeft: '10px'
+    marginLeft: '10px',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
   },
   unCheckedBadge: {
     borderRadius: '5px',
     backgroundColor: '#c1c7cd',
     color: '#fff',
     padding: '3px 7px',
-    marginLeft: '10px'
+    marginLeft: '10px',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
   },
   formControlLabel: {
     marginRight: `${theme.spacing.unit * 4}px`
@@ -42,7 +46,7 @@ class QuestionField extends React.Component {
     this.props.onChange(value, this.props.points, this.props.type)
   }
 
-  handleCheckboxChange = (maxValue) => {
+  handleCheckboxChange = maxValue => {
     if (this.state.checked) {
       this.setState({ checked: false, value: '0' })
       this.props.onChange('0', this.props.points, this.props.type)
@@ -69,7 +73,8 @@ class QuestionField extends React.Component {
           checked={this.state.checked}
         />
       )
-    } if (this.props.type === 'checkbox') {
+    }
+    if (this.props.type === 'checkbox') {
       return (
         <CheckboxField
           answerPoints={answerPoints}
