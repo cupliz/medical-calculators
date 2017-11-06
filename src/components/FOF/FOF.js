@@ -19,6 +19,9 @@ const styles = theme => ({
   },
   caption: {
     marginBottom: theme.spacing.unit * 3
+  },
+  img: {
+    alignSelf: 'center'
   }
 })
 
@@ -38,6 +41,7 @@ const FOF = props => (
       Error code 404
     </Typography>
     <img
+      className={props.classes.img}
       src='http://lorempicsum.com/simpsons/627/300/4'
       alt='Simpsons chilling'
     />
