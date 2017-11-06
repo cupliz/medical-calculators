@@ -1,5 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Typography from 'material-ui/Typography'
+import { withStyles } from 'material-ui/styles'
+
+const styles = theme => ({
+})
 
 const FOF = props => (
   <div>
@@ -15,4 +20,8 @@ const FOF = props => (
   </div>
 )
 
-export default FOF
+FOF.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(FOF)
