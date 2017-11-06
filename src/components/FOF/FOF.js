@@ -6,7 +6,8 @@ import { withStyles } from 'material-ui/styles'
 const styles = theme => ({
   fofWrapper: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    minHeight: '100vh'
   }
 })
 
