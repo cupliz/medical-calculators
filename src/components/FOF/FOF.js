@@ -9,6 +9,15 @@ const styles = theme => ({
     flexDirection: 'column',
     minHeight: '100vh',
     justifyContent: 'center'
+  },
+  headline: {
+    marginBottom: theme.spacing.unit * 3
+  },
+  title: {
+    marginBottom: theme.spacing.unit * 2
+  },
+  caption: {
+    marginBottom: theme.spacing.unit * 2
   }
 })
 
