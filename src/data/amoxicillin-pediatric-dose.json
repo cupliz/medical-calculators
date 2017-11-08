@@ -3,6 +3,11 @@
   "title": "Amoxicillin Pediatric Dose",
   "type": "points",
   "points": 0,
+  "info": [
+    {},
+    {},
+    {}
+  ],
   "questions": [
     {
       "group": "Criteria at time of patient admission to hospital",
