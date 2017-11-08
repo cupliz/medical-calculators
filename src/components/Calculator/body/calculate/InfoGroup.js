@@ -20,7 +20,7 @@ const styles = theme => ({
     flexGrow: 1
   },
   stepper: {
-    maxWidth: 400,
+    maxWidth: 300,
     margin: '0 auto'
   }
 })
