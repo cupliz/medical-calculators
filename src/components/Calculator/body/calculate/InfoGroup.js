@@ -27,7 +27,7 @@ const styles = theme => ({
 
   },
   drugIndication: {
-
+    color: theme.brand.colors.primary
   },
   drugDosageInformation: {
 
