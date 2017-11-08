@@ -52,12 +52,15 @@ class InfoGroup extends Component {
     return (
       <div className={classes.infoGroup}>
         <div className={classes.content}>
+          <p>{this.props.drugName}</p>
+          <p>{this.props.drugIndication}</p>
           <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={this.state.stepIndex}
             onChangeIndex={this.handleChangeIndex}
           >
-            <div>1</div>
+            <div>1
+            </div>
             <div>2</div>
             <div>3</div>
           </SwipeableViews>
