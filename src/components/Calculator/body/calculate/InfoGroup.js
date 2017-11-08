@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
+import SwipeableViews from 'react-swipeable-views'
 
 const styles = theme => ({
   infoGroup: {
@@ -16,12 +17,29 @@ const styles = theme => ({
 })
 
 class InfoGroup extends Component {
+  state = {
+    tabIndex: 0
+  }
+
+  handleChangeIndex = index => {
+    this.setState({ tabIndex: index })
+  }
+
   render () {
     const { classes } = this.props
 
     return (
       <div className={classes.infoGroup}>
-        <div className={classes.content}>Inside</div>
+        <div className={classes.content}>
+          <SwipeableViews
+            index={this.state.tabIndex}
+            onChangeIndex={this.handleChangeIndex}
+          >
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </SwipeableViews>
+        </div>
       </div>
     )
   }
