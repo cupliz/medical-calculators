@@ -35,36 +35,34 @@ class InputSelectField extends Component {
 
   render () {
     return (
-      <div>
-        <form noValidate autoComplete='off'>
-          <TextField
-            id='input'
-            className={this.props.classes.input}
-            value={this.state.input}
-            onChange={this.handleChange('input')}
-            margin='normal'
-          />
-          <TextField
-            id='select'
-            select
-            className={this.props.classes.select}
-            value={this.state.select}
-            onChange={this.handleChange('select')}
-            SelectProps={{
-              MenuProps: {
-                className: this.props.classes.menu
-              }
-            }}
-            margin='normal'
-          >
-            {currencies.map(option => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-        </form>
-      </div>
+      <form noValidate autoComplete='off' className={this.props.classes.wrapper}>
+        <TextField
+          id='input'
+          className={this.props.classes.input}
+          value={this.state.input}
+          onChange={this.handleChange('input')}
+          margin='normal'
+        />
+        <TextField
+          id='select'
+          select
+          className={this.props.classes.select}
+          value={this.state.select}
+          onChange={this.handleChange('select')}
+          SelectProps={{
+            MenuProps: {
+              className: this.props.classes.menu
+            }
+          }}
+          margin='normal'
+        >
+          {currencies.map(option => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+      </form>
     )
   }
 }
