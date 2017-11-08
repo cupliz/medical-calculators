@@ -46,7 +46,7 @@ class InfoGroup extends Component {
   }
 
   render () {
-    const { classes, theme } = this.props
+    const { classes, theme, drugDosageInformation } = this.props
 
     return (
       <div className={classes.infoGroup}>
@@ -63,10 +63,10 @@ class InfoGroup extends Component {
             <div>2</div>
             <div>3</div>
           </SwipeableViews>
-          { this.props.drugDosageInformation.length > 1 &&
+          { drugDosageInformation.length > 1 &&
             <MobileStepper
               type='dots'
-              steps={this.props.drugDosageInformation.length}
+              steps={drugDosageInformation.length}
               position='static'
               activeStep={this.state.stepIndex}
               className={classes.stepper}
@@ -74,7 +74,7 @@ class InfoGroup extends Component {
                 <Button
                   dense
                   onClick={this.handleNext}
-                  disabled={this.state.stepIndex === this.props.drugDosageInformation.length - 1}
+                  disabled={this.state.stepIndex === drugDosageInformation.length - 1}
                 >
                   Next
                   {theme.direction === 'rtl' ? (
