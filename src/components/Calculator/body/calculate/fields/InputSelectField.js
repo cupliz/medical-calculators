@@ -35,7 +35,7 @@ class InputSelectField extends Component {
 
   render () {
     return (
-      <form noValidate autoComplete='off' className={this.props.classes.wrapper}>
+      <form noValidate autoComplete='off' className={this.props.classes.inputWrapper}>
         <TextField
           id='input'
           className={this.props.classes.input}
