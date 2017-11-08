@@ -97,6 +97,31 @@
           ]
         }
       ]
+    },
+    {
+      "group": "Liquid Dose",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Dose placeholder",
+          "values": [
+            "L BID",
+            "L Daily",
+            "L QID",
+            "L TID",
+            "L q1 hr",
+            "L q2 hr",
+            "L q4 hr",
+            "mL BID",
+            "mL Daily",
+            "mL QID",
+            "mL TID",
+            "mL q1 hr",
+            "mL q2 hr",
+            "mL q4 hr"
+          ]
+        }
+      ]
     }
   ],
   "notes": {
