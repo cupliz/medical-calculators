@@ -19,7 +19,8 @@ const styles = theme => ({
       .spacing.unit * 2}px`
   },
   stepper: {
-
+    maxWidth: 400,
+    flexGrow: 1
   }
 })
 
@@ -50,6 +51,15 @@ class InfoGroup extends Component {
     return (
       <div className={classes.infoGroup}>
         <div className={classes.content}>
+          <SwipeableViews
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+            index={this.state.stepIndex}
+            onChangeIndex={this.handleChangeIndex}
+          >
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </SwipeableViews>
           <MobileStepper
             type='dots'
             steps={3}
@@ -85,15 +95,6 @@ class InfoGroup extends Component {
               </Button>
             }
           />
-          <SwipeableViews
-            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-            index={this.state.stepIndex}
-            onChangeIndex={this.handleChangeIndex}
-          >
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-          </SwipeableViews>
         </div>
       </div>
     )
