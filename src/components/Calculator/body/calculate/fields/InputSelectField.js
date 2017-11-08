@@ -39,7 +39,7 @@ class InputSelectField extends Component {
         <form noValidate autoComplete='off'>
           <TextField
             id='input'
-            className={''}
+            className={this.props.classes.input}
             value={this.state.input}
             onChange={this.handleChange('input')}
             margin='normal'
@@ -47,12 +47,12 @@ class InputSelectField extends Component {
           <TextField
             id='select'
             select
-            className={''}
+            className={this.props.classes.select}
             value={this.state.select}
             onChange={this.handleChange('select')}
             SelectProps={{
               MenuProps: {
-                className: ''
+                className: this.props.classes.menu
               }
             }}
             margin='normal'
