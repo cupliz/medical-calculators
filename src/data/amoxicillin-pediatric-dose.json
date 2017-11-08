@@ -25,12 +25,12 @@
   },
   "questions": [
     {
-      "group": "Criteria at time of patient admission to hospital",
+      "group": "Dosage",
       "data": [
         {
-          "type": "checkbox",
-          "label": "Age > 55",
-          "points": "1"
+          "type": "input/select",
+          "placeholder": "Enter drug dose",
+          "values": ["mg/kg", "gm/kg", "mcg/kg"]
         },
         {
           "type": "checkbox",
