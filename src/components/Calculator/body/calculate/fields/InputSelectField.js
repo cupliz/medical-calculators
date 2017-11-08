@@ -23,10 +23,8 @@ const currencies = [
 
 class InputSelectField extends Component {
   state = {
-    name: 'Cat in the Hat',
-    age: '',
-    multiline: 'Controlled',
-    currency: 'EUR'
+    input: 'Cat in the Hat',
+    select: ''
   }
 
   handleChange = name => event => {
@@ -40,18 +38,18 @@ class InputSelectField extends Component {
       <div>
         <form noValidate autoComplete='off'>
           <TextField
-            id='name'
+            id='input'
             className={''}
-            value={this.state.name}
-            onChange={this.handleChange('name')}
+            value={this.state.input}
+            onChange={this.handleChange('input')}
             margin='normal'
           />
           <TextField
-            id='select-currency'
+            id='select'
             select
             className={''}
-            value={this.state.currency}
-            onChange={this.handleChange('currency')}
+            value={this.state.select}
+            onChange={this.handleChange('select')}
             SelectProps={{
               MenuProps: {
                 className: ''
