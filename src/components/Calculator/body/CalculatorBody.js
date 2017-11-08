@@ -83,6 +83,7 @@ class CalculatorBody extends React.Component {
               questions={this.props.data.questions}
               results={this.props.data.results}
               points={this.props.data.points}
+              info={this.props.data.info}
             />
           </TabContainer>
           <TabContainer dir={theme.direction}>

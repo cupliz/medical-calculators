@@ -53,7 +53,7 @@ class CalculateContainer extends Component {
   }
 
   render () {
-    const { questions, results, points, info } = this.props
+    const { questions, results, points } = this.props
 
     return (
       <div className='calculate'>
