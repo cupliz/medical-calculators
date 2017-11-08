@@ -23,15 +23,11 @@ const styles = theme => ({
     maxWidth: 300,
     margin: '0 auto'
   },
-  drugName: {
-
-  },
+  drugName: {},
   drugIndication: {
     color: theme.brand.colors.primary
   },
-  drugDosageInformation: {
-
-  }
+  drugDosageInformation: {}
 })
 
 class InfoGroup extends Component {
