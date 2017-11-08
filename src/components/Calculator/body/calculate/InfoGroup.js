@@ -45,6 +45,15 @@ class InfoGroup extends Component {
     this.setState({ stepIndex: index })
   }
 
+  renderContentViews = drugDosageInformation => {
+    return drugDosageInformation.map((item, index) => (
+      <div key={item.title}>
+        <p>{item.title}</p>
+        {item.content.map(content => <p key={content}>{content}</p>)}
+      </div>
+    ))
+  }
+
   render () {
     const { classes, theme, drugDosageInformation } = this.props
 
@@ -58,12 +67,9 @@ class InfoGroup extends Component {
             index={this.state.stepIndex}
             onChangeIndex={this.handleChangeIndex}
           >
-            <div>1
-            </div>
-            <div>2</div>
-            <div>3</div>
+            {this.renderContentViews(drugDosageInformation)}
           </SwipeableViews>
-          { drugDosageInformation.length > 1 &&
+          {drugDosageInformation.length > 1 && (
             <MobileStepper
               type='dots'
               steps={drugDosageInformation.length}
@@ -74,7 +80,9 @@ class InfoGroup extends Component {
                 <Button
                   dense
                   onClick={this.handleNext}
-                  disabled={this.state.stepIndex === drugDosageInformation.length - 1}
+                  disabled={
+                    this.state.stepIndex === drugDosageInformation.length - 1
+                  }
                 >
                   Next
                   {theme.direction === 'rtl' ? (
@@ -99,7 +107,7 @@ class InfoGroup extends Component {
                 </Button>
               }
             />
-          }
+          )}
         </div>
       </div>
     )
