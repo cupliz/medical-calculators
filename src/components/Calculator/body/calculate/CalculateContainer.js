@@ -40,7 +40,7 @@ class CalculateContainer extends Component {
     }
   }
 
-  renderGroups = questions => {
+  renderQuestionGroups = questions => {
     return questions.map(questionGroup => {
       return (
         <QuestionGroup
@@ -57,7 +57,7 @@ class CalculateContainer extends Component {
 
     return (
       <div className='calculate'>
-        {this.renderGroups(questions)}
+        {this.renderQuestionGroups(questions)}
         <ResultCard points={points} data={results[points]} />
       </div>
     )
