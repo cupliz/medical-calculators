@@ -322,22 +322,31 @@
       "info": {
         "drugName": "Amoxicillin",
         "drugIndication": "Ear, Nose & Throat Infections | Pediatric",
-        "drugDosageInformation": {
-          "Mild to Moderate infections": [
-            "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
-            ">3 months and <40kg: 25mg/kg/day PO divided q12 hr or 20mg/kg/day divided q8hr",
-            ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
-          ],
-          "Severe Infections": [
-            "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
-            ">3 months and <40kg: 45mg/kg/day PO divided q12 hr or 40mg/kg/day PO divided q8hr",
-            ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
-          ],
-          "Tonsilitis/Streptococcal pharyngitis": [
-            "50mg/kg PO qDay for 10 days, not to exceed 1g/day, or 25mg/kg PO BID for 10 days, not to exceed 500mg/dose",
-            ">12 years: 775 mg PO qDay for 10days, taken within 1 hour after meal (swallow tablet whole; do not crush or chew)"
-          ]
-        }
+        "drugDosageInformation": [
+          {
+            "title": "Mild to Moderate infections",
+            "content": [
+              "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
+              ">3 months and <40kg: 25mg/kg/day PO divided q12 hr or 20mg/kg/day divided q8hr",
+              ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
+            ]
+          },
+          {
+            "title": "Severe Infections",
+            "content": [
+              "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
+              ">3 months and <40kg: 45mg/kg/day PO divided q12 hr or 40mg/kg/day PO divided q8hr",
+              ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
+            ]
+          },
+          {
+            "title": "Tonsilitis/Streptococcal pharyngitis",
+            "content": [
+              "50mg/kg PO qDay for 10 days, not to exceed 1g/day, or 25mg/kg PO BID for 10 days, not to exceed 500mg/dose",
+              ">12 years: 775 mg PO qDay for 10days, taken within 1 hour after meal (swallow tablet whole; do not crush or chew)"
+            ]
+          }
+        ]
       },
       "points": 0,
       "questions": [
