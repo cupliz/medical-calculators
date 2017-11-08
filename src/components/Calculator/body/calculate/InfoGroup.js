@@ -49,7 +49,7 @@ class InfoGroup extends Component {
   renderContentViews = (drugDosageInformation, classes) => {
     return drugDosageInformation.map((item, index) => (
       <div key={item.title}>
-        <p>{item.title}</p>
+        <Typography type='body2' gutterBottom>{item.title}</Typography>
         {item.content.map(content => <p key={content}>{content}</p>)}
       </div>
     ))
