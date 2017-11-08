@@ -439,8 +439,7 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Estimates mortality of patients with pancreatitis based on initial and 48 hour lab values",
-          "The BISAP score is another alternative to estimate pancreatitis mortality with fewer variables that is as accurate"
+          "Please, provide me a notes url so I can use it in API json file"
         ]
       },
       "references": {
