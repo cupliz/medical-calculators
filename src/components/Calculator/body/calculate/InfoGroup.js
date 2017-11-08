@@ -9,7 +9,7 @@ const styles = theme => ({
     borderTop: `1px solid ${theme.brand.colors.separatorGrey}`,
     backgroundColor: theme.brand.colors.greyBg
   },
-  formControl: {
+  content: {
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
       .spacing.unit * 2}px`
   }
@@ -19,7 +19,11 @@ class InfoGroup extends Component {
   render () {
     const { classes } = this.props
 
-    return <div className={classes.infoGroup}>Inside InfoGroup</div>
+    return (
+      <div className={classes.infoGroup}>
+        <div className={classes.content}>Inside</div>
+      </div>
+    )
   }
 }
 
