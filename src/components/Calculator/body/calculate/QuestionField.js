@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import RadioField from './fields/RadioField'
 import CheckboxField from './fields/CheckboxField'
+import InputSelectField from './fields/InputSelectField'
 
 const styles = theme => ({
   group: {
@@ -73,8 +74,7 @@ class QuestionField extends React.Component {
           checked={this.state.checked}
         />
       )
-    }
-    if (this.props.type === 'checkbox') {
+    } else if (this.props.type === 'checkbox') {
       return (
         <CheckboxField
           answerPoints={answerPoints}
@@ -86,6 +86,8 @@ class QuestionField extends React.Component {
           checked={this.state.checked}
         />
       )
+    } else if (this.props.type === 'input/select') {
+      return <InputSelectField />
     }
   }
 
