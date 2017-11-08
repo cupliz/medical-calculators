@@ -3,6 +3,7 @@ import ResultCard from './ResultCard'
 import { connect } from 'react-redux'
 import { pickAnswer } from '../../../../store/modules/calculator'
 import QuestionGroup from './QuestionGroup'
+import InfoGroup from './InfoGroup'
 
 class CalculateContainer extends Component {
   state = {
@@ -38,6 +39,10 @@ class CalculateContainer extends Component {
         })
       }
     }
+  }
+
+  renderInfoGroup = info => {
+    return <InfoGroup {...info} />
   }
 
   renderQuestionGroups = questions => {
