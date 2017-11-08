@@ -22,6 +22,15 @@ const styles = theme => ({
   stepper: {
     maxWidth: 300,
     margin: '0 auto'
+  },
+  drugName: {
+
+  },
+  drugIndication: {
+
+  },
+  drugDosageInformation: {
+
   }
 })
 
@@ -52,7 +61,7 @@ class InfoGroup extends Component {
         <Typography
           type='body2'
           gutterBottom
-          className={classes.drugDosageInfo}
+          className={classes.drugDosageInformation}
         >
           {item.title}
         </Typography>
