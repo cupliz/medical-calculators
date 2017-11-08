@@ -66,7 +66,7 @@ class InfoGroup extends Component {
           { this.props.drugDosageInformation.length > 1 &&
             <MobileStepper
               type='dots'
-              steps={3}
+              steps={this.props.drugDosageInformation.length}
               position='static'
               activeStep={this.state.stepIndex}
               className={classes.stepper}
@@ -74,7 +74,7 @@ class InfoGroup extends Component {
                 <Button
                   dense
                   onClick={this.handleNext}
-                  disabled={this.state.stepIndex === 2}
+                  disabled={this.state.stepIndex === this.props.drugDosageInformation.length - 1}
                 >
                   Next
                   {theme.direction === 'rtl' ? (
