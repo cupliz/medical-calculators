@@ -30,12 +30,48 @@ class InfoGroup extends Component {
   }
 
   render () {
-    const { classes } = this.props
+    const { classes, theme } = this.props
 
     return (
       <div className={classes.infoGroup}>
         <div className={classes.content}>
+          <MobileStepper
+            type='dots'
+            steps={6}
+            position='static'
+            activeStep={this.state.activeStep}
+            className={classes.root}
+            nextButton={
+              <Button
+                dense
+                onClick={this.handleNext}
+                disabled={this.state.activeStep === 5}
+              >
+                Next
+                {theme.direction === 'rtl' ? (
+                  <KeyboardArrowLeft />
+                ) : (
+                  <KeyboardArrowRight />
+                )}
+              </Button>
+            }
+            backButton={
+              <Button
+                dense
+                onClick={this.handleBack}
+                disabled={this.state.activeStep === 0}
+              >
+                {theme.direction === 'rtl' ? (
+                  <KeyboardArrowRight />
+                ) : (
+                  <KeyboardArrowLeft />
+                )}
+                Back
+              </Button>
+            }
+          />
           <SwipeableViews
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={this.state.tabIndex}
             onChangeIndex={this.handleChangeIndex}
           >
