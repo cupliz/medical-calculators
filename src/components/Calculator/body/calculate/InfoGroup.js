@@ -71,7 +71,7 @@ class InfoGroup extends Component {
               <Button
                 dense
                 onClick={this.handleNext}
-                disabled={this.state.activeStep === 3}
+                disabled={this.state.stepIndex === 2}
               >
                 Next
                 {theme.direction === 'rtl' ? (
@@ -85,7 +85,7 @@ class InfoGroup extends Component {
               <Button
                 dense
                 onClick={this.handleBack}
-                disabled={this.state.activeStep === 0}
+                disabled={this.state.stepIndex === 0}
               >
                 {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
