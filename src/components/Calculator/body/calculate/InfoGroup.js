@@ -49,7 +49,13 @@ class InfoGroup extends Component {
   renderContentViews = (drugDosageInformation, classes) => {
     return drugDosageInformation.map((item, index) => (
       <div key={item.title}>
-        <Typography type='body2' gutterBottom className={classes.drugDosageInfo}>{item.title}</Typography>
+        <Typography
+          type='body2'
+          gutterBottom
+          className={classes.drugDosageInfo}
+        >
+          {item.title}
+        </Typography>
         {item.content.map(content => <p key={content}>{content}</p>)}
       </div>
     ))
@@ -61,8 +67,16 @@ class InfoGroup extends Component {
     return (
       <div className={classes.infoGroup}>
         <div className={classes.content}>
-          <Typography type='title' gutterBottom className={classes.drugName}>{this.props.drugName}</Typography>
-          <Typography type='subheading' gutterBottom className={classes.drugIndication}>{this.props.drugIndication}</Typography>
+          <Typography type='title' gutterBottom className={classes.drugName}>
+            {this.props.drugName}
+          </Typography>
+          <Typography
+            type='subheading'
+            gutterBottom
+            className={classes.drugIndication}
+          >
+            {this.props.drugIndication}
+          </Typography>
           <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={this.state.stepIndex}
