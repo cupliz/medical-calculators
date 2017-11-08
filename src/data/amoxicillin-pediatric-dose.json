@@ -12,7 +12,11 @@
         ">3 months and <40kg: 25mg/kg/day PO divided q12 hr or 20mg/kg/day divided q8hr",
         ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
       ],
-      "Severe Infections": [],
+      "Severe Infections": [
+        "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
+        ">3 months and <40kg: 45mg/kg/day PO divided q12 hr or 40mg/kg/day PO divided q8hr",
+        ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
+      ],
       "Tonsilitis/Streptococcal pharyngitis": []
     }
   },
