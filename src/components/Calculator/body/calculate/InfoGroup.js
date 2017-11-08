@@ -64,41 +64,43 @@ class InfoGroup extends Component {
             <div>2</div>
             <div>3</div>
           </SwipeableViews>
-          <MobileStepper
-            type='dots'
-            steps={3}
-            position='static'
-            activeStep={this.state.stepIndex}
-            className={classes.stepper}
-            nextButton={
-              <Button
-                dense
-                onClick={this.handleNext}
-                disabled={this.state.stepIndex === 2}
-              >
-                Next
-                {theme.direction === 'rtl' ? (
-                  <KeyboardArrowLeft />
-                ) : (
-                  <KeyboardArrowRight />
-                )}
-              </Button>
-            }
-            backButton={
-              <Button
-                dense
-                onClick={this.handleBack}
-                disabled={this.state.stepIndex === 0}
-              >
-                {theme.direction === 'rtl' ? (
-                  <KeyboardArrowRight />
-                ) : (
-                  <KeyboardArrowLeft />
-                )}
-                Back
-              </Button>
-            }
-          />
+          { this.props.drugDosageInformation.length > 0 &&
+            <MobileStepper
+              type='dots'
+              steps={3}
+              position='static'
+              activeStep={this.state.stepIndex}
+              className={classes.stepper}
+              nextButton={
+                <Button
+                  dense
+                  onClick={this.handleNext}
+                  disabled={this.state.stepIndex === 2}
+                >
+                  Next
+                  {theme.direction === 'rtl' ? (
+                    <KeyboardArrowLeft />
+                  ) : (
+                    <KeyboardArrowRight />
+                  )}
+                </Button>
+              }
+              backButton={
+                <Button
+                  dense
+                  onClick={this.handleBack}
+                  disabled={this.state.stepIndex === 0}
+                >
+                  {theme.direction === 'rtl' ? (
+                    <KeyboardArrowRight />
+                  ) : (
+                    <KeyboardArrowLeft />
+                  )}
+                  Back
+                </Button>
+              }
+            />
+          }
         </div>
       </div>
     )
