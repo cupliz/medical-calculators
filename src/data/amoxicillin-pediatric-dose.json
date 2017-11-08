@@ -43,6 +43,16 @@
           "values": ["kg", "lbs"]
         }
       ]
+    },
+    {
+      "group": "Liquid Formulation (optional)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter medication amount",
+          "values": ["mg", "gm", "mcg"]
+        }
+      ]
     }
   ],
   "results": {
