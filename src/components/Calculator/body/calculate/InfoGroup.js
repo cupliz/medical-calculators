@@ -104,4 +104,4 @@ InfoGroup.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(InfoGroup)
+export default withStyles(styles, { withTheme: true })(InfoGroup)
