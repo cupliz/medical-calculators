@@ -87,7 +87,14 @@ class QuestionField extends React.Component {
         />
       )
     } else if (this.props.type === 'input/select') {
-      return <InputSelectField />
+      return (
+        <InputSelectField
+          classes={this.props.classes}
+          value={this.state.value}
+          values={this.props.values}
+          placeholder={this.props.placeholder}
+        />
+      )
     }
   }
 
