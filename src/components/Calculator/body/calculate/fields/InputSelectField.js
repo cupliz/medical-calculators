@@ -41,7 +41,6 @@ class InputSelectField extends Component {
         <form noValidate autoComplete='off'>
           <TextField
             id='name'
-            label='Name'
             className={''}
             value={this.state.name}
             onChange={this.handleChange('name')}
@@ -50,7 +49,6 @@ class InputSelectField extends Component {
           <TextField
             id='select-currency'
             select
-            label='Select'
             className={''}
             value={this.state.currency}
             onChange={this.handleChange('currency')}
@@ -59,7 +57,6 @@ class InputSelectField extends Component {
                 className: ''
               }
             }}
-            helperText='Please select your currency'
             margin='normal'
           >
             {currencies.map(option => (
