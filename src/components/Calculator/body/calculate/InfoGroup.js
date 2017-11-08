@@ -45,7 +45,7 @@ class InfoGroup extends Component {
     this.setState({ stepIndex: index })
   }
 
-  renderContentViews = drugDosageInformation => {
+  renderContentViews = (drugDosageInformation, classes) => {
     return drugDosageInformation.map((item, index) => (
       <div key={item.title}>
         <p>{item.title}</p>
@@ -67,7 +67,7 @@ class InfoGroup extends Component {
             index={this.state.stepIndex}
             onChangeIndex={this.handleChangeIndex}
           >
-            {this.renderContentViews(drugDosageInformation)}
+            {this.renderContentViews(drugDosageInformation, classes)}
           </SwipeableViews>
           {drugDosageInformation.length > 1 && (
             <MobileStepper
