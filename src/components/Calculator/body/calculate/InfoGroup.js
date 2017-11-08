@@ -17,16 +17,19 @@ const styles = theme => ({
   content: {
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
       .spacing.unit * 2}px`
+  },
+  stepper: {
+
   }
 })
 
 class InfoGroup extends Component {
   state = {
-    tabIndex: 0
+    stepIndex: 0
   }
 
   handleChangeIndex = index => {
-    this.setState({ tabIndex: index })
+    this.setState({ stepIndex: index })
   }
 
   render () {
@@ -37,10 +40,10 @@ class InfoGroup extends Component {
         <div className={classes.content}>
           <MobileStepper
             type='dots'
-            steps={6}
+            steps={3}
             position='static'
-            activeStep={this.state.activeStep}
-            className={classes.root}
+            activeStep={this.state.stepIndex}
+            className={classes.stepper}
             nextButton={
               <Button
                 dense
@@ -72,7 +75,7 @@ class InfoGroup extends Component {
           />
           <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-            index={this.state.tabIndex}
+            index={this.state.stepIndex}
             onChangeIndex={this.handleChangeIndex}
           >
             <div>1</div>
