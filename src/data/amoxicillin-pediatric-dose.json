@@ -72,7 +72,29 @@
         {
           "type": "input/select",
           "placeholder": "Dose placeholder",
-          "values": ["ml", "L"]
+          "values": [
+            "gm BID",
+            "gm Daily",
+            "gm QID",
+            "gm TID",
+            "gm q1 hr",
+            "gm q2 hr",
+            "gm q4 hr",
+            "mcg BID",
+            "mcg Daily",
+            "mcg QID",
+            "mcg TID",
+            "mcg q1 hr",
+            "mcg q2 hr",
+            "mcg q4 hr",
+            "mg BID",
+            "mg Daily",
+            "mg QID",
+            "mg TID",
+            "mg q1 hr",
+            "mg q2 hr",
+            "mg q4 hr"
+          ]
         }
       ]
     }
