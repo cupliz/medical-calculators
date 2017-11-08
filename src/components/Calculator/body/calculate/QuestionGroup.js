@@ -36,7 +36,13 @@ class QuestionGroup extends Component {
             />
           )
         } else if (question.values) {
-          return <p>There's question values</p>
+          return (
+            <QuestionField
+              onChange={this.props.onChange}
+              key={question.placeholder}
+              {...question}
+            />
+          )
         } else {
           return <p>Please check the data</p>
         }
