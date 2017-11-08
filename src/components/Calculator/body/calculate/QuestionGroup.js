@@ -26,13 +26,21 @@ const styles = theme => ({
 class QuestionGroup extends Component {
   renderQuestionFields = data => {
     if (Array.isArray(data)) {
-      return data.map(question => (
-        <QuestionField
-          onChange={this.props.onChange}
-          key={question.label}
-          {...question}
-        />
-      ))
+      return data.map(question => {
+        if (question.points) {
+          return (
+            <QuestionField
+              onChange={this.props.onChange}
+              key={question.label}
+              {...question}
+            />
+          )
+        } else if (question.values) {
+          return <p>There's question values</p>
+        } else {
+          return <p>Please check the data</p>
+        }
+      })
     } else return <QuestionField onChange={this.props.onChange} {...data} />
   }
 
