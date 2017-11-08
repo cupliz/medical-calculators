@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
 import SwipeableViews from 'react-swipeable-views'
+import MobileStepper from 'material-ui/MobileStepper'
+import Button from 'material-ui/Button'
+import KeyboardArrowLeft from 'material-ui-icons/KeyboardArrowLeft'
+import KeyboardArrowRight from 'material-ui-icons/KeyboardArrowRight'
 
 const styles = theme => ({
   infoGroup: {
