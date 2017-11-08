@@ -60,7 +60,7 @@ class InfoGroup extends Component {
               <Button
                 dense
                 onClick={this.handleNext}
-                disabled={this.state.activeStep === 5}
+                disabled={this.state.activeStep === 3}
               >
                 Next
                 {theme.direction === 'rtl' ? (
