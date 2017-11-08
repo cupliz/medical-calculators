@@ -57,6 +57,7 @@ class CalculateContainer extends Component {
 
     return (
       <div className='calculate'>
+        {this.renderInfoGroup(info)}
         {this.renderQuestionGroups(questions)}
         <ResultCard points={points} data={results[points]} />
       </div>
