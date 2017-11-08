@@ -23,7 +23,7 @@ const currencies = [
 
 class InputSelectField extends Component {
   state = {
-    input: 'Cat in the Hat',
+    input: '',
     select: ''
   }
 
