@@ -31,7 +31,7 @@ const styles = theme => ({
     marginRight: `${theme.spacing.unit * 4}px`
   },
   inputWrapper: {
-
+    display: 'flex'
   }
 })
 
