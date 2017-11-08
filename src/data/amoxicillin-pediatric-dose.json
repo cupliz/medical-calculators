@@ -53,6 +53,16 @@
           "values": ["mg", "gm", "mcg"]
         }
       ]
+    },
+    {
+      "group": "Per Volume",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter medication volume",
+          "values": ["ml", "L"]
+        }
+      ]
     }
   ],
   "results": {
