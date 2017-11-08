@@ -6,6 +6,7 @@ import MobileStepper from 'material-ui/MobileStepper'
 import Button from 'material-ui/Button'
 import KeyboardArrowLeft from 'material-ui-icons/KeyboardArrowLeft'
 import KeyboardArrowRight from 'material-ui-icons/KeyboardArrowRight'
+import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
   infoGroup: {
@@ -60,8 +61,8 @@ class InfoGroup extends Component {
     return (
       <div className={classes.infoGroup}>
         <div className={classes.content}>
-          <p>{this.props.drugName}</p>
-          <p>{this.props.drugIndication}</p>
+          <Typography type='title' gutterBottom>{this.props.drugName}</Typography>
+          <Typography type='subheading' gutterBottom>{this.props.drugIndication}</Typography>
           <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={this.state.stepIndex}
