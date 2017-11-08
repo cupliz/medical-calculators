@@ -80,7 +80,7 @@ class InfoGroup extends Component {
             {this.props.drugName}
           </Typography>
           <Typography
-            type='subheading'
+            type='body2'
             gutterBottom
             className={classes.drugIndication}
           >
