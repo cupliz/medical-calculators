@@ -310,6 +310,146 @@
           "Ranson JH, Rifkind KM, Turner JW. Prognostic signs and nonoperative peritoneal lavage in acute pancreatitis. Surg Gyne Ob. 143:209, 1976."
         ]
       }
+    },
+    {
+      "id": "amoxicillin-pediatric-ear-nose-throat",
+      "title": "Amoxicillin Pediatric - Ear, Nose, & Throat Infections",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Ear, Nose & Throat Infections | Pediatric",
+        "drugDosageInformation": {
+          "Mild to Moderate infections": [
+            "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
+            ">3 months and <40kg: 25mg/kg/day PO divided q12 hr or 20mg/kg/day divided q8hr",
+            ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
+          ],
+          "Severe Infections": [
+            "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
+            ">3 months and <40kg: 45mg/kg/day PO divided q12 hr or 40mg/kg/day PO divided q8hr",
+            ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
+          ],
+          "Tonsilitis/Streptococcal pharyngitis": [
+            "50mg/kg PO qDay for 10 days, not to exceed 1g/day, or 25mg/kg PO BID for 10 days, not to exceed 500mg/dose",
+            ">12 years: 775 mg PO qDay for 10days, taken within 1 hour after meal (swallow tablet whole; do not crush or chew)"
+          ]
+        }
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["ml", "L"]
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "group": "Dose",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Dose placeholder",
+              "values": [
+                "gm BID",
+                "gm Daily",
+                "gm QID",
+                "gm TID",
+                "gm q1 hr",
+                "gm q2 hr",
+                "gm q4 hr",
+                "mcg BID",
+                "mcg Daily",
+                "mcg QID",
+                "mcg TID",
+                "mcg q1 hr",
+                "mcg q2 hr",
+                "mcg q4 hr",
+                "mg BID",
+                "mg Daily",
+                "mg QID",
+                "mg TID",
+                "mg q1 hr",
+                "mg q2 hr",
+                "mg q4 hr"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Dose",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Dose placeholder",
+              "values": [
+                "L BID",
+                "L Daily",
+                "L QID",
+                "L TID",
+                "L q1 hr",
+                "L q2 hr",
+                "L q4 hr",
+                "mL BID",
+                "mL Daily",
+                "mL QID",
+                "mL TID",
+                "mL q1 hr",
+                "mL q2 hr",
+                "mL q4 hr"
+              ]
+            }
+          ]
+        }
+      ],
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Estimates mortality of patients with pancreatitis based on initial and 48 hour lab values",
+          "The BISAP score is another alternative to estimate pancreatitis mortality with fewer variables that is as accurate"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Ranson JH, Rifkind KM, Turner JW. Prognostic signs and nonoperative peritoneal lavage in acute pancreatitis. Surg Gyne Ob. 143:209, 1976."
+        ]
+      }
     }
+
   ]
 }
