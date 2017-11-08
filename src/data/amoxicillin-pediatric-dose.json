@@ -6,7 +6,11 @@
   "info": {
     "drugName": "Amoxicillin",
     "drugIndication": "Ear, Nose & Throat Infections | Pediatric",
-    "drugDosageInformation": []
+    "drugDosageInformation": {
+      "Mild to Moderate infections": [],
+      "Severe Infections": [],
+      "Tonsilitis/Streptococcal pharyngitis": []
+    }
   },
   "questions": [
     {
