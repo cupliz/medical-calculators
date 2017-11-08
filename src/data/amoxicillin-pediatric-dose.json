@@ -17,7 +17,10 @@
         ">3 months and <40kg: 45mg/kg/day PO divided q12 hr or 40mg/kg/day PO divided q8hr",
         ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
       ],
-      "Tonsilitis/Streptococcal pharyngitis": []
+      "Tonsilitis/Streptococcal pharyngitis": [
+        "50mg/kg PO qDay for 10 days, not to exceed 1g/day, or 25mg/kg PO BID for 10 days, not to exceed 500mg/dose",
+        ">12 years: 775 mg PO qDay for 10days, taken within 1 hour after meal (swallow tablet whole; do not crush or chew)"
+      ]
     }
   },
   "questions": [
