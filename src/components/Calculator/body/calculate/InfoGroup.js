@@ -15,8 +15,7 @@ const styles = theme => ({
     backgroundColor: theme.brand.colors.greyBg
   },
   content: {
-    margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
-      .spacing.unit * 2}px`,
+    margin: `${theme.spacing.unit * 2}px`,
     flexGrow: 1
   },
   stepper: {
@@ -64,7 +63,7 @@ class InfoGroup extends Component {
             <div>2</div>
             <div>3</div>
           </SwipeableViews>
-          { this.props.drugDosageInformation.length > 0 &&
+          { this.props.drugDosageInformation.length > 1 &&
             <MobileStepper
               type='dots'
               steps={3}
