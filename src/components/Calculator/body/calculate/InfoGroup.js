@@ -28,6 +28,18 @@ class InfoGroup extends Component {
     stepIndex: 0
   }
 
+  handleNext = () => {
+    this.setState({
+      stepIndex: this.state.stepIndex + 1
+    })
+  }
+
+  handleBack = () => {
+    this.setState({
+      stepIndex: this.state.stepIndex - 1
+    })
+  }
+
   handleChangeIndex = index => {
     this.setState({ stepIndex: index })
   }
