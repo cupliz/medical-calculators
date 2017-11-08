@@ -21,4 +21,8 @@ const InfoGroup = props => (
   </div>
 )
 
-export default InfoGroup
+InfoGroup.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(InfoGroup)
