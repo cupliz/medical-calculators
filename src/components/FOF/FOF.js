@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Typography from 'material-ui/Typography'
 import { withStyles } from 'material-ui/styles'
+import img404 from './404.svg'
 
 const styles = theme => ({
   fofWrapper: {
@@ -22,8 +23,7 @@ const styles = theme => ({
   },
   img: {
     alignSelf: 'center',
-    maxWidth: '100%',
-    borderRadius: '25px'
+    maxWidth: '100%'
   }
 })
 
@@ -44,7 +44,7 @@ const FOF = props => (
     </Typography>
     <img
       className={props.classes.img}
-      src='http://lorempicsum.com/simpsons/627/300/4'
+      src={img404}
       alt='Simpsons chilling'
     />
   </div>
