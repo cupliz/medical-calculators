@@ -2,25 +2,6 @@ import React, { Component } from 'react'
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
 
-const currencies = [
-  {
-    value: 'USD',
-    label: '$'
-  },
-  {
-    value: 'EUR',
-    label: '€'
-  },
-  {
-    value: 'BTC',
-    label: '฿'
-  },
-  {
-    value: 'JPY',
-    label: '¥'
-  }
-]
-
 class InputSelectField extends Component {
   state = {
     input: '',
