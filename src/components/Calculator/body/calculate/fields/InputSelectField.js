@@ -25,6 +25,7 @@ class InputSelectField extends Component {
           id='input'
           className={this.props.classes.input}
           value={this.state.input}
+          placeholder={this.props.placeholder}
           onChange={this.handleChange('input')}
           margin='normal'
           fullWidth
