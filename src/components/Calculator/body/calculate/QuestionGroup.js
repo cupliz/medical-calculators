@@ -15,7 +15,8 @@ const styles = theme => ({
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
       .spacing.unit * 2}px`,
     display: 'flex',
-    width: '100%'
+    width: '100%',
+    maxWidth: 600
   },
   label: {
     fontSize: 14
