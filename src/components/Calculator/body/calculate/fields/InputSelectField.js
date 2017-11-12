@@ -56,9 +56,9 @@ class InputSelectField extends Component {
           }}
           margin='normal'
         >
-          {currencies.map(option => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
+          {this.props.values.map(option => (
+            <MenuItem key={option} value={option}>
+              {option}
             </MenuItem>
           ))}
         </TextField>
