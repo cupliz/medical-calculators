@@ -1,73 +1,30 @@
-import React, { Component } from 'react'
-import ResultCard from './ResultCard'
-import { connect } from 'react-redux'
-import { pickAnswer } from '../../../../store/modules/calculator'
+import React from 'react'
 import QuestionGroup from './QuestionGroup'
 import InfoGroup from './InfoGroup'
 
-class CalculateContainer extends Component {
-  state = {
-    points: 0
-  }
-
-  handleChange = (value, points, type) => {
-    if (type === 'radio') {
-      const answerPoints = points.split('/')
-      if (value === answerPoints[0]) {
-        this.setState(prevState => {
-          const maxValue = parseInt(answerPoints[1], 10)
-          this.props.pickAnswer(prevState.points - maxValue)
-          return { points: prevState.points - maxValue }
-        })
-      } else {
-        this.setState(prevState => {
-          this.props.pickAnswer(prevState.points + parseInt(value, 10))
-          return { points: prevState.points + parseInt(value, 10) }
-        })
-      }
-    } else if (type === 'checkbox') {
-      if (value === '0') {
-        this.setState(prevState => {
-          const maxValue = parseInt(points, 10)
-          this.props.pickAnswer(prevState.points - maxValue)
-          return { points: prevState.points - maxValue }
-        })
-      } else {
-        this.setState(prevState => {
-          this.props.pickAnswer(prevState.points + parseInt(value, 10))
-          return { points: prevState.points + parseInt(value, 10) }
-        })
-      }
-    }
-  }
-
-  renderInfoGroup = info => {
-    return <InfoGroup {...info} />
-  }
-
-  renderQuestionGroups = questions => {
-    return questions.map(questionGroup => {
-      return (
-        <QuestionGroup
-          key={questionGroup.group}
-          onChange={this.handleChange}
-          {...questionGroup}
-        />
-      )
-    })
-  }
-
-  render () {
-    const { questions, results, points, info } = this.props
-
-    return (
-      <div className='calculate'>
-        {info && this.renderInfoGroup(info)}
-        {this.renderQuestionGroups(questions)}
-        <ResultCard points={points} data={results[points]} />
-      </div>
-    )
-  }
+const renderInfoGroup = info => {
+  return <InfoGroup {...info} />
 }
 
-export default connect(null, { pickAnswer })(CalculateContainer)
+const renderQuestionGroups = questions => {
+  return questions.map(questionGroup => {
+    return (
+      <QuestionGroup
+        key={questionGroup.group}
+        {...questionGroup}
+      />
+    )
+  })
+}
+
+const CalculateContainer = props => {
+  const { info, questions } = props
+  return (
+    <div className='calculateContainer'>
+      {info && renderInfoGroup(info)}
+      {renderQuestionGroups(questions)}
+    </div>
+  )
+}
+
+export default CalculateContainer
