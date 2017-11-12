@@ -64,8 +64,8 @@ const renderCheckboxField = props => {
 
 const renderInputSelectField = props => (
   <InputSelectField
-    values={props.values}
     placeholder={props.placeholder}
+    values={props.values}
     group={props.group}
     classes={props.classes}
   />
