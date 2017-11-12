@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { FormLabel, FormControl } from 'material-ui/Form'
 import { withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
@@ -25,51 +25,46 @@ const styles = theme => ({
   }
 })
 
-class QuestionGroup extends Component {
-  renderQuestionFields = data => {
-    if (Array.isArray(data)) {
-      return data.map(question => {
-        if (question.points) {
-          return (
-            <QuestionField
-              onChange={this.props.onChange}
-              key={question.label}
-              {...question}
-            />
-          )
-        } else if (question.values) {
-          return (
-            <QuestionField
-              onChange={this.props.onChange}
-              key={question.placeholder}
-              {...question}
-            />
-          )
-        } else {
-          return <p>Please check the data</p>
-        }
-      })
-    } else return <QuestionField onChange={this.props.onChange} {...data} />
-  }
-
-  render () {
-    const { classes } = this.props
-
-    return (
-      <div className={classes.questionGroup}>
-        <FormControl component='fieldset' className={classes.formControl}>
-          <FormLabel
-            component='legend'
-            classes={{ root: classes.label, focused: classes.focusedLabel }}
-          >
-            {this.props.group}
-          </FormLabel>
-          {this.renderQuestionFields(this.props.data)}
-        </FormControl>
-      </div>
-    )
-  }
+const renderQuestionFields = data => {
+  if (Array.isArray(data)) {
+    return data.map(question => {
+      if (question.points) {
+        return (
+          <QuestionField
+            key={question.label}
+            {...question}
+          />
+        )
+      } else if (question.values) {
+        return (
+          <QuestionField
+            key={question.placeholder}
+            {...question}
+          />
+        )
+      } else {
+        return <p>Please check the data</p>
+      }
+    })
+  } else return <QuestionField {...data} />
 }
+
+const QuestionGroup = props => (
+  <div className={props.classes.questionGroup}>
+    <FormControl component='fieldset' className={props.classes.formControl}>
+      <FormLabel
+        component='legend'
+        classes={{
+          root: props.classes.label,
+          focused: props.classes.focusedLabel
+        }}
+      >
+        {props.group}
+      </FormLabel>
+      {renderQuestionFields(props.data)}
+    </FormControl>
+  </div>
+)
 
 QuestionGroup.propTypes = {
   classes: PropTypes.object.isRequired
