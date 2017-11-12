@@ -65,7 +65,7 @@ export const pickAnswer = (points = 0) => {
 
 export const pickRadioAnswer = (group = '', answer = '', points = 0) => {
   return {
-    type: PICK_ANSWER,
+    type: PICK_RADIO_ANSWER,
     payload: {
       group,
       answer,
