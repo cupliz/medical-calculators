@@ -37,81 +37,52 @@ const styles = theme => ({
   select: { width: 'auto' }
 })
 
-class QuestionField extends React.Component {
-  state = {
-    value: '0',
-    checked: false,
-    input: '',
-    select: this.props.values ? this.props.values[0] : ''
-  }
+const renderRadioField = props => {
+  const answerPoints = props.points.split('/')
+  const answerOptions = props.options.split('/')
+  return (
+    <RadioField
+      answerOptions={answerOptions}
+      answerPoints={answerPoints}
+      ariaLabel={props.group}
+      classes={props.classes}
+      value={this.state.value}
+      onChange={this.handleRadioChange}
+      checked={this.state.checked}
+    />
+  )
+}
 
-  handleRadioChange = (event, value) => {
-    let checked = false
-    if (value === this.props.points.split('/')[1]) {
-      checked = true
-    }
-    this.setState({ value, checked })
-    this.props.onChange(value, this.props.points, this.props.type)
-  }
-
-  handleCheckboxChange = maxValue => {
-    if (this.state.checked) {
-      this.setState({ checked: false, value: '0' })
-      this.props.onChange('0', this.props.points, this.props.type)
-    } else {
-      this.setState({ checked: true, value: maxValue })
-      this.props.onChange(maxValue, this.props.points, this.props.type)
-    }
-  }
-
-  handleInputChange = (name, value) => {
-    this.setState({ [name]: value })
-  }
-
-  renderQuestion = () => {
-    let answerPoints = ['0', this.props.points]
-
-    if (this.props.type === 'radio') {
-      answerPoints = this.props.points.split('/')
-      const answerOptions = this.props.options.split('/')
-      return (
-        <RadioField
-          answerOptions={answerOptions}
-          answerPoints={answerPoints}
-          ariaLabel={this.props.group}
-          classes={this.props.classes}
-          value={this.state.value}
-          onChange={this.handleRadioChange}
-          checked={this.state.checked}
-        />
-      )
-    } else if (this.props.type === 'checkbox') {
-      return (
-        <CheckboxField
-          answerPoints={answerPoints}
-          ariaLabel={this.props.label}
-          questionLabel={this.props.label}
-          classes={this.props.classes}
-          value={this.state.value}
-          onChange={this.handleCheckboxChange}
-          checked={this.state.checked}
-        />
-      )
-    } else if (this.props.type === 'input/select') {
-      return (
-        <InputSelectField
-          classes={this.props.classes}
-          value={this.state.value}
-          values={this.props.values}
-          placeholder={this.props.placeholder}
-          onChange={this.handleInputChange}
-        />
-      )
-    }
-  }
-
-  render () {
-    return this.renderQuestion()
+const QuestionField = props => {
+  if (props.type === 'radio') {
+    return renderRadioField(props)
+  } else if (props.type === 'checkbox') {
+    const answerPoints = ['0', props.points]
+    return (
+      <CheckboxField
+        answerPoints={answerPoints}
+        ariaLabel={props.label}
+        questionLabel={props.label}
+        classes={props.classes}
+        value={this.state.value}
+        onChange={this.handleCheckboxChange}
+        checked={this.state.checked}
+      />
+    )
+  } else if (props.type === 'input/select') {
+    return (
+      <InputSelectField
+        classes={props.classes}
+        value={this.state.value}
+        values={props.values}
+        placeholder={props.placeholder}
+        onChange={this.handleInputChange}
+      />
+    )
+  } else {
+    return (
+      <p>Please check type of question</p>
+    )
   }
 }
 
