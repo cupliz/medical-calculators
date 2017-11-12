@@ -21,13 +21,11 @@ class CheckboxField extends Component {
     return (
       <FormGroup row aria-label={group} className={classes.group}>
         <FormControlLabel
-          value={answerPoints[0]}
           className={classes.formControlLabel}
           control={
             <Checkbox
               value={this.state.value}
               onChange={this.handleChange}
-              name={answerPoints[1]}
               checked={this.state.checked}
             />
           }
