@@ -29,19 +29,9 @@ const renderQuestionFields = data => {
   if (Array.isArray(data)) {
     return data.map(question => {
       if (question.points) {
-        return (
-          <QuestionField
-            key={question.label}
-            {...question}
-          />
-        )
+        return <QuestionField key={question.label} {...question} />
       } else if (question.values) {
-        return (
-          <QuestionField
-            key={question.placeholder}
-            {...question}
-          />
-        )
+        return <QuestionField key={question.placeholder} {...question} />
       } else {
         return <p>Please check the data</p>
       }
