@@ -68,25 +68,25 @@ const renderCheckboxField = props => {
   )
 }
 
+const renderInputSelectField = props => (
+  <InputSelectField
+    classes={props.classes}
+    value={this.state.value}
+    values={props.values}
+    placeholder={props.placeholder}
+    onChange={this.handleInputChange}
+  />
+)
+
 const QuestionField = props => {
   if (props.type === 'radio') {
     return renderRadioField(props)
   } else if (props.type === 'checkbox') {
     return renderCheckboxField(props)
   } else if (props.type === 'input/select') {
-    return (
-      <InputSelectField
-        classes={props.classes}
-        value={this.state.value}
-        values={props.values}
-        placeholder={props.placeholder}
-        onChange={this.handleInputChange}
-      />
-    )
+    return renderInputSelectField(props)
   } else {
-    return (
-      <p>Please check type of question</p>
-    )
+    return <p>Please check type of question</p>
   }
 }
 
