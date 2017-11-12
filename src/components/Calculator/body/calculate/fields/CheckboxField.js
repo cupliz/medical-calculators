@@ -8,8 +8,12 @@ class CheckboxField extends Component {
     value: '0'
   }
 
-  handleChange = (event, value) => {
-    console.log(event.target.value, value)
+  handleChange = maxValue => {
+    if (this.state.checked) {
+      this.setState({ checked: false, value: '0' })
+    } else {
+      this.setState({ checked: true, value: maxValue })
+    }
   }
 
   render () {
