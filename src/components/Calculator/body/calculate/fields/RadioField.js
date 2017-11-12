@@ -20,7 +20,6 @@ class RadioField extends Component {
     return (
       <RadioGroup
         row
-        name={answerPoints[1]}
         aria-label={group}
         className={classes.group}
         onChange={this.handleChange}
