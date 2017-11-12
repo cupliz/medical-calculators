@@ -46,9 +46,6 @@ const renderRadioField = props => {
       answerPoints={answerPoints}
       ariaLabel={props.group}
       classes={props.classes}
-      value={this.state.value}
-      onChange={this.handleRadioChange}
-      checked={this.state.checked}
     />
   )
 }
@@ -61,9 +58,6 @@ const renderCheckboxField = props => {
       ariaLabel={props.label}
       questionLabel={props.label}
       classes={props.classes}
-      value={this.state.value}
-      onChange={this.handleCheckboxChange}
-      checked={this.state.checked}
     />
   )
 }
@@ -71,10 +65,8 @@ const renderCheckboxField = props => {
 const renderInputSelectField = props => (
   <InputSelectField
     classes={props.classes}
-    value={this.state.value}
     values={props.values}
     placeholder={props.placeholder}
-    onChange={this.handleInputChange}
   />
 )
 
