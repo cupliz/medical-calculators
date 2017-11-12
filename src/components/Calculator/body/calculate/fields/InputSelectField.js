@@ -5,7 +5,7 @@ import TextField from 'material-ui/TextField'
 class InputSelectField extends Component {
   state = {
     input: '',
-    select: ''
+    select: this.props.values[0]
   }
 
   handleChange = name => event => {
