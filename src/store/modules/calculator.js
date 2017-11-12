@@ -11,7 +11,7 @@ export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
 export const PICK_ANSWER = 'calculator/PICK_ANSWER'
 export const PICK_RADIO_ANSWER = 'calculator/PICK_RADIO_ANSWER'
 export const PICK_CHECKBOX_ANSWER = 'calculator/PICK_CHECKBOX_ANSWER'
-export const TYPE_INPUT_FIELD = 'calculator/TYPE_INPUT_FIELD'
+export const TYPE_INPUT = 'calculator/TYPE_INPUT'
 export const PICK_SELECT = 'calculator/PICK_SELECT'
 
 // ------------------------------------
