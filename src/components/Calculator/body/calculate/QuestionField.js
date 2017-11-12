@@ -33,7 +33,8 @@ const styles = theme => ({
   inputWrapper: {
     display: 'flex',
     marginBottom: `${theme.spacing.unit}px`
-  }
+  },
+  select: { marginLeft: 'auto' }
 })
 
 class QuestionField extends React.Component {
