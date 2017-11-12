@@ -13,7 +13,9 @@ const styles = theme => ({
   },
   formControl: {
     margin: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
-      .spacing.unit * 2}px`
+      .spacing.unit * 2}px`,
+    display: 'flex',
+    width: '100%'
   },
   label: {
     fontSize: 14
