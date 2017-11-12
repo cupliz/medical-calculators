@@ -44,7 +44,7 @@ const renderRadioField = props => {
     <RadioField
       answerOptions={answerOptions}
       answerPoints={answerPoints}
-      ariaLabel={props.group}
+      group={props.group}
       classes={props.classes}
     />
   )
@@ -55,7 +55,7 @@ const renderCheckboxField = props => {
   return (
     <CheckboxField
       answerPoints={answerPoints}
-      ariaLabel={props.label}
+      group={props.group}
       questionLabel={props.label}
       classes={props.classes}
     />
@@ -64,6 +64,7 @@ const renderCheckboxField = props => {
 
 const renderInputSelectField = props => (
   <InputSelectField
+    group={props.group}
     classes={props.classes}
     values={props.values}
     placeholder={props.placeholder}
