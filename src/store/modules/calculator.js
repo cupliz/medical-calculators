@@ -63,6 +63,18 @@ export const pickAnswer = (points = 0) => {
   }
 }
 
+export const pickRadioAnswer = (group = '', answer = '', points = 0) => {
+  return {
+    type: PICK_ANSWER,
+    payload: {
+      group,
+      answer,
+      points,
+      receivedAt: new Date().toISOString()
+    }
+  }
+}
+
 // ------------------------------------
 // Specialized Actions
 // ------------------------------------
