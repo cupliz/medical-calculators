@@ -26,18 +26,18 @@ const styles = theme => ({
   }
 })
 
-const renderQuestionFields = data => {
+const renderQuestionFields = (data, group) => {
   if (Array.isArray(data)) {
     return data.map(question => {
       if (question.points) {
-        return <QuestionField key={question.label} {...question} />
+        return <QuestionField key={question.label} group={group} {...question} />
       } else if (question.values) {
-        return <QuestionField key={question.placeholder} {...question} />
+        return <QuestionField key={question.placeholder} group={group} {...question} />
       } else {
         return <p>Please check the data</p>
       }
     })
-  } else return <QuestionField {...data} />
+  } else return <QuestionField group={group} {...data} />
 }
 
 const QuestionGroup = props => (
@@ -52,7 +52,7 @@ const QuestionGroup = props => (
       >
         {props.group}
       </FormLabel>
-      {renderQuestionFields(props.data)}
+      {renderQuestionFields(props.data, props.group)}
     </FormControl>
   </div>
 )
