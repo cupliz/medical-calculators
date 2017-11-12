@@ -16,7 +16,11 @@ class InputSelectField extends Component {
 
   render () {
     return (
-      <form noValidate autoComplete='off' className={this.props.classes.inputWrapper}>
+      <form
+        noValidate
+        autoComplete='off'
+        className={this.props.classes.inputWrapper}
+      >
         <TextField
           id='input'
           className={this.props.classes.input}
@@ -28,12 +32,11 @@ class InputSelectField extends Component {
         <TextField
           id='select'
           select
-          className={this.props.classes.select}
           value={this.state.select}
           onChange={this.handleChange('select')}
           SelectProps={{
             classes: {
-              root: this.props.classes.selectRoot
+              root: this.props.classes.select
             },
             MenuProps: {
               className: this.props.classes.menu
