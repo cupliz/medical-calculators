@@ -12,10 +12,7 @@ class InputSelectField extends Component {
     this.setState({
       [name]: event.target.value
     })
-  }
-
-  componentDidUpdate () {
-    this.props.onChange(this.state.input, this.state.select)
+    this.props.onChange(name, event.target.value)
   }
 
   render () {

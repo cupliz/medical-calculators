@@ -64,8 +64,8 @@ class QuestionField extends React.Component {
     }
   }
 
-  handleInputChange = (input, select) => {
-    this.setState({ input, select })
+  handleInputChange = (name, value) => {
+    this.setState({ [name]: value })
   }
 
   renderQuestion = () => {
