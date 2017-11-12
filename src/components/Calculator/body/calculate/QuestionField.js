@@ -42,7 +42,7 @@ class QuestionField extends React.Component {
     value: '0',
     checked: false,
     input: '',
-    select: ''
+    select: this.props.values ? this.props.values[0] : ''
   }
 
   handleRadioChange = (event, value) => {
