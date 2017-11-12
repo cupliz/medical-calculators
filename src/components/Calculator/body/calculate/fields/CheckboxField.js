@@ -8,11 +8,11 @@ class CheckboxField extends Component {
     value: '0'
   }
 
-  handleChange = maxValue => {
+  handleChange = () => {
     if (this.state.checked) {
       this.setState({ checked: false, value: '0' })
     } else {
-      this.setState({ checked: true, value: maxValue })
+      this.setState({ checked: true, value: this.props.answerPoints[1] })
     }
   }
 
