@@ -8,8 +8,8 @@ class CheckboxField extends Component {
     value: '0'
   }
 
-  handleChange = points => {
-    console.log(points)
+  handleChange = (event, value) => {
+    console.log(event.target.value, value)
   }
 
   render () {
@@ -22,7 +22,7 @@ class CheckboxField extends Component {
           control={
             <Checkbox
               value={this.state.value}
-              onChange={() => this.handleChange(answerPoints[1])}
+              onChange={this.handleChange}
               name={answerPoints[1]}
               checked={this.state.checked}
             />
