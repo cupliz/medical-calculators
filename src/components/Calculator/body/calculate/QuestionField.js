@@ -40,7 +40,9 @@ const styles = theme => ({
 class QuestionField extends React.Component {
   state = {
     value: '0',
-    checked: false
+    checked: false,
+    input: '',
+    select: ''
   }
 
   handleRadioChange = (event, value) => {
