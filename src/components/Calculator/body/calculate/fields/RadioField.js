@@ -7,6 +7,14 @@ class RadioField extends Component {
     checked: false
   }
 
+  handleChange = (e, value) => {
+    let checked = false
+    if (value === this.props.answerPoints[1]) {
+      checked = true
+    }
+    this.setState({ value, checked })
+  }
+
   render () {
     const { answerOptions, answerPoints, group, classes } = this.props
     return (
@@ -15,6 +23,7 @@ class RadioField extends Component {
         name={answerPoints[1]}
         aria-label={group}
         className={classes.group}
+        onChange={this.handleChange}
       >
         <FormControlLabel
           value={answerPoints[0]}
