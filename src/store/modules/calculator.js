@@ -87,6 +87,18 @@ export const pickCheckboxAnswer = (group = '', answer = '', points = 0) => {
   }
 }
 
+export const typeInput = (group = '', field = '', value = 0) => {
+  return {
+    type: TYPE_INPUT,
+    payload: {
+      group,
+      field,
+      value,
+      receivedAt: new Date().toISOString()
+    }
+  }
+}
+
 // ------------------------------------
 // Specialized Actions
 // ------------------------------------
