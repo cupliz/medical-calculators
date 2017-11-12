@@ -34,6 +34,7 @@ const styles = theme => ({
     display: 'flex',
     marginBottom: `${theme.spacing.unit}px`
   },
+  selectRoot: { width: 'auto' },
   select: { marginLeft: 'auto' }
 })
 

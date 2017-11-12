@@ -23,6 +23,7 @@ class InputSelectField extends Component {
           value={this.state.input}
           onChange={this.handleChange('input')}
           margin='normal'
+          fullWidth
         />
         <TextField
           id='select'
@@ -31,6 +32,9 @@ class InputSelectField extends Component {
           value={this.state.select}
           onChange={this.handleChange('select')}
           SelectProps={{
+            classes: {
+              root: this.props.classes.selectRoot
+            },
             MenuProps: {
               className: this.props.classes.menu
             }
