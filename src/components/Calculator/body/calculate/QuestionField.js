@@ -62,6 +62,10 @@ class QuestionField extends React.Component {
     }
   }
 
+  handleInputChange = (input, select) => {
+    console.log(input, select)
+  }
+
   renderQuestion = () => {
     let answerPoints = ['0', this.props.points]
 
@@ -98,6 +102,7 @@ class QuestionField extends React.Component {
           value={this.state.value}
           values={this.props.values}
           placeholder={this.props.placeholder}
+          onChange={this.handleInputChange}
         />
       )
     }

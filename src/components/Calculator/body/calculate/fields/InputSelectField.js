@@ -14,6 +14,10 @@ class InputSelectField extends Component {
     })
   }
 
+  componentDidUpdate () {
+    this.props.onChange(this.state.input, this.state.select)
+  }
+
   render () {
     return (
       <form
