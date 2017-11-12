@@ -13,14 +13,11 @@ const renderQuestionGroups = questions => {
   })
 }
 
-const CalculateContainer = props => {
-  const { info, questions } = props
-  return (
-    <div className='calculateContainer'>
-      {info && <InfoGroup {...info} />}
-      {renderQuestionGroups(questions)}
-    </div>
-  )
-}
+const CalculateContainer = props => (
+  <div className='calculateContainer'>
+    {props.info && <InfoGroup {...props.info} />}
+    {renderQuestionGroups(props.questions)}
+  </div>
+)
 
 export default CalculateContainer
