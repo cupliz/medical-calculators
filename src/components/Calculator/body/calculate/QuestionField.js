@@ -53,22 +53,26 @@ const renderRadioField = props => {
   )
 }
 
+const renderCheckboxField = props => {
+  const answerPoints = ['0', props.points]
+  return (
+    <CheckboxField
+      answerPoints={answerPoints}
+      ariaLabel={props.label}
+      questionLabel={props.label}
+      classes={props.classes}
+      value={this.state.value}
+      onChange={this.handleCheckboxChange}
+      checked={this.state.checked}
+    />
+  )
+}
+
 const QuestionField = props => {
   if (props.type === 'radio') {
     return renderRadioField(props)
   } else if (props.type === 'checkbox') {
-    const answerPoints = ['0', props.points]
-    return (
-      <CheckboxField
-        answerPoints={answerPoints}
-        ariaLabel={props.label}
-        questionLabel={props.label}
-        classes={props.classes}
-        value={this.state.value}
-        onChange={this.handleCheckboxChange}
-        checked={this.state.checked}
-      />
-    )
+    return renderCheckboxField(props)
   } else if (props.type === 'input/select') {
     return (
       <InputSelectField
