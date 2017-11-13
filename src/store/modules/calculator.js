@@ -153,6 +153,21 @@ export const fetchCalcData = calculatorId => {
   }
 }
 
+const updateObjectInArray = (array, action) => {
+  return array.map((item, index) => {
+    if (item.group !== action.payload.group) {
+      // This isn't the item we care about - keep it as-is
+      return item
+    }
+
+    // Otherwise, this is the one we want - return an updated value
+    return {
+      ...item,
+      calculate: {...action.payload}
+    }
+  })
+}
+
 // ------------------------------------
 // Reducer
 // ------------------------------------
@@ -181,7 +196,7 @@ export default (state = initialState, action) => {
         data: {
           ...state.data,
           points: action.payload.points,
-          action: {...action.payload}
+          questions: updateObjectInArray(state.data.questions, action)
         }
       }
 
