@@ -193,12 +193,28 @@ const updateObjectInArray2 = (array, action) => {
     // Otherwise, this is the one we want - return an updated value
     return {
       ...item,
-      calculate: {
+      calculate: addToCalculate(item.calculate, action)
+    }
+  })
+}
+
+const addToCalculate = (calculateArray, action) => {
+  if (!calculateArray) {
+    return [
+      {
         answer: action.payload.answer,
         points: action.payload.pointsChange
       }
-    }
-  })
+    ]
+  } else {
+    console.log('array exists')
+    return [
+      {
+        answer: action.payload.answer,
+        points: action.payload.pointsChange
+      }
+    ]
+  }
 }
 
 // ------------------------------------
