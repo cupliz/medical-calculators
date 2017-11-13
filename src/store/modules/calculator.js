@@ -209,7 +209,17 @@ const updateCalculate = (calculateArray, action) => {
     ]
     // array exists
     // if array has the answer - we update that answer and return new array with updated answer
-  } else if () {
+  } else if (calculateArray.filter(item => item.answer === action.payload.answer).length > 0) {
+    return calculateArray.map(item => {
+      if (item.answer === action.payload.answer) {
+        return {
+          answer: action.payload.answer,
+          points: action.payload.pointsChange
+        }
+      } else {
+        return item
+      }
+    })
   } else {
     // if array doesn't have the answer - we copy arrays contentes, add new question it and return new array
     return [
