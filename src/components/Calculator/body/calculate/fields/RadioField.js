@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Radio, { RadioGroup } from 'material-ui/Radio'
 import { FormControlLabel } from 'material-ui/Form'
+import { connect } from 'react-redux'
+import { pickRadioAnswer } from '../../../../../store/modules/calculator'
 
 class RadioField extends Component {
   state = {
@@ -13,6 +15,7 @@ class RadioField extends Component {
       checked = true
     }
     this.setState({ value, checked })
+    this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[value], value)
   }
 
   render () {
@@ -67,4 +70,4 @@ class RadioField extends Component {
   }
 }
 
-export default RadioField
+export default connect(null, { pickRadioAnswer })(RadioField)

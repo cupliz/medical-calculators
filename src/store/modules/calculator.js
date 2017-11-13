@@ -181,7 +181,7 @@ export default (state = initialState, action) => {
         data: {
           ...state.data,
           points: action.payload.points,
-          questions: [1]
+          action: {...action.payload}
         }
       }
 
