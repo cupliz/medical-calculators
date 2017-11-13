@@ -165,9 +165,9 @@ export const fetchCalcData = calculatorId => {
   }
 }
 
-const updateObjectInArray = (array, action) => {
+const updateObjectInArray = (array, action, fieldName) => {
   return array.map(item => {
-    if (item.group !== action.payload.group) {
+    if (item[fieldName] !== action.payload[fieldName]) {
       // This isn't the item we care about - keep it as-is
       return item
     }
@@ -181,40 +181,6 @@ const updateObjectInArray = (array, action) => {
       }
     }
   })
-}
-
-const updateObjectInArray2 = (array, action) => {
-  return array.map(item => {
-    if (item.group !== action.payload.group) {
-      // This isn't the item we care about - keep it as-is
-      return item
-    }
-
-    // Otherwise, this is the one we want - return an updated value
-    return {
-      ...item,
-      calculate: addToCalculate(item.calculate, action)
-    }
-  })
-}
-
-const addToCalculate = (calculateArray, action) => {
-  if (!calculateArray) {
-    return [
-      {
-        answer: action.payload.answer,
-        points: action.payload.pointsChange
-      }
-    ]
-  } else {
-    console.log('array exists')
-    return [
-      {
-        answer: action.payload.answer,
-        points: action.payload.pointsChange
-      }
-    ]
-  }
 }
 
 // ------------------------------------
@@ -245,7 +211,7 @@ export default (state = initialState, action) => {
         data: {
           ...state.data,
           points: action.payload.pointsTotal,
-          questions: updateObjectInArray(state.data.questions, action)
+          questions: updateObjectInArray(state.data.questions, action, 'group')
         }
       }
 
@@ -255,7 +221,7 @@ export default (state = initialState, action) => {
         data: {
           ...state.data,
           points: action.payload.pointsTotal,
-          questions: updateObjectInArray2(state.data.questions, action)
+          questions: updateObjectInArray(state.data.questions, action, 'group')
         }
       }
 
