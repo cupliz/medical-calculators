@@ -207,8 +207,11 @@ const updateCalculate = (calculateArray, action) => {
         points: action.payload.pointsChange
       }
     ]
-  } else {
     // array exists
+    // if array has the answer - we update that answer and return new array with updated answer
+  } else if () {
+  } else {
+    // if array doesn't have the answer - we copy arrays contentes, add new question it and return new array
     return [
       ...calculateArray,
       {
