@@ -22,7 +22,6 @@ class InputSelectField extends Component {
         className={this.props.classes.inputWrapper}
       >
         <TextField
-          id='input'
           className={this.props.classes.input}
           value={this.state.input}
           placeholder={this.props.placeholder}
@@ -31,7 +30,6 @@ class InputSelectField extends Component {
           fullWidth
         />
         <TextField
-          id='select'
           select
           value={this.state.select}
           onChange={this.handleChange('select')}
