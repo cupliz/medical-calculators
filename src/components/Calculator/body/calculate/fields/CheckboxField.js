@@ -11,13 +11,13 @@ class CheckboxField extends Component {
   }
 
   handleChange = () => {
-    // const {
-    //   points,
-    //   answerPoints,
-    //   answerOptions,
-    //   group,
-    //   pickRadioAnswer
-    // } = this.props
+    const {
+      totalPoints,
+      answerPoints,
+      group,
+      questionLabel,
+      pickCheckboxAnswer
+    } = this.props
     //
     // let checked = false
     //
