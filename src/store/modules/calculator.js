@@ -209,14 +209,19 @@ const updateCalculate = (calculateArray, action) => {
     ]
     // array exists
     // if array has the answer - we update that answer and return new array with updated answer
-  } else if (calculateArray.filter(item => item.answer === action.payload.answer).length > 0) {
+  } else if (
+    calculateArray.filter(item => item.answer === action.payload.answer)
+      .length > 0
+  ) {
     return calculateArray.map(item => {
       if (item.answer === action.payload.answer) {
+        // this is the item we care about, so update it
         return {
           answer: action.payload.answer,
           points: action.payload.pointsChange
         }
       } else {
+        // this is not the item we care about so we return it
         return item
       }
     })
