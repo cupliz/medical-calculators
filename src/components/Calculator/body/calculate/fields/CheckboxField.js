@@ -22,11 +22,11 @@ class CheckboxField extends Component {
     if (this.state.checked) {
       const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
       this.setState({ checked: false, value: answerPoints[0] })
-      pickCheckboxAnswer(group, questionLabel, totalPoints, decreasedValue)
+      pickCheckboxAnswer(group, questionLabel, decreasedValue, answerPoints[0])
     } else {
       const increasedValue = totalPoints + parseInt(answerPoints[1], 10)
       this.setState({ checked: true, value: answerPoints[1] })
-      pickCheckboxAnswer(group, questionLabel, totalPoints, increasedValue)
+      pickCheckboxAnswer(group, questionLabel, increasedValue, answerPoints[1])
     }
   }
 
