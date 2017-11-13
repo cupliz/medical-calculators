@@ -154,7 +154,7 @@ export const fetchCalcData = calculatorId => {
 }
 
 const updateObjectInArray = (array, action) => {
-  return array.map((item, index) => {
+  return array.map(item => {
     if (item.group !== action.payload.group) {
       // This isn't the item we care about - keep it as-is
       return item
