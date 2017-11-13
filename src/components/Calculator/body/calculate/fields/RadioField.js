@@ -85,4 +85,8 @@ class RadioField extends Component {
   }
 }
 
-export default connect(null, { pickRadioAnswer })(RadioField)
+const mapStateToProps = state => ({
+  points: state.calculator.data.points
+})
+
+export default connect(mapStateToProps, { pickRadioAnswer })(RadioField)
