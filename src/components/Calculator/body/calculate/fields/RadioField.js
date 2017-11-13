@@ -10,7 +10,13 @@ class RadioField extends Component {
   }
 
   handleChange = (e, value) => {
-    const { points, answerPoints, answerOptions, group, pickRadioAnswer } = this.props
+    const {
+      points,
+      answerPoints,
+      answerOptions,
+      group,
+      pickRadioAnswer
+    } = this.props
     let checked = false
     if (value === answerPoints[0]) {
       const decreasedValue = points - parseInt(answerPoints[1], 10)
