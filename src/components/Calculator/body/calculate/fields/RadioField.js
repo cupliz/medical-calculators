@@ -16,6 +16,19 @@ class RadioField extends Component {
     }
     this.setState({ value, checked })
     this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[value], value)
+    // const answerPoints = points.split('/')
+    // if (value === answerPoints[0]) {
+    //   this.setState(prevState => {
+    //     const maxValue = parseInt(answerPoints[1], 10)
+    //     this.props.pickAnswer(prevState.points - maxValue)
+    //     return { points: prevState.points - maxValue }
+    //   })
+    // } else {
+    //   this.setState(prevState => {
+    //     this.props.pickAnswer(prevState.points + parseInt(value, 10))
+    //     return { points: prevState.points + parseInt(value, 10) }
+    //   })
+    // }
   }
 
   render () {
