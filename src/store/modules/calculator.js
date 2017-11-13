@@ -163,7 +163,7 @@ const updateObjectInArray = (array, action) => {
     // Otherwise, this is the one we want - return an updated value
     return {
       ...item,
-      calculate: {...action.payload}
+      calculate: { answer: action.payload.answer, points: action.payload.points }
     }
   })
 }

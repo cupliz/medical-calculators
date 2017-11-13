@@ -11,7 +11,9 @@ class RadioField extends Component {
 
   handleChange = (e, value) => {
     let checked = false
-    if (value === this.props.answerPoints[1]) {
+    if (value === this.props.answerPoints[0]) {
+      // const maxValue = parseInt(this.props.answerPoints[1], 10)
+    } else if (value === this.props.answerPoints[1]) {
       checked = true
     }
     this.setState({ value, checked })
