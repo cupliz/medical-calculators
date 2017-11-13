@@ -18,24 +18,15 @@ class CheckboxField extends Component {
       questionLabel,
       pickCheckboxAnswer
     } = this.props
-    //
-    // let checked = false
-    //
-    // if (value === answerPoints[0]) {
-    //   const decreasedValue = points - parseInt(answerPoints[1], 10)
-    //   pickRadioAnswer(group, answerOptions[0], decreasedValue, value)
-    // } else if (value === answerPoints[1]) {
-    //   checked = true
-    //   const increasedValue = points + parseInt(answerPoints[1], 10)
-    //   pickRadioAnswer(group, answerOptions[1], increasedValue, value)
-    // }
-
-    // this.setState({ value, checked })
 
     if (this.state.checked) {
-      this.setState({ checked: false, value: this.props.answerPoints[0] })
+      const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
+      this.setState({ checked: false, value: answerPoints[0] })
+      pickCheckboxAnswer(group, questionLabel, totalPoints, decreasedValue)
     } else {
-      this.setState({ checked: true, value: this.props.answerPoints[1] })
+      const increasedValue = totalPoints + parseInt(answerPoints[1], 10)
+      this.setState({ checked: true, value: answerPoints[1] })
+      pickCheckboxAnswer(group, questionLabel, totalPoints, increasedValue)
     }
   }
 
