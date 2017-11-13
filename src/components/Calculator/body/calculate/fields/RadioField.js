@@ -13,11 +13,14 @@ class RadioField extends Component {
     let checked = false
     if (value === this.props.answerPoints[0]) {
       // const maxValue = parseInt(this.props.answerPoints[1], 10)
+      const decreasedValue = this.props.points - parseInt(this.props.answerPoints[1], 10)
+      this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[value], decreasedValue, value)
     } else if (value === this.props.answerPoints[1]) {
       checked = true
+      const increasedValue = this.props.points + parseInt(this.props.answerPoints[1], 10)
+      this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[value], increasedValue, value)
     }
     this.setState({ value, checked })
-    this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[value], value)
     // const answerPoints = points.split('/')
     // if (value === answerPoints[0]) {
     //   this.setState(prevState => {

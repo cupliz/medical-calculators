@@ -52,13 +52,14 @@ export const fetchCalcDataError = (errorMessage = '') => {
   }
 }
 
-export const pickRadioAnswer = (group = '', answer = '', points = 0) => {
+export const pickRadioAnswer = (group = '', answer = '', pointsTotal = 0, pointsChange = 0) => {
   return {
     type: PICK_RADIO_ANSWER,
     payload: {
       group,
       answer,
-      points,
+      pointsTotal,
+      pointsChange,
       receivedAt: new Date().toISOString()
     }
   }
@@ -163,7 +164,7 @@ const updateObjectInArray = (array, action) => {
     // Otherwise, this is the one we want - return an updated value
     return {
       ...item,
-      calculate: { answer: action.payload.answer, points: action.payload.points }
+      calculate: { answer: action.payload.answer, points: action.payload.pointsChange }
     }
   })
 }
@@ -195,7 +196,7 @@ export default (state = initialState, action) => {
         ...state,
         data: {
           ...state.data,
-          points: action.payload.points,
+          points: action.payload.pointsTotal,
           questions: updateObjectInArray(state.data.questions, action)
         }
       }
