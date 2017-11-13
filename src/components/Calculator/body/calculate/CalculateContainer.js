@@ -4,11 +4,10 @@ import InfoGroup from './InfoGroup'
 import ResultCard from './ResultCard'
 import { connect } from 'react-redux'
 
-const renderQuestionGroups = questions => {
-  return questions.map(questionGroup => {
-    return <QuestionGroup key={questionGroup.group} {...questionGroup} />
-  })
-}
+const renderQuestionGroups = questions =>
+  questions.map(questionGroup => (
+    <QuestionGroup key={questionGroup.group} {...questionGroup} />
+  ))
 
 const CalculateContainer = props => {
   const { info, questions, points, data } = props
