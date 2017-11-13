@@ -12,28 +12,14 @@ class RadioField extends Component {
   handleChange = (e, value) => {
     let checked = false
     if (value === this.props.answerPoints[0]) {
-      // const maxValue = parseInt(this.props.answerPoints[1], 10)
       const decreasedValue = this.props.points - parseInt(this.props.answerPoints[1], 10)
-      this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[value], decreasedValue, value)
+      this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[0], decreasedValue, value)
     } else if (value === this.props.answerPoints[1]) {
       checked = true
       const increasedValue = this.props.points + parseInt(this.props.answerPoints[1], 10)
-      this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[value], increasedValue, value)
+      this.props.pickRadioAnswer(this.props.group, this.props.answerOptions[1], increasedValue, value)
     }
     this.setState({ value, checked })
-    // const answerPoints = points.split('/')
-    // if (value === answerPoints[0]) {
-    //   this.setState(prevState => {
-    //     const maxValue = parseInt(answerPoints[1], 10)
-    //     this.props.pickAnswer(prevState.points - maxValue)
-    //     return { points: prevState.points - maxValue }
-    //   })
-    // } else {
-    //   this.setState(prevState => {
-    //     this.props.pickAnswer(prevState.points + parseInt(value, 10))
-    //     return { points: prevState.points + parseInt(value, 10) }
-    //   })
-    // }
   }
 
   render () {
