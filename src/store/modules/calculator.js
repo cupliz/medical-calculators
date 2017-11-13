@@ -183,6 +183,24 @@ const updateObjectInArray = (array, action, fieldName) => {
   })
 }
 
+const updateObjectInArrayExtended = (array, action, fieldName) => {
+  return array.map(item => {
+    if (item[fieldName] !== action.payload[fieldName]) {
+      // This isn't the item we care about - keep it as-is
+      return item
+    }
+
+    // Otherwise, this is the one we want - return an updated value
+    return {
+      ...item,
+      calculate: {
+        answer: action.payload.answer,
+        points: action.payload.pointsChange
+      }
+    }
+  })
+}
+
 // ------------------------------------
 // Reducer
 // ------------------------------------
@@ -221,7 +239,7 @@ export default (state = initialState, action) => {
         data: {
           ...state.data,
           points: action.payload.pointsTotal,
-          questions: updateObjectInArray(state.data.questions, action, 'group')
+          questions: updateObjectInArrayExtended(state.data.questions, action, 'group')
         }
       }
 
