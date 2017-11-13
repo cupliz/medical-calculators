@@ -65,13 +65,14 @@ export const pickRadioAnswer = (group = '', answer = '', pointsTotal = 0, points
   }
 }
 
-export const pickCheckboxAnswer = (group = '', answer = '', points = 0) => {
+export const pickCheckboxAnswer = (group = '', answer = '', pointsTotal = 0, pointsChange = 0) => {
   return {
     type: PICK_CHECKBOX_ANSWER,
     payload: {
       group,
       answer,
-      points,
+      pointsTotal,
+      pointsChange,
       receivedAt: new Date().toISOString()
     }
   }
