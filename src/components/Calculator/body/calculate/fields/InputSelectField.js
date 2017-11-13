@@ -27,6 +27,7 @@ class InputSelectField extends Component {
           placeholder={this.props.placeholder}
           onChange={this.handleChange('input')}
           margin='normal'
+          type='number'
           fullWidth
         />
         <TextField
