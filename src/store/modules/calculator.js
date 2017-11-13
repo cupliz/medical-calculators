@@ -180,7 +180,8 @@ export default (state = initialState, action) => {
         ...state,
         data: {
           ...state.data,
-          points: action.payload.points
+          points: action.payload.points,
+          questions: [1]
         }
       }
 
