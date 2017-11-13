@@ -34,6 +34,10 @@ const styles = theme => ({
     display: 'flex',
     marginBottom: `${theme.spacing.unit}px`
   },
+  input: {
+    marginRight: `${theme.spacing.unit * 4}px`,
+    maxWidth: 300
+  },
   select: { width: 'auto' }
 })
 
