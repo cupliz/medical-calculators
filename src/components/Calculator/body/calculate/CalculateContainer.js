@@ -23,9 +23,12 @@ const CalculateContainer = props => (
   </div>
 )
 
-const mapStateToProps = state => ({
-  points: state.calculator.data.points,
-  data: state.calculator.data.results[state.calculator.data.points]
-})
+const mapStateToProps = state => {
+  const { points, results } = state.calculator.data
+  return {
+    points,
+    data: results[points]
+  }
+}
 
 export default connect(mapStateToProps)(CalculateContainer)
