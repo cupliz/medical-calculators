@@ -11,7 +11,7 @@ class RadioField extends Component {
 
   handleChange = (e, value) => {
     const {
-      points,
+      totalPoints,
       answerPoints,
       answerOptions,
       group,
@@ -21,11 +21,11 @@ class RadioField extends Component {
     let checked = false
 
     if (value === answerPoints[0]) {
-      const decreasedValue = points - parseInt(answerPoints[1], 10)
+      const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
       pickRadioAnswer(group, answerOptions[0], decreasedValue, value)
     } else if (value === answerPoints[1]) {
       checked = true
-      const increasedValue = points + parseInt(answerPoints[1], 10)
+      const increasedValue = totalPoints + parseInt(answerPoints[1], 10)
       pickRadioAnswer(group, answerOptions[1], increasedValue, value)
     }
 
@@ -85,7 +85,7 @@ class RadioField extends Component {
 }
 
 const mapStateToProps = state => ({
-  points: state.calculator.data.points
+  totalPoints: state.calculator.data.points
 })
 
 export default connect(mapStateToProps, { pickRadioAnswer })(RadioField)
