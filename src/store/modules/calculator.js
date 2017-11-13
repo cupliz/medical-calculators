@@ -193,14 +193,23 @@ const updateObjectInArrayExtended = (array, action, fieldName) => {
     // Otherwise, this is the one we want - return an updated value
     return {
       ...item,
-      calculate: [
-        {
-          answer: action.payload.answer,
-          points: action.payload.pointsChange
-        }
-      ]
+      calculate: updateCalculate(item.calculate, action)
     }
   })
+}
+
+const updateCalculate = (calculateArray, action) => {
+  console.log(calculateArray, action)
+  if (!calculateArray) {
+    return [
+      {
+        answer: action.payload.answer,
+        points: action.payload.pointsChange
+      }
+    ]
+  } else {
+    return []
+  }
 }
 
 // ------------------------------------
