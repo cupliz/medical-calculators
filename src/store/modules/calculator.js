@@ -215,6 +215,16 @@ export default (state = initialState, action) => {
         }
       }
 
+    case PICK_CHECKBOX_ANSWER:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          points: action.payload.pointsTotal,
+          questions: updateObjectInArray(state.data.questions, action)
+        }
+      }
+
     default:
       return state
   }
