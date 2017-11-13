@@ -6,22 +6,20 @@ import { connect } from 'react-redux'
 
 const renderQuestionGroups = questions => {
   return questions.map(questionGroup => {
-    return (
-      <QuestionGroup
-        key={questionGroup.group}
-        {...questionGroup}
-      />
-    )
+    return <QuestionGroup key={questionGroup.group} {...questionGroup} />
   })
 }
 
-const CalculateContainer = props => (
-  <div className='calculateContainer'>
-    {props.info && <InfoGroup {...props.info} />}
-    {renderQuestionGroups(props.questions)}
-    <ResultCard points={props.points} data={props.data} />
-  </div>
-)
+const CalculateContainer = props => {
+  const { info, questions, points, data } = props
+  return (
+    <div className='calculateContainer'>
+      {info && <InfoGroup {...info} />}
+      {renderQuestionGroups(questions)}
+      <ResultCard points={points} data={data} />
+    </div>
+  )
+}
 
 const mapStateToProps = state => {
   const { points, results } = state.calculator.data
