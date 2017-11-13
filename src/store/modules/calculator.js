@@ -53,16 +53,6 @@ export const fetchCalcDataError = (errorMessage = '') => {
   }
 }
 
-export const pickAnswer = (points = 0) => {
-  return {
-    type: PICK_ANSWER,
-    payload: {
-      points,
-      receivedAt: new Date().toISOString()
-    }
-  }
-}
-
 export const pickRadioAnswer = (group = '', answer = '', points = 0) => {
   return {
     type: PICK_RADIO_ANSWER,
