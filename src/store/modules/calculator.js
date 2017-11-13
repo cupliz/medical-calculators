@@ -199,8 +199,8 @@ const updateObjectInArrayExtended = (array, action, fieldName) => {
 }
 
 const updateCalculate = (calculateArray, action) => {
-  console.log(calculateArray, action)
   if (!calculateArray) {
+    // we don't have an array, create with one object
     return [
       {
         answer: action.payload.answer,
@@ -208,7 +208,14 @@ const updateCalculate = (calculateArray, action) => {
       }
     ]
   } else {
-    return []
+    // array exists
+    return [
+      ...calculateArray,
+      {
+        answer: action.payload.answer,
+        points: action.payload.pointsChange
+      }
+    ]
   }
 }
 
