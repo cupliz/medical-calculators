@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { FormGroup, FormControlLabel } from 'material-ui/Form'
 import Checkbox from 'material-ui/Checkbox'
+import { pickCheckboxAnswer } from '../../../../../store/modules/calculator'
+import { connect } from 'react-redux'
 
 class CheckboxField extends Component {
   state = {
@@ -70,4 +72,8 @@ class CheckboxField extends Component {
   }
 }
 
-export default CheckboxField
+const mapStateToProps = state => ({
+  totalPoints: state.calculator.data.points
+})
+
+export default connect(mapStateToProps, { pickCheckboxAnswer })(CheckboxField)
