@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
+import { pickSelect, typeInput } from '../../../../../store/modules/calculator'
+import { connect } from 'react-redux'
 
 class InputSelectField extends Component {
   state = {
@@ -55,4 +57,8 @@ class InputSelectField extends Component {
   }
 }
 
-export default InputSelectField
+const mapStateToProps = state => ({
+  totalPoints: state.calculator.data.points
+})
+
+export default connect(mapStateToProps, { typeInput, pickSelect })(InputSelectField)
