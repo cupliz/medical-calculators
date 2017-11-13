@@ -193,10 +193,12 @@ const updateObjectInArrayExtended = (array, action, fieldName) => {
     // Otherwise, this is the one we want - return an updated value
     return {
       ...item,
-      calculate: {
-        answer: action.payload.answer,
-        points: action.payload.pointsChange
-      }
+      calculate: [
+        {
+          answer: action.payload.answer,
+          points: action.payload.pointsChange
+        }
+      ]
     }
   })
 }
@@ -239,7 +241,11 @@ export default (state = initialState, action) => {
         data: {
           ...state.data,
           points: action.payload.pointsTotal,
-          questions: updateObjectInArrayExtended(state.data.questions, action, 'group')
+          questions: updateObjectInArrayExtended(
+            state.data.questions,
+            action,
+            'group'
+          )
         }
       }
 
