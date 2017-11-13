@@ -52,7 +52,12 @@ export const fetchCalcDataError = (errorMessage = '') => {
   }
 }
 
-export const pickRadioAnswer = (group = '', answer = '', pointsTotal = 0, pointsChange = 0) => {
+export const pickRadioAnswer = (
+  group = '',
+  answer = '',
+  pointsTotal = 0,
+  pointsChange = 0
+) => {
   return {
     type: PICK_RADIO_ANSWER,
     payload: {
@@ -65,7 +70,12 @@ export const pickRadioAnswer = (group = '', answer = '', pointsTotal = 0, points
   }
 }
 
-export const pickCheckboxAnswer = (group = '', answer = '', pointsTotal = 0, pointsChange = 0) => {
+export const pickCheckboxAnswer = (
+  group = '',
+  answer = '',
+  pointsTotal = 0,
+  pointsChange = 0
+) => {
   return {
     type: PICK_CHECKBOX_ANSWER,
     payload: {
@@ -165,7 +175,10 @@ const updateObjectInArray = (array, action) => {
     // Otherwise, this is the one we want - return an updated value
     return {
       ...item,
-      calculate: { answer: action.payload.answer, points: action.payload.pointsChange }
+      calculate: {
+        answer: action.payload.answer,
+        points: action.payload.pointsChange
+      }
     }
   })
 }
