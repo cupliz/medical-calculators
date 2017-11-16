@@ -19,7 +19,7 @@ class RadioField extends Component {
       pickRadioAnswer
     } = this.props
 
-    console.log(e.target.value, value)
+    console.log(e.target, value)
 
     // if (value === answerPoints[0]) {
     //   const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
@@ -38,9 +38,10 @@ class RadioField extends Component {
     return answerOptions.map((option, index) => (
       <FormControlLabel
         key={option}
-        value={answerPoints[index]}
+        value={`${option}/${answerPoints[index]}`}
         className={classes.formControlLabel}
         control={<Radio />}
+        x={option}
         label={
           <span>
             {option}
