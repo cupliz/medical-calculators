@@ -7,8 +7,7 @@ import { pickRadioAnswer } from '../../../../../store/modules/calculator'
 class RadioField extends Component {
   state = {
     value: '',
-    checked: '',
-    previousValue: ''
+    checked: ''
   }
 
   handleChange = (e, value) => {
@@ -22,15 +21,16 @@ class RadioField extends Component {
 
     const splitValueArray = value.split('/')
     const newOption = splitValueArray[0]
-    const newPoints = splitValueArray[1]
-    const lastPoints = this.state.previousValue.split('/')[1]
+    const newPoints = parseInt(splitValueArray[1], 10)
+    const lastPoints = this.state.value ? this.state.value.split('/')[1] : false
 
+    console.log(totalPoints, 'totalPoints')
     console.log(newOption, 'newOption')
     console.log(newPoints, 'newPoints')
     console.log(lastPoints, 'lastPoints')
-    console.log(this.state.previousValue, 'this.state.previousValue')
+    console.log(!lastPoints, '!lastPoints')
 
-    if (!this.state.previousValue || newPoints > lastPoints) {
+    if (!lastPoints || newPoints > lastPoints) {
       // increase
       const increasedPointsTotal = totalPoints + newPoints
       pickRadioAnswer(group, newOption, increasedPointsTotal, newPoints)
@@ -40,13 +40,10 @@ class RadioField extends Component {
       pickRadioAnswer(group, newOption, decreasedPointsTotal, newPoints)
     }
 
-    this.setState(prevState => {
-      return {
-        previousValue: this.state.value,
-        checked: newOption,
-        value,
-        newPoints
-      }
+    this.setState({
+      checked: newOption,
+      value,
+      newPoints
     })
   }
 
