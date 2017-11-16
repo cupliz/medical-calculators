@@ -23,7 +23,6 @@ class RadioField extends Component {
     const newOption = splitValueArray[0]
     const newPoints = parseInt(splitValueArray[1], 10)
     const lastPoints = this.state.value ? this.state.value.split('/')[1] : false
-    const maxValue = Math.max.apply(Math, answerPoints.map(item => parseInt(item, 10)))
 
     if (!lastPoints || newPoints > lastPoints) {
       // increase
