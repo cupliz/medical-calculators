@@ -479,14 +479,12 @@
       "points": 0,
       "questions": [
         {
-          "group": "Congestive Heart Failure History",
-          "data": [
-            {
-              "type": "radio",
-              "options": "No/Yes",
-              "points": "0/1"
-            }
-          ]
+          "group": "Eye Opening",
+          "data": {
+            "type": "radio",
+            "options": "Spontaneous/To verbal command/To pain/None",
+            "points": "4/3/2/1"
+          }
         },
         {
           "group": "Hypertension history",
