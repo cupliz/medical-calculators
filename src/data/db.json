@@ -608,11 +608,11 @@
           }
         },
         {
-          "group": "Best Motor Response",
+          "group": "Lung maturity",
           "data": {
             "type": "radio",
-            "options": "Obeys verbal command/Localizes painful stimuli/Flexion withdrawl from painful stimuli/Decorticate response to painful stimuli/Decerebrate response to painful stimuli/None",
-            "points": "6/5/4/3/2/1"
+            "options": "Regular breathing/Irregular/None",
+            "points": "2/1/0"
           }
         },
         {
