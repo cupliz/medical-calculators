@@ -43,7 +43,7 @@ class RadioField extends Component {
           <span>
             {option}
             <small
-              className={classes.unCheckedBadge}
+              className={this.state.checked[index] ? classes.checkedBadge : classes.unCheckedBadge}
             >
               {answerPoints[index]}
             </small>
