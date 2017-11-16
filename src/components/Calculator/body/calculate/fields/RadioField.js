@@ -40,11 +40,13 @@ class RadioField extends Component {
       pickRadioAnswer(group, newOption, decreasedPointsTotal, newPoints)
     }
 
-    this.setState({
-      previousValue: this.state.value,
-      checked: newOption,
-      value,
-      newPoints
+    this.setState(prevState => {
+      return {
+        previousValue: this.state.value,
+        checked: newOption,
+        value,
+        newPoints
+      }
     })
   }
 
