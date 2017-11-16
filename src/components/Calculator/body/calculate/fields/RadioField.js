@@ -5,10 +5,6 @@ import { connect } from 'react-redux'
 import { pickRadioAnswer } from '../../../../../store/modules/calculator'
 
 class RadioField extends Component {
-  state = {
-    checked: false
-  }
-
   handleChange = (e, value) => {
     const {
       totalPoints,
@@ -44,7 +40,11 @@ class RadioField extends Component {
           <span>
             {option}
             <small
-              className={this.state.checked[index] ? classes.checkedBadge : classes.unCheckedBadge}
+              className={
+                this.state.checked[index]
+                  ? classes.checkedBadge
+                  : classes.unCheckedBadge
+              }
             >
               {answerPoints[index]}
             </small>
