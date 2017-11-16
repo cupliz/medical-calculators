@@ -15,6 +15,10 @@
     {
       "id": "amoxicillin-pediatric-ear-nose-throat",
       "title": "Amoxicillin Pediatric - Ear, Nose, & Throat Infections"
+    },
+    {
+      "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
+      "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk"
     }
   ],
   "calculators": [
