@@ -7,7 +7,8 @@ import { pickRadioAnswer } from '../../../../../store/modules/calculator'
 class RadioField extends Component {
   state = {
     value: '',
-    checked: ''
+    checked: '',
+    previousValue: ''
   }
 
   handleChange = (e, value) => {
