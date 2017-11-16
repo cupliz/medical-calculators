@@ -25,19 +25,16 @@ class RadioField extends Component {
     const lastPoints = this.state.value ? this.state.value.split('/')[1] : false
     const maxValue = Math.max.apply(Math, answerPoints.map(item => parseInt(item, 10)))
 
-    console.log(maxValue, 'maxValue')
-    console.log(totalPoints, 'totalPoints')
-    console.log(newOption, 'newOption')
-    console.log(newPoints, 'newPoints')
-
     if (!lastPoints || newPoints > lastPoints) {
       // increase
-      const increasedPointsTotal = totalPoints + newPoints
+      console.log('increase')
+      const increasedPointsTotal = totalPoints + (newPoints - lastPoints)
       pickRadioAnswer(group, newOption, increasedPointsTotal, newPoints)
     } else {
       // decrease
-      const decreasedPointsTotal = totalPoints - maxValue + newPoints
-      pickRadioAnswer(group, newOption, decreasedPointsTotal, newPoints)
+      console.log('decrease')
+      // const decreasedPointsTotal = totalPoints - maxValue + newPoints
+      // pickRadioAnswer(group, newOption, decreasedPointsTotal, newPoints)
     }
 
     this.setState({
