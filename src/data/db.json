@@ -450,6 +450,36 @@
       "points": 0,
       "questions": [
         {
+          "group": "Clinical Features",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Congestive heart failure / LV dysfunction",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Hypertension",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Diabetes Mellitus",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of stroke, TIA or thromboembolism",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "Vascular disese (history of MI, PVD or aortic atherosclerosis)",
+              "points": "1"
+            }
+          ]
+        },
+        {
           "group": "Congestive Heart Failure History",
           "data": {
             "type": "radio",
