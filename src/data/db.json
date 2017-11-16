@@ -582,9 +582,8 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Estimates stroke risk in patients with atrial fibrillation",
-          "The CHADS2 score is one of several risk stratification schemes that can help determine the 1 year risk of an ischemic stroke in a non-anticoagulated patient with non-valvular atrial fibrillation and determine which antithrombotic therapy is most appropriate",
-          "The CHA2-DS2-VASC score may be a better tool to assess stroke risk in patients with atrial fibrillation.  It risk stratifies these patients better than the CHADS2 score"
+          "The Modified Glasgow Coma Scale (the 15-point scale that has been widely adopted, including by the original unit in Glasgow, as opposed to the 14 point original GCS Scale) was developed to be used in a repeated manner in the inpatient setting to assess and communicate changes in mental status and to measure the duration of coma.",
+          "In the acute care setting, it has been shown to have highly variable reproducibility and inter-rater reliability (i.e. 56% among neurosurgeons in one study, 38% among ED physicians in another). In its most common usage, the three sections of the scale are often summed to provide a summary of severity. The authors themselves have explicitly objected to the score being used in this way, and analysis has shown that patients with the same total score can have huge variations in outcomes, specifically mortality (GCS score of 4 predicts a mortality rate of 48% if calculated 1+1+2 for eye, verbal, and motor, a mortality of 27% if calculated 1+2+1, but a mortality of only 19% if calculated 2+1+1."
         ]
       },
       "references": {
