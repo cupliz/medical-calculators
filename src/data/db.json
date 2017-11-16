@@ -622,6 +622,14 @@
             "options": "Active/Moderate/Inappropriate words/Limp",
             "points": "2/1/0"
           }
+        },
+        {
+          "group": "Skin color / oxygenation",
+          "data": {
+            "type": "radio",
+            "options": "Pink/Bluish extremeties/Totally blue",
+            "points": "2/1/0"
+          }
         }
       ],
       "results": {
