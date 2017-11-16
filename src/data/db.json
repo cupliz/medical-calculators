@@ -272,18 +272,42 @@
         }
       ],
       "results": {
-        "0": ["Mortality is 1%"],
-        "1": ["Mortality is 1%"],
-        "2": ["Mortality is 1%"],
-        "3": ["Mortality is 16%"],
-        "4": ["Mortality is 16%"],
-        "5": ["Mortality is 40%"],
-        "6": ["Mortality is 40%"],
-        "7": ["Mortality is almost 100%"],
-        "8": ["Mortality is almost 100%"],
-        "9": ["Mortality is almost 100%"],
-        "10": ["Mortality is almost 100%"],
-        "11": ["Mortality is almost 100%"]
+        "0": [
+          "Mortality is 1%"
+        ],
+        "1": [
+          "Mortality is 1%"
+        ],
+        "2": [
+          "Mortality is 1%"
+        ],
+        "3": [
+          "Mortality is 16%"
+        ],
+        "4": [
+          "Mortality is 16%"
+        ],
+        "5": [
+          "Mortality is 40%"
+        ],
+        "6": [
+          "Mortality is 40%"
+        ],
+        "7": [
+          "Mortality is almost 100%"
+        ],
+        "8": [
+          "Mortality is almost 100%"
+        ],
+        "9": [
+          "Mortality is almost 100%"
+        ],
+        "10": [
+          "Mortality is almost 100%"
+        ],
+        "11": [
+          "Mortality is almost 100%"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -340,7 +364,11 @@
             {
               "type": "input/select",
               "placeholder": "Enter drug dose",
-              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+              "values": [
+                "mg/kg",
+                "gm/kg",
+                "mcg/kg"
+              ]
             }
           ]
         },
@@ -350,7 +378,10 @@
             {
               "type": "input/select",
               "placeholder": "Enter patient weight",
-              "values": ["kg", "lbs"]
+              "values": [
+                "kg",
+                "lbs"
+              ]
             }
           ]
         },
@@ -360,7 +391,11 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication amount",
-              "values": ["mg", "gm", "mcg"]
+              "values": [
+                "mg",
+                "gm",
+                "mcg"
+              ]
             }
           ]
         },
@@ -370,24 +405,51 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication volume",
-              "values": ["ml", "L"]
+              "values": [
+                "ml",
+                "L"
+              ]
             }
           ]
         }
       ],
       "results": {
-        "0": ["Mortality is 1%"],
-        "1": ["Mortality is 1%"],
-        "2": ["Mortality is 1%"],
-        "3": ["Mortality is 16%"],
-        "4": ["Mortality is 16%"],
-        "5": ["Mortality is 40%"],
-        "6": ["Mortality is 40%"],
-        "7": ["Mortality is almost 100%"],
-        "8": ["Mortality is almost 100%"],
-        "9": ["Mortality is almost 100%"],
-        "10": ["Mortality is almost 100%"],
-        "11": ["Mortality is almost 100%"]
+        "0": [
+          "Mortality is 1%"
+        ],
+        "1": [
+          "Mortality is 1%"
+        ],
+        "2": [
+          "Mortality is 1%"
+        ],
+        "3": [
+          "Mortality is 16%"
+        ],
+        "4": [
+          "Mortality is 16%"
+        ],
+        "5": [
+          "Mortality is 40%"
+        ],
+        "6": [
+          "Mortality is 40%"
+        ],
+        "7": [
+          "Mortality is almost 100%"
+        ],
+        "8": [
+          "Mortality is almost 100%"
+        ],
+        "9": [
+          "Mortality is almost 100%"
+        ],
+        "10": [
+          "Mortality is almost 100%"
+        ],
+        "11": [
+          "Mortality is almost 100%"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -434,8 +496,7 @@
             },
             {
               "type": "checkbox",
-              "label":
-                "Vascular disese (history of MI, PVD or aortic atherosclerosis)",
+              "label": "Vascular disese (history of MI, PVD or aortic atherosclerosis)",
               "points": "1"
             }
           ]
@@ -504,36 +565,19 @@
         }
       ],
       "results": {
-        "0": [
-          "Low risk of thromboembolic event. 1.9% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "1": [
-          "Intermediate risk of thromboembolic event. 2.8% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "2": [
-          "Intermediate risk of thromboembolic event. 4.0% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "3": [
-          "High risk of thromboembolic event. 5.9% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "4": [
-          "High risk of thromboembolic event. 8.5% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "5": [
-          "Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)",
-          "By points directly: High risk of thromboembolic event. 12.5% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ],
-        "6": [
-          "Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)",
-          "By points directly: High risk of thromboembolic event. 18.2% risk of event per year if no coumadin.",
-          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
-        ]
+        "3": ["Abnormal"],
+        "4": ["Abnormal"],
+        "5": ["Abnormal"],
+        "6": ["Abnormal"],
+        "7": ["Abnormal"],
+        "8": ["Abnormal"],
+        "9": ["Abnormal"],
+        "10": ["Abnormal"],
+        "11": ["Abnormal"],
+        "12": ["Abnormal"],
+        "13": ["Abnormal"],
+        "14": ["Abnormal"],
+        "15": ["Normal"]
       },
       "notes": {
         "type": "unordered-list",
