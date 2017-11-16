@@ -528,11 +528,11 @@
       "questions": [
         {
           "group": "Congestive Heart Failure History",
-          "data": {
+          "data": [{
             "type": "radio",
             "options": "No/Yes",
             "points": "0/1"
-          }
+          }]
         },
         {
           "group": "Hypertension history",
