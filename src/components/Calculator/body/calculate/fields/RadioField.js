@@ -11,13 +11,7 @@ class RadioField extends Component {
   }
 
   handleChange = (e, value) => {
-    const {
-      totalPoints,
-      answerPoints,
-      answerOptions,
-      group,
-      pickRadioAnswer
-    } = this.props
+    const { totalPoints, group, pickRadioAnswer } = this.props
 
     const splitValueArray = value.split('/')
     const newOption = splitValueArray[0]
