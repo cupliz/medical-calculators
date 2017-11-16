@@ -28,6 +28,7 @@ class RadioField extends Component {
     console.log(newOption, 'newOption')
     console.log(newPoints, 'newPoints')
     console.log(lastPoints, 'lastPoints')
+    console.log(this.state.previousValue, 'this.state.previousValue')
 
     if (!this.state.previousValue || newPoints > lastPoints) {
       // increase
