@@ -32,8 +32,33 @@ class RadioField extends Component {
     this.setState({ value, checked })
   }
 
+  mapAnswerOptions = () => {
+    const { answerOptions, answerPoints, classes } = this.props
+    return answerOptions.map((option, index) => (
+      <FormControlLabel
+        value={answerPoints[index]}
+        className={classes.formControlLabel}
+        control={<Radio checked={!this.state.checked} />}
+        label={
+          <span>
+            {option}
+            <small
+              className={
+                this.state.checked
+                  ? classes.unCheckedBadge
+                  : classes.checkedBadge
+              }
+            >
+              {answerPoints[index]}
+            </small>
+          </span>
+        }
+      />
+    ))
+  }
+
   render () {
-    const { answerOptions, answerPoints, group, classes } = this.props
+    const { answerOptions, group, classes } = this.props
     return (
       <RadioGroup
         row={answerOptions.length === 2}
@@ -41,44 +66,7 @@ class RadioField extends Component {
         className={classes.group}
         onChange={this.handleChange}
       >
-        <FormControlLabel
-          value={answerPoints[0]}
-          className={classes.formControlLabel}
-          control={<Radio checked={!this.state.checked} />}
-          label={
-            <span>
-              {answerOptions[0]}
-              <small
-                className={
-                  this.state.checked
-                    ? classes.unCheckedBadge
-                    : classes.checkedBadge
-                }
-              >
-                {answerPoints[0]}
-              </small>
-            </span>
-          }
-        />
-        <FormControlLabel
-          value={answerPoints[1]}
-          className={classes.formControlLabel}
-          control={<Radio checked={this.state.checked} />}
-          label={
-            <span>
-              {answerOptions[1]}
-              <small
-                className={
-                  !this.state.checked
-                    ? classes.unCheckedBadge
-                    : classes.checkedBadge
-                }
-              >
-                +{answerPoints[1]}
-              </small>
-            </span>
-          }
-        />
+        {this.mapAnswerOptions()}
       </RadioGroup>
     )
   }
