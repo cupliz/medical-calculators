@@ -23,6 +23,10 @@
     {
       "id": "glasgow-coma-scale",
       "title": "Glasgow Coma Scale"
+    },
+    {
+      "id": "apgar-score",
+      "title": "Apgar Score"
     }
   ],
   "calculators": [
