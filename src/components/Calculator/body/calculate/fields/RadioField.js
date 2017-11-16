@@ -36,7 +36,7 @@ class RadioField extends Component {
     const { answerOptions, answerPoints, group, classes } = this.props
     return (
       <RadioGroup
-        row
+        row={answerOptions.length === 2}
         aria-label={group}
         className={classes.group}
         onChange={this.handleChange}
