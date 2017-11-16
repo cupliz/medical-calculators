@@ -61,6 +61,8 @@ class RadioField extends Component {
         aria-label={group}
         className={classes.group}
         onChange={this.handleChange}
+        value={this.state.value}
+        name={group}
       >
         {this.mapAnswerOptions()}
       </RadioGroup>
