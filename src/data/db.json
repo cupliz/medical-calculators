@@ -665,7 +665,9 @@
       "references": {
         "type": "ordered-list",
         "content": [
-          "Teasdale G, Jennett B. Assessment of coma and impaired conciousness: a practical scale. Lancet. 1974; 2:81-84."
+          "Apgar V. A proposal of a New Method of Evaluation of the Newborn Infant. Current Researches in Anesthesia and Analgesia. 1953, 32: 261-267.",
+          "Apgar V, Holaday DA, James LS, et. al. Evaluation of the newborn infant. JAMA. 1958, 168: 1985-1988.",
+          "Casey BM, McIntire DD, Leveno KJ. The continuing value of the Apgar score for the assessment of newborn infants. N Engl J Med. 2001 Feb 15;344(7):467-71."
         ]
       }
     }
