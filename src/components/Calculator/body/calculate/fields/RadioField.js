@@ -38,16 +38,12 @@ class RadioField extends Component {
       <FormControlLabel
         value={answerPoints[index]}
         className={classes.formControlLabel}
-        control={<Radio checked={!this.state.checked} />}
+        control={<Radio />}
         label={
           <span>
             {option}
             <small
-              className={
-                this.state.checked
-                  ? classes.unCheckedBadge
-                  : classes.checkedBadge
-              }
+              className={classes.unCheckedBadge}
             >
               {answerPoints[index]}
             </small>
