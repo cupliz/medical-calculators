@@ -451,7 +451,7 @@
       "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
       "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk",
       "type": "points",
-      "points": 0,
+      "points": 1,
       "questions": [
         {
           "group": "Clinical Features",
