@@ -24,7 +24,6 @@ class RadioField extends Component {
     const option = splitValueArray[0]
     const points = splitValueArray[1]
 
-
     // if (value === answerPoints[0]) {
     //   const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
     //   pickRadioAnswer(group, answerOptions[0], decreasedValue, value)
@@ -34,7 +33,12 @@ class RadioField extends Component {
     //   pickRadioAnswer(group, answerOptions[1], increasedValue, value)
     // }
 
-    this.setState({ previousValue: this.state.value, checked: option, value, points })
+    this.setState({
+      previousValue: this.state.value,
+      checked: option,
+      value,
+      points
+    })
   }
 
   mapAnswerOptions = () => {
