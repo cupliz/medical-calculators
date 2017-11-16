@@ -14,18 +14,16 @@ class RadioField extends Component {
       pickRadioAnswer
     } = this.props
 
-    let checked = false
+    // if (value === answerPoints[0]) {
+    //   const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
+    //   pickRadioAnswer(group, answerOptions[0], decreasedValue, value)
+    // } else if (value === answerPoints[1]) {
+    //   checked = true
+    //   const increasedValue = totalPoints + parseInt(answerPoints[1], 10)
+    //   pickRadioAnswer(group, answerOptions[1], increasedValue, value)
+    // }
 
-    if (value === answerPoints[0]) {
-      const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
-      pickRadioAnswer(group, answerOptions[0], decreasedValue, value)
-    } else if (value === answerPoints[1]) {
-      checked = true
-      const increasedValue = totalPoints + parseInt(answerPoints[1], 10)
-      pickRadioAnswer(group, answerOptions[1], increasedValue, value)
-    }
-
-    this.setState({ value, checked })
+    // this.setState({ value, checked })
   }
 
   mapAnswerOptions = () => {
