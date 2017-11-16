@@ -623,7 +623,7 @@
           "group": "Muscle tone and movement",
           "data": {
             "type": "radio",
-            "options": "Active/Moderate/Inappropriate words/Limp",
+            "options": "Active/Moderate/Limp",
             "points": "2/1/0"
           }
         },
