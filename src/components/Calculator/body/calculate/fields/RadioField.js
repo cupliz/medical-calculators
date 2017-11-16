@@ -23,9 +23,18 @@ class RadioField extends Component {
     const splitValueArray = value.split('/')
     const newOption = splitValueArray[0]
     const newPoints = splitValueArray[1]
+    const lastPoints = this.state.previousValue.split('/')[1]
 
     // if new answer points > last answer points we increase
-
+    if (newPoints > lastPoints) {
+      // increase
+      const increasedPointsTotal = totalPoints + newPoints
+      pickRadioAnswer(group, newOption, increasedPointsTotal, newPoints)
+    } else {
+      // decrease
+      const decreasedPointsTotal = totalPoints - newPoints
+      pickRadioAnswer(group, newOption, decreasedPointsTotal, newPoints)
+    }
     // else we decrease
 
     // if (value === answerPoints[0]) {
