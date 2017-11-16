@@ -630,6 +630,14 @@
             "options": "Pink/Bluish extremeties/Totally blue",
             "points": "2/1/0"
           }
+        },
+        {
+          "group": "Reflex response to irritable stimuli",
+          "data": {
+            "type": "radio",
+            "options": "Crying/Whimpering/Silence",
+            "points": "2/1/0"
+          }
         }
       ],
       "results": {
