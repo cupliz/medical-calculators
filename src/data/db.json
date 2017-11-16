@@ -498,8 +498,8 @@
           "group": "Best Verbal Response",
           "data": {
             "type": "radio",
-            "options": "Spontaneous/To verbal command/To pain/None",
-            "points": "4/3/2/1"
+            "options": "Oriented conversation/Disoriented conversation/Inappropriate words/Incomprehensible words/Incomprehensible sounds/None",
+            "points": "5/4/3/4/2/1"
           }
         }
       ],
