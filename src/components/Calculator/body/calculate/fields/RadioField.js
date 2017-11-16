@@ -20,7 +20,11 @@ class RadioField extends Component {
       pickRadioAnswer
     } = this.props
 
-    console.log(e.target, value)
+    const splitValueArray = value.split('/')
+    const option = splitValueArray[0]
+    const points = splitValueArray[1]
+
+    this.setState({ previousValue: this.state.value, checked: option, value: points })
 
     // if (value === answerPoints[0]) {
     //   const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
