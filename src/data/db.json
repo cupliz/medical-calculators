@@ -487,35 +487,19 @@
           }
         },
         {
-          "group": "Hypertension history",
+          "group": "Best Motor Response",
           "data": {
             "type": "radio",
-            "options": "No/Yes",
-            "points": "0/1"
+            "options": "Obeys verbal command/Localizes painful stimuli/Flexion withdrawl from painful stimuli/Decorticate response to painful stimuli/Decerebrate response to painful stimuli/None",
+            "points": "6/5/4/3/2/1"
           }
         },
         {
-          "group": "Age ≥ 75 years",
+          "group": "Best Verbal Response",
           "data": {
             "type": "radio",
-            "options": "No/Yes",
-            "points": "0/1"
-          }
-        },
-        {
-          "group": "Diabetes melitus history",
-          "data": {
-            "type": "radio",
-            "options": "No/Yes",
-            "points": "0/1"
-          }
-        },
-        {
-          "group": "Stroke or TIA symptoms previously",
-          "data": {
-            "type": "radio",
-            "options": "No/Yes",
-            "points": "0/2"
+            "options": "Spontaneous/To verbal command/To pain/None",
+            "points": "4/3/2/1"
           }
         }
       ],
