@@ -36,6 +36,7 @@ class RadioField extends Component {
     const { answerOptions, answerPoints, classes } = this.props
     return answerOptions.map((option, index) => (
       <FormControlLabel
+        key={option}
         value={answerPoints[index]}
         className={classes.formControlLabel}
         control={<Radio />}
