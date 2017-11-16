@@ -501,6 +501,7 @@
         }
       ],
       "results": {
+        "label": "Total Criteria Point Count"
       },
       "notes": {
         "type": "unordered-list",
