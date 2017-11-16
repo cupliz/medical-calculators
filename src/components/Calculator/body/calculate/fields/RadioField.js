@@ -21,8 +21,12 @@ class RadioField extends Component {
     } = this.props
 
     const splitValueArray = value.split('/')
-    const option = splitValueArray[0]
-    const points = splitValueArray[1]
+    const newOption = splitValueArray[0]
+    const newPoints = splitValueArray[1]
+
+    // if new answer points > last answer points we increase
+
+    // else we decrease
 
     // if (value === answerPoints[0]) {
     //   const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
@@ -35,9 +39,9 @@ class RadioField extends Component {
 
     this.setState({
       previousValue: this.state.value,
-      checked: option,
+      checked: newOption,
       value,
-      points
+      newPoints
     })
   }
 
