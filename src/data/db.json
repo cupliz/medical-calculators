@@ -658,8 +658,9 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Glasgow Coma Scale (GCS) estimates the coma severity based on Eye, Verbal and Motor criteria.",
-          "The GCS is the standard used in the pre-hospital and acute care setting to evaluate for mental status assessment in both traumatic and non-traumatic presentations."
+          "Assesses neonates 1 and 5 min after birth.",
+          "Perform on every live newboard, regardless of gestational age at 1 and 5 minutes of life.  60 seconds after complete delivery of the newboard was deemed the point of most marked depression.",
+          "Per Neonatal Resuscitation Program, scoring continues at 5 min intervals until reaching a score of 7 or until 20 minutes of life is encountered.  Scored by any provider with direct patient contact at the specified time."
         ]
       },
       "references": {
