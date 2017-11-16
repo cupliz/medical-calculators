@@ -35,16 +35,6 @@ class RadioField extends Component {
       const decreasedPointsTotal = totalPoints - newPoints
       pickRadioAnswer(group, newOption, decreasedPointsTotal, newPoints)
     }
-    // else we decrease
-
-    // if (value === answerPoints[0]) {
-    //   const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
-    //   pickRadioAnswer(group, answerOptions[0], decreasedValue, value)
-    // } else if (value === answerPoints[1]) {
-    //   checked = true
-    //   const increasedValue = totalPoints + parseInt(answerPoints[1], 10)
-    //   pickRadioAnswer(group, answerOptions[1], increasedValue, value)
-    // }
 
     this.setState({
       previousValue: this.state.value,
