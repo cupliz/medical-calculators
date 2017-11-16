@@ -616,11 +616,11 @@
           }
         },
         {
-          "group": "Best Verbal Response",
+          "group": "Muscle tone and movement",
           "data": {
             "type": "radio",
-            "options": "Oriented conversation/Disoriented conversation/Inappropriate words/Incomprehensible words/Incomprehensible sounds/None",
-            "points": "5/4/3/4/2/1"
+            "options": "Active/Moderate/Inappropriate words/Limp",
+            "points": "2/1/0"
           }
         }
       ],
