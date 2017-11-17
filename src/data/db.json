@@ -824,7 +824,7 @@
       "points": 0,
       "questions": [
         {
-          "group": "Clinical Findings",
+          "group": "Criteria",
           "data": [
             {
               "type": "checkbox",
