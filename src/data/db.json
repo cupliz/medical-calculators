@@ -756,7 +756,7 @@
             },
             {
               "type": "checkbox",
-              "label": "Triglycerides >= 150 mg/dL or on TG lowering Rx",
+              "label": "Recently bedridden (more than 3 days) or major surgery within past 4 weeks",
               "points": "1"
             },
             {
