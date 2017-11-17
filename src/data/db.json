@@ -685,7 +685,7 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Age > 55",
+              "label": "Abdominal obesity (Male waist > 40 in. Female waist > 35 in)",
               "points": "1"
             },
             {
