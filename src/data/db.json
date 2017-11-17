@@ -997,6 +997,92 @@
           "Lip GY, Halperin JL. Improving stroke risk stratification in atrial fibrillation. Am J Med. 2010 Jun;123(6):484-8. Review."
         ]
       }
+    },
+    {
+      "id": "thrombolysis-in-myocardial-infarction-timi-score-for-st-elevation-acute-myocardial-infarction",
+      "title": "Thrombolysis in Myocardial Infarction (TIMI) Score for ST Elevation Acute Myocardial Infarction",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "DM, history of HTN or history of Angina",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Systolic blood pressure less than 100 mm Hg",
+              "points": "3"
+            },
+            {
+              "type": "checkbox",
+              "label": "Heart rate greater than 100 BPM",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "Killip class II-IV",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "Body weight less than 150 lb or 67 kg",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Anterior lead ST elevation or left BBB",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Time to treat more than 4 hours",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Age",
+          "data": {
+            "type": "radio",
+            "options": ">= 75 years old/65-74 years old/Less than 65",
+            "points": "3/2/0"
+          }
+        }
+      ],
+      "results": {
+        "0": ["0.8%"],
+        "1": ["1.6%"],
+        "2": ["2.2%"],
+        "3": ["4.4%"],
+        "4": ["7.3%"],
+        "5": ["12%"],
+        "6": ["16%"],
+        "7": ["23%"],
+        "8": ["27%"],
+        "9": ["36%"],
+        "10": ["36%"],
+        "11": ["36%"],
+        "12": ["36%"],
+        "13": ["36%"],
+        "14": ["36%"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "The Lip-Halperin article seeks to improve stroke risk stratification of the CHADS(2) score by adding more points for age >=75 and Vascular disease.",
+          "The article suggests aspirin or no treatment for a score of 0, and oral anticoagulation when the score is 2 or greater."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Lip GY, Halperin JL. Improving stroke risk stratification in atrial fibrillation. Am J Med. 2010 Jun;123(6):484-8. Review."
+        ]
+      }
     }
   ]
 }
