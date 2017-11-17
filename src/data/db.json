@@ -803,9 +803,12 @@
         "0": ["Low Probability"],
         "1": ["Moderate probability"],
         "2": ["Moderate probability"],
-        "3": ["Present"],
-        "4": ["Present"],
-        "5": ["Present"]
+        "3": ["High probability of DVT"],
+        "4": ["High probability of DVT"],
+        "5": ["High probability of DVT"],
+        "6": ["High probability of DVT"],
+        "7": ["High probability of DVT"],
+        "8": ["High probability of DVT"]
       },
       "references": {
         "type": "ordered-list",
