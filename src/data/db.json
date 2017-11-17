@@ -915,31 +915,41 @@
       "points": 0,
       "questions": [
         {
-          "group": "Clinical Features",
+          "group": "Criteria",
           "data": [
             {
               "type": "checkbox",
-              "label": "Congestive heart failure / LV dysfunction",
+              "label": "DM, history of HTN or history of Angina",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Hypertension",
-              "points": "1"
+              "label": "Systolic blood pressure less than 100 mm Hg",
+              "points": "3"
             },
             {
               "type": "checkbox",
-              "label": "Diabetes Mellitus",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "History of stroke, TIA or thromboembolism",
+              "label": "Heart rate greater than 100 BPM",
               "points": "2"
             },
             {
               "type": "checkbox",
-              "label": "Vascular disese (history of MI, PVD or aortic atherosclerosis)",
+              "label": "Killip class II-IV",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "Body weight less than 150 lb or 67 kg",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Anterior lead ST elevation or left BBB",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Time to treat more than 4 hours",
               "points": "1"
             }
           ]
