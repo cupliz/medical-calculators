@@ -816,6 +816,83 @@
           "Wells PS, Anderson DR, Bormanis J, et. al. Value of assessment of pretest probability of deep-vein thrombosis in clinical management. Lancet. 1997 Dec 20-27;350(9094):1795-8."
         ]
       }
+    },
+    {
+      "id": "dvt-probability-wells-score-system",
+      "title": "DVT Probability: Wells Score System",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Clinical Findings",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Paralysis, paresis or recent orthopedic casting of lower extremity",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Recently bedridden (more than 3 days) or major surgery within past 4 weeks",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Localized tenderness in deep vein system",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Swelling of entire leg",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Calf swelling 3 cm greater than other leg (measured 10 cm below the tibial tuberosity)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Pitting edema greater in the symptomatic leg",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Collateral non varicose superficial veins",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Active cancer or cancer treated within 6 months",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Alternative diagnosis more likely than DVT (Baker's cyst, cellulitis, muscle damage, superficial venous thrombosis, post phlebitic syndrome, inguinal lymphadenopathy, external venous compression)",
+              "points": "-2"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "-2": ["Low Probability"],
+        "-1": ["Low Probability"],
+        "0": ["Low Probability"],
+        "1": ["Moderate probability"],
+        "2": ["Moderate probability"],
+        "3": ["High probability of DVT"],
+        "4": ["High probability of DVT"],
+        "5": ["High probability of DVT"],
+        "6": ["High probability of DVT"],
+        "7": ["High probability of DVT"],
+        "8": ["High probability of DVT"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Wells PS, Anderson DR, Bormanis J, et. al. Value of assessment of pretest probability of deep-vein thrombosis in clinical management. Lancet. 1997 Dec 20-27;350(9094):1795-8."
+        ]
+      }
     }
   ]
 }
