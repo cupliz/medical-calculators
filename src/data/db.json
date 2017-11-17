@@ -828,48 +828,28 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Paralysis, paresis or recent orthopedic casting of lower extremity",
+              "label": "Patient more than 60 years old",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Recently bedridden (more than 3 days) or major surgery within past 4 weeks",
+              "label": "Concurrent Diabetes Mellitus",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Localized tenderness in deep vein system",
+              "label": "TIA Lasted more than 10 minutes",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Swelling of entire leg",
+              "label": "Patient experienced weakness during TIA",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Calf swelling 3 cm greater than other leg (measured 10 cm below the tibial tuberosity)",
+              "label": "Patient experienced speech problems with TIA",
               "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Pitting edema greater in the symptomatic leg",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Collateral non varicose superficial veins",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Active cancer or cancer treated within 6 months",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Alternative diagnosis more likely than DVT (Baker's cyst, cellulitis, muscle damage, superficial venous thrombosis, post phlebitic syndrome, inguinal lymphadenopathy, external venous compression)",
-              "points": "-2"
             }
           ]
         }
