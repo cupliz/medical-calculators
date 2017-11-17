@@ -818,8 +818,8 @@
       }
     },
     {
-      "id": "dvt-probability-wells-score-system",
-      "title": "DVT Probability: Wells Score System",
+      "id": "tia-prognosis-risk-of-stroke-by-90-days-after-presentation",
+      "title": "TIA Prognosis: Risk of Stroke by 90 Days After Presentation",
       "type": "points",
       "points": 0,
       "questions": [
