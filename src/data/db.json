@@ -798,7 +798,9 @@
         }
       ],
       "results": {
-        "0": ["Absent"],
+        "-2": ["Low Probability"],
+        "-1": ["Low Probability"],
+        "0": ["Low Probability"],
         "1": ["Absent"],
         "2": ["Absent"],
         "3": ["Present"],
