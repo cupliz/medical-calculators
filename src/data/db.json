@@ -785,12 +785,6 @@
         "4": ["Present"],
         "5": ["Present"]
       },
-      "notes": {
-        "type": "unordered-list",
-        "content": [
-          "This criteria set was proposed by the American Heart Association and the National Heart Lung and Blood Institute."
-        ]
-      },
       "references": {
         "type": "ordered-list",
         "content": [
