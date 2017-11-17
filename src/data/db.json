@@ -690,7 +690,7 @@
             },
             {
               "type": "checkbox",
-              "label": "Glucose >200 mg/dL (>10 mmol/L)",
+              "label": "Triglycerides >= 150 mg/dL or on TG lowering Rx",
               "points": "1"
             },
             {
