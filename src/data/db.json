@@ -700,7 +700,7 @@
             },
             {
               "type": "checkbox",
-              "label": "AST > 250",
+              "label": "Blood pressure >=130/>=85 or on BP Rx",
               "points": "1"
             },
             {
