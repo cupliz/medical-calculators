@@ -855,17 +855,12 @@
         }
       ],
       "results": {
-        "-2": ["Low Probability"],
-        "-1": ["Low Probability"],
-        "0": ["Low Probability"],
-        "1": ["Moderate probability"],
-        "2": ["Moderate probability"],
-        "3": ["High probability of DVT"],
-        "4": ["High probability of DVT"],
-        "5": ["High probability of DVT"],
-        "6": ["High probability of DVT"],
-        "7": ["High probability of DVT"],
-        "8": ["High probability of DVT"]
+        "0": ["Virtually no Risk"],
+        "1": ["3% Risk"],
+        "2": ["7% Risk"],
+        "3": ["11% Risk"],
+        "4": ["15% Risk"],
+        "5": ["34% Risk"]
       },
       "references": {
         "type": "ordered-list",
