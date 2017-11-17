@@ -747,11 +747,11 @@
       "points": 0,
       "questions": [
         {
-          "group": "Criteria",
+          "group": "Clinical Findings",
           "data": [
             {
               "type": "checkbox",
-              "label": "Abdominal obesity (Male waist > 40 in. Female waist > 35 in)",
+              "label": "Paralysis, paresis or recent orthopedic casting of lower extremity",
               "points": "1"
             },
             {
