@@ -1010,37 +1010,37 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "DM, history of HTN or history of Angina",
+              "label": "Age >= 65",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Systolic blood pressure less than 100 mm Hg",
-              "points": "3"
-            },
-            {
-              "type": "checkbox",
-              "label": "Heart rate greater than 100 BPM",
-              "points": "2"
-            },
-            {
-              "type": "checkbox",
-              "label": "Killip class II-IV",
-              "points": "2"
-            },
-            {
-              "type": "checkbox",
-              "label": "Body weight less than 150 lb or 67 kg",
+              "label": "3 or more CAD risk factors",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Anterior lead ST elevation or left BBB",
+              "label": "Known CAD with more than 50% stenosis",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Time to treat more than 4 hours",
+              "label": "Aspirin use in the past 7 days",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Severe angina in the preceeding 24 hours",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Elevated cardiac markers",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "ST deviation greater than 0.5 mm",
               "points": "1"
             }
           ]
