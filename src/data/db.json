@@ -681,7 +681,7 @@
       "points": 0,
       "questions": [
         {
-          "group": "Criteria at time of patient admission to hospital",
+          "group": "Criteria",
           "data": [
             {
               "type": "checkbox",
@@ -706,41 +706,6 @@
             {
               "type": "checkbox",
               "label": "LDH > 350",
-              "points": "1"
-            }
-          ]
-        },
-        {
-          "group": "Criteria that may develop over the first 2 hospital days",
-          "data": [
-            {
-              "type": "checkbox",
-              "label": "Hct drop >10% from admission",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "BUN increase >5 mg/dL (>1.79 mmol/L) from admission",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Ca <8 mg/dL (<2 mmol/L) within 48 hours",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Arterial pO2 <60 mmHg within 48 hours",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Base deficit (24 - HCO3) >4 mg/dL within 48 hours",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Fluid needs > 6L within 48 hours",
               "points": "1"
             }
           ]
