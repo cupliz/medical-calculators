@@ -27,6 +27,10 @@
     {
       "id": "apgar-score",
       "title": "Apgar Score"
+    },
+    {
+      "id": "metabolic-syndrome-criteria-aha-nhlbi-2005",
+      "title": "Metabolic Syndrome Criteria (AHA/NHLBI 2005)"
     }
   ],
   "calculators": [
