@@ -705,7 +705,7 @@
             },
             {
               "type": "checkbox",
-              "label": "LDH > 350",
+              "label": "Fasting glucose >= 100 mg/dL or on Glu lowering Rx",
               "points": "1"
             }
           ]
