@@ -695,7 +695,7 @@
             },
             {
               "type": "checkbox",
-              "label": "WBC > 16,000",
+              "label": "HDL cholesterol (male < 40; female < 50) or on HDL improvement Rx",
               "points": "1"
             },
             {
