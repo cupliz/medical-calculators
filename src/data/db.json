@@ -987,8 +987,9 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "The Lip-Halperin article seeks to improve stroke risk stratification of the CHADS(2) score by adding more points for age >=75 and Vascular disease.",
-          "The article suggests aspirin or no treatment for a score of 0, and oral anticoagulation when the score is 2 or greater."
+          "Estimates mortality in patients with ST Elevation Acute Myocardial Infarction (STEMI).",
+          "Entry criteria: Chest pain for more than 30 minutes, ST elevation, symptom onset less than 6 hours, fibrinolytic eligible.",
+          "Can be used on patients who are post-cath who may have bleeding risks to objectify risk-benefit of post PCI medications."
         ]
       },
       "references": {
