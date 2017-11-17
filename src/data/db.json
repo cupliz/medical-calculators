@@ -961,14 +961,6 @@
             "options": ">= 75 years old/65-74 years old/Less than 65",
             "points": "3/2/0"
           }
-        },
-        {
-          "group": "Sex",
-          "data": {
-            "type": "radio",
-            "options": "Male/Female",
-            "points": "0/1"
-          }
         }
       ],
       "results": {
