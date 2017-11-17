@@ -788,6 +788,11 @@
               "type": "checkbox",
               "label": "Active cancer or cancer treated within 6 months",
               "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Alternative diagnosis more likely than DVT (Baker's cyst, cellulitis, muscle damage, superficial venous thrombosis, post phlebitic syndrome, inguinal lymphadenopathy, external venous compression)",
+              "points": "-2"
             }
           ]
         }
