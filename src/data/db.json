@@ -771,7 +771,7 @@
             },
             {
               "type": "checkbox",
-              "label": "Fasting glucose >= 100 mg/dL or on Glu lowering Rx",
+              "label": "Calf swelling 3 cm greater than other leg (measured 10 cm below the tibial tuberosity)",
               "points": "1"
             }
           ]
