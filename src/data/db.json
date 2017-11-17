@@ -958,8 +958,8 @@
           "group": "Age",
           "data": {
             "type": "radio",
-            "options": "65-74 years old/>= 75 years old",
-            "points": "1/2"
+            "options": ">= 75 years old/65-74 years old/Less than 65",
+            "points": "3/2/0"
           }
         },
         {
