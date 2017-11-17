@@ -786,7 +786,7 @@
             },
             {
               "type": "checkbox",
-              "label": "Calf swelling 3 cm greater than other leg (measured 10 cm below the tibial tuberosity)",
+              "label": "Active cancer or cancer treated within 6 months",
               "points": "1"
             }
           ]
