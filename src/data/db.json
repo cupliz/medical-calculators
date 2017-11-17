@@ -1074,8 +1074,10 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "The Lip-Halperin article seeks to improve stroke risk stratification of the CHADS(2) score by adding more points for age >=75 and Vascular disease.",
-          "The article suggests aspirin or no treatment for a score of 0, and oral anticoagulation when the score is 2 or greater."
+          "Estimates mortality in patients with unstable angina and non-ST elevation myocardial infarction",
+          "Entry criteria: UA or NSTEMI defined as ischemic pain at rest within the past 24 hours with evidence of Coronary Artery Disease (ST segment deviation or + markers)",
+          "TIMI Risk Score for Unstable Angina/NSTEMI can be used to help risk stratify patients with anginal symptoms but is better suited for patients with confirmed NSTEMI or unstable angina",
+         "TIMI Risk Score for Unstable Angina/NSTEMI is the best known chest pain risk score tool, however newer tools such as the GRACE score provide better risk stratification for low vs. non-low risk patients."
         ]
       },
       "references": {
