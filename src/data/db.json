@@ -39,6 +39,10 @@
     {
       "id": "tia-prognosis-risk-of-stroke-by-90-days-after-presentation",
       "title": "TIA Prognosis: Risk of Stroke by 90 Days After Presentation"
+    },
+    {
+      "id": "thrombolysis-in-myocardial-infarction-timi-score-for-st-elevation-acute-myocardial-infarction",
+      "title": "Thrombolysis in Myocardial Infarction (TIMI) Score for ST Elevation Acute Myocardial Infarction"
     }
   ],
   "calculators": [
