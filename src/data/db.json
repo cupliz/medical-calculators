@@ -801,8 +801,8 @@
         "-2": ["Low Probability"],
         "-1": ["Low Probability"],
         "0": ["Low Probability"],
-        "1": ["Absent"],
-        "2": ["Absent"],
+        "1": ["Moderate probability"],
+        "2": ["Moderate probability"],
         "3": ["Present"],
         "4": ["Present"],
         "5": ["Present"]
