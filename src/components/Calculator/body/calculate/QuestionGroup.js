@@ -16,7 +16,7 @@ const styles = theme => ({
       .spacing.unit * 2}px`,
     display: 'flex',
     width: '100%',
-    maxWidth: 600
+    maxWidth: 800
   },
   label: {
     fontSize: 14
