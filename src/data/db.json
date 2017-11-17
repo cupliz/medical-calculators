@@ -961,7 +961,12 @@
           }
         }
       ],
-      "results": {},
+      "results": {
+        "0": [
+          "Low risk of thromboembolic event. 1.9% risk of event per year if no coumadin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ]
+      },
       "notes": {
         "type": "unordered-list",
         "content": [
