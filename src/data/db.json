@@ -773,6 +773,21 @@
               "type": "checkbox",
               "label": "Calf swelling 3 cm greater than other leg (measured 10 cm below the tibial tuberosity)",
               "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Calf swelling 3 cm greater than other leg (measured 10 cm below the tibial tuberosity)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Calf swelling 3 cm greater than other leg (measured 10 cm below the tibial tuberosity)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Calf swelling 3 cm greater than other leg (measured 10 cm below the tibial tuberosity)",
+              "points": "1"
             }
           ]
         }
