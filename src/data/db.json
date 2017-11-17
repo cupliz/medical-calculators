@@ -766,7 +766,7 @@
             },
             {
               "type": "checkbox",
-              "label": "Blood pressure >=130/>=85 or on BP Rx",
+              "label": "Swelling of entire leg",
               "points": "1"
             },
             {
