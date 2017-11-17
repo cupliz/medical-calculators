@@ -6,12 +6,16 @@ const ReferencesContainer = props => {
 
   return (
     <div>
-      <InfoCard title='Notes' type={notes.type} content={notes.content} />
-      <InfoCard
-        title='References'
-        type={references.type}
-        content={references.content}
-      />
+      {notes && (
+        <InfoCard title='Notes' type={notes.type} content={notes.content} />
+      )}
+      {references && (
+        <InfoCard
+          title='References'
+          type={references.type}
+          content={references.content}
+        />
+      )}
     </div>
   )
 }
