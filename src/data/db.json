@@ -1193,6 +1193,14 @@
             "options": "None/Mild - Moderate slurring/Severe/Intubated or other physical impediment to testing",
             "points": "0/1/2/0"
           }
+        },
+        {
+          "group": "Extinction and Inattention",
+          "data": {
+            "type": "radio",
+            "options": "Normal/Inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities/Severe hemi-inattention or hemi-inattention to more than one modality",
+            "points": "0/1/2"
+          }
         }
       ],
       "results": {
