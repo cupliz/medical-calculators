@@ -15,7 +15,7 @@ class RadioField extends Component {
 
     const splitValueArray = value.split('/')
     const newOption = splitValueArray[0]
-    const newPoints = parseInt(splitValueArray[1], 10)
+    const newPoints = parseFloat(splitValueArray[1])
     const lastPoints = this.state.value ? this.state.value.split('/')[1] : false
 
     if (!lastPoints || newPoints > lastPoints) {

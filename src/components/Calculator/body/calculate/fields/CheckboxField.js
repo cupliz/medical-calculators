@@ -3,6 +3,7 @@ import { FormGroup, FormControlLabel } from 'material-ui/Form'
 import Checkbox from 'material-ui/Checkbox'
 import { pickCheckboxAnswer } from '../../../../../store/modules/calculator'
 import { connect } from 'react-redux'
+import { round } from '../../../../../utils/math'
 
 class CheckboxField extends Component {
   state = {
@@ -20,11 +21,11 @@ class CheckboxField extends Component {
     } = this.props
 
     if (this.state.checked) {
-      const decreasedValue = totalPoints - parseInt(answerPoints[1], 10)
+      const decreasedValue = round(totalPoints - parseFloat(answerPoints[1]), 1)
       this.setState({ checked: false, value: answerPoints[0] })
       pickCheckboxAnswer(group, questionLabel, decreasedValue, answerPoints[0])
     } else {
-      const increasedValue = totalPoints + parseInt(answerPoints[1], 10)
+      const increasedValue = round(totalPoints + parseFloat(answerPoints[1]), 1)
       this.setState({ checked: true, value: answerPoints[1] })
       pickCheckboxAnswer(group, questionLabel, increasedValue, answerPoints[1])
     }
