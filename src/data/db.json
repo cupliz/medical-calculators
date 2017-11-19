@@ -1230,32 +1230,17 @@
       "points": 0,
       "questions": [
         {
-          "group": "Clinical Features",
+          "group": "Criteria",
           "data": [
             {
               "type": "checkbox",
-              "label": "Congestive heart failure / LV dysfunction",
-              "points": "1"
+              "label": "Age >= 60",
+              "points": "1.6"
             },
             {
               "type": "checkbox",
-              "label": "Hypertension",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Diabetes Mellitus",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "History of stroke, TIA or thromboembolism",
-              "points": "2"
-            },
-            {
-              "type": "checkbox",
-              "label": "Vascular disese (history of MI, PVD or aortic atherosclerosis)",
-              "points": "1"
+              "label": "Malignacy Present",
+              "points": "2.2"
             }
           ]
         },
