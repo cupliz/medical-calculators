@@ -14,9 +14,10 @@ const ErrorView = props => (
 class ComponentView extends Component {
   componentDidMount () {
     if (this.props.data.type === 'formula') {
-      import(`./${this.props.data.id}.js`)
+      import(`../../formulas/${this.props.data.id}.js`)
         .then(formulaModule => {
           // do something
+          console.log(formulaModule)
         })
         .catch(err => {
           console.log(err.message)
