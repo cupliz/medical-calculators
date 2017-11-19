@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import Card, { CardContent, CardHeader } from 'material-ui/Card'
-import IconButton from 'material-ui/IconButton'
-import ShareIcon from 'material-ui-icons/Share'
-import Typography from 'material-ui/Typography'
 import { connect } from 'react-redux'
-import { ResultCardHeader } from './ResultCardHeader'
+import ResultCardPoints from './ResultCardPoints'
 
 const styles = theme => ({
   card: {
@@ -37,32 +33,6 @@ const styles = theme => ({
     marginBottom: 15
   }
 })
-
-const renderPointsResultCard = (classes, type, points, pointsData) => {
-  if (points === 0 && !pointsData) {
-    return null
-  } else {
-    return (
-      <CardContent className={classes.content}>
-        <Typography type='caption' className={classes.contentText}>
-          Points
-        </Typography>
-        <Typography type='title' className={classes.contentText}>
-          {points}
-        </Typography>
-        {pointsData &&
-          pointsData.map(item => (
-            <Typography
-              key={`${points}-${item}`}
-              className={classes.contentText}
-            >
-              {item}
-            </Typography>
-          ))}
-      </CardContent>
-    )
-  }
-}
 
 class ResultCard extends Component {
   state = {
@@ -95,9 +65,11 @@ class ResultCard extends Component {
       )
     } else if (type === 'points') {
       return (
-        <ResultCardHeader classes={classes}>
-          {renderPointsResultCard(classes, type, points, pointsData)}
-        </ResultCardHeader>
+        <ResultCardPoints
+          classes={classes}
+          points={points}
+          pointsData={pointsData}
+        />
       )
     }
   }
