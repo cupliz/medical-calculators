@@ -1207,8 +1207,9 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Glasgow Coma Scale (GCS) estimates the coma severity based on Eye, Verbal and Motor criteria.",
-          "The GCS is the standard used in the pre-hospital and acute care setting to evaluate for mental status assessment in both traumatic and non-traumatic presentations."
+          "If an arm or leg cannot be tested due to amputation or other limitation, untestable is recorded and no points are counted.",
+          "NIH Stroke scores > 22 are considered very significant and may predict increased complication risk.",
+          "The score is commonly used to track outcomes, improvement or deterioration of a stroke."
         ]
       },
       "references": {
