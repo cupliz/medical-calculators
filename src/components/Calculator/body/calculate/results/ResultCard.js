@@ -37,6 +37,30 @@ const styles = theme => ({
   }
 })
 
+const renderCardHeader = props => {
+  const { classes } = props
+  return (
+    <Card className={classes.card}>
+      <CardHeader
+        className={classes.header}
+        title={
+          <div className={classes.titleWrapper}>
+            <Typography type='title' className={classes.title}>
+              Result
+            </Typography>
+            <IconButton aria-label='Share'>
+              <ShareIcon className={classes.shareIcon} />
+            </IconButton>
+          </div>
+        }
+      />
+      <CardContent className={classes.content}>
+        {props.children}
+      </CardContent>
+    </Card>
+  )
+}
+
 const renderPointsResultCard = (classes, type, points, pointsData) => {
   if (points === 0 && !pointsData) {
     return null
