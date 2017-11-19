@@ -8,8 +8,7 @@ const doseFormula = (weight, dosage) => {
   return weight * dosage
 }
 
-const FormulaComponent = props => {
-  const { classes, data } = props
+const FormulaComponent = ({ classes, data }) => {
   const dosage =
     data.questions[0].calculate && data.questions[0].calculate.input
   const weight =
