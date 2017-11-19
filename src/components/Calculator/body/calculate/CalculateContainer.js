@@ -2,7 +2,6 @@ import React from 'react'
 import QuestionGroup from './questions/QuestionGroup'
 import InfoGroup from './InfoGroup'
 import ResultCard from './results/ResultCard'
-import { connect } from 'react-redux'
 
 const renderQuestionGroups = questions =>
   questions.map(questionGroup => (
@@ -10,22 +9,14 @@ const renderQuestionGroups = questions =>
   ))
 
 const CalculateContainer = props => {
-  const { info, questions, points, data } = props
+  const { info, questions } = props
   return (
     <div className='calculateContainer'>
       {info && <InfoGroup {...info} />}
       {renderQuestionGroups(questions)}
-      <ResultCard points={points} data={data} />
+      <ResultCard />
     </div>
   )
 }
 
-const mapStateToProps = state => {
-  const { points, results } = state.calculator.data
-  return {
-    points,
-    data: results[points]
-  }
-}
-
-export default connect(mapStateToProps)(CalculateContainer)
+export default CalculateContainer
