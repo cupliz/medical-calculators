@@ -107,7 +107,7 @@ class ResultCard extends Component {
           {FormulaComponent && (
             <FormulaComponent
               classes={classes}
-              calculatorData={calculatorData}
+              data={calculatorData}
             />
           )}
         </div>
