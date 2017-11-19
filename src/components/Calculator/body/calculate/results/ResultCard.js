@@ -113,7 +113,8 @@ const mapStateToProps = state => {
     id,
     type,
     points,
-    pointsData: results[points]
+    pointsData: results[points],
+    calculatorData: state.calculator.data
   }
 }
 
