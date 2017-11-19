@@ -28,7 +28,7 @@ const FormulaComponent = props => {
       />
       <CardContent className={classes.content}>
         <Typography type='caption' className={classes.contentText}>
-          Points
+          Dose
         </Typography>
         <Typography type='title' className={classes.contentText}>
           123
