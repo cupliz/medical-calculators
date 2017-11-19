@@ -47,6 +47,10 @@
     {
       "id": "thrombolysis-in-myocardial-infarction-timi-score-for-unstable-angina-non-st-elevation-myocardial-infarction",
       "title": "Thrombolysis in Myocardial Infarction (TIMI) Score for Unstable Angina Non ST Elevation Myocardial Infarction"
+    },
+    {
+      "id": "nih-stroke-score",
+      "title": "NIH Stroke Score"
     }
   ],
   "calculators": [
