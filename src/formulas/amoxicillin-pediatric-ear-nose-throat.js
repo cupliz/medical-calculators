@@ -5,11 +5,6 @@ export const formula = (weight, dosage) => {
   return weight * dosage
 }
 
-const Formula = props => (
-  <div>
-    inside Formula
-  </div>
-)
+const Formula = props => <div>inside Formula</div>
 
 export default Formula
-
