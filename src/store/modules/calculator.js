@@ -88,7 +88,7 @@ export const pickCheckboxAnswer = (
   }
 }
 
-export const typeInput = (group = '', field = '', value = '') => {
+export const typeInputSelect = (group = '', field = '', value = '') => {
   return {
     type: TYPE_INPUT_SELECT,
     payload: {
