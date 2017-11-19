@@ -1177,6 +1177,14 @@
             "options": "Normal/Mild to moderate decrease in sensation/Severe to total sensory loss",
             "points": "0/1/2"
           }
+        },
+        {
+          "group": "Language",
+          "data": {
+            "type": "radio",
+            "options": "No aphasia/Mild - Moderate aphasia/Severe aphasia/No speech production",
+            "points": "0/1/2/3"
+          }
         }
       ],
       "results": {
