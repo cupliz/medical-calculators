@@ -1220,8 +1220,8 @@
       }
     },
     {
-      "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
-      "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk",
+      "id": "bleeding-risk-any-bleeding-complication-on-warfarin-therapy",
+      "title": "Bleeding Risk (any bleeding complication) on Warfarin Therapy",
       "type": "points",
       "points": 0,
       "questions": [
