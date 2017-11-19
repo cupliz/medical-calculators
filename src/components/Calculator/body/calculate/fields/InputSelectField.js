@@ -11,6 +11,17 @@ class InputSelectField extends Component {
   }
 
   handleChange = name => event => {
+    name === 'input'
+      ? this.props.typePickInputSelect(
+          this.props.group,
+          event.target.value,
+          this.state.select
+        )
+      : this.props.typePickInputSelect(
+          this.props.group,
+          this.state.input,
+          event.target.value
+        )
     this.setState({
       [name]: event.target.value
     })
@@ -57,7 +68,8 @@ class InputSelectField extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-})
+const mapStateToProps = state => ({})
 
-export default connect(mapStateToProps, { typePickInputSelect: typePickInputSelect })(InputSelectField)
+export default connect(mapStateToProps, {
+  typePickInputSelect: typePickInputSelect
+})(InputSelectField)
