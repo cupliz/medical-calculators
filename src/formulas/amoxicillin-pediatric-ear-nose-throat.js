@@ -3,6 +3,7 @@ import Card, { CardContent, CardHeader } from 'material-ui/Card'
 import IconButton from 'material-ui/IconButton'
 import ShareIcon from 'material-ui-icons/Share'
 import Typography from 'material-ui/Typography'
+import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCard'
 
 const doseFormula = (weight, dosage) => {
   // Dose = Weight * Dosage
@@ -23,20 +24,7 @@ const FormulaComponent = props => {
 
   if (dosage && weight) {
     return (
-      <Card className={classes.card}>
-        <CardHeader
-          className={classes.header}
-          title={
-            <div className={classes.titleWrapper}>
-              <Typography type='title' className={classes.title}>
-                Result
-              </Typography>
-              <IconButton aria-label='Share'>
-                <ShareIcon className={classes.shareIcon} />
-              </IconButton>
-            </div>
-          }
-        />
+      <ResultCardHeader classes={classes}>
         <CardContent className={classes.content}>
           <Typography type='caption' className={classes.contentText}>
             Dose
@@ -45,7 +33,7 @@ const FormulaComponent = props => {
             {doseFormula(dosage, weight)}
           </Typography>
         </CardContent>
-      </Card>
+      </ResultCardHeader>
     )
   } else {
     return null

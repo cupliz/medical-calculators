@@ -37,7 +37,7 @@ const styles = theme => ({
   }
 })
 
-const ResultCardHeader = props => {
+export const ResultCardHeader = props => {
   const { classes } = props
   return (
     <Card className={classes.card}>
