@@ -37,7 +37,7 @@ const styles = theme => ({
   }
 })
 
-const renderCardHeader = props => {
+const ResultCardHeader = props => {
   const { classes } = props
   return (
     <Card className={classes.card}>
@@ -72,14 +72,14 @@ const renderPointsResultCard = (classes, type, points, pointsData) => {
           {points}
         </Typography>
         {pointsData &&
-        pointsData.map(item => (
-          <Typography
-            key={`${points}-${item}`}
-            className={classes.contentText}
-          >
-            {item}
-          </Typography>
-        ))}
+          pointsData.map(item => (
+            <Typography
+              key={`${points}-${item}`}
+              className={classes.contentText}
+            >
+              {item}
+            </Typography>
+          ))}
       </CardContent>
     )
   }
@@ -115,7 +115,11 @@ class ResultCard extends Component {
         )
       )
     } else if (type === 'points') {
-      return renderPointsResultCard(classes, type, points, pointsData)
+      return (
+        <ResultCardHeader classes={classes}>
+          {renderPointsResultCard(classes, type, points, pointsData)}
+        </ResultCardHeader>
+      )
     }
   }
 }
