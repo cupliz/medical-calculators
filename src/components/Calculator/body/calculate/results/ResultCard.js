@@ -5,6 +5,7 @@ import Card, { CardContent, CardHeader } from 'material-ui/Card'
 import IconButton from 'material-ui/IconButton'
 import ShareIcon from 'material-ui-icons/Share'
 import Typography from 'material-ui/Typography'
+import { connect } from 'react-redux'
 
 const styles = theme => ({
   card: {
@@ -86,4 +87,12 @@ ResultCard.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(ResultCard)
+const mapStateToProps = state => {
+  const { points, results } = state.calculator.data
+  return {
+    points,
+    data: results[points]
+  }
+}
+
+export default connect(mapStateToProps)(withStyles(styles)(ResultCard))
