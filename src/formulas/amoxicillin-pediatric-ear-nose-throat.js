@@ -4,7 +4,7 @@ import IconButton from 'material-ui/IconButton'
 import ShareIcon from 'material-ui-icons/Share'
 import Typography from 'material-ui/Typography'
 
-const formula = (weight, dosage) => {
+const doseFormula = (weight, dosage) => {
   // Dose = Weight * Dosage
   return weight * dosage
 }
