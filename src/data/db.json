@@ -1083,11 +1083,11 @@
       "points": 0,
       "questions": [
         {
-          "group": "Eye Opening",
+          "group": "Level of Consciousness",
           "data": {
             "type": "radio",
-            "options": "Spontaneous/To verbal command/To pain/None",
-            "points": "4/3/2/1"
+            "options": "Alert/Not alert, but arousable with minimal stimulation/Not alert, requires repeated stimulation to attend/Coma",
+            "points": "0/1/2/3"
           }
         },
         {
