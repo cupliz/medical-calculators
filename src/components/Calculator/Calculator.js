@@ -33,6 +33,16 @@ const CalculatorBranch = props => {
 class Calculator extends Component {
   componentDidMount () {
     this.props.fetchCalcData(this.props.calculatorId)
+    if (this.props.calculator.data.type === 'formula') {
+      console.log('formula')
+      import(`./${this.props.calculatorId}.js`)
+        .then(module => {
+          console.log(module)
+        })
+        .catch(err => {
+          console.log(err.message)
+        })
+    }
   }
 
   render () {
