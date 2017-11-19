@@ -79,11 +79,16 @@ const renderPointsResultCard = (classes, type, points, pointsData) => {
 }
 
 class ResultCard extends Component {
+  state = {
+    formulaModule: null
+  }
+
   componentDidMount () {
     const { type, id } = this.props
     if (type === 'formula') {
       import(`../../../../../formulas/${id}.js`)
-        .then(formulaModule => {
+        .then(module => {
+          const formulaModule = module.default
           this.setState({ formulaModule })
         })
         .catch(err => {
@@ -96,7 +101,7 @@ class ResultCard extends Component {
     const { classes, type, points, pointsData } = this.props
 
     if (type === 'formula') {
-      return null
+      return this.state.formulaModule ? <p>loaded</p> : <p>wait</p>
     } else if (type === 'points') {
       return renderPointsResultCard(classes, type, points, pointsData)
     }
