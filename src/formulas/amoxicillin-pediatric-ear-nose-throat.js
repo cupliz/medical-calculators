@@ -3,7 +3,7 @@ import Card, { CardContent, CardHeader } from 'material-ui/Card'
 import IconButton from 'material-ui/IconButton'
 import ShareIcon from 'material-ui-icons/Share'
 import Typography from 'material-ui/Typography'
-import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCard'
+import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
 
 const doseFormula = (weight, dosage) => {
   // Dose = Weight * Dosage
