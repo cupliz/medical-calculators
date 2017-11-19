@@ -1089,6 +1089,14 @@
             "options": "Alert/Not alert, but arousable with minimal stimulation/Not alert, requires repeated stimulation to attend/Coma",
             "points": "0/1/2/3"
           }
+        },
+        {
+          "group": "Patient Knows Month and Own Age",
+          "data": {
+            "type": "radio",
+            "options": "Answers both correctly/Answers one correctly/Both incorrect",
+            "points": "0/1/2"
+          }
         }
       ],
       "results": {
