@@ -11,19 +11,16 @@ class InputSelectField extends Component {
   }
 
   handleChange = name => event => {
+    const { typePickInputSelect, group } = this.props
+    const { input, select } = this.state
+    const { value } = event.target
+
     name === 'input'
-      ? this.props.typePickInputSelect(
-          this.props.group,
-          event.target.value,
-          this.state.select
-        )
-      : this.props.typePickInputSelect(
-          this.props.group,
-          this.state.input,
-          event.target.value
-        )
+      ? typePickInputSelect(group, value, select)
+      : typePickInputSelect(group, input, value)
+
     this.setState({
-      [name]: event.target.value
+      [name]: value
     })
   }
 
