@@ -1105,6 +1105,14 @@
             "options": "Obeys both correctly/Obeys one correctly/Both incorrect",
             "points": "0/1/2"
           }
+        },
+        {
+          "group": "Best Gaze (only horizontal eye movement)",
+          "data": {
+            "type": "radio",
+            "options": "Normal/Partial gaze palsy/Forced deviation",
+            "points": "0/1/2"
+          }
         }
       ],
       "results": {
