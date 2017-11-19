@@ -1071,6 +1071,66 @@
           "Antman EM, Cohen M, Bernink PJ, et. al. The TIMI risk score for unstable angina/non-ST elevation MI: A method for procnostication and therapeutic decision making. JAMA. 2000 Aug 16;284(7):835-42."
         ]
       }
+    },
+    {
+      "id": "glasgow-coma-scale",
+      "title": "Glasgow Coma Scale",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Eye Opening",
+          "data": {
+            "type": "radio",
+            "options": "Spontaneous/To verbal command/To pain/None",
+            "points": "4/3/2/1"
+          }
+        },
+        {
+          "group": "Best Motor Response",
+          "data": {
+            "type": "radio",
+            "options": "Obeys verbal command/Localizes painful stimuli/Flexion withdrawl from painful stimuli/Decorticate response to painful stimuli/Decerebrate response to painful stimuli/None",
+            "points": "6/5/4/3/2/1"
+          }
+        },
+        {
+          "group": "Best Verbal Response",
+          "data": {
+            "type": "radio",
+            "options": "Oriented conversation/Disoriented conversation/Inappropriate words/Incomprehensible words/Incomprehensible sounds/None",
+            "points": "5/4/3/4/2/1"
+          }
+        }
+      ],
+      "results": {
+        "3": ["Abnormal"],
+        "4": ["Abnormal"],
+        "5": ["Abnormal"],
+        "6": ["Abnormal"],
+        "7": ["Abnormal"],
+        "8": ["Abnormal"],
+        "9": ["Abnormal"],
+        "10": ["Abnormal"],
+        "11": ["Abnormal"],
+        "12": ["Abnormal"],
+        "13": ["Abnormal"],
+        "14": ["Abnormal"],
+        "15": ["Normal"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Glasgow Coma Scale (GCS) estimates the coma severity based on Eye, Verbal and Motor criteria.",
+          "The GCS is the standard used in the pre-hospital and acute care setting to evaluate for mental status assessment in both traumatic and non-traumatic presentations."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Teasdale G, Jennett B. Assessment of coma and impaired conciousness: a practical scale. Lancet. 1974; 2:81-84."
+        ]
+      }
     }
   ]
 }
