@@ -13,11 +13,10 @@ const ErrorView = props => (
 
 class ComponentView extends Component {
   componentDidMount () {
-    if (this.props.calculator.data.type === 'formula') {
-      console.log('formula')
-      import(`./${this.props.calculatorId}.js`)
-        .then(module => {
-          console.log(module)
+    if (this.props.data.type === 'formula') {
+      import(`./${this.props.data.id}.js`)
+        .then(formulaModule => {
+          // do something
         })
         .catch(err => {
           console.log(err.message)
