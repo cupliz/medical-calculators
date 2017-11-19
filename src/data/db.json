@@ -1089,22 +1089,6 @@
             "options": "Alert/Not alert, but arousable with minimal stimulation/Not alert, requires repeated stimulation to attend/Coma",
             "points": "0/1/2/3"
           }
-        },
-        {
-          "group": "Best Motor Response",
-          "data": {
-            "type": "radio",
-            "options": "Obeys verbal command/Localizes painful stimuli/Flexion withdrawl from painful stimuli/Decorticate response to painful stimuli/Decerebrate response to painful stimuli/None",
-            "points": "6/5/4/3/2/1"
-          }
-        },
-        {
-          "group": "Best Verbal Response",
-          "data": {
-            "type": "radio",
-            "options": "Oriented conversation/Disoriented conversation/Inappropriate words/Incomprehensible words/Incomprehensible sounds/None",
-            "points": "5/4/3/4/2/1"
-          }
         }
       ],
       "results": {
