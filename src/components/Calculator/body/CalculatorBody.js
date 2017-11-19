@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import SwipeableViews from 'react-swipeable-views'
@@ -28,7 +28,7 @@ const styles = theme => ({
   label: { fontSize: 17 }
 })
 
-class CalculatorBody extends React.Component {
+class CalculatorBody extends Component {
   state = {
     tabIndex: 0
   }
