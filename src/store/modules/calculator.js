@@ -11,7 +11,7 @@ export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
 export const PICK_RADIO_ANSWER = 'calculator/PICK_RADIO_ANSWER'
 export const PICK_CHECKBOX_ANSWER = 'calculator/PICK_CHECKBOX_ANSWER'
 export const TYPE_INPUT_SELECT = 'calculator/TYPE_INPUT_SELECT'
-export const PICK_SELECT = 'calculator/PICK_SELECT'
+export const PICK_INPUT_SELECT = 'calculator/PICK_INPUT_SELECT'
 
 // ------------------------------------
 // Initial State
@@ -102,7 +102,7 @@ export const typeInput = (group = '', field = '', value = '') => {
 
 export const pickSelect = (group = '', field = '', value = '') => {
   return {
-    type: PICK_SELECT,
+    type: PICK_INPUT_SELECT,
     payload: {
       group,
       field,
