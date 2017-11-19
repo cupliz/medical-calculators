@@ -202,7 +202,8 @@ export default (state = initialState, action) => {
       return {
         ...state,
         data: {
-          ...state.data
+          ...state.data,
+          questions: createCalculateObject(state.data.questions, action, 'group')
         }
       }
 
