@@ -37,7 +37,7 @@ const styles = theme => ({
   }
 })
 
-const renderResult = (classes, type, points, data) => {
+const renderPointsResultCard = (classes, type, points, data) => {
   if (points === 0 && !data) {
     return null
   } else {
@@ -82,7 +82,7 @@ const ResultCard = props => {
 
   if (type === 'formula') { return null }
 
-  return renderResult(classes, type, points, data)
+  return renderPointsResultCard(classes, type, points, data)
 }
 
 ResultCard.propTypes = {
