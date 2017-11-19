@@ -100,7 +100,7 @@ export const typeInputSelect = (group = '', field = '', value = '') => {
   }
 }
 
-export const pickSelect = (group = '', field = '', value = '') => {
+export const pickInputSelect = (group = '', field = '', value = '') => {
   return {
     type: PICK_INPUT_SELECT,
     payload: {
