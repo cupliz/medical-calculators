@@ -2,7 +2,7 @@ import React from 'react'
 import { FormLabel, FormControl } from 'material-ui/Form'
 import { withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
-import QuestionField from '../QuestionField'
+import QuestionField from './QuestionField'
 
 const styles = theme => ({
   questionGroup: {
