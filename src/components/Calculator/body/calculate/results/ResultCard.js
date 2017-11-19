@@ -105,12 +105,12 @@ ResultCard.propTypes = {
 }
 
 const mapStateToProps = state => {
-  const { type, points, results, id } = state.calculator.data
+  const { id, type, points, results } = state.calculator.data
   return {
+    id,
     type,
     points,
-    data: results[points],
-    id
+    data: results[points]
   }
 }
 
