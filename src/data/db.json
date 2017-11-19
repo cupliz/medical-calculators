@@ -1121,6 +1121,14 @@
             "options": "No visual field loss/Partial hemianopia/Complete hemianopia/Bilateral hemianopia (blind including cortical blindness)",
             "points": "0/1/2/3"
           }
+        },
+        {
+          "group": "Facial Paresis (Ask patient to show teeth or raise eyebrows and close eye)",
+          "data": {
+            "type": "radio",
+            "options": "Normal symmetrical movement/Minor paralysis/Partial paralysis (total or near total paralysis of lower face)/Complete paralysis of one or both side",
+            "points": "0/1/2/3"
+          }
         }
       ],
       "results": {
