@@ -14,14 +14,12 @@ const ErrorView = props => (
 class ComponentView extends Component {
   componentDidMount () {
     if (this.props.data.type === 'formula') {
-      import(`./test1.js`)
+      import(`${this.props.calculatorId}.js`)
         .then(module => {
-          const { clog, add1 } = module
-          clog(123)
-          console.log(add1(5))
+          console.log(module)
         })
         .catch(err => {
-          console.log(err)
+          console.log(err.message)
         })
     }
   }
