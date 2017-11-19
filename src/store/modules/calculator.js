@@ -10,8 +10,7 @@ export const FETCH_CALC_DATA_SUCCESS = 'calculator/FETCH_CALC_DATA_SUCCESS'
 export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
 export const PICK_RADIO_ANSWER = 'calculator/PICK_RADIO_ANSWER'
 export const PICK_CHECKBOX_ANSWER = 'calculator/PICK_CHECKBOX_ANSWER'
-export const TYPE_INPUT_SELECT = 'calculator/TYPE_INPUT_SELECT'
-export const PICK_INPUT_SELECT = 'calculator/PICK_INPUT_SELECT'
+export const TYPE_PICK_INPUT_SELECT = 'calculator/TYPE_PICK_INPUT_SELECT'
 
 // ------------------------------------
 // Initial State
@@ -88,21 +87,9 @@ export const pickCheckboxAnswer = (
   }
 }
 
-export const typeInputSelect = (group = '', field = '', value = '') => {
+export const typePickInputSelect = (group = '', field = '', value = '') => {
   return {
-    type: TYPE_INPUT_SELECT,
-    payload: {
-      group,
-      field,
-      value,
-      receivedAt: new Date().toISOString()
-    }
-  }
-}
-
-export const pickInputSelect = (group = '', field = '', value = '') => {
-  return {
-    type: PICK_INPUT_SELECT,
+    type: TYPE_PICK_INPUT_SELECT,
     payload: {
       group,
       field,

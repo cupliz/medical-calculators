@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
-import { pickInputSelect, typeInputSelect } from '../../../../../store/modules/calculator'
+import { typePickInputSelect } from '../../../../../store/modules/calculator'
 import { connect } from 'react-redux'
 
 class InputSelectField extends Component {
@@ -60,4 +60,4 @@ class InputSelectField extends Component {
 const mapStateToProps = state => ({
 })
 
-export default connect(mapStateToProps, { typeInput: typeInputSelect, pickSelect: pickInputSelect })(InputSelectField)
+export default connect(mapStateToProps, { typePickInputSelect: typePickInputSelect })(InputSelectField)
