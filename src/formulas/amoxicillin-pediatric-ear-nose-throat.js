@@ -16,33 +16,39 @@ const liquidDoseFormula = (weight, dosage) => {
 
 const FormulaComponent = props => {
   const { classes, data } = props
-  const dosage = data.questions[0].calculate && data.questions[0].calculate.input
-  const weight = data.questions[1].calculate && data.questions[1].calculate.input
+  const dosage =
+    data.questions[0].calculate && data.questions[0].calculate.input
+  const weight =
+    data.questions[1].calculate && data.questions[1].calculate.input
 
-  return (
-    <Card className={classes.card}>
-      <CardHeader
-        className={classes.header}
-        title={
-          <div className={classes.titleWrapper}>
-            <Typography type='title' className={classes.title}>
-              Result
-            </Typography>
-            <IconButton aria-label='Share'>
-              <ShareIcon className={classes.shareIcon} />
-            </IconButton>
-          </div>
-        }
-      />
-      <CardContent className={classes.content}>
-        <Typography type='caption' className={classes.contentText}>
-          Dose
-        </Typography>
-        <Typography type='title' className={classes.contentText}>
-          { dosage && weight && doseFormula(dosage, weight) }
-        </Typography>
-      </CardContent>
-    </Card>
-  )
+  if (dosage && weight) {
+    return (
+      <Card className={classes.card}>
+        <CardHeader
+          className={classes.header}
+          title={
+            <div className={classes.titleWrapper}>
+              <Typography type='title' className={classes.title}>
+                Result
+              </Typography>
+              <IconButton aria-label='Share'>
+                <ShareIcon className={classes.shareIcon} />
+              </IconButton>
+            </div>
+          }
+        />
+        <CardContent className={classes.content}>
+          <Typography type='caption' className={classes.contentText}>
+            Dose
+          </Typography>
+          <Typography type='title' className={classes.contentText}>
+            {doseFormula(dosage, weight)}
+          </Typography>
+        </CardContent>
+      </Card>
+    )
+  } else {
+    return null
+  }
 }
 export default FormulaComponent
