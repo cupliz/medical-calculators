@@ -65,7 +65,6 @@ const renderResult = (classes, points, data) => {
           {data && data.map(item => (
             <Typography
               key={`${points}-${item}`}
-              type='caption'
               className={classes.contentText}
             >
               {item}
