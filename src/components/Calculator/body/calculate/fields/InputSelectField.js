@@ -10,20 +10,6 @@ class InputSelectField extends Component {
     select: this.props.values[0]
   }
 
-  componentDidMount () {
-    console.log('componentDidMount')
-    import(`./test1.js`)
-      .catch(err => {
-        console.log(err)
-        return null
-      })
-      .then(module => {
-        const { clog, add1 } = module
-        clog(123)
-        console.log(add1(5))
-      })
-  }
-
   handleChange = name => event => {
     const { typePickInputSelect, group } = this.props
     const { input, select } = this.state
