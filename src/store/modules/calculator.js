@@ -87,13 +87,13 @@ export const pickCheckboxAnswer = (
   }
 }
 
-export const typePickInputSelect = (group = '', field = '', value = '') => {
+export const typePickInputSelect = (group = '', inputValue = '', selectValue = '') => {
   return {
     type: TYPE_PICK_INPUT_SELECT,
     payload: {
       group,
-      field,
-      value,
+      inputValue,
+      selectValue,
       receivedAt: new Date().toISOString()
     }
   }
