@@ -1134,7 +1134,7 @@
           "group": "Motor Function of Right Arm",
           "data": {
             "type": "radio",
-            "options": "Motor Function of Right Arm/Drift/Some effort against gravity/	No effort against gravity/No movement/Untestable",
+            "options": "Motor Function of Right Arm/Drift/Some effort against gravity/No effort against gravity/No movement/Untestable",
             "points": "0/1/2/3/4/0"
           }
         },
@@ -1142,7 +1142,7 @@
           "group": "Motor Function of Left Arm",
           "data": {
             "type": "radio",
-            "options": "Motor Function of Right Arm/Drift/Some effort against gravity/	No effort against gravity/No movement/Untestable",
+            "options": "Motor Function of Right Arm/Drift/Some effort against gravity/No effort against gravity/No movement/Untestable",
             "points": "0/1/2/3/4/0"
           }
         },
@@ -1150,7 +1150,7 @@
           "group": "Motor Function of Right Leg",
           "data": {
             "type": "radio",
-            "options": "Motor Function of Right Arm/Drift/Some effort against gravity/	No effort against gravity/No movement/Untestable",
+            "options": "Motor Function of Right Arm/Drift/Some effort against gravity/No effort against gravity/No movement/Untestable",
             "points": "0/1/2/3/4/0"
           }
         },
@@ -1158,7 +1158,7 @@
           "group": "Motor Function of Left Leg",
           "data": {
             "type": "radio",
-            "options": "Motor Function of Right Arm/Drift/Some effort against gravity/	No effort against gravity/No movement/Untestable",
+            "options": "Motor Function of Right Arm/Drift/Some effort against gravity/No effort against gravity/No movement/Untestable",
             "points": "0/1/2/3/4/0"
           }
         },
@@ -1167,6 +1167,14 @@
           "data": {
             "type": "radio",
             "options": "None/One limb/Two Limbs",
+            "points": "0/1/2"
+          }
+        },
+        {
+          "group": "Sensory by Pinprick",
+          "data": {
+            "type": "radio",
+            "options": "Normal/Mild to moderate decrease in sensation/Severe to total sensory loss",
             "points": "0/1/2"
           }
         }
