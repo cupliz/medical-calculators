@@ -81,6 +81,8 @@ const renderResult = (classes, type, points, data) => {
 const ResultCard = props => {
   const { classes, type, points, data } = props
 
+  if (type === 'formula') { return null }
+
   return renderResult(classes, type, points, data)
 }
 
