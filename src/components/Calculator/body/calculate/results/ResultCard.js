@@ -54,9 +54,7 @@ const renderCardHeader = props => {
           </div>
         }
       />
-      <CardContent className={classes.content}>
-        {props.children}
-      </CardContent>
+      {props.children}
     </Card>
   )
 }
@@ -66,38 +64,23 @@ const renderPointsResultCard = (classes, type, points, pointsData) => {
     return null
   } else {
     return (
-      <Card className={classes.card}>
-        <CardHeader
-          className={classes.header}
-          title={
-            <div className={classes.titleWrapper}>
-              <Typography type='title' className={classes.title}>
-                Result
-              </Typography>
-              <IconButton aria-label='Share'>
-                <ShareIcon className={classes.shareIcon} />
-              </IconButton>
-            </div>
-          }
-        />
-        <CardContent className={classes.content}>
-          <Typography type='caption' className={classes.contentText}>
-            Points
+      <CardContent className={classes.content}>
+        <Typography type='caption' className={classes.contentText}>
+          Points
+        </Typography>
+        <Typography type='title' className={classes.contentText}>
+          {points}
+        </Typography>
+        {pointsData &&
+        pointsData.map(item => (
+          <Typography
+            key={`${points}-${item}`}
+            className={classes.contentText}
+          >
+            {item}
           </Typography>
-          <Typography type='title' className={classes.contentText}>
-            {points}
-          </Typography>
-          {pointsData &&
-            pointsData.map(item => (
-              <Typography
-                key={`${points}-${item}`}
-                className={classes.contentText}
-              >
-                {item}
-              </Typography>
-            ))}
-        </CardContent>
-      </Card>
+        ))}
+      </CardContent>
     )
   }
 }
