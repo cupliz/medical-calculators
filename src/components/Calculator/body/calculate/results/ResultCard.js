@@ -83,8 +83,7 @@ class ResultCard extends Component {
     if (this.props.type === 'formula') {
       import(`../../../../../formulas/${this.props.id}.js`)
         .then(formulaModule => {
-          // do something
-          console.log(formulaModule)
+          this.setState({ formulaModule })
         })
         .catch(err => {
           console.log(err.message)
