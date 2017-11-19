@@ -54,7 +54,7 @@ class RadioField extends Component {
                   : classes.unCheckedBadge
               }
             >
-              {answerPoints[index]}
+              {answerPoints[index]} Points
             </small>
           </span>
         }
