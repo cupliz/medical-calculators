@@ -38,7 +38,6 @@ const styles = theme => ({
 })
 
 const renderResult = (classes, type, points, data) => {
-  console.log(points, data, type)
   if (points === 0 && !data) {
     return null
   } else {
