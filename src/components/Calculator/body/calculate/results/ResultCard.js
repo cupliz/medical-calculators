@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Card, { CardContent, CardHeader } from 'material-ui/Card'
@@ -63,26 +63,42 @@ const renderPointsResultCard = (classes, type, points, data) => {
           <Typography type='title' className={classes.contentText}>
             {points}
           </Typography>
-          {data && data.map(item => (
-            <Typography
-              key={`${points}-${item}`}
-              className={classes.contentText}
-            >
-              {item}
-            </Typography>
-          ))}
+          {data &&
+            data.map(item => (
+              <Typography
+                key={`${points}-${item}`}
+                className={classes.contentText}
+              >
+                {item}
+              </Typography>
+            ))}
         </CardContent>
       </Card>
     )
   }
 }
 
-const ResultCard = props => {
-  const { classes, type, points, data } = props
+class ResultCard extends Component {
+  componentDidMount () {
+    if (this.props.type === 'formula') {
+      import(`../../../../../formulas/${this.props.id}.js`)
+        .then(formulaModule => {
+          // do something
+          console.log(formulaModule)
+        })
+        .catch(err => {
+          console.log(err.message)
+        })
+    }
+  }
 
-  if (type === 'formula') { return null }
-
-  return renderPointsResultCard(classes, type, points, data)
+  render () {
+    const { classes, type, points, data } = this.props
+    if (type === 'formula') {
+      return null
+    }
+    return renderPointsResultCard(classes, type, points, data)
+  }
 }
 
 ResultCard.propTypes = {
@@ -90,11 +106,12 @@ ResultCard.propTypes = {
 }
 
 const mapStateToProps = state => {
-  const { type, points, results } = state.calculator.data
+  const { type, points, results, id } = state.calculator.data
   return {
     type,
     points,
-    data: results[points]
+    data: results[points],
+    id
   }
 }
 
