@@ -3,6 +3,7 @@ import Radio, { RadioGroup } from 'material-ui/Radio'
 import { FormControlLabel } from 'material-ui/Form'
 import { connect } from 'react-redux'
 import { pickRadioAnswer } from '../../../../../store/modules/calculator'
+import { round } from '../../../../../utils/math'
 
 class RadioField extends Component {
   state = {
@@ -15,7 +16,7 @@ class RadioField extends Component {
 
     const splitValueArray = value.split('/')
     const newOption = splitValueArray[0]
-    const newPoints = parseFloat(splitValueArray[1])
+    const newPoints = round(parseFloat(splitValueArray[1]), 1)
     const lastPoints = this.state.value ? this.state.value.split('/')[1] : false
 
     if (!lastPoints || newPoints > lastPoints) {
