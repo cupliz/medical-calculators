@@ -1248,7 +1248,7 @@
           "group": "Age",
           "data": {
             "type": "radio",
-            "options": "Female/Male ",
+            "options": "Female/Male",
             "points": "1.3/0"
           }
         }
