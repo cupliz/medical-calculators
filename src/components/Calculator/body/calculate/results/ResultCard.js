@@ -80,8 +80,9 @@ const renderPointsResultCard = (classes, type, points, data) => {
 
 class ResultCard extends Component {
   componentDidMount () {
-    if (this.props.type === 'formula') {
-      import(`../../../../../formulas/${this.props.id}.js`)
+    const { type, id } = this.props
+    if (type === 'formula') {
+      import(`../../../../../formulas/${id}.js`)
         .then(formulaModule => {
           this.setState({ formulaModule })
         })
@@ -93,9 +94,11 @@ class ResultCard extends Component {
 
   render () {
     const { classes, type, points, data } = this.props
+
     if (type === 'formula') {
       return null
     }
+
     return renderPointsResultCard(classes, type, points, data)
   }
 }
