@@ -1073,8 +1073,8 @@
       }
     },
     {
-      "id": "glasgow-coma-scale",
-      "title": "Glasgow Coma Scale",
+      "id": "nih-stroke-score",
+      "title": "NIH Stroke Score",
       "type": "points",
       "points": 0,
       "questions": [
