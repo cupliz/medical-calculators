@@ -37,7 +37,8 @@ const styles = theme => ({
   }
 })
 
-const renderResult = (classes, points, data) => {
+const renderResult = (classes, type, points, data) => {
+  console.log(points, data, type)
   if (points === 0 && !data) {
     return null
   } else {
@@ -78,9 +79,9 @@ const renderResult = (classes, points, data) => {
 }
 
 const ResultCard = props => {
-  const { classes, points, data } = props
+  const { classes, type, points, data } = props
 
-  return renderResult(classes, points, data)
+  return renderResult(classes, type, points, data)
 }
 
 ResultCard.propTypes = {
@@ -88,8 +89,9 @@ ResultCard.propTypes = {
 }
 
 const mapStateToProps = state => {
-  const { points, results } = state.calculator.data
+  const { type, points, results } = state.calculator.data
   return {
+    type,
     points,
     data: results[points]
   }
