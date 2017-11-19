@@ -1185,6 +1185,14 @@
             "options": "No aphasia/Mild - Moderate aphasia/Severe aphasia/No speech production",
             "points": "0/1/2/3"
           }
+        },
+        {
+          "group": "Dysarthria",
+          "data": {
+            "type": "radio",
+            "options": "None/Mild - Moderate slurring/Severe/Intubated or other physical impediment to testing",
+            "points": "0/1/2/0"
+          }
         }
       ],
       "results": {
