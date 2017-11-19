@@ -51,6 +51,10 @@
     {
       "id": "nih-stroke-score",
       "title": "NIH Stroke Score"
+    },
+    {
+      "id": "bleeding-risk-any-bleeding-complication-on-warfarin-therapy",
+      "title": "Bleeding Risk (any bleeding complication) on Warfarin Therapy"
     }
   ],
   "calculators": [
