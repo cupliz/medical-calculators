@@ -1161,6 +1161,14 @@
             "options": "Motor Function of Right Arm/Drift/Some effort against gravity/	No effort against gravity/No movement/Untestable",
             "points": "0/1/2/3/4/0"
           }
+        },
+        {
+          "group": "Limb Ataxia",
+          "data": {
+            "type": "radio",
+            "options": "None/One limb/Two Limbs",
+            "points": "0/1/2"
+          }
         }
       ],
       "results": {
