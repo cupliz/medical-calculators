@@ -9,8 +9,8 @@ const formula = (weight, dosage) => {
   return weight * dosage
 }
 
-const Formula = props => {
-  const classes = props
+const FormulaComponent = props => {
+  const { classes } = props
   return (
     <Card className={classes.card}>
       <CardHeader
@@ -37,4 +37,4 @@ const Formula = props => {
     </Card>
   )
 }
-export default Formula
+export default FormulaComponent
