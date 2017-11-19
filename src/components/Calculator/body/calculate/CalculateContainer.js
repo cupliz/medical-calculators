@@ -1,5 +1,5 @@
 import React from 'react'
-import QuestionGroup from './QuestionGroup'
+import QuestionGroup from './questions/QuestionGroup'
 import InfoGroup from './InfoGroup'
 import ResultCard from './results/ResultCard'
 import { connect } from 'react-redux'
