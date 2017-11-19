@@ -1,16 +1,9 @@
 import React from 'react'
-import Card, { CardContent, CardHeader } from 'material-ui/Card'
-import IconButton from 'material-ui/IconButton'
-import ShareIcon from 'material-ui-icons/Share'
+import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
 
 const doseFormula = (weight, dosage) => {
-  // Dose = Weight * Dosage
-  return weight * dosage
-}
-
-const liquidDoseFormula = (weight, dosage) => {
   // Dose = Weight * Dosage
   return weight * dosage
 }
