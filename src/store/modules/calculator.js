@@ -198,6 +198,14 @@ export default (state = initialState, action) => {
         }
       }
 
+    case TYPE_PICK_INPUT_SELECT:
+      return {
+        ...state,
+        data: {
+          ...state.data
+        }
+      }
+
     default:
       return state
   }
