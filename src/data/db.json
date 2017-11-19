@@ -1218,6 +1218,105 @@
           "Brott T, Adams HP Jr, Olinger CP, et. al. Measurements of acute cerebral infarction: a clinical examination scale. Stroke. 1989 Jul;20(7):864-70."
         ]
       }
+    },
+    {
+      "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
+      "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Clinical Features",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Congestive heart failure / LV dysfunction",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Hypertension",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Diabetes Mellitus",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of stroke, TIA or thromboembolism",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "Vascular disese (history of MI, PVD or aortic atherosclerosis)",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Age",
+          "data": {
+            "type": "radio",
+            "options": "65-74 years old/>= 75 years old",
+            "points": "1/2"
+          }
+        },
+        {
+          "group": "Sex",
+          "data": {
+            "type": "radio",
+            "options": "Male/Female",
+            "points": "0/1"
+          }
+        }
+      ],
+      "results": {
+        "0": [
+          "Low risk of thromboembolic event. 1.9% risk of event per year if no coumadin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "1": [
+          "Intermediate risk of thromboembolic event. 2.8% risk of event per year if no coumadin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "2": [
+          "Intermediate risk of thromboembolic event. 4.0% risk of event per year if no coumadin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "3": [
+          "High risk of thromboembolic event. 5.9% risk of event per year if no coumadin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "4": [
+          "High risk of thromboembolic event. 8.5% risk of event per year if no coumadin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "5": [
+          "Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)",
+          "By points directly: High risk of thromboembolic event. 12.5% risk of event per year if no coumadin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "6": [
+          "Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no coumadin.)",
+          "By points directly: High risk of thromboembolic event. 18.2% risk of event per year if no coumadin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "The Lip-Halperin article seeks to improve stroke risk stratification of the CHADS(2) score by adding more points for age >=75 and Vascular disease.",
+          "The article suggests aspirin or no treatment for a score of 0, and oral anticoagulation when the score is 2 or greater."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Lip GY, Halperin JL. Improving stroke risk stratification in atrial fibrillation. Am J Med. 2010 Jun;123(6):484-8. Review."
+        ]
+      }
     }
   ]
 }
