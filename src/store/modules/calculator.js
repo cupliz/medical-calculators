@@ -218,7 +218,11 @@ export default (state = initialState, action) => {
           questions: createCalculateObject(
             state.data.questions,
             action,
-            'group'
+            'group',
+            {
+              input: action.payload.inputValue,
+              select: action.payload.selectValue
+            }
           )
         }
       }
