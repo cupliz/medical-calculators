@@ -58,7 +58,6 @@ class InputSelectField extends Component {
 }
 
 const mapStateToProps = state => ({
-  totalPoints: state.calculator.data.points
 })
 
 export default connect(mapStateToProps, { typeInput: typeInputSelect, pickSelect: pickInputSelect })(InputSelectField)
