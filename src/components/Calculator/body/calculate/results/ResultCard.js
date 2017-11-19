@@ -37,8 +37,8 @@ const styles = theme => ({
   }
 })
 
-const renderPointsResultCard = (classes, type, points, data) => {
-  if (points === 0 && !data) {
+const renderPointsResultCard = (classes, type, points, pointsData) => {
+  if (points === 0 && !pointsData) {
     return null
   } else {
     return (
@@ -63,8 +63,8 @@ const renderPointsResultCard = (classes, type, points, data) => {
           <Typography type='title' className={classes.contentText}>
             {points}
           </Typography>
-          {data &&
-            data.map(item => (
+          {pointsData &&
+            pointsData.map(item => (
               <Typography
                 key={`${points}-${item}`}
                 className={classes.contentText}
@@ -93,12 +93,12 @@ class ResultCard extends Component {
   }
 
   render () {
-    const { classes, type, points, data } = this.props
+    const { classes, type, points, pointsData } = this.props
 
     if (type === 'formula') {
       return null
-    } else if (type === points) {
-      return renderPointsResultCard(classes, type, points, data)
+    } else if (type === 'points') {
+      return renderPointsResultCard(classes, type, points, pointsData)
     }
   }
 }
@@ -113,7 +113,7 @@ const mapStateToProps = state => {
     id,
     type,
     points,
-    data: results[points]
+    pointsData: results[points]
   }
 }
 
