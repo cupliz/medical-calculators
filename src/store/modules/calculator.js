@@ -1,5 +1,9 @@
 import axios from 'axios'
-import { createCalculateArray, createCalculateObject, deleteProperty } from '../../utils/immutable'
+import {
+  createCalculateArray,
+  createCalculateObject,
+  deleteProperty
+} from '../../utils/immutable'
 
 // ------------------------------------
 // Constants
@@ -87,7 +91,11 @@ export const pickCheckboxAnswer = (
   }
 }
 
-export const typePickInputSelect = (group = '', inputValue = '', selectValue = '') => {
+export const typePickInputSelect = (
+  group = '',
+  inputValue = '',
+  selectValue = ''
+) => {
   return {
     type: TYPE_PICK_INPUT_SELECT,
     payload: {
@@ -180,7 +188,15 @@ export default (state = initialState, action) => {
         data: {
           ...state.data,
           points: action.payload.pointsTotal,
-          questions: createCalculateObject(state.data.questions, action, 'group')
+          questions: createCalculateObject(
+            state.data.questions,
+            action,
+            'group',
+            {
+              answer: action.payload.answer,
+              points: action.payload.pointsChange
+            }
+          )
         }
       }
 
@@ -190,11 +206,7 @@ export default (state = initialState, action) => {
         data: {
           ...state.data,
           points: action.payload.pointsTotal,
-          questions: createCalculateArray(
-            state.data.questions,
-            action,
-            'group'
-          )
+          questions: createCalculateArray(state.data.questions, action, 'group')
         }
       }
 
@@ -203,7 +215,11 @@ export default (state = initialState, action) => {
         ...state,
         data: {
           ...state.data,
-          questions: createCalculateObject(state.data.questions, action, 'group')
+          questions: createCalculateObject(
+            state.data.questions,
+            action,
+            'group'
+          )
         }
       }
 

@@ -4,7 +4,7 @@ export const deleteProperty = (state, id) => {
   return newState
 }
 
-export const createCalculateObject = (array, action, fieldName) => {
+export const createCalculateObject = (array, action, fieldName, calculateObject) => {
   return array.map(item => {
     if (item[fieldName] !== action.payload[fieldName]) {
       // This isn't the item we care about - keep it as-is
@@ -14,10 +14,7 @@ export const createCalculateObject = (array, action, fieldName) => {
     // Otherwise, this is the one we want - return an updated value
     return {
       ...item,
-      calculate: {
-        answer: action.payload.answer,
-        points: action.payload.pointsChange
-      }
+      calculate: calculateObject
     }
   })
 }
