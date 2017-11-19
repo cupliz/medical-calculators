@@ -1,7 +1,7 @@
 import React from 'react'
 import QuestionGroup from './QuestionGroup'
 import InfoGroup from './InfoGroup'
-import ResultCard from './ResultCard'
+import ResultCard from './results/ResultCard'
 import { connect } from 'react-redux'
 
 const renderQuestionGroups = questions =>
