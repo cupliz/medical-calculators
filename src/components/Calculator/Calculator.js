@@ -11,12 +11,28 @@ const ErrorView = props => (
   <div>I'm sorry! Error: {props.errorMessage}. Please try again.</div>
 )
 
-const ComponentView = props => (
-  <div className='calculator'>
-    <CalculatorHeader title={props.data.title} />
-    <CalculatorBody data={props.data} />
-  </div>
-)
+class ComponentView extends Component {
+  componentDidMount () {
+    if (this.props.calculator.data.type === 'formula') {
+      console.log('formula')
+      import(`./${this.props.calculatorId}.js`)
+        .then(module => {
+          console.log(module)
+        })
+        .catch(err => {
+          console.log(err.message)
+        })
+    }
+  }
+  render () {
+    return (
+      <div className='calculator'>
+        <CalculatorHeader title={this.props.data.title} />
+        <CalculatorBody data={this.props.data} />
+      </div>
+    )
+  }
+}
 
 const CalculatorBranch = props => {
   if (props.loading) {
@@ -33,16 +49,6 @@ const CalculatorBranch = props => {
 class Calculator extends Component {
   componentDidMount () {
     this.props.fetchCalcData(this.props.calculatorId)
-    if (this.props.calculator.data.type === 'formula') {
-      console.log('formula')
-      import(`./${this.props.calculatorId}.js`)
-        .then(module => {
-          console.log(module)
-        })
-        .catch(err => {
-          console.log(err.message)
-        })
-    }
   }
 
   render () {
