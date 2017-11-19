@@ -1203,21 +1203,7 @@
           }
         }
       ],
-      "results": {
-        "3": ["Abnormal"],
-        "4": ["Abnormal"],
-        "5": ["Abnormal"],
-        "6": ["Abnormal"],
-        "7": ["Abnormal"],
-        "8": ["Abnormal"],
-        "9": ["Abnormal"],
-        "10": ["Abnormal"],
-        "11": ["Abnormal"],
-        "12": ["Abnormal"],
-        "13": ["Abnormal"],
-        "14": ["Abnormal"],
-        "15": ["Normal"]
-      },
+      "results": {},
       "notes": {
         "type": "unordered-list",
         "content": [
