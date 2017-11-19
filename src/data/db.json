@@ -1097,6 +1097,14 @@
             "options": "Answers both correctly/Answers one correctly/Both incorrect",
             "points": "0/1/2"
           }
+        },
+        {
+          "group": "Patient Opens and Close Eyes on Command",
+          "data": {
+            "type": "radio",
+            "options": "Obeys both correctly/Obeys one correctly/Both incorrect",
+            "points": "0/1/2"
+          }
         }
       ],
       "results": {
