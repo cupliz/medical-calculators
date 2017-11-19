@@ -9,6 +9,11 @@ const doseFormula = (weight, dosage) => {
   return weight * dosage
 }
 
+const liquidDoseFormula = (weight, dosage) => {
+  // Dose = Weight * Dosage
+  return weight * dosage
+}
+
 const FormulaComponent = props => {
   const { classes } = props
   return (
