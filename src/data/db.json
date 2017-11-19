@@ -1113,6 +1113,14 @@
             "options": "Normal/Partial gaze palsy/Forced deviation",
             "points": "0/1/2"
           }
+        },
+        {
+          "group": "Visual Field testing",
+          "data": {
+            "type": "radio",
+            "options": "No visual field loss/Partial hemianopia/Complete hemianopia/Bilateral hemianopia (blind including cortical blindness)",
+            "points": "0/1/2/3"
+          }
         }
       ],
       "results": {
