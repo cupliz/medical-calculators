@@ -101,7 +101,8 @@ class ResultCard extends Component {
     const { classes, type, points, pointsData } = this.props
 
     if (type === 'formula') {
-      return this.state.formulaModule ? <p>loaded</p> : <p>wait</p>
+      const { formulaModule: Component } = this.state
+      return <div>{Component && <Component />}</div>
     } else if (type === 'points') {
       return renderPointsResultCard(classes, type, points, pointsData)
     }
