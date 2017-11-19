@@ -15,7 +15,10 @@ const liquidDoseFormula = (weight, dosage) => {
 }
 
 const FormulaComponent = props => {
-  const { classes } = props
+  const { classes, data } = props
+  const dosage = data.questions[0].calculate && data.questions[0].calculate.input
+  const weight = data.questions[1].calculate && data.questions[1].calculate.input
+
   return (
     <Card className={classes.card}>
       <CardHeader
@@ -36,7 +39,7 @@ const FormulaComponent = props => {
           Dose
         </Typography>
         <Typography type='title' className={classes.contentText}>
-          123
+          { dosage && weight && doseFormula(dosage, weight) }
         </Typography>
       </CardContent>
     </Card>
