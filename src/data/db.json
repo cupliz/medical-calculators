@@ -1285,13 +1285,6 @@
           "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
         ]
       },
-      "notes": {
-        "type": "unordered-list",
-        "content": [
-          "The Lip-Halperin article seeks to improve stroke risk stratification of the CHADS(2) score by adding more points for age >=75 and Vascular disease.",
-          "The article suggests aspirin or no treatment for a score of 0, and oral anticoagulation when the score is 2 or greater."
-        ]
-      },
       "references": {
         "type": "ordered-list",
         "content": [
