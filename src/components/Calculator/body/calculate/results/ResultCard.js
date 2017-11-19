@@ -97,9 +97,9 @@ class ResultCard extends Component {
 
     if (type === 'formula') {
       return null
+    } else if (type === points) {
+      return renderPointsResultCard(classes, type, points, data)
     }
-
-    return renderPointsResultCard(classes, type, points, data)
   }
 }
 
