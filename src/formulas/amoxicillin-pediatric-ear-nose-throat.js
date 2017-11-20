@@ -114,7 +114,7 @@ class FormulaComponent extends Component {
             </Typography>
             <TextField
               select
-              // value={this.state.select}
+              value={this.state.select}
               // onChange={this.handleChange('select')}
               SelectProps={{
                 classes: {
