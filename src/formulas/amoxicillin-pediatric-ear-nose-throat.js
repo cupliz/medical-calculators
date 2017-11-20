@@ -7,6 +7,12 @@ const doseFormula = (weight, dosage) => {
   // Dose = Weight * Dosage
   return weight * dosage
 }
+
+const conversionDosage = [
+  { value: 1000, unit: 'g/kg' },
+  { value: 0.001, unit: 'mcg/kg' },
+  { value: 1, unit: 'mg/kg' }
+]
 /*
 <select name="Dosage_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
   <option value="1000|0|gm/kg">gm/kg</option>
