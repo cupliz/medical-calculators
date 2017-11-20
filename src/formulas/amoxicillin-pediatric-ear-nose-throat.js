@@ -20,9 +20,6 @@ const FormulaComponent = ({ classes, data }) => {
   const weightUnits =
     data.questions[1].calculate && data.questions[1].calculate.select
 
-  console.log(dosageValue, dosageUnits)
-  console.log(weightValue, weightUnits)
-
   if (dosageValue && weightValue) {
     return (
       <ResultCardHeader classes={classes}>
