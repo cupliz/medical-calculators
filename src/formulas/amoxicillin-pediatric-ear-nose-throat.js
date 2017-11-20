@@ -109,6 +109,12 @@ class FormulaComponent extends Component {
     })
   }
 
+  handleDecimalChange = action => {
+    action === '+'
+      ? this.setState({ decimal: this.state.decimal + 1 })
+      : this.setState({ decimal: this.state.decimal - 1 })
+  }
+
   render () {
     const { classes, data } = this.props
 
@@ -227,6 +233,7 @@ class FormulaComponent extends Component {
                   color='primary'
                   aria-label='add'
                   className={classes.decimalButton}
+                  onClick={() => this.handleDecimalChange('-')}
                 >
                   <RemoveIcon />
                 </Button>
@@ -238,6 +245,7 @@ class FormulaComponent extends Component {
                   color='primary'
                   aria-label='add'
                   className={classes.decimalButton}
+                  onClick={() => this.handleDecimalChange('+')}
                 >
                   <AddIcon />
                 </Button>
