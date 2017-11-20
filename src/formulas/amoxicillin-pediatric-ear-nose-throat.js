@@ -231,7 +231,7 @@ class FormulaComponent extends Component {
                   <RemoveIcon />
                 </Button>
                 <Typography type='title' className={classes.decimalPoint}>
-                  1
+                  {this.state.decimal}
                 </Typography>
                 <Button
                   fab
