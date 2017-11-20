@@ -16,7 +16,7 @@ const dosageUnitData = [
 
 const weightUnitData = [
   { value: 1, unit: 'kg' },
-  { value: 0.45359237, unit: 'lb' }
+  { value: 0.45359237, unit: 'lbs' }
 ]
 
 const medAmountUnitData = [
@@ -80,16 +80,21 @@ const FormulaComponent = ({ classes, data }) => {
 
   if (data.questions[0].calculate) {
     dosageValue = data.questions[0].calculate.input
-    dosageUnit = data.questions[0].calculate.select
+    dosageUnitData.filter(item => {
+      if (item.unit === data.questions[0].calculate.select) {
+        dosageUnit = item.value
+      }
+    })
   }
 
   if (data.questions[1].calculate) {
     weightValue = data.questions[1].calculate.input
-    weightUnit = data.questions[1].calculate.select
+    weightUnitData.filter(item => {
+      if (item.unit === data.questions[1].calculate.select) {
+        weightUnit = item.value
+      }
+    })
   }
-
-  console.log(dosageValue, dosageUnit)
-  console.log(weightValue, weightUnit)
 
   if (dosageValue && weightValue) {
     return (
@@ -99,7 +104,7 @@ const FormulaComponent = ({ classes, data }) => {
             Dose
           </Typography>
           <Typography type='title' className={classes.contentText}>
-            {doseFormula(dosageValue, 1, weightValue, 1)}
+            {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
           </Typography>
         </CardContent>
       </ResultCardHeader>
