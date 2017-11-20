@@ -5,11 +5,6 @@ import { ResultCardHeader } from '../components/Calculator/body/calculate/result
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
 
-const doseFormula = (dosageValue, dosageUnit, weightValue, weightUnit) => {
-  // Dose = Weight * Dosage
-  return dosageValue * dosageUnit * weightValue * weightUnit
-}
-
 const dosageUnitData = [
   { value: 1000, unit: 'gm/kg' },
   { value: 0.001, unit: 'mcg/kg' },
@@ -76,6 +71,22 @@ class FormulaComponent extends Component {
     selectValue: 1
   }
 
+  handleFormulaCalculation = (
+    dosageValue,
+    dosageUnit,
+    weightValue,
+    weightUnit
+  ) => {
+    // Dose = Weight * Dosage
+    return (
+      dosageValue *
+      dosageUnit *
+      weightValue *
+      weightUnit *
+      this.state.selectValue
+    )
+  }
+
   handleSelectChange = event => {
     const { value } = event.target
     let selectValue = 1
@@ -123,7 +134,12 @@ class FormulaComponent extends Component {
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
-                {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
+                {this.handleFormulaCalculation(
+                  dosageValue,
+                  dosageUnit,
+                  weightValue,
+                  weightUnit
+                )}
               </Typography>
               <TextField
                 select
