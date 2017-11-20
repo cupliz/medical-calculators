@@ -22,9 +22,9 @@ const FormulaComponent = ({ classes, data }) => {
     dosageUnits = data.questions[0].calculate.select.split('/')[0]
   }
 
-  if (data.questions[0].calculate) {
-    dosageValue = data.questions[1].calculate.input
-    dosageUnits = data.questions[1].calculate.select
+  if (data.questions[1].calculate) {
+    weightValue = data.questions[1].calculate.input
+    weightUnits = data.questions[1].calculate.select
   }
 
   console.log(dosageValue, dosageUnits)
