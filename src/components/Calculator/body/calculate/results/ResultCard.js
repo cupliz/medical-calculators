@@ -37,8 +37,11 @@ const styles = theme => ({
   decimalPrecisionWrapper: {
     display: 'flex',
     alignItems: 'baseline',
-    marginTop: 25,
-    borderTop: `1px solid ${theme.brand.colors.separatorGrey}`
+    borderTop: `1px solid ${theme.brand.colors.separatorGrey}`,
+    marginTop: 10
+  },
+  decimalPrecision: {
+    marginTop: 25
   },
   select: { width: 'auto' }
 })
