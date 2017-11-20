@@ -73,7 +73,8 @@ class FormulaComponent extends Component {
     doseSelectUnit: 'mg Daily',
     doseSelectValue: 1,
     liquidDoseSelectUnit: 'mL Daily',
-    liquidDoseSelectValue: 1
+    liquidDoseSelectValue: 1,
+    decimal: 0
   }
 
   handleFormulaCalculation = (val1, unit1, val2, unit2, selectValue) => {
