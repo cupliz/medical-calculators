@@ -397,7 +397,7 @@
               "placeholder": "Enter drug dose",
               "values": [
                 "mg/kg",
-                "gm/kg",
+                "g/kg",
                 "mcg/kg"
               ]
             }
