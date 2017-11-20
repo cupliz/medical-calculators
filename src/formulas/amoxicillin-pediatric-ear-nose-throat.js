@@ -187,17 +187,18 @@ class FormulaComponent extends Component {
                   medAmountValue,
                   medAmountUnit,
                   perVolumeValue,
-                  perVolumeUnit
+                  perVolumeUnit,
+                  this.state.liquidDoseSelectValue
                 )}
               </Typography>
               <TextField
                 select
-                value={this.state.doseSelectUnit}
+                value={this.state.liquidDoseSelectUnit}
                 onChange={this.handleSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {doseUnitData.map(option => (
+                {liquidDoseUnitData.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
