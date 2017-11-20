@@ -54,31 +54,25 @@ const conversionDoseUnit = [
   { value: 6, unit: 'mg q4 hr' }
 ]
 
+const liquidDoseUnit = [
+  { value: 2000, unit: 'L BID' },
+  { value: 1000, unit: 'L Daily' },
+  { value: 4000, unit: 'L QID' },
+  { value: 3000, unit: 'L TID' },
+  { value: 24000, unit: 'L q1 hr' },
+  { value: 12000, unit: 'L q2 hr' },
+  { value: 6000, unit: 'L q4 hr' },
+  { value: 2, unit: 'mL BID' },
+  { value: 1, unit: 'mL Daily' },
+  { value: 4, unit: 'mL QID' },
+  { value: 3, unit: 'mL TID' },
+  { value: 24, unit: 'mL q1 hr' },
+  { value: 12, unit: 'mL q2 hr' },
+  { value: 6, unit: 'mL q4 hr' }
+]
+
 /*
 
-<select name="Dose_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
-  <option value="2000|0|gm BID">gm BID</option>
-  <option value="1000|0|gm Daily">gm Daily</option>
-  <option value="4000|0|gm QID">gm QID</option>
-  <option value="3000|0|gm TID">gm TID</option>
-  <option value="24000|0|gm q1 hr">gm q1 hr</option>
-  <option value="12000|0|gm q2 hr">gm q2 hr</option>
-  <option value="6000|0|gm q4 hr">gm q4 hr</option>
-  <option value="0.002|0|mcg BID">mcg BID</option>
-  <option value="0.001|0|mcg Daily">mcg Daily</option>
-  <option value="0.004|0|mcg QID">mcg QID</option>
-  <option value="0.003|0|mcg TID">mcg TID</option>
-  <option value="0.024|0|mcg q1 hr">mcg q1 hr</option>
-  <option value="0.012|0|mcg q2 hr">mcg q2 hr</option>
-  <option value="0.006|0|mcg q4 hr">mcg q4 hr</option>
-  <option value="2|0|mg BID">mg BID</option>
-  <option value="1|0|mg Daily" selected="selected">mg Daily</option>
-  <option value="4|0|mg QID">mg QID</option>
-  <option value="3|0|mg TID">mg TID</option>
-  <option value="24|0|mg q1 hr">mg q1 hr</option>
-  <option value="12|0|mg q2 hr">mg q2 hr</option>
-  <option value="6|0|mg q4 hr">mg q4 hr</option>
-</select>
 
 <select name="Liquid_Dose_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
   <option value="2000|0|L BID">L BID</option>
