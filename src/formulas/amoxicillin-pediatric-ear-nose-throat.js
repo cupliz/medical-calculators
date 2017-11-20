@@ -2,6 +2,8 @@ import React from 'react'
 import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
+import math from 'mathjs'
+import convert from 'convert-units'
 
 const doseFormula = (weight, dosage) => {
   // Dose = Weight * Dosage
@@ -19,6 +21,11 @@ const FormulaComponent = ({ classes, data }) => {
     data.questions[0].calculate && data.questions[0].calculate.select
   const weightUnits =
     data.questions[1].calculate && data.questions[1].calculate.select
+  
+  console.log(math.unit('2 inch'))
+
+  console.log(dosageValue, dosageUnits)
+  console.log(weightValue, weightUnits)
 
   if (dosageValue && weightValue) {
     return (
