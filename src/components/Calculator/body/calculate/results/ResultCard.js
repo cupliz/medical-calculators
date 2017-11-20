@@ -48,6 +48,9 @@ const styles = theme => ({
     width: 36,
     height: 36,
     boxShadow: 'none'
+  },
+  decimalPoint: {
+    display: 'inline'
   }
 })
 
