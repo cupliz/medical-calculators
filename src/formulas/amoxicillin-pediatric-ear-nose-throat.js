@@ -82,8 +82,7 @@ class FormulaComponent extends Component {
     //     dosageUnit = item.value
     //   }
     // })
-    this.setState({ selectValue: event.target.value })
-    console.log('event.target', event.target)
+    this.setState({ selectUnit: event.target.value })
   }
 
   render () {
@@ -126,13 +125,13 @@ class FormulaComponent extends Component {
               </Typography>
               <TextField
                 select
-                value={this.state.selectValue}
+                value={this.state.selectUnit}
                 onChange={this.handleSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
                 {doseUnitData.map(option => (
-                  <MenuItem key={option.unit} value={option.value}>
+                  <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
                 ))}
