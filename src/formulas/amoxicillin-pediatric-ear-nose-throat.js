@@ -4,6 +4,9 @@ import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
+import Button from 'material-ui/Button'
+import AddIcon from 'material-ui-icons/Add'
+import RemoveIcon from 'material-ui-icons/Remove'
 
 const dosageUnitData = [
   { value: 1000, unit: 'gm/kg' },
@@ -73,13 +76,7 @@ class FormulaComponent extends Component {
     liquidDoseSelectValue: 1
   }
 
-  handleFormulaCalculation = (
-    val1,
-    unit1,
-    val2,
-    unit2,
-    selectValue
-  ) => {
+  handleFormulaCalculation = (val1, unit1, val2, unit2, selectValue) => {
     // Dose = Weight * Dosage
     return val1 * unit1 * val2 * unit2 * selectValue
   }
@@ -105,7 +102,10 @@ class FormulaComponent extends Component {
       }
       return item.value
     })
-    this.setState({ liquidDoseSelectUnit: value, liquidDoseSelectValue: selectValue })
+    this.setState({
+      liquidDoseSelectUnit: value,
+      liquidDoseSelectValue: selectValue
+    })
   }
 
   render () {
@@ -220,6 +220,25 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.decimalPrecision}>
                 Decimal Precision
               </Typography>
+              <div className='decimalButtonsWrapper'>
+                <Button
+                  fab
+                  color='primary'
+                  aria-label='add'
+                  className={classes.button}
+                >
+                  <AddIcon />
+                </Button>
+                1
+                <Button
+                  fab
+                  color='primary'
+                  aria-label='add'
+                  className={classes.button}
+                >
+                  <RemoveIcon />
+                </Button>
+              </div>
             </div>
           </CardContent>
         </ResultCardHeader>
