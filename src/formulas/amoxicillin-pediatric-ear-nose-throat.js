@@ -3,34 +3,34 @@ import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
 
-const doseFormula = (weight, dosage) => {
+const doseFormula = (dosageValue, dosageUnit, weightValue, weightUnit) => {
   // Dose = Weight * Dosage
-  return weight * dosage
+  return dosageValue * dosageUnit * weightValue * weightUnit
 }
 
-const conversionDosage = [
+const dosageUnitData = [
   { value: 1000, unit: 'gm/kg' },
   { value: 0.001, unit: 'mcg/kg' },
   { value: 1, unit: 'mg/kg' }
 ]
 
-const conversionWeight = [
+const weightUnitData = [
   { value: 1, unit: 'kg' },
   { value: 0.45359237, unit: 'lb' }
 ]
 
-const conversionMedAmount = [
+const medAmountUnitData = [
   { value: 1000, unit: 'gm' },
   { value: 0.001, unit: 'mcg' },
   { value: 1, unit: 'mg' }
 ]
 
-const conversionPerVolume = [
+const perVolumeUnitData = [
   { value: 1000, unit: 'L' },
   { value: 1, unit: 'mL' }
 ]
 
-const conversionDoseUnit = [
+const doseUnitData = [
   { value: 2000, unit: 'gm BID' },
   { value: 1000, unit: 'gm Daily' },
   { value: 4000, unit: 'gm QID' },
@@ -54,7 +54,7 @@ const conversionDoseUnit = [
   { value: 6, unit: 'mg q4 hr' }
 ]
 
-const liquidDoseUnit = [
+const liquidDoseUnitData = [
   { value: 2000, unit: 'L BID' },
   { value: 1000, unit: 'L Daily' },
   { value: 4000, unit: 'L QID' },
@@ -80,7 +80,7 @@ const FormulaComponent = ({ classes, data }) => {
 
   if (data.questions[0].calculate) {
     dosageValue = data.questions[0].calculate.input
-    dosageUnit = data.questions[0].calculate.select.split('/')[0]
+    dosageUnit = data.questions[0].calculate.select
   }
 
   if (data.questions[1].calculate) {
@@ -99,7 +99,7 @@ const FormulaComponent = ({ classes, data }) => {
             Dose
           </Typography>
           <Typography type='title' className={classes.contentText}>
-            {doseFormula(dosageValue,, dosageUnit weightValue)}
+            {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
           </Typography>
         </CardContent>
       </ResultCardHeader>
