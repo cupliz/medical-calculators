@@ -437,7 +437,7 @@
               "type": "input/select",
               "placeholder": "Enter medication volume",
               "values": [
-                "ml",
+                "mL",
                 "L"
               ]
             }

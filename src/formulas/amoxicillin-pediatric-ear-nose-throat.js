@@ -114,6 +114,8 @@ class FormulaComponent extends Component {
     let perVolumeValue = null
     let perVolumeUnit = null
 
+
+
     if (data.questions[0].calculate) {
       dosageValue = data.questions[0].calculate.input
       dosageUnitData.filter(item => {
@@ -149,6 +151,8 @@ class FormulaComponent extends Component {
         }
       })
     }
+
+    console.log(medAmountValue, medAmountUnit, perVolumeValue, perVolumeUnit)
 
     if (dosageValue && weightValue) {
       return (
