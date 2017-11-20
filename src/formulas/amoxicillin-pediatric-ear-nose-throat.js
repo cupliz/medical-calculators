@@ -81,13 +81,7 @@ class FormulaComponent extends Component {
     selectValue
   ) => {
     // Dose = Weight * Dosage
-    return (
-      dosageValue *
-      dosageUnit *
-      weightValue *
-      weightUnit *
-      selectValue
-    )
+    return dosageValue * dosageUnit * weightValue * weightUnit * selectValue
   }
 
   handleSelectChange = event => {
@@ -113,8 +107,6 @@ class FormulaComponent extends Component {
     let medAmountUnit = null
     let perVolumeValue = null
     let perVolumeUnit = null
-
-
 
     if (data.questions[0].calculate) {
       dosageValue = data.questions[0].calculate.input
@@ -151,8 +143,6 @@ class FormulaComponent extends Component {
         }
       })
     }
-
-    console.log(medAmountValue, medAmountUnit, perVolumeValue, perVolumeUnit)
 
     if (dosageValue && weightValue) {
       return (
