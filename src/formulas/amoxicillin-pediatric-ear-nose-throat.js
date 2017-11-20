@@ -75,7 +75,8 @@ class FormulaComponent extends Component {
     dosageValue,
     dosageUnit,
     weightValue,
-    weightUnit
+    weightUnit,
+    selectValue
   ) => {
     // Dose = Weight * Dosage
     return (
@@ -83,7 +84,7 @@ class FormulaComponent extends Component {
       dosageUnit *
       weightValue *
       weightUnit *
-      this.state.selectValue
+      selectValue
     )
   }
 
@@ -160,7 +161,31 @@ class FormulaComponent extends Component {
                   dosageValue,
                   dosageUnit,
                   weightValue,
-                  weightUnit
+                  weightUnit,
+                  this.state.selectValue
+                )}
+              </Typography>
+              <TextField
+                select
+                value={this.state.selectUnit}
+                onChange={this.handleSelectChange}
+                SelectProps={{ classes: { root: this.props.classes.select } }}
+                margin='normal'
+              >
+                {doseUnitData.map(option => (
+                  <MenuItem key={option.unit} value={option.unit}>
+                    {option.unit}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </div>
+            <div className={classes.resultWrapper}>
+              <Typography type='title' className={classes.resultText}>
+                {this.handleFormulaCalculation(
+                  medAmountValue,
+                  medAmountUnit,
+                  perVolumeValue,
+                  perVolumeUnit
                 )}
               </Typography>
               <TextField
