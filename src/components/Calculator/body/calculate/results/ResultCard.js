@@ -35,10 +35,10 @@ const styles = theme => ({
   resultWrapper: { display: 'flex', alignItems: 'baseline' },
   resultText: { marginRight: 15, minWidth: 300 },
   decimalPrecisionWrapper: {
-    display: 'flex',
-    alignItems: 'baseline',
     borderTop: `1px solid ${theme.brand.colors.separatorGrey}`,
-    marginTop: 10
+    marginTop: 10,
+    display: 'flex',
+    alignItems: 'center'
   },
   decimalPrecision: {
     marginTop: 25, marginRight: 15, minWidth: 300
