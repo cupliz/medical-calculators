@@ -25,13 +25,12 @@ const conversionMedAmount = [
   { value: 1, unit: 'mg' }
 ]
 
-/*
+const conversionPerVolume = [
+  { value: 1000, unit: 'L' },
+  { value: 1, unit: 'mL' }
+]
 
-<select name="Med_Amount_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
-  <option value="1000|0|gm">gm</option>
-  <option value="0.001|0|mcg">mcg</option>
-  <option value="1|0|mg" selected="selected">mg</option>
-</select>
+/*
 
 <select name="Per_Volume_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
   <option value="1000|0|L">L</option>
