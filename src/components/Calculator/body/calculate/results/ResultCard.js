@@ -31,7 +31,8 @@ const styles = theme => ({
   },
   contentText: {
     marginBottom: 15
-  }
+  },
+  select: { width: 'auto' }
 })
 
 class ResultCard extends Component {

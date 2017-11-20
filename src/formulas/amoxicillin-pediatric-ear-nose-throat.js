@@ -122,12 +122,7 @@ class FormulaComponent extends Component {
                 value={this.state.select}
                 onChange={this.handleSelectChange}
                 SelectProps={{
-                  classes: {
-                    // root: this.props.classes.select
-                  },
-                  MenuProps: {
-                    // className: this.props.classes.menu
-                  }
+                  classes: { root: this.props.classes.select }
                 }}
                 margin='normal'
               >
