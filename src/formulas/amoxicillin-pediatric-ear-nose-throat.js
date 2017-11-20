@@ -129,20 +129,20 @@ class FormulaComponent extends Component {
       })
     }
 
-    if (data.questions[1].calculate) {
-      weightValue = data.questions[1].calculate.input
-      weightUnitData.filter(item => {
-        if (item.unit === data.questions[1].calculate.select) {
-          weightUnit = item.value
+    if (data.questions[2].calculate) {
+      medAmountValue = data.questions[2].calculate.input
+      medAmountUnitData.filter(item => {
+        if (item.unit === data.questions[2].calculate.select) {
+          medAmountUnit = item.value
         }
       })
     }
 
-    if (data.questions[1].calculate) {
-      weightValue = data.questions[1].calculate.input
-      weightUnitData.filter(item => {
-        if (item.unit === data.questions[1].calculate.select) {
-          weightUnit = item.value
+    if (data.questions[3].calculate) {
+      perVolumeValue = data.questions[3].calculate.input
+      perVolumeUnitData.filter(item => {
+        if (item.unit === data.questions[3].calculate.select) {
+          perVolumeUnit = item.value
         }
       })
     }
