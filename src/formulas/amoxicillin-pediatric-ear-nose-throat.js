@@ -2,6 +2,8 @@ import React from 'react'
 import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
+import MenuItem from 'material-ui/Menu/MenuItem'
+import TextField from 'material-ui/TextField'
 
 const doseFormula = (dosageValue, dosageUnit, weightValue, weightUnit) => {
   // Dose = Weight * Dosage
@@ -106,6 +108,26 @@ const FormulaComponent = ({ classes, data }) => {
           <Typography type='title' className={classes.contentText}>
             {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
           </Typography>
+          <TextField
+            select
+            // value={this.state.select}
+            // onChange={this.handleChange('select')}
+            SelectProps={{
+              classes: {
+                // root: this.props.classes.select
+              },
+              MenuProps: {
+                // className: this.props.classes.menu
+              }
+            }}
+            margin='normal'
+          >
+            {doseUnitData.map(option => (
+              <MenuItem key={option} value={option}>
+                {option}
+              </MenuItem>
+            ))}
+          </TextField>
         </CardContent>
       </ResultCardHeader>
     )
