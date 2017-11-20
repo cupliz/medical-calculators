@@ -74,14 +74,14 @@ class FormulaComponent extends Component {
   }
 
   handleFormulaCalculation = (
-    dosageValue,
-    dosageUnit,
-    weightValue,
-    weightUnit,
+    val1,
+    unit1,
+    val2,
+    unit2,
     selectValue
   ) => {
     // Dose = Weight * Dosage
-    return dosageValue * dosageUnit * weightValue * weightUnit * selectValue
+    return val1 * unit1 * val2 * unit2 * selectValue
   }
 
   handleDoseSelectChange = event => {
