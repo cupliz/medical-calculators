@@ -33,7 +33,7 @@ const styles = theme => ({
     marginBottom: 15
   },
   resultWrapper: { display: 'flex', alignItems: 'baseline' },
-  resultText: { marginRight: 15 },
+  resultText: { marginRight: 15, minWidth: 200 },
   select: { width: 'auto' }
 })
 

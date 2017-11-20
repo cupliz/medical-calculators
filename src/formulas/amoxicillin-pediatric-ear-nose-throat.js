@@ -106,12 +106,34 @@ class FormulaComponent extends Component {
     let dosageUnit = null
     let weightValue = null
     let weightUnit = null
+    let medAmountValue = null
+    let medAmountUnit = null
+    let perVolumeValue = null
+    let perVolumeUnit = null
 
     if (data.questions[0].calculate) {
       dosageValue = data.questions[0].calculate.input
       dosageUnitData.filter(item => {
         if (item.unit === data.questions[0].calculate.select) {
           dosageUnit = item.value
+        }
+      })
+    }
+
+    if (data.questions[1].calculate) {
+      weightValue = data.questions[1].calculate.input
+      weightUnitData.filter(item => {
+        if (item.unit === data.questions[1].calculate.select) {
+          weightUnit = item.value
+        }
+      })
+    }
+
+    if (data.questions[1].calculate) {
+      weightValue = data.questions[1].calculate.input
+      weightUnitData.filter(item => {
+        if (item.unit === data.questions[1].calculate.select) {
+          weightUnit = item.value
         }
       })
     }
