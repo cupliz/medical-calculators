@@ -99,7 +99,7 @@ const FormulaComponent = ({ classes, data }) => {
             Dose
           </Typography>
           <Typography type='title' className={classes.contentText}>
-            {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
+            {doseFormula(dosageValue, 1, weightValue, 1)}
           </Typography>
         </CardContent>
       </ResultCardHeader>
