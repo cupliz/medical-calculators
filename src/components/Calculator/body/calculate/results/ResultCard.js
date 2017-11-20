@@ -41,7 +41,7 @@ const styles = theme => ({
     marginTop: 10
   },
   decimalPrecision: {
-    marginTop: 25
+    marginTop: 25, marginRight: 15, minWidth: 300
   },
   select: { width: 'auto' }
 })
