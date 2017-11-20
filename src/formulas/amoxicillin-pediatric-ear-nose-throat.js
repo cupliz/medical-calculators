@@ -227,7 +227,7 @@ class FormulaComponent extends Component {
                   aria-label='add'
                   className={classes.decimalButton}
                 >
-                  <AddIcon />
+                  <RemoveIcon />
                 </Button>
                 <Typography type='title' className={classes.decimalPoint}>
                   1
@@ -238,7 +238,7 @@ class FormulaComponent extends Component {
                   aria-label='add'
                   className={classes.decimalButton}
                 >
-                  <RemoveIcon />
+                  <AddIcon />
                 </Button>
               </div>
             </div>
