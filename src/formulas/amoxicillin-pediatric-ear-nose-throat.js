@@ -12,15 +12,20 @@ const doseFormula = (weight, dosage) => {
 
 const FormulaComponent = ({ classes, data }) => {
   // extract needed field vars
+  let dosageValue = null
+  let dosageUnits = null
+  let weightValue = null
+  let weightUnits = null
 
-  const dosageValue =
-    data.questions[0].calculate && data.questions[0].calculate.input
-  const weightValue =
-    data.questions[1].calculate && data.questions[1].calculate.input
-  const dosageUnits =
-    data.questions[0].calculate && data.questions[0].calculate.select.split('/')[0]
-  const weightUnits =
-    data.questions[1].calculate && data.questions[1].calculate.select
+  if (data.questions[0].calculate) {
+    dosageValue = data.questions[0].calculate.input
+    dosageUnits = data.questions[0].calculate.select.split('/')[0]
+  }
+
+  if (data.questions[0].calculate) {
+    dosageValue = data.questions[1].calculate.input
+    dosageUnits = data.questions[1].calculate.select
+  }
 
   console.log(dosageValue, dosageUnits)
   console.log(weightValue, weightUnits)
