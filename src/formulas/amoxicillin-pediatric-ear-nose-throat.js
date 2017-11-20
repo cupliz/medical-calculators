@@ -71,27 +71,6 @@ const liquidDoseUnit = [
   { value: 6, unit: 'mL q4 hr' }
 ]
 
-/*
-
-
-<select name="Liquid_Dose_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
-  <option value="2000|0|L BID">L BID</option>
-<option value="1000|0|L Daily">L Daily</option>
-<option value="4000|0|L QID">L QID</option>
-<option value="3000|0|L TID">L TID</option>
-<option value="24000|0|L q1 hr">L q1 hr</option>
-<option value="12000|0|L q2 hr">L q2 hr</option>
-<option value="6000|0|L q4 hr">L q4 hr</option>
-<option value="2|0|mL BID">mL BID</option>
-<option value="1|0|mL Daily" selected="selected">mL Daily</option>
-<option value="4|0|mL QID">mL QID</option>
-<option value="3|0|mL TID">mL TID</option>
-<option value="24|0|mL q1 hr">mL q1 hr</option>
-<option value="12|0|mL q2 hr">mL q2 hr</option>
-<option value="6|0|mL q4 hr">mL q4 hr</option>
-</select>
-*/
-
 const FormulaComponent = ({ classes, data }) => {
   // extract needed field vars
   let dosageValue = null
