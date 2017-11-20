@@ -32,7 +32,26 @@ const conversionPerVolume = [
 
 const conversionDoseUnit = [
   { value: 2000, unit: 'gm BID' },
-  { value: 1, unit: 'mL' }
+  { value: 1000, unit: 'gm Daily' },
+  { value: 4000, unit: 'gm QID' },
+  { value: 3000, unit: 'gm TID' },
+  { value: 24000, unit: 'gm q1 hr' },
+  { value: 12000, unit: 'gm q2 hr' },
+  { value: 6000, unit: 'gm q4 hr' },
+  { value: 0.002, unit: 'mcg BID' },
+  { value: 0.001, unit: 'mcg Daily' },
+  { value: 0.004, unit: 'mcg QID' },
+  { value: 0.003, unit: 'mcg TID' },
+  { value: 0.024, unit: 'mcg q1 hr' },
+  { value: 0.012, unit: 'mcg q2 hr' },
+  { value: 0.006, unit: 'mcg q4 hr' },
+  { value: 2, unit: 'mg BID' },
+  { value: 1, unit: 'mg Daily' },
+  { value: 4, unit: 'mg QID' },
+  { value: 3, unit: 'mg TID' },
+  { value: 24, unit: 'mg q1 hr' },
+  { value: 12, unit: 'mg q2 hr' },
+  { value: 6, unit: 'mg q4 hr' }
 ]
 
 /*
