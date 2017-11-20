@@ -2,8 +2,6 @@ import React from 'react'
 import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
-import math from 'mathjs'
-import convert from 'convert-units'
 
 const doseFormula = (weight, dosage) => {
   // Dose = Weight * Dosage
