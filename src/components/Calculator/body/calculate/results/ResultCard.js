@@ -43,11 +43,15 @@ const styles = theme => ({
   decimalPrecision: {
     marginTop: 25, marginRight: 15, minWidth: 300
   },
+  decimalButtonsWrapper: {
+    marginTop: 25
+  },
   select: { width: 'auto' },
   decimalButton: {
     width: 36,
     height: 36,
-    boxShadow: 'none'
+    boxShadow: 'none',
+    marginRight: 10
   },
   decimalPoint: {
     display: 'inline'

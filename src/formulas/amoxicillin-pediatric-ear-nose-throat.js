@@ -220,7 +220,7 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.decimalPrecision}>
                 Decimal Precision
               </Typography>
-              <div className='decimalButtonsWrapper'>
+              <div className={classes.decimalButtonsWrapper}>
                 <Button
                   fab
                   color='primary'
