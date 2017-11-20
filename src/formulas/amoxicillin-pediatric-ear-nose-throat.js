@@ -75,6 +75,10 @@ class FormulaComponent extends Component {
     select: 'mg Daily'
   }
 
+  handleSelectChange = (event) => {
+    console.log('event.target.value', event.target.value)
+  }
+
   render () {
     const { classes, data } = this.props
 
@@ -115,7 +119,7 @@ class FormulaComponent extends Component {
             <TextField
               select
               value={this.state.select}
-              // onChange={this.handleChange('select')}
+              onChange={this.handleSelectChange}
               SelectProps={{
                 classes: {
                   // root: this.props.classes.select
