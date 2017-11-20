@@ -9,7 +9,7 @@ const doseFormula = (weight, dosage) => {
 }
 
 const conversionDosage = [
-  { value: 1000, unit: 'g/kg' },
+  { value: 1000, unit: 'gm/kg' },
   { value: 0.001, unit: 'mcg/kg' },
   { value: 1, unit: 'mg/kg' }
 ]
@@ -30,12 +30,12 @@ const conversionPerVolume = [
   { value: 1, unit: 'mL' }
 ]
 
-/*
+const conversionDoseUnit = [
+  { value: 2000, unit: 'gm BID' },
+  { value: 1, unit: 'mL' }
+]
 
-<select name="Per_Volume_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
-  <option value="1000|0|L">L</option>
-<option value="1|0|mL" selected="selected">mL</option>
-</select>
+/*
 
 <select name="Dose_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
   <option value="2000|0|gm BID">gm BID</option>
