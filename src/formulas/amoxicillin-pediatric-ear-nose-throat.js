@@ -84,7 +84,7 @@ class FormulaComponent extends Component {
     return dosageValue * dosageUnit * weightValue * weightUnit * selectValue
   }
 
-  handleSelectChange = event => {
+  handleDoseSelectChange = event => {
     const { value } = event.target
     let selectValue = 1
     doseUnitData.filter(item => {
@@ -93,6 +93,17 @@ class FormulaComponent extends Component {
       }
     })
     this.setState({ doseSelectUnit: value, doseSelectValue: selectValue })
+  }
+
+  handleLiquidDoseSelectChange = event => {
+    const { value } = event.target
+    let selectValue = 1
+    doseUnitData.filter(item => {
+      if (item.unit === value) {
+        selectValue = item.value
+      }
+    })
+    this.setState({ liquidDoseSelectUnit: value, liquidDoseSelectValue: selectValue })
   }
 
   render () {
@@ -164,7 +175,7 @@ class FormulaComponent extends Component {
               <TextField
                 select
                 value={this.state.doseSelectUnit}
-                onChange={this.handleSelectChange}
+                onChange={this.handleDoseSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
@@ -188,7 +199,7 @@ class FormulaComponent extends Component {
               <TextField
                 select
                 value={this.state.liquidDoseSelectUnit}
-                onChange={this.handleSelectChange}
+                onChange={this.handleLiquidDoseSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
