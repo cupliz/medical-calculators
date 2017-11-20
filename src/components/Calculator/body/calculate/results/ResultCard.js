@@ -32,6 +32,8 @@ const styles = theme => ({
   contentText: {
     marginBottom: 15
   },
+  resultWrapper: { display: 'flex', alignItems: 'baseline' },
+  resultText: { marginRight: 25 },
   select: { width: 'auto' }
 })
 

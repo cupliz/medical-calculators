@@ -113,8 +113,8 @@ class FormulaComponent extends Component {
             <Typography type='caption' className={classes.contentText}>
               Dose
             </Typography>
-            <div className='resultSelectWrapper'>
-              <Typography type='title' className={classes.contentText}>
+            <div className={classes.resultWrapper}>
+              <Typography type='title' className={classes.resultText}>
                 {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
               </Typography>
               <TextField
