@@ -77,12 +77,14 @@ class FormulaComponent extends Component {
   }
 
   handleSelectChange = event => {
-    // doseUnitData.filter(item => {
-    //   if (item.value === data.questions[0].calculate.select) {
-    //     dosageUnit = item.value
-    //   }
-    // })
-    this.setState({ selectUnit: event.target.value })
+    const { value } = event.target
+    let selectValue = 1
+    doseUnitData.filter(item => {
+      if (item.unit === value) {
+        selectValue = item.value
+      }
+    })
+    this.setState({ selectUnit: value, selectValue })
   }
 
   render () {
