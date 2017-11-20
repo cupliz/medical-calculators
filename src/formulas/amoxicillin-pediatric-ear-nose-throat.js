@@ -132,8 +132,8 @@ class FormulaComponent extends Component {
                 margin='normal'
               >
                 {doseUnitData.map(option => (
-                  <MenuItem key={option} value={option}>
-                    {option}
+                  <MenuItem key={option.unit} value={option.value}>
+                    {option.unit}
                   </MenuItem>
                 ))}
               </TextField>
