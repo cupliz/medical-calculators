@@ -91,6 +91,7 @@ class FormulaComponent extends Component {
       if (item.unit === value) {
         selectValue = item.value
       }
+      return item.value
     })
     this.setState({ doseSelectUnit: value, doseSelectValue: selectValue })
   }
@@ -102,6 +103,7 @@ class FormulaComponent extends Component {
       if (item.unit === value) {
         selectValue = item.value
       }
+      return item.value
     })
     this.setState({ liquidDoseSelectUnit: value, liquidDoseSelectValue: selectValue })
   }
@@ -125,6 +127,7 @@ class FormulaComponent extends Component {
         if (item.unit === data.questions[0].calculate.select) {
           dosageUnit = item.value
         }
+        return item.value
       })
     }
 
@@ -134,6 +137,7 @@ class FormulaComponent extends Component {
         if (item.unit === data.questions[1].calculate.select) {
           weightUnit = item.value
         }
+        return item.value
       })
     }
 
@@ -143,6 +147,7 @@ class FormulaComponent extends Component {
         if (item.unit === data.questions[2].calculate.select) {
           medAmountUnit = item.value
         }
+        return item.value
       })
     }
 
@@ -152,6 +157,7 @@ class FormulaComponent extends Component {
         if (item.unit === data.questions[3].calculate.select) {
           perVolumeUnit = item.value
         }
+        return item.value
       })
     }
 
