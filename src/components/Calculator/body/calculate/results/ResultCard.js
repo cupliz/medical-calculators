@@ -44,17 +44,19 @@ const styles = theme => ({
     marginTop: 25, marginRight: 15, minWidth: 300
   },
   decimalButtonsWrapper: {
-    marginTop: 25
+    marginTop: 25,
+    display: 'flex',
+    alignItems: 'center'
   },
   select: { width: 'auto' },
   decimalButton: {
     width: 36,
     height: 36,
-    boxShadow: 'none',
-    marginRight: 10
+    boxShadow: 'none'
   },
   decimalPoint: {
-    display: 'inline'
+    display: 'inline',
+    margin: '0 10px'
   }
 })
 
