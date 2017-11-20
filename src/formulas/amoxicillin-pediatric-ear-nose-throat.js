@@ -9,6 +9,70 @@ const doseFormula = (weight, dosage) => {
   // Dose = Weight * Dosage
   return weight * dosage
 }
+/*
+<select name="Dosage_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
+  <option value="1000|0|gm/kg">gm/kg</option>
+  <option value="0.001|0|mcg/kg">mcg/kg</option>
+  <option value="1|0|mg/kg" selected="selected">mg/kg</option>
+</select>
+
+<select name="Weight_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
+  <option value="1|0|kg" selected="selected">kg</option>
+<option value="0.45359237|0|lb">lb</option>
+</select>
+
+<select name="Med_Amount_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
+  <option value="1000|0|gm">gm</option>
+  <option value="0.001|0|mcg">mcg</option>
+  <option value="1|0|mg" selected="selected">mg</option>
+</select>
+
+<select name="Per_Volume_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
+  <option value="1000|0|L">L</option>
+<option value="1|0|mL" selected="selected">mL</option>
+</select>
+
+<select name="Dose_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
+  <option value="2000|0|gm BID">gm BID</option>
+  <option value="1000|0|gm Daily">gm Daily</option>
+  <option value="4000|0|gm QID">gm QID</option>
+  <option value="3000|0|gm TID">gm TID</option>
+  <option value="24000|0|gm q1 hr">gm q1 hr</option>
+  <option value="12000|0|gm q2 hr">gm q2 hr</option>
+  <option value="6000|0|gm q4 hr">gm q4 hr</option>
+  <option value="0.002|0|mcg BID">mcg BID</option>
+  <option value="0.001|0|mcg Daily">mcg Daily</option>
+  <option value="0.004|0|mcg QID">mcg QID</option>
+  <option value="0.003|0|mcg TID">mcg TID</option>
+  <option value="0.024|0|mcg q1 hr">mcg q1 hr</option>
+  <option value="0.012|0|mcg q2 hr">mcg q2 hr</option>
+  <option value="0.006|0|mcg q4 hr">mcg q4 hr</option>
+  <option value="2|0|mg BID">mg BID</option>
+  <option value="1|0|mg Daily" selected="selected">mg Daily</option>
+  <option value="4|0|mg QID">mg QID</option>
+  <option value="3|0|mg TID">mg TID</option>
+  <option value="24|0|mg q1 hr">mg q1 hr</option>
+  <option value="12|0|mg q2 hr">mg q2 hr</option>
+  <option value="6|0|mg q4 hr">mg q4 hr</option>
+</select>
+
+<select name="Liquid_Dose_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
+  <option value="2000|0|L BID">L BID</option>
+<option value="1000|0|L Daily">L Daily</option>
+<option value="4000|0|L QID">L QID</option>
+<option value="3000|0|L TID">L TID</option>
+<option value="24000|0|L q1 hr">L q1 hr</option>
+<option value="12000|0|L q2 hr">L q2 hr</option>
+<option value="6000|0|L q4 hr">L q4 hr</option>
+<option value="2|0|mL BID">mL BID</option>
+<option value="1|0|mL Daily" selected="selected">mL Daily</option>
+<option value="4|0|mL QID">mL QID</option>
+<option value="3|0|mL TID">mL TID</option>
+<option value="24|0|mL q1 hr">mL q1 hr</option>
+<option value="12|0|mL q2 hr">mL q2 hr</option>
+<option value="6|0|mL q4 hr">mL q4 hr</option>
+</select>
+*/
 
 const FormulaComponent = ({ classes, data }) => {
   // extract needed field vars
