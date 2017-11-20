@@ -110,9 +110,15 @@ class FormulaComponent extends Component {
   }
 
   handleDecimalChange = action => {
-    action === '+'
-      ? this.setState({ decimal: this.state.decimal + 1 })
-      : this.setState({ decimal: this.state.decimal - 1 })
+    const oldDecimal = this.state.decimal
+    if (action === '+') {
+      // add
+      this.setState({ decimal: oldDecimal + 1 })
+    } else {
+      // remove
+      if (oldDecimal === 0) { return }
+      this.setState({ decimal: oldDecimal - 1 })
+    }
   }
 
   render () {
