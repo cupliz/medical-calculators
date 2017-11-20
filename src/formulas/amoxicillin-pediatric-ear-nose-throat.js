@@ -225,7 +225,7 @@ class FormulaComponent extends Component {
                   fab
                   color='primary'
                   aria-label='add'
-                  className={classes.button}
+                  className={classes.decimalButton}
                 >
                   <AddIcon />
                 </Button>
@@ -234,7 +234,7 @@ class FormulaComponent extends Component {
                   fab
                   color='primary'
                   aria-label='add'
-                  className={classes.button}
+                  className={classes.decimalButton}
                 >
                   <RemoveIcon />
                 </Button>

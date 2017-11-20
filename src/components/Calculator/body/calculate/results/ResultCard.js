@@ -43,7 +43,8 @@ const styles = theme => ({
   decimalPrecision: {
     marginTop: 25, marginRight: 15, minWidth: 300
   },
-  select: { width: 'auto' }
+  select: { width: 'auto' },
+  decimalButton: {}
 })
 
 class ResultCard extends Component {
