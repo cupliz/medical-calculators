@@ -71,6 +71,10 @@ const liquidDoseUnitData = [
 ]
 
 class FormulaComponent extends Component {
+  state = {
+    select: 'mg Daily'
+  }
+
   render () {
     const { classes, data } = this.props
 
