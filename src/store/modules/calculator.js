@@ -101,7 +101,7 @@ export const typePickInputSelect = (
     payload: {
       group,
       inputValue,
-      selectValue,
+      doseSelectValue: selectValue,
       receivedAt: new Date().toISOString()
     }
   }
@@ -221,7 +221,7 @@ export default (state = initialState, action) => {
             'group',
             {
               input: action.payload.inputValue,
-              select: action.payload.selectValue
+              select: action.payload.doseSelectValue
             }
           )
         }

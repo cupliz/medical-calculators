@@ -67,8 +67,10 @@ const liquidDoseUnitData = [
 
 class FormulaComponent extends Component {
   state = {
-    selectUnit: 'mg Daily',
-    selectValue: 1
+    doseSelectUnit: 'mg Daily',
+    doseSelectValue: 1,
+    liquidDoseSelectUnit: 'mL Daily',
+    liquidDoseSelectValue: 1
   }
 
   handleFormulaCalculation = (
@@ -96,7 +98,7 @@ class FormulaComponent extends Component {
         selectValue = item.value
       }
     })
-    this.setState({ selectUnit: value, selectValue })
+    this.setState({ doseSelectUnit: value, doseSelectValue: selectValue })
   }
 
   render () {
@@ -162,12 +164,12 @@ class FormulaComponent extends Component {
                   dosageUnit,
                   weightValue,
                   weightUnit,
-                  this.state.selectValue
+                  this.state.doseSelectValue
                 )}
               </Typography>
               <TextField
                 select
-                value={this.state.selectUnit}
+                value={this.state.doseSelectUnit}
                 onChange={this.handleSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
@@ -190,7 +192,7 @@ class FormulaComponent extends Component {
               </Typography>
               <TextField
                 select
-                value={this.state.selectUnit}
+                value={this.state.doseSelectUnit}
                 onChange={this.handleSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
