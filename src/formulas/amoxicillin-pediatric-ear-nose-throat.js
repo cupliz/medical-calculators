@@ -125,7 +125,7 @@ class FormulaComponent extends Component {
                 margin='normal'
               >
                 {doseUnitData.map(option => (
-                  <MenuItem key={option.unit} value={option.value}>
+                  <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
                 ))}
