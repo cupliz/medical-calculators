@@ -216,6 +216,11 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
+            <div className={classes.resultWrapper}>
+              <Typography type='title' className={classes.decimalPrecision}>
+                Decimal Precision
+              </Typography>
+            </div>
           </CardContent>
         </ResultCardHeader>
       )

@@ -34,6 +34,7 @@ const styles = theme => ({
   },
   resultWrapper: { display: 'flex', alignItems: 'baseline' },
   resultText: { marginRight: 15, minWidth: 200 },
+  decimalPrecision: { marginTop: 25 },
   select: { width: 'auto' }
 })
 
