@@ -9,12 +9,21 @@ const doseFormula = (weight, dosage) => {
 }
 
 const FormulaComponent = ({ classes, data }) => {
-  const dosage =
-    data.questions[0].calculate && data.questions[0].calculate.input
-  const weight =
-    data.questions[1].calculate && data.questions[1].calculate.input
+  // extract needed field vars
 
-  if (dosage && weight) {
+  const dosageValue =
+    data.questions[0].calculate && data.questions[0].calculate.input
+  const weightValue =
+    data.questions[1].calculate && data.questions[1].calculate.input
+  const dosageUnits =
+    data.questions[0].calculate && data.questions[0].calculate.select
+  const weightUnits =
+    data.questions[1].calculate && data.questions[1].calculate.select
+
+  console.log(dosageValue, dosageUnits)
+  console.log(weightValue, weightUnits)
+
+  if (dosageValue && weightValue) {
     return (
       <ResultCardHeader classes={classes}>
         <CardContent className={classes.content}>
@@ -22,7 +31,7 @@ const FormulaComponent = ({ classes, data }) => {
             Dose
           </Typography>
           <Typography type='title' className={classes.contentText}>
-            {doseFormula(dosage, weight)}
+            {doseFormula(dosageValue, weightValue)}
           </Typography>
         </CardContent>
       </ResultCardHeader>
