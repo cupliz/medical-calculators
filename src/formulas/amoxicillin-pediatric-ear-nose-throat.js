@@ -121,9 +121,7 @@ class FormulaComponent extends Component {
                 select
                 value={this.state.select}
                 onChange={this.handleSelectChange}
-                SelectProps={{
-                  classes: { root: this.props.classes.select }
-                }}
+                SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
                 {doseUnitData.map(option => (
