@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
@@ -73,66 +73,70 @@ const liquidDoseUnitData = [
   { value: 6, unit: 'mL q4 hr' }
 ]
 
-const FormulaComponent = ({ classes, data }) => {
-  // extract needed field vars
-  let dosageValue = null
-  let dosageUnit = null
-  let weightValue = null
-  let weightUnit = null
+class FormulaComponent extends Component {
+  render () {
+    const { classes, data } = this.props
 
-  if (data.questions[0].calculate) {
-    dosageValue = data.questions[0].calculate.input
-    dosageUnitData.filter(item => {
-      if (item.unit === data.questions[0].calculate.select) {
-        dosageUnit = item.value
-      }
-    })
-  }
+    // extract needed field vars
+    let dosageValue = null
+    let dosageUnit = null
+    let weightValue = null
+    let weightUnit = null
 
-  if (data.questions[1].calculate) {
-    weightValue = data.questions[1].calculate.input
-    weightUnitData.filter(item => {
-      if (item.unit === data.questions[1].calculate.select) {
-        weightUnit = item.value
-      }
-    })
-  }
+    if (data.questions[0].calculate) {
+      dosageValue = data.questions[0].calculate.input
+      dosageUnitData.filter(item => {
+        if (item.unit === data.questions[0].calculate.select) {
+          dosageUnit = item.value
+        }
+      })
+    }
 
-  if (dosageValue && weightValue) {
-    return (
-      <ResultCardHeader classes={classes}>
-        <CardContent className={classes.content}>
-          <Typography type='caption' className={classes.contentText}>
-            Dose
-          </Typography>
-          <Typography type='title' className={classes.contentText}>
-            {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
-          </Typography>
-          <TextField
-            select
-            // value={this.state.select}
-            // onChange={this.handleChange('select')}
-            SelectProps={{
-              classes: {
-                // root: this.props.classes.select
-              },
-              MenuProps: {
-                // className: this.props.classes.menu
-              }
-            }}
-            margin='normal'
-          >
-            {doseUnitData.map(option => (
-              <MenuItem key={option} value={option}>
-                {option}
-              </MenuItem>
-            ))}
-          </TextField>
-        </CardContent>
-      </ResultCardHeader>
-    )
-  } else {
-    return null
+    if (data.questions[1].calculate) {
+      weightValue = data.questions[1].calculate.input
+      weightUnitData.filter(item => {
+        if (item.unit === data.questions[1].calculate.select) {
+          weightUnit = item.value
+        }
+      })
+    }
+
+    if (dosageValue && weightValue) {
+      return (
+        <ResultCardHeader classes={classes}>
+          <CardContent className={classes.content}>
+            <Typography type='caption' className={classes.contentText}>
+              Dose
+            </Typography>
+            <Typography type='title' className={classes.contentText}>
+              {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
+            </Typography>
+            <TextField
+              select
+              // value={this.state.select}
+              // onChange={this.handleChange('select')}
+              SelectProps={{
+                classes: {
+                  // root: this.props.classes.select
+                },
+                MenuProps: {
+                  // className: this.props.classes.menu
+                }
+              }}
+              margin='normal'
+            >
+              {doseUnitData.map(option => (
+                <MenuItem key={option} value={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </TextField>
+          </CardContent>
+        </ResultCardHeader>
+      )
+    } else {
+      return null
+    }
   }
 }
 export default FormulaComponent
