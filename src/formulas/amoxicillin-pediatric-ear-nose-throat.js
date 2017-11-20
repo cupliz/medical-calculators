@@ -75,7 +75,7 @@ class FormulaComponent extends Component {
     select: 'mg Daily'
   }
 
-  handleSelectChange = (event) => {
+  handleSelectChange = event => {
     console.log('event.target.value', event.target.value)
   }
 
@@ -113,29 +113,31 @@ class FormulaComponent extends Component {
             <Typography type='caption' className={classes.contentText}>
               Dose
             </Typography>
-            <Typography type='title' className={classes.contentText}>
-              {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
-            </Typography>
-            <TextField
-              select
-              value={this.state.select}
-              onChange={this.handleSelectChange}
-              SelectProps={{
-                classes: {
-                  // root: this.props.classes.select
-                },
-                MenuProps: {
-                  // className: this.props.classes.menu
-                }
-              }}
-              margin='normal'
-            >
-              {doseUnitData.map(option => (
-                <MenuItem key={option} value={option}>
-                  {option}
-                </MenuItem>
-              ))}
-            </TextField>
+            <div className='resultSelectWrapper'>
+              <Typography type='title' className={classes.contentText}>
+                {doseFormula(dosageValue, dosageUnit, weightValue, weightUnit)}
+              </Typography>
+              <TextField
+                select
+                value={this.state.select}
+                onChange={this.handleSelectChange}
+                SelectProps={{
+                  classes: {
+                    // root: this.props.classes.select
+                  },
+                  MenuProps: {
+                    // className: this.props.classes.menu
+                  }
+                }}
+                margin='normal'
+              >
+                {doseUnitData.map(option => (
+                  <MenuItem key={option} value={option}>
+                    {option}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </div>
           </CardContent>
         </ResultCardHeader>
       )
