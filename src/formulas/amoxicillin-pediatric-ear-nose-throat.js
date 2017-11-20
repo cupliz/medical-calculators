@@ -216,7 +216,7 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
-            <div className={classes.resultWrapper}>
+            <div className={classes.decimalPrecisionWrapper}>
               <Typography type='title' className={classes.decimalPrecision}>
                 Decimal Precision
               </Typography>
