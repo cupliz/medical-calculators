@@ -19,12 +19,13 @@ const conversionWeight = [
   { value: 0.45359237, unit: 'lb' }
 ]
 
-/*
+const conversionMedAmount = [
+  { value: 1000, unit: 'gm' },
+  { value: 0.001, unit: 'mcg' },
+  { value: 1, unit: 'mg' }
+]
 
-<select name="Weight_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
-  <option value="1|0|kg" selected="selected">kg</option>
-<option value="0.45359237|0|lb">lb</option>
-</select>
+/*
 
 <select name="Med_Amount_unit" onchange="WeightBasedDivDose_fx();"  class="medCalcFontSelect calc_unitSelect">
   <option value="1000|0|gm">gm</option>
