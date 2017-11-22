@@ -433,44 +433,7 @@
           ]
         }
       ],
-      "results": {
-        "0": [
-          "Mortality is 1%"
-        ],
-        "1": [
-          "Mortality is 1%"
-        ],
-        "2": [
-          "Mortality is 1%"
-        ],
-        "3": [
-          "Mortality is 16%"
-        ],
-        "4": [
-          "Mortality is 16%"
-        ],
-        "5": [
-          "Mortality is 40%"
-        ],
-        "6": [
-          "Mortality is 40%"
-        ],
-        "7": [
-          "Mortality is almost 100%"
-        ],
-        "8": [
-          "Mortality is almost 100%"
-        ],
-        "9": [
-          "Mortality is almost 100%"
-        ],
-        "10": [
-          "Mortality is almost 100%"
-        ],
-        "11": [
-          "Mortality is almost 100%"
-        ]
-      },
+      "results": {},
       "notes": {
         "type": "unordered-list",
         "content": [
