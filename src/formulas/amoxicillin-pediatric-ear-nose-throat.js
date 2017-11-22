@@ -9,7 +9,7 @@ import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
 const data = {
-  dosageUnitData: [
+  dosageUnit: [
     { value: 1000, unit: 'gm/kg' },
     { value: 0.001, unit: 'mcg/kg' },
     { value: 1, unit: 'mg/kg' }
@@ -137,7 +137,7 @@ class FormulaComponent extends Component {
 
     if (data.questions[0].calculate) {
       dosageValue = data.questions[0].calculate.input
-      data.dosageUnitData.filter(item => {
+      data.dosageUnit.filter(item => {
         if (item.unit === data.questions[0].calculate.select) {
           dosageUnit = item.value
         }
