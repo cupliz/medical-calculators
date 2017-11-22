@@ -85,12 +85,12 @@ class FormulaComponent extends Component {
   ) => {
     // Dose = Weight * Dosage
     // Liquid_Dose =  Dose * Per_Volume / Med_Amount
-    const dose = dosage * weight / selectValue
+    const dose = dosage * weight
     if (type === 'dose') {
-      return dose.toFixed(this.state.decimal)
+      return (dose / selectValue).toFixed(this.state.decimal)
     } else if (type === 'liquidDose') {
       if (medAmount && perVolume) {
-        const liquidDose = (dose * perVolume / medAmount) / liquidSelectValue * selectValue
+        const liquidDose = (dose * perVolume / medAmount) / liquidSelectValue
         return liquidDose.toFixed(this.state.decimal)
       } else {
         return 0
