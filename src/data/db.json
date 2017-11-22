@@ -1450,24 +1450,9 @@
         }
       ],
       "results": {
-        "0": [
-          "Approximate risk of cardiac complication: <1%"
-        ],
-        "1": [
-          "Approximate risk of cardiac complication: <1%"
-        ],
-        "2": [
-          "Approximate risk of cardiac complication: 3%"
-        ],
-        "3": [
-          "Approximate risk of cardiac complication: 8.1%"
-        ],
-        "4": [
-          "Approximate risk of cardiac complication: 8.1%"
-        ],
-        "5": [
-          "Approximate risk of cardiac complication: 8.1%"
-        ]
+        "0 - 1": ["Approximate risk of cardiac complication: <1%"],
+        "2": ["Approximate risk of cardiac complication: 3%"],
+        "3 - 5": ["Approximate risk of cardiac complication: 8.1%"]
       },
       "references": {
         "type": "ordered-list",
