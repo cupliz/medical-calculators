@@ -3,8 +3,8 @@ import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from './ResultCardHeader'
 
-const ResultCardPoints = ({classes, points, pointsData}) => {
-  if (points === 0 && !pointsData) {
+const ResultCardPoints = ({classes, points, results}) => {
+  if (points === 0 && !results) {
     return null
   } else {
     return (
@@ -16,8 +16,8 @@ const ResultCardPoints = ({classes, points, pointsData}) => {
           <Typography type='title' className={classes.contentText}>
             {points}
           </Typography>
-          {/*{pointsData &&*/}
-            {/*pointsData.map(item => (*/}
+          {/*{results &&*/}
+            {/*results.map(item => (*/}
               {/*<Typography*/}
                 {/*key={`${points}-${item}`}*/}
                 {/*className={classes.contentText}*/}
