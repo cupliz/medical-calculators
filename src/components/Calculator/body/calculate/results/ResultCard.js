@@ -105,11 +105,17 @@ class ResultCard extends Component {
         const arrayOfKeys = Object.keys(results)
         // describe how delimiter should look like
         const delimeter = ' - '
+        // get range
+        let requiredRange = null
         const arrayOfDestructuredKeys = arrayOfKeys.map(item => {
           if (item.indexOf(delimeter) !== -1) {
             // string contains range
             // split it and return split string
             const [from, to] = item.split(delimeter)
+            if (points >= from && points <= to) {
+              console.log('points >= from && points <= to')
+              requiredRange = item
+            }
             return item
           } else {
             // string doesn't contain range
@@ -117,10 +123,17 @@ class ResultCard extends Component {
             return item
           }
         })
+        console.log('requiredRange', requiredRange)
         console.log('arrayOfDestructuredKeys', arrayOfDestructuredKeys)
         // it WILL envolve string parsing (15 - 25, -2 - 3)
         // then check where point lies and pass it as results[points]
-        return null
+        return (
+          <ResultCardPoints
+            classes={classes}
+            points={points}
+            results={results[requiredRange]}
+          />
+        )
       }
     }
   }
