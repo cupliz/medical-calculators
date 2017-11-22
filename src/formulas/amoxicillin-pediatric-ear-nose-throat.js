@@ -74,11 +74,21 @@ class FormulaComponent extends Component {
     decimal: 0
   }
 
-  handleFormulaCalculation = (dosageValue, dosageUnitValue, weightValue, weightUnitValue, selectValue) => {
+  handleFormulaCalculation = (
+    dosageValue,
+    dosageUnitValue,
+    weightValue,
+    weightUnitValue,
+    selectValue
+  ) => {
     // Dose = Weight * Dosage
-    return (dosageValue * dosageUnitValue * weightValue * weightUnitValue * selectValue).toFixed(
-      this.state.decimal
-    )
+    return (
+      dosageValue *
+      dosageUnitValue *
+      weightValue *
+      weightUnitValue *
+      selectValue
+    ).toFixed(this.state.decimal)
   }
 
   handleDoseSelectChange = event => {
