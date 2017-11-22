@@ -76,34 +76,21 @@ class FormulaComponent extends Component {
 
   handleDoseCalc = (
     type,
-    dosageValue,
-    dosageUnitValue,
-    weightValue,
-    weightUnitValue,
+    dosage,
+    weight,
     selectValue,
-    medAmountValue,
-    medAmountUnitValue,
-    perVolumeValue,
-    perVolumeUnitValue,
+    medAmount,
+    perVolume,
     liquidSelectValue
   ) => {
     // Dose = Weight * Dosage
     // Liquid_Dose =  Dose * Per_Volume / Med_Amount
-    const dose =
-      dosageValue *
-      dosageUnitValue *
-      weightValue *
-      weightUnitValue *
-      selectValue
+    const dose = dosage * weight * selectValue
     if (type === 'dose') {
       return dose.toFixed(this.state.decimal)
     } else if (type === 'liquidDose') {
-      if (medAmountValue && perVolumeValue) {
-        const liquidDose =
-          dose *
-          (perVolumeValue * perVolumeUnitValue) /
-          (medAmountValue * medAmountUnitValue) *
-          liquidSelectValue
+      if (medAmount && perVolume) {
+        const liquidDose = dose * perVolume / medAmount * liquidSelectValue
         return liquidDose.toFixed(this.state.decimal)
       } else {
         return 0
@@ -187,10 +174,8 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleDoseCalc(
                   'dose',
-                  dosageValue,
-                  dosageUnitValue,
-                  weightValue,
-                  weightUnitValue,
+                  dosageValue * dosageUnitValue,
+                  weightValue * weightUnitValue,
                   this.state.doseSelectValue
                 )}
               </Typography>
@@ -212,15 +197,11 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleDoseCalc(
                   'liquidDose',
-                  dosageValue,
-                  dosageUnitValue,
-                  weightValue,
-                  weightUnitValue,
+                  dosageValue * dosageUnitValue,
+                  weightValue * weightUnitValue,
                   this.state.doseSelectValue,
-                  medAmountValue,
-                  medAmountUnitValue,
-                  perVolumeValue,
-                  perVolumeUnitValue,
+                  medAmountValue * medAmountUnitValue,
+                  perVolumeValue * perVolumeUnitValue,
                   this.state.liquidDoseSelectValue
                 )}
               </Typography>
