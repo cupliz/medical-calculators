@@ -50,7 +50,7 @@ const data = {
     { value: 12, unit: 'mg q2 hr' },
     { value: 6, unit: 'mg q4 hr' }
   ],
-  liquidDoseUnit: [
+  liquidDose: [
     { value: 2000, unit: 'L BID' },
     { value: 1000, unit: 'L Daily' },
     { value: 4000, unit: 'L QID' },
@@ -99,7 +99,7 @@ class FormulaComponent extends Component {
   handleLiquidDoseSelectChange = event => {
     const { value } = event.target
     let selectValue = 1
-    data.liquidDoseUnit.filter(item => {
+    data.liquidDose.filter(item => {
       if (item.unit === value) {
         selectValue = item.value
       }
@@ -226,7 +226,7 @@ class FormulaComponent extends Component {
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {data.liquidDoseUnit.map(option => (
+                {data.liquidDose.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
