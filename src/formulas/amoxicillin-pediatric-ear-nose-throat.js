@@ -9,9 +9,9 @@ import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
 const filterUnit = (arr, select) => {
-  console.log(arr, select)
-  arr.filter(item => {
+  return arr.filter(item => {
     if (item.unit === select) {
+      console.log('MATCH', item.unit, select, item.value)
       return item.value
     } else {
       return null
@@ -154,19 +154,39 @@ class FormulaComponent extends Component {
       if (question.calculate) {
         if (index === 0) {
           dosageValue = question.calculate.input
-          // dosageUnit = filterUnit(unitData.dosage, question.calculate.select)
+          unitData.dosage.filter(item => {
+            if (item.unit === questions[0].calculate.select) {
+              dosageUnit = item.value
+            }
+            return item.value
+          })
         }
         if (index === 1) {
           weightValue = question.calculate.input
-          // weightUnit = filterUnit(unitData.weight, question.calculate.select)
+          unitData.weight.filter(item => {
+            if (item.unit === questions[1].calculate.select) {
+              weightUnit = item.value
+            }
+            return item.value
+          })
         }
         if (index === 2) {
           medAmountValue = question.calculate.input
-          // medAmountUnit = filterUnit(unitData.medAmount, question.calculate.select)
+          data.medAmount.filter(item => {
+            if (item.unit === questions[2].calculate.select) {
+              medAmountUnit = item.value
+            }
+            return item.value
+          })
         }
         if (index === 3) {
           perVolumeValue = question.calculate.input
-          // perVolumeUnit = filterUnit(unitData.perVolume, question.calculate.select)
+          data.perVolume.filter(item => {
+            if (item.unit === questions[3].calculate.select) {
+              perVolumeUnit = item.value
+            }
+            return item.value
+          })
         }
       }
     })
