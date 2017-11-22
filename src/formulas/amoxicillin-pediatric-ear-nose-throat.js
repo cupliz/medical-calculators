@@ -13,19 +13,12 @@ const data = {
     { value: 1000, unit: 'gm/kg' },
     { value: 0.001, unit: 'mcg/kg' },
     { value: 1, unit: 'mg/kg' }
+  ],
+  weightUnitData: [
+    { value: 1, unit: 'kg' },
+    { value: 0.45359237, unit: 'lbs' }
   ]
 }
-
-const dosageUnitData = [
-  { value: 1000, unit: 'gm/kg' },
-  { value: 0.001, unit: 'mcg/kg' },
-  { value: 1, unit: 'mg/kg' }
-]
-
-const weightUnitData = [
-  { value: 1, unit: 'kg' },
-  { value: 0.45359237, unit: 'lbs' }
-]
 
 const medAmountUnitData = [
   { value: 1000, unit: 'gm' },
