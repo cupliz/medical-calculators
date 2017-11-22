@@ -141,27 +141,28 @@ class FormulaComponent extends Component {
       })[0].value
 
     questions.map((question, index) => {
-      if (question.calculate) {
+      const { calculate } = question
+      if (calculate) {
         if (index === 0) {
-          dosageValue = question.calculate.input
-          dosageUnit = filterUnit(unitData.dosage, question.calculate.select)
+          dosageValue = calculate.input
+          dosageUnit = filterUnit(unitData.dosage, calculate.select)
         }
         if (index === 1) {
-          weightValue = question.calculate.input
-          weightUnit = filterUnit(unitData.weight, question.calculate.select)
+          weightValue = calculate.input
+          weightUnit = filterUnit(unitData.weight, calculate.select)
         }
         if (index === 2) {
-          medAmountValue = question.calculate.input
+          medAmountValue = calculate.input
           medAmountUnit = filterUnit(
             unitData.medAmount,
-            question.calculate.select
+            calculate.select
           )
         }
         if (index === 3) {
-          perVolumeValue = question.calculate.input
+          perVolumeValue = calculate.input
           perVolumeUnit = filterUnit(
             unitData.perVolume,
-            question.calculate.select
+            calculate.select
           )
         }
       }
