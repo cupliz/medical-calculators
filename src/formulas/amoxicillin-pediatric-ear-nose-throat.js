@@ -132,7 +132,7 @@ class FormulaComponent extends Component {
 
     // extract needed field vars
     let dosageValue = null
-    let dosageUnit = null
+    let dosageUnitValue = null
     let weightValue = null
     let weightUnit = null
     let medAmountValue = null
@@ -146,7 +146,7 @@ class FormulaComponent extends Component {
         const { input, select } = calculate
         if (index === 0) {
           dosageValue = input
-          dosageUnit = filterUnit(unitData.dosage, select)
+          dosageUnitValue = filterUnit(unitData.dosage, select)
         }
         if (index === 1) {
           weightValue = input
@@ -174,7 +174,7 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalculation(
                   dosageValue,
-                  dosageUnit,
+                  dosageUnitValue,
                   weightValue,
                   weightUnit,
                   this.state.doseSelectValue
