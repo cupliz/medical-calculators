@@ -90,6 +90,7 @@ class ResultCard extends Component {
         )
       )
     } else if (type === 'points') {
+      console.log('points:', points, 'pointsData:', pointsData)
       return (
         <ResultCardPoints
           classes={classes}
@@ -111,7 +112,7 @@ const mapStateToProps = state => {
     id,
     type,
     points,
-    pointsData: results[points],
+    pointsData: results,
     calculatorData: state.calculator.data
   }
 }
