@@ -132,7 +132,7 @@ class FormulaComponent extends Component {
     let dosageValue = null
     let dosageUnit = null
     let weightValue = null
-    let weight = null
+    let weightUnit = null
     let medAmountValue = null
     let medAmount = null
     let perVolumeValue = null
@@ -152,7 +152,7 @@ class FormulaComponent extends Component {
       weightValue = data.questions[1].calculate.input
       data.weight.filter(item => {
         if (item.unit === data.questions[1].calculate.select) {
-          weight = item.value
+          weightUnit = item.value
         }
         return item.value
       })
@@ -191,7 +191,7 @@ class FormulaComponent extends Component {
                   dosageValue,
                   dosageUnit,
                   weightValue,
-                  weight,
+                  weightUnit,
                   this.state.doseSelectValue
                 )}
               </Typography>
