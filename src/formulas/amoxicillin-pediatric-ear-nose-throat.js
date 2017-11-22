@@ -23,7 +23,7 @@ const data = {
     { value: 0.001, unit: 'mcg' },
     { value: 1, unit: 'mg' }
   ],
-  perVolumeUnit: [
+  perVolume: [
     { value: 1000, unit: 'L' },
     { value: 1, unit: 'mL' }
   ],
@@ -136,7 +136,7 @@ class FormulaComponent extends Component {
     let medAmountValue = null
     let medAmount = null
     let perVolumeValue = null
-    let perVolumeUnit = null
+    let perVolume = null
 
     if (data.questions[0].calculate) {
       dosageValue = data.questions[0].calculate.input
@@ -170,9 +170,9 @@ class FormulaComponent extends Component {
 
     if (data.questions[3].calculate) {
       perVolumeValue = data.questions[3].calculate.input
-      data.perVolumeUnit.filter(item => {
+      data.perVolume.filter(item => {
         if (item.unit === data.questions[3].calculate.select) {
-          perVolumeUnit = item.value
+          perVolume = item.value
         }
         return item.value
       })
@@ -215,7 +215,7 @@ class FormulaComponent extends Component {
                   medAmountValue,
                   medAmount,
                   perVolumeValue,
-                  perVolumeUnit,
+                  perVolume,
                   this.state.liquidDoseSelectValue
                 )}
               </Typography>
