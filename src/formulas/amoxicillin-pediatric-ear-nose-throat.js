@@ -14,7 +14,7 @@ const data = {
     { value: 0.001, unit: 'mcg/kg' },
     { value: 1, unit: 'mg/kg' }
   ],
-  weightUnit: [
+  weight: [
     { value: 1, unit: 'kg' },
     { value: 0.45359237, unit: 'lbs' }
   ],
@@ -132,7 +132,7 @@ class FormulaComponent extends Component {
     let dosageValue = null
     let dosage = null
     let weightValue = null
-    let weightUnit = null
+    let weight = null
     let medAmountValue = null
     let medAmountUnit = null
     let perVolumeValue = null
@@ -150,9 +150,9 @@ class FormulaComponent extends Component {
 
     if (data.questions[1].calculate) {
       weightValue = data.questions[1].calculate.input
-      data.weightUnit.filter(item => {
+      data.weight.filter(item => {
         if (item.unit === data.questions[1].calculate.select) {
-          weightUnit = item.value
+          weight = item.value
         }
         return item.value
       })
@@ -191,7 +191,7 @@ class FormulaComponent extends Component {
                   dosageValue,
                   dosage,
                   weightValue,
-                  weightUnit,
+                  weight,
                   this.state.doseSelectValue
                 )}
               </Typography>
