@@ -16,15 +16,15 @@ const ResultCardPoints = ({classes, points, results}) => {
           <Typography type='title' className={classes.contentText}>
             {points}
           </Typography>
-          {results &&
-            results.map(item => (
-              <Typography
-                key={`${points}-${item}`}
-                className={classes.contentText}
-              >
-                {item}
-              </Typography>
-            ))}
+          {/*{results &&*/}
+            {/*results.map(item => (*/}
+              {/*<Typography*/}
+                {/*key={`${points}-${item}`}*/}
+                {/*className={classes.contentText}*/}
+              {/*>*/}
+                {/*{item}*/}
+              {/*</Typography>*/}
+            {/*))}*/}
         </CardContent>
       </ResultCardHeader>
     )
