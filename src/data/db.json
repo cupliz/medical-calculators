@@ -2,7 +2,7 @@
   "list": [
     {
       "id": "chads2-score-for-atrial-fibrillation",
-      "title": "CHADS2 Score for Atrial Fibrillation"
+      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk"
     },
     {
       "id": "curb-65-pneumonia-severity-score",
@@ -42,11 +42,11 @@
     },
     {
       "id": "thrombolysis-in-myocardial-infarction-timi-score-for-st-elevation-acute-myocardial-infarction",
-      "title": "Thrombolysis in Myocardial Infarction (TIMI) Score for ST Elevation Acute Myocardial Infarction"
+      "title": "TIMI Risk Score for STEMI"
     },
     {
       "id": "thrombolysis-in-myocardial-infarction-timi-score-for-unstable-angina-non-st-elevation-myocardial-infarction",
-      "title": "Thrombolysis in Myocardial Infarction (TIMI) Score for Unstable Angina Non ST Elevation Myocardial Infarction"
+      "title": "TIMI Risk Score for Unstable Angina/NSTEMI"
     },
     {
       "id": "nih-stroke-score",
@@ -54,7 +54,27 @@
     },
     {
       "id": "bleeding-risk-any-bleeding-complication-on-warfarin-therapy",
-      "title": "Bleeding Risk (any bleeding complication) on Warfarin Therapy"
+      "title": "Bleeding Risk on Warfarin Therapy (Any Bleeding Complication)"
+    },
+    {
+      "id": "abcd2-score-for-tia",
+      "title": "ABCD2 Score for TIA"
+    },
+    {
+      "id": "has-bled-score-for-major-bleeding-risk",
+      "title": "HAS-BLED Score for Major Bleeding Risk"
+    },
+    {
+      "id": "cardiac-risk-index-aaa-surgery-lee",
+      "title":"Cardiac Risk Index for AAA Surgery (Lee)"
+    },
+    {
+      "id": "cardiac-risk-index-abdominal-surgery-lee",
+      "title": "Cardiac Risk Index for Abdominal Surgery (Lee)"
+    },
+    {
+      "id": "cardiac-risk-index-non-aaa-vascular-surgery-lee",
+      "title": "Cardiac Risk Index for Non-AAA Vascular Surgery (Lee)"
     }
   ],
   "calculators": [
