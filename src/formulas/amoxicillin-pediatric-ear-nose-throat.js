@@ -75,20 +75,27 @@ class FormulaComponent extends Component {
   }
 
   handleDoseCalc = (
+    type,
     dosageValue,
     dosageUnitValue,
     weightValue,
     weightUnitValue,
-    selectValue
+    selectValue,
+    medAmountValue,
+    medAmountUnitValue,
+    perVolumeValue,
+    perVolumeUnitValue,
+    liquidSelectValue
   ) => {
     // Dose = Weight * Dosage
-    return (
-      dosageValue *
-      dosageUnitValue *
-      weightValue *
-      weightUnitValue *
-      selectValue
-    ).toFixed(this.state.decimal)
+    // Liquid_Dose =  Dose * Per_Volume / Med_Amount
+    const dose = dosageValue * dosageUnitValue * weightValue * weightUnitValue * selectValue
+    if (type === 'dose') {
+      return dose.toFixed(this.state.decimal)
+    } else {
+      const liquidDose = dose * (perVolumeValue * perVolumeUnitValue) / (medAmountValue * medAmountUnitValue) * liquidSelectValue
+      return liquidDose.toFixed(this.state.decimal)
+    }
   }
 
   handleDoseSelectChange = event => {
@@ -166,6 +173,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleDoseCalc(
+                  'dose',
                   dosageValue,
                   dosageUnitValue,
                   weightValue,
@@ -190,6 +198,12 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleDoseCalc(
+                  'liquidDose',
+                  dosageValue,
+                  dosageUnitValue,
+                  weightValue,
+                  weightUnitValue,
+                  this.state.doseSelectValue,
                   medAmountValue,
                   medAmountUnitValue,
                   perVolumeValue,
