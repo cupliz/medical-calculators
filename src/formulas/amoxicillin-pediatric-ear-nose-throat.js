@@ -71,7 +71,7 @@ class FormulaComponent extends Component {
     doseSelectValue: 1,
     liquidDoseSelectUnit: 'mL Daily',
     liquidDoseSelectValue: 1,
-    decimal: 0
+    decimal: 2
   }
 
   handleDoseCalc = (
@@ -97,7 +97,7 @@ class FormulaComponent extends Component {
       selectValue
     if (type === 'dose') {
       return dose.toFixed(this.state.decimal)
-    } else {
+    } else if (type === 'liquidDose') {
       const liquidDose =
         dose *
         (perVolumeValue * perVolumeUnitValue) /
