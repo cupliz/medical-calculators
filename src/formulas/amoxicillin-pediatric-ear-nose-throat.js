@@ -93,25 +93,13 @@ class FormulaComponent extends Component {
 
   handleDoseSelectChange = event => {
     const { value } = event.target
-    let selectValue = 1
-    unitData.dose.filter(item => {
-      if (item.unit === value) {
-        selectValue = item.value
-      }
-      return item.value
-    })
+    let selectValue = filterUnit(unitData.dose, value)
     this.setState({ doseSelectUnit: value, doseSelectValue: selectValue })
   }
 
   handleLiquidDoseSelectChange = event => {
     const { value } = event.target
-    let selectValue = 1
-    unitData.liquidDose.filter(item => {
-      if (item.unit === value) {
-        selectValue = item.value
-      }
-      return item.value
-    })
+    let selectValue = filterUnit(unitData.liquidDose, value)
     this.setState({
       liquidDoseSelectUnit: value,
       liquidDoseSelectValue: selectValue
