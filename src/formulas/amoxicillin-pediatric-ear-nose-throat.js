@@ -18,7 +18,7 @@ const data = {
     { value: 1, unit: 'kg' },
     { value: 0.45359237, unit: 'lbs' }
   ],
-  medAmountUnitData: [
+  medAmountUnit: [
     { value: 1000, unit: 'gm' },
     { value: 0.001, unit: 'mcg' },
     { value: 1, unit: 'mg' }
@@ -157,7 +157,7 @@ class FormulaComponent extends Component {
 
     if (data.questions[2].calculate) {
       medAmountValue = data.questions[2].calculate.input
-      data.medAmountUnitData.filter(item => {
+      data.medAmountUnit.filter(item => {
         if (item.unit === data.questions[2].calculate.select) {
           medAmountUnit = item.value
         }
