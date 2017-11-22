@@ -152,11 +152,17 @@ class FormulaComponent extends Component {
         }
         if (index === 2) {
           medAmountValue = question.calculate.input
-          medAmountUnit = filterUnit(unitData.medAmount, question.calculate.select)
+          medAmountUnit = filterUnit(
+            unitData.medAmount,
+            question.calculate.select
+          )
         }
         if (index === 3) {
           perVolumeValue = question.calculate.input
-          perVolumeUnit = filterUnit(unitData.perVolume, question.calculate.select)
+          perVolumeUnit = filterUnit(
+            unitData.perVolume,
+            question.calculate.select
+          )
         }
       }
     })
