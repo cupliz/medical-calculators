@@ -134,11 +134,11 @@ class FormulaComponent extends Component {
     let dosageValue = null
     let dosageUnitValue = null
     let weightValue = null
-    let weightUnit = null
+    let weightUnitValue = null
     let medAmountValue = null
-    let medAmountUnit = null
+    let medAmountUnitValue = null
     let perVolumeValue = null
-    let perVolumeUnit = null
+    let perVolumeUnitValue = null
 
     questions.map((question, index) => {
       const { calculate } = question
@@ -150,15 +150,15 @@ class FormulaComponent extends Component {
         }
         if (index === 1) {
           weightValue = input
-          weightUnit = filterUnit(unitData.weight, select)
+          weightUnitValue = filterUnit(unitData.weight, select)
         }
         if (index === 2) {
           medAmountValue = input
-          medAmountUnit = filterUnit(unitData.medAmount, select)
+          medAmountUnitValue = filterUnit(unitData.medAmount, select)
         }
         if (index === 3) {
           perVolumeValue = input
-          perVolumeUnit = filterUnit(unitData.perVolume, select)
+          perVolumeUnitValue = filterUnit(unitData.perVolume, select)
         }
       }
     })
@@ -176,7 +176,7 @@ class FormulaComponent extends Component {
                   dosageValue,
                   dosageUnitValue,
                   weightValue,
-                  weightUnit,
+                  weightUnitValue,
                   this.state.doseSelectValue
                 )}
               </Typography>
@@ -198,9 +198,9 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalculation(
                   medAmountValue,
-                  medAmountUnit,
+                  medAmountUnitValue,
                   perVolumeValue,
-                  perVolumeUnit,
+                  perVolumeUnitValue,
                   this.state.liquidDoseSelectValue
                 )}
               </Typography>
