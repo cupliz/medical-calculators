@@ -1336,39 +1336,9 @@
         }
       ],
       "results": {
-        "0": [
-          "Low Risk for major bleeding (~1 in 100 patient years); Anticoagulation should be considered"
-        ],
-        "1": [
-          "Low Risk for major bleeding (~1 in 100 patient years); Anticoagulation should be considered"
-        ],
-        "2": [
-          "Moderate Risk for major bleeding (~2 in 100 patient years); Anticoagulation can be considered"
-        ],
-        "3": [
-          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
-        ],
-        "4": [
-          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
-        ],
-        "5": [
-          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
-        ],
-        "6": [
-          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
-        ],
-        "7": [
-          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
-        ],
-        "8": [
-          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
-        ],
-        "9": [
-          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
-        ],
-        "10": [
-          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
-        ]
+        "0 - 1": ["Low Risk for major bleeding (~1 in 100 patient years); Anticoagulation should be considered"],
+        "2": ["Moderate Risk for major bleeding (~2 in 100 patient years); Anticoagulation can be considered"],
+        "3 - 10": ["High Risk for major bleeding; Alternatives to anticoagulation should be considered"]
       },
       "notes": {
         "type": "unordered-list",
