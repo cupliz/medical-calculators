@@ -926,17 +926,17 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Patient more than 60 years old",
+              "label": "Patient > 60 yrs",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Concurrent Diabetes Mellitus",
+              "label": "Concurrent Diabetes",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "TIA Lasted more than 10 minutes",
+              "label": "TIA lasted > 10 minutes",
               "points": "1"
             },
             {
@@ -946,19 +946,19 @@
             },
             {
               "type": "checkbox",
-              "label": "Patient experienced speech problems with TIA",
+              "label": "Patient experienced speech problems during TIA",
               "points": "1"
             }
           ]
         }
       ],
       "results": {
-        "0": ["Virtually no Risk"],
-        "1": ["3% Risk"],
-        "2": ["7% Risk"],
-        "3": ["11% Risk"],
-        "4": ["15% Risk"],
-        "5": ["34% Risk"]
+        "0": ["90 Day Risk of Stroke: Virtually no Risk"],
+        "1": ["90 Day Risk of Stroke: 3% Risk"],
+        "2": ["90 Day Risk of Stroke: 7% Risk"],
+        "3": ["90 Day Risk of Stroke: 11% Risk"],
+        "4": ["90 Day Risk of Stroke: 15% Risk"],
+        "5": ["90 Day Risk of Stroke: 34% Risk"]
       },
       "references": {
         "type": "ordered-list",
