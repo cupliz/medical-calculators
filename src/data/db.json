@@ -719,12 +719,8 @@
         }
       ],
       "results": {
-        "0": ["Absent"],
-        "1": ["Absent"],
-        "2": ["Absent"],
-        "3": ["Present"],
-        "4": ["Present"],
-        "5": ["Present"]
+        "0 - 2": ["Absent"],
+        "3 - 5": ["Present"]
       },
       "notes": {
         "type": "unordered-list",
