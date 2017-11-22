@@ -17,14 +17,13 @@ const data = {
   weightUnitData: [
     { value: 1, unit: 'kg' },
     { value: 0.45359237, unit: 'lbs' }
+  ],
+  medAmountUnitData: [
+    { value: 1000, unit: 'gm' },
+    { value: 0.001, unit: 'mcg' },
+    { value: 1, unit: 'mg' }
   ]
 }
-
-const medAmountUnitData = [
-  { value: 1000, unit: 'gm' },
-  { value: 0.001, unit: 'mcg' },
-  { value: 1, unit: 'mg' }
-]
 
 const perVolumeUnitData = [{ value: 1000, unit: 'L' }, { value: 1, unit: 'mL' }]
 
