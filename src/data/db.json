@@ -887,9 +887,7 @@
         }
       ],
       "results": {
-        "-2": ["Low risk; 5% probability of DVT"],
-        "-1": ["Low risk; 5% probability of DVT"],
-        "0": ["Low risk; 5% probability of DVT"],
+        "-2 - 0": ["Low risk; 5% probability of DVT"],
         "1": ["Moderate risk; 17% probability of DVT"],
         "2": ["Moderate risk of DVT; 17% probability of DVT"],
         "3": ["High risk of DVT; 53% probability of DVT"],
