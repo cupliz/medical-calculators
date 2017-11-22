@@ -22,10 +22,9 @@ const data = {
     { value: 1000, unit: 'gm' },
     { value: 0.001, unit: 'mcg' },
     { value: 1, unit: 'mg' }
-  ]
+  ],
+  perVolumeUnitData: [{ value: 1000, unit: 'L' }, { value: 1, unit: 'mL' }]
 }
-
-const perVolumeUnitData = [{ value: 1000, unit: 'L' }, { value: 1, unit: 'mL' }]
 
 const doseUnitData = [
   { value: 2000, unit: 'gm BID' },
