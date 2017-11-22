@@ -659,17 +659,9 @@
         }
       ],
       "results": {
-        "0": ["Distress, needs intervention"],
-        "1": ["Distress, needs intervention"],
-        "2": ["Distress, needs intervention"],
-        "3": ["Distress, needs intervention"],
-        "4": ["Fairly low"],
-        "5": ["Fairly low"],
-        "6": ["Fairly low"],
-        "7": ["Normal"],
-        "8": ["Normal"],
-        "9": ["Normal"],
-        "10": ["Normal"]
+        "0 - 3": ["Distress, needs intervention"],
+        "4 - 6": ["Fairly low"],
+        "7 - 10": ["Normal"]
       },
       "notes": {
         "type": "unordered-list",
