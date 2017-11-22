@@ -153,6 +153,7 @@ class FormulaComponent extends Component {
           perVolumeUnitValue = filterUnit(unitData.perVolume, select)
         }
       }
+      return calculate
     })
 
     if (dosageValue && weightValue) {
