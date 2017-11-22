@@ -14,7 +14,7 @@ const data = {
     { value: 0.001, unit: 'mcg/kg' },
     { value: 1, unit: 'mg/kg' }
   ],
-  weightUnitData: [
+  weightUnit: [
     { value: 1, unit: 'kg' },
     { value: 0.45359237, unit: 'lbs' }
   ],
@@ -147,7 +147,7 @@ class FormulaComponent extends Component {
 
     if (data.questions[1].calculate) {
       weightValue = data.questions[1].calculate.input
-      data.weightUnitData.filter(item => {
+      data.weightUnit.filter(item => {
         if (item.unit === data.questions[1].calculate.select) {
           weightUnit = item.value
         }
