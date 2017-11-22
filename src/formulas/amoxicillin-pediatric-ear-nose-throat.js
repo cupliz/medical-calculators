@@ -127,6 +127,7 @@ class FormulaComponent extends Component {
 
   render () {
     const { classes, data } = this.props
+    const { questions } = data
 
     // extract needed field vars
     let dosageValue = null
@@ -138,40 +139,40 @@ class FormulaComponent extends Component {
     let perVolumeValue = null
     let perVolumeUnit = null
 
-    if (data.questions[0].calculate) {
-      dosageValue = data.questions[0].calculate.input
+    if (questions[0].calculate) {
+      dosageValue = questions[0].calculate.input
       data.dosage.filter(item => {
-        if (item.unit === data.questions[0].calculate.select) {
+        if (item.unit === questions[0].calculate.select) {
           dosageUnit = item.value
         }
         return item.value
       })
     }
 
-    if (data.questions[1].calculate) {
-      weightValue = data.questions[1].calculate.input
+    if (questions[1].calculate) {
+      weightValue = questions[1].calculate.input
       data.weight.filter(item => {
-        if (item.unit === data.questions[1].calculate.select) {
+        if (item.unit === questions[1].calculate.select) {
           weightUnit = item.value
         }
         return item.value
       })
     }
 
-    if (data.questions[2].calculate) {
-      medAmountValue = data.questions[2].calculate.input
+    if (questions[2].calculate) {
+      medAmountValue = questions[2].calculate.input
       data.medAmount.filter(item => {
-        if (item.unit === data.questions[2].calculate.select) {
+        if (item.unit === questions[2].calculate.select) {
           medAmountUnit = item.value
         }
         return item.value
       })
     }
 
-    if (data.questions[3].calculate) {
-      perVolumeValue = data.questions[3].calculate.input
+    if (questions[3].calculate) {
+      perVolumeValue = questions[3].calculate.input
       data.perVolume.filter(item => {
-        if (item.unit === data.questions[3].calculate.select) {
+        if (item.unit === questions[3].calculate.select) {
           perVolumeUnit = item.value
         }
         return item.value
