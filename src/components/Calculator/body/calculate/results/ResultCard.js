@@ -90,7 +90,6 @@ class ResultCard extends Component {
         )
       )
     } else if (type === 'points') {
-      console.log('points:', points, 'results:', results)
       // if object has that property (result for points) then pass results[points]
       if (results.hasOwnProperty(points)) {
         return (
