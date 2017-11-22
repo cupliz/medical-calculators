@@ -8,6 +8,17 @@ import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
+const filterUnit = (arr, select) => {
+  console.log(arr, select)
+  arr.filter(item => {
+    if (item.unit === select) {
+      return item.value
+    } else {
+      return null
+    }
+  })
+}
+
 const data = {
   dosage: [
     { value: 1000, unit: 'gm/kg' },
@@ -139,45 +150,26 @@ class FormulaComponent extends Component {
     let perVolumeValue = null
     let perVolumeUnit = null
 
-    if (questions[0].calculate) {
-      dosageValue = questions[0].calculate.input
-      data.dosage.filter(item => {
-        if (item.unit === questions[0].calculate.select) {
-          dosageUnit = item.value
+    questions.map((question, index) => {
+      if (question.calculate) {
+        if (index === 0) {
+          dosageValue = question.calculate.input
+          // dosageUnit = filterUnit(data.dosage, question.calculate.select)
         }
-        return item.value
-      })
-    }
-
-    if (questions[1].calculate) {
-      weightValue = questions[1].calculate.input
-      data.weight.filter(item => {
-        if (item.unit === questions[1].calculate.select) {
-          weightUnit = item.value
+        if (index === 1) {
+          weightValue = question.calculate.input
+          // weightUnit = filterUnit(data.weight, question.calculate.select)
         }
-        return item.value
-      })
-    }
-
-    if (questions[2].calculate) {
-      medAmountValue = questions[2].calculate.input
-      data.medAmount.filter(item => {
-        if (item.unit === questions[2].calculate.select) {
-          medAmountUnit = item.value
+        if (index === 2) {
+          medAmountValue = question.calculate.input
+          // medAmountUnit = filterUnit(data.medAmount, question.calculate.select)
         }
-        return item.value
-      })
-    }
-
-    if (questions[3].calculate) {
-      perVolumeValue = questions[3].calculate.input
-      data.perVolume.filter(item => {
-        if (item.unit === questions[3].calculate.select) {
-          perVolumeUnit = item.value
+        if (index === 3) {
+          perVolumeValue = question.calculate.input
+          // perVolumeUnit = filterUnit(data.perVolume, question.calculate.select)
         }
-        return item.value
-      })
-    }
+      }
+    })
 
     if (dosageValue && weightValue) {
       return (
