@@ -63,11 +63,7 @@ const unitData = {
 }
 
 const filterUnit = (arr, select) =>
-  arr.filter(item => {
-    if (item.unit === select) {
-      return item.value
-    }
-  })[0].value
+  arr.filter(item => (item.unit === select ? item.value : null))[0].value
 
 class FormulaComponent extends Component {
   state = {
