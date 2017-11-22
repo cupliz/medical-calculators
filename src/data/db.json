@@ -41,7 +41,7 @@
       "title": "TIA Prognosis: Risk of Stroke by 90 Days After Presentation"
     },
     {
-      "id": "thrombolysis-in-myocardial-infarction-timi-score-for-st-elevation-acute-myocardial-infarction",
+      "id": "timi-risk-score-for-stemi",
       "title": "TIMI Risk Score for STEMI"
     },
     {
@@ -968,8 +968,8 @@
       }
     },
     {
-      "id": "thrombolysis-in-myocardial-infarction-timi-score-for-st-elevation-acute-myocardial-infarction",
-      "title": "Thrombolysis in Myocardial Infarction (TIMI) Score for ST Elevation Acute Myocardial Infarction",
+      "id": "timi-risk-score-for-stemi",
+      "title": "TIMI Risk Score for STEMI",
       "type": "points",
       "points": 0,
       "questions": [
@@ -978,17 +978,17 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "DM, history of HTN or history of Angina",
+              "label": "Diabetes, Hypertension or Angina",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Systolic blood pressure less than 100 mm Hg",
+              "label": "Systolic Blood Pressure <100 mm Hg",
               "points": "3"
             },
             {
               "type": "checkbox",
-              "label": "Heart rate greater than 100 BPM",
+              "label": "Heart rate > 100 bpm",
               "points": "2"
             },
             {
@@ -998,17 +998,17 @@
             },
             {
               "type": "checkbox",
-              "label": "Body weight less than 150 lb or 67 kg",
+              "label": "Body weight < 67 kg (150 lb)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Anterior lead ST elevation or left BBB",
+              "label": "Anterior ST elevation or Left Bundle Branch Block",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Time to treat more than 4 hours",
+              "label": "Time to treatment > 4 hrs",
               "points": "1"
             }
           ]
@@ -1017,40 +1017,42 @@
           "group": "Age",
           "data": {
             "type": "radio",
-            "options": ">= 75 years old/65-74 years old/Less than 65",
+            "options": "≥ 75 yrs/65-74 yrs/< 65 yrs",
             "points": "3/2/0"
           }
         }
       ],
       "results": {
-        "0": ["0.8%"],
-        "1": ["1.6%"],
-        "2": ["2.2%"],
-        "3": ["4.4%"],
-        "4": ["7.3%"],
-        "5": ["12%"],
-        "6": ["16%"],
-        "7": ["23%"],
-        "8": ["27%"],
-        "9": ["36%"],
-        "10": ["36%"],
-        "11": ["36%"],
-        "12": ["36%"],
-        "13": ["36%"],
-        "14": ["36%"]
+        "0": ["30 Day mortality after an MI 0.8%"],
+        "1": ["30 Day mortality after an MI 1.6%"],
+        "2": ["30 Day mortality after an MI 2.2%"],
+        "3": ["30 Day mortality after an MI 4.4%"],
+        "4": ["30 Day mortality after an MI 7.3%"],
+        "5": ["30 Day mortality after an MI 12%"],
+        "6": ["30 Day mortality after an MI 16%"],
+        "7": ["30 Day mortality after an MI 23%"],
+        "8": ["30 Day mortality after an MI 27%"],
+        "9": ["30 Day mortality after an MI 36%"],
+        "10": ["30 Day mortality after an MI 36%"],
+        "11": ["30 Day mortality after an MI 36%"],
+        "12": ["30 Day mortality after an MI 36%"],
+        "13": ["30 Day mortality after an MI 36%"],
+        "14": ["30 Day mortality after an MI 36%"]
       },
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Estimates mortality in patients with ST Elevation Acute Myocardial Infarction (STEMI).",
-          "Entry criteria: Chest pain for more than 30 minutes, ST elevation, symptom onset less than 6 hours, fibrinolytic eligible.",
+          "TIMI Risk Score predicts 30 day mortality in patients with ST Elevation Acute Myocardial Infarction (STEMI).",
+          "The TIMI Score for STEMI was developed from the InTIME II trial of 15K STEMI patients which included studying these patients for thrombolytics. It did not include patients with cardiogenic shock or severe hypertension (BP >180/>110)",
+          "Entry criteria: Chest pain for > 30 minutes, ST elevation, symptom onset < 6 hours, fibrinolytic eligible.",
           "Can be used on patients who are post-cath who may have bleeding risks to objectify risk-benefit of post PCI medications."
         ]
       },
       "references": {
         "type": "ordered-list",
         "content": [
-          "Morrow DA, Antman EM, Charlesworth A, et. al. TIMI risk score for ST-elevation myocardial infarction: A convenient, bedside, clinical score for risk assessment at presentation: An intravenous nPA for treatment of infarcting myocardium early II trial substudy. Circulation. 2000 Oct 24; 102(17):2031-7."
+          "Morrow DA, Antman EM, Charlesworth A, et. al. TIMI risk score for ST-elevation myocardial infarction: A convenient, bedside, clinical score for risk assessment at presentation: An intravenous nPA for treatment of infarcting myocardium early II trial substudy. Circulation. 2000 Oct 24; 102(17):2031-7.",
+          "Morrow DA, Antman EM, Parsons L, de Lemos JA, Cannon CP, Giugliano RP, McCabe CH, Barron HV, Braunwald E. Application of the TIMI risk score for ST-elevation MI in the National Registry of Myocardial Infarction 3. JAMA. 2001 Sep 19;286(11):1356-9."
         ]
       }
     },
