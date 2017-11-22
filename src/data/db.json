@@ -293,12 +293,12 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Hct drop >10% from admission",
+              "label": "Hct drops 10% or greater from time of admission",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "BUN increase >5 mg/dL (>1.79 mmol/L) from admission",
+              "label": "BUN increases >5 mg/dL (>1.79 mmol/L) from time of admission",
               "points": "1"
             },
             {
