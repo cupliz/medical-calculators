@@ -102,6 +102,7 @@ class ResultCard extends Component {
         )
       } else {
         // if it doesn't - then get all object properties (points) into an array
+        const arrayOfKeys = Object.keys(results)
         // it WILL envolve string parsing (15 - 25, -2 - 3)
         // then check where point lies and pass it as results[points]
         return null
