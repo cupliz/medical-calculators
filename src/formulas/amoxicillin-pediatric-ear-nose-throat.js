@@ -23,7 +23,7 @@ const data = {
     { value: 0.001, unit: 'mcg' },
     { value: 1, unit: 'mg' }
   ],
-  perVolumeUnitData: [
+  perVolumeUnit: [
     { value: 1000, unit: 'L' },
     { value: 1, unit: 'mL' }
   ],
@@ -170,7 +170,7 @@ class FormulaComponent extends Component {
 
     if (data.questions[3].calculate) {
       perVolumeValue = data.questions[3].calculate.input
-      data.perVolumeUnitData.filter(item => {
+      data.perVolumeUnit.filter(item => {
         if (item.unit === data.questions[3].calculate.select) {
           perVolumeUnit = item.value
         }
