@@ -18,7 +18,7 @@ const data = {
     { value: 1, unit: 'kg' },
     { value: 0.45359237, unit: 'lbs' }
   ],
-  medAmountUnit: [
+  medAmount: [
     { value: 1000, unit: 'gm' },
     { value: 0.001, unit: 'mcg' },
     { value: 1, unit: 'mg' }
@@ -134,7 +134,7 @@ class FormulaComponent extends Component {
     let weightValue = null
     let weight = null
     let medAmountValue = null
-    let medAmountUnit = null
+    let medAmount = null
     let perVolumeValue = null
     let perVolumeUnit = null
 
@@ -160,9 +160,9 @@ class FormulaComponent extends Component {
 
     if (data.questions[2].calculate) {
       medAmountValue = data.questions[2].calculate.input
-      data.medAmountUnit.filter(item => {
+      data.medAmount.filter(item => {
         if (item.unit === data.questions[2].calculate.select) {
-          medAmountUnit = item.value
+          medAmount = item.value
         }
         return item.value
       })
@@ -213,7 +213,7 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalculation(
                   medAmountValue,
-                  medAmountUnit,
+                  medAmount,
                   perVolumeValue,
                   perVolumeUnit,
                   this.state.liquidDoseSelectValue
