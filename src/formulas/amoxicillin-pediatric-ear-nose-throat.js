@@ -146,25 +146,19 @@ class FormulaComponent extends Component {
         const { input, select } = calculate
         if (index === 0) {
           dosageValue = input
-          dosageUnit = filterUnit(unitData.dosage, calculate.select)
+          dosageUnit = filterUnit(unitData.dosage, select)
         }
         if (index === 1) {
           weightValue = input
-          weightUnit = filterUnit(unitData.weight, calculate.select)
+          weightUnit = filterUnit(unitData.weight, select)
         }
         if (index === 2) {
           medAmountValue = input
-          medAmountUnit = filterUnit(
-            unitData.medAmount,
-            calculate.select
-          )
+          medAmountUnit = filterUnit(unitData.medAmount, select)
         }
         if (index === 3) {
           perVolumeValue = input
-          perVolumeUnit = filterUnit(
-            unitData.perVolume,
-            calculate.select
-          )
+          perVolumeUnit = filterUnit(unitData.perVolume, select)
         }
       }
     })
