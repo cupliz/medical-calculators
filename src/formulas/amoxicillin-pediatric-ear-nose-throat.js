@@ -136,7 +136,7 @@ class FormulaComponent extends Component {
     let medAmountValue = null
     let medAmountUnit = null
     let perVolumeValue = null
-    let perVolume = null
+    let perVolumeUnit = null
 
     if (data.questions[0].calculate) {
       dosageValue = data.questions[0].calculate.input
@@ -172,7 +172,7 @@ class FormulaComponent extends Component {
       perVolumeValue = data.questions[3].calculate.input
       data.perVolume.filter(item => {
         if (item.unit === data.questions[3].calculate.select) {
-          perVolume = item.value
+          perVolumeUnit = item.value
         }
         return item.value
       })
@@ -215,7 +215,7 @@ class FormulaComponent extends Component {
                   medAmountValue,
                   medAmountUnit,
                   perVolumeValue,
-                  perVolume,
+                  perVolumeUnit,
                   this.state.liquidDoseSelectValue
                 )}
               </Typography>
