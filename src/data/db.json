@@ -932,12 +932,7 @@
         "6": ["30 Day mortality after an MI 16%"],
         "7": ["30 Day mortality after an MI 23%"],
         "8": ["30 Day mortality after an MI 27%"],
-        "9": ["30 Day mortality after an MI 36%"],
-        "10": ["30 Day mortality after an MI 36%"],
-        "11": ["30 Day mortality after an MI 36%"],
-        "12": ["30 Day mortality after an MI 36%"],
-        "13": ["30 Day mortality after an MI 36%"],
-        "14": ["30 Day mortality after an MI 36%"]
+        "9 - 14": ["30 Day mortality after an MI 36%"]
       },
       "notes": {
         "type": "unordered-list",
