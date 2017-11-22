@@ -1104,14 +1104,12 @@
         }
       ],
       "results": {
-        "0": ["5% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
-        "1": ["5% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
+        "0-1": ["5% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
         "2": ["8% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
         "3": ["13% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
         "4": ["20% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
         "5": ["26% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
-        "6": ["41% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
-        "7": ["41% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"]
+        "6-7": ["41% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"]
       },
       "notes": {
         "type": "unordered-list",
