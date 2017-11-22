@@ -8,6 +8,14 @@ import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
+const data = {
+  dosageUnitData: [
+    { value: 1000, unit: 'gm/kg' },
+    { value: 0.001, unit: 'mcg/kg' },
+    { value: 1, unit: 'mg/kg' }
+  ]
+}
+
 const dosageUnitData = [
   { value: 1000, unit: 'gm/kg' },
   { value: 0.001, unit: 'mcg/kg' },
