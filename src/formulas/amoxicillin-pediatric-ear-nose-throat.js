@@ -84,7 +84,7 @@ class FormulaComponent extends Component {
   handleDoseSelectChange = event => {
     const { value } = event.target
     let selectValue = 1
-    doseUnitData.filter(item => {
+    data.doseUnitData.filter(item => {
       if (item.unit === value) {
         selectValue = item.value
       }
@@ -96,7 +96,7 @@ class FormulaComponent extends Component {
   handleLiquidDoseSelectChange = event => {
     const { value } = event.target
     let selectValue = 1
-    liquidDoseUnitData.filter(item => {
+    data.liquidDoseUnitData.filter(item => {
       if (item.unit === value) {
         selectValue = item.value
       }
@@ -137,7 +137,7 @@ class FormulaComponent extends Component {
 
     if (data.questions[0].calculate) {
       dosageValue = data.questions[0].calculate.input
-      dosageUnitData.filter(item => {
+      data.dosageUnitData.filter(item => {
         if (item.unit === data.questions[0].calculate.select) {
           dosageUnit = item.value
         }
@@ -147,7 +147,7 @@ class FormulaComponent extends Component {
 
     if (data.questions[1].calculate) {
       weightValue = data.questions[1].calculate.input
-      weightUnitData.filter(item => {
+      data.weightUnitData.filter(item => {
         if (item.unit === data.questions[1].calculate.select) {
           weightUnit = item.value
         }
@@ -157,7 +157,7 @@ class FormulaComponent extends Component {
 
     if (data.questions[2].calculate) {
       medAmountValue = data.questions[2].calculate.input
-      medAmountUnitData.filter(item => {
+      data.medAmountUnitData.filter(item => {
         if (item.unit === data.questions[2].calculate.select) {
           medAmountUnit = item.value
         }
@@ -167,7 +167,7 @@ class FormulaComponent extends Component {
 
     if (data.questions[3].calculate) {
       perVolumeValue = data.questions[3].calculate.input
-      perVolumeUnitData.filter(item => {
+      data.perVolumeUnitData.filter(item => {
         if (item.unit === data.questions[3].calculate.select) {
           perVolumeUnit = item.value
         }
@@ -199,7 +199,7 @@ class FormulaComponent extends Component {
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {doseUnitData.map(option => (
+                {data.doseUnitData.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
@@ -223,7 +223,7 @@ class FormulaComponent extends Component {
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {liquidDoseUnitData.map(option => (
+                {data.liquidDoseUnitData.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
