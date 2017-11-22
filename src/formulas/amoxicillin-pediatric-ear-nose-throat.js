@@ -98,12 +98,16 @@ class FormulaComponent extends Component {
     if (type === 'dose') {
       return dose.toFixed(this.state.decimal)
     } else if (type === 'liquidDose') {
-      const liquidDose =
-        dose *
-        (perVolumeValue * perVolumeUnitValue) /
-        (medAmountValue * medAmountUnitValue) *
-        liquidSelectValue
-      return liquidDose.toFixed(this.state.decimal)
+      if (medAmountValue && perVolumeValue) {
+        const liquidDose =
+          dose *
+          (perVolumeValue * perVolumeUnitValue) /
+          (medAmountValue * medAmountUnitValue) *
+          liquidSelectValue
+        return liquidDose.toFixed(this.state.decimal)
+      } else {
+        return 0
+      }
     }
   }
 
