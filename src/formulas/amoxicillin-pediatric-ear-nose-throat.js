@@ -62,6 +62,13 @@ const unitData = {
   ]
 }
 
+const filterUnit = (arr, select) =>
+  arr.filter(item => {
+    if (item.unit === select) {
+      return item.value
+    }
+  })[0].value
+
 class FormulaComponent extends Component {
   state = {
     doseSelectUnit: 'mg Daily',
@@ -132,13 +139,6 @@ class FormulaComponent extends Component {
     let medAmountUnit = null
     let perVolumeValue = null
     let perVolumeUnit = null
-
-    const filterUnit = (arr, select) =>
-      arr.filter(item => {
-        if (item.unit === select) {
-          return item.value
-        }
-      })[0].value
 
     questions.map((question, index) => {
       const { calculate } = question
