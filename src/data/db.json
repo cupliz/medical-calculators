@@ -66,7 +66,7 @@
     },
     {
       "id": "cardiac-risk-index-aaa-surgery-lee",
-      "title":"Cardiac Risk Index for AAA Surgery (Lee)"
+      "title": "Cardiac Risk Index for AAA Surgery (Lee)"
     },
     {
       "id": "cardiac-risk-index-abdominal-surgery-lee",
@@ -200,7 +200,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Blood Pressure: Systolic < 90 mmHg or Diastolic ≤ 60 mmHg",
+              "label":
+                "Blood Pressure: Systolic < 90 mmHg or Diastolic ≤ 60 mmHg",
               "points": "1"
             },
             {
@@ -298,7 +299,8 @@
             },
             {
               "type": "checkbox",
-              "label": "BUN increases >5 mg/dL (>1.79 mmol/L) from time of admission",
+              "label":
+                "BUN increases >5 mg/dL (>1.79 mmol/L) from time of admission",
               "points": "1"
             },
             {
@@ -384,11 +386,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter drug dose",
-              "values": [
-                "mg/kg",
-                "gm/kg",
-                "mcg/kg"
-              ]
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
             }
           ]
         },
@@ -398,10 +396,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter patient weight",
-              "values": [
-                "kg",
-                "lbs"
-              ]
+              "values": ["kg", "lbs"]
             }
           ]
         },
@@ -411,11 +406,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication amount",
-              "values": [
-                "mg",
-                "gm",
-                "mcg"
-              ]
+              "values": ["mg", "gm", "mcg"]
             }
           ]
         },
@@ -425,10 +416,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication volume",
-              "values": [
-                "mL",
-                "L"
-              ]
+              "values": ["mL", "L"]
             }
           ]
         }
@@ -479,7 +467,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Vascular disease (History of MI, PVD or aortic atherosclerosis)",
+              "label":
+                "Vascular disease (History of MI, PVD or aortic atherosclerosis)",
               "points": "1"
             }
           ]
@@ -577,7 +566,8 @@
           "group": "Best motor response",
           "data": {
             "type": "radio",
-            "options": "Obeys verbal commands/Localizes pain/Normal flexion from pain/Abnormal flexion from pain/Extension to pain/No motor response",
+            "options":
+              "Obeys verbal commands/Localizes pain/Normal flexion from pain/Abnormal flexion from pain/Extension to pain/No motor response",
             "points": "6/5/4/3/2/1"
           }
         },
@@ -585,7 +575,8 @@
           "group": "Best Verbal Response",
           "data": {
             "type": "radio",
-            "options": "Oriented/Confused/Inappropriate words/Only moans or groans/No verbal response",
+            "options":
+              "Oriented/Confused/Inappropriate words/Only moans or groans/No verbal response",
             "points": "5/4/3/4/2/1"
           }
         }
@@ -692,17 +683,20 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Abdominal obesity (Male waist > 101 cm (40 in). Female waist > 88.9cm (35 in)",
+              "label":
+                "Abdominal obesity (Male waist > 101 cm (40 in). Female waist > 88.9cm (35 in)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Triglycerides ≥ 150 mg/dL or on Triglyceride lowering Rx",
+              "label":
+                "Triglycerides ≥ 150 mg/dL or on Triglyceride lowering Rx",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "HDL cholesterol (Male < 40; Female < 50) or on HDL improvement Rx",
+              "label":
+                "HDL cholesterol (Male < 40; Female < 50) or on HDL improvement Rx",
               "points": "1"
             },
             {
@@ -748,12 +742,14 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Paralysis, paresis or recent orthopedic casting of lower extremity",
+              "label":
+                "Paralysis, paresis or recent orthopedic casting of lower extremity",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Recently bedridden (> 3 days) or major surgery within last 4 weeks",
+              "label":
+                "Recently bedridden (> 3 days) or major surgery within last 4 weeks",
               "points": "1"
             },
             {
@@ -768,7 +764,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Calf swelling >3 cm compared to other leg (measured 10 cm below tibial tuberosity)",
+              "label":
+                "Calf swelling >3 cm compared to other leg (measured 10 cm below tibial tuberosity)",
               "points": "1"
             },
             {
@@ -788,7 +785,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Alternative diagnosis more likely than DVT (Baker's cyst, cellulitis, muscle damage, superficial venous thrombosis, post phlebitic syndrome, inguinal lymphadenopathy, external venous compression)",
+              "label":
+                "Alternative diagnosis more likely than DVT (Baker's cyst, cellulitis, muscle damage, superficial venous thrombosis, post phlebitic syndrome, inguinal lymphadenopathy, external venous compression)",
               "points": "-2"
             }
           ]
@@ -967,7 +965,8 @@
             },
             {
               "type": "checkbox",
-              "label": "≥ 3 CAD risk factors (Hypertension, Diabetes, High Cholesterol, Family History of CAD, Current Smoker)",
+              "label":
+                "≥ 3 CAD risk factors (Hypertension, Diabetes, High Cholesterol, Family History of CAD, Current Smoker)",
               "points": "1"
             },
             {
@@ -999,12 +998,24 @@
         }
       ],
       "results": {
-        "0 - 1": ["5% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
-        "2": ["8% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
-        "3": ["13% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
-        "4": ["20% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
-        "5": ["26% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
-        "6 - 7": ["41% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"]
+        "0 - 1": [
+          "5% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"
+        ],
+        "2": [
+          "8% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"
+        ],
+        "3": [
+          "13% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"
+        ],
+        "4": [
+          "20% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"
+        ],
+        "5": [
+          "26% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"
+        ],
+        "6 - 7": [
+          "41% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -1032,7 +1043,8 @@
           "group": "1A: Level of Consciousness",
           "data": {
             "type": "radio",
-            "options": "Alert/Not alert, but arousable by minor stimulation/Not alert, requires repeated stimulation to attend/Coma",
+            "options":
+              "Alert/Not alert, but arousable by minor stimulation/Not alert, requires repeated stimulation to attend/Coma",
             "points": "0/1/2/3"
           }
         },
@@ -1040,15 +1052,18 @@
           "group": "1B: Ask Patient the Month and His/Her Age",
           "data": {
             "type": "radio",
-            "options": "Answers both questions correctly/Answers one question correctly/Neither correct",
+            "options":
+              "Answers both questions correctly/Answers one question correctly/Neither correct",
             "points": "0/1/2"
           }
         },
         {
-          "group": "1C: Open and Close Eyes on Command/Grip and release non-paretic hand ",
+          "group":
+            "1C: Open and Close Eyes on Command/Grip and release non-paretic hand ",
           "data": {
             "type": "radio",
-            "options": "Obeys both correctly/Obeys one correctly/Both incorrect",
+            "options":
+              "Obeys both correctly/Obeys one correctly/Both incorrect",
             "points": "0/1/2"
           }
         },
@@ -1064,47 +1079,58 @@
           "group": "3: Visual Field testing",
           "data": {
             "type": "radio",
-            "options": "No visual field loss/Partial hemianopia/Complete hemianopia/Bilateral hemianopia or Patient is bilaterally blind",
+            "options":
+              "No visual field loss/Partial hemianopia/Complete hemianopia/Bilateral hemianopia or Patient is bilaterally blind",
             "points": "0/1/2/3"
           }
         },
         {
-          "group": "4: Facial Palsy (Ask patient to show teeth or raise eyebrows and close eye)",
+          "group":
+            "4: Facial Palsy (Ask patient to show teeth or raise eyebrows and close eye)",
           "data": {
             "type": "radio",
-            "options": "Normal symmetrical movement/Minor paralysis/Partial paralysis (total or near total paralysis of lower face)/Complete paralysis of one or both sides",
+            "options":
+              "Normal symmetrical movement/Minor paralysis/Partial paralysis (total or near total paralysis of lower face)/Complete paralysis of one or both sides",
             "points": "0/1/2/3"
           }
         },
         {
-          "group": "5A: Motor Function of Right Arm (Count out loud and use your fingers to show patient your count)",
+          "group":
+            "5A: Motor Function of Right Arm (Count out loud and use your fingers to show patient your count)",
           "data": {
             "type": "radio",
-            "options": "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
+            "options":
+              "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
             "points": "0/1/2/3/4/0"
           }
         },
         {
-          "group": "5B: Motor Function of Left Arm (Count out loud and use your fingers to show patient your count)",
+          "group":
+            "5B: Motor Function of Left Arm (Count out loud and use your fingers to show patient your count)",
           "data": {
             "type": "radio",
-            "options": "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
+            "options":
+              "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
             "points": "0/1/2/3/4/0"
           }
         },
         {
-          "group": "6A: Motor Function of Right Leg (Hold the leg at 30 deg, always tested in supine position)",
+          "group":
+            "6A: Motor Function of Right Leg (Hold the leg at 30 deg, always tested in supine position)",
           "data": {
             "type": "radio",
-            "options": "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
+            "options":
+              "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
             "points": "0/1/2/3/4/0"
           }
         },
         {
-          "group": "6B: Motor Function of Left Leg (Hold the leg at 30 deg, always tested in supine position)",
+          "group":
+            "6B: Motor Function of Left Leg (Hold the leg at 30 deg, always tested in supine position)",
           "data": {
             "type": "radio",
-            "options": "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
+            "options":
+              "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
             "points": "0/1/2/3/4/0"
           }
         },
@@ -1112,7 +1138,8 @@
           "group": "7: Limb Ataxia (Test with eyes open)",
           "data": {
             "type": "radio",
-            "options": "None/Present in 1 limb/Present in 2 limbs/Amputation or joint fusion",
+            "options":
+              "None/Present in 1 limb/Present in 2 limbs/Amputation or joint fusion",
             "points": "0/1/2/0"
           }
         },
@@ -1120,12 +1147,14 @@
           "group": "8: Sensory by Pinprick",
           "data": {
             "type": "radio",
-            "options": "Normal/Mild to moderate sensory loss/Severe or total sensory loss",
+            "options":
+              "Normal/Mild to moderate sensory loss/Severe or total sensory loss",
             "points": "0/1/2"
           }
         },
         {
-          "group": "9: Best Language (Describe a picture, name items, read sentences)",
+          "group":
+            "9: Best Language (Describe a picture, name items, read sentences)",
           "data": {
             "type": "radio",
             "options": "No aphasia/Mild - Moderate aphasia/Severe aphasia/Mute",
@@ -1136,7 +1165,8 @@
           "group": "10: Dysarthria (read or repeat words)",
           "data": {
             "type": "radio",
-            "options": "Normal/Mild to Moderate slurring/Severe dysarthria/Intubated or other physical impediment to testing",
+            "options":
+              "Normal/Mild to Moderate slurring/Severe dysarthria/Intubated or other physical impediment to testing",
             "points": "0/1/2/0"
           }
         },
@@ -1144,7 +1174,8 @@
           "group": "11: Extinction and Inattention (Neglect)",
           "data": {
             "type": "radio",
-            "options": "No abnormality/Visual, tactile, auditory, spatial or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities/Severe hemi-inattention or extinction to more than one modality",
+            "options":
+              "No abnormality/Visual, tactile, auditory, spatial or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities/Severe hemi-inattention or extinction to more than one modality",
             "points": "0/1/2"
           }
         }
@@ -1235,7 +1266,8 @@
           "group": "Clinical features of TIA",
           "data": {
             "type": "radio",
-            "options": "Unilateral weakness/Speech disturbance without weakness/Other symptoms",
+            "options":
+              "Unilateral weakness/Speech disturbance without weakness/Other symptoms",
             "points": "2/1/0"
           }
         },
@@ -1257,9 +1289,15 @@
         }
       ],
       "results": {
-        "0 - 3": ["Low Risk; 2-day stroke risk 1.0%, 7-day stroke risk 1.2%, 90-day stroke risk 3.1%"],
-        "4 - 5": ["Moderate Risk; 2-day stroke risk 4.1%, 7-day stroke risk 5.9%, 90-day stroke risk 9.8%"],
-        "6 - 7": ["High Risk; 2-day stroke risk 8.1%, 7-day stroke risk 11.7%, 90-day stroke risk 17.8%"]
+        "0 - 3": [
+          "Low Risk; 2-day stroke risk 1.0%, 7-day stroke risk 1.2%, 90-day stroke risk 3.1%"
+        ],
+        "4 - 5": [
+          "Moderate Risk; 2-day stroke risk 4.1%, 7-day stroke risk 5.9%, 90-day stroke risk 9.8%"
+        ],
+        "6 - 7": [
+          "High Risk; 2-day stroke risk 8.1%, 7-day stroke risk 11.7%, 90-day stroke risk 17.8%"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -1294,12 +1332,14 @@
             },
             {
               "type": "checkbox",
-              "label": "Renal disease (Dialysis, transplant or Creatinine >2.26mg/dL (200µmol/L)",
+              "label":
+                "Renal disease (Dialysis, transplant or Creatinine >2.26mg/dL (200µmol/L)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Liver disease (Cirrhosis or bilirubin levels >2x normal with AST/ALT/AP >3x normal)",
+              "label":
+                "Liver disease (Cirrhosis or bilirubin levels >2x normal with AST/ALT/AP >3x normal)",
               "points": "1"
             },
             {
@@ -1314,7 +1354,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Labile INR (Unstable/High INRs, time in therapeutic range <60%)",
+              "label":
+                "Labile INR (Unstable/High INRs, time in therapeutic range <60%)",
               "points": "1"
             },
             {
@@ -1329,16 +1370,23 @@
             },
             {
               "type": "checkbox",
-              "label": "Medication usage that predisposes patient to bleeding (NSAIDs, Antiplatelet agents)",
+              "label":
+                "Medication usage that predisposes patient to bleeding (NSAIDs, Antiplatelet agents)",
               "points": "1"
             }
           ]
         }
       ],
       "results": {
-        "0 - 1": ["Low Risk for major bleeding (~1 in 100 patient years); Anticoagulation should be considered"],
-        "2": ["Moderate Risk for major bleeding (~2 in 100 patient years); Anticoagulation can be considered"],
-        "3 - 10": ["High Risk for major bleeding; Alternatives to anticoagulation should be considered"]
+        "0 - 1": [
+          "Low Risk for major bleeding (~1 in 100 patient years); Anticoagulation should be considered"
+        ],
+        "2": [
+          "Moderate Risk for major bleeding (~2 in 100 patient years); Anticoagulation can be considered"
+        ],
+        "3 - 10": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -1367,7 +1415,8 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Patient has Coronary artery disease (MI or positive stress test)",
+              "label":
+                "Patient has Coronary artery disease (MI or positive stress test)",
               "points": "1"
             },
             {
@@ -1387,7 +1436,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "label":
+                "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
               "points": "1"
             }
           ]
@@ -1423,7 +1473,8 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Patient has Coronary artery disease (MI or positive stress test)",
+              "label":
+                "Patient has Coronary artery disease (MI or positive stress test)",
               "points": "1"
             },
             {
@@ -1443,7 +1494,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "label":
+                "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
               "points": "1"
             }
           ]
@@ -1497,7 +1549,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "label":
+                "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
               "points": "1"
             }
           ]
