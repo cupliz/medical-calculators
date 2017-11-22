@@ -1,0 +1,1716 @@
+{
+  "list": [
+    {
+      "id": "chads2-score-for-atrial-fibrillation",
+      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk"
+    },
+    {
+      "id": "curb-65-pneumonia-severity-score",
+      "title": "CURB-65 Pneumonia Severity Score"
+    },
+    {
+      "id": "ransons-criteria-for-pancreatitis-mortality",
+      "title": "Ranson's Criteria for Pancreatitis Mortality"
+    },
+    {
+      "id": "amoxicillin-pediatric-ear-nose-throat",
+      "title": "Amoxicillin Pediatric - Ear, Nose, & Throat Infections"
+    },
+    {
+      "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
+      "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk"
+    },
+    {
+      "id": "glasgow-coma-scale",
+      "title": "Glasgow Coma Scale"
+    },
+    {
+      "id": "apgar-score",
+      "title": "Apgar Score"
+    },
+    {
+      "id": "metabolic-syndrome-criteria-aha-nhlbi-2005",
+      "title": "Metabolic Syndrome Criteria (AHA/NHLBI 2005)"
+    },
+    {
+      "id": "dvt-probability-wells-score-system",
+      "title": "DVT Probability: Wells Score System"
+    },
+    {
+      "id": "tia-prognosis-risk-of-stroke-by-90-days-after-presentation",
+      "title": "TIA Prognosis: Risk of Stroke by 90 Days After Presentation"
+    },
+    {
+      "id": "thrombolysis-in-myocardial-infarction-timi-score-for-st-elevation-acute-myocardial-infarction",
+      "title": "TIMI Risk Score for STEMI"
+    },
+    {
+      "id": "thrombolysis-in-myocardial-infarction-timi-score-for-unstable-angina-non-st-elevation-myocardial-infarction",
+      "title": "TIMI Risk Score for Unstable Angina/NSTEMI"
+    },
+    {
+      "id": "nih-stroke-score",
+      "title": "NIH Stroke Score"
+    },
+    {
+      "id": "bleeding-risk-any-bleeding-complication-on-warfarin-therapy",
+      "title": "Bleeding Risk on Warfarin Therapy (Any Bleeding Complication)"
+    },
+    {
+      "id": "abcd2-score-for-tia",
+      "title": "ABCD2 Score for TIA"
+    },
+    {
+      "id": "has-bled-score-for-major-bleeding-risk",
+      "title": "HAS-BLED Score for Major Bleeding Risk"
+    },
+    {
+      "id": "cardiac-risk-index-aaa-surgery-lee",
+      "title":"Cardiac Risk Index for AAA Surgery (Lee)"
+    },
+    {
+      "id": "cardiac-risk-index-abdominal-surgery-lee",
+      "title": "Cardiac Risk Index for Abdominal Surgery (Lee)"
+    },
+    {
+      "id": "cardiac-risk-index-non-aaa-vascular-surgery-lee",
+      "title": "Cardiac Risk Index for Non-AAA Vascular Surgery (Lee)"
+    }
+  ],
+  "calculators": [
+    {
+      "id": "chads2-score-for-atrial-fibrillation",
+      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Congestive Heart Failure, past or current",
+          "data": {
+            "type": "radio",
+            "options": "No/Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Hypertension treated or untreated",
+          "data": {
+            "type": "radio",
+            "options": "No/Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Age ≥ 75 years",
+          "data": {
+            "type": "radio",
+            "options": "No/Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Diabetes Mellitus",
+          "data": {
+            "type": "radio",
+            "options": "No/Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Prior ischemic stroke, TIA or thromboembolism",
+          "data": {
+            "type": "radio",
+            "options": "No/Yes",
+            "points": "0/2"
+          }
+        }
+      ],
+      "results": {
+        "0": [
+          "Low risk of thromboembolic event. 1.9% risk of event per year if no warfarin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "1": [
+          "Intermediate risk of thromboembolic event. 2.8% risk of event per year if no warfarin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "2": [
+          "Intermediate risk of thromboembolic event. 4.0% risk of event per year if no warfarin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "3": [
+          "High risk of thromboembolic event. 5.9% risk of event per year if no warfarin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "4": [
+          "High risk of thromboembolic event. 8.5% risk of event per year if no warfarin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "5": [
+          "Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no warfarin.)",
+          "By points directly: High risk of thromboembolic event. 12.5% risk of event per year if no warfarin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ],
+        "6": [
+          "Note: While history of stroke provides 2 points, most physicians would move these patients directly to the high risk group (>8.5% risk of event per year if no warfarin.)",
+          "By points directly: High risk of thromboembolic event. 18.2% risk of event per year if no warfarin.",
+          "The adjusted stroke rate was the expected stroke rate per 100 person-years derived from the multivariable model assuming that aspirin was not taken."
+        ]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Estimates stroke risk in patients with atrial fibrillation",
+          "The CHADS2 score is one of several risk stratification schemes that can help determine the 1 year risk of an ischemic stroke in a non-anticoagulated patient with non-valvular atrial fibrillation and determine which antithrombotic therapy is most appropriate",
+          "The CHA2-DS2-VASC score may be a better tool to assess stroke risk in patients with atrial fibrillation.  It risk stratifies these patients better than the CHADS2 score"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Gage BF, Waterman AD, Shannon W, et. al. Validation of clinical classification schemes for predicting stroke: results from the National Registry of Atrial Fibrillation. JAMA. 2001 Jun 13;285(22):2864-70.",
+          "Gage BF, van Walraven C, Pearce L, Hart RG, Koudstaal PJ, Boode BS, Petersen P.; Selecting patients with atrial fibrillation for anticoagulation: stroke risk stratification in patients taking aspirin. Circulation. 2004 Oct 19;110(16):2287-92",
+          "Go AS, Hylek EM, Chang Y, et. al. Anticoagulation therapy for stroke prevention in atrial fibrillation: how well do randomized trials translate into clinical practice?. JAMA. 2003 Nov 26;290(20):2685-92."
+        ]
+      }
+    },
+    {
+      "id": "curb-65-pneumonia-severity-score",
+      "title": "CURB-65 Pneumonia Severity Score",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Confusion",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Urea (BUN > 19 mg/dL or 7 mmol/L)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Respiratory Rate ≥ 30 per minute",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Blood Pressure: Systolic < 90 mmHg or Diastolic ≤ 60 mmHg",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Age ≥ 65 years",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": [
+          "Low risk: 0.6% 30-day mortality.",
+          "Consider outpatient treatment."
+        ],
+        "1": [
+          "Low risk: 2.7% 30-day mortality.",
+          "Consider outpatient treatment."
+        ],
+        "2": [
+          "Moderate risk: 6.8% 30-day mortality.",
+          "Short inpatient hospitalization or closely supervised outpatient treatment."
+        ],
+        "3": [
+          "Severe risk: 14.0% 30-day mortality.",
+          "Severe pneumonia; hospitalize and consider potential ICU admission."
+        ],
+        "4": [
+          "Highest risk: 27.8% 30-day mortality.",
+          "Severe pneumonia; hospitalize and consider potential ICU admission."
+        ],
+        "5": [
+          "Highest risk: 27.8% 30-day mortality.",
+          "Severe pneumonia; hospitalize and consider potential ICU admission."
+        ]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "CURB-65 estimates the mortality of community-acquired pneumonia to help determine inpatient vs outpatient treatment",
+          "Compared to the Pneumonia Severity Index (PSI), CURB-65 offers equal sensitivity of mortality prediction due to community-acquired pneumonia.  The specificity of CURB-65 (74.6%) is also higher than PSI (52.2%)"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Lim WS, van der Eerden MM, Laing R, et. al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax. 2003 May;58(5):377-82.",
+          "Lim WS, Macfarlane JT, Boswell TC, et. al. Study of community acquired pneumonia aetiology (SCAPA) in adults admitted to hospital: implications for management guidelines. Thorax. 2001 Apr;56(4):296-301."
+        ]
+      }
+    },
+    {
+      "id": "ransons-criteria-for-pancreatitis-mortality",
+      "title": "Ranson's Criteria for Pancreatitis Mortality",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria at time of patient admission to hospital",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Age > 55",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Glucose >200 mg/dL (>10 mmol/L)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "WBC > 16,000",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "AST > 250",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "LDH > 350",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Criteria that may develop over the first 2 hospital days",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Hct drops 10% or greater from time of admission",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "BUN increases >5 mg/dL (>1.79 mmol/L) from time of admission",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Ca <8 mg/dL (<2 mmol/L) within 48 hours",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Arterial pO2 <60 mmHg within 48 hours",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Base deficit (24 - HCO3) >4 mg/dL within 48 hours",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Fluid needs > 6L within 48 hours",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": [
+          "Mortality is 1%"
+        ],
+        "1": [
+          "Mortality is 1%"
+        ],
+        "2": [
+          "Mortality is 1%"
+        ],
+        "3": [
+          "Mortality is 16%"
+        ],
+        "4": [
+          "Mortality is 16%"
+        ],
+        "5": [
+          "Mortality is 40%"
+        ],
+        "6": [
+          "Mortality is 40%"
+        ],
+        "7": [
+          "Mortality is almost 100%"
+        ],
+        "8": [
+          "Mortality is almost 100%"
+        ],
+        "9": [
+          "Mortality is almost 100%"
+        ],
+        "10": [
+          "Mortality is almost 100%"
+        ],
+        "11": [
+          "Mortality is almost 100%"
+        ]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Estimates mortality of patients with pancreatitis based on initial and 48 hour lab values",
+          "The BISAP score is another alternative to estimate pancreatitis mortality with fewer variables that is as accurate"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Ranson JH, Rifkind KM, Turner JW. Prognostic signs and nonoperative peritoneal lavage in acute pancreatitis. Surg Gyne Ob. 143:209, 1976."
+        ]
+      }
+    },
+    {
+      "id": "amoxicillin-pediatric-ear-nose-throat",
+      "title": "Amoxicillin Pediatric - Ear, Nose, & Throat Infections",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Ear, Nose & Throat Infections | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Mild to Moderate infections",
+            "content": [
+              "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
+              ">3 months and <40kg: 25mg/kg/day PO divided q12 hr or 20mg/kg/day divided q8hr",
+              ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
+            ]
+          },
+          {
+            "title": "Severe Infections",
+            "content": [
+              "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
+              ">3 months and <40kg: 45mg/kg/day PO divided q12 hr or 40mg/kg/day PO divided q8hr",
+              ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
+            ]
+          },
+          {
+            "title": "Tonsilitis/Streptococcal pharyngitis",
+            "content": [
+              "50mg/kg PO qDay for 10 days, not to exceed 1g/day, or 25mg/kg PO BID for 10 days, not to exceed 500mg/dose",
+              ">12 years: 775 mg PO qDay for 10days, taken within 1 hour after meal (swallow tablet whole; do not crush or chew)"
+            ]
+          }
+        ]
+      },
+      "points": 0,
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": [
+                "mg/kg",
+                "gm/kg",
+                "mcg/kg"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": [
+                "kg",
+                "lbs"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": [
+                "mg",
+                "gm",
+                "mcg"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": [
+                "ml",
+                "L"
+              ]
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": [
+          "Mortality is 1%"
+        ],
+        "1": [
+          "Mortality is 1%"
+        ],
+        "2": [
+          "Mortality is 1%"
+        ],
+        "3": [
+          "Mortality is 16%"
+        ],
+        "4": [
+          "Mortality is 16%"
+        ],
+        "5": [
+          "Mortality is 40%"
+        ],
+        "6": [
+          "Mortality is 40%"
+        ],
+        "7": [
+          "Mortality is almost 100%"
+        ],
+        "8": [
+          "Mortality is almost 100%"
+        ],
+        "9": [
+          "Mortality is almost 100%"
+        ],
+        "10": [
+          "Mortality is almost 100%"
+        ],
+        "11": [
+          "Mortality is almost 100%"
+        ]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Estimates mortality of patients with pancreatitis based on initial and 48 hour lab values",
+          "The BISAP score is another alternative to estimate pancreatitis mortality with fewer variables that is as accurate"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Ranson JH, Rifkind KM, Turner JW. Prognostic signs and nonoperative peritoneal lavage in acute pancreatitis. Surg Gyne Ob. 143:209, 1976."
+        ]
+      }
+    },
+    {
+      "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
+      "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Clinical Features",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Congestive Heart Failure / LV dysfunction",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Hypertension",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Diabetes Mellitus",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of Stroke or TIA or thromboembolism",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "Vascular disease (History of MI, PVD or aortic atherosclerosis)",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Age",
+          "data": {
+            "type": "radio",
+            "options": "<65 yrs/65-74 yrs/≥ 75 yrs",
+            "points": "0/1/2"
+          }
+        },
+        {
+          "group": "Sex",
+          "data": {
+            "type": "radio",
+            "options": "Male/Female",
+            "points": "0/1"
+          }
+        }
+      ],
+      "results": {
+        "0": [
+          "Low risk of stroke. Patient may not require anticoagulation.",
+          "Stroke risk was 0.2% per year in 90K patients and 0.3% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "1": [
+          "Low to moderate risk of stroke. Consider antiplatelet or anticoagulation therapy",
+          "Stroke risk was 0.6% per year in 90K patients and 0.9% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "2": [
+          "Moderate-high risk of stroke. Patient should be an anticoagulation candidate",
+          "Stroke risk was 2.2% per year in 90K patients and 2.9% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "3": [
+          "Moderate-high risk of stroke. Patient should be an anticoagulation candidate",
+          "Stroke risk was 3.2% per year in 90K patients and 4.6% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "4": [
+          "Moderate-high risk of stroke. Patient should be an anticoagulation candidate",
+          "Stroke risk was 4.8% per year in 90K patients and 6.7% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "5": [
+          "Moderate-high risk of stroke. Patient should be an anticoagulation candidate",
+          "Stroke risk was 7.2% per year in 90K patients and 10.0% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "6": [
+          "Moderate-high risk of stroke. Patient should be an anticoagulation candidate",
+          "Stroke risk was 9.7% per year in 90K patients and 13.6% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "7": [
+          "Moderate-high risk of stroke. Patient should be an anticoagulation candidate",
+          "Stroke risk was 11.2% per year in 90K patients and 15.7% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "8": [
+          "Moderate-high risk of stroke. Patient should be an anticoagulation candidate",
+          "Stroke risk was 10.8% per year in 90K patients and 15.2% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ],
+        "9": [
+          "Moderate-high risk of stroke. Patient should be an anticoagulation candidate",
+          "Stroke risk was 12.2% per year in 90K patients and 17.4% risk of stroke/TIA/systemic embolism (the Swedish Atrial Fibrillation Cohort Study)"
+        ]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "The CHA2DS2-VASc score was developed after identifying additional stroke risk factors in patients with Atrial Fibrillation",
+          "The Lip-Halperin Chest publication seeks to refine the the CHADS(2) risk stratification score by adding more points for patients ≥75 yrs and for vascular disease.",
+          "A 0 score is a low risk and may not require anticoagulation therapy, a 1 score is of low to moderate risk and one may consider antiplatelet or anticoagulation and a score of 2 or more is moderate high risk and patients should be put on anticoagulation therapy"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Lip GY, Halperin JL. Improving stroke risk stratification in atrial fibrillation. Am J Med. 2010 Jun;123(6):484-8. Review.",
+          "Lip GY, Nieuwlaat R, Pisters R, Lane DA, Crijns HJ. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the euro heart survey on atrial fibrillation. Chest. 2010 Feb;137(2):263-72."
+        ]
+      }
+    },
+    {
+      "id": "glasgow-coma-scale",
+      "title": "Glasgow Coma Scale",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Eye opening",
+          "data": {
+            "type": "radio",
+            "options": "Spontaneous/To sound/To pressure/No eye opening",
+            "points": "4/3/2/1"
+          }
+        },
+        {
+          "group": "Best motor response",
+          "data": {
+            "type": "radio",
+            "options": "Obeys verbal commands/Localizes pain/Normal flexion from pain/Abnormal flexion from pain/Extension to pain/No motor response",
+            "points": "6/5/4/3/2/1"
+          }
+        },
+        {
+          "group": "Best Verbal Response",
+          "data": {
+            "type": "radio",
+            "options": "Oriented/Confused/Inappropriate words/Only moans or groans/No verbal response",
+            "points": "5/4/3/4/2/1"
+          }
+        }
+      ],
+      "results": {
+        "3": ["Abnormal"],
+        "4": ["Abnormal"],
+        "5": ["Abnormal"],
+        "6": ["Abnormal"],
+        "7": ["Abnormal"],
+        "8": ["Abnormal"],
+        "9": ["Abnormal"],
+        "10": ["Abnormal"],
+        "11": ["Abnormal"],
+        "12": ["Abnormal"],
+        "13": ["Abnormal"],
+        "14": ["Abnormal"],
+        "15": ["Normal"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Glasgow Coma Scale (GCS) estimates the coma severity based on Eye, Verbal and Motor criteria.",
+          "The GCS can be indicative of how critically ill a patient is. Trauma patients presenting with a GCS < 15 points require close attention and re-assessment",
+          "The GCS is the standard used in the pre-hospital and acute care setting to evaluate for mental status assessment in both traumatic and non-traumatic presentations."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Teasdale G, Jennett B. Assessment of coma and impaired conciousness: a practical scale. Lancet. 1974; Jul 13;2:81-84.",
+          "Teasdale G, Knill-Jones R, van der Sande J. Observer variability in assessing impaired consciousness and coma. J Neurol Neurosurg Psychiatry 1978;41:603-10.",
+          "The Glasgow Structured Approach to Assessment of the Glasgow Coma Scale www.glasgowcomascale.org"
+        ]
+      }
+    },
+    {
+      "id": "apgar-score",
+      "title": "Apgar Score",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Pulse heart rate",
+          "data": {
+            "type": "radio",
+            "options": "≥100 bpm/<100 bpm/Absent",
+            "points": "2/1/0"
+          }
+        },
+        {
+          "group": "Respiration/Lung maturity",
+          "data": {
+            "type": "radio",
+            "options": "Good or crying/Slow or irregular/None",
+            "points": "2/1/0"
+          }
+        },
+        {
+          "group": "Muscle tone",
+          "data": {
+            "type": "radio",
+            "options": "Active motion/Some extremity flexion/Limp",
+            "points": "2/1/0"
+          }
+        },
+        {
+          "group": "Skin appearance/Color",
+          "data": {
+            "type": "radio",
+            "options": "All Pink/Bluish extremities, pink body/Blue or pale",
+            "points": "2/1/0"
+          }
+        },
+        {
+          "group": "Reflex irritability/Grimace",
+          "data": {
+            "type": "radio",
+            "options": "Sneeze and cough or crying/Grimacing/Silence",
+            "points": "2/1/0"
+          }
+        }
+      ],
+      "results": {
+        "0": ["Distress, needs intervention"],
+        "1": ["Distress, needs intervention"],
+        "2": ["Distress, needs intervention"],
+        "3": ["Distress, needs intervention"],
+        "4": ["Fairly low"],
+        "5": ["Fairly low"],
+        "6": ["Fairly low"],
+        "7": ["Normal"],
+        "8": ["Normal"],
+        "9": ["Normal"],
+        "10": ["Normal"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Apgar is a quick test performed on neonates at 1 and 5 minutes after birth.",
+          "The 1 minute score determines how well the baby tolerated the birthing process. The 5 minute score tells how well the baby is doing outside the mother's womb.",
+          "Per Neonatal Resuscitation Program, scoring continues at 5 min intervals until reaching a score of 7 or until 20 minutes of life is encountered.  Scored by any provider with direct patient contact at the specified time.",
+          "Testing for Reflex irritability involves a rapid, tangential slap of the sole of the baby's foot "
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Apgar V. A proposal of a New Method of Evaluation of the Newborn Infant. Current Researches in Anesthesia and Analgesia. 1953, 32: 261-267.",
+          "Apgar V, Holaday DA, James LS, et. al. Evaluation of the newborn infant. JAMA. 1958, 168: 1985-1988.",
+          "Casey BM, McIntire DD, Leveno KJ. The continuing value of the Apgar score for the assessment of newborn infants. N Engl J Med. 2001 Feb 15;344(7):467-71."
+        ]
+      }
+    },
+    {
+      "id": "metabolic-syndrome-criteria-aha-nhlbi-2005",
+      "title": "Metabolic Syndrome Criteria (AHA/NHLBI 2005)",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Abdominal obesity (Male waist > 101 cm (40 in). Female waist > 88.9cm (35 in)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Triglycerides ≥ 150 mg/dL or on Triglyceride lowering Rx",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "HDL cholesterol (Male < 40; Female < 50) or on HDL improvement Rx",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Blood Pressure ≥130/≥85 or on BP Rx",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Fasting glucose ≥100 mg/dL or on Glucose lowering Rx",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": ["Absent"],
+        "1": ["Absent"],
+        "2": ["Absent"],
+        "3": ["Present"],
+        "4": ["Present"],
+        "5": ["Present"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "This criteria set was proposed by the American Heart Association and the National Heart Lung and Blood Institute.",
+          "Metabolic syndrome is a constellation of interrelated risk factors of metabolic origin that appear to directly promote the development of atherosclerotic cardiovascular disease.",
+          "The predominant underlying risk factors for the syndrome appear to be abdominal obesity and insulin resistance; other associated conditions can be physical inactivity, aging and hormonal imbalance."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Grundy SM, Cleeman JI, Daniels SR, et. al. American Heart Association; National Heart, Lung, and Blood Institute. Diagnosis and management of the metabolic syndrome: an American Heart Association/National Heart, Lung, and Blood Institute Scientific Statement. Circulation. 2005 Oct 25;112(17):2735-52. Epub 2005 Sep 12."
+        ]
+      }
+    },
+    {
+      "id": "dvt-probability-wells-score-system",
+      "title": "DVT Probability: Wells Score System",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Clinical Findings",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Paralysis, paresis or recent orthopedic casting of lower extremity",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Recently bedridden (> 3 days) or major surgery within last 4 weeks",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Localized tenderness in deep vein system",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Entire leg is swollen",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Calf swelling >3 cm compared to other leg (measured 10 cm below tibial tuberosity)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Pitting edema, confined to symptomatic leg",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Collateral non varicose superficial veins",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Active cancer, treatment or palliation within 6 months",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Alternative diagnosis more likely than DVT (Baker's cyst, cellulitis, muscle damage, superficial venous thrombosis, post phlebitic syndrome, inguinal lymphadenopathy, external venous compression)",
+              "points": "-2"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "-2": ["Low risk; 5% probability of DVT"],
+        "-1": ["Low risk; 5% probability of DVT"],
+        "0": ["Low risk; 5% probability of DVT"],
+        "1": ["Moderate risk; 17% probability of DVT"],
+        "2": ["Moderate risk of DVT; 17% probability of DVT"],
+        "3": ["High risk of DVT; 53% probability of DVT"],
+        "4": ["High risk of DVT; 53% probability of DVT"],
+        "5": ["High risk of DVT; 53% probability of DVT"],
+        "6": ["High risk of DVT; 53% probability of DVT"],
+        "7": ["High risk of DVT; 53% probability of DVT"],
+        "8": ["High risk of DVT; 53% probability of DVT"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "The Wells clinical prediction guide quantifies the probability of deep venous thrombosis (DVT) in patients",
+          "The model enables the reliable stratification of patients into high, moderate and low risk categories.",
+          "Based on the 2003 Wells study, DVT can be ruled out in a patient who is judged clinically unlikely to have a DVT and who has a negative D-dimer test. Ultrasound testing can be safely omitted in such patients. "
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Wells PS, Anderson DR, Bormanis J, et. al. Value of assessment of pretest probability of deep-vein thrombosis in clinical management. Lancet. 1997 Dec 20-27;350(9094):1795-8.",
+          "Wells PS, Anderson DR, Rodger M, Forgie M, Kearon C, Dreyer J, Kovacs G, Mitchell M, Lewandowski B, Kovacs MJ. Evaluation of D-dimer in the diagnosis of suspected deep-vein thrombosis. N Engl J Med. 2003 Sep 25;349(13):1227-35."
+        ]
+      }
+    },
+    {
+      "id": "tia-prognosis-risk-of-stroke-by-90-days-after-presentation",
+      "title": "TIA Prognosis: Risk of Stroke by 90 Days After Presentation",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Patient > 60 yrs",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Concurrent Diabetes",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "TIA lasted > 10 minutes",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Patient experienced weakness during TIA",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Patient experienced speech problems during TIA",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": ["90 Day Risk of Stroke: Virtually no Risk"],
+        "1": ["90 Day Risk of Stroke: 3% Risk"],
+        "2": ["90 Day Risk of Stroke: 7% Risk"],
+        "3": ["90 Day Risk of Stroke: 11% Risk"],
+        "4": ["90 Day Risk of Stroke: 15% Risk"],
+        "5": ["90 Day Risk of Stroke: 34% Risk"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Johnston SC, Gress DR, Browner WS, Sidney S. Short-term prognosis after emergency department diagnosis of TIA. JAMA. 2000; 284: 2901-6."
+        ]
+      }
+    },
+    {
+      "id": "thrombolysis-in-myocardial-infarction-timi-score-for-st-elevation-acute-myocardial-infarction",
+      "title": "TIMI Risk Score for STEMI",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Diabetes, Hypertension or Angina",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Systolic Blood Pressure <100 mm Hg",
+              "points": "3"
+            },
+            {
+              "type": "checkbox",
+              "label": "Heart rate > 100 bpm",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "Killip class II-IV",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "Body weight < 67 kg (150 lb)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Anterior ST elevation or Left Bundle Branch Block",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Time to treatment > 4 hrs",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Age",
+          "data": {
+            "type": "radio",
+            "options": "≥ 75 yrs/65-74 yrs/< 65 yrs",
+            "points": "3/2/0"
+          }
+        }
+      ],
+      "results": {
+        "0": ["30 Day mortality after an MI 0.8%"],
+        "1": ["30 Day mortality after an MI 1.6%"],
+        "2": ["30 Day mortality after an MI 2.2%"],
+        "3": ["30 Day mortality after an MI 4.4%"],
+        "4": ["30 Day mortality after an MI 7.3%"],
+        "5": ["30 Day mortality after an MI 12%"],
+        "6": ["30 Day mortality after an MI 16%"],
+        "7": ["30 Day mortality after an MI 23%"],
+        "8": ["30 Day mortality after an MI 27%"],
+        "9": ["30 Day mortality after an MI 36%"],
+        "10": ["30 Day mortality after an MI 36%"],
+        "11": ["30 Day mortality after an MI 36%"],
+        "12": ["30 Day mortality after an MI 36%"],
+        "13": ["30 Day mortality after an MI 36%"],
+        "14": ["30 Day mortality after an MI 36%"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "TIMI Risk Score predicts 30 day mortality in patients with ST Elevation Acute Myocardial Infarction (STEMI).",
+          "The TIMI Score for STEMI was developed from the InTIME II trial of 15K STEMI patients which included studying these patients for thrombolytics. It did not include patients with cardiogenic shock or severe hypertension (BP >180/>110)",
+          "Entry criteria: Chest pain for > 30 minutes, ST elevation, symptom onset < 6 hours, fibrinolytic eligible.",
+          "Can be used on patients who are post-cath who may have bleeding risks to objectify risk-benefit of post PCI medications."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Morrow DA, Antman EM, Charlesworth A, et. al. TIMI risk score for ST-elevation myocardial infarction: A convenient, bedside, clinical score for risk assessment at presentation: An intravenous nPA for treatment of infarcting myocardium early II trial substudy. Circulation. 2000 Oct 24; 102(17):2031-7.",
+          "Morrow DA, Antman EM, Parsons L, de Lemos JA, Cannon CP, Giugliano RP, McCabe CH, Barron HV, Braunwald E. Application of the TIMI risk score for ST-elevation MI in the National Registry of Myocardial Infarction 3. JAMA. 2001 Sep 19;286(11):1356-9."
+        ]
+      }
+    },
+    {
+      "id": "thrombolysis-in-myocardial-infarction-timi-score-for-unstable-angina-non-st-elevation-myocardial-infarction",
+      "title": "TIMI Risk Score for Unstable Angina/NSTEMI",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Age ≥ 65",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "≥ 3 CAD risk factors (Hypertension, Diabetes, High Cholesterol, Family History of CAD, Current Smoker)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Known CAD with > 50% stenosis",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Aspirin use in the past 7 days",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Severe angina ≥ 2 episodes in 24 hrs",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Elevated cardiac markers",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "ST deviation ≥ 0.5 mm",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": ["5% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
+        "1": ["5% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
+        "2": ["8% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
+        "3": ["13% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
+        "4": ["20% risk at 2 weeks of: Death new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
+        "5": ["26% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
+        "6": ["41% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"],
+        "7": ["41% risk at 2 weeks of: Death, new or recurrent MI, severe recurrent ischemia requiring urgent revascularization"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Estimates mortality in patients with unstable angina and non-ST elevation myocardial infarction (MI)",
+          "Entry criteria: UA or NSTEMI defined as ischemic pain at rest within the past 24 hours with evidence of Coronary Artery Disease (ST segment deviation or + markers)",
+          "TIMI Risk Score for Unstable Angina/NSTEMI can be used to help risk stratify patients with anginal symptoms but is better suited for patients with confirmed NSTEMI or unstable angina",
+         "TIMI Risk Score for Unstable Angina/NSTEMI is the best known chest pain risk score tool, however newer tools such as the GRACE score provide better risk stratification for low vs. non-low risk patients."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Antman EM1, Cohen M, Bernink PJ, McCabe CH, Horacek T, Papuchis G, Mautner B, Corbalan R, Radley D, Braunwald E. The TIMI risk score for unstable angina/non-ST elevation MI: A method for prognostication and therapeutic decision making. JAMA. 2000 Aug 16;284(7):835-42."
+        ]
+      }
+    },
+    {
+      "id": "nih-stroke-score",
+      "title": "NIH Stroke Score",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "1A: Level of Consciousness",
+          "data": {
+            "type": "radio",
+            "options": "Alert/Not alert, but arousable by minor stimulation/Not alert, requires repeated stimulation to attend/Coma",
+            "points": "0/1/2/3"
+          }
+        },
+        {
+          "group": "1B: Ask Patient the Month and His/Her Age",
+          "data": {
+            "type": "radio",
+            "options": "Answers both questions correctly/Answers one question correctly/Neither correct",
+            "points": "0/1/2"
+          }
+        },
+        {
+          "group": "1C: Open and Close Eyes on Command/Grip and release non-paretic hand ",
+          "data": {
+            "type": "radio",
+            "options": "Obeys both correctly/Obeys one correctly/Both incorrect",
+            "points": "0/1/2"
+          }
+        },
+        {
+          "group": "2: Best Gaze (only horizontal eye movement)",
+          "data": {
+            "type": "radio",
+            "options": "Normal/Partial gaze palsy/Forced deviation",
+            "points": "0/1/2"
+          }
+        },
+        {
+          "group": "3: Visual Field testing",
+          "data": {
+            "type": "radio",
+            "options": "No visual field loss/Partial hemianopia/Complete hemianopia/Bilateral hemianopia or Patient is bilaterally blind",
+            "points": "0/1/2/3"
+          }
+        },
+        {
+          "group": "4: Facial Palsy (Ask patient to show teeth or raise eyebrows and close eye)",
+          "data": {
+            "type": "radio",
+            "options": "Normal symmetrical movement/Minor paralysis/Partial paralysis (total or near total paralysis of lower face)/Complete paralysis of one or both sides",
+            "points": "0/1/2/3"
+          }
+        },
+        {
+          "group": "5A: Motor Function of Right Arm (Count out loud and use your fingers to show patient your count)",
+          "data": {
+            "type": "radio",
+            "options": "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
+            "points": "0/1/2/3/4/0"
+          }
+        },
+        {
+          "group": "5B: Motor Function of Left Arm (Count out loud and use your fingers to show patient your count)",
+          "data": {
+            "type": "radio",
+            "options": "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
+            "points": "0/1/2/3/4/0"
+          }
+        },
+        {
+          "group": "6A: Motor Function of Right Leg (Hold the leg at 30 deg, always tested in supine position)",
+          "data": {
+            "type": "radio",
+            "options": "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
+            "points": "0/1/2/3/4/0"
+          }
+        },
+        {
+          "group": "6B: Motor Function of Left Leg (Hold the leg at 30 deg, always tested in supine position)",
+          "data": {
+            "type": "radio",
+            "options": "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
+            "points": "0/1/2/3/4/0"
+          }
+        },
+        {
+          "group": "7: Limb Ataxia (Test with eyes open)",
+          "data": {
+            "type": "radio",
+            "options": "None/Present in 1 limb/Present in 2 limbs/Amputation or joint fusion",
+            "points": "0/1/2/0"
+          }
+        },
+        {
+          "group": "8: Sensory by Pinprick",
+          "data": {
+            "type": "radio",
+            "options": "Normal/Mild to moderate sensory loss/Severe or total sensory loss",
+            "points": "0/1/2"
+          }
+        },
+        {
+          "group": "9: Best Language (Describe a picture, name items, read sentences)",
+          "data": {
+            "type": "radio",
+            "options": "No aphasia/Mild - Moderate aphasia/Severe aphasia/Mute",
+            "points": "0/1/2/3"
+          }
+        },
+        {
+          "group": "10: Dysarthria (read or repeat words)",
+          "data": {
+            "type": "radio",
+            "options": "Normal/Mild to Moderate slurring/Severe dysarthria/Intubated or other physical impediment to testing",
+            "points": "0/1/2/0"
+          }
+        },
+        {
+          "group": "11: Extinction and Inattention (Neglect)",
+          "data": {
+            "type": "radio",
+            "options": "No abnormality/Visual, tactile, auditory, spatial or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities/Severe hemi-inattention or extinction to more than one modality",
+            "points": "0/1/2"
+          }
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "The NIH Stroke Score is used to quantify patient stroke severity and to track outcomes, improvement or deteoriation of a stroke",
+          "If the patient has a prior known neurological deficit (e.g. Blindness, Quadriplegia, Language barriers etc.), it becomes even more complicated to evaluate. Refer to the NIH Stroke Scale Website for more details.",
+          "Scores > 22 are considered very significant and may predict increased complication risk.",
+          "If the patient's arm or leg cannot be tested due to amputation or other limitation such as joint fusion, untestable is recorded and no points are counted."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Brott T, Adams HP Jr, Olinger CP, et. al. Measurements of acute cerebral infarction: a clinical examination scale. Stroke. 1989 Jul;20(7):864-70.",
+          "NIH Stroke Scale https://stroke.nih.gov/resources/scale.htm"
+        ]
+      }
+    },
+    {
+      "id": "bleeding-risk-any-bleeding-complication-on-warfarin-therapy",
+      "title": "Bleeding Risk on Warfarin Therapy (Any Bleeding Complication)",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Age >= 60",
+              "points": "1.6"
+            },
+            {
+              "type": "checkbox",
+              "label": "Malignacy Present",
+              "points": "2.2"
+            }
+          ]
+        },
+        {
+          "group": "Age",
+          "data": {
+            "type": "radio",
+            "options": "Female/Male ",
+            "points": "1.3/0"
+          }
+        }
+      ],
+      "results": {
+        "0": ["Risk of any bleeding complications: 0-4%"],
+        "1.3": ["Risk of any bleeding complications: 6-8%"],
+        "1.6": ["Risk of any bleeding complications: 6-8%"],
+        "2.2": ["Risk of any bleeding complications: 6-8%"],
+        "2.9": ["Risk of any bleeding complications: 6-8%"],
+        "3.5": ["Risk of any bleeding complications: 17-26%"],
+        "3.8": ["Risk of any bleeding complications: 17-26%"],
+        "5.1": ["Risk of any bleeding complications: 17-26%"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Kuijer PM, Hutten BA, Prins MH, Buller HR. Prediction of the risk of bleeding during anticoagulant treatment for venous thromboembolism. Arch Intern Med. 1999; 159: 457-60."
+        ]
+      }
+    },
+    {
+      "id": "abcd2-score-for-tia",
+      "title": "ABCD2 Score for TIA",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Age ≥ 60 yrs",
+          "data": {
+            "type": "radio",
+            "options": "Yes/No",
+            "points": "1/0"
+          }
+        },
+        {
+          "group": "Blood Pressure ≥ 140/90 mmHg",
+          "data": {
+            "type": "radio",
+            "options": "Yes/No",
+            "points": "1/0"
+          }
+        },
+        {
+          "group": "Clinical features of TIA",
+          "data": {
+            "type": "radio",
+            "options": "Unilateral weakness/Speech disturbance without weakness/Other symptoms",
+            "points": "2/1/0"
+          }
+        },
+        {
+          "group": "Duration of symptoms",
+          "data": {
+            "type": "radio",
+            "options": "≥60 min/10-59 min/<10 min",
+            "points": "2/1/0"
+          }
+        },
+        {
+          "group": "Diabetes history",
+          "data": {
+            "type": "radio",
+            "options": "Yes/No",
+            "points": "1/0"
+          }
+        }
+      ],
+      "results": {
+        "0": ["Low Risk; 2-day stroke risk 1.0%, 7-day stroke risk 1.2%, 90-day stroke risk 3.1%"],
+        "1": ["Low Risk; 2-day stroke risk 1.0%, 7-day stroke risk 1.2%, 90-day stroke risk 3.1%"],
+        "2": ["Low Risk; 2-day stroke risk 1.0%, 7-day stroke risk 1.2%, 90-day stroke risk 3.1%"],
+        "3": ["Low Risk; 2-day stroke risk 1.0%, 7-day stroke risk 1.2%, 90-day stroke risk 3.1%"],
+        "4": ["Moderate Risk; 2-day stroke risk 4.1%, 7-day stroke risk 5.9%, 90-day stroke risk 9.8%"],
+        "5": ["Moderate Risk; 2-day stroke risk 4.1%, 7-day stroke risk 5.9%, 90-day stroke risk 9.8%"],
+        "6": ["High Risk; 2-day stroke risk 8.1%, 7-day stroke risk 11.7%, 90-day stroke risk 17.8%"],
+        "7": ["High Risk; 2-day stroke risk 8.1%, 7-day stroke risk 11.7%, 90-day stroke risk 17.8%"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "The ABCD2 score was developed to help stratify the stroke risk for patients presenting with a transient ischmeic attack (TIA).",
+          "The score was developed in a non-emergency/outpatient setting. It has been shown to have lower accuracy when used by non-specialists.",
+          "The largest prospective study using the ABCD2 score in the emergency department showed that the score performed poorly (low sensitivity for low risk patients and low specificity for high risk patients)",
+          "Several other studies have shown that as the ABCD2 score increases the risk of a subsequent stroke increases",
+          "Patients who have a low baseline risk of stroke (<2.0%) are at a low risk for having a stroke in the next 7 days (0.4-0.8%)"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Johnston SC1, Rothwell PM, Nguyen-Huynh MN, Giles MF, Elkins JS, Bernstein AL, Sidney S. Validation and refinement of scores to predict very early stroke risk after transient ischaemic attack. Lancet. 2007 Jan 27;369(9558):283-92."
+        ]
+      }
+
+    },
+    {
+      "id": "has-bled-score-for-major-bleeding-risk",
+      "title": "HAS-BLED Score for Major Bleeding Risk",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Uncontrolled hypertension (Systolic ≥ 160mmHg)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Renal disease (Dialysis, transplant or Creatinine >2.26mg/dL (200µmol/L)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Liver disease (Cirrhosis or bilirubin levels >2x normal with AST/ALT/AP >3x normal)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Stroke history",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Prior major bleeding or predisposition to bleeding",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Labile INR (Unstable/High INRs, time in therapeutic range <60%)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Alcohol use ≥ 8 drinks/week",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Age > 65 yrs",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Medication usage that predisposes patient to bleeding (NSAIDs, Antiplatelet agents)",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": [
+          "Low Risk for major bleeding (~1 in 100 patient years); Anticoagulation should be considered"
+        ],
+        "1": [
+          "Low Risk for major bleeding (~1 in 100 patient years); Anticoagulation should be considered"
+        ],
+        "2": [
+          "Moderate Risk for major bleeding (~2 in 100 patient years); Anticoagulation can be considered"
+        ],
+        "3": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ],
+        "4": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ],
+        "5": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ],
+        "6": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ],
+        "7": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ],
+        "8": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ],
+        "9": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ],
+        "10": [
+          "High Risk for major bleeding; Alternatives to anticoagulation should be considered"
+        ]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "HAS-BLED Score estimates the risk of major bleeding for atrial fibrillation patients to determine whether to start anticoagulation therapy",
+          "Scores >5 were too rare to determine risk but the risk of major bleeding is likely >10%",
+          "A study comparing HAS-BLED to HEMORR2HAGES and ATRIA showed the HAS-BLED score was superior in assessing risk"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Pisters R, Lane DA, Nieuwlaat R, de Vos CB, Crijns HJ, Lip GY. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest. 2010 Nov;138(5):1093-100. doi: 10.1378/chest.10-0134. Epub 2010 Mar 18.",
+          "Lip GY, Frison L, Halperin JL, Lane DA. Comparative validation of a novel risk score for predicting bleeding risk in anticoagulated patients with atrial fibrillation: the HAS-BLED (Hypertension, Abnormal Renal/Liver Function, Stroke, Bleeding History or Predisposition, Labile INR, Elderly, Drugs/Alcohol Concomitantly) score. J Am Coll Cardiol. 2011 Jan 11;57(2):173-80. doi: 10.1016/j.jacc.2010.09.024. Epub 2010 Nov 24."
+        ]
+      }
+    },
+    {
+      "id": "cardiac-risk-index-aaa-surgery-lee",
+      "title": "Cardiac Risk Index for AAA Surgery (Lee)",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Patient has Coronary artery disease (MI or positive stress test)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of Congestive Heart Failure",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of Cerebrovascular disease (TIA or stroke)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Patient has diabetes and is on insulin",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": [
+          "Approximate risk of cardiac complication: up to 7%"
+        ],
+        "1": [
+          "Approximate risk of cardiac complication: up to 7%"
+        ],
+        "2": [
+          "Approximate risk of cardiac complication: 3.8%"
+        ],
+        "3": [
+          "Approximate risk of cardiac complication: 11.5%"
+        ],
+        "4": [
+          "Approximate risk of cardiac complication: 11.5%"
+        ],
+        "5": [
+          "Approximate risk of cardiac complication: 11.5%"
+        ]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "The index score helps to identify patients at higher risk for cardiac complications post surgery",
+          "In the Lee study, patients with 2 risk factors had a paradoxical decrease in cardiac complication rates"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999; 100: 1043-9."
+        ]
+      }
+    },
+    {
+      "id": "cardiac-risk-index-abdominal-surgery-lee",
+      "title": "Cardiac Risk Index for Abdominal Surgery (Lee)",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Patient has Coronary artery disease (MI or positive stress test)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of Congestive Heart Failure",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of Cerebrovascular disease (TIA or stroke)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Patient has diabetes and is on insulin",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": [
+          "Approximate risk of cardiac complication: <1%"
+        ],
+        "1": [
+          "Approximate risk of cardiac complication: <1%"
+        ],
+        "2": [
+          "Approximate risk of cardiac complication: 3%"
+        ],
+        "3": [
+          "Approximate risk of cardiac complication: 8.1%"
+        ],
+        "4": [
+          "Approximate risk of cardiac complication: 8.1%"
+        ],
+        "5": [
+          "Approximate risk of cardiac complication: 8.1%"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999; 100: 1043-9."
+        ]
+      }
+    },
+    {
+      "id": "cardiac-risk-index-non-aaa-vascular-surgery-lee",
+      "title": "Cardiac Risk Index for Non-AAA Vascular Surgery (Lee)",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Planned surgery type is high risk",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of Coronary Artery disease",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of Congestive Heart Failure",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of Cerebrovascular disease(TIA or stroke)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Patient has diabetes and is on insulin",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": [
+          "Approximate risk of cardiac complication: <1%"
+        ],
+        "1": [
+          "Approximate risk of cardiac complication: <1%"
+        ],
+        "2": [
+          "Approximate risk of cardiac complication: 8%"
+        ],
+        "3": [
+          "Approximate risk of cardiac complication: 12.5%"
+        ],
+        "4": [
+          "Approximate risk of cardiac complication: 12.5%"
+        ],
+        "5": [
+          "Approximate risk of cardiac complication: 12.5%"
+        ],
+        "6": [
+          "Approximate risk of cardiac complication: 12.5%"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999; 100: 1043-9."
+        ]
+      }
+    }
+    ]
+}
