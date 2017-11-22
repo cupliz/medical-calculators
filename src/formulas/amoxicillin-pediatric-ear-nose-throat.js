@@ -111,7 +111,9 @@ class FormulaComponent extends Component {
     if (action === '+') {
       this.setState({ decimal: oldDecimal + 1 })
     } else {
-      if (oldDecimal === 0) { return }
+      if (oldDecimal === 0) {
+        return
+      }
       this.setState({ decimal: oldDecimal - 1 })
     }
   }
