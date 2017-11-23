@@ -1817,8 +1817,10 @@
       "references": {
         "type": "ordered-list",
         "content": [
-          "Durack DT, Lukes AS, Bright DK. New criteria for diagnosis of infective endocarditis: utilization of specific echocardiographic findings. Duke Endocarditis Service. American Journal of Medicine. 96(3):200-9, 1994.",
-          "Lukes AS, Bright DK, Durack DT. Diagnosis of infective endocarditis. Infect Dis Clin North Am. 1993 Mar;7(1):1-8. Review."
+          "Stiell IG, McKnight RD, Greenberg GH, et. al. Implementation of the Ottawa ankle rules. JAMA. 1994 Mar 16;271(11):827-832.",
+          "Stiell IG, Greenberg GH, McKnight RD, et.al. Decision rules for the use of radiography in acute ankle injuries. Refinement and prospective validation. . JAMA. 1993 Mar 3;269(9):1127-32.",
+          "Stiell IG, Greenberg GH, McKnight RD, et. al. A study to develop clinical decision rules for the use of radiography in acute ankle injuries. Ann Emerg Med. 1992 Apr;21(4):384-90.",
+          "Stiell IG, McKnight RD, Greenberg GH, et. al. Interobserver agreement in the examination of acute ankle injury patients. Am J Emerg Med. 1992 Jan;10(1):14-17."
         ]
       }
     }
