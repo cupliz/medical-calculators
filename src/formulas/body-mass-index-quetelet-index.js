@@ -17,18 +17,6 @@ const unitData = {
   weight: [
     { value: 2.20462262184878, unit: 'kg' },
     { value: 1, unit: 'lb' }
-  ],
-  daysUrineVolume: [
-    { value: 1000, unit: 'L' },
-    { value: 1e-12, unit: 'fL' },
-    { value: 1, unit: 'mL' }
-  ],
-  creatClear: [
-    { value: 1000, unit: 'L/min' },
-    { value: 60000, unit: 'L/sec' },
-    { value: 0.01666666667, unit: 'mL/hr' },
-    { value: 1, unit: 'mL/min' },
-    { value: 60, unit: 'mL/sec' }
   ]
 }
 
