@@ -1575,8 +1575,7 @@
     {
       "id": "jones-criteria-for-diagnosis-of-rheumatic-fever",
       "title": "Jones Criteria for Diagnosis of Rheumatic Fever",
-      "type": "points",
-      "points": 0,
+      "type": "formula",
       "questions": [
         {
           "group": "Criteria",
