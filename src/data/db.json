@@ -1616,6 +1616,36 @@
               "points": "1"
             }
           ]
+        },
+        {
+          "group": "Minor Diagnostic Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Fever",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Arthralgia",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Previous rheumatic fever or rheumatic heart disease",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Acute phase reactions: ESR / CRP / Leukocytosis",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Prolonged PR interval",
+              "points": "1"
+            }
+          ]
         }
       ],
       "results": {},
