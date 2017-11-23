@@ -1841,7 +1841,7 @@
       ],
       "results": {},
       "formula": {
-        "type": "ordered-list",
+        "type": "paragraph",
         "content": [
           "CreatClear = UrineCreatinine* DaysUrineVolume/ SerumCreatinine/1440"
         ]
