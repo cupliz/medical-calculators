@@ -1891,7 +1891,7 @@
       "formula": {
         "type": "paragraph",
         "content": [
-          "CreatClear = UrineCreatinine* DaysUrineVolume/ SerumCreatinine/1440"
+          "BMI = (Weight/2.205) / (Height/39.37)^2"
         ]
       }
     }
