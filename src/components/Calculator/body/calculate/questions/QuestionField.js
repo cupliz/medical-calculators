@@ -61,6 +61,7 @@ const renderCheckboxField = props => {
       answerPoints={answerPoints}
       questionLabel={props.label}
       group={props.group}
+      showPoints={props.showPoints}
       classes={props.classes}
     />
   )
