@@ -57,7 +57,7 @@ class FormulaComponent extends Component {
   handleSelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.dose, value)
-    this.setState({ doseSelectUnit: value, doseSelectValue: selectValue })
+    this.setState({ creatClearSelectUnit: value, creatClearSelectValue: selectValue })
   }
 
   handleDecimalChange = action => {
