@@ -90,6 +90,7 @@ class CalculatorBody extends Component {
             <ReferencesContainer
               references={this.props.data.references}
               notes={this.props.data.notes}
+              formula={this.props.data.formula}
             />
           </TabContainer>
         </SwipeableViews>

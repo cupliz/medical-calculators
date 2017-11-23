@@ -2,7 +2,7 @@ import React from 'react'
 import InfoCard from './InfoCard'
 
 const ReferencesContainer = props => {
-  const { notes, references } = props
+  const { notes, references, formula } = props
 
   return (
     <div>
@@ -14,6 +14,13 @@ const ReferencesContainer = props => {
           title='References'
           type={references.type}
           content={references.content}
+        />
+      )}
+      {formula && (
+        <InfoCard
+          title='Formula'
+          type={formula.type}
+          content={formula.content}
         />
       )}
     </div>
