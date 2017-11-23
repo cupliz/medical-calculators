@@ -1697,27 +1697,32 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Fever",
+              "label": "Predisposing heart condition or intravenous drug use",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Arthralgia",
+              "label": "Temp > 38.0° C (100.4° F)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Previous rheumatic fever or rheumatic heart disease",
+              "label": "Vascular phenomena: arterial emboli, pulmonary infarcts, mycotic aneurysms, intracranial bleed, conjunctival hemorrhages, Janeway lesions",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Acute phase reactions: ESR / CRP / Leukocytosis",
+              "label": "Immunologic phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Prolonged PR interval",
+              "label": "Microbiological evidence: positive blood culture but does not meet a major criterion as noted above or serological evidence of active infection with organism consistent with endocarditis (excluding coag neg staph, and other common contaminants)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Echocardiographic findings: consistent with endocarditis but do not meet a major criterion as noted above",
               "points": "1"
             }
           ]
