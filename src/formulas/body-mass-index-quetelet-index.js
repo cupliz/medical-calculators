@@ -14,10 +14,7 @@ const unitData = {
     { value: 1, unit: 'in' },
     { value: 39.3700787401575, unit: 'm' }
   ],
-  weight: [
-    { value: 2.20462262184878, unit: 'kg' },
-    { value: 1, unit: 'lb' }
-  ]
+  weight: [{ value: 2.20462262184878, unit: 'kg' }, { value: 1, unit: 'lb' }]
 }
 
 const filterUnit = (arr, select) =>
@@ -28,10 +25,7 @@ class FormulaComponent extends Component {
     decimal: 2
   }
 
-  handleCalc = (
-    weight,
-    height
-  ) => {
+  handleCalc = (weight, height) => {
     // BMI = (Weight/2.205) / (Height/39.37)^2
     const creatClear = urine * days / serum / 1440
     return (creatClear / selectValue).toFixed(this.state.decimal)
@@ -40,7 +34,10 @@ class FormulaComponent extends Component {
   handleSelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.creatClear, value)
-    this.setState({ creatClearSelectUnit: value, creatClearSelectValue: selectValue })
+    this.setState({
+      creatClearSelectUnit: value,
+      creatClearSelectValue: selectValue
+    })
   }
 
   handleDecimalChange = action => {
