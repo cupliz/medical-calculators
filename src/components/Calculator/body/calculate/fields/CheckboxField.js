@@ -31,8 +31,33 @@ class CheckboxField extends Component {
     }
   }
 
+  renderLabel = (questionLabel, classes, answerPoints, showPoints) => {
+    if (showPoints === false) {
+      return <span>{questionLabel} </span>
+    } else {
+      return (
+        <span>
+          {questionLabel}
+          <small
+            className={
+              this.state.checked ? classes.checkedBadge : classes.unCheckedBadge
+            }
+          >
+            {`${answerPoints[1]} Point`}
+          </small>
+        </span>
+      )
+    }
+  }
+
   render () {
-    const { answerPoints, questionLabel, group, classes } = this.props
+    const {
+      answerPoints,
+      questionLabel,
+      group,
+      classes,
+      showPoints
+    } = this.props
     return (
       <FormGroup row aria-label={group} className={classes.group}>
         <FormControlLabel
@@ -44,20 +69,12 @@ class CheckboxField extends Component {
               checked={this.state.checked}
             />
           }
-          label={
-            <span>
-              {questionLabel}
-              <small
-                className={
-                  this.state.checked
-                    ? classes.checkedBadge
-                    : classes.unCheckedBadge
-                }
-              >
-                {`${answerPoints[1]} Point`}
-              </small>
-            </span>
-          }
+          label={this.renderLabel(
+            questionLabel,
+            classes,
+            answerPoints,
+            showPoints
+          )}
         />
       </FormGroup>
     )
