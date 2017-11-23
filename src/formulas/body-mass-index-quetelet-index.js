@@ -56,34 +56,28 @@ class FormulaComponent extends Component {
     const { questions } = data
 
     // extract needed field vars
-    let urineValue = null
-    let urineUnitValue = null
-    let serumValue = null
-    let serumUnitValue = null
-    let daysValue = null
-    let daysUnitValue = null
+    let heightValue = null
+    let heightUnitValue = null
+    let weightValue = null
+    let weightUnitValue = null
 
     questions.map((question, index) => {
       const { calculate } = question
       if (calculate) {
         const { input, select } = calculate
         if (index === 0) {
-          urineValue = input
-          urineUnitValue = filterUnit(unitData.urine, select)
+          heightValue = input
+          heightUnitValue = filterUnit(unitData.height, select)
         }
         if (index === 1) {
-          serumValue = input
-          serumUnitValue = filterUnit(unitData.serum, select)
-        }
-        if (index === 2) {
-          daysValue = input
-          daysUnitValue = filterUnit(unitData.daysUrineVolume, select)
+          weightValue = input
+          weightUnitValue = filterUnit(unitData.weight, select)
         }
       }
       return calculate
     })
 
-    if (urineValue && serumValue && daysValue) {
+    if (heightValue && weightValue) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
