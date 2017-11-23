@@ -47,27 +47,15 @@ class FormulaComponent extends Component {
     decimal: 2
   }
 
-  handleDoseCalc = (
-    type,
-    dosage,
-    weight,
-    selectValue,
-    medAmount,
-    perVolume,
-    liquidSelectValue
+  handleCalc = (
+    urine,
+    serum,
+    days,
+    selectValue
   ) => {
     // CreatClear = UrineCreat * DaysUrineVolume / SerumCreat / 1440
-    const dose = dosage * weight
-    if (type === 'dose') {
-      return (dose / selectValue).toFixed(this.state.decimal)
-    } else if (type === 'liquidDose') {
-      if (medAmount && perVolume) {
-        const liquidDose = dose * perVolume / medAmount / liquidSelectValue
-        return liquidDose.toFixed(this.state.decimal)
-      } else {
-        return 0
-      }
-    }
+    const creatClear = urine * days / serum / 1440
+    return (creatClear / selectValue).toFixed(this.state.decimal)
   }
 
   handleDoseSelectChange = event => {
@@ -144,7 +132,7 @@ class FormulaComponent extends Component {
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
-                {this.handleDoseCalc(
+                {this.handleCalc(
                   'dose',
                   dosageValue * dosageUnitValue,
                   weightValue * weightUnitValue,
@@ -167,7 +155,7 @@ class FormulaComponent extends Component {
             </div>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
-                {this.handleDoseCalc(
+                {this.handleCalc(
                   'liquidDose',
                   dosageValue * dosageUnitValue,
                   weightValue * weightUnitValue,
