@@ -87,10 +87,8 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleCalc(
-                  urineValue * urineUnitValue,
-                  serumValue * serumUnitValue,
-                  daysValue * daysUnitValue,
-                  this.state.creatClearSelectValue
+                  heightValue * heightUnitValue,
+                  weightValue * weightUnitValue
                 )}
               </Typography>
               <TextField
