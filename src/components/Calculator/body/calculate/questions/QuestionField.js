@@ -28,7 +28,8 @@ const styles = theme => ({
     overflow: 'hidden'
   },
   formControlLabel: {
-    marginRight: `${theme.spacing.unit * 4}px`
+    marginRight: `${theme.spacing.unit * 4}px`,
+    marginBottom: `${theme.spacing.unit}px`
   },
   inputWrapper: {
     display: 'flex',
