@@ -1755,17 +1755,12 @@
       "type": "formula",
       "questions": [
         {
-          "group": "Major Diagnostic Criteria",
+          "group": "Required Criteria",
           "showPoints": false,
           "data": [
             {
               "type": "checkbox",
-              "label": "Positive blood culture for typical Infective Endocarditis organisms (strep viridins or bovis, HACEK, staph aureous without other primary site, enterococcus), from 2 separate blood cultures or 2 positive cultures from samples drawn > 12 hours apart, or 3 or a majority of 4 separate cultures of blood (first and last sample drawn 1 hour apart)",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Echocardiogram with oscillating intracardiac mass on valve or supporting structures, in the path of regurgitant jets, or on implanted material in the absence of an alternative anatomic explanation, or abscess, or new partial dehiscence of prosthetic valve or new valvular regurgitation",
+              "label": "Pain near the malleous",
               "points": "1"
             }
           ]
