@@ -9,10 +9,10 @@ import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
 const unitData = {
-  urine: [
-    { value: 0.0113122171945701, unit: 'mcmol/L' },
-    { value: 1, unit: 'mg%' },
-    { value: 1, unit: 'mg/dL' }
+  height: [
+    { value: 0.393700787401575, unit: 'cm' },
+    { value: 1, unit: 'in' },
+    { value: 39.3700787401575, unit: 'm' }
   ],
   serum: [
     { value: 0.0113122171945701, unit: 'mcmol/L' },
