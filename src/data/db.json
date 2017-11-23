@@ -93,7 +93,7 @@
       "title": "Creatinine Clearance (measured)"
     },
     {
-      "id": "body mass index-quetelets-index)",
+      "id": "body-mass-index-quetelet-index",
       "title": "Body Mass Index (Quetelet's index)"
     }
   ],
@@ -1852,7 +1852,7 @@
       }
     },
     {
-      "id": "body mass index-quetelets-index)",
+      "id": "body-mass-index-quetelet-index",
       "title": "Body Mass Index (Quetelet's index)",
       "type": "formula",
       "questions": [
