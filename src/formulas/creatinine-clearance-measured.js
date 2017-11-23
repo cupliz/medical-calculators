@@ -54,7 +54,7 @@ class FormulaComponent extends Component {
     return (creatClear / selectValue).toFixed(this.state.decimal)
   }
 
-  handleDoseSelectChange = event => {
+  handleSelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.dose, value)
     this.setState({ doseSelectUnit: value, doseSelectValue: selectValue })
@@ -129,7 +129,7 @@ class FormulaComponent extends Component {
               <TextField
                 select
                 value={this.state.doseSelectUnit}
-                onChange={this.handleDoseSelectChange}
+                onChange={this.handleSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
