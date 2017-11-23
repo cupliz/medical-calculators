@@ -83,8 +83,7 @@ class FormulaComponent extends Component {
     perVolume,
     liquidSelectValue
   ) => {
-    // Dose = Weight * Dosage
-    // Liquid_Dose =  Dose * Per_Volume / Med_Amount
+    // CreatClear = UrineCreat * DaysUrineVolume / SerumCreat / 1440
     const dose = dosage * weight
     if (type === 'dose') {
       return (dose / selectValue).toFixed(this.state.decimal)
