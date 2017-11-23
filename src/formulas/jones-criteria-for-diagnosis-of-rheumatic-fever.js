@@ -20,6 +20,20 @@ class FormulaComponent extends Component {
     let majorCriteria = null
     let minorCriteria = null
 
+    questions.map((question, index) => {
+      const { calculate } = question
+      if (calculate) {
+        if (index === 0) {  }
+        if (index === 1) {  }
+        if (index === 2) {  }
+      }
+      return calculate
+    })
+
+    // console.log('requiredCriteria', requiredCriteria)
+    // console.log('majorCriteria', majorCriteria)
+    // console.log('minorCriteria', minorCriteria)
+
     return <p>Inside formula</p>
   }
 }
