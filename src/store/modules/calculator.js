@@ -237,6 +237,9 @@ export default (state = initialState, action) => {
         }
       }
 
+    case CLEAN_CALCULATOR:
+      return {}
+
     default:
       return state
   }
