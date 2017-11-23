@@ -42,7 +42,29 @@ class FormulaComponent extends Component {
       return calculate
     })
 
-    return <p>Inside formula</p>
+    if (requiredCriteria || majorCriteria || minorCriteria) {
+      return (
+        <ResultCardHeader classes={classes}>
+          <CardContent className={classes.content}>
+            <Typography type='caption' className={classes.contentText}>
+              Dose
+            </Typography>
+            <div className={classes.resultWrapper}>
+              <Typography type='title' className={classes.resultText}>
+                123
+              </Typography>
+            </div>
+            <div className={classes.resultWrapper}>
+              <Typography type='title' className={classes.resultText}>
+                321
+              </Typography>
+            </div>
+          </CardContent>
+        </ResultCardHeader>
+      )
+    } else {
+      return null
+    }
   }
 }
 export default FormulaComponent
