@@ -38,12 +38,8 @@ const filterUnit = (arr, select) =>
 
 class FormulaComponent extends Component {
   state = {
-    urineSelectUnit: 'mg/dL',
-    urineSelectValue: 1,
-    serumSelectUnit: 'mg/dL',
-    serumSelectValue: 1,
-    daysSelectUnit: 'mL',
-    daysSelectValue: 1,
+    creatClearSelectUnit: 'mL/min',
+    creatClearSelectValue: 1,
     decimal: 2
   }
 
