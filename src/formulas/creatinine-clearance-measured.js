@@ -149,32 +149,6 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleCalc(
-                  'liquidDose',
-                  dosageValue * dosageUnitValue,
-                  weightValue * weightUnitValue,
-                  this.state.doseSelectValue,
-                  medAmountValue * medAmountUnitValue,
-                  perVolumeValue * perVolumeUnitValue,
-                  this.state.liquidDoseSelectValue
-                )}
-              </Typography>
-              <TextField
-                select
-                value={this.state.liquidDoseSelectUnit}
-                onChange={this.handleLiquidDoseSelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.liquidDose.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </div>
             <div className={classes.decimalPrecisionWrapper}>
               <Typography type='title' className={classes.decimalPrecision}>
                 Decimal Precision
