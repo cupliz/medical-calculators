@@ -1840,17 +1840,10 @@
         }
       ],
       "results": {},
-      "notes": {
-        "type": "unordered-list",
-        "content": [
-          "Estimates mortality of patients with pancreatitis based on initial and 48 hour lab values",
-          "The BISAP score is another alternative to estimate pancreatitis mortality with fewer variables that is as accurate"
-        ]
-      },
-      "references": {
+      "formula": {
         "type": "ordered-list",
         "content": [
-          "Ranson JH, Rifkind KM, Turner JW. Prognostic signs and nonoperative peritoneal lavage in acute pancreatitis. Surg Gyne Ob. 143:209, 1976."
+          "CreatClear = UrineCreatinine* DaysUrineVolume/ SerumCreatinine/1440"
         ]
       }
     }
