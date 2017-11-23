@@ -29,6 +29,12 @@ const styles = theme => ({
 
 const CalculatorHeader = props => {
   const { classes, title } = props
+
+  const handleClick = () => {
+    props.changePage()
+    props.cleanCalculator()
+  }
+
   return (
     <AppBar position='static' className={classes.appBar}>
       <Toolbar>
@@ -36,7 +42,7 @@ const CalculatorHeader = props => {
           className={classes.closeButton}
           color='contrast'
           aria-label='Close'
-          onClick={() => props.changePage()}
+          onClick={handleClick}
         >
           <CloseIcon />
         </IconButton>
