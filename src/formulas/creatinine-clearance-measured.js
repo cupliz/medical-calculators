@@ -25,20 +25,11 @@ const unitData = {
     { value: 1, unit: 'mL' }
   ],
   creatClear: [
-    { value: 2000, unit: 'L BID' },
-    { value: 1000, unit: 'L Daily' },
-    { value: 4000, unit: 'L QID' },
-    { value: 3000, unit: 'L TID' },
-    { value: 24000, unit: 'L q1 hr' },
-    { value: 12000, unit: 'L q2 hr' },
-    { value: 6000, unit: 'L q4 hr' },
-    { value: 2, unit: 'mL BID' },
-    { value: 1, unit: 'mL Daily' },
-    { value: 4, unit: 'mL QID' },
-    { value: 3, unit: 'mL TID' },
-    { value: 24, unit: 'mL q1 hr' },
-    { value: 12, unit: 'mL q2 hr' },
-    { value: 6, unit: 'mL q4 hr' }
+    { value: 1000, unit: 'L/min' },
+    { value: 60000, unit: 'L/sec' },
+    { value: 0.01666666667, unit: 'mL/hr' },
+    { value: 1, unit: 'mL/min' },
+    { value: 60, unit: 'mL/sec' }
   ]
 }
 
