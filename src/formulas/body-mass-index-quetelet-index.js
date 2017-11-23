@@ -91,19 +91,6 @@ class FormulaComponent extends Component {
                   weightValue * weightUnitValue
                 )}
               </Typography>
-              <TextField
-                select
-                value={this.state.creatClearSelectUnit}
-                onChange={this.handleSelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.creatClear.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
             </div>
             <div className={classes.decimalPrecisionWrapper}>
               <Typography type='title' className={classes.decimalPrecision}>
