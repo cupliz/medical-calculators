@@ -1586,6 +1586,36 @@
               "points": "1"
             }
           ]
+        },
+        {
+          "group": "Major Diagnostic Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Carditis",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Polyarthritis",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Chorea",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Erythema marginatum",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Subcutaneous Nodules",
+              "points": "1"
+            }
+          ]
         }
       ],
       "results": {},
