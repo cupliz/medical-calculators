@@ -46,17 +46,22 @@ class FormulaComponent extends Component {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
-            <Typography type='caption' className={classes.contentText}>
-              Dose
+            <Typography type='title' className={classes.contentText}>
+              Insufficient with:
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
-                123
+                {requiredCriteria} Required Criteria
               </Typography>
             </div>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
-                321
+                {majorCriteria} Major Criteria
+              </Typography>
+            </div>
+            <div className={classes.resultWrapper}>
+              <Typography type='title' className={classes.resultText}>
+                {minorCriteria} Minor Criteria
               </Typography>
             </div>
           </CardContent>
