@@ -90,15 +90,15 @@ class FormulaComponent extends Component {
         const { input, select } = calculate
         if (index === 0) {
           urineValue = input
-          urineUnitValue = filterUnit(unitData.dosage, select)
+          urineUnitValue = filterUnit(unitData.urine, select)
         }
         if (index === 1) {
           serumValue = input
-          serumUnitValue = filterUnit(unitData.weight, select)
+          serumUnitValue = filterUnit(unitData.serum, select)
         }
         if (index === 2) {
           daysValue = input
-          daysUnitValue = filterUnit(unitData.medAmount, select)
+          daysUnitValue = filterUnit(unitData.daysUrineVolume, select)
         }
       }
       return calculate
