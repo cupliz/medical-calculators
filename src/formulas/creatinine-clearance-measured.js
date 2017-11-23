@@ -122,12 +122,12 @@ class FormulaComponent extends Component {
               </Typography>
               <TextField
                 select
-                value={this.state.doseSelectUnit}
+                value={this.state.creatClearSelectUnit}
                 onChange={this.handleSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {unitData.dose.map(option => (
+                {unitData.creatClear.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
