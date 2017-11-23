@@ -1814,7 +1814,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter drug dose",
-              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+              "values": ["mcmol/L", "mg%", "mg/dL"]
             }
           ]
         },
