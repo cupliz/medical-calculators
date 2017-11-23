@@ -56,7 +56,7 @@ class FormulaComponent extends Component {
 
   handleSelectChange = event => {
     const { value } = event.target
-    let selectValue = filterUnit(unitData.dose, value)
+    let selectValue = filterUnit(unitData.creatClear, value)
     this.setState({ creatClearSelectUnit: value, creatClearSelectValue: selectValue })
   }
 
