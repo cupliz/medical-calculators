@@ -26,11 +26,11 @@ const styles = theme => ({
   }
 })
 
-const renderQuestionFields = (data, group) => {
+const renderQuestionFields = (data, group, showPoints) => {
   if (Array.isArray(data)) {
     return data.map(question => {
       if (question.points) {
-        return <QuestionField key={question.label} group={group} {...question} />
+        return <QuestionField key={question.label} group={group} {...question} showPoints={showPoints} />
       } else if (question.values) {
         return <QuestionField key={question.placeholder} group={group} {...question} />
       } else {
@@ -52,7 +52,7 @@ const QuestionGroup = props => (
       >
         {props.group}
       </FormLabel>
-      {renderQuestionFields(props.data, props.group)}
+      {renderQuestionFields(props.data, props.group, props.showPoints)}
     </FormControl>
   </div>
 )
