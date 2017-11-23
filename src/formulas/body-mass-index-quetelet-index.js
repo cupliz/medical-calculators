@@ -27,8 +27,8 @@ class FormulaComponent extends Component {
 
   handleCalc = (weight, height) => {
     // BMI = (Weight/2.205) / (Height/39.37)^2
-    const creatClear = urine * days / serum / 1440
-    return (creatClear / selectValue).toFixed(this.state.decimal)
+    const bmi = (weight / 2.205) / Math.pow((height / 39.37), 2)
+    return bmi.toFixed(this.state.decimal)
   }
 
   handleSelectChange = event => {
