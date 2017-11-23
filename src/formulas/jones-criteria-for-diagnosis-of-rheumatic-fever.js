@@ -8,9 +8,11 @@ import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
-const getCalculateGroupPoints = (calculate) => (
-  calculate.map(item => parseFloat(item.points)).reduce((previousValue, currentValue) => previousValue + currentValue)
-)
+const getCalculateGroupPoints = calculate => {
+  return calculate
+    .map(item => parseFloat(item.points))
+    .reduce((previousValue, currentValue) => previousValue + currentValue)
+}
 
 class FormulaComponent extends Component {
   state = {}
