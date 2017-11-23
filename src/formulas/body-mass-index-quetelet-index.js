@@ -42,7 +42,7 @@ class FormulaComponent extends Component {
     } else if (bmi >= 40 && bmi < 40) {
       label = 'Class III Obesity'
     }
-    return bmi.toFixed(this.state.decimal)
+    return `${bmi.toFixed(this.state.decimal)} kg/m^2 ${label}`
   }
 
   handleDecimalChange = action => {
