@@ -23,6 +23,9 @@ class FormulaComponent extends Component {
     questions.map((question, index) => {
       const { calculate } = question
       if (calculate) {
+        // calculate is an array of objects
+        // loop through that array
+        // sum points of each object
         if (index === 0) {  }
         if (index === 1) {  }
         if (index === 2) {  }
