@@ -14,6 +14,11 @@ const unitData = {
     { value: 1, unit: 'mg%' },
     { value: 1, unit: 'mg/dL' }
   ],
+  serumCreat: [
+    { value: 0.0113122171945701, unit: 'mcmol/L' },
+    { value: 1, unit: 'mg%' },
+    { value: 1, unit: 'mg/dL' }
+  ],
   weight: [{ value: 1, unit: 'kg' }, { value: 0.45359237, unit: 'lbs' }],
   medAmount: [
     { value: 1000, unit: 'gm' },
