@@ -1814,7 +1814,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter drug dose",
-              "values": ["mcmol/L", "mg%", "mg/dL"]
+              "values": ["mg/dL", "mcmol/L", "mg%"]
             }
           ]
         },
@@ -1824,7 +1824,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter patient weight",
-              "values": ["mcmol/L", "mg%", "mg/dL"]
+              "values": ["mg/dL", "mcmol/L", "mg%"]
             }
           ]
         },
@@ -1834,7 +1834,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication amount",
-              "values": ["L", "fL", "mL"]
+              "values": ["mL", "L", "fL"]
             }
           ]
         }
