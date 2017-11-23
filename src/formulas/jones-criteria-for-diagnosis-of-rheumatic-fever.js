@@ -22,9 +22,9 @@ class FormulaComponent extends Component {
     const { questions } = data
 
     // extract needed field vars
-    let requiredCriteria = null
-    let majorCriteria = null
-    let minorCriteria = null
+    let requiredCriteria = 0
+    let majorCriteria = 0
+    let minorCriteria = 0
 
     questions.map((question, index) => {
       const { calculate } = question

@@ -34,6 +34,7 @@ const styles = theme => ({
   },
   resultWrapper: { display: 'flex', alignItems: 'baseline' },
   resultText: { marginRight: 15, minWidth: 300 },
+  resultTextNoBold: { marginRight: 15, minWidth: 300, fontWeight: 'normal' },
   decimalPrecisionWrapper: {
     borderTop: `1px solid ${theme.brand.colors.separatorGrey}`,
     marginTop: 10,
