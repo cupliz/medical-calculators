@@ -109,7 +109,7 @@ class FormulaComponent extends Component {
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
             <Typography type='caption' className={classes.contentText}>
-              Dose
+              Creat Clear
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
