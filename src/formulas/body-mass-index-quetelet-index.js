@@ -14,10 +14,9 @@ const unitData = {
     { value: 1, unit: 'in' },
     { value: 39.3700787401575, unit: 'm' }
   ],
-  serum: [
-    { value: 0.0113122171945701, unit: 'mcmol/L' },
-    { value: 1, unit: 'mg%' },
-    { value: 1, unit: 'mg/dL' }
+  weight: [
+    { value: 2.20462262184878, unit: 'kg' },
+    { value: 1, unit: 'lb' }
   ],
   daysUrineVolume: [
     { value: 1000, unit: 'L' },
