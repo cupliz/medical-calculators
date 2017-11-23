@@ -1578,32 +1578,11 @@
       "type": "formula",
       "questions": [
         {
-          "group": "Criteria",
+          "group": "Required Criteria",
           "data": [
             {
               "type": "checkbox",
-              "label": "Confusion",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Urea (BUN > 19 mg/dL or 7 mmol/L)",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Respiratory Rate ≥ 30 per minute",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label":
-              "Blood Pressure: Systolic < 90 mmHg or Diastolic ≤ 60 mmHg",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Age ≥ 65 years",
+              "label": "Evidence of antecedent Strep infection: ASO / Strep antibodies / Strep group A throat culture / Recent scarlet fever / anti-deoxyribonuclease B / anti-hyaluronidase",
               "points": "1"
             }
           ]
