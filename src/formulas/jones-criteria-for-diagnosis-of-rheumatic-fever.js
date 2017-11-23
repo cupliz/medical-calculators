@@ -17,12 +17,30 @@ const getCalculateGroupPoints = calculate => {
 class FormulaComponent extends Component {
   state = {}
 
-  handleFormulaCalc = (requiredCriteria, majorCriteria, minorCriteria, classes) => {
-    return (
-      <Typography type='title' className={classes.contentText}>
-        Insufficient with:
-      </Typography>
-    )
+  handleFormulaCalc = (
+    requiredCriteria,
+    majorCriteria,
+    minorCriteria,
+    classes
+  ) => {
+    // Diagnostic : 1 Required Criteria and 2 Major Criteria and 0 Minor Criteria
+    // Diagnostic : 1 Required Criteria and 1 Major Criteria and 2 Minor Criteria
+    if (
+      (requiredCriteria >= 1 && majorCriteria >= 2) ||
+      (requiredCriteria >= 1 && majorCriteria >= 1 && minorCriteria >= 2)
+    ) {
+      return (
+        <Typography type='title' className={classes.contentText}>
+          Diagnostic with:
+        </Typography>
+      )
+    } else {
+      return (
+        <Typography type='title' className={classes.contentText}>
+          Insufficient with:
+        </Typography>
+      )
+    }
   }
 
   render () {
@@ -54,7 +72,12 @@ class FormulaComponent extends Component {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
-            {this.handleFormulaCalc(requiredCriteria, majorCriteria, minorCriteria, classes)}
+            {this.handleFormulaCalc(
+              requiredCriteria,
+              majorCriteria,
+              minorCriteria,
+              classes
+            )}
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultTextNoBold}>
                 {requiredCriteria} Required Criteria
