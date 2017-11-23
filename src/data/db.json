@@ -1809,7 +1809,7 @@
       "type": "formula",
       "questions": [
         {
-          "group": "Dosage",
+          "group": "Urine Creat",
           "data": [
             {
               "type": "input/select",
@@ -1819,7 +1819,7 @@
           ]
         },
         {
-          "group": "Weight",
+          "group": "Serum Creat",
           "data": [
             {
               "type": "input/select",
@@ -1829,22 +1829,12 @@
           ]
         },
         {
-          "group": "Liquid Formulation (optional)",
+          "group": "Days Urine Volume",
           "data": [
             {
               "type": "input/select",
               "placeholder": "Enter medication amount",
               "values": ["mg", "gm", "mcg"]
-            }
-          ]
-        },
-        {
-          "group": "Per Volume",
-          "data": [
-            {
-              "type": "input/select",
-              "placeholder": "Enter medication volume",
-              "values": ["mL", "L"]
             }
           ]
         }
