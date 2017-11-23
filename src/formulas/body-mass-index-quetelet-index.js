@@ -34,7 +34,7 @@ class FormulaComponent extends Component {
     days,
     selectValue
   ) => {
-    // CreatClear = UrineCreat * DaysUrineVolume / SerumCreat / 1440
+    // BMI = (Weight/2.205) / (Height/39.37)^2
     const creatClear = urine * days / serum / 1440
     return (creatClear / selectValue).toFixed(this.state.decimal)
   }
