@@ -31,15 +31,6 @@ class FormulaComponent extends Component {
     return bmi.toFixed(this.state.decimal)
   }
 
-  handleSelectChange = event => {
-    const { value } = event.target
-    let selectValue = filterUnit(unitData.creatClear, value)
-    this.setState({
-      creatClearSelectUnit: value,
-      creatClearSelectValue: selectValue
-    })
-  }
-
   handleDecimalChange = action => {
     const oldDecimal = this.state.decimal
     if (action === '+') {
