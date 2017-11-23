@@ -34,7 +34,7 @@ class FormulaComponent extends Component {
     // BMI >= 40:	Class III Obesity
     let label = ''
     if (bmi < 18.5) { label = 'Below normal weight' }
-    if (bmi >= 18.5 && bmi < 25) { label = 'Normal weight' }
+    else if (bmi >= 18.5 && bmi < 25) { label = 'Normal weight' }
     return bmi.toFixed(this.state.decimal)
   }
 
