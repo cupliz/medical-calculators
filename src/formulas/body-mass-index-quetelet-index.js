@@ -29,10 +29,8 @@ class FormulaComponent extends Component {
   }
 
   handleCalc = (
-    urine,
-    serum,
-    days,
-    selectValue
+    weight,
+    height
   ) => {
     // BMI = (Weight/2.205) / (Height/39.37)^2
     const creatClear = urine * days / serum / 1440
