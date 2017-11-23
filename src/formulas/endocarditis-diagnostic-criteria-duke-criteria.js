@@ -18,8 +18,9 @@ class FormulaComponent extends Component {
     minorCriteria,
     classes
   ) => {
-    // Diagnostic : 1 Required Criteria and 2 Major Criteria and 0 Minor Criteria
-    // Diagnostic : 1 Required Criteria and 1 Major Criteria and 2 Minor Criteria
+    // Diagnostic : 2 Major Criteria and 0 Minor Criteria
+    // Diagnostic : 1 Major Criteria and 3 Minor Criteria
+    // Diagnostic : 0 Major Criteria and 5 Minor Criteria
     if (
       (requiredCriteria >= 1 && majorCriteria >= 2) ||
       (requiredCriteria >= 1 && majorCriteria >= 1 && minorCriteria >= 2)
