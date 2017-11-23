@@ -83,6 +83,10 @@
     {
       "id": "endocarditis-diagnostic-criteria-duke-criteria",
       "title": "Endocarditis Diagnostic Criteria - Duke Criteria"
+    },
+    {
+      "id": "ottawa-ankle-rule-for-the-use-of-x-ray-in-ankle-injury",
+      "title": "Ottawa Ankle Rule for the Use of X-Ray in Ankle Injury"
     }
   ],
   "calculators": [
