@@ -1613,8 +1613,8 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "CURB-65 estimates the mortality of community-acquired pneumonia to help determine inpatient vs outpatient treatment",
-          "Compared to the Pneumonia Severity Index (PSI), CURB-65 offers equal sensitivity of mortality prediction due to community-acquired pneumonia.  The specificity of CURB-65 (74.6%) is also higher than PSI (52.2%)"
+          "Diagnostic: 1 Required Criteria and 2 Major Criteria and 0 Minor Criteria",
+          "Diagnostic: 1 Required Criteria and 1 Major Criteria and 2 Minor Criteria"
         ]
       },
       "references": {
