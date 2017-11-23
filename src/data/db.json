@@ -1609,32 +1609,7 @@
           ]
         }
       ],
-      "results": {
-        "0": [
-          "Low risk: 0.6% 30-day mortality.",
-          "Consider outpatient treatment."
-        ],
-        "1": [
-          "Low risk: 2.7% 30-day mortality.",
-          "Consider outpatient treatment."
-        ],
-        "2": [
-          "Moderate risk: 6.8% 30-day mortality.",
-          "Short inpatient hospitalization or closely supervised outpatient treatment."
-        ],
-        "3": [
-          "Severe risk: 14.0% 30-day mortality.",
-          "Severe pneumonia; hospitalize and consider potential ICU admission."
-        ],
-        "4": [
-          "Highest risk: 27.8% 30-day mortality.",
-          "Severe pneumonia; hospitalize and consider potential ICU admission."
-        ],
-        "5": [
-          "Highest risk: 27.8% 30-day mortality.",
-          "Severe pneumonia; hospitalize and consider potential ICU admission."
-        ]
-      },
+      "results": {},
       "notes": {
         "type": "unordered-list",
         "content": [
