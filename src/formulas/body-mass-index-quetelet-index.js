@@ -25,7 +25,7 @@ class FormulaComponent extends Component {
     decimal: 2
   }
 
-  handleCalc = (weight, height) => {
+  handleCalc = (height, weight) => {
     // BMI = (Weight/2.205) / (Height/39.37)^2
     const bmi = (weight / 2.205) / Math.pow((height / 39.37), 2)
     // TODO ADD LABEL
