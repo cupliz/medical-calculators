@@ -25,8 +25,6 @@ const filterUnit = (arr, select) =>
 
 class FormulaComponent extends Component {
   state = {
-    creatClearSelectUnit: 'mL/min',
-    creatClearSelectValue: 1,
     decimal: 2
   }
 
