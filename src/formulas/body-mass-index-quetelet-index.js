@@ -27,14 +27,21 @@ class FormulaComponent extends Component {
 
   handleCalc = (height, weight) => {
     // BMI = (Weight/2.205) / (Height/39.37)^2
-    const bmi = (weight / 2.205) / Math.pow((height / 39.37), 2)
-    // BMI >= 25 and < 30:	Overweight
-    // BMI >= 30 and < 35:	Class I Obesity
-    // BMI >= 35 and < 40:	Class II Obesity
-    // BMI >= 40:	Class III Obesity
+    const bmi = weight / 2.205 / Math.pow(height / 39.37, 2)
     let label = ''
-    if (bmi < 18.5) { label = 'Below normal weight' }
-    else if (bmi >= 18.5 && bmi < 25) { label = 'Normal weight' }
+    if (bmi < 18.5) {
+      label = 'Below normal weight'
+    } else if (bmi >= 18.5 && bmi < 25) {
+      label = 'Normal weight'
+    } else if (bmi >= 25 && bmi < 30) {
+      label = 'Overweight'
+    } else if (bmi >= 30 && bmi < 35) {
+      label = 'Class I Obesity'
+    } else if (bmi >= 35 && bmi < 40) {
+      label = 'Class II Obesity'
+    } else if (bmi >= 40 && bmi < 40) {
+      label = 'Class III Obesity'
+    }
     return bmi.toFixed(this.state.decimal)
   }
 
