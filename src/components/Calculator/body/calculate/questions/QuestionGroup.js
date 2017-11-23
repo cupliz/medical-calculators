@@ -19,7 +19,8 @@ const styles = theme => ({
     maxWidth: 800
   },
   label: {
-    fontSize: 14
+    fontSize: 14,
+    marginBottom: `${theme.spacing.unit}px`
   },
   focusedLabel: {
     color: 'rgba(0, 0, 0, 0.54)'
