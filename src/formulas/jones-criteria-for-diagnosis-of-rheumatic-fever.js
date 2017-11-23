@@ -8,6 +8,10 @@ import Button from 'material-ui/Button'
 import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
+const getCalculateGroupPoints = (calculate) => (
+  calculate.map(item => parseFloat(item.points)).reduce((previousValue, currentValue) => previousValue + currentValue)
+)
+
 class FormulaComponent extends Component {
   state = {}
 
@@ -23,19 +27,18 @@ class FormulaComponent extends Component {
     questions.map((question, index) => {
       const { calculate } = question
       if (calculate) {
-        // calculate is an array of objects
-        // loop through that array
-        // sum points of each object
-        if (index === 0) {  }
-        if (index === 1) {  }
-        if (index === 2) {  }
+        if (index === 0) {
+          requiredCriteria = getCalculateGroupPoints(calculate)
+        }
+        if (index === 1) {
+          majorCriteria = getCalculateGroupPoints(calculate)
+        }
+        if (index === 2) {
+          minorCriteria = getCalculateGroupPoints(calculate)
+        }
       }
       return calculate
     })
-
-    // console.log('requiredCriteria', requiredCriteria)
-    // console.log('majorCriteria', majorCriteria)
-    // console.log('minorCriteria', minorCriteria)
 
     return <p>Inside formula</p>
   }
