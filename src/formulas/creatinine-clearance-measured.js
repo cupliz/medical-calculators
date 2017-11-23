@@ -19,6 +19,11 @@ const unitData = {
     { value: 1, unit: 'mg%' },
     { value: 1, unit: 'mg/dL' }
   ],
+  daysUrineVolume: [
+    { value: 1000, unit: 'L' },
+    { value: 1e-12, unit: 'fL' },
+    { value: 1, unit: 'mL' }
+  ],
   weight: [{ value: 1, unit: 'kg' }, { value: 0.45359237, unit: 'lbs' }],
   medAmount: [
     { value: 1000, unit: 'gm' },
