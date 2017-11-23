@@ -1824,7 +1824,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter patient weight",
-              "values": ["kg", "lbs"]
+              "values": ["mcmol/L", "mg%", "mg/dL"]
             }
           ]
         },
