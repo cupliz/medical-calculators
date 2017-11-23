@@ -1846,6 +1846,50 @@
           "CreatClear = UrineCreatinine* DaysUrineVolume/ SerumCreatinine/1440"
         ]
       }
+    },
+    {
+      "id": "body mass index-quetelets-index)",
+      "title": "Body Mass Index (Quetelet's index)",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Urine Creat",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/dL", "mcmol/L", "mg%"]
+            }
+          ]
+        },
+        {
+          "group": "Serum Creat",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["mg/dL", "mcmol/L", "mg%"]
+            }
+          ]
+        },
+        {
+          "group": "Days Urine Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mL", "L", "fL"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "CreatClear = UrineCreatinine* DaysUrineVolume/ SerumCreatinine/1440"
+        ]
+      }
     }
   ]
 }
