@@ -60,15 +60,6 @@ class FormulaComponent extends Component {
     this.setState({ doseSelectUnit: value, doseSelectValue: selectValue })
   }
 
-  handleLiquidDoseSelectChange = event => {
-    const { value } = event.target
-    let selectValue = filterUnit(unitData.liquidDose, value)
-    this.setState({
-      liquidDoseSelectUnit: value,
-      liquidDoseSelectValue: selectValue
-    })
-  }
-
   handleDecimalChange = action => {
     const oldDecimal = this.state.decimal
     if (action === '+') {
