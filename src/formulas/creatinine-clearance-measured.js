@@ -9,12 +9,12 @@ import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
 const unitData = {
-  urineCreat: [
+  urine: [
     { value: 0.0113122171945701, unit: 'mcmol/L' },
     { value: 1, unit: 'mg%' },
     { value: 1, unit: 'mg/dL' }
   ],
-  serumCreat: [
+  serum: [
     { value: 0.0113122171945701, unit: 'mcmol/L' },
     { value: 1, unit: 'mg%' },
     { value: 1, unit: 'mg/dL' }
