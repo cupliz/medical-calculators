@@ -1857,32 +1857,22 @@
       "type": "formula",
       "questions": [
         {
-          "group": "Urine Creat",
+          "group": "Height",
           "data": [
             {
               "type": "input/select",
               "placeholder": "Enter drug dose",
-              "values": ["mg/dL", "mcmol/L", "mg%"]
+              "values": ["in", "cm", "m"]
             }
           ]
         },
         {
-          "group": "Serum Creat",
+          "group": "Weight",
           "data": [
             {
               "type": "input/select",
               "placeholder": "Enter patient weight",
               "values": ["mg/dL", "mcmol/L", "mg%"]
-            }
-          ]
-        },
-        {
-          "group": "Days Urine Volume",
-          "data": [
-            {
-              "type": "input/select",
-              "placeholder": "Enter medication amount",
-              "values": ["mL", "L", "fL"]
             }
           ]
         }
