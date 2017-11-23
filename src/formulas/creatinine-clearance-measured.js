@@ -9,10 +9,10 @@ import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
 const unitData = {
-  dosage: [
-    { value: 1000, unit: 'gm/kg' },
-    { value: 0.001, unit: 'mcg/kg' },
-    { value: 1, unit: 'mg/kg' }
+  urineCreat: [
+    { value: 0.0113122171945701, unit: 'mcmol/L' },
+    { value: 1, unit: 'mg%' },
+    { value: 1, unit: 'mg/dL' }
   ],
   weight: [{ value: 1, unit: 'kg' }, { value: 0.45359237, unit: 'lbs' }],
   medAmount: [
