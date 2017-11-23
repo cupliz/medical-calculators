@@ -1579,6 +1579,7 @@
       "questions": [
         {
           "group": "Required Criteria",
+          "showPoints": false,
           "data": [
             {
               "type": "checkbox",
@@ -1589,6 +1590,7 @@
         },
         {
           "group": "Major Diagnostic Criteria",
+          "showPoints": false,
           "data": [
             {
               "type": "checkbox",
@@ -1619,6 +1621,7 @@
         },
         {
           "group": "Minor Diagnostic Criteria",
+          "showPoints": false,
           "data": [
             {
               "type": "checkbox",
