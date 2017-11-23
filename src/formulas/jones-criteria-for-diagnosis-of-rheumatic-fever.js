@@ -50,17 +50,17 @@ class FormulaComponent extends Component {
               Insufficient with:
             </Typography>
             <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
+              <Typography type='title' className={classes.resultTextNoBold}>
                 {requiredCriteria} Required Criteria
               </Typography>
             </div>
             <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
+              <Typography type='title' className={classes.resultTextNoBold}>
                 {majorCriteria} Major Criteria
               </Typography>
             </div>
             <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
+              <Typography type='title' className={classes.resultTextNoBold}>
                 {minorCriteria} Minor Criteria
               </Typography>
             </div>
