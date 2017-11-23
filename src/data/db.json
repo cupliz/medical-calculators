@@ -1766,37 +1766,17 @@
           ]
         },
         {
-          "group": "Minor Diagnostic Criteria",
+          "group": "Major Criteria",
           "showPoints": false,
           "data": [
             {
               "type": "checkbox",
-              "label": "Predisposing heart condition or intravenous drug use",
+              "label": "Inability to bear wieght right after the injury as well as in the emergency department (4 steps)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Temp > 38.0° C (100.4° F)",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Vascular phenomena: arterial emboli, pulmonary infarcts, mycotic aneurysms, intracranial bleed, conjunctival hemorrhages, Janeway lesions",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Immunologic phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Microbiological evidence: positive blood culture but does not meet a major criterion as noted above or serological evidence of active infection with organism consistent with endocarditis (excluding coag neg staph, and other common contaminants)",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Echocardiographic findings: consistent with endocarditis but do not meet a major criterion as noted above",
+              "label": "Bone tenderness at the posterior edge or tip of either malleolus",
               "points": "1"
             }
           ]
