@@ -79,10 +79,10 @@ class FormulaComponent extends Component {
 
   handleCorrectedAnionGapSelectChange = event => {
     const { value } = event.target
-    let selectValue = filterUnit(unitData.liquidDose, value)
+    let selectValue = filterUnit(unitData.correctedAnionGap, value)
     this.setState({
-      liquidDoseSelectUnit: value,
-      liquidDoseSelectValue: selectValue
+      correctedAnionGapSelectUnit: value,
+      correctedAnionGapSelectValue: selectValue
     })
   }
 
