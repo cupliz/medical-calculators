@@ -51,6 +51,22 @@ const unitData = {
     { value: 1, unit: '%' },
     { value: 100, unit: 'fraction' },
     { value: 100, unit: 'ratio' }
+  ],
+  pvo2: [
+    { value: 0.00750063755419211, unit: 'Pascal' },
+    { value: 760.002100178515, unit: 'atm' },
+    { value: 750.063755419211, unit: 'bar' },
+    { value: 0.735561538478802, unit: 'cmH2O' },
+    { value: 10, unit: 'cmHg' },
+    { value: 22.4199156928339, unit: 'ftH2O' },
+    { value: 0.735561538478802, unit: 'gm/sqcm' },
+    { value: 1.86832630773616, unit: 'inH2O' },
+    { value: 25.4000840071406, unit: 'inHg' },
+    { value: 7.50063755419211, unit: 'kPa' },
+    { value: 0.750063755419211, unit: 'mbar' },
+    { value: 1, unit: 'mmHg' },
+    { value: 51.7150957831416, unit: 'psi' },
+    { value: 1, unit: 'torr' }
   ]
 }
 
