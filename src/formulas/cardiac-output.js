@@ -204,7 +204,7 @@ class FormulaComponent extends Component {
       return calculate
     })
 
-    if (weightValue && percentValue) {
+    if (o2Value && hgbValue && o2satValue && pao2Value && o2vsatValue && pvo2Value) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
