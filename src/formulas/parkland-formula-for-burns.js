@@ -53,8 +53,9 @@ class FormulaComponent extends Component {
     albumin,
     correctedAnionGapSelectValue
   ) => {
-    // Anion Gap = Na - (Cl +HCO3)
-    // Corrected Anion Gap = Anion Gap + (2.5 * (4 - Albumin))
+    // Total Crystalloid For First 24 Hours = 4 * Weight * Percent Non-superficial Burn Area
+    // Rate First 8 Hours =  Total Crystalloid / 16
+    // Rate Next 16 Hours =  Total Crystalloid / 32
     const anionGap = na - (cl + hc03)
     if (type === 'anion gap') {
       return (anionGap / anionGapSelectValue).toFixed(this.state.decimal)
