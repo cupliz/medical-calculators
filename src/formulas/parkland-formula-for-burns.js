@@ -9,13 +9,12 @@ import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
 const unitData = {
-  na: [
-    { value: 1, unit: 'mmol/L' },
-    { value: 1, unit: 'mEq/L' }
+  weight: [
+    { value: 1, unit: 'kg' },
+    { value: 0.45359237, unit: 'lb' }
   ],
-  cl: [
-    { value: 1, unit: 'mmol/L' },
-    { value: 1, unit: 'mEq/L' }
+  percent: [
+    { value: 1, unit: '%' }
   ],
   hco3: [
     { value: 1, unit: 'mmol/L' },
