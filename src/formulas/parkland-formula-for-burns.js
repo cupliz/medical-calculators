@@ -94,7 +94,7 @@ class FormulaComponent extends Component {
     }
   }
 
-  render() {
+  render () {
     const { classes, data } = this.props
     const { questions } = data
 
@@ -136,11 +136,11 @@ class FormulaComponent extends Component {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
-            <Typography type="caption" className={classes.contentText}>
+            <Typography type='caption' className={classes.contentText}>
               Anion Gap
             </Typography>
             <div className={classes.resultWrapper}>
-              <Typography type="title" className={classes.resultText}>
+              <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
                   'anion gap',
                   naValue * naUnitValue,
@@ -154,7 +154,7 @@ class FormulaComponent extends Component {
                 value={this.state.anionGapSelectUnit}
                 onChange={this.handleTotalSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin="normal"
+                margin='normal'
               >
                 {unitData.anionGap.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
@@ -163,11 +163,11 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
-            <Typography type="caption" className={classes.contentText}>
+            <Typography type='caption' className={classes.contentText}>
               Corrected Anion Gap
             </Typography>
             <div className={classes.resultWrapper}>
-              <Typography type="title" className={classes.resultText}>
+              <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
                   'corrected anion gap',
                   naValue * naUnitValue,
@@ -183,7 +183,7 @@ class FormulaComponent extends Component {
                 value={this.state.correctedAnionGapSelectUnit}
                 onChange={this.handleRate8SelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin="normal"
+                margin='normal'
               >
                 {unitData.correctedAnionGap.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
@@ -193,26 +193,26 @@ class FormulaComponent extends Component {
               </TextField>
             </div>
             <div className={classes.decimalPrecisionWrapper}>
-              <Typography type="title" className={classes.decimalPrecision}>
+              <Typography type='title' className={classes.decimalPrecision}>
                 Decimal Precision
               </Typography>
               <div className={classes.decimalButtonsWrapper}>
                 <Button
                   fab
-                  color="primary"
-                  aria-label="add"
+                  color='primary'
+                  aria-label='add'
                   className={classes.decimalButton}
                   onClick={() => this.handleDecimalChange('-')}
                 >
                   <RemoveIcon />
                 </Button>
-                <Typography type="title" className={classes.decimalPoint}>
+                <Typography type='title' className={classes.decimalPoint}>
                   {this.state.decimal}
                 </Typography>
                 <Button
                   fab
-                  color="primary"
-                  aria-label="add"
+                  color='primary'
+                  aria-label='add'
                   className={classes.decimalButton}
                   onClick={() => this.handleDecimalChange('+')}
                 >
