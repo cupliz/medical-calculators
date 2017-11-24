@@ -15,6 +15,13 @@ const unitData = {
     { value: 60000, unit: 'L/sec' },
     { value: 1000, unit: 'L/min' },
     { value: 60, unit: 'mL/sec' }
+  ],
+  hgb: [
+    { value: 1, unit: 'mL/min' },
+    { value: 0.01666666667, unit: 'mL/hr' },
+    { value: 60000, unit: 'L/sec' },
+    { value: 1000, unit: 'L/min' },
+    { value: 60, unit: 'mL/sec' }
   ]
 }
 
