@@ -119,14 +119,12 @@ class FormulaComponent extends Component {
     const cao2 = (hgb * 13.4 * o2sat / 100) + (pao2 * 0.031)
     const cvo2 = (hgb * 13.4 * o2vsat / 100) + (pvo2 * 0.031)
     const co = o2 / (cao2 - cvo2)
-    if (type === 'total24') {
-      return (totalCrystalloid / total24SelectValue).toFixed(this.state.decimal)
-    } else if (type === 'rate8') {
-      const rate8 = totalCrystalloid / 16
-      return (rate8 / rate8SelectValue).toFixed(this.state.decimal)
-    } else if (type === 'rate16') {
-      const rate16 = totalCrystalloid / 32
-      return (rate16 / rate16SelectValue).toFixed(this.state.decimal)
+    if (type === 'cao2') {
+      return (cao2 / cao2SelectValue).toFixed(this.state.decimal)
+    } else if (type === 'cvo2') {
+      return (cvo2 / cvo2SelectValue).toFixed(this.state.decimal)
+    } else if (type === 'co') {
+      return (co / coSelectValue).toFixed(this.state.decimal)
     }
   }
 
