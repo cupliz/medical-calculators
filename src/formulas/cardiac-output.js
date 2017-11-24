@@ -9,7 +9,13 @@ import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
 const unitData = {
-  weight: [{ value: 1, unit: 'kg' }, { value: 0.45359237, unit: 'lb' }],
+  o2: [
+    { value: 1, unit: 'mL/min' },
+    { value: 0.01666666667, unit: 'mL/hr' },
+    { value: 60000, unit: 'L/sec' },
+    { value: 1000, unit: 'L/min' },
+    { value: 60, unit: 'mL/sec' }
+  ],
   percent: [{ value: 1, unit: '%' }],
   total24: [{ value: 1, unit: 'mL' }, { value: 1000, unit: 'L' }],
   rate8: [
