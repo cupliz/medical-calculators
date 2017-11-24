@@ -1834,8 +1834,8 @@
           "group": "Serum Creat",
           "data": [
             {
-              "type": "Please enter Serum Creat",
-              "placeholder": "Enter patient weight",
+              "type": "input/select",
+              "placeholder": "Please enter Serum Creat",
               "values": ["mg/dL", "mcmol/L", "mg%"]
             }
           ]
@@ -1844,8 +1844,8 @@
           "group": "Days Urine Volume",
           "data": [
             {
-              "type": "Please enter Days Urine Volume",
-              "placeholder": "Enter medication amount",
+              "type": "input/select",
+              "placeholder": "Please enter Days Urine Volume",
               "values": ["mL", "L", "fL"]
             }
           ]
