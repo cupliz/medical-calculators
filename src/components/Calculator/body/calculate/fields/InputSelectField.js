@@ -42,6 +42,7 @@ class InputSelectField extends Component {
         />
         <TextField
           select
+          disabled={this.props.disabled}
           value={this.state.select}
           onChange={this.handleChange('select')}
           SelectProps={{
