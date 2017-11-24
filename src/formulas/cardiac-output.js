@@ -77,6 +77,13 @@ const unitData = {
     { value: 10, unit: 'Vol%' },
     { value: 1, unit: 'mL/L' },
     { value: 10, unit: 'mL/dL' }
+  ],
+  co: [
+    { value: 1, unit: 'L/min' },
+    { value: 60, unit: 'L/sec' },
+    { value: 1.666666667e-05, unit: 'mL/hr' },
+    { value: 0.001, unit: 'mL/min' },
+    { value: 0.06, unit: 'mL/sec' }
   ]
 }
 
