@@ -21,10 +21,9 @@ const unitData = {
     { value: 1, unit: 'mmol/L' },
     { value: 1, unit: 'mEq/L' }
   ],
-  medAmount: [
-    { value: 1000, unit: 'gm' },
-    { value: 0.001, unit: 'mcg' },
-    { value: 1, unit: 'mg' }
+  albumin: [
+    { value: 1000, unit: 'g/L' },
+    { value: 0.001, unit: 'g/dL' }
   ],
   perVolume: [{ value: 1000, unit: 'L' }, { value: 1, unit: 'mL' }],
   dose: [
