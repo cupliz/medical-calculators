@@ -1923,7 +1923,7 @@
             {
               "type": "input/select",
               "placeholder": "Norm: 98-106 mmol/L",
-              "values": ["mg/dL", "mcmol/L", "mg%"]
+              "values": ["mmol/L", "mEq/L"]
             }
           ]
         },
@@ -1933,7 +1933,7 @@
             {
               "type": "input/select",
               "placeholder": "Norm: 23-28 mmol/L",
-              "values": ["mL", "L", "fL"]
+              "values": ["mmol/L", "mEq/L"]
             }
           ]
         },
