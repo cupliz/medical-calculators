@@ -53,14 +53,11 @@ class FormulaComponent extends Component {
     if (type === 'total24') {
       return (totalCrystalloid / total24SelectValue).toFixed(this.state.decimal)
     } else if (type === 'rate8') {
-      if (albumin) {
-        const correctedAnionGap = anionGap + 2.5 * (4 - albumin)
-        return (correctedAnionGap / correctedAnionGapSelectValue).toFixed(
-          this.state.decimal
-        )
-      } else if (type === 'rate16') {
-        return 0
-      }
+      const rate8 = totalCrystalloid / 16
+      return (rate8 / rate8SelectValue).toFixed(this.state.decimal)
+    } else if (type === 'rate16') {
+      const rate16 = totalCrystalloid / 32
+      return (rate16 / rate16SelectValue).toFixed(this.state.decimal)
     }
   }
 
