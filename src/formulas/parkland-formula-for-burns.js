@@ -109,20 +109,12 @@ class FormulaComponent extends Component {
       if (calculate) {
         const { input, select } = calculate
         if (index === 0) {
-          naValue = input
-          naUnitValue = filterUnit(unitData.na, select)
+          weightValue = input
+          weightUnitValue = filterUnit(unitData.weight, select)
         }
         if (index === 1) {
-          clValue = input
-          clUnitValue = filterUnit(unitData.cl, select)
-        }
-        if (index === 2) {
-          hco3Value = input
-          hco3UnitValue = filterUnit(unitData.hco3, select)
-        }
-        if (index === 3) {
-          albuminValue = input
-          albuminUnitValue = filterUnit(unitData.albumin, select)
+          percentValue = input
+          percentUnitValue = filterUnit(unitData.percent, select)
         }
       }
       return calculate
