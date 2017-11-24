@@ -2130,6 +2130,16 @@
               "values": ["%", "fraction", "ratio"]
             }
           ]
+        },
+        {
+          "group": "PvO2",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Please enter PvO2",
+              "values": ["mmHg", "Pascal", "atm", "bar", "cmH2O", "cmHg", "ftH2O", "gm/sqcm", "inH2O", "inHg", "kPa", "mbar", "mmHg", "psi", "torr"]
+            }
+          ]
         }
       ],
       "results": {},
