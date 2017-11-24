@@ -117,7 +117,7 @@ class FormulaComponent extends Component {
     // CvO2 = ( Hgb * 13.4 * O2vSat / 100 ) + ( PvO2 * 0.031 )
     // CO = O2Consumption / (CaO2 - CvO2)
     const cao2 = (hgb * 13.4 * o2sat / 100) + (pao2 * 0.031)
-    const cvo2 = (hgb * 13.4 * o2vsat / 100) + (pao2 * 0.031)
+    const cvo2 = (hgb * 13.4 * o2vsat / 100) + (pvo2 * 0.031)
     if (type === 'total24') {
       return (totalCrystalloid / total24SelectValue).toFixed(this.state.decimal)
     } else if (type === 'rate8') {
