@@ -72,6 +72,11 @@ const unitData = {
     { value: 10, unit: 'Vol%' },
     { value: 1, unit: 'mL/L' },
     { value: 10, unit: 'mL/dL' }
+  ],
+  cvo2: [
+    { value: 10, unit: 'Vol%' },
+    { value: 1, unit: 'mL/L' },
+    { value: 10, unit: 'mL/dL' }
   ]
 }
 
