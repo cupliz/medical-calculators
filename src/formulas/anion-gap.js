@@ -47,7 +47,7 @@ class FormulaComponent extends Component {
     decimal: 2
   }
 
-  handleDoseCalc = (
+  handleFormulaCalc = (
     type,
     dosage,
     weight,
@@ -145,7 +145,7 @@ class FormulaComponent extends Component {
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
-                {this.handleDoseCalc(
+                {this.handleFormulaCalc(
                   'dose',
                   dosageValue * dosageUnitValue,
                   weightValue * weightUnitValue,
@@ -168,7 +168,7 @@ class FormulaComponent extends Component {
             </div>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
-                {this.handleDoseCalc(
+                {this.handleFormulaCalc(
                   'liquidDose',
                   dosageValue * dosageUnitValue,
                   weightValue * weightUnitValue,
