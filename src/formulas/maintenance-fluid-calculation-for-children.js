@@ -34,17 +34,17 @@ class FormulaComponent extends Component {
     // For children between >20 kg the daily fluid requirement is 1,500 mL + 20mL/kg for every kg over 20, up to a maximum of 2,400mL daily
     // This calculation does not apply to newborn infants (i.e. from 0 to 28 days after full term delivery)
     let dailyVolume = 0
-    if (type === 'daily volume') {
-      if (weight <= 10) {
-        dailyVolume = weight * 100
-      } else if (weight > 10 && weight <= 20) {
-        dailyVolume = 1000 + 50 * (weight - 10)
-      } else if (weight > 20 && weight <= 20) {
-        dailyVolume = 1500 + 20 * (weight - 20)
-        if (dailyVolume >= 2400) {
-          dailyVolume = 2400
-        }
+    if (weight <= 10) {
+      dailyVolume = weight * 100
+    } else if (weight > 10 && weight <= 20) {
+      dailyVolume = 1000 + 50 * (weight - 10)
+    } else if (weight > 20 && weight <= 20) {
+      dailyVolume = 1500 + 20 * (weight - 20)
+      if (dailyVolume >= 2400) {
+        dailyVolume = 2400
       }
+    }
+    if (type === 'daily volume') {
       return dailyVolume.toFixed(this.state.decimal)
     } else if (type === 'fluid rate') {
       const fluidRate = dailyVolume / 24
