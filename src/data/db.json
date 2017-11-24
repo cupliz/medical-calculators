@@ -1897,6 +1897,50 @@
           "BMI = (Weight/2.205) / (Height/39.37)^2"
         ]
       }
+    },
+    {
+      "id": "anion-gap",
+      "title": "Anion Gap",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Urine Creat",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/dL", "mcmol/L", "mg%"]
+            }
+          ]
+        },
+        {
+          "group": "Serum Creat",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["mg/dL", "mcmol/L", "mg%"]
+            }
+          ]
+        },
+        {
+          "group": "Days Urine Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mL", "L", "fL"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "CreatClear = UrineCreatinine* DaysUrineVolume/ SerumCreatinine/1440"
+        ]
+      }
     }
   ]
 }
