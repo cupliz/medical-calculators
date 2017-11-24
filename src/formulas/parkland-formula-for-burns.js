@@ -50,15 +50,15 @@ class FormulaComponent extends Component {
     // Rate First 8 Hours =  Total Crystalloid / 16
     // Rate Next 16 Hours =  Total Crystalloid / 32
     const anionGap = na - (cl + hc03)
-    if (type === 'anion gap') {
+    if (type === 'total24') {
       return (anionGap / anionGapSelectValue).toFixed(this.state.decimal)
-    } else if (type === 'corrected anion gap') {
+    } else if (type === 'rate8') {
       if (albumin) {
         const correctedAnionGap = anionGap + 2.5 * (4 - albumin)
         return (correctedAnionGap / correctedAnionGapSelectValue).toFixed(
           this.state.decimal
         )
-      } else {
+      } else if (type === 'rate16') {
         return 0
       }
     }
