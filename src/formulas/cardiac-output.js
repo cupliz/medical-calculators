@@ -251,6 +251,7 @@ class FormulaComponent extends Component {
                   pao2Value * pao2UnitValue,
                   o2vsatValue * o2vsatUnitValue,
                   pvo2Value * pvo2UnitValue,
+                  this.state.cao2SelectValue,
                   this.state.cvo2SelectValue
                 )}
               </Typography>
