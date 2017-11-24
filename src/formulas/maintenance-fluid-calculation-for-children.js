@@ -38,12 +38,14 @@ class FormulaComponent extends Component {
       if (weight <= 10) {
         dailyVolume = weight * 100
       } else if (weight > 10 && weight <= 20) {
-        dailyVolume = 1000 + 50 * weight
+        dailyVolume = 1000 + 50 * (weight - 10)
       } else if (weight > 20 && weight <= 20) {
-        dailyVolume = 1500 + 20 * weight
-        if (dailyVolume >= 2400) { dailyVolume = 2400}
+        dailyVolume = 1500 + 20 * (weight - 20)
+        if (dailyVolume >= 2400) {
+          dailyVolume = 2400
+        }
       }
-      return (dailyVolume).toFixed(this.state.decimal)
+      return dailyVolume.toFixed(this.state.decimal)
     } else if (type === 'fluid rate') {
       const fluidRate = dailyVolume / 24
       return (fluidRate / fluidRateSelectValue).toFixed(this.state.decimal)
