@@ -45,11 +45,8 @@ class FormulaComponent extends Component {
       }
       return (dailyVolume).toFixed(this.state.decimal)
     } else if (type === 'fluid rate') {
-      const rate8 = totalCrystalloid / 16
-      return (rate8 / rate8SelectValue).toFixed(this.state.decimal)
-    } else if (type === 'rate16') {
-      const rate16 = totalCrystalloid / 32
-      return (rate16 / rate16SelectValue).toFixed(this.state.decimal)
+      const fluidRate = dailyVolume / 24
+      return (fluidRate / fluidRateSelectValue).toFixed(this.state.decimal)
     }
   }
 
