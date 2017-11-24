@@ -2040,9 +2040,7 @@
       "formula": {
         "type": "unordered-list",
         "content": [
-          "Anion Gap = Na - (Cl +HCO3)",
-          "Corrected Anion Gap = Anion Gap + (2.5 * (4 - Albumin))",
-          "Normal Albumin is assumed to be 4.4 g/dL"
+          "Total Crystalloid For First 24 Hours = 4 * Weight * Percent Non-superficial Burn Area"
         ]
       }
     }
