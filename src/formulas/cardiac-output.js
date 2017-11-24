@@ -126,20 +126,20 @@ class FormulaComponent extends Component {
 
   handleCaO2SelectChange = event => {
     const { value } = event.target
-    let selectValue = filterUnit(unitData.total24, value)
-    this.setState({ total24SelectUnit: value, total24SelectValue: selectValue })
+    let selectValue = filterUnit(unitData.cao2, value)
+    this.setState({ cao2SelectUnit: value, cao2SelectValue: selectValue })
   }
 
   handleCvO2SelectChange = event => {
     const { value } = event.target
-    let selectValue = filterUnit(unitData.rate8, value)
-    this.setState({ rate8SelectUnit: value, rate8SelectValue: selectValue })
+    let selectValue = filterUnit(unitData.cvo2, value)
+    this.setState({ cvo2SelectUnit: value, cvo2SelectValue: selectValue })
   }
 
   handleCOSelectChange = event => {
     const { value } = event.target
-    let selectValue = filterUnit(unitData.rate16, value)
-    this.setState({ rate16SelectUnit: value, rate16SelectValue: selectValue })
+    let selectValue = filterUnit(unitData.co, value)
+    this.setState({ coSelectUnit: value, coSelectValue: selectValue })
   }
 
   handleDecimalChange = action => {
