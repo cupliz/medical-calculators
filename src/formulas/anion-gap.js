@@ -40,8 +40,8 @@ const filterUnit = (arr, select) =>
 
 class FormulaComponent extends Component {
   state = {
-    doseSelectUnit: 'mg Daily',
-    doseSelectValue: 1,
+    anionGapSelectUnit: 'mmol/L',
+    anionGapSelectValue: 1,
     liquidDoseSelectUnit: 'mL Daily',
     liquidDoseSelectValue: 1,
     decimal: 2
