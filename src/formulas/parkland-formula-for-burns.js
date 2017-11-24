@@ -125,7 +125,7 @@ class FormulaComponent extends Component {
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
             <Typography type='caption' className={classes.contentText}>
-              Anion Gap
+              Total Crystalloid For First 24 Hours
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
@@ -152,7 +152,36 @@ class FormulaComponent extends Component {
               </TextField>
             </div>
             <Typography type='caption' className={classes.contentText}>
-              Corrected Anion Gap
+              Rate First 8 Hours
+            </Typography>
+            <div className={classes.resultWrapper}>
+              <Typography type='title' className={classes.resultText}>
+                {this.handleFormulaCalc(
+                  'corrected anion gap',
+                  naValue * naUnitValue,
+                  clValue * clUnitValue,
+                  hco3Value * hco3UnitValue,
+                  this.state.anionGapSelectValue,
+                  albuminValue * albuminUnitValue,
+                  this.state.correctedAnionGapSelectValue
+                )}
+              </Typography>
+              <TextField
+                select
+                value={this.state.correctedAnionGapSelectUnit}
+                onChange={this.handleRate8SelectChange}
+                SelectProps={{ classes: { root: this.props.classes.select } }}
+                margin='normal'
+              >
+                {unitData.correctedAnionGap.map(option => (
+                  <MenuItem key={option.unit} value={option.unit}>
+                    {option.unit}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </div>
+            <Typography type='caption' className={classes.contentText}>
+              Rate First 16 Hours
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
