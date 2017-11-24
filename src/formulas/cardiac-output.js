@@ -289,12 +289,12 @@ class FormulaComponent extends Component {
               </Typography>
               <TextField
                 select
-                value={this.state.rate16SelectUnit}
+                value={this.state.coSelectUnit}
                 onChange={this.handleCOSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {unitData.rate16.map(option => (
+                {unitData.co.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
