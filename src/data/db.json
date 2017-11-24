@@ -2120,6 +2120,16 @@
               "values": ["mmHg", "Pascal", "atm", "bar", "cmH2O", "cmHg", "ftH2O", "gm/sqcm", "inH2O", "inHg", "kPa", "mbar", "mmHg", "psi", "torr"]
             }
           ]
+        },
+        {
+          "group": "O2vSat",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Please enter O2vSat",
+              "values": ["%", "fraction", "ratio"]
+            }
+          ]
         }
       ],
       "results": {},
