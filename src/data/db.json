@@ -2106,7 +2106,7 @@
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Please enter Hemoglobin (Hgb)",
+              "placeholder": "Please enter O2 Saturation",
               "values": ["%", "fraction", "ratio"]
             }
           ]
