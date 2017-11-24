@@ -54,8 +54,8 @@ class FormulaComponent extends Component {
 
   handleFluidRateSelectChange = event => {
     const { value } = event.target
-    let selectValue = filterUnit(unitData.total24, value)
-    this.setState({ total24SelectUnit: value, total24SelectValue: selectValue })
+    let selectValue = filterUnit(unitData.fluidRate, value)
+    this.setState({ fluidRateSelectUnit: value, fluidRateSelectValue: selectValue })
   }
 
   handleDecimalChange = action => {
