@@ -122,7 +122,7 @@ class FormulaComponent extends Component {
               <TextField
                 select
                 value={this.state.fluidRateSelectUnit}
-                onChange={this.handleRate8SelectChange}
+                onChange={this.handleFluidRateSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
