@@ -9,7 +9,7 @@ import AddIcon from 'material-ui-icons/Add'
 import RemoveIcon from 'material-ui-icons/Remove'
 
 const unitData = {
-  o2: [
+  o2Consumption: [
     { value: 1, unit: 'mL/min' },
     { value: 0.01666666667, unit: 'mL/hr' },
     { value: 60000, unit: 'L/sec' },
@@ -26,15 +26,10 @@ const unitData = {
     { value: 0.1, unit: 'mg/mL' },
     { value: 1e-07, unit: 'ng/mL' }
   ],
-  o2: [
-    { value: 0.1, unit: 'gm/L' },
-    { value: 1, unit: 'gm/dL' },
-    { value: 1e-06, unit: 'mcg/dL' },
-    { value: 0.0001, unit: 'mcg/mL' },
-    { value: 0.001, unit: 'mg%' },
-    { value: 0.001, unit: 'mg/dL' },
-    { value: 0.1, unit: 'mg/mL' },
-    { value: 1e-07, unit: 'ng/mL' }
+  o2Sat: [
+    { value: 1, unit: '%' },
+    { value: 100, unit: 'fraction' },
+    { value: 100, unit: 'ratio' }
   ]
 }
 
