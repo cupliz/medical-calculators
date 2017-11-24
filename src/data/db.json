@@ -2082,12 +2082,12 @@
       "type": "formula",
       "questions": [
         {
-          "group": "Weight",
+          "group": "Oxygen Consumption (O2)",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Please enter Weight",
-              "values": ["kg", "lb"]
+              "placeholder": "Please enter Oxygen Consumption (O2)",
+              "values": ["mL/min", "L/min", "L/sec", "mL/hr", "mL/sec"]
             }
           ]
         },
