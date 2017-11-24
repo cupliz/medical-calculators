@@ -2092,13 +2092,12 @@
           ]
         },
         {
-          "group": "Percent Nonsuperficial Burn Area",
+          "group": "Hemoglobin (Hgb)",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Please enter Percent Nonsuperficial Burn Area",
-              "values": ["%"],
-              "disabled": true
+              "placeholder": "Please enter Hemoglobin (Hgb)",
+              "values": ["gm/dL", "gm/L", "mcg/dL", "mcg/mL", "mg%", "mg/dL", "mg/mL", "ng/mL"]
             }
           ]
         }
