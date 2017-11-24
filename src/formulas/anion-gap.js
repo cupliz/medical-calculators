@@ -64,6 +64,14 @@ class FormulaComponent extends Component {
     } else if (type === 'corrected anion gap') {
       if (albumin) {
         const correctedAnionGap = anionGap + (2.5 * (4 - albumin))
+        console.log(na, 'na')
+        console.log(cl, 'cl')
+        console.log(hc03, 'hc03')
+        console.log(anionGapSelectValue, 'anionGapSelectValue')
+        console.log(albumin, 'albumin')
+        console.log(correctedAnionGapSelectValue, 'correctedAnionGapSelectValue')
+        console.log(anionGap, 'anionGap')
+        console.log(correctedAnionGap, 'correctedAnionGap')
         return (correctedAnionGap / correctedAnionGapSelectValue).toFixed(this.state.decimal)
       } else {
         return 0
