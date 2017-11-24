@@ -39,8 +39,10 @@ class FormulaComponent extends Component {
   state = {
     total24SelectUnit: 'mL',
     total24SelectValue: 1,
-    correctedAnionGapSelectUnit: 'mmol/L',
-    correctedAnionGapSelectValue: 1,
+    rate8SelectUnit: 'mL/hr',
+    rate8SelectValue: 1,
+    rate16SelectUnit: 'mL/hr',
+    rate16SelectValue: 1,
     decimal: 2
   }
 
