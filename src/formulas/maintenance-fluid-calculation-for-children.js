@@ -121,7 +121,7 @@ class FormulaComponent extends Component {
               </TextField>
             </div>
             <Typography type='caption' className={classes.contentText}>
-              Rate First 8 Hours
+              Fluid Rate
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
