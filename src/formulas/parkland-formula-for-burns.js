@@ -84,6 +84,15 @@ class FormulaComponent extends Component {
     })
   }
 
+  handleRate16SelectChange = event => {
+    const { value } = event.target
+    let selectValue = filterUnit(unitData.correctedAnionGap, value)
+    this.setState({
+      correctedAnionGapSelectUnit: value,
+      correctedAnionGapSelectValue: selectValue
+    })
+  }
+
   handleDecimalChange = action => {
     const oldDecimal = this.state.decimal
     if (action === '+') {
