@@ -214,7 +214,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'total24',
+                  'cao2',
                   weightValue * weightUnitValue,
                   percentValue * percentUnitValue,
                   this.state.total24SelectValue
@@ -240,7 +240,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'rate8',
+                  'cvo2',
                   weightValue * weightUnitValue,
                   percentValue * percentUnitValue,
                   this.state.total24SelectValue,
@@ -267,7 +267,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'rate16',
+                  'co',
                   weightValue * weightUnitValue,
                   percentValue * percentUnitValue,
                   this.state.total24SelectValue,
