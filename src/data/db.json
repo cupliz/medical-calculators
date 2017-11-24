@@ -1967,7 +1967,7 @@
         "type": "unordered-list",
         "content": [
           "Anion Gap = Na - (Cl +HCO3)",
-          "Albumin Corrected Anion Gap = Anion Gap + (2.5* (Normal Albumin - Observed Albumin))",
+          "Corrected Anion Gap = Anion Gap + (2.5 * (4 - Albumin))",
           "Albumin is usually given in g/dL; Normal Albumin is assumed to be 4.4 g/dL"
         ]
       }
