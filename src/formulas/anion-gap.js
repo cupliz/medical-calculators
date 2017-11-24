@@ -147,9 +147,9 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
                   'anion gap',
-                  dosageValue * dosageUnitValue,
-                  weightValue * weightUnitValue,
-                  this.state.doseSelectValue
+                  naValue * naUnitValue,
+                  clValue * clUnitValue,
+                  this.state.anionGapSelectValue
                 )}
               </Typography>
               <TextField
@@ -170,8 +170,8 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
                   'corrected anion gap',
-                  dosageValue * dosageUnitValue,
-                  weightValue * weightUnitValue,
+                  naValue * naUnitValue,
+                  clValue * clUnitValue,
                   this.state.doseSelectValue,
                   medAmountValue * medAmountUnitValue,
                   perVolumeValue * perVolumeUnitValue,
