@@ -74,6 +74,7 @@ const renderInputSelectField = props => (
     values={props.values}
     group={props.group}
     classes={props.classes}
+    disabled={props.disabled}
   />
 )
 
