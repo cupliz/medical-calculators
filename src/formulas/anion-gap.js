@@ -136,7 +136,7 @@ class FormulaComponent extends Component {
       return calculate
     })
 
-    if (dosageValue && weightValue) {
+    if (naValue && clValue && hco3Value) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
