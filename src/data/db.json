@@ -1982,22 +1982,22 @@
       "type": "formula",
       "questions": [
         {
-          "group": "Na",
+          "group": "Weight",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Norm: 136-145 mmol/L",
+              "placeholder": "Please enter Weight",
               "values": ["mmol/L", "mEq/L"]
             }
           ]
         },
         {
-          "group": "Cl",
+          "group": "Percent Nonsuperficial Burn Area",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Norm: 98-106 mmol/L",
-              "values": ["mmol/L", "mEq/L"]
+              "placeholder": "Please enter Percent Nonsuperficial Burn Area",
+              "values": ["%"]
             }
           ]
         }
