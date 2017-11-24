@@ -1954,9 +1954,11 @@
         ]
       },
       "formula": {
-        "type": "paragraph",
+        "type": "unordered-list",
         "content": [
-          "BMI = (Weight/2.205) / (Height/39.37)^2"
+          "Anion Gap = Na - (Cl +HCO3)",
+          "Albumin Corrected Anion Gap = Anion Gap + (2.5* (Normal Albumin - Observed Albumin))",
+          "Albumin is usually given in g/dL; Normal Albumin is assumed to be 4.4 g/dL"
         ]
       }
     }
