@@ -35,9 +35,11 @@ class FormulaComponent extends Component {
     rate8SelectValue,
     rate16SelectValue
   ) => {
-    // Total Crystalloid For First 24 Hours = 4 * Weight * Percent Non-superficial Burn Area
-    // Rate First 8 Hours =  Total Crystalloid / 16
-    // Rate Next 16 Hours =  Total Crystalloid / 32
+    // Fluid Rate = Daily Volume/24
+    // For infants 3.5 — 10kg the daily fluid requirement is 100mL/kg
+    // For children between 11—20 kg the daily fluid requirement is 1,000 mL + 50mL/kg for every kg over 10
+    // For children between >20 kg the daily fluid requirement is 1,500 mL + 20mL/kg for every kg over 20, up to a maximum of 2,400mL daily
+    // This calculation does not apply to newborn infants (i.e. from 0 to 28 days after full term delivery)
     const totalCrystalloid = 4 * weight * percent
     if (type === 'total24') {
       return (totalCrystalloid / total24SelectValue).toFixed(this.state.decimal)
