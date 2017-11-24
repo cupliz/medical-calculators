@@ -48,12 +48,10 @@ class FormulaComponent extends Component {
 
   handleFormulaCalc = (
     type,
-    na,
-    cl,
-    hc03,
-    anionGapSelectValue,
-    albumin,
-    correctedAnionGapSelectValue
+    weight,
+    percent,
+    total24SelectValue,rate8SelectValue,
+    rate16SelectValue
   ) => {
     // Total Crystalloid For First 24 Hours = 4 * Weight * Percent Non-superficial Burn Area
     // Rate First 8 Hours =  Total Crystalloid / 16
