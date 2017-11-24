@@ -38,7 +38,7 @@ class FormulaComponent extends Component {
       dailyVolume = weight * 100
     } else if (weight > 10 && weight <= 20) {
       dailyVolume = 1000 + 50 * (weight - 10)
-    } else if (weight > 20 && weight <= 20) {
+    } else if (weight > 20) {
       dailyVolume = 1500 + 20 * (weight - 20)
       if (dailyVolume >= 2400) {
         dailyVolume = 2400
