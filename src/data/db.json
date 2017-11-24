@@ -95,6 +95,10 @@
     {
       "id": "body-mass-index-quetelet-index",
       "title": "Body Mass Index (Quetelet's index)"
+    },
+    {
+      "id": "anion-gap",
+      "title": "Anion Gap"
     }
   ],
   "calculators": [
