@@ -1913,7 +1913,7 @@
             {
               "type": "input/select",
               "placeholder": "Norm: 136-145 mmol/L",
-              "values": ["mg/dL", "mcmol/L", "mg%"]
+              "values": ["mmol/L", "mEq/L"]
             }
           ]
         },
