@@ -2104,22 +2104,6 @@
         }
       ],
       "results": {},
-      "notes": {
-        "type": "unordered-list",
-        "content": [
-          "Fluid needs calculated according to the Parkland formula provide only a guide to baseline fluid requirements in patients with major burns. Superficial burns are not included in the calculation",
-          "Patients with burn shock require immediate, aggressive IV fluid resuscitation and their fluid needs can exceed those estimated by the Parkland formula",
-          "The fluid needs of burn patients may vary extensively. Use physiological parameters (e.g. Blood pressure, pulse rate, urine output) to determine the adequacy of fluid resuscitation",
-          "Elderly patients or children with major burns have additional fluid needs"
-        ]
-      },
-      "references": {
-        "type": "ordered-list",
-        "content": [
-          "Saffle, JR. Practice guidelines for burn care. J Burn Care. 2001; 22(Suppl):i.",
-          "Slater H, Goldfarb IW. The management of burn trauma: a house staff handbook. Western Pennsylvania Hospital. 2003: p 9-12."
-        ]
-      },
       "formula": {
         "type": "unordered-list",
         "content": [
