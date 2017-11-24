@@ -2000,26 +2000,6 @@
               "values": ["mmol/L", "mEq/L"]
             }
           ]
-        },
-        {
-          "group": "HCO3",
-          "data": [
-            {
-              "type": "input/select",
-              "placeholder": "Norm: 23-28 mmol/L",
-              "values": ["mmol/L", "mEq/L"]
-            }
-          ]
-        },
-        {
-          "group": "Albumin (Optional)",
-          "data": [
-            {
-              "type": "input/select",
-              "placeholder": "Norm: 35-55 g/L",
-              "values": ["g/L", "g/dL"]
-            }
-          ]
         }
       ],
       "results": {},
