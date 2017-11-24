@@ -130,7 +130,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'anion gap',
+                  'total24',
                   naValue * naUnitValue,
                   clValue * clUnitValue,
                   hco3Value * hco3UnitValue,
@@ -157,7 +157,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'corrected anion gap',
+                  'rate8',
                   naValue * naUnitValue,
                   clValue * clUnitValue,
                   hco3Value * hco3UnitValue,
@@ -186,7 +186,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'corrected anion gap',
+                  'rate16',
                   naValue * naUnitValue,
                   clValue * clUnitValue,
                   hco3Value * hco3UnitValue,
