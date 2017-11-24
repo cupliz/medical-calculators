@@ -146,7 +146,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'dose',
+                  'anion gap',
                   dosageValue * dosageUnitValue,
                   weightValue * weightUnitValue,
                   this.state.doseSelectValue
@@ -169,7 +169,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'liquidDose',
+                  'corrected anion gap',
                   dosageValue * dosageUnitValue,
                   weightValue * weightUnitValue,
                   this.state.doseSelectValue,
