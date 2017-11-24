@@ -101,9 +101,7 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
                   'daily volume',
-                  weightValue * weightUnitValue,
-                  percentValue * percentUnitValue,
-                  this.state.total24SelectValue
+                  weightValue * weightUnitValue
                 )}
               </Typography>
             </div>
@@ -115,9 +113,7 @@ class FormulaComponent extends Component {
                 {this.handleFormulaCalc(
                   'fluid rate',
                   weightValue * weightUnitValue,
-                  percentValue * percentUnitValue,
-                  this.state.total24SelectValue,
-                  this.state.rate8SelectValue
+                  this.state.fluidRateSelectValue
                 )}
               </Typography>
               <TextField
