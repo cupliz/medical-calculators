@@ -155,12 +155,12 @@ class FormulaComponent extends Component {
               </Typography>
               <TextField
                 select
-                value={this.state.doseSelectUnit}
+                value={this.state.anionGapSelectUnit}
                 onChange={this.handleAnionGapSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {unitData.dose.map(option => (
+                {unitData.anionGap.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
@@ -184,12 +184,12 @@ class FormulaComponent extends Component {
               </Typography>
               <TextField
                 select
-                value={this.state.liquidDoseSelectUnit}
+                value={this.state.correctedAnionGapSelectValue}
                 onChange={this.handleCorrectedAnionGapSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {unitData.liquidDose.map(option => (
+                {unitData.correctedAnionGap.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
