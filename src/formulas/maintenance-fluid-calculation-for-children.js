@@ -147,34 +147,6 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
-            <Typography type='caption' className={classes.contentText}>
-              Rate First 16 Hours
-            </Typography>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleFormulaCalc(
-                  'rate16',
-                  weightValue * weightUnitValue,
-                  percentValue * percentUnitValue,
-                  this.state.total24SelectValue,
-                  this.state.rate8SelectValue,
-                  this.state.rate16SelectValue
-                )}
-              </Typography>
-              <TextField
-                select
-                value={this.state.rate16SelectUnit}
-                onChange={this.handleRate16SelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.rate16.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </div>
             <div className={classes.decimalPrecisionWrapper}>
               <Typography type='title' className={classes.decimalPrecision}>
                 Decimal Precision
