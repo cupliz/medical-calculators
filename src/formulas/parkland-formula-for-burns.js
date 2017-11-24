@@ -99,14 +99,10 @@ class FormulaComponent extends Component {
     const { questions } = data
 
     // extract needed field vars
-    let naValue = null
-    let naUnitValue = null
-    let clValue = null
-    let clUnitValue = null
-    let hco3Value = null
-    let hco3UnitValue = null
-    let albuminValue = null
-    let albuminUnitValue = null
+    let weightValue = null
+    let weightUnitValue = null
+    let percentValue = null
+    let percentUnitValue = null
 
     questions.map((question, index) => {
       const { calculate } = question
