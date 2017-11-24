@@ -149,6 +149,7 @@ class FormulaComponent extends Component {
                   'anion gap',
                   naValue * naUnitValue,
                   clValue * clUnitValue,
+                  hco3Value * hco3UnitValue,
                   this.state.anionGapSelectValue
                 )}
               </Typography>
@@ -175,7 +176,7 @@ class FormulaComponent extends Component {
                   'corrected anion gap',
                   naValue * naUnitValue,
                   clValue * clUnitValue,
-                  this.state.doseSelectValue,
+                  this.state.anionGapSelectValue,
                   medAmountValue * medAmountUnitValue,
                   perVolumeValue * perVolumeUnitValue,
                   this.state.liquidDoseSelectValue
