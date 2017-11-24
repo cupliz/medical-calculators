@@ -209,7 +209,7 @@ class FormulaComponent extends Component {
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
             <Typography type='caption' className={classes.contentText}>
-              Total Crystalloid For First 24 Hours
+              Arterial Oxygen Content CaO2
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
@@ -235,7 +235,7 @@ class FormulaComponent extends Component {
               </TextField>
             </div>
             <Typography type='caption' className={classes.contentText}>
-              Rate First 8 Hours
+              Venous Oxygen Content CvO2
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
@@ -262,7 +262,7 @@ class FormulaComponent extends Component {
               </TextField>
             </div>
             <Typography type='caption' className={classes.contentText}>
-              Rate First 16 Hours
+              Cardiac Output
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
