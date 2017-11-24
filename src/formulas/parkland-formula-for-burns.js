@@ -49,9 +49,9 @@ class FormulaComponent extends Component {
     // Total Crystalloid For First 24 Hours = 4 * Weight * Percent Non-superficial Burn Area
     // Rate First 8 Hours =  Total Crystalloid / 16
     // Rate Next 16 Hours =  Total Crystalloid / 32
-    const anionGap = na - (cl + hc03)
+    const totalCrystalloid = 4 * weight * percent
     if (type === 'total24') {
-      return (anionGap / anionGapSelectValue).toFixed(this.state.decimal)
+      return (totalCrystalloid / total24SelectValue).toFixed(this.state.decimal)
     } else if (type === 'rate8') {
       if (albumin) {
         const correctedAnionGap = anionGap + 2.5 * (4 - albumin)
