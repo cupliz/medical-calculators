@@ -109,9 +109,9 @@ class FormulaComponent extends Component {
     rate8SelectValue,
     rate16SelectValue
   ) => {
-    // Total Crystalloid For First 24 Hours = 4 * Weight * Percent Non-superficial Burn Area
-    // Rate First 8 Hours =  Total Crystalloid / 16
-    // Rate Next 16 Hours =  Total Crystalloid / 32
+    // CaO2 = ( Hgb * 13.4 * O2Sat / 100 ) + ( PaO2 * 0.031 )
+    // CvO2 = ( Hgb * 13.4 * O2vSat / 100 ) + ( PvO2 * 0.031 )
+    // CO = O2Consumption / (CaO2 - CvO2)
     const totalCrystalloid = 4 * weight * percent
     if (type === 'total24') {
       return (totalCrystalloid / total24SelectValue).toFixed(this.state.decimal)
