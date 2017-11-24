@@ -141,7 +141,7 @@ class FormulaComponent extends Component {
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
             <Typography type='caption' className={classes.contentText}>
-              Dose
+              Anion Gap
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
@@ -166,6 +166,9 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
+            <Typography type='caption' className={classes.contentText}>
+              Corrected Anion Gap
+            </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
