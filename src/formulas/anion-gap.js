@@ -77,7 +77,7 @@ class FormulaComponent extends Component {
     this.setState({ doseSelectUnit: value, doseSelectValue: selectValue })
   }
 
-  handleLiquidDoseSelectChange = event => {
+  handleCorrectedAnionGapSelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.liquidDose, value)
     this.setState({
@@ -181,7 +181,7 @@ class FormulaComponent extends Component {
               <TextField
                 select
                 value={this.state.liquidDoseSelectUnit}
-                onChange={this.handleLiquidDoseSelectChange}
+                onChange={this.handleCorrectedAnionGapSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
