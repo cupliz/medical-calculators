@@ -75,12 +75,12 @@ const filterUnit = (arr, select) =>
 
 class FormulaComponent extends Component {
   state = {
-    total24SelectUnit: 'mL',
-    total24SelectValue: 1,
-    rate8SelectUnit: 'mL/hr',
-    rate8SelectValue: 1,
-    rate16SelectUnit: 'mL/hr',
-    rate16SelectValue: 1,
+    cao2SelectUnit: 'mL/L',
+    cao2SelectValue: 1,
+    cvo2SelectUnit: 'mL/L',
+    cvo2SelectValue: 1,
+    coSelectUnit: 'L/min',
+    coSelectValue: 1,
     decimal: 2
   }
 
