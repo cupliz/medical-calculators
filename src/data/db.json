@@ -1912,7 +1912,7 @@
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter drug dose",
+              "placeholder": "Norm: 136-145 mmol/L",
               "values": ["mg/dL", "mcmol/L", "mg%"]
             }
           ]
@@ -1922,7 +1922,7 @@
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter patient weight",
+              "placeholder": "Norm: 98-106 mmol/L",
               "values": ["mg/dL", "mcmol/L", "mg%"]
             }
           ]
@@ -1932,7 +1932,7 @@
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter medication amount",
+              "placeholder": "Norm: 23-28 mmol/L",
               "values": ["mL", "L", "fL"]
             }
           ]
@@ -1942,7 +1942,7 @@
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter medication amount",
+              "placeholder": "Norm: 35-55 g/L",
               "values": ["mL", "L", "fL"]
             }
           ]
