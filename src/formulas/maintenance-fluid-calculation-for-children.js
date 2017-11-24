@@ -100,7 +100,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'total24',
+                  'daily volume',
                   weightValue * weightUnitValue,
                   percentValue * percentUnitValue,
                   this.state.total24SelectValue
@@ -113,7 +113,7 @@ class FormulaComponent extends Component {
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
-                  'rate8',
+                  'fluid rate',
                   weightValue * weightUnitValue,
                   percentValue * percentUnitValue,
                   this.state.total24SelectValue,
