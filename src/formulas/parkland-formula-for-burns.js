@@ -17,8 +17,8 @@ const unitData = {
     { value: 1, unit: '%' }
   ],
   total24: [
-    { value: 1, unit: 'mmol/L' },
-    { value: 1, unit: 'mEq/L' }
+    { value: 1, unit: 'mL' },
+    { value: 1000, unit: 'L' }
   ],
   rate8: [
     { value: 0.1, unit: 'g/L' },
