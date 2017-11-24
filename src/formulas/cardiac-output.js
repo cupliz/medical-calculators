@@ -25,6 +25,16 @@ const unitData = {
     { value: 0.001, unit: 'mg/dL' },
     { value: 0.1, unit: 'mg/mL' },
     { value: 1e-07, unit: 'ng/mL' }
+  ],
+  o2: [
+    { value: 0.1, unit: 'gm/L' },
+    { value: 1, unit: 'gm/dL' },
+    { value: 1e-06, unit: 'mcg/dL' },
+    { value: 0.0001, unit: 'mcg/mL' },
+    { value: 0.001, unit: 'mg%' },
+    { value: 0.001, unit: 'mg/dL' },
+    { value: 0.1, unit: 'mg/mL' },
+    { value: 1e-07, unit: 'ng/mL' }
   ]
 }
 
