@@ -1936,6 +1936,16 @@
               "values": ["mL", "L", "fL"]
             }
           ]
+        },
+        {
+          "group": "Albumin (Optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mL", "L", "fL"]
+            }
+          ]
         }
       ],
       "results": {},
