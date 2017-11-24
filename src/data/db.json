@@ -1942,7 +1942,8 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "The default unit of measure for weight is pounds. Please verify that the correct unit of measure has been selected."
+          "The Anion Gap calculator evaluates states of metabolic acidosis",
+          "An elevated anion gap suggests the presence of a metabolic acidosis"
         ]
       },
       "references": {
