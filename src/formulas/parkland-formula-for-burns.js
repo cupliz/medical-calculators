@@ -75,7 +75,7 @@ class FormulaComponent extends Component {
     this.setState({ anionGapSelectUnit: value, anionGapSelectValue: selectValue })
   }
 
-  handleCorrectedAnionGapSelectChange = event => {
+  handleRate8SelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.correctedAnionGap, value)
     this.setState({
@@ -183,7 +183,7 @@ class FormulaComponent extends Component {
               <TextField
                 select
                 value={this.state.correctedAnionGapSelectUnit}
-                onChange={this.handleCorrectedAnionGapSelectChange}
+                onChange={this.handleRate8SelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
