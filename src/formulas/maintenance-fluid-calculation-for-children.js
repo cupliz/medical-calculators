@@ -30,10 +30,7 @@ class FormulaComponent extends Component {
   handleFormulaCalc = (
     type,
     weight,
-    percent,
-    total24SelectValue,
-    rate8SelectValue,
-    rate16SelectValue
+    fluidRateSelectValue
   ) => {
     // Fluid Rate = Daily Volume/24
     // For infants 3.5 — 10kg the daily fluid requirement is 100mL/kg
