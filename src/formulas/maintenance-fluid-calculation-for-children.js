@@ -118,12 +118,12 @@ class FormulaComponent extends Component {
               </Typography>
               <TextField
                 select
-                value={this.state.rate8SelectUnit}
+                value={this.state.fluidRateSelectUnit}
                 onChange={this.handleRate8SelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {unitData.rate8.map(option => (
+                {unitData.fluidRate.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
