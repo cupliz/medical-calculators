@@ -13,6 +13,14 @@ const unitData = {
     { value: 1, unit: 'mmol/L' },
     { value: 1, unit: 'mEq/L' }
   ],
+  cl: [
+    { value: 1, unit: 'mmol/L' },
+    { value: 1, unit: 'mEq/L' }
+  ],
+  hco3: [
+    { value: 1, unit: 'mmol/L' },
+    { value: 1, unit: 'mEq/L' }
+  ],
   medAmount: [
     { value: 1000, unit: 'gm' },
     { value: 0.001, unit: 'mcg' },
