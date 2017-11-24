@@ -46,6 +46,11 @@ const unitData = {
     { value: 1, unit: 'mmHg' },
     { value: 51.7150957831416, unit: 'psi' },
     { value: 1, unit: 'torr' }
+  ],
+  o2vSat: [
+    { value: 1, unit: '%' },
+    { value: 100, unit: 'fraction' },
+    { value: 100, unit: 'ratio' }
   ]
 }
 
