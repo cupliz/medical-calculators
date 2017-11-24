@@ -245,10 +245,13 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
                   'cvo2',
-                  weightValue * weightUnitValue,
-                  percentValue * percentUnitValue,
-                  this.state.total24SelectValue,
-                  this.state.rate8SelectValue
+                  o2Value * o2UnitValue,
+                  hgbValue * hgbUnitValue,
+                  o2satValue * o2satUnitValue,
+                  pao2Value * pao2UnitValue,
+                  o2vsatValue * o2vsatUnitValue,
+                  pvo2Value * pvo2UnitValue,
+                  this.state.cvo2SelectValue
                 )}
               </Typography>
               <TextField
