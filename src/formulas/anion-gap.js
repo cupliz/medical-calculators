@@ -184,7 +184,7 @@ class FormulaComponent extends Component {
               </Typography>
               <TextField
                 select
-                value={this.state.correctedAnionGapSelectValue}
+                value={this.state.correctedAnionGapSelectUnit}
                 onChange={this.handleCorrectedAnionGapSelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
