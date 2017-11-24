@@ -17,11 +17,14 @@ const unitData = {
     { value: 60, unit: 'mL/sec' }
   ],
   hgb: [
-    { value: 1, unit: 'mL/min' },
-    { value: 0.01666666667, unit: 'mL/hr' },
-    { value: 60000, unit: 'L/sec' },
-    { value: 1000, unit: 'L/min' },
-    { value: 60, unit: 'mL/sec' }
+    { value: 0.1, unit: 'gm/L' },
+    { value: 1, unit: 'gm/dL' },
+    { value: 1e-06, unit: 'mcg/dL' },
+    { value: 0.0001, unit: 'mcg/mL' },
+    { value: 0.001, unit: 'mg%' },
+    { value: 0.001, unit: 'mg/dL' },
+    { value: 0.1, unit: 'mg/mL' },
+    { value: 1e-07, unit: 'ng/mL' }
   ]
 }
 
