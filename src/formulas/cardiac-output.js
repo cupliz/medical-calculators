@@ -103,11 +103,14 @@ class FormulaComponent extends Component {
 
   handleFormulaCalc = (
     type,
-    weight,
-    percent,
-    total24SelectValue,
-    rate8SelectValue,
-    rate16SelectValue
+    o2,
+    hgb,
+    o2sat,
+    pao2,
+    pvo2,
+    cao2SelectValue,
+    cvo2SelectValue,
+    coSelectValue,
   ) => {
     // CaO2 = ( Hgb * 13.4 * O2Sat / 100 ) + ( PaO2 * 0.031 )
     // CvO2 = ( Hgb * 13.4 * O2vSat / 100 ) + ( PvO2 * 0.031 )
