@@ -157,22 +157,20 @@ class FormulaComponent extends Component {
               <Typography type='title' className={classes.resultText}>
                 {this.handleFormulaCalc(
                   'rate8',
-                  naValue * naUnitValue,
-                  clValue * clUnitValue,
-                  hco3Value * hco3UnitValue,
-                  this.state.anionGapSelectValue,
-                  albuminValue * albuminUnitValue,
-                  this.state.correctedAnionGapSelectValue
+                  weightValue * weightUnitValue,
+                  percentValue * percentUnitValue,
+                  this.state.total24SelectValue,
+                  this.state.rate8SelectValue
                 )}
               </Typography>
               <TextField
                 select
-                value={this.state.correctedAnionGapSelectUnit}
+                value={this.state.rate8SelectUnit}
                 onChange={this.handleRate8SelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
-                {unitData.correctedAnionGap.map(option => (
+                {unitData.rate8.map(option => (
                   <MenuItem key={option.unit} value={option.unit}>
                     {option.unit}
                   </MenuItem>
@@ -197,7 +195,7 @@ class FormulaComponent extends Component {
               <TextField
                 select
                 value={this.state.correctedAnionGapSelectUnit}
-                onChange={this.handleRate8SelectChange}
+                onChange={this.handleRate16SelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
