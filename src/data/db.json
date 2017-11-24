@@ -2078,11 +2078,9 @@
         ]
       },
       "formula": {
-        "type": "unordered-list",
+        "type": "paragraph",
         "content": [
-          "Total Crystalloid For First 24 Hours = 4 * Weight * Percent Non-superficial Burn Area",
-          "Rate First 8 Hours =  Total Crystalloid / 16",
-          "Rate Next 16 Hours =  Total Crystalloid / 32"
+          "Fluid Rate = Daily Volume/24"
         ]
       }
     }
