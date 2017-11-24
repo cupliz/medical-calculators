@@ -15,18 +15,6 @@ const unitData = {
     { value: 60000, unit: 'L/sec' },
     { value: 1000, unit: 'L/min' },
     { value: 60, unit: 'mL/sec' }
-  ],
-  percent: [{ value: 1, unit: '%' }],
-  total24: [{ value: 1, unit: 'mL' }, { value: 1000, unit: 'L' }],
-  rate8: [
-    { value: 1, unit: 'mL/hr' },
-    { value: 1000, unit: 'L/hr' },
-    { value: 60, unit: 'mL/min' }
-  ],
-  rate16: [
-    { value: 1, unit: 'mL/hr' },
-    { value: 1000, unit: 'L/hr' },
-    { value: 60, unit: 'mL/min' }
   ]
 }
 
