@@ -56,7 +56,7 @@ class FormulaComponent extends Component {
     perVolume,
     liquidSelectValue
   ) => {
-    // Dose = Weight * Dosage
+    // Anion Gap = Na - (Cl +HCO3)
     // Liquid_Dose =  Dose * Per_Volume / Med_Amount
     const dose = dosage * weight
     if (type === 'dose') {
