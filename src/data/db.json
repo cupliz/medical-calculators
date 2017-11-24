@@ -1987,7 +1987,7 @@
             {
               "type": "input/select",
               "placeholder": "Please enter Weight",
-              "values": ["mmol/L", "mEq/L"]
+              "values": ["kg", "lb"]
             }
           ]
         },
