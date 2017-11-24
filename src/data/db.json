@@ -99,6 +99,10 @@
     {
       "id": "anion-gap",
       "title": "Anion Gap"
+    },
+    {
+      "id": "parkland-formula-for-burns",
+      "title": "Parkland Formula for Burns"
     }
   ],
   "calculators": [
