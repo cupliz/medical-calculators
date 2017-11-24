@@ -1908,7 +1908,7 @@
       "type": "formula",
       "questions": [
         {
-          "group": "Urine Creat",
+          "group": "Na",
           "data": [
             {
               "type": "input/select",
@@ -1918,7 +1918,7 @@
           ]
         },
         {
-          "group": "Serum Creat",
+          "group": "Cl",
           "data": [
             {
               "type": "input/select",
@@ -1928,7 +1928,7 @@
           ]
         },
         {
-          "group": "Days Urine Volume",
+          "group": "HCO3",
           "data": [
             {
               "type": "input/select",
