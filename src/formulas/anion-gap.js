@@ -49,16 +49,16 @@ class FormulaComponent extends Component {
 
   handleFormulaCalc = (
     type,
-    dosage,
-    weight,
-    selectValue,
-    medAmount,
-    perVolume,
-    liquidSelectValue
+    na,
+    cl,
+    hc03,
+    anionGapSelectValue,
+    albumin,
+    correctedAnionGapSelectValue
   ) => {
     // Anion Gap = Na - (Cl +HCO3)
     // Albumin Corrected Anion Gap = Anion Gap + (2.5* (Normal Albumin - Observed Albumin))
-    const dose = dosage * weight
+    const anionGap = dosage * weight
     if (type === 'anion gap') {
       return (dose / selectValue).toFixed(this.state.decimal)
     } else if (type === 'corrected anion gap') {
