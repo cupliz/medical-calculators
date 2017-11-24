@@ -1943,7 +1943,7 @@
             {
               "type": "input/select",
               "placeholder": "Norm: 35-55 g/L",
-              "values": ["mL", "L", "fL"]
+              "values": ["g/L", "g/dL"]
             }
           ]
         }
