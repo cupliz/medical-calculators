@@ -130,7 +130,7 @@ class FormulaComponent extends Component {
     this.setState({ total24SelectUnit: value, total24SelectValue: selectValue })
   }
 
-  handleRate8SelectChange = event => {
+  handleCvO2SelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.rate8, value)
     this.setState({ rate8SelectUnit: value, rate8SelectValue: selectValue })
@@ -226,7 +226,7 @@ class FormulaComponent extends Component {
               <TextField
                 select
                 value={this.state.rate8SelectUnit}
-                onChange={this.handleRate8SelectChange}
+                onChange={this.handleCvO2SelectChange}
                 SelectProps={{ classes: { root: this.props.classes.select } }}
                 margin='normal'
               >
