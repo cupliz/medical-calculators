@@ -106,19 +106,6 @@ class FormulaComponent extends Component {
                   this.state.total24SelectValue
                 )}
               </Typography>
-              <TextField
-                select
-                value={this.state.total24SelectUnit}
-                onChange={this.handleFluidRateSelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.total24.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
             </div>
             <Typography type='caption' className={classes.contentText}>
               Fluid Rate
