@@ -187,6 +187,7 @@ class FormulaComponent extends Component {
                   weightValue * weightUnitValue,
                   percentValue * percentUnitValue,
                   this.state.total24SelectValue,
+                  this.state.rate8SelectValue,
                   this.state.rate16SelectValue
                 )}
               </Typography>
