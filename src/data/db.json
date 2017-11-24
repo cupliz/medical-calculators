@@ -2100,6 +2100,16 @@
               "values": ["gm/dL", "gm/L", "mcg/dL", "mcg/mL", "mg%", "mg/dL", "mg/mL", "ng/mL"]
             }
           ]
+        },
+        {
+          "group": "O2 Saturation",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Please enter Hemoglobin (Hgb)",
+              "values": ["%", "fraction", "ratio"]
+            }
+          ]
         }
       ],
       "results": {},
