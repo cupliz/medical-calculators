@@ -57,7 +57,7 @@ class FormulaComponent extends Component {
     liquidSelectValue
   ) => {
     // Anion Gap = Na - (Cl +HCO3)
-    // Liquid_Dose =  Dose * Per_Volume / Med_Amount
+    // Albumin Corrected Anion Gap = Anion Gap + (2.5* (Normal Albumin - Observed Albumin))
     const dose = dosage * weight
     if (type === 'dose') {
       return (dose / selectValue).toFixed(this.state.decimal)
