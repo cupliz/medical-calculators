@@ -2110,6 +2110,16 @@
               "values": ["%", "fraction", "ratio"]
             }
           ]
+        },
+        {
+          "group": "PaO2",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Please enter PaO2",
+              "values": ["mmHg", "Pascal", "atm", "bar", "cmH2O", "cmHg", "ftH2O", "gm/sqcm", "inH2O", "inHg", "kPa", "mbar", "mmHg", "psi", "torr"]
+            }
+          ]
         }
       ],
       "results": {},
