@@ -67,6 +67,11 @@ const unitData = {
     { value: 1, unit: 'mmHg' },
     { value: 51.7150957831416, unit: 'psi' },
     { value: 1, unit: 'torr' }
+  ],
+  cao2: [
+    { value: 10, unit: 'Vol%' },
+    { value: 1, unit: 'mL/L' },
+    { value: 10, unit: 'mL/dL' }
   ]
 }
 
