@@ -42,8 +42,8 @@ class FormulaComponent extends Component {
   state = {
     anionGapSelectUnit: 'mmol/L',
     anionGapSelectValue: 1,
-    liquidDoseSelectUnit: 'mL Daily',
-    liquidDoseSelectValue: 1,
+    correctedAnionGapSelectUnit: 'mmol/L',
+    correctedAnionGapSelectValue: 1,
     decimal: 2
   }
 
