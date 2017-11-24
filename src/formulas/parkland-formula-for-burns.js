@@ -16,19 +16,15 @@ const unitData = {
   percent: [
     { value: 1, unit: '%' }
   ],
-  hco3: [
+  total24: [
     { value: 1, unit: 'mmol/L' },
     { value: 1, unit: 'mEq/L' }
   ],
-  albumin: [
+  rate8: [
     { value: 0.1, unit: 'g/L' },
     { value: 1, unit: 'g/dL' }
   ],
-  anionGap: [
-    { value: 1, unit: 'mmol/L' },
-    { value: 1, unit: 'mEq/L' }
-  ],
-  correctedAnionGap: [
+  rate16: [
     { value: 1, unit: 'mmol/L' },
     { value: 1, unit: 'mEq/L' }
   ]
