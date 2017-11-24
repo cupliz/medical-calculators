@@ -2047,17 +2047,6 @@
               "values": ["kg", "lb"]
             }
           ]
-        },
-        {
-          "group": "Percent Nonsuperficial Burn Area",
-          "data": [
-            {
-              "type": "input/select",
-              "placeholder": "Please enter Percent Nonsuperficial Burn Area",
-              "values": ["%"],
-              "disabled": true
-            }
-          ]
         }
       ],
       "results": {},
