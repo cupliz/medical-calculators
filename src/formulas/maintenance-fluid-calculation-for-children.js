@@ -95,7 +95,7 @@ class FormulaComponent extends Component {
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
             <Typography type='caption' className={classes.contentText}>
-              Total Crystalloid For First 24 Hours
+              Daily Volume
             </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
