@@ -77,8 +77,6 @@ class FormulaComponent extends Component {
     // extract needed field vars
     let weightValue = null
     let weightUnitValue = null
-    let percentValue = null
-    let percentUnitValue = null
 
     questions.map((question, index) => {
       const { calculate } = question
@@ -88,15 +86,11 @@ class FormulaComponent extends Component {
           weightValue = input
           weightUnitValue = filterUnit(unitData.weight, select)
         }
-        if (index === 1) {
-          percentValue = input
-          percentUnitValue = filterUnit(unitData.percent, select)
-        }
       }
       return calculate
     })
 
-    if (weightValue && percentValue) {
+    if (weightValue) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
