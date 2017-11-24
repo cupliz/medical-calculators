@@ -177,12 +177,28 @@ class FormulaComponent extends Component {
       if (calculate) {
         const { input, select } = calculate
         if (index === 0) {
-          weightValue = input
-          weightUnitValue = filterUnit(unitData.weight, select)
+          o2Value = input
+          o2UnitValue = filterUnit(unitData.o2consumption, select)
         }
         if (index === 1) {
-          percentValue = input
-          percentUnitValue = filterUnit(unitData.percent, select)
+          hgbValue = input
+          hgbUnitValue = filterUnit(unitData.hgb, select)
+        }
+        if (index === 2) {
+          o2satValue = input
+          o2satUnitValue = filterUnit(unitData.o2sat, select)
+        }
+        if (index === 3) {
+          pao2Value = input
+          pao2UnitValue = filterUnit(unitData.pao2, select)
+        }
+        if (index === 4) {
+          o2vsatValue = input
+          o2vsatUnitValue = filterUnit(unitData.o2vsat, select)
+        }
+        if (index === 5) {
+          pvo2Value = input
+          pvo2UnitValue = filterUnit(unitData.pvo2, select)
         }
       }
       return calculate
