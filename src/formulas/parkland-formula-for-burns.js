@@ -37,8 +37,8 @@ const filterUnit = (arr, select) =>
 
 class FormulaComponent extends Component {
   state = {
-    anionGapSelectUnit: 'mmol/L',
-    anionGapSelectValue: 1,
+    total24SelectUnit: 'mL',
+    total24SelectValue: 1,
     correctedAnionGapSelectUnit: 'mmol/L',
     correctedAnionGapSelectValue: 1,
     decimal: 2
