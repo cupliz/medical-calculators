@@ -27,18 +27,21 @@ class FormulaComponent extends Component {
     decimal: 2
   }
 
-  handleFormulaCalc = (
-    type,
-    weight,
-    fluidRateSelectValue
-  ) => {
+  handleFormulaCalc = (type, weight, fluidRateSelectValue) => {
     // Fluid Rate = Daily Volume/24
     // For infants 3.5 — 10kg the daily fluid requirement is 100mL/kg
     // For children between 11—20 kg the daily fluid requirement is 1,000 mL + 50mL/kg for every kg over 10
     // For children between >20 kg the daily fluid requirement is 1,500 mL + 20mL/kg for every kg over 20, up to a maximum of 2,400mL daily
     // This calculation does not apply to newborn infants (i.e. from 0 to 28 days after full term delivery)
-    const totalCrystalloid = 4 * weight * percent
+    let dailyVolume = 0
     if (type === 'daily volume') {
+      if (weight <= 10) {
+        dailyVolume = weight * 100
+      } else if (weight > 10 && weight <= 20) {
+        dailyVolume = 1000 + 50 * weight
+      } else if (weight > 20 && weight <= 20) {
+        dailyVolume = 1500 + 20 * weight
+      }
       return (totalCrystalloid / total24SelectValue).toFixed(this.state.decimal)
     } else if (type === 'fluid rate') {
       const rate8 = totalCrystalloid / 16
@@ -52,7 +55,10 @@ class FormulaComponent extends Component {
   handleFluidRateSelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.fluidRate, value)
-    this.setState({ fluidRateSelectUnit: value, fluidRateSelectValue: selectValue })
+    this.setState({
+      fluidRateSelectUnit: value,
+      fluidRateSelectValue: selectValue
+    })
   }
 
   handleDecimalChange = action => {
