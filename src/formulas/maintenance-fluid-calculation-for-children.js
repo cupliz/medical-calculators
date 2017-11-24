@@ -10,14 +10,7 @@ import RemoveIcon from 'material-ui-icons/Remove'
 
 const unitData = {
   weight: [{ value: 1, unit: 'kg' }, { value: 0.45359237, unit: 'lb' }],
-  percent: [{ value: 1, unit: '%' }],
-  total24: [{ value: 1, unit: 'mL' }, { value: 1000, unit: 'L' }],
-  rate8: [
-    { value: 1, unit: 'mL/hr' },
-    { value: 1000, unit: 'L/hr' },
-    { value: 60, unit: 'mL/min' }
-  ],
-  rate16: [
+  fluidRate: [
     { value: 1, unit: 'mL/hr' },
     { value: 1000, unit: 'L/hr' },
     { value: 60, unit: 'mL/min' }
