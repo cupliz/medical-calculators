@@ -23,7 +23,7 @@ const unitData = {
   ],
   albumin: [
     { value: 0.1, unit: 'g/L' },
-    { value: 1, unit: 'g/dL' }
+    { value: 0.1, unit: 'g/dL' }
   ],
   anionGap: [
     { value: 1, unit: 'mmol/L' },
