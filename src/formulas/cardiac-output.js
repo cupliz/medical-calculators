@@ -19,12 +19,12 @@ const unitData = {
   hgb: [
     { value: 0.1, unit: 'gm/L' },
     { value: 1, unit: 'gm/dL' },
-    { value: 1e-06, unit: 'mcg/dL' },
+    { value: 1e-6, unit: 'mcg/dL' },
     { value: 0.0001, unit: 'mcg/mL' },
     { value: 0.001, unit: 'mg%' },
     { value: 0.001, unit: 'mg/dL' },
     { value: 0.1, unit: 'mg/mL' },
-    { value: 1e-07, unit: 'ng/mL' }
+    { value: 1e-7, unit: 'ng/mL' }
   ],
   o2sat: [
     { value: 1, unit: '%' },
@@ -81,7 +81,7 @@ const unitData = {
   co: [
     { value: 1, unit: 'L/min' },
     { value: 60, unit: 'L/sec' },
-    { value: 1.666666667e-05, unit: 'mL/hr' },
+    { value: 1.666666667e-5, unit: 'mL/hr' },
     { value: 0.001, unit: 'mL/min' },
     { value: 0.06, unit: 'mL/sec' }
   ]
@@ -116,8 +116,8 @@ class FormulaComponent extends Component {
     // CaO2 = ( Hgb * 13.4 * O2Sat / 100 ) + ( PaO2 * 0.031 )
     // CvO2 = ( Hgb * 13.4 * O2vSat / 100 ) + ( PvO2 * 0.031 )
     // CO = O2Consumption / (CaO2 - CvO2)
-    const cao2 = (hgb * 13.4 * o2sat / 100) + (pao2 * 0.031)
-    const cvo2 = (hgb * 13.4 * o2vsat / 100) + (pvo2 * 0.031)
+    const cao2 = hgb * 13.4 * o2sat / 100 + pao2 * 0.031
+    const cvo2 = hgb * 13.4 * o2vsat / 100 + pvo2 * 0.031
     const co = o2 / (cao2 - cvo2)
     if (type === 'cao2') {
       return (cao2 / cao2SelectValue).toFixed(this.state.decimal)
@@ -208,7 +208,14 @@ class FormulaComponent extends Component {
       return calculate
     })
 
-    if (o2Value && hgbValue && o2satValue && pao2Value && o2vsatValue && pvo2Value) {
+    if (
+      o2Value &&
+      hgbValue &&
+      o2satValue &&
+      pao2Value &&
+      o2vsatValue &&
+      pvo2Value
+    ) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
