@@ -73,19 +73,13 @@ class FormulaComponent extends Component {
   handleRate8SelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.rate8, value)
-    this.setState({
-      rate8SelectUnit: value,
-      rate8SelectValue: selectValue
-    })
+    this.setState({ rate8SelectUnit: value, rate8SelectValue: selectValue })
   }
 
   handleRate16SelectChange = event => {
     const { value } = event.target
     let selectValue = filterUnit(unitData.rate16, value)
-    this.setState({
-      rate16SelectUnit: value,
-      rate16SelectValue: selectValue
-    })
+    this.setState({ rate16SelectUnit: value, rate16SelectValue: selectValue })
   }
 
   handleDecimalChange = action => {
