@@ -41,8 +41,9 @@ class FormulaComponent extends Component {
         dailyVolume = 1000 + 50 * weight
       } else if (weight > 20 && weight <= 20) {
         dailyVolume = 1500 + 20 * weight
+        if (dailyVolume >= 2400) { dailyVolume = 2400}
       }
-      return (totalCrystalloid / total24SelectValue).toFixed(this.state.decimal)
+      return (dailyVolume).toFixed(this.state.decimal)
     } else if (type === 'fluid rate') {
       const rate8 = totalCrystalloid / 16
       return (rate8 / rate8SelectValue).toFixed(this.state.decimal)
