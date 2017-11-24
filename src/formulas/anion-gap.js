@@ -103,34 +103,34 @@ class FormulaComponent extends Component {
     const { questions } = data
 
     // extract needed field vars
-    let dosageValue = null
-    let dosageUnitValue = null
-    let weightValue = null
-    let weightUnitValue = null
-    let medAmountValue = null
-    let medAmountUnitValue = null
-    let perVolumeValue = null
-    let perVolumeUnitValue = null
+    let naValue = null
+    let naUnitValue = null
+    let clValue = null
+    let clUnitValue = null
+    let hco3Value = null
+    let hco3UnitValue = null
+    let albuminValue = null
+    let albuminUnitValue = null
 
     questions.map((question, index) => {
       const { calculate } = question
       if (calculate) {
         const { input, select } = calculate
         if (index === 0) {
-          dosageValue = input
-          dosageUnitValue = filterUnit(unitData.dosage, select)
+          naValue = input
+          naUnitValue = filterUnit(unitData.na, select)
         }
         if (index === 1) {
-          weightValue = input
-          weightUnitValue = filterUnit(unitData.weight, select)
+          clValue = input
+          clUnitValue = filterUnit(unitData.cl, select)
         }
         if (index === 2) {
-          medAmountValue = input
-          medAmountUnitValue = filterUnit(unitData.medAmount, select)
+          hco3Value = input
+          hco3UnitValue = filterUnit(unitData.hco3, select)
         }
         if (index === 3) {
-          perVolumeValue = input
-          perVolumeUnitValue = filterUnit(unitData.perVolume, select)
+          albuminValue = input
+          albuminUnitValue = filterUnit(unitData.albumin, select)
         }
       }
       return calculate
