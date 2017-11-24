@@ -120,7 +120,7 @@ class FormulaComponent extends Component {
       return calculate
     })
 
-    if (naValue && clValue && hco3Value) {
+    if (weightValue && percentValue) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
