@@ -2307,23 +2307,8 @@
           "data": [
             {
               "type": "radio",
-              "label": "Open spontaneously",
-              "points": "4"
-            },
-            {
-              "type": "radio",
-              "label": "Open to verbal stimuli",
-              "points": "3"
-            },
-            {
-              "type": "radio",
-              "label": "Open to pain only",
-              "points": "2"
-            },
-            {
-              "type": "radio",
-              "label": "No response",
-              "points": "1"
+              "label": "Open spontaneously/Open to verbal stimuli/Open to pain only/No response",
+              "points": "4/3/2/1"
             }
           ]
         },
@@ -2332,28 +2317,8 @@
           "data": [
             {
               "type": "radio",
-              "label": "Coos and babbles",
-              "points": "5"
-            },
-            {
-              "type": "radio",
-              "label": "Irritable cries",
-              "points": "4"
-            },
-            {
-              "type": "radio",
-              "label": "Cries in response to pain",
-              "points": "3"
-            },
-            {
-              "type": "radio",
-              "label": "Moans in response to pain",
-              "points": "2"
-            },
-            {
-              "type": "radio",
-              "label": "No response",
-              "points": "1"
+              "label": "Coos and babbles/Irritable cries/Cries in response to pain/Moans in response to pain",
+              "points": "5/4/3/2/1"
             }
           ]
         },
