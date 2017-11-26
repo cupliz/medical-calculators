@@ -211,6 +211,10 @@
     {
       "id": "vancouver-chest-pain-rule",
       "title": "Vancouver Chest Pain Rule"
+    },
+    {
+      "id": "gold-criteria-for-cpod",
+      "title": "GOLD Criteria for CPOD"
     }
   ],
   "calculators": [
