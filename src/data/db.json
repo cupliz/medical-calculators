@@ -336,7 +336,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Blood Pressure: Systolic < 90 mmHg or Diastolic ≤ 60 mmHg",
+              "label":
+                "Blood Pressure: Systolic < 90 mmHg or Diastolic ≤ 60 mmHg",
               "points": "1"
             },
             {
@@ -434,7 +435,8 @@
             },
             {
               "type": "checkbox",
-              "label": "BUN increases >5 mg/dL (>1.79 mmol/L) from time of admission",
+              "label":
+                "BUN increases >5 mg/dL (>1.79 mmol/L) from time of admission",
               "points": "1"
             },
             {
@@ -461,18 +463,10 @@
         }
       ],
       "results": {
-        "0 - 2": [
-          "Mortality is 1%"
-        ],
-        "3 - 4": [
-          "Mortality is 16%"
-        ],
-        "5 - 6": [
-          "Mortality is 40%"
-        ],
-        "7 - 11": [
-          "Mortality is almost 100%"
-        ]
+        "0 - 2": ["Mortality is 1%"],
+        "3 - 4": ["Mortality is 16%"],
+        "5 - 6": ["Mortality is 40%"],
+        "7 - 11": ["Mortality is almost 100%"]
       },
       "notes": {
         "type": "unordered-list",
@@ -528,11 +522,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter drug dose",
-              "values": [
-                "mg/kg",
-                "gm/kg",
-                "mcg/kg"
-              ]
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
             }
           ]
         },
@@ -542,10 +532,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter patient weight",
-              "values": [
-                "kg",
-                "lbs"
-              ]
+              "values": ["kg", "lbs"]
             }
           ]
         },
@@ -555,11 +542,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication amount",
-              "values": [
-                "mg",
-                "gm",
-                "mcg"
-              ]
+              "values": ["mg", "gm", "mcg"]
             }
           ]
         },
@@ -569,10 +552,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication volume",
-              "values": [
-                "mL",
-                "L"
-              ]
+              "values": ["mL", "L"]
             }
           ]
         }
@@ -623,7 +603,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Vascular disease (History of MI, PVD or aortic atherosclerosis)",
+              "label":
+                "Vascular disease (History of MI, PVD or aortic atherosclerosis)",
               "points": "1"
             }
           ]
@@ -721,7 +702,8 @@
           "group": "Best motor response",
           "data": {
             "type": "radio",
-            "options": "Obeys verbal commands/Localizes pain/Normal flexion from pain/Abnormal flexion from pain/Extension to pain/No motor response",
+            "options":
+              "Obeys verbal commands/Localizes pain/Normal flexion from pain/Abnormal flexion from pain/Extension to pain/No motor response",
             "points": "6/5/4/3/2/1"
           }
         },
@@ -729,18 +711,15 @@
           "group": "Best Verbal Response",
           "data": {
             "type": "radio",
-            "options": "Oriented/Confused/Inappropriate words/Only moans or groans/No verbal response",
+            "options":
+              "Oriented/Confused/Inappropriate words/Only moans or groans/No verbal response",
             "points": "5/4/3/4/2/1"
           }
         }
       ],
       "results": {
-        "3 - 14": [
-          "Abnormal"
-        ],
-        "15": [
-          "Normal"
-        ]
+        "3 - 14": ["Abnormal"],
+        "15": ["Normal"]
       },
       "notes": {
         "type": "unordered-list",
@@ -807,15 +786,9 @@
         }
       ],
       "results": {
-        "0 - 3": [
-          "Distress, needs intervention"
-        ],
-        "4 - 6": [
-          "Fairly low"
-        ],
-        "7 - 10": [
-          "Normal"
-        ]
+        "0 - 3": ["Distress, needs intervention"],
+        "4 - 6": ["Fairly low"],
+        "7 - 10": ["Normal"]
       },
       "notes": {
         "type": "unordered-list",
@@ -846,17 +819,20 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Abdominal obesity (Male waist > 101 cm (40 in). Female waist > 88.9cm (35 in)",
+              "label":
+                "Abdominal obesity (Male waist > 101 cm (40 in). Female waist > 88.9cm (35 in)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Triglycerides ≥ 150 mg/dL or on Triglyceride lowering Rx",
+              "label":
+                "Triglycerides ≥ 150 mg/dL or on Triglyceride lowering Rx",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "HDL cholesterol (Male < 40; Female < 50) or on HDL improvement Rx",
+              "label":
+                "HDL cholesterol (Male < 40; Female < 50) or on HDL improvement Rx",
               "points": "1"
             },
             {
@@ -873,12 +849,8 @@
         }
       ],
       "results": {
-        "0 - 2": [
-          "Absent"
-        ],
-        "3 - 5": [
-          "Present"
-        ]
+        "0 - 2": ["Absent"],
+        "3 - 5": ["Present"]
       },
       "notes": {
         "type": "unordered-list",
@@ -906,12 +878,14 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Paralysis, paresis or recent orthopedic casting of lower extremity",
+              "label":
+                "Paralysis, paresis or recent orthopedic casting of lower extremity",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Recently bedridden (> 3 days) or major surgery within last 4 weeks",
+              "label":
+                "Recently bedridden (> 3 days) or major surgery within last 4 weeks",
               "points": "1"
             },
             {
@@ -926,7 +900,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Calf swelling >3 cm compared to other leg (measured 10 cm below tibial tuberosity)",
+              "label":
+                "Calf swelling >3 cm compared to other leg (measured 10 cm below tibial tuberosity)",
               "points": "1"
             },
             {
@@ -946,22 +921,17 @@
             },
             {
               "type": "checkbox",
-              "label": "Alternative diagnosis more likely than DVT (Baker's cyst, cellulitis, muscle damage, superficial venous thrombosis, post phlebitic syndrome, inguinal lymphadenopathy, external venous compression)",
+              "label":
+                "Alternative diagnosis more likely than DVT (Baker's cyst, cellulitis, muscle damage, superficial venous thrombosis, post phlebitic syndrome, inguinal lymphadenopathy, external venous compression)",
               "points": "-2"
             }
           ]
         }
       ],
       "results": {
-        "-2 - 0": [
-          "Low risk; 5% probability of DVT"
-        ],
-        "1 - 2": [
-          "Moderate risk of DVT; 17% probability of DVT"
-        ],
-        "3 - 8": [
-          "High risk of DVT; 53% probability of DVT"
-        ]
+        "-2 - 0": ["Low risk; 5% probability of DVT"],
+        "1 - 2": ["Moderate risk of DVT; 17% probability of DVT"],
+        "3 - 8": ["High risk of DVT; 53% probability of DVT"]
       },
       "notes": {
         "type": "unordered-list",
@@ -1017,24 +987,12 @@
         }
       ],
       "results": {
-        "0": [
-          "90 Day Risk of Stroke: Virtually no Risk"
-        ],
-        "1": [
-          "90 Day Risk of Stroke: 3% Risk"
-        ],
-        "2": [
-          "90 Day Risk of Stroke: 7% Risk"
-        ],
-        "3": [
-          "90 Day Risk of Stroke: 11% Risk"
-        ],
-        "4": [
-          "90 Day Risk of Stroke: 15% Risk"
-        ],
-        "5": [
-          "90 Day Risk of Stroke: 34% Risk"
-        ]
+        "0": ["90 Day Risk of Stroke: Virtually no Risk"],
+        "1": ["90 Day Risk of Stroke: 3% Risk"],
+        "2": ["90 Day Risk of Stroke: 7% Risk"],
+        "3": ["90 Day Risk of Stroke: 11% Risk"],
+        "4": ["90 Day Risk of Stroke: 15% Risk"],
+        "5": ["90 Day Risk of Stroke: 34% Risk"]
       },
       "references": {
         "type": "ordered-list",
@@ -1099,36 +1057,16 @@
         }
       ],
       "results": {
-        "0": [
-          "30 Day mortality after an MI 0.8%"
-        ],
-        "1": [
-          "30 Day mortality after an MI 1.6%"
-        ],
-        "2": [
-          "30 Day mortality after an MI 2.2%"
-        ],
-        "3": [
-          "30 Day mortality after an MI 4.4%"
-        ],
-        "4": [
-          "30 Day mortality after an MI 7.3%"
-        ],
-        "5": [
-          "30 Day mortality after an MI 12%"
-        ],
-        "6": [
-          "30 Day mortality after an MI 16%"
-        ],
-        "7": [
-          "30 Day mortality after an MI 23%"
-        ],
-        "8": [
-          "30 Day mortality after an MI 27%"
-        ],
-        "9 - 14": [
-          "30 Day mortality after an MI 36%"
-        ]
+        "0": ["30 Day mortality after an MI 0.8%"],
+        "1": ["30 Day mortality after an MI 1.6%"],
+        "2": ["30 Day mortality after an MI 2.2%"],
+        "3": ["30 Day mortality after an MI 4.4%"],
+        "4": ["30 Day mortality after an MI 7.3%"],
+        "5": ["30 Day mortality after an MI 12%"],
+        "6": ["30 Day mortality after an MI 16%"],
+        "7": ["30 Day mortality after an MI 23%"],
+        "8": ["30 Day mortality after an MI 27%"],
+        "9 - 14": ["30 Day mortality after an MI 36%"]
       },
       "notes": {
         "type": "unordered-list",
@@ -1163,7 +1101,8 @@
             },
             {
               "type": "checkbox",
-              "label": "≥ 3 CAD risk factors (Hypertension, Diabetes, High Cholesterol, Family History of CAD, Current Smoker)",
+              "label":
+                "≥ 3 CAD risk factors (Hypertension, Diabetes, High Cholesterol, Family History of CAD, Current Smoker)",
               "points": "1"
             },
             {
@@ -1240,7 +1179,8 @@
           "group": "1A: Level of Consciousness",
           "data": {
             "type": "radio",
-            "options": "Alert/Not alert, but arousable by minor stimulation/Not alert, requires repeated stimulation to attend/Coma",
+            "options":
+              "Alert/Not alert, but arousable by minor stimulation/Not alert, requires repeated stimulation to attend/Coma",
             "points": "0/1/2/3"
           }
         },
@@ -1248,15 +1188,18 @@
           "group": "1B: Ask Patient the Month and His/Her Age",
           "data": {
             "type": "radio",
-            "options": "Answers both questions correctly/Answers one question correctly/Neither correct",
+            "options":
+              "Answers both questions correctly/Answers one question correctly/Neither correct",
             "points": "0/1/2"
           }
         },
         {
-          "group": "1C: Open and Close Eyes on Command/Grip and release non-paretic hand ",
+          "group":
+            "1C: Open and Close Eyes on Command/Grip and release non-paretic hand ",
           "data": {
             "type": "radio",
-            "options": "Obeys both correctly/Obeys one correctly/Both incorrect",
+            "options":
+              "Obeys both correctly/Obeys one correctly/Both incorrect",
             "points": "0/1/2"
           }
         },
@@ -1272,47 +1215,58 @@
           "group": "3: Visual Field testing",
           "data": {
             "type": "radio",
-            "options": "No visual field loss/Partial hemianopia/Complete hemianopia/Bilateral hemianopia or Patient is bilaterally blind",
+            "options":
+              "No visual field loss/Partial hemianopia/Complete hemianopia/Bilateral hemianopia or Patient is bilaterally blind",
             "points": "0/1/2/3"
           }
         },
         {
-          "group": "4: Facial Palsy (Ask patient to show teeth or raise eyebrows and close eye)",
+          "group":
+            "4: Facial Palsy (Ask patient to show teeth or raise eyebrows and close eye)",
           "data": {
             "type": "radio",
-            "options": "Normal symmetrical movement/Minor paralysis/Partial paralysis (total or near total paralysis of lower face)/Complete paralysis of one or both sides",
+            "options":
+              "Normal symmetrical movement/Minor paralysis/Partial paralysis (total or near total paralysis of lower face)/Complete paralysis of one or both sides",
             "points": "0/1/2/3"
           }
         },
         {
-          "group": "5A: Motor Function of Right Arm (Count out loud and use your fingers to show patient your count)",
+          "group":
+            "5A: Motor Function of Right Arm (Count out loud and use your fingers to show patient your count)",
           "data": {
             "type": "radio",
-            "options": "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
+            "options":
+              "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
             "points": "0/1/2/3/4/0"
           }
         },
         {
-          "group": "5B: Motor Function of Left Arm (Count out loud and use your fingers to show patient your count)",
+          "group":
+            "5B: Motor Function of Left Arm (Count out loud and use your fingers to show patient your count)",
           "data": {
             "type": "radio",
-            "options": "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
+            "options":
+              "No drift for 10 sec/Drift limb holds 90 (or 45 deg) but drifts down before full 10 sec/Some effort against gravity/No effort against gravity/No movement/Amputation or joint fusion",
             "points": "0/1/2/3/4/0"
           }
         },
         {
-          "group": "6A: Motor Function of Right Leg (Hold the leg at 30 deg, always tested in supine position)",
+          "group":
+            "6A: Motor Function of Right Leg (Hold the leg at 30 deg, always tested in supine position)",
           "data": {
             "type": "radio",
-            "options": "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
+            "options":
+              "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
             "points": "0/1/2/3/4/0"
           }
         },
         {
-          "group": "6B: Motor Function of Left Leg (Hold the leg at 30 deg, always tested in supine position)",
+          "group":
+            "6B: Motor Function of Left Leg (Hold the leg at 30 deg, always tested in supine position)",
           "data": {
             "type": "radio",
-            "options": "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
+            "options":
+              "No drift for 5 sec/Drift, leg falls by end of 5 sec/Some effort against gravity/No effort against gravity, leg falls to bed immediately/No movement/Amputation or joint fusion",
             "points": "0/1/2/3/4/0"
           }
         },
@@ -1320,7 +1274,8 @@
           "group": "7: Limb Ataxia (Test with eyes open)",
           "data": {
             "type": "radio",
-            "options": "None/Present in 1 limb/Present in 2 limbs/Amputation or joint fusion",
+            "options":
+              "None/Present in 1 limb/Present in 2 limbs/Amputation or joint fusion",
             "points": "0/1/2/0"
           }
         },
@@ -1328,12 +1283,14 @@
           "group": "8: Sensory by Pinprick",
           "data": {
             "type": "radio",
-            "options": "Normal/Mild to moderate sensory loss/Severe or total sensory loss",
+            "options":
+              "Normal/Mild to moderate sensory loss/Severe or total sensory loss",
             "points": "0/1/2"
           }
         },
         {
-          "group": "9: Best Language (Describe a picture, name items, read sentences)",
+          "group":
+            "9: Best Language (Describe a picture, name items, read sentences)",
           "data": {
             "type": "radio",
             "options": "No aphasia/Mild - Moderate aphasia/Severe aphasia/Mute",
@@ -1344,7 +1301,8 @@
           "group": "10: Dysarthria (read or repeat words)",
           "data": {
             "type": "radio",
-            "options": "Normal/Mild to Moderate slurring/Severe dysarthria/Intubated or other physical impediment to testing",
+            "options":
+              "Normal/Mild to Moderate slurring/Severe dysarthria/Intubated or other physical impediment to testing",
             "points": "0/1/2/0"
           }
         },
@@ -1352,7 +1310,8 @@
           "group": "11: Extinction and Inattention (Neglect)",
           "data": {
             "type": "radio",
-            "options": "No abnormality/Visual, tactile, auditory, spatial or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities/Severe hemi-inattention or extinction to more than one modality",
+            "options":
+              "No abnormality/Visual, tactile, auditory, spatial or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities/Severe hemi-inattention or extinction to more than one modality",
             "points": "0/1/2"
           }
         }
@@ -1406,15 +1365,9 @@
         }
       ],
       "results": {
-        "0": [
-          "Risk of any bleeding complications: 0-4%"
-        ],
-        "1.3 - 3": [
-          "Risk of any bleeding complications: 6-8%"
-        ],
-        "3.1 - 5.1": [
-          "Risk of any bleeding complications: 17-26%"
-        ]
+        "0": ["Risk of any bleeding complications: 0-4%"],
+        "1.3 - 3": ["Risk of any bleeding complications: 6-8%"],
+        "3.1 - 5.1": ["Risk of any bleeding complications: 17-26%"]
       },
       "references": {
         "type": "ordered-list",
@@ -1449,7 +1402,8 @@
           "group": "Clinical features of TIA",
           "data": {
             "type": "radio",
-            "options": "Unilateral weakness/Speech disturbance without weakness/Other symptoms",
+            "options":
+              "Unilateral weakness/Speech disturbance without weakness/Other symptoms",
             "points": "2/1/0"
           }
         },
@@ -1514,12 +1468,14 @@
             },
             {
               "type": "checkbox",
-              "label": "Renal disease (Dialysis, transplant or Creatinine >2.26mg/dL (200µmol/L)",
+              "label":
+                "Renal disease (Dialysis, transplant or Creatinine >2.26mg/dL (200µmol/L)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Liver disease (Cirrhosis or bilirubin levels >2x normal with AST/ALT/AP >3x normal)",
+              "label":
+                "Liver disease (Cirrhosis or bilirubin levels >2x normal with AST/ALT/AP >3x normal)",
               "points": "1"
             },
             {
@@ -1534,7 +1490,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Labile INR (Unstable/High INRs, time in therapeutic range <60%)",
+              "label":
+                "Labile INR (Unstable/High INRs, time in therapeutic range <60%)",
               "points": "1"
             },
             {
@@ -1549,7 +1506,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Medication usage that predisposes patient to bleeding (NSAIDs, Antiplatelet agents)",
+              "label":
+                "Medication usage that predisposes patient to bleeding (NSAIDs, Antiplatelet agents)",
               "points": "1"
             }
           ]
@@ -1593,7 +1551,8 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Patient has Coronary artery disease (MI or positive stress test)",
+              "label":
+                "Patient has Coronary artery disease (MI or positive stress test)",
               "points": "1"
             },
             {
@@ -1613,22 +1572,17 @@
             },
             {
               "type": "checkbox",
-              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "label":
+                "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
               "points": "1"
             }
           ]
         }
       ],
       "results": {
-        "0 - 1": [
-          "Approximate risk of cardiac complication: up to 7%"
-        ],
-        "2": [
-          "Approximate risk of cardiac complication: 3.8%"
-        ],
-        "3 - 5": [
-          "Approximate risk of cardiac complication: 11.5%"
-        ]
+        "0 - 1": ["Approximate risk of cardiac complication: up to 7%"],
+        "2": ["Approximate risk of cardiac complication: 3.8%"],
+        "3 - 5": ["Approximate risk of cardiac complication: 11.5%"]
       },
       "notes": {
         "type": "unordered-list",
@@ -1655,7 +1609,8 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Patient has Coronary artery disease (MI or positive stress test)",
+              "label":
+                "Patient has Coronary artery disease (MI or positive stress test)",
               "points": "1"
             },
             {
@@ -1675,22 +1630,17 @@
             },
             {
               "type": "checkbox",
-              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "label":
+                "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
               "points": "1"
             }
           ]
         }
       ],
       "results": {
-        "0 - 1": [
-          "Approximate risk of cardiac complication: <1%"
-        ],
-        "2": [
-          "Approximate risk of cardiac complication: 3%"
-        ],
-        "3 - 5": [
-          "Approximate risk of cardiac complication: 8.1%"
-        ]
+        "0 - 1": ["Approximate risk of cardiac complication: <1%"],
+        "2": ["Approximate risk of cardiac complication: 3%"],
+        "3 - 5": ["Approximate risk of cardiac complication: 8.1%"]
       },
       "references": {
         "type": "ordered-list",
@@ -1735,22 +1685,17 @@
             },
             {
               "type": "checkbox",
-              "label": "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
+              "label":
+                "Chronic renal insufficiency (Creatinine > 2mg/dL or 176.8 µmol/L)",
               "points": "1"
             }
           ]
         }
       ],
       "results": {
-        "0 - 1": [
-          "Approximate risk of cardiac complication: <1%"
-        ],
-        "2": [
-          "Approximate risk of cardiac complication: 8%"
-        ],
-        "3 - 6": [
-          "Approximate risk of cardiac complication: 12.5%"
-        ]
+        "0 - 1": ["Approximate risk of cardiac complication: <1%"],
+        "2": ["Approximate risk of cardiac complication: 8%"],
+        "3 - 6": ["Approximate risk of cardiac complication: 12.5%"]
       },
       "references": {
         "type": "ordered-list",
@@ -1770,7 +1715,8 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Evidence of antecedent Strep infection: ASO / Strep antibodies / Strep group A throat culture / Recent scarlet fever / anti-deoxyribonuclease B / anti-hyaluronidase",
+              "label":
+                "Evidence of antecedent Strep infection: ASO / Strep antibodies / Strep group A throat culture / Recent scarlet fever / anti-deoxyribonuclease B / anti-hyaluronidase",
               "points": "1"
             }
           ]
@@ -1864,12 +1810,14 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Positive blood culture for typical Infective Endocarditis organisms (strep viridins or bovis, HACEK, staph aureous without other primary site, enterococcus), from 2 separate blood cultures or 2 positive cultures from samples drawn > 12 hours apart, or 3 or a majority of 4 separate cultures of blood (first and last sample drawn 1 hour apart)",
+              "label":
+                "Positive blood culture for typical Infective Endocarditis organisms (strep viridins or bovis, HACEK, staph aureous without other primary site, enterococcus), from 2 separate blood cultures or 2 positive cultures from samples drawn > 12 hours apart, or 3 or a majority of 4 separate cultures of blood (first and last sample drawn 1 hour apart)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Echocardiogram with oscillating intracardiac mass on valve or supporting structures, in the path of regurgitant jets, or on implanted material in the absence of an alternative anatomic explanation, or abscess, or new partial dehiscence of prosthetic valve or new valvular regurgitation",
+              "label":
+                "Echocardiogram with oscillating intracardiac mass on valve or supporting structures, in the path of regurgitant jets, or on implanted material in the absence of an alternative anatomic explanation, or abscess, or new partial dehiscence of prosthetic valve or new valvular regurgitation",
               "points": "1"
             }
           ]
@@ -1890,22 +1838,26 @@
             },
             {
               "type": "checkbox",
-              "label": "Vascular phenomena: arterial emboli, pulmonary infarcts, mycotic aneurysms, intracranial bleed, conjunctival hemorrhages, Janeway lesions",
+              "label":
+                "Vascular phenomena: arterial emboli, pulmonary infarcts, mycotic aneurysms, intracranial bleed, conjunctival hemorrhages, Janeway lesions",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Immunologic phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor",
+              "label":
+                "Immunologic phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Microbiological evidence: positive blood culture but does not meet a major criterion as noted above or serological evidence of active infection with organism consistent with endocarditis (excluding coag neg staph, and other common contaminants)",
+              "label":
+                "Microbiological evidence: positive blood culture but does not meet a major criterion as noted above or serological evidence of active infection with organism consistent with endocarditis (excluding coag neg staph, and other common contaminants)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Echocardiographic findings: consistent with endocarditis but do not meet a major criterion as noted above",
+              "label":
+                "Echocardiographic findings: consistent with endocarditis but do not meet a major criterion as noted above",
               "points": "1"
             }
           ]
@@ -1950,12 +1902,14 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Inability to bear wieght right after the injury as well as in the emergency department (4 steps)",
+              "label":
+                "Inability to bear wieght right after the injury as well as in the emergency department (4 steps)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Bone tenderness at the posterior edge or tip of either malleolus",
+              "label":
+                "Bone tenderness at the posterior edge or tip of either malleolus",
               "points": "1"
             }
           ]
@@ -2064,9 +2018,7 @@
       },
       "formula": {
         "type": "paragraph",
-        "content": [
-          "BMI = (Weight/2.205) / (Height/39.37)^2"
-        ]
+        "content": ["BMI = (Weight/2.205) / (Height/39.37)^2"]
       }
     },
     {
@@ -2226,9 +2178,7 @@
       },
       "formula": {
         "type": "paragraph",
-        "content": [
-          "Fluid Rate = Daily Volume/24"
-        ]
+        "content": ["Fluid Rate = Daily Volume/24"]
       }
     },
     {
@@ -2252,7 +2202,16 @@
             {
               "type": "input/select",
               "placeholder": "Please enter Hemoglobin (Hgb)",
-              "values": ["gm/dL", "gm/L", "mcg/dL", "mcg/mL", "mg%", "mg/dL", "mg/mL", "ng/mL"]
+              "values": [
+                "gm/dL",
+                "gm/L",
+                "mcg/dL",
+                "mcg/mL",
+                "mg%",
+                "mg/dL",
+                "mg/mL",
+                "ng/mL"
+              ]
             }
           ]
         },
@@ -2272,7 +2231,22 @@
             {
               "type": "input/select",
               "placeholder": "Please enter PaO2",
-              "values": ["mmHg", "Pascal", "atm", "bar", "cmH2O", "cmHg", "ftH2O", "gm/sqcm", "inH2O", "inHg", "kPa", "mbar", "psi", "torr"]
+              "values": [
+                "mmHg",
+                "Pascal",
+                "atm",
+                "bar",
+                "cmH2O",
+                "cmHg",
+                "ftH2O",
+                "gm/sqcm",
+                "inH2O",
+                "inHg",
+                "kPa",
+                "mbar",
+                "psi",
+                "torr"
+              ]
             }
           ]
         },
@@ -2292,7 +2266,22 @@
             {
               "type": "input/select",
               "placeholder": "Please enter PvO2",
-              "values": ["mmHg", "Pascal", "atm", "bar", "cmH2O", "cmHg", "ftH2O", "gm/sqcm", "inH2O", "inHg", "kPa", "mbar", "psi", "torr"]
+              "values": [
+                "mmHg",
+                "Pascal",
+                "atm",
+                "bar",
+                "cmH2O",
+                "cmHg",
+                "ftH2O",
+                "gm/sqcm",
+                "inH2O",
+                "inHg",
+                "kPa",
+                "mbar",
+                "psi",
+                "torr"
+              ]
             }
           ]
         }
@@ -2506,17 +2495,20 @@
             },
             {
               "type": "radio",
-              "label": "mMRC 2: Stops for breath when walking at own pace on level ground",
+              "label":
+                "mMRC 2: Stops for breath when walking at own pace on level ground",
               "points": 1
             },
             {
               "type": "radio",
-              "label": "mMRC 3: Must stop due to breathlessness after walking 91m or after a few minutes",
+              "label":
+                "mMRC 3: Must stop due to breathlessness after walking 91m or after a few minutes",
               "points": "2"
             },
             {
               "type": "radio",
-              "label": "mMRC 4: Cannot leave house, breathless on dressing/undressing",
+              "label":
+                "mMRC 4: Cannot leave house, breathless on dressing/undressing",
               "points": "3"
             }
           ]
@@ -2538,18 +2530,10 @@
         }
       ],
       "results": {
-        "0 - 2": [
-          "Approximate 4 year survival: 80%"
-        ],
-        "3 - 4": [
-          "Approximate 4 year survival: 67%"
-        ],
-        "5 - 6": [
-          "Approximate 4 year survival: 57%"
-        ],
-        "7 - 10": [
-          "Approximate 4 year survival: 18%"
-        ]
+        "0 - 2": ["Approximate 4 year survival: 80%"],
+        "3 - 4": ["Approximate 4 year survival: 67%"],
+        "5 - 6": ["Approximate 4 year survival: 57%"],
+        "7 - 10": ["Approximate 4 year survival: 18%"]
       },
       "notes": {
         "type": "unordered-list",
@@ -2618,8 +2602,10 @@
         }
       ],
       "results": {
-        "0 - 1.5": "Risk: Low probability of Pulmonary Embolism. Consider d-dimer testing to rule out PE",
-        "2 - 6": "Risk: Moderate probability of Pulmonary Embolism. Consider high sensitivity d-dimer testing",
+        "0 - 1.5":
+          "Risk: Low probability of Pulmonary Embolism. Consider d-dimer testing to rule out PE",
+        "2 - 6":
+          "Risk: Moderate probability of Pulmonary Embolism. Consider high sensitivity d-dimer testing",
         "7 - 13": "Risk: High probability of Pulmonary Embolism. Consider "
       },
       "notes": {
@@ -2744,9 +2730,12 @@
         }
       ],
       "results": {
-        "0 - 3": "Low Risk: 0.9-1.7% risk of adverse cardiac event. In the HEART Score study, these patients were discharged (0.99% in the retrospective study, 1.7% in the prospective study)",
-        "4 - 6": "Moderate Risk: 12-16.6% risk of adverse cardiac event. In the HEART Score study, these patients were admitted to the hospital. (11.6% retrospective, 16.6% prospective)",
-        "7 - 10": "High risk: 50-65% risk of adverse cardiac event. In the HEART Score study, these patients were candidates for early invasive measures. (65.2% retrospective, 50.1% prospective)"
+        "0 - 3":
+          "Low Risk: 0.9-1.7% risk of adverse cardiac event. In the HEART Score study, these patients were discharged (0.99% in the retrospective study, 1.7% in the prospective study)",
+        "4 - 6":
+          "Moderate Risk: 12-16.6% risk of adverse cardiac event. In the HEART Score study, these patients were admitted to the hospital. (11.6% retrospective, 16.6% prospective)",
+        "7 - 10":
+          "High risk: 50-65% risk of adverse cardiac event. In the HEART Score study, these patients were candidates for early invasive measures. (65.2% retrospective, 50.1% prospective)"
       },
       "notes": {
         "type": "unordered-list",
@@ -3006,21 +2995,11 @@
       ],
       "results": [
         {
-          "0 - 1": [
-            "Risk of Cerebral Bleeding: 0.69%"
-          ],
-          "2": [
-            "Risk of Cerebral Bleeding: 1.02%"
-          ],
-          "3": [
-            "Risk of Cerebral Bleeding: 1.63%"
-          ],
-          "4": [
-            "Risk of Cerebral Bleeding: 2.49%"
-          ],
-          "5 - 8": [
-            "Risk of Cerebral Bleeding: 4.11%"
-          ]
+          "0 - 1": ["Risk of Cerebral Bleeding: 0.69%"],
+          "2": ["Risk of Cerebral Bleeding: 1.02%"],
+          "3": ["Risk of Cerebral Bleeding: 1.63%"],
+          "4": ["Risk of Cerebral Bleeding: 2.49%"],
+          "5 - 8": ["Risk of Cerebral Bleeding: 4.11%"]
         }
       ],
       "references": {
@@ -3062,18 +3041,10 @@
           ],
           "results": [
             {
-              "1": [
-                "Killip Class I: Estimated 30-day mortality: 2-3%"
-              ],
-              "2": [
-                "Killip Class II: Estimated 30-day mortality: 5-12%"
-              ],
-              "3": [
-                "Killip Class III: Estimated 30-day mortality: 10-20%"
-              ],
-              "4": [
-                "Killip Class IV: Estimated 30-day mortality: 10-20%"
-              ]
+              "1": ["Killip Class I: Estimated 30-day mortality: 2-3%"],
+              "2": ["Killip Class II: Estimated 30-day mortality: 5-12%"],
+              "3": ["Killip Class III: Estimated 30-day mortality: 10-20%"],
+              "4": ["Killip Class IV: Estimated 30-day mortality: 10-20%"]
             }
           ],
           "notes": {
@@ -3287,9 +3258,7 @@
       ],
       "results": [
         {
-          "0": [
-            "ICU Mortality 0%, Hospital Mortality 0%, ICU Stay 2 days"
-          ],
+          "0": ["ICU Mortality 0%, Hospital Mortality 0%, ICU Stay 2 days"],
           "1 - 4": [
             "ICU Mortality 1-2%, Hospital Mortality 7%, ICU Stay 3 days"
           ],
@@ -3305,9 +3274,7 @@
           "17 - 20": [
             "ICU Mortality 75%, Hospital Mortality 82%, ICU Stay 21 days"
           ],
-          "21 - 24": [
-            "ICU Mortality 100%, Hospital Mortality 100%"
-          ]
+          "21 - 24": ["ICU Mortality 100%, Hospital Mortality 100%"]
         }
       ],
       "notes": {
@@ -3496,7 +3463,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Hormone use (e.g. oral contraceptives, hormone replacement therapy)",
+              "label":
+                "Hormone use (e.g. oral contraceptives, hormone replacement therapy)",
               "points": "1"
             }
           ]
@@ -3690,7 +3658,8 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "History of fall at presentation or fall since admission",
+              "label":
+                "History of fall at presentation or fall since admission",
               "points": "1"
             },
             {
@@ -3718,12 +3687,8 @@
       ],
       "results": [
         {
-          "0 - 1": [
-            "Risk of falling: 2.4-4.1%"
-          ],
-          "2 - 5": [
-            "Risk of falling: 42 to 65.3%"
-          ]
+          "0 - 1": ["Risk of falling: 2.4-4.1%"],
+          "2 - 5": ["Risk of falling: 42 to 65.3%"]
         }
       ],
       "references": {
@@ -3826,7 +3791,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Hypertension or Cardiac Disease (e.g. MI, Stroke, PVD, CHF, Angina)",
+              "label":
+                "Hypertension or Cardiac Disease (e.g. MI, Stroke, PVD, CHF, Angina)",
               "points": "1.5"
             },
             {
@@ -4033,7 +3999,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Seizure after head injury (no previous Epilepsy history)",
+              "label":
+                "Seizure after head injury (no previous Epilepsy history)",
               "points": "1"
             }
           ]
@@ -4053,7 +4020,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Signs of basal skull fracture (e.g. Blood or CSF from ear or nose, Panda eyes, Serious facial injury)",
+              "label":
+                "Signs of basal skull fracture (e.g. Blood or CSF from ear or nose, Panda eyes, Serious facial injury)",
               "points": "1"
             },
             {
@@ -4073,7 +4041,8 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "High speed road accident (> 64kmph or 40mph) as pedestrian, cyclist or car occupant",
+              "label":
+                "High speed road accident (> 64kmph or 40mph) as pedestrian, cyclist or car occupant",
               "points": "1"
             },
             {
@@ -4287,9 +4256,15 @@
       ],
       "results": [
         {
-          "10 - 24": ["Unlikely to represent thyroid storm. Investigate diagnosis of thyrotoxicosis and obtain additional imaging (e.g. thyroid ultrasound, radioactive iodine uptake and scan)"],
-          "25 - 44": ["Impending thyroid storm. Consider thionamides and symptom management along with ICU monitoring"],
-          "45 - 140": ["Highly suggestive of thyroid storm. Consider rapid and aggressive multimodal management in ICU"]
+          "10 - 24": [
+            "Unlikely to represent thyroid storm. Investigate diagnosis of thyrotoxicosis and obtain additional imaging (e.g. thyroid ultrasound, radioactive iodine uptake and scan)"
+          ],
+          "25 - 44": [
+            "Impending thyroid storm. Consider thionamides and symptom management along with ICU monitoring"
+          ],
+          "45 - 140": [
+            "Highly suggestive of thyroid storm. Consider rapid and aggressive multimodal management in ICU"
+          ]
         }
       ],
       "references": [
@@ -4322,17 +4297,20 @@
             },
             {
               "type": "radio",
-              "label": "Walks slower than people of similar age due to dyspnea or has to stop for breath when walking at own pace",
+              "label":
+                "Walks slower than people of similar age due to dyspnea or has to stop for breath when walking at own pace",
               "points": "2"
             },
             {
               "type": "radio",
-              "label": "Stops for breath after walking 91m (100 yards) or after a few min",
+              "label":
+                "Stops for breath after walking 91m (100 yards) or after a few min",
               "points": "3"
             },
             {
               "type": "radio",
-              "label": "Too dyspneic to leave house or breathless when dressing",
+              "label":
+                "Too dyspneic to leave house or breathless when dressing",
               "points": "4"
             }
           ]
@@ -4422,8 +4400,12 @@
       ],
       "results": [
         {
-          "0": ["Low risk for Lyme Meningitis. Antibiotics not recommended, consider close patient follow-up and use clinical judgement regarding patient disposition"],
-          "1 - 3": ["Not low risk for Lyme Meningitis. Consider antibiotics to cover Borrelia burgdoreferi"]
+          "0": [
+            "Low risk for Lyme Meningitis. Antibiotics not recommended, consider close patient follow-up and use clinical judgement regarding patient disposition"
+          ],
+          "1 - 3": [
+            "Not low risk for Lyme Meningitis. Consider antibiotics to cover Borrelia burgdoreferi"
+          ]
         }
       ],
       "notes": [
@@ -4467,7 +4449,8 @@
           ]
         },
         {
-          "group": "Altered mental status (GCS <14, disorientation, stupor, coma)",
+          "group":
+            "Altered mental status (GCS <14, disorientation, stupor, coma)",
           "data": [
             {
               "type": "radio",
@@ -4514,11 +4497,21 @@
       ],
       "results": [
         {
-          "0": ["Class I; BAP 0, Age <65 years. Routine management of COPD exacerbation. In-hospital mortality 0.3% with 0.3% requiring intubation within 48 hrs"],
-          "0.5": ["Class II; BAP 0, Age ≥65 years. Routine management of COPD exacerbation. In-hospital mortality 1% with 0.2% requiring intubation within 48 hrs"],
-          "1": ["Class III; BAP 1, Any age >40. Consider early non-invasive ventilation and/or ICU care. In-hospital mortality 2.2% with 1.2% requiring intubation within 48 hrs"],
-          "2": ["Class IV; BAP 2, Any age >40. Consider early non-invasive ventilation and/or ICU care. In-hospital mortality 6.4% with 5.5% requiring intubation within 48 hrs"],
-          "3": ["Class V; BAP 3, Any age >40. Consider early non-invasive ventilation, close monitoring and/or ICU care. In-hospital mortality 14.1% with 12.4% requiring intubation within 48 hrs"]
+          "0": [
+            "Class I; BAP 0, Age <65 years. Routine management of COPD exacerbation. In-hospital mortality 0.3% with 0.3% requiring intubation within 48 hrs"
+          ],
+          "0.5": [
+            "Class II; BAP 0, Age ≥65 years. Routine management of COPD exacerbation. In-hospital mortality 1% with 0.2% requiring intubation within 48 hrs"
+          ],
+          "1": [
+            "Class III; BAP 1, Any age >40. Consider early non-invasive ventilation and/or ICU care. In-hospital mortality 2.2% with 1.2% requiring intubation within 48 hrs"
+          ],
+          "2": [
+            "Class IV; BAP 2, Any age >40. Consider early non-invasive ventilation and/or ICU care. In-hospital mortality 6.4% with 5.5% requiring intubation within 48 hrs"
+          ],
+          "3": [
+            "Class V; BAP 3, Any age >40. Consider early non-invasive ventilation, close monitoring and/or ICU care. In-hospital mortality 14.1% with 12.4% requiring intubation within 48 hrs"
+          ]
         }
       ],
       "notes": [
@@ -4547,7 +4540,7 @@
       "type": "points",
       "questions": [
         {
-          "group":"History of Congestive Heart Failure",
+          "group": "History of Congestive Heart Failure",
           "data": [
             {
               "type": "radio",
@@ -4562,7 +4555,7 @@
           ]
         },
         {
-          "group":"Hematocrit <30%",
+          "group": "Hematocrit <30%",
           "data": [
             {
               "type": "radio",
@@ -4577,7 +4570,7 @@
           ]
         },
         {
-          "group":"Abnormal ECG (Non-sinus rhythm or ECG changed)",
+          "group": "Abnormal ECG (Non-sinus rhythm or ECG changed)",
           "data": [
             {
               "type": "radio",
@@ -4592,7 +4585,7 @@
           ]
         },
         {
-          "group":"Shortness of Breath",
+          "group": "Shortness of Breath",
           "data": [
             {
               "type": "radio",
@@ -4607,7 +4600,7 @@
           ]
         },
         {
-          "group":"Systolic BP <90 mmHg at triage",
+          "group": "Systolic BP <90 mmHg at triage",
           "data": [
             {
               "type": "radio",
@@ -4625,7 +4618,9 @@
       "results": [
         {
           "0": ["Patient is in low-risk group for serious outcome"],
-          "1 - 5": ["Patient is not in the low-risk group for serious outcome (96% sensitivity, 62% specificity); Negative predictive value 99.2%, Positive predictive value 24.8%"]
+          "1 - 5": [
+            "Patient is not in the low-risk group for serious outcome (96% sensitivity, 62% specificity); Negative predictive value 99.2%, Positive predictive value 24.8%"
+          ]
         }
       ],
       "notes": [
@@ -4654,7 +4649,7 @@
       "points": 0,
       "questions": [
         {
-          "group":"RLQ tenderness to cough, percussion or hopping",
+          "group": "RLQ tenderness to cough, percussion or hopping",
           "data": [
             {
               "type": "radio",
@@ -4669,7 +4664,7 @@
           ]
         },
         {
-          "group":"Anorexia",
+          "group": "Anorexia",
           "data": [
             {
               "type": "radio",
@@ -4684,7 +4679,7 @@
           ]
         },
         {
-          "group":"Nausea or vomiting",
+          "group": "Nausea or vomiting",
           "data": [
             {
               "type": "radio",
@@ -4699,7 +4694,7 @@
           ]
         },
         {
-          "group":"Fever ≥38°C or 100.4°F",
+          "group": "Fever ≥38°C or 100.4°F",
           "data": [
             {
               "type": "radio",
@@ -4714,7 +4709,7 @@
           ]
         },
         {
-          "group":"Tenderness over right iliac fossa",
+          "group": "Tenderness over right iliac fossa",
           "data": [
             {
               "type": "radio",
@@ -4729,7 +4724,7 @@
           ]
         },
         {
-          "group":"Leukocytosis WBC >10,000",
+          "group": "Leukocytosis WBC >10,000",
           "data": [
             {
               "type": "radio",
@@ -4744,7 +4739,7 @@
           ]
         },
         {
-          "group":"Migration of pain to Right Lower Quadrant",
+          "group": "Migration of pain to Right Lower Quadrant",
           "data": [
             {
               "type": "radio",
@@ -4759,7 +4754,7 @@
           ]
         },
         {
-          "group":"Left shift Absolute Neutrophil Count >7500",
+          "group": "Left shift Absolute Neutrophil Count >7500",
           "data": [
             {
               "type": "radio",
@@ -4777,8 +4772,12 @@
       "results": [
         {
           "0 - 3": ["Appendicitis is unlikely. Consider other diagnoses"],
-          "4 - 6": ["Cannot definitively rule in or rule out appendicitis. Consider ultrasound or MRI imaging and/or surgical consult"],
-          "6 - 10": ["Appendicitis is likely. Consider surgical consult and imaging; Patients should only undergo ultrasound prior to surgical consult"]
+          "4 - 6": [
+            "Cannot definitively rule in or rule out appendicitis. Consider ultrasound or MRI imaging and/or surgical consult"
+          ],
+          "6 - 10": [
+            "Appendicitis is likely. Consider surgical consult and imaging; Patients should only undergo ultrasound prior to surgical consult"
+          ]
         }
       ],
       "notes": [
@@ -4920,14 +4919,22 @@
       ],
       "results": [
         {
-          "0 - 1": [">99% likelihood of a good outcome (mRS 0-2); 0% likelihood of a miserable outcome (mRS 5-6)"],
-          "2": [">96% likelihood of a good outcome (mRS 0-2); 2% likelihood of a miserable outcome (mRS 5-6)"],
-          "3": [">87% likelihood of a good outcome (mRS 0-2); 7% likelihood of a miserable outcome (mRS 5-6)"],
+          "0 - 1": [
+            ">99% likelihood of a good outcome (mRS 0-2); 0% likelihood of a miserable outcome (mRS 5-6)"
+          ],
+          "2": [
+            ">96% likelihood of a good outcome (mRS 0-2); 2% likelihood of a miserable outcome (mRS 5-6)"
+          ],
+          "3": [
+            ">87% likelihood of a good outcome (mRS 0-2); 7% likelihood of a miserable outcome (mRS 5-6)"
+          ],
           "4": [">81% likelihood of a good outcome (mRS 0-2)"],
           "5": [">83% likelihood of a miserable outcome (mRS 5-6)"],
           "6": [">90% likelihood of a miserable outcome (mRS 5-6)"],
           "7": [">97% likelihood of a miserable outcome (mRS 5-6)"],
-          "8 - 10": ["0% likelihood of a good outcome (mRS 0-2); >99% likelihood of a miserable outcome (mRS 5-6)"]
+          "8 - 10": [
+            "0% likelihood of a good outcome (mRS 0-2); >99% likelihood of a miserable outcome (mRS 5-6)"
+          ]
         }
       ],
       "notes": [
@@ -4960,7 +4967,8 @@
           "group": "Step 1:"
         },
         {
-          "group": "Abnormal initial ECG (e.g. ST elevation, ST depression >0.5mm, Q waves, LVH, paced rhythm or LBBB)",
+          "group":
+            "Abnormal initial ECG (e.g. ST elevation, ST depression >0.5mm, Q waves, LVH, paced rhythm or LBBB)",
           "data": [
             {
               "type": "radio",
@@ -5059,9 +5067,15 @@
       "results": [
         {
           "0": ["Low risk for adverse event. Candidate for early discharge"],
-          "1 - 3": ["Standard Evaluation. This patient is not a candidate for early discharge and should receive a standard chest pain evaluation"],
-          "4": ["Low risk if chest pain is reproducible. Candidate for early discharge. Step 3 is not required."],
-          "5 - 10": ["Standard Evaluation. This patient is not a candidate for early discharge and should receive a standard chest pain evaluation"]
+          "1 - 3": [
+            "Standard Evaluation. This patient is not a candidate for early discharge and should receive a standard chest pain evaluation"
+          ],
+          "4": [
+            "Low risk if chest pain is reproducible. Candidate for early discharge. Step 3 is not required."
+          ],
+          "5 - 10": [
+            "Standard Evaluation. This patient is not a candidate for early discharge and should receive a standard chest pain evaluation"
+          ]
         }
       ],
       "notes": [
