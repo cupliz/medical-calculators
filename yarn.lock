@@ -5768,33 +5768,33 @@ react-scrollbar-size@^2.0.2:
     prop-types "^15.5.10"
     react-event-listener "^0.5.0"
 
-react-swipeable-views-core@^0.12.9:
-  version "0.12.9"
-  resolved "https://registry.yarnpkg.com/react-swipeable-views-core/-/react-swipeable-views-core-0.12.9.tgz#2af731742441ff1ec7f5bc5a36ddf6da0272a0a5"
+react-swipeable-views-core@^0.12.11:
+  version "0.12.11"
+  resolved "https://registry.yarnpkg.com/react-swipeable-views-core/-/react-swipeable-views-core-0.12.11.tgz#3cf2b4daffbb36f9d69bd19bf5b2d5370b6b2c1b"
   dependencies:
     babel-runtime "^6.23.0"
     warning "^3.0.0"
 
-react-swipeable-views-utils@^0.12.9:
-  version "0.12.9"
-  resolved "https://registry.yarnpkg.com/react-swipeable-views-utils/-/react-swipeable-views-utils-0.12.9.tgz#b0e79dcb402e08cf750ea15fe87d2b7f1dd5fee0"
+react-swipeable-views-utils@^0.12.11:
+  version "0.12.11"
+  resolved "https://registry.yarnpkg.com/react-swipeable-views-utils/-/react-swipeable-views-utils-0.12.11.tgz#3c9a6a2b8dbdcc331a5d107419578f57b7e101d6"
   dependencies:
     babel-runtime "^6.23.0"
     fbjs "^0.8.4"
     keycode "^2.1.7"
     prop-types "^15.6.0"
     react-event-listener "^0.5.1"
-    react-swipeable-views-core "^0.12.9"
+    react-swipeable-views-core "^0.12.11"
 
-react-swipeable-views@^0.12.10:
-  version "0.12.10"
-  resolved "https://registry.yarnpkg.com/react-swipeable-views/-/react-swipeable-views-0.12.10.tgz#183cb16021a46c1e2b979e771569155087b65f03"
+react-swipeable-views@^0.12.11:
+  version "0.12.11"
+  resolved "https://registry.yarnpkg.com/react-swipeable-views/-/react-swipeable-views-0.12.11.tgz#aa48dcc0b51d645c14a379a1fcbfd4869dce1074"
   dependencies:
     babel-runtime "^6.23.0"
     dom-helpers "^3.2.1"
     prop-types "^15.5.4"
-    react-swipeable-views-core "^0.12.9"
-    react-swipeable-views-utils "^0.12.9"
+    react-swipeable-views-core "^0.12.11"
+    react-swipeable-views-utils "^0.12.11"
     warning "^3.0.0"
 
 react-transition-group@^2.2.1:
