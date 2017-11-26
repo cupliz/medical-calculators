@@ -21,11 +21,17 @@ class RadioField extends Component {
 
     if (!lastPoints || newPoints > lastPoints) {
       // increase
-      const increasedPointsTotal = round(totalPoints + (newPoints - lastPoints), 1)
+      const increasedPointsTotal = round(
+        totalPoints + (newPoints - lastPoints),
+        1
+      )
       pickRadioAnswer(group, newOption, increasedPointsTotal, newPoints)
     } else {
       // decrease
-      const decreasedPointsTotal = round(totalPoints - (lastPoints - newPoints), 1)
+      const decreasedPointsTotal = round(
+        totalPoints - (lastPoints - newPoints),
+        1
+      )
       pickRadioAnswer(group, newOption, decreasedPointsTotal, newPoints)
     }
 
@@ -36,8 +42,29 @@ class RadioField extends Component {
     })
   }
 
+  renderLabel = (option, classes, answerPoints, index, showPoints) => {
+    if (showPoints === false) {
+      return <span>{option}</span>
+    } else {
+      return (
+        <span>
+          {option}
+          <small
+            className={
+              this.state.checked === option
+                ? classes.checkedBadge
+                : classes.unCheckedBadge
+            }
+          >
+            {answerPoints[index]} Point
+          </small>
+        </span>
+      )
+    }
+  }
+
   mapAnswerOptions = () => {
-    const { answerOptions, answerPoints, classes } = this.props
+    const { answerOptions, answerPoints, classes, showPoints } = this.props
     return answerOptions.map((option, index) => (
       <FormControlLabel
         key={option}
@@ -45,20 +72,13 @@ class RadioField extends Component {
         className={classes.formControlLabel}
         control={<Radio />}
         x={option}
-        label={
-          <span>
-            {option}
-            <small
-              className={
-                this.state.checked === option
-                  ? classes.checkedBadge
-                  : classes.unCheckedBadge
-              }
-            >
-              {answerPoints[index]} Point
-            </small>
-          </span>
-        }
+        label={this.renderLabel(
+          option,
+          classes,
+          answerPoints,
+          index,
+          showPoints
+        )}
       />
     ))
   }
