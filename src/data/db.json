@@ -5079,7 +5079,8 @@
             "type": "radio",
             "options": "≥100 bpm/<100 bpm/Absent",
             "points": "2/1/0"
-          }
+          },
+          "showPoints": false
         },
         {
           "group": "Respiration/Lung maturity",
@@ -5087,7 +5088,8 @@
             "type": "radio",
             "options": "Good or crying/Slow or irregular/None",
             "points": "2/1/0"
-          }
+          },
+          "showPoints": false
         },
         {
           "group": "Muscle tone",
@@ -5095,7 +5097,8 @@
             "type": "radio",
             "options": "Active motion/Some extremity flexion/Limp",
             "points": "2/1/0"
-          }
+          },
+          "showPoints": false
         },
         {
           "group": "Skin appearance/Color",
@@ -5103,7 +5106,8 @@
             "type": "radio",
             "options": "All Pink/Bluish extremities, pink body/Blue or pale",
             "points": "2/1/0"
-          }
+          },
+          "showPoints": false
         },
         {
           "group": "Reflex irritability/Grimace",
@@ -5111,7 +5115,8 @@
             "type": "radio",
             "options": "Sneeze and cough or crying/Grimacing/Silence",
             "points": "2/1/0"
-          }
+          },
+          "showPoints": false
         }
       ],
       "results": {
