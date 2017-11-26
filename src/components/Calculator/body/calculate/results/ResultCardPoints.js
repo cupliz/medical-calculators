@@ -3,7 +3,7 @@ import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from './ResultCardHeader'
 
-const ResultCardPoints = ({classes, points, results}) => {
+const ResultCardPoints = ({classes, points, results, showPointsInResults}) => {
   if (points === 0 && !results) {
     return null
   } else {
