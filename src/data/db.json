@@ -2210,7 +2210,7 @@
           "group": "Eye Opening",
           "data": {
             "type": "radio",
-            "label": "Open spontaneously | Open to verbal stimuli | Open to pain only | No response",
+            "options": "Open spontaneously | Open to verbal stimuli | Open to pain only | No response",
             "points": "4/3/2/1"
           }
         },
@@ -2218,7 +2218,7 @@
           "group": "Verbal Responses",
           "data": {
             "type": "radio",
-            "label": "Coos and babbles | Irritable cries | Cries in response to pain | Moans in response to pain | No response",
+            "options": "Coos and babbles | Irritable cries | Cries in response to pain | Moans in response to pain | No response",
             "points": "5/4/3/2/1"
           }
         },
@@ -2226,7 +2226,7 @@
           "group": "Motor Responses",
           "data": {
             "type": "radio",
-            "label": "Moves spontaneously/purposefully | Withdraws to touch | Withdraws to pain | Flexor posturing to pain | Extensor posturing to pain | No response",
+            "options": "Moves spontaneously/purposefully | Withdraws to touch | Withdraws to pain | Flexor posturing to pain | Extensor posturing to pain | No response",
             "points": "6/5/4/3/2/1"
           }
         }
