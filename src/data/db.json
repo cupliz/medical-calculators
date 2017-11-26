@@ -115,6 +115,102 @@
     {
       "id": "pediatric-glasgow-coma-scale",
       "title": "Pediatric Glasgow Coma Scale"
+    },
+    {
+      "id": "bode-index-copd",
+      "title": "BODE Index for COPD Survival Prediction"
+    },
+    {
+      "id": "pulmonary-embolism-wells-score",
+      "title": "Pulmonary Embolism Wells Score"
+    },
+    {
+      "id": "heart-score-major-cardiac-events",
+      "title": "HEART Score for Major Cardiac Events"
+    },
+    {
+      "id": "quick-sofa-score-sepsis",
+      "title": "qSOFA Score for Sepsis"
+    },
+    {
+      "id": "child-pugh-score-cirrhosis-mortality",
+      "title": "Child-Pugh Score for Cirrhosis Mortality"
+    },
+    {
+      "id": "intracranial-bleeding-risk-thrombolytic-therapy-of-mi",
+      "title": "Intracranial Bleeding Risk From Thrombolytic Therapy of MI"
+    },
+    {
+      "id": "killip-class-heart-failure",
+      "title": "Killip Classification for Heart Failure"
+    },
+    {
+      "id": "mods-score-multiple-organ-dysfunction",
+      "title": "MODS Score: Multiple Organ Dysfunction"
+    },
+    {
+      "id": "centor-score-strep-pharyngitis",
+      "title": "Centor Score for Strep Pharyngitis (Modified McIsaac)"
+    },
+    {
+      "id": "perc-rule-pulmonary-embolism",
+      "title": "PERC Rule for Pulmonary Embolism"
+    },
+    {
+      "id": "ada-diabetes-risk-calculator",
+      "title": "ADA Diabetes Risk Calculator"
+    },
+    {
+      "id": "fall-risk-elderly-hospitalized-patients",
+      "title": "Fall Risk in Elderly Hospitalized Patients"
+    },
+    {
+      "id": "abc-score-massive-blood-transfusion",
+      "title": "ABC Score for Massive Blood Transfusion"
+    },
+    {
+      "id": "acute-gout-diagnosis-rule",
+      "title": "Acute Gout Diagnosis Rule"
+    },
+    {
+      "id": "bishop-score-vaginal-delivery-labor",
+      "title": "Bishop Score for Vaginal Delivery and Induction of Labor"
+    },
+    {
+      "id": "chalice-rule-child-head-injury",
+      "title": "CHALICE Rule for Child Head Injury"
+    },
+    {
+      "id": "burch-wartofsky-point-scale-thyrotoxicosis",
+      "title": "Burch-Wartofsky Point Scale for Thyrotoxicosis"
+    },
+    {
+      "id": "mmrc-dyspnea-scale",
+      "title": "mMRC Dyspnea Scale"
+    },
+    {
+      "id": "rule-of-sevens-lyme-meningitis",
+      "title": "Rule of 7s for Lyme Meningitis"
+    },
+    {
+      "id": "bap-65-score-acute-exacerbation-copd",
+      "title": "BAP-65 Score for Acute Exacerbation of COPD"
+    },
+    {
+      "id": "san-francisco-syncope-rule",
+      "title": "San Francisco Syncope Rule"
+    },
+    {
+      "id": "pediatric-appendicitis-score",
+      "title": "Pediatric Appendicitis Score"
+    },
+    {
+      "id": "dragon-score-post-tpa-stroke-outcome",
+      "title": "DRAGON Score for Post-TAP Stroke Outcome"
+    },
+    {
+      "id": "vancouver-chest-pain-rule",
+      "title": "Vancouver Chest Pain Rule"
     }
   ],
   "calculators": [
