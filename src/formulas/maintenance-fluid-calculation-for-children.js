@@ -4,9 +4,7 @@ import Typography from 'material-ui/Typography'
 import { ResultCardHeader } from '../components/Calculator/body/calculate/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
-import Button from 'material-ui/Button'
-import AddIcon from 'material-ui-icons/Add'
-import RemoveIcon from 'material-ui-icons/Remove'
+import Decimal from '../components/Decimal/Decimal'
 
 const unitData = {
   weight: [{ value: 1, unit: 'kg' }, { value: 0.45359237, unit: 'lb' }],
@@ -133,34 +131,11 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
-            <div className={classes.decimalPrecisionWrapper}>
-              <Typography type='title' className={classes.decimalPrecision}>
-                Decimal Precision
-              </Typography>
-              <div className={classes.decimalButtonsWrapper}>
-                <Button
-                  fab
-                  color='primary'
-                  aria-label='add'
-                  className={classes.decimalButton}
-                  onClick={() => this.handleDecimalChange('-')}
-                >
-                  <RemoveIcon />
-                </Button>
-                <Typography type='title' className={classes.decimalPoint}>
-                  {this.state.decimal}
-                </Typography>
-                <Button
-                  fab
-                  color='primary'
-                  aria-label='add'
-                  className={classes.decimalButton}
-                  onClick={() => this.handleDecimalChange('+')}
-                >
-                  <AddIcon />
-                </Button>
-              </div>
-            </div>
+            <Decimal
+              classes={classes}
+              decimal={this.state.decimal}
+              onDecimalChange={this.handleDecimalChange}
+            />
           </CardContent>
         </ResultCardHeader>
       )
