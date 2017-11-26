@@ -14,10 +14,10 @@ class RadioField extends Component {
   handleChange = (e, value) => {
     const { totalPoints, group, pickRadioAnswer } = this.props
 
-    const splitValueArray = value.split('/')
+    const splitValueArray = value.split(' | ')
     const newOption = splitValueArray[0]
     const newPoints = round(parseFloat(splitValueArray[1]), 1)
-    const lastPoints = this.state.value ? this.state.value.split('/')[1] : false
+    const lastPoints = this.state.value ? this.state.value.split(' | ')[1] : false
 
     if (!lastPoints || newPoints > lastPoints) {
       // increase
@@ -68,7 +68,7 @@ class RadioField extends Component {
     return answerOptions.map((option, index) => (
       <FormControlLabel
         key={option}
-        value={`${option}/${answerPoints[index]}`}
+        value={`${option} | ${answerPoints[index]}`}
         className={classes.formControlLabel}
         control={<Radio />}
         x={option}
