@@ -2464,7 +2464,7 @@
       "results": {
         "0 - 1.5": ["Risk: Low probability of Pulmonary Embolism (1.3% chance in an ED patient population). Consider d-dimer testing to rule out PE"],
         "2 - 6": ["Risk: Moderate probability of Pulmonary Embolism (16.2% chance in an ED patient population). Consider high sensitivity d-dimer testing"],
-        "7 - 13": ["Risk: High probability of Pulmonary Embolism (40.6% chance in an ED patient population). Consider CTA. D-dimer testing not recommended."]
+        "6.5 - 13": ["Risk: High probability of Pulmonary Embolism (40.6% chance in an ED patient population). Consider CTA. D-dimer testing not recommended."]
       },
       "notes": {
         "type": "unordered-list",
