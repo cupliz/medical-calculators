@@ -5,10 +5,6 @@
       "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk"
     },
     {
-      "id": "chads2-score-for-atrial-fibrillation-stroke-risk-example-of-no-points",
-      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk EXAMPLE OF NO POINTS"
-    },
-    {
       "id": "curb-65-pneumonia-severity-score",
       "title": "CURB-65 Pneumonia Severity Score"
     },
@@ -215,6 +211,10 @@
     {
       "id": "vancouver-chest-pain-rule",
       "title": "Vancouver Chest Pain Rule"
+    },
+    {
+      "id": "apgar-score-example-no-points",
+      "title": "Apgar Score EXAMPLE OF NO POINTS"
     }
   ],
   "calculators": [
