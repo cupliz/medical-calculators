@@ -1,84 +1,8 @@
 {
   "list": [
     {
-      "id": "chads2-score-for-atrial-fibrillation-stroke-risk",
-      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk"
-    },
-    {
-      "id": "curb-65-pneumonia-severity-score",
-      "title": "CURB-65 Pneumonia Severity Score"
-    },
-    {
-      "id": "ransons-criteria-for-pancreatitis-mortality",
-      "title": "Ranson's Criteria for Pancreatitis Mortality"
-    },
-    {
-      "id": "amoxicillin-pediatric-ear-nose-throat",
-      "title": "Amoxicillin Pediatric - Ear, Nose, & Throat Infections"
-    },
-    {
-      "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
-      "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk"
-    },
-    {
-      "id": "glasgow-coma-scale",
-      "title": "Glasgow Coma Scale"
-    },
-    {
       "id": "pediatric-glasgow-coma-scale",
       "title": "Pediatric Glasgow Coma Scale"
-    },
-    {
-      "id": "apgar-score",
-      "title": "Apgar Score"
-    },
-    {
-      "id": "metabolic-syndrome-criteria-aha-nhlbi-2005",
-      "title": "Metabolic Syndrome Criteria (AHA/NHLBI 2005)"
-    },
-    {
-      "id": "dvt-probability-wells-score-system",
-      "title": "DVT Probability: Wells Score System"
-    },
-    {
-      "id": "tia-prognosis-risk-of-stroke-by-90-days-after-presentation",
-      "title": "TIA Prognosis: Risk of Stroke by 90 Days After Presentation"
-    },
-    {
-      "id": "timi-risk-score-for-stemi",
-      "title": "TIMI Risk Score for STEMI"
-    },
-    {
-      "id": "timi-risk-score-for-unstable-angina-nstemi",
-      "title": "TIMI Risk Score for Unstable Angina/NSTEMI"
-    },
-    {
-      "id": "nih-stroke-score",
-      "title": "NIH Stroke Score"
-    },
-    {
-      "id": "bleeding-risk-on-warfarin-therapy-any-bleeding-complication",
-      "title": "Bleeding Risk on Warfarin Therapy (Any Bleeding Complication)"
-    },
-    {
-      "id": "abcd2-score-for-tia",
-      "title": "ABCD2 Score for TIA"
-    },
-    {
-      "id": "has-bled-score-for-major-bleeding-risk",
-      "title": "HAS-BLED Score for Major Bleeding Risk"
-    },
-    {
-      "id": "cardiac-risk-index-aaa-surgery",
-      "title": "Cardiac Risk Index for AAA Surgery"
-    },
-    {
-      "id": "cardiac-risk-index-abdominal-surgery",
-      "title": "Cardiac Risk Index for Abdominal Surgery"
-    },
-    {
-      "id": "cardiac-risk-index-non-aaa-vascular-surgery",
-      "title": "Cardiac Risk Index for Non-AAA Vascular Surgery"
     },
     {
       "id": "bode-index-copd",

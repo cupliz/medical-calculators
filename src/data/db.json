@@ -65,16 +65,16 @@
       "title": "HAS-BLED Score for Major Bleeding Risk"
     },
     {
-      "id": "cardiac-risk-index-aaa-surgery-lee",
-      "title": "Cardiac Risk Index for AAA Surgery (Lee)"
+      "id": "cardiac-risk-index-aaa-surgery",
+      "title": "Cardiac Risk Index for AAA Surgery"
     },
     {
-      "id": "cardiac-risk-index-abdominal-surgery-lee",
-      "title": "Cardiac Risk Index for Abdominal Surgery (Lee)"
+      "id": "cardiac-risk-index-abdominal-surgery",
+      "title": "Cardiac Risk Index for Abdominal Surgery"
     },
     {
-      "id": "cardiac-risk-index-non-aaa-vascular-surgery-lee",
-      "title": "Cardiac Risk Index for Non-AAA Vascular Surgery (Lee)"
+      "id": "cardiac-risk-index-non-aaa-vascular-surgery",
+      "title": "Cardiac Risk Index for Non-AAA Vascular Surgery"
     },
     {
       "id": "jones-criteria-for-diagnosis-of-rheumatic-fever",
@@ -1441,8 +1441,8 @@
       }
     },
     {
-      "id": "cardiac-risk-index-aaa-surgery-lee",
-      "title": "Cardiac Risk Index for AAA Surgery (Lee)",
+      "id": "cardiac-risk-index-aaa-surgery",
+      "title": "Cardiac Risk Index for AAA Surgery",
       "type": "points",
       "points": 0,
       "questions": [
@@ -1499,8 +1499,8 @@
       }
     },
     {
-      "id": "cardiac-risk-index-abdominal-surgery-lee",
-      "title": "Cardiac Risk Index for Abdominal Surgery (Lee)",
+      "id": "cardiac-risk-index-abdominal-surgery",
+      "title": "Cardiac Risk Index for Abdominal Surgery",
       "type": "points",
       "points": 0,
       "questions": [
@@ -1550,8 +1550,8 @@
       }
     },
     {
-      "id": "cardiac-risk-index-non-aaa-vascular-surgery-lee",
-      "title": "Cardiac Risk Index for Non-AAA Vascular Surgery (Lee)",
+      "id": "cardiac-risk-index-non-aaa-vascular-surgery",
+      "title": "Cardiac Risk Index for Non-AAA Vascular Surgery",
       "type": "points",
       "points": 0,
       "questions": [
