@@ -2775,9 +2775,6 @@
       "points": 0,
       "questions": [
         {
-          "group": "Criteria:"
-        },
-        {
           "group": "paO2/FiO2 Ratio",
           "data": {
             "type": "radio",
