@@ -217,7 +217,11 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
-            <Decimal classes={classes} decimal={this.state.decimal} onDecimalChange={this.handleDecimalChange} />
+            <Decimal
+              classes={classes}
+              decimal={this.state.decimal}
+              onDecimalChange={this.handleDecimalChange}
+            />
           </CardContent>
         </ResultCardHeader>
       )
