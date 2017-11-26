@@ -2356,9 +2356,6 @@
       "points": 0,
       "questions": [
         {
-          "group": "Criteria"
-        },
-        {
           "group": "FEV1 % Predicted After Bronchodialator",
           "data": {
             "type": "radio",
