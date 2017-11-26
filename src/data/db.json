@@ -5124,6 +5124,7 @@
         "4 - 6": ["Fairly low"],
         "7 - 10": ["Normal"]
       },
+      "showPointsInResults": false,
       "notes": {
         "type": "unordered-list",
         "content": [
