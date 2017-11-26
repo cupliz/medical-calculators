@@ -9,7 +9,6 @@ import CloseIcon from 'material-ui-icons/Close'
 import MoreIcon from 'material-ui-icons/MoreVert'
 import { push } from 'react-router-redux'
 import { connect } from 'react-redux'
-import { cleanCalculator } from '../../../store/modules/calculator'
 
 const styles = theme => ({
   title: {
@@ -32,7 +31,6 @@ const CalculatorHeader = props => {
 
   const handleClick = () => {
     props.changePage()
-    props.cleanCalculator()
   }
 
   return (
@@ -62,8 +60,7 @@ CalculatorHeader.propTypes = {
 }
 
 const mapDispatchToProps = {
-  changePage: () => push('/'),
-  cleanCalculator: cleanCalculator
+  changePage: () => push('/')
 }
 
 export default connect(null, mapDispatchToProps)(

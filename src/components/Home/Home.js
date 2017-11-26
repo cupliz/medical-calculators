@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { cleanCalculator } from '../../store/modules/calculator'
 
 class Home extends Component {
   renderList = list => {
@@ -10,9 +12,17 @@ class Home extends Component {
     ))
   }
 
+  componentDidMount () {
+    this.props.cleanCalculator()
+  }
+
   render () {
     return <ul>{this.renderList(this.props.data)}</ul>
   }
 }
 
-export default Home
+const mapDispatchToProps = {
+  cleanCalculator: cleanCalculator
+}
+
+export default connect(null, mapDispatchToProps)(Home)
