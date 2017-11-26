@@ -50,6 +50,7 @@ const renderRadioField = props => {
       answerOptions={answerOptions}
       answerPoints={answerPoints}
       group={props.group}
+      showPoints={props.showPoints}
       classes={props.classes}
     />
   )
