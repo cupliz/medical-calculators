@@ -44,7 +44,7 @@ const styles = theme => ({
 
 const renderRadioField = props => {
   const answerPoints = props.points.split('/')
-  const answerOptions = props.options.split('/')
+  const answerOptions = props.options.split(' | ')
   return (
     <RadioField
       answerOptions={answerOptions}
