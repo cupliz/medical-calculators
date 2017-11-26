@@ -10,12 +10,12 @@ const ResultCardPoints = ({classes, points, results, showPointsInResults}) => {
     return (
       <ResultCardHeader classes={classes}>
         <CardContent className={classes.content}>
-          <Typography type='caption' className={classes.contentText}>
+          {showPointsInResults && <Typography type='caption' className={classes.contentText}>
             Points
-          </Typography>
-          <Typography type='title' className={classes.contentText}>
+          </Typography> }
+          {showPointsInResults && <Typography type='title' className={classes.contentText}>
             {points}
-          </Typography>
+          </Typography> }
           {results &&
             results.map(item => (
               <Typography
