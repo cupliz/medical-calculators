@@ -81,7 +81,7 @@ class ResultCard extends Component {
   }
 
   render () {
-    const { classes, type, points, results, calculatorData } = this.props
+    const { classes, type, points, results, calculatorData, showPointsInResults } = this.props
 
     if (type === 'formula') {
       const { formulaModule: FormulaComponent } = this.state
@@ -98,6 +98,7 @@ class ResultCard extends Component {
             classes={classes}
             points={points}
             results={results[points]}
+            showPointsInResults={showPointsInResults}
           />
         )
       } else {
@@ -128,6 +129,7 @@ class ResultCard extends Component {
             classes={classes}
             points={points}
             results={results[requiredRange]}
+            showPointsInResults={showPointsInResults}
           />
         )
       }
@@ -140,12 +142,13 @@ ResultCard.propTypes = {
 }
 
 const mapStateToProps = state => {
-  const { id, type, points, results } = state.calculator.data
+  const { id, type, points, results, showPointsInResults } = state.calculator.data
   return {
     id,
     type,
     points,
     results,
+    showPointsInResults,
     calculatorData: state.calculator.data
   }
 }
