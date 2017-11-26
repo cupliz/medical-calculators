@@ -332,8 +332,7 @@
             },
             {
               "type": "checkbox",
-              "label":
-                "Blood Pressure: Systolic < 90 mmHg or Diastolic ≤ 60 mmHg",
+              "label": "Blood Pressure: Systolic < 90 mmHg or Diastolic ≤ 60 mmHg",
               "points": "1"
             },
             {
@@ -431,8 +430,7 @@
             },
             {
               "type": "checkbox",
-              "label":
-                "BUN increases >5 mg/dL (>1.79 mmol/L) from time of admission",
+              "label": "BUN increases >5 mg/dL (>1.79 mmol/L) from time of admission",
               "points": "1"
             },
             {
@@ -459,10 +457,18 @@
         }
       ],
       "results": {
-        "0 - 2": ["Mortality is 1%"],
-        "3 - 4": ["Mortality is 16%"],
-        "5 - 6": ["Mortality is 40%"],
-        "7 - 11": ["Mortality is almost 100%"]
+        "0 - 2": [
+          "Mortality is 1%"
+        ],
+        "3 - 4": [
+          "Mortality is 16%"
+        ],
+        "5 - 6": [
+          "Mortality is 40%"
+        ],
+        "7 - 11": [
+          "Mortality is almost 100%"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -518,7 +524,11 @@
             {
               "type": "input/select",
               "placeholder": "Enter drug dose",
-              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+              "values": [
+                "mg/kg",
+                "gm/kg",
+                "mcg/kg"
+              ]
             }
           ]
         },
@@ -528,7 +538,10 @@
             {
               "type": "input/select",
               "placeholder": "Enter patient weight",
-              "values": ["kg", "lbs"]
+              "values": [
+                "kg",
+                "lbs"
+              ]
             }
           ]
         },
@@ -538,7 +551,11 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication amount",
-              "values": ["mg", "gm", "mcg"]
+              "values": [
+                "mg",
+                "gm",
+                "mcg"
+              ]
             }
           ]
         },
@@ -548,7 +565,10 @@
             {
               "type": "input/select",
               "placeholder": "Enter medication volume",
-              "values": ["mL", "L"]
+              "values": [
+                "mL",
+                "L"
+              ]
             }
           ]
         }
@@ -599,8 +619,7 @@
             },
             {
               "type": "checkbox",
-              "label":
-                "Vascular disease (History of MI, PVD or aortic atherosclerosis)",
+              "label": "Vascular disease (History of MI, PVD or aortic atherosclerosis)",
               "points": "1"
             }
           ]
@@ -698,8 +717,7 @@
           "group": "Best motor response",
           "data": {
             "type": "radio",
-            "options":
-              "Obeys verbal commands/Localizes pain/Normal flexion from pain/Abnormal flexion from pain/Extension to pain/No motor response",
+            "options": "Obeys verbal commands/Localizes pain/Normal flexion from pain/Abnormal flexion from pain/Extension to pain/No motor response",
             "points": "6/5/4/3/2/1"
           }
         },
@@ -707,15 +725,18 @@
           "group": "Best Verbal Response",
           "data": {
             "type": "radio",
-            "options":
-              "Oriented/Confused/Inappropriate words/Only moans or groans/No verbal response",
+            "options": "Oriented/Confused/Inappropriate words/Only moans or groans/No verbal response",
             "points": "5/4/3/4/2/1"
           }
         }
       ],
       "results": {
-        "3 - 14": ["Abnormal"],
-        "15": ["Normal"]
+        "3 - 14": [
+          "Abnormal"
+        ],
+        "15": [
+          "Normal"
+        ]
       },
       "notes": {
         "type": "unordered-list",
