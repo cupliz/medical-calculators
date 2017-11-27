@@ -97,7 +97,7 @@ const renderSuggestionsContainer = (options) => {
   )
 }
 
-function getSuggestionValue (suggestion) {
+const getSuggestionValue = (suggestion) => {
   return suggestion.label
 }
 
