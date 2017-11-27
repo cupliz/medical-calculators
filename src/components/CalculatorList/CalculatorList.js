@@ -20,9 +20,8 @@ const styles = theme => ({
 
 const renderList = (list, classes) => {
   return list.map(listItem => (
-    <div>
+    <div key={listItem.id}>
       <ListItem
-        key={listItem.id}
         button
         component={Link}
         to={`/${listItem.id}`}
