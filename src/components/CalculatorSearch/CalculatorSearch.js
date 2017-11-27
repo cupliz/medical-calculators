@@ -112,7 +112,7 @@ const styles = theme => ({
     width: '100%'
   },
   input: {
-    padding: '12px 16px'
+    padding: '12px 20px'
   }
 })
 
