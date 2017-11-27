@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import List, { ListItem, ListItemText } from 'material-ui/List'
 import { Link } from 'react-router-dom'
-import Divider from 'material-ui/es/Divider/Divider'
+import Divider from 'material-ui/Divider'
 
 const styles = theme => ({
   root: {
