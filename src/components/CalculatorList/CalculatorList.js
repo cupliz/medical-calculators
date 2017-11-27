@@ -9,6 +9,9 @@ const styles = theme => ({
     width: '100%',
     maxWidth: 360,
     background: theme.palette.background.paper
+  },
+  list: {
+    padding: 0
   }
 })
 
@@ -25,7 +28,7 @@ const CalculatorList = props => {
   console.log(data)
   return (
     <div className={classes.root}>
-      <List component='div'>{renderList(data)}</List>
+      <List component='div' className={classes.list}>{renderList(data)}</List>
     </div>
   )
 }
