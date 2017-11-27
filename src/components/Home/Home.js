@@ -10,7 +10,7 @@ class Home extends Component {
   }
 
   sortList = list => {
-    list.sort(function (a, b) {
+    list.sort((a, b) => {
       const titleA = a.title.toLowerCase()
       const titleB = b.title.toLowerCase()
       if (titleA < titleB) {
