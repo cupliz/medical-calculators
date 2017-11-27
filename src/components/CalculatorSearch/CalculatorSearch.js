@@ -140,8 +140,13 @@ class CalculatorSearch extends Component {
     })
   }
 
-  onSuggestionSelected = () => {
-    console.log('selected')
+  onSuggestionSelected = e => {
+    if (e.target.value) {
+      const filteredArr = this.props.data.filter(
+        item => (item.title === e.target.value ? item.id : null)
+      )
+      this.props.changePage(filteredArr[0].id)
+    }
   }
 
   render () {
