@@ -23,28 +23,12 @@ const renderList = list => {
   ))
 }
 
-const sortList = list => {
-  list.sort(function (a, b) {
-    const titleA = a.title.toLowerCase()
-    const titleB = b.title.toLowerCase()
-    if (titleA < titleB) {
-      // sort string ascending
-      return -1
-    } else if (titleA > titleB) {
-      return 1
-    } else {
-      return 0 // no sorting
-    }
-  })
-  return list
-}
-
 const CalculatorList = props => {
   const { classes, data } = props
   return (
     <div className={classes.root}>
       <List component='div' className={classes.list}>
-        {renderList(sortList(data))}
+        {renderList(data)}
       </List>
     </div>
   )

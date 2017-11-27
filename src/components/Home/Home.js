@@ -9,11 +9,27 @@ class Home extends Component {
     this.props.cleanCalculator()
   }
 
+  sortList = list => {
+    list.sort(function (a, b) {
+      const titleA = a.title.toLowerCase()
+      const titleB = b.title.toLowerCase()
+      if (titleA < titleB) {
+        // sort string ascending
+        return -1
+      } else if (titleA > titleB) {
+        return 1
+      } else {
+        return 0 // no sorting
+      }
+    })
+    return list
+  }
+
   render () {
     return (
       <div>
-        <CalculatorSearch data={this.props.data} />
-        <CalculatorList data={this.props.data} />
+        <CalculatorSearch data={this.sortList(this.props.data)} />
+        <CalculatorList data={this.sortList(this.props.data)} />
       </div>
     )
   }
