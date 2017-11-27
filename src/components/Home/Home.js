@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { cleanCalculator } from '../../store/modules/calculator'
 import CalculatorList from '../CalculatorList/CalculatorList'
