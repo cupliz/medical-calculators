@@ -20,13 +20,11 @@ const renderList = list => {
   ))
 }
 
-const CalculatorList = (props) => {
+const CalculatorList = props => {
   const { classes, data } = props
   return (
     <div className={classes.root}>
-      <List>
-        {renderList(data)}
-      </List>
+      <List>{renderList(data)}</List>
     </div>
   )
 }
