@@ -8,6 +8,8 @@ import match from 'autosuggest-highlight/match'
 import parse from 'autosuggest-highlight/parse'
 import { withStyles } from 'material-ui/styles'
 import { Link } from 'react-router-dom'
+import { push } from 'react-router-redux'
+import { connect } from 'react-redux'
 
 const renderInput = inputProps => {
   const { classes, autoFocus, value, ref, ...other } = inputProps
@@ -139,7 +141,10 @@ class CalculatorSearch extends Component {
   }
 
   onSuggestionSelected = () => {
-    const id = this.props.data.filter(item => (item.title === this.state.value ? item.id : null))[0].id
+    const id = this.props.data.filter(
+      item => (item.title === this.state.value ? item.id : null)
+    )[0].id
+    this.props.changePage(id)
   }
 
   render () {
@@ -177,4 +182,10 @@ CalculatorSearch.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(styles)(CalculatorSearch)
+const mapDispatchToProps = {
+  changePage: id => push(`/${id}`)
+}
+
+export default connect(null, mapDispatchToProps)(
+  withStyles(styles)(CalculatorSearch)
+)
