@@ -270,7 +270,8 @@
     },
     {
       "id": "myelodysplastic-syndrome-international-prognostic-scoring-system",
-      "title": "Myelodysplastic Syndrome International Prognostic Scoring System"
+      "title":
+        "Myelodysplastic Syndrome International Prognostic Scoring System"
     }
   ],
   "calculators": [
@@ -4110,7 +4111,7 @@
             {
               "type": "checkbox",
               "label":
-              "Recurrent oral ulcerations: minor aphthous, major aphtous or herpetiform ulceration observed by physician or patient, which recurred at least 3 times in one 12 month period",
+                "Recurrent oral ulcerations: minor aphthous, major aphtous or herpetiform ulceration observed by physician or patient, which recurred at least 3 times in one 12 month period",
               "points": "1"
             }
           ]
@@ -4121,30 +4122,32 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Eye lesion: anterior uveitis, posterior uveitis, or cells in vitreous on slit lamp examination or retinal vasculitis observed by ophthalmologist",
-              "points": "1"
-            },
-            {
-              "type": "checkbox",
-              "label": "Recurrent genital ulceration: aphthous ulceration or scarring observed by physician or patient",
+              "label":
+                "Eye lesion: anterior uveitis, posterior uveitis, or cells in vitreous on slit lamp examination or retinal vasculitis observed by ophthalmologist",
               "points": "1"
             },
             {
               "type": "checkbox",
               "label":
-              "Skin lesions: erythema nodosum observed by physician or patient, pseudofolliculitis or papulopustular lesions, or acneform nodules observed by physician in post-adolescent patients not on corticosteroid treatment",
+                "Recurrent genital ulceration: aphthous ulceration or scarring observed by physician or patient",
               "points": "1"
             },
             {
               "type": "checkbox",
               "label":
-              "Immunologic phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor",
+                "Skin lesions: erythema nodosum observed by physician or patient, pseudofolliculitis or papulopustular lesions, or acneform nodules observed by physician in post-adolescent patients not on corticosteroid treatment",
               "points": "1"
             },
             {
               "type": "checkbox",
               "label":
-              "Positive pathergy test (Behcetine test) read by physician 24-48 hours",
+                "Immunologic phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label":
+                "Positive pathergy test (Behcetine test) read by physician 24-48 hours",
               "points": "1"
             }
           ]
@@ -4153,9 +4156,7 @@
       "results": {},
       "notes": {
         "type": "unordered-list",
-        "content": [
-          "Diagnostic : 1 Required Criteria and 2 Minor Criteria"
-        ]
+        "content": ["Diagnostic : 1 Required Criteria and 2 Minor Criteria"]
       },
       "references": {
         "type": "ordered-list",
@@ -4176,7 +4177,7 @@
             {
               "type": "checkbox",
               "label":
-              "Fever for at least five days generally high and spiking (often to 40° C or more), persisting for one to two weeks or longer in untreated patients.",
+                "Fever for at least five days generally high and spiking (often to 40° C or more), persisting for one to two weeks or longer in untreated patients.",
               "points": "1"
             }
           ]
@@ -4187,27 +4188,32 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "Acute changes in arms or legs: redness, swelling and erythema of the palms and soles.",
+              "label":
+                "Acute changes in arms or legs: redness, swelling and erythema of the palms and soles.",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Polymorphic exanthem involving the trunk and extremities.",
+              "label":
+                "Polymorphic exanthem involving the trunk and extremities.",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Painless, nonexudative bilateral bulbar conjunctival injection",
+              "label":
+                "Painless, nonexudative bilateral bulbar conjunctival injection",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Changes in lips and oral cavity. Strawberry tongue, redness and cracking of the lips, and erythema of the oropharyngeal mucosa. No mouth ulcers.",
+              "label":
+                "Changes in lips and oral cavity. Strawberry tongue, redness and cracking of the lips, and erythema of the oropharyngeal mucosa. No mouth ulcers.",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label": "Cervical lymphadenopathy: often unilateral, slightly tender, firm nodes >1.5cm in diameter.",
+              "label":
+                "Cervical lymphadenopathy: often unilateral, slightly tender, firm nodes >1.5cm in diameter.",
               "points": "1"
             },
             {
@@ -4243,7 +4249,8 @@
     },
     {
       "id": "irritable-bowel-syndrome-diagnostic-criteria-manning",
-      "title": "Irritable Bowel Syndrome Diagnostic Criteria (Manning Criteria)",
+      "title":
+        "Irritable Bowel Syndrome Diagnostic Criteria (Manning Criteria)",
       "type": "formula",
       "questions": [
         {
@@ -4253,7 +4260,7 @@
             {
               "type": "checkbox",
               "label":
-              "Persistence or recurrence of the following symptoms for at least 3 months time: Abdominal pain / discomfort, relieved with BM or associated with a change in the frequency or consistency of stool",
+                "Persistence or recurrence of the following symptoms for at least 3 months time: Abdominal pain / discomfort, relieved with BM or associated with a change in the frequency or consistency of stool",
               "points": "1"
             }
           ]
@@ -4264,7 +4271,8 @@
           "data": [
             {
               "type": "checkbox",
-              "label": "A varying or irregular pattern of defecation at least 25% of the time with 2 or more of the following:",
+              "label":
+                "A varying or irregular pattern of defecation at least 25% of the time with 2 or more of the following:",
               "points": "1"
             },
             {
@@ -4275,19 +4283,18 @@
             {
               "type": "checkbox",
               "label":
-              "Altered Bowel Movement form (hard, loose or watery stool)",
+                "Altered Bowel Movement form (hard, loose or watery stool)",
               "points": "1"
             },
             {
               "type": "checkbox",
               "label":
-              "Altered stool passage (straining, urgency, or incomplete evacuation sensation)",
+                "Altered stool passage (straining, urgency, or incomplete evacuation sensation)",
               "points": "1"
             },
             {
               "type": "checkbox",
-              "label":
-              "Diarrhea with mucus >25% of the time",
+              "label": "Diarrhea with mucus >25% of the time",
               "points": "1"
             }
           ]
@@ -4341,7 +4348,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Urinary kappa or lambda chain excretion of > 1g / 24 hours in absence of amyloidosis",
+              "label":
+                "Urinary kappa or lambda chain excretion of > 1g / 24 hours in absence of amyloidosis",
               "points": "1"
             }
           ]
@@ -4357,7 +4365,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Evidence of a monoclonal protein but lessor amounts than above",
+              "label":
+                "Evidence of a monoclonal protein but lessor amounts than above",
               "points": "1"
             },
             {
@@ -4367,7 +4376,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Hypoglobulinemia of normal proteins: IgM < 500 mg/L, IgA < 1 g/L or IgG < 6g/L",
+              "label":
+                "Hypoglobulinemia of normal proteins: IgM < 500 mg/L, IgA < 1 g/L or IgG < 6g/L",
               "points": "1"
             }
           ]
@@ -4419,7 +4429,8 @@
           }
         },
         {
-          "group": "Peripheral blood Absolute Neutrophil Count ≥10,000 cells/µL",
+          "group":
+            "Peripheral blood Absolute Neutrophil Count ≥10,000 cells/µL",
           "data": {
             "type": "radio",
             "options": "No | Yes",
@@ -4444,8 +4455,12 @@
         }
       ],
       "results": {
-        "0": ["Very low risk for bacterial meningitis. Consider discharge with close follow-up within 24-48 hr"],
-        "1 - 6": ["Not very low risk for bacterial meningitis. Consider admission for parenteral antibiotics and observation while awaiting CSF culture results."]
+        "0": [
+          "Very low risk for bacterial meningitis. Consider discharge with close follow-up within 24-48 hr"
+        ],
+        "1 - 6": [
+          "Not very low risk for bacterial meningitis. Consider admission for parenteral antibiotics and observation while awaiting CSF culture results."
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -4487,13 +4502,13 @@
             {
               "type": "checkbox",
               "label":
-              "Inability to bear weight right after the injury as well as in the emergency department (4 steps)",
+                "Inability to bear weight right after the injury as well as in the emergency department (4 steps)",
               "points": "1"
             },
             {
               "type": "checkbox",
               "label":
-              "Bone tenderness at the navicular or the base of the fifth metatarsal",
+                "Bone tenderness at the navicular or the base of the fifth metatarsal",
               "points": "1"
             }
           ]
@@ -4531,7 +4546,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Isolated tenderness of patella (no bone tenderness of knee other than patella)",
+              "label":
+                "Isolated tenderness of patella (no bone tenderness of knee other than patella)",
               "points": "1"
             },
             {
@@ -4546,7 +4562,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Inability to bear weight both immediately and in the Emergency department for 4 steps",
+              "label":
+                "Inability to bear weight both immediately and in the Emergency department for 4 steps",
               "points": "1"
             }
           ]
@@ -4589,7 +4606,8 @@
           "group": "Shock",
           "data": {
             "type": "radio",
-            "options": "No shock | Tachycardia (SBP≥100mmHg and HR≥100bpm) | Hypotension (SBP<100mmHg)",
+            "options":
+              "No shock | Tachycardia (SBP≥100mmHg and HR≥100bpm) | Hypotension (SBP<100mmHg)",
             "points": "0/1/2"
           }
         },
@@ -4597,7 +4615,8 @@
           "group": "Co-morbidities",
           "data": {
             "type": "radio",
-            "options": "No major co-morbidity | Any co-morbidity except renal failure, liver failure and/or disseminated malignancy | Renal failure, Liver failure, and/or disseminated malignancy",
+            "options":
+              "No major co-morbidity | Any co-morbidity except renal failure, liver failure and/or disseminated malignancy | Renal failure, Liver failure, and/or disseminated malignancy",
             "points": "0/2/3"
           }
         },
@@ -4605,7 +4624,8 @@
           "group": "Diagnosis",
           "data": {
             "type": "radio",
-            "options": "Mallory-Weiss tear | No lesion identified and no stigmata of recent hemorrhage | All other diagnoses | Malignancy of upper GI tract",
+            "options":
+              "Mallory-Weiss tear | No lesion identified and no stigmata of recent hemorrhage | All other diagnoses | Malignancy of upper GI tract",
             "points": "0/0/1/2"
           }
         },
@@ -4613,7 +4633,8 @@
           "group": "Major stigmata of recent hemorrhage",
           "data": {
             "type": "radio",
-            "options": "None | Dark spot only | Blood in upper GI tract | Adherent clot | Visibile or spurting vessel",
+            "options":
+              "None | Dark spot only | Blood in upper GI tract | Adherent clot | Visibile or spurting vessel",
             "points": "0/0/2/2/2"
           }
         }
@@ -4628,7 +4649,6 @@
         "6": ["High risk 32.9% rebleeding risk with 17.3% mortality risk"],
         "7": ["High risk 43.8% rebleeding risk with 27% mortality risk"],
         "8 - 11": ["High risk 41.8% rebleeding risk with 41.1% mortality risk"]
-
       },
       "notes": [
         {
@@ -4740,8 +4760,7 @@
           "data": [
             {
               "type": "checkbox",
-              "label":
-              "Pulse ≥100bpm",
+              "label": "Pulse ≥100bpm",
               "points": "1"
             },
             {
@@ -4795,8 +4814,7 @@
           "data": [
             {
               "type": "checkbox",
-              "label":
-              "Age >70yrs",
+              "label": "Age >70yrs",
               "points": "1"
             },
             {
@@ -4826,8 +4844,7 @@
           "data": [
             {
               "type": "checkbox",
-              "label":
-              "BUN rises >2mg/dL",
+              "label": "BUN rises >2mg/dL",
               "points": "1"
             },
             {
@@ -4852,7 +4869,6 @@
             }
           ]
         }
-
       ],
       "results": {
         "0 - 2": ["Pancreatitis Mortality Risk is 1.8%"],
@@ -4978,7 +4994,8 @@
             },
             {
               "type": "checkbox",
-              "label": "History of alcohol use (>2 drinks/day within last 2 weeks)",
+              "label":
+                "History of alcohol use (>2 drinks/day within last 2 weeks)",
               "points": "2"
             }
           ]
@@ -4998,8 +5015,7 @@
             },
             {
               "type": "checkbox",
-              "label":
-              "Upper abdominal surgery",
+              "label": "Upper abdominal surgery",
               "points": "10"
             },
             {
@@ -5172,7 +5188,8 @@
             },
             {
               "type": "checkbox",
-              "label": "Recent Myocardial Infarction, Anemia with HCT <30%, Creatinine 1.5 or Diabetes",
+              "label":
+                "Recent Myocardial Infarction, Anemia with HCT <30%, Creatinine 1.5 or Diabetes",
               "points": "1"
             }
           ]
@@ -5193,7 +5210,8 @@
     },
     {
       "id": "myelodysplastic-syndrome-international-prognostic-scoring-system",
-      "title": "Myelodysplastic Syndrome International Prognostic Scoring System",
+      "title":
+        "Myelodysplastic Syndrome International Prognostic Scoring System",
       "type": "points",
       "points": 0,
       "questions": [
@@ -5209,23 +5227,30 @@
           "group": "Karyotype",
           "data": {
             "type": "radio",
-            "options": "Normal, Y-, 5q-, 20q- | Abnormal chromosome 7 or ≥3 more abnormalities | All other cytogenic abnormalities ",
+            "options":
+              "Normal, Y-, 5q-, 20q- | Abnormal chromosome 7 or ≥3 more abnormalities | All other cytogenic abnormalities ",
             "points": "0/1/0.5"
           }
         },
         {
-          "group": "Cytopenias (Hemoglobin <10g/dL, ANS < 1,800/µL, Platelet count < 100,000/µL",
+          "group":
+            "Cytopenias (Hemoglobin <10g/dL, ANS < 1,800/µL, Platelet count < 100,000/µL",
           "data": {
             "type": "radio",
-            "options": "No cytopenia/Cytopenia of 1 cell type | Cytonpenia of 2 or 3 cell types",
+            "options":
+              "No cytopenia/Cytopenia of 1 cell type | Cytonpenia of 2 or 3 cell types",
             "points": "0/0.5"
           }
         }
       ],
       "results": {
         "0": ["Prognostic Score: Low (Median survival of 5.7 years)"],
-        "0.5 - 1": ["Prognostic Score: Intermediate 1 (Median survival of 3.5 years)"],
-        "1.5 - 2": ["Prognostic Score: Intermediate 2 (Median survival of 1.2 years)"],
+        "0.5 - 1": [
+          "Prognostic Score: Intermediate 1 (Median survival of 3.5 years)"
+        ],
+        "1.5 - 2": [
+          "Prognostic Score: Intermediate 2 (Median survival of 1.2 years)"
+        ],
         "2.5 - 3.5": ["Prognostic Score: High (Median survival of 0.4 years)"]
       },
       "references": {
