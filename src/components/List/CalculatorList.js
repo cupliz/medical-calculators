@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List'
-import Divider from 'material-ui/Divider'
-import InboxIcon from 'material-ui-icons/Inbox'
-import DraftsIcon from 'material-ui-icons/Drafts'
+import List, { ListItem, ListItemText } from 'material-ui/List'
 
 const styles = theme => ({
   root: {
