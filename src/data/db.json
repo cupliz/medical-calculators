@@ -3808,7 +3808,7 @@
         "7": [">97% likelihood of a miserable outcome (mRS 5-6)"],
         "8 - 10": ["0% likelihood of a good outcome (mRS 0-2); >99% likelihood of a miserable outcome (mRS 5-6)"]
       },
-      "notes": [
+      "notes":
         {
           "type": "unordered-list",
           "content": [
@@ -3817,8 +3817,8 @@
             "These patients may be potential candidates for endovascular thrombectomy, although the benefits of this procedure have not yet been demonstrated in literature"
           ]
         }
-      ],
-      "references": [
+    ,
+      "references":
         {
           "type": "ordered-list",
           "content": [
@@ -3826,7 +3826,6 @@
             "Strbian D, Seiffge DJ, Breuer L, et al. Validation of the DRAGON Score in 12 Stroke Centers in Anterior and Posterior Circulation.Stroke. 2013;STROKEAHA.113.002033"
           ]
         }
-      ]
     },
     {
       "id": "vancouver-chest-pain-rule",
