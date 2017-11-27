@@ -12,9 +12,9 @@ const getCalculateGroupPoints = calculate => {
 class FormulaComponent extends Component {
   state = {}
 
-  handleFormulaCalc = (requiredCriteria, minorCriteria, classes) => {
-    // 1 Required Criteria and 2 Minor Criteria
-    if (requiredCriteria >= 1 && minorCriteria >= 2) {
+  handleFormulaCalc = (requiredCriteria, additionalCriteria, classes) => {
+    // 1 Required Criteria and 4 Additional Criteria
+    if (requiredCriteria >= 1 && additionalCriteria >= 4) {
       return (
         <Typography type='title' className={classes.contentText}>
           Diagnostic with:
@@ -35,7 +35,7 @@ class FormulaComponent extends Component {
 
     // extract needed field vars
     let requiredCriteria = 0
-    let minorCriteria = 0
+    let additionalCriteria = 0
 
     questions.map((question, index) => {
       const { calculate } = question
@@ -44,17 +44,17 @@ class FormulaComponent extends Component {
           requiredCriteria = getCalculateGroupPoints(calculate)
         }
         if (index === 1) {
-          minorCriteria = getCalculateGroupPoints(calculate)
+          additionalCriteria = getCalculateGroupPoints(calculate)
         }
       }
       return calculate
     })
 
-    if (requiredCriteria || minorCriteria) {
+    if (requiredCriteria || additionalCriteria) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
-            {this.handleFormulaCalc(requiredCriteria, minorCriteria, classes)}
+            {this.handleFormulaCalc(requiredCriteria, additionalCriteria, classes)}
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultTextNoBold}>
                 {requiredCriteria} Required Criteria
@@ -62,7 +62,7 @@ class FormulaComponent extends Component {
             </div>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultTextNoBold}>
-                {minorCriteria} Minor Criteria
+                {additionalCriteria} Additional Criteria
               </Typography>
             </div>
           </CardContent>
