@@ -87,7 +87,6 @@ const QuestionField = props => {
   } else if (props.type === 'input/select') {
     return renderInputSelectField(props)
   } else {
-    console.log('Please check type of question: ', props.group)
     return null
   }
 }
