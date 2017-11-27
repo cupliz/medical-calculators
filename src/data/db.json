@@ -768,7 +768,8 @@
           "group": "Skin appearance/Color",
           "data": {
             "type": "radio",
-            "options": "All Pink | Bluish extremities, pink body | Blue or pale",
+            "options":
+              "All Pink | Bluish extremities, pink body | Blue or pale",
             "points": "2/1/0"
           }
         },
@@ -1289,7 +1290,8 @@
             "9: Best Language (Describe a picture, name items, read sentences)",
           "data": {
             "type": "radio",
-            "options": "No aphasia | Mild - Moderate aphasia | Severe aphasia | Mute",
+            "options":
+              "No aphasia | Mild - Moderate aphasia | Severe aphasia | Mute",
             "points": "0/1/2/3"
           }
         },
@@ -2302,7 +2304,8 @@
           "group": "Eye Opening",
           "data": {
             "type": "radio",
-            "options": "Open spontaneously | Open to verbal stimuli | Open to pain only | No response",
+            "options":
+              "Open spontaneously | Open to verbal stimuli | Open to pain only | No response",
             "points": "4/3/2/1"
           }
         },
@@ -2310,7 +2313,8 @@
           "group": "Verbal Responses",
           "data": {
             "type": "radio",
-            "options": "Coos and babbles | Irritable cries | Cries in response to pain | Moans in response to pain | No response",
+            "options":
+              "Coos and babbles | Irritable cries | Cries in response to pain | Moans in response to pain | No response",
             "points": "5/4/3/2/1"
           }
         },
@@ -2318,7 +2322,8 @@
           "group": "Motor Responses",
           "data": {
             "type": "radio",
-            "options": "Moves spontaneously/purposefully | Withdraws to touch | Withdraws to pain | Flexor posturing to pain | Extensor posturing to pain | No response",
+            "options":
+              "Moves spontaneously/purposefully | Withdraws to touch | Withdraws to pain | Flexor posturing to pain | Extensor posturing to pain | No response",
             "points": "6/5/4/3/2/1"
           }
         }
@@ -2371,14 +2376,14 @@
           "group": "mMRC Dyspnea Scale",
           "data": {
             "type": "radio",
-            "options": "mMRC 0: Dyspnea only with strenous exercise | mMRC 1: Dyspnea when hurrying or walking a slight hill | mMRC 2: Stops for breath when walking at own pace on level ground | mMRC 3: Must stop due to breathlessness after walking 91m (100 yds) or after a few mins | mMRC 4: Cannot leave house, breathless on dressing/undressing",
+            "options":
+              "mMRC 0: Dyspnea only with strenous exercise | mMRC 1: Dyspnea when hurrying or walking a slight hill | mMRC 2: Stops for breath when walking at own pace on level ground | mMRC 3: Must stop due to breathlessness after walking 91m (100 yds) or after a few mins | mMRC 4: Cannot leave house, breathless on dressing/undressing",
             "points": "0/0/1/2/3"
           }
         },
         {
           "group": "Body Mass Index",
-          "data":
-          {
+          "data": {
             "type": "radio",
             "options": ">21 | ≤21",
             "points": "0/1"
@@ -2458,9 +2463,15 @@
         }
       ],
       "results": {
-        "0 - 1.5": ["Risk: Low probability of Pulmonary Embolism (1.3% chance in an ED patient population). Consider d-dimer testing to rule out PE"],
-        "2 - 6": ["Risk: Moderate probability of Pulmonary Embolism (16.2% chance in an ED patient population). Consider high sensitivity d-dimer testing"],
-        "6.5 - 13": ["Risk: High probability of Pulmonary Embolism (40.6% chance in an ED patient population). Consider CTA. D-dimer testing not recommended."]
+        "0 - 1.5": [
+          "Risk: Low probability of Pulmonary Embolism (1.3% chance in an ED patient population). Consider d-dimer testing to rule out PE"
+        ],
+        "2 - 6": [
+          "Risk: Moderate probability of Pulmonary Embolism (16.2% chance in an ED patient population). Consider high sensitivity d-dimer testing"
+        ],
+        "6.5 - 13": [
+          "Risk: High probability of Pulmonary Embolism (40.6% chance in an ED patient population). Consider CTA. D-dimer testing not recommended."
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -2486,7 +2497,8 @@
           "group": "History",
           "data": {
             "type": "radio",
-            "options": "Slightly suspicious | Moderately suspicious | Highly suspicious",
+            "options":
+              "Slightly suspicious | Moderately suspicious | Highly suspicious",
             "points": "0/1/2"
           }
         },
@@ -2494,7 +2506,8 @@
           "group": "ECG/EKG",
           "data": {
             "type": "radio",
-            "options": "Normal | Non-specific repolarization disturbance | Significant ST depression",
+            "options":
+              "Normal | Non-specific repolarization disturbance | Significant ST depression",
             "points": "0/1/2"
           }
         },
@@ -2507,15 +2520,18 @@
           }
         },
         {
-          "group": "Risk factors (e.g. Hypertension, High cholesterol, Diabetes, Obesity, Smoking etc.)",
+          "group":
+            "Risk factors (e.g. Hypertension, High cholesterol, Diabetes, Obesity, Smoking etc.)",
           "data": {
             "type": "radio",
-            "options": "No known risk factors | 1-2 risk factors | ≥3 risk factors or history of atherosclerotic disease",
+            "options":
+              "No known risk factors | 1-2 risk factors | ≥3 risk factors or history of atherosclerotic disease",
             "points": "0/1/2"
           }
         },
         {
-          "group": "Initial Troponin (Use local assays and corresponding cutoffs)",
+          "group":
+            "Initial Troponin (Use local assays and corresponding cutoffs)",
           "data": {
             "type": "radio",
             "options": "≤ Normal limit | 1-2X Normal limit | >2X Normal limit",
@@ -2524,9 +2540,15 @@
         }
       ],
       "results": {
-        "0 - 3": ["Low Risk: 0.9-1.7% risk of adverse cardiac event. In the HEART Score study, these patients were discharged (0.99% in the retrospective study, 1.7% in the prospective study)"],
-        "4 - 6": ["Moderate Risk: 12-16.6% risk of adverse cardiac event. In the HEART Score study, these patients were admitted to the hospital. (11.6% retrospective, 16.6% prospective)"],
-        "7 - 10": ["High risk: 50-65% risk of adverse cardiac event. In the HEART Score study, these patients were candidates for early invasive measures. (65.2% retrospective, 50.1% prospective)"]
+        "0 - 3": [
+          "Low Risk: 0.9-1.7% risk of adverse cardiac event. In the HEART Score study, these patients were discharged (0.99% in the retrospective study, 1.7% in the prospective study)"
+        ],
+        "4 - 6": [
+          "Moderate Risk: 12-16.6% risk of adverse cardiac event. In the HEART Score study, these patients were admitted to the hospital. (11.6% retrospective, 16.6% prospective)"
+        ],
+        "7 - 10": [
+          "High risk: 50-65% risk of adverse cardiac event. In the HEART Score study, these patients were candidates for early invasive measures. (65.2% retrospective, 50.1% prospective)"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -2571,8 +2593,12 @@
         }
       ],
       "results": {
-        "0 - 1": ["Not High Risk; If sepsis is still suspected, continue to monitor, evaluate and initiate treatment as appropriate"],
-        "2 - 3": ["High Risk: Patients meeting this qSOFA criteria should have infection considered even if it was previously not suspected. Assess for evidence of organ dysfunction with blood test including serum lactate. Calculate full SOFA Score"]
+        "0 - 1": [
+          "Not High Risk; If sepsis is still suspected, continue to monitor, evaluate and initiate treatment as appropriate"
+        ],
+        "2 - 3": [
+          "High Risk: Patients meeting this qSOFA criteria should have infection considered even if it was previously not suspected. Assess for evidence of organ dysfunction with blood test including serum lactate. Calculate full SOFA Score"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -2602,7 +2628,8 @@
           "group": "Bilirubin",
           "data": {
             "type": "radio",
-            "options": "<2mg/dL (<34.2µmol/L) | 2-3mg/dL (34.2-51.3µmol/L) | >3mg/dL (>51.3µmol/L)",
+            "options":
+              "<2mg/dL (<34.2µmol/L) | 2-3mg/dL (34.2-51.3µmol/L) | >3mg/dL (>51.3µmol/L)",
             "points": "1/2/3"
           }
         },
@@ -2610,7 +2637,8 @@
           "group": "Albumin",
           "data": {
             "type": "radio",
-            "options": ">3.5g/dL (>35g/L) | 2.8-3.5g/dL (28-35 g/L) | <2.8 g/dL (<28g/L) ",
+            "options":
+              ">3.5g/dL (>35g/L) | 2.8-3.5g/dL (28-35 g/L) | <2.8 g/dL (<28g/L) ",
             "points": "1/2/3"
           }
         },
@@ -2640,9 +2668,15 @@
         }
       ],
       "results": {
-        "5 - 6": ["Child Class A; Life expectancy: 15-20 years; Abdominal surgery peri-operative mortality: 10%"],
-        "7 - 9": ["Child Class B; Indication for transplant evaluation; Abdominal surgery peri-operative mortality: 30%"],
-        "10 - 15": ["Child Class C; Life expectancy: 1-3 years; Abdominal surgery peri-operative mortality: 82%"]
+        "5 - 6": [
+          "Child Class A; Life expectancy: 15-20 years; Abdominal surgery peri-operative mortality: 10%"
+        ],
+        "7 - 9": [
+          "Child Class B; Indication for transplant evaluation; Abdominal surgery peri-operative mortality: 30%"
+        ],
+        "10 - 15": [
+          "Child Class C; Life expectancy: 1-3 years; Abdominal surgery peri-operative mortality: 82%"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -2734,13 +2768,14 @@
           "group": "Classification",
           "data": {
             "type": "radio",
-            "options": "No signs of congestion | S3 and Basal rales on auscultation | Acute pulmonary edema | Cardiogenic shock with rales",
+            "options":
+              "No signs of congestion | S3 and Basal rales on auscultation | Acute pulmonary edema | Cardiogenic shock with rales",
             "points": "1/2/3/4"
           },
           "showPoints": false
         }
       ],
-      "results":{
+      "results": {
         "1": ["Killip Class I: Estimated 30-day mortality: 2-3%"],
         "2": ["Killip Class II: Estimated 30-day mortality: 5-12%"],
         "3": ["Killip Class III: Estimated 30-day mortality: 10-20%"],
@@ -2790,7 +2825,8 @@
           "group": "Serum Billirubin",
           "data": {
             "type": "radio",
-            "options": "≤1.2mg/dL or 20µmol/L | 1.3-3.5mg/dL or 21-60µmol/L | 3.6-7.0mg/dL or 6-120µmol/L | 7.0-14mg/dL or 121-240µmol/L | >14mg/dL or 240µmol/L ",
+            "options":
+              "≤1.2mg/dL or 20µmol/L | 1.3-3.5mg/dL or 21-60µmol/L | 3.6-7.0mg/dL or 6-120µmol/L | 7.0-14mg/dL or 121-240µmol/L | >14mg/dL or 240µmol/L ",
             "points": "0/1/2/3/4"
           }
         },
@@ -2814,7 +2850,8 @@
           "group": "Serum Creatinine",
           "data": {
             "type": "radio",
-            "options": "≤1.1mg/dL or 100µmol/L | 1.2-2.2mg/dL or 101-200µmol/L | 2.3-3.9mg/dL or 201-350µmol/L | 4.0-5.7mg/dL or 351-500µmol/L | >5.7mg/dL or 500µmol/L",
+            "options":
+              "≤1.1mg/dL or 100µmol/L | 1.2-2.2mg/dL or 101-200µmol/L | 2.3-3.9mg/dL or 201-350µmol/L | 4.0-5.7mg/dL or 351-500µmol/L | >5.7mg/dL or 500µmol/L",
             "points": "0/1/2/3/4"
           }
         }
@@ -2822,10 +2859,18 @@
       "results": {
         "0": ["ICU Mortality 0%, Hospital Mortality 0%, ICU Stay 2 days"],
         "1 - 4": ["ICU Mortality 1-2%, Hospital Mortality 7%, ICU Stay 3 days"],
-        "5 - 8": ["ICU Mortality 3-5%, Hospital Mortality 16%, ICU Stay 6 days"],
-        "9 - 12": ["ICU Mortality 25%, Hospital Mortality 50%, ICU Stay 10 days"],
-        "13 - 16": ["ICU Mortality 50%, Hospital Mortality 70%, ICU Stay 17 days"],
-        "17 - 20": ["ICU Mortality 75%, Hospital Mortality 82%, ICU Stay 21 days"],
+        "5 - 8": [
+          "ICU Mortality 3-5%, Hospital Mortality 16%, ICU Stay 6 days"
+        ],
+        "9 - 12": [
+          "ICU Mortality 25%, Hospital Mortality 50%, ICU Stay 10 days"
+        ],
+        "13 - 16": [
+          "ICU Mortality 50%, Hospital Mortality 70%, ICU Stay 17 days"
+        ],
+        "17 - 20": [
+          "ICU Mortality 75%, Hospital Mortality 82%, ICU Stay 21 days"
+        ],
         "21 - 24": ["ICU Mortality 100%, Hospital Mortality 100%"]
       },
       "notes": {
@@ -2893,11 +2938,21 @@
         }
       ],
       "results": {
-        "-1 - 0": ["1%-2.5% likelihood of Strep Pharyngitis; No further testing nor antibiotics"],
-        "1": ["5%-10% likelihood of Strep Pharyngitis; No further testing nor antibiotics"],
-        "2": ["11%-17% likelihood of Strep Pharyngitis; Optional rapid strep testing and/or culture"],
-        "3": ["28%-35% likelihood of Strep Pharyngitis; Consider rapid strep testing and/or culture. IDSA and ASIM no longer recommend empiric treatment for strep based on symptoms alone"],
-        "4 - 5": ["51%-53% likelihood of Strep Pharyngitis; Consider rapid strep testing and/or culture. IDSA and ASIM no longer recommend empiric treatment for strep based on symptoms alone"]
+        "-1 - 0": [
+          "1%-2.5% likelihood of Strep Pharyngitis; No further testing nor antibiotics"
+        ],
+        "1": [
+          "5%-10% likelihood of Strep Pharyngitis; No further testing nor antibiotics"
+        ],
+        "2": [
+          "11%-17% likelihood of Strep Pharyngitis; Optional rapid strep testing and/or culture"
+        ],
+        "3": [
+          "28%-35% likelihood of Strep Pharyngitis; Consider rapid strep testing and/or culture. IDSA and ASIM no longer recommend empiric treatment for strep based on symptoms alone"
+        ],
+        "4 - 5": [
+          "51%-53% likelihood of Strep Pharyngitis; Consider rapid strep testing and/or culture. IDSA and ASIM no longer recommend empiric treatment for strep based on symptoms alone"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -2963,15 +3018,19 @@
             {
               "type": "checkbox",
               "label":
-              "Hormone use (e.g. oral contraceptives, hormone replacement therapy)",
+                "Hormone use (e.g. oral contraceptives, hormone replacement therapy)",
               "points": "1"
             }
           ]
         }
       ],
       "results": {
-        "0": ["No need for further workup; <2% chance of PE. If no criteria is positive and doctor's pre-test probability is ≤15% then the PERC Rule criteria are satisfied"],
-        "1 - 8": ["If any criteria are positive then the PERC Rule cannot be used to rule out PE in this patient"]
+        "0": [
+          "No need for further workup; <2% chance of PE. If no criteria is positive and doctor's pre-test probability is ≤15% then the PERC Rule criteria are satisfied"
+        ],
+        "1 - 8": [
+          "If any criteria are positive then the PERC Rule cannot be used to rule out PE in this patient"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -3021,7 +3080,8 @@
           }
         },
         {
-          "group": "Hypertension (History of Hypertension and/or BP≥140/90 mmHg)",
+          "group":
+            "Hypertension (History of Hypertension and/or BP≥140/90 mmHg)",
           "data": {
             "type": "radio",
             "options": "No | Yes",
@@ -3054,8 +3114,12 @@
         }
       ],
       "results": {
-        "1 - 4": ["Not high risk. T2DM screening not recommended by ADA guidelines."],
-        "5 - 10": ["High risk. Patient should be formally screened for diabetes per ADA guidelines"]
+        "1 - 4": [
+          "Not high risk. T2DM screening not recommended by ADA guidelines."
+        ],
+        "5 - 10": [
+          "High risk. Patient should be formally screened for diabetes per ADA guidelines"
+        ]
       },
       "references": {
         "type": "ordered-list",
@@ -3077,7 +3141,7 @@
             {
               "type": "checkbox",
               "label":
-              "History of fall at presentation or fall since admission",
+                "History of fall at presentation or fall since admission",
               "points": "1"
             },
             {
@@ -3147,8 +3211,12 @@
         }
       ],
       "results": {
-        "0 - 1": ["Less likely to require a massive transfusion (i.e. ≥10 units of packed RBCs)"],
-        "2 - 4": ["Likely to require massive blood transfusion (i.e. ≥10 units of packed RBCs)"]
+        "0 - 1": [
+          "Less likely to require a massive transfusion (i.e. ≥10 units of packed RBCs)"
+        ],
+        "2 - 4": [
+          "Likely to require massive blood transfusion (i.e. ≥10 units of packed RBCs)"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -3202,7 +3270,7 @@
             {
               "type": "checkbox",
               "label":
-              "Hypertension or Cardiac Disease (e.g. MI, Stroke, PVD, CHF, Angina)",
+                "Hypertension or Cardiac Disease (e.g. MI, Stroke, PVD, CHF, Angina)",
               "points": "1.5"
             },
             {
@@ -3214,9 +3282,15 @@
         }
       ],
       "results": {
-        "0 - 4": ["Gout is unlikely. Estimated prevalence of gout is 2.2% in original study"],
-        "4.5 - 7.5": ["Estimated prevalence of gout is 31.2%. Patients often benefit the most from synovial fluid analysis for urate crystals"],
-        "8 - 13": ["Gout arthritis is very likely. Estimated prevalence of gout is 82.5%. Consider starting gout medications. "]
+        "0 - 4": [
+          "Gout is unlikely. Estimated prevalence of gout is 2.2% in original study"
+        ],
+        "4.5 - 7.5": [
+          "Estimated prevalence of gout is 31.2%. Patients often benefit the most from synovial fluid analysis for urate crystals"
+        ],
+        "8 - 13": [
+          "Gout arthritis is very likely. Estimated prevalence of gout is 82.5%. Consider starting gout medications. "
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -3275,9 +3349,15 @@
         }
       ],
       "results": {
-        "1 - 5": ["Unfavorable cervix. Induction may be necessary for successful vaginal delivery"],
-        "6 - 7": ["No definitive prediction on whether induction will be successful. Consider induction or augmentation of labor based on clinical judgement"],
-        "8 - 13": ["Spontaneous vaginal delivery is more likely. Augmentation and induction may be unnecessary"]
+        "1 - 5": [
+          "Unfavorable cervix. Induction may be necessary for successful vaginal delivery"
+        ],
+        "6 - 7": [
+          "No definitive prediction on whether induction will be successful. Consider induction or augmentation of labor based on clinical judgement"
+        ],
+        "8 - 13": [
+          "Spontaneous vaginal delivery is more likely. Augmentation and induction may be unnecessary"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -3331,7 +3411,7 @@
             {
               "type": "checkbox",
               "label":
-              "Seizure after head injury (no previous Epilepsy history)",
+                "Seizure after head injury (no previous Epilepsy history)",
               "points": "1"
             }
           ]
@@ -3352,7 +3432,7 @@
             {
               "type": "checkbox",
               "label":
-              "Signs of basal skull fracture (e.g. Blood or CSF from ear or nose, Panda eyes, Serious facial injury)",
+                "Signs of basal skull fracture (e.g. Blood or CSF from ear or nose, Panda eyes, Serious facial injury)",
               "points": "1"
             },
             {
@@ -3373,7 +3453,7 @@
             {
               "type": "checkbox",
               "label":
-              "High speed road accident (> 64kmph/40mph) as pedestrian, cyclist or car occupant",
+                "High speed road accident (> 64kmph/40mph) as pedestrian, cyclist or car occupant",
               "points": "1"
             },
             {
@@ -3421,7 +3501,8 @@
           "group": "Temperature",
           "data": {
             "type": "radio",
-            "options": "37.2-37.7°C (99-99.9°F) | 37.8-38.2°C (100-100.9°F) | 38.3-38.8°C (101-101.9°F) | 39.3-39.9°C (103-103.9°F) | ≥40°C (≥104°F)",
+            "options":
+              "37.2-37.7°C (99-99.9°F) | 37.8-38.2°C (100-100.9°F) | 38.3-38.8°C (101-101.9°F) | 39.3-39.9°C (103-103.9°F) | ≥40°C (≥104°F)",
             "points": "5/10/15/20/25/30"
           }
         },
@@ -3429,7 +3510,8 @@
           "group": "Central Nervous System Effects",
           "data": {
             "type": "radio",
-            "options": "Absent | Mild (Agitation) | Moderate (Seizures, coma) | Severe (Seizures, coma)",
+            "options":
+              "Absent | Mild (Agitation) | Moderate (Seizures, coma) | Severe (Seizures, coma)",
             "points": "0/10/20/30"
           }
         },
@@ -3437,7 +3519,8 @@
           "group": "Gastrointestinal-hepatic dysfunction",
           "data": {
             "type": "radio",
-            "options": "Absent | Moderate (Diarrhea, Nausea/vomiting, Abdominal pain) | Severe (Unexplained jaundice)",
+            "options":
+              "Absent | Moderate (Diarrhea, Nausea/vomiting, Abdominal pain) | Severe (Unexplained jaundice)",
             "points": "0/10/15"
           }
         },
@@ -3445,7 +3528,8 @@
           "group": "Congestive Heart Failure",
           "data": {
             "type": "radio",
-            "options": "Absent | Mild (Pedal Edema) | Moderate (Bibasilar rales) | Severe (Pulmonary Edema)",
+            "options":
+              "Absent | Mild (Pedal Edema) | Moderate (Bibasilar rales) | Severe (Pulmonary Edema)",
             "points": "0/5/10/15"
           }
         },
@@ -3453,7 +3537,8 @@
           "group": "Heart Rate",
           "data": {
             "type": "radio",
-            "options": "90-109 bpm | 110-119 bpm | 120-129 bpm | 130-139 bpm | ≥140 bpm",
+            "options":
+              "90-109 bpm | 110-119 bpm | 120-129 bpm | 130-139 bpm | ≥140 bpm",
             "points": "5/10/15/20/25"
           }
         },
@@ -3475,9 +3560,15 @@
         }
       ],
       "results": {
-        "10 - 24": ["Unlikely to represent thyroid storm. Investigate diagnosis of thyrotoxicosis and obtain additional imaging (e.g. thyroid ultrasound, radioactive iodine uptake and scan)"],
-        "25 - 44": ["Impending thyroid storm. Consider thionamides and symptom management along with ICU monitoring"],
-        "45 - 140": ["Highly suggestive of thyroid storm. Consider rapid and aggressive multimodal management in ICU"]
+        "10 - 24": [
+          "Unlikely to represent thyroid storm. Investigate diagnosis of thyrotoxicosis and obtain additional imaging (e.g. thyroid ultrasound, radioactive iodine uptake and scan)"
+        ],
+        "25 - 44": [
+          "Impending thyroid storm. Consider thionamides and symptom management along with ICU monitoring"
+        ],
+        "45 - 140": [
+          "Highly suggestive of thyroid storm. Consider rapid and aggressive multimodal management in ICU"
+        ]
       },
       "references": [
         {
@@ -3498,7 +3589,8 @@
           "group": "Symptom severity",
           "data": {
             "type": "radio",
-            "options": "Dyspnea only with strenuous exercise | Dyspnea when hurrying or walking up a slight hill | Walks slower than people of similar age due to dyspnea or has to stop for breath when walking at own pace | Stops for breath after walking 91m (100 yards) or after a few min | Too dyspneic to leave house or breathless when dressing",
+            "options":
+              "Dyspnea only with strenuous exercise | Dyspnea when hurrying or walking up a slight hill | Walks slower than people of similar age due to dyspnea or has to stop for breath when walking at own pace | Stops for breath after walking 91m (100 yards) or after a few min | Too dyspneic to leave house or breathless when dressing",
             "points": "0/1/2/3/4"
           }
         }
@@ -3563,8 +3655,12 @@
         }
       ],
       "results": {
-        "0": ["Low risk for Lyme Meningitis. Antibiotics not recommended, consider close patient follow-up and use clinical judgement regarding patient disposition"],
-        "1 - 3": ["Not low risk for Lyme Meningitis. Consider antibiotics to cover Borrelia burgdoreferi"]
+        "0": [
+          "Low risk for Lyme Meningitis. Antibiotics not recommended, consider close patient follow-up and use clinical judgement regarding patient disposition"
+        ],
+        "1 - 3": [
+          "Not low risk for Lyme Meningitis. Consider antibiotics to cover Borrelia burgdoreferi"
+        ]
       },
       "notes": [
         {
@@ -3634,7 +3730,9 @@
       ],
       "results": {
         "0": ["Patient is in low-risk group for serious outcome"],
-        "1 - 5": ["Patient is not in the low-risk group for serious outcome (96% sensitivity, 62% specificity); Negative predictive value 99.2%, Positive predictive value 24.8%"]
+        "1 - 5": [
+          "Patient is not in the low-risk group for serious outcome (96% sensitivity, 62% specificity); Negative predictive value 99.2%, Positive predictive value 24.8%"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -3724,8 +3822,12 @@
       ],
       "results": {
         "0 - 3": ["Appendicitis is unlikely. Consider other diagnoses"],
-        "4 - 6": ["Cannot definitively rule in or rule out appendicitis. Consider ultrasound or MRI imaging and/or surgical consult"],
-        "6 - 10": ["Appendicitis is likely. Consider surgical consult and imaging; Patients should only undergo ultrasound prior to surgical consult"]
+        "4 - 6": [
+          "Cannot definitively rule in or rule out appendicitis. Consider ultrasound or MRI imaging and/or surgical consult"
+        ],
+        "6 - 10": [
+          "Appendicitis is likely. Consider surgical consult and imaging; Patients should only undergo ultrasound prior to surgical consult"
+        ]
       },
       "notes": {
         "type": "unordered-list",
@@ -3799,33 +3901,38 @@
         }
       ],
       "results": {
-        "0 - 1": [">99% likelihood of a good outcome (mRS 0-2); 0% likelihood of a miserable outcome (mRS 5-6)"],
-        "2": [">96% likelihood of a good outcome (mRS 0-2); 2% likelihood of a miserable outcome (mRS 5-6)"],
-        "3": [">87% likelihood of a good outcome (mRS 0-2); 7% likelihood of a miserable outcome (mRS 5-6)"],
+        "0 - 1": [
+          ">99% likelihood of a good outcome (mRS 0-2); 0% likelihood of a miserable outcome (mRS 5-6)"
+        ],
+        "2": [
+          ">96% likelihood of a good outcome (mRS 0-2); 2% likelihood of a miserable outcome (mRS 5-6)"
+        ],
+        "3": [
+          ">87% likelihood of a good outcome (mRS 0-2); 7% likelihood of a miserable outcome (mRS 5-6)"
+        ],
         "4": [">81% likelihood of a good outcome (mRS 0-2)"],
         "5": [">83% likelihood of a miserable outcome (mRS 5-6)"],
         "6": [">90% likelihood of a miserable outcome (mRS 5-6)"],
         "7": [">97% likelihood of a miserable outcome (mRS 5-6)"],
-        "8 - 10": ["0% likelihood of a good outcome (mRS 0-2); >99% likelihood of a miserable outcome (mRS 5-6)"]
+        "8 - 10": [
+          "0% likelihood of a good outcome (mRS 0-2); >99% likelihood of a miserable outcome (mRS 5-6)"
+        ]
       },
-      "notes":
-        {
-          "type": "unordered-list",
-          "content": [
-            "The DRAGON Score is used to predict 3 month outcomes in ischemic stroke patients receiving intravenous thrombolysis (tPA)",
-            "For patients with a DRAGON score that predicts a miserable outcome even if tPA is given, consider the risk/benefit of giving IV thrombolytics",
-            "These patients may be potential candidates for endovascular thrombectomy, although the benefits of this procedure have not yet been demonstrated in literature"
-          ]
-        }
-    ,
-      "references":
-        {
-          "type": "ordered-list",
-          "content": [
-            "Strbian D, Meretoja A, Ahlhelm FJ, Pitkäniemi J, Lyrer P, Kaste M, Engelter S, Tatlisumak T. Predicting outcome of IV thrombolysis-treated ischemic stroke patients: the DRAGON score. Neurology. 2012 Feb 7;78(6):427-32.",
-            "Strbian D, Seiffge DJ, Breuer L, et al. Validation of the DRAGON Score in 12 Stroke Centers in Anterior and Posterior Circulation.Stroke. 2013;STROKEAHA.113.002033"
-          ]
-        }
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "The DRAGON Score is used to predict 3 month outcomes in ischemic stroke patients receiving intravenous thrombolysis (tPA)",
+          "For patients with a DRAGON score that predicts a miserable outcome even if tPA is given, consider the risk/benefit of giving IV thrombolytics",
+          "These patients may be potential candidates for endovascular thrombectomy, although the benefits of this procedure have not yet been demonstrated in literature"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Strbian D, Meretoja A, Ahlhelm FJ, Pitkäniemi J, Lyrer P, Kaste M, Engelter S, Tatlisumak T. Predicting outcome of IV thrombolysis-treated ischemic stroke patients: the DRAGON score. Neurology. 2012 Feb 7;78(6):427-32.",
+          "Strbian D, Seiffge DJ, Breuer L, et al. Validation of the DRAGON Score in 12 Stroke Centers in Anterior and Posterior Circulation.Stroke. 2013;STROKEAHA.113.002033"
+        ]
+      }
     },
     {
       "id": "vancouver-chest-pain-rule",
@@ -3838,7 +3945,7 @@
         },
         {
           "group":
-          "Abnormal initial ECG (e.g. ST elevation, ST depression >0.5mm, Q waves, LVH, paced rhythm or LBBB)",
+            "Abnormal initial ECG (e.g. ST elevation, ST depression >0.5mm, Q waves, LVH, paced rhythm or LBBB)",
           "data": {
             "type": "radio",
             "options": "No | Yes",
@@ -3900,9 +4007,15 @@
       ],
       "results": {
         "0": ["Low risk for adverse event. Candidate for early discharge"],
-        "1 - 3": ["Standard Evaluation. This patient is not a candidate for early discharge and should receive a standard chest pain evaluation"],
-        "4": ["Low risk if chest pain is reproducible. Candidate for early discharge. Step 3 is not required."],
-        "5 - 10": ["Standard Evaluation. This patient is not a candidate for early discharge and should receive a standard chest pain evaluation"]
+        "1 - 3": [
+          "Standard Evaluation. This patient is not a candidate for early discharge and should receive a standard chest pain evaluation"
+        ],
+        "4": [
+          "Low risk if chest pain is reproducible. Candidate for early discharge. Step 3 is not required."
+        ],
+        "5 - 10": [
+          "Standard Evaluation. This patient is not a candidate for early discharge and should receive a standard chest pain evaluation"
+        ]
       },
       "showPointsInResults": false,
       "notes": {
