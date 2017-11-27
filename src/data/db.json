@@ -193,10 +193,6 @@
       "title": "Rule of 7s for Lyme Meningitis"
     },
     {
-      "id": "bap-65-score-acute-exacerbation-copd",
-      "title": "BAP-65 Score for Acute Exacerbation of COPD"
-    },
-    {
       "id": "san-francisco-syncope-rule",
       "title": "San Francisco Syncope Rule"
     },
@@ -3585,75 +3581,6 @@
           "content": [
             "Garro AC, Rutman M, Simonsen K, Jaeger JL, Chapin K, Lockhart G. Prospective validation of a clinical prediction model for Lyme meningitis in children. Pediatrics. 2009 May;123(5):e829-34.",
             "Cohn KA, Thompson AD, et al. Validation of a Clinical Prediction Rule to Distinguish Lyme Meningitis From Aseptic Meningitis. Pediatrics. 2012; 129(1):e46-53"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "bap-65-score-acute-exacerbation-copd",
-      "title": "BAP-65 Score for Acute Exacerbation of COPD",
-      "type": "points",
-      "points": 0,
-      "questions": [
-        {
-          "group": "BUN ≥ 8.9 mmol/L (25mg/dL)",
-          "data": {
-            "type": "radio",
-            "options": "No | Yes",
-            "points": "0/1"
-          }
-        },
-        {
-          "group":
-          "Altered mental status (GCS <14, disorientation, stupor, coma)",
-          "data": {
-            "type": "radio",
-            "options": "No | Yes",
-            "points": "0/1"
-          }
-        },
-        {
-          "group": "Pulse rate ≥ 109bpm",
-          "data": {
-            "type": "radio",
-            "options": "No | Yes",
-            "points": "0/1"
-          }
-        },
-        {
-          "group": "Patient Age",
-          "data":
-          {
-            "type": "radio",
-            "options": "41-64 yrs | ≥65 yrs",
-            "points": "0/0.5"
-          },
-          "showPoints": false
-        }
-      ],
-      "results": {
-        "0": ["Class I; BAP 0, Age <65 years. Routine management of COPD exacerbation. In-hospital mortality 0.3% with 0.3% requiring intubation within 48 hrs"],
-        "0.5": ["Class II; BAP 0, Age ≥65 years. Routine management of COPD exacerbation. In-hospital mortality 1% with 0.2% requiring intubation within 48 hrs"],
-        "1": ["Class III; BAP 1, Any age >40. Consider early non-invasive ventilation and/or ICU care. In-hospital mortality 2.2% with 1.2% requiring intubation within 48 hrs"],
-        "2": ["Class IV; BAP 2, Any age >40. Consider early non-invasive ventilation and/or ICU care. In-hospital mortality 6.4% with 5.5% requiring intubation within 48 hrs"],
-        "3": ["Class V; BAP 3, Any age >40. Consider early non-invasive ventilation, close monitoring and/or ICU care. In-hospital mortality 14.1% with 12.4% requiring intubation within 48 hrs"]
-      },
-      "notes": [
-        {
-          "type": "unordered-list",
-          "content": [
-            "The BAP-65 score should be used in patients >40 years of age that present to the emergency department with acute COPD exacerbation.",
-            "Data for in-hospital mortality comes from the validation study Tabak 2009",
-            "BAP-65 Class V patients have the highest risk of in-hospital mortality and need for mechanical ventilation. These patients should be closely monitored"
-          ]
-        }
-      ],
-      "references": [
-        {
-          "type": "ordered-list",
-          "content": [
-            "Tabak YP, Sun X, Johannes RS, et al. Mortality and Need for Mechanical Ventilation in Acute Exacerbations of Chronic Obstructive Pulmonary Disease Development and Validation of a Simple Risk Score. Arch Intern Med. 2009;169(17):1595-1602.",
-            "Shorr AF, Sun X, Johannes RS, Yaitanes A, Tabak YP. Validation of a novel risk score for severity of illness in acute exacerbations of COPD. Chest. 2011 Nov;140(5):1177-1183"
           ]
         }
       ]
