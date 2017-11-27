@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { cleanCalculator } from '../../store/modules/calculator'
+import CalculatorList from '../List/CalculatorList'
 
 class Home extends Component {
   renderList = list => {
@@ -17,7 +18,12 @@ class Home extends Component {
   }
 
   render () {
-    return <ul>{this.renderList(this.props.data)}</ul>
+    return (
+      <div>
+        <CalculatorList />
+        <ul>{this.renderList(this.props.data)}</ul>
+      </div>
+    )
   }
 }
 

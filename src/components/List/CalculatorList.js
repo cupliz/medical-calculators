@@ -20,21 +20,6 @@ function CalculatorList (props) {
     <div className={classes.root}>
       <List>
         <ListItem button>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <ListItemText primary='Inbox' />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <DraftsIcon />
-          </ListItemIcon>
-          <ListItemText primary='Drafts' />
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem button>
           <ListItemText primary='Trash' />
         </ListItem>
         <ListItem button component='a' href='#simple-list'>
