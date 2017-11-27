@@ -3589,6 +3589,7 @@
       "id": "san-francisco-syncope-rule",
       "title": "San Francisco Syncope Rule",
       "type": "points",
+      "points": 0,
       "questions": [
         {
           "group": "History of Congestive Heart Failure",
