@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Autosuggest from 'react-autosuggest'
 import TextField from 'material-ui/TextField'
@@ -147,7 +147,7 @@ const styles = theme => ({
   }
 })
 
-class CalculatorSearch extends React.Component {
+class CalculatorSearch extends Component {
   state = {
     value: '',
     suggestions: []
