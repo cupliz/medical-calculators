@@ -12,9 +12,14 @@ const getCalculateGroupPoints = calculate => {
 class FormulaComponent extends Component {
   state = {}
 
-  handleFormulaCalc = (primaryCriteria, additionalCriteria, classes) => {
-    // 1 Primary Criteria and 2 Additional Criteria
-    if (primaryCriteria >= 1 && additionalCriteria >= 2) {
+  handleFormulaCalc = (majorCriteria, minorCriteria, classes) => {
+    // Diagnostic : 1 Major Criteria and 1 Minor Criteria
+    //
+    // Diagnostic : 0 Major Criteria and 3 Minor Criteria
+    if (
+      (majorCriteria >= 1 && minorCriteria >= 1) ||
+      (majorCriteria >= 0 && minorCriteria >= 3)
+    ) {
       return (
         <Typography type='title' className={classes.contentText}>
           Diagnostic with:
@@ -34,35 +39,35 @@ class FormulaComponent extends Component {
     const { questions } = data
 
     // extract needed field vars
-    let primaryCriteria = 0
-    let additionalCriteria = 0
+    let majorCriteria = 0
+    let minorCriteria = 0
 
     questions.map((question, index) => {
       const { calculate } = question
       if (calculate) {
         if (index === 0) {
-          primaryCriteria = getCalculateGroupPoints(calculate)
+          majorCriteria = getCalculateGroupPoints(calculate)
         }
         if (index === 1) {
-          additionalCriteria = getCalculateGroupPoints(calculate)
+          minorCriteria = getCalculateGroupPoints(calculate)
         }
       }
       return calculate
     })
 
-    if (primaryCriteria || additionalCriteria) {
+    if (majorCriteria || minorCriteria) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
-            {this.handleFormulaCalc(primaryCriteria, additionalCriteria, classes)}
+            {this.handleFormulaCalc(majorCriteria, minorCriteria, classes)}
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultTextNoBold}>
-                {primaryCriteria} Primary Criteria
+                {majorCriteria} Major Criteria
               </Typography>
             </div>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultTextNoBold}>
-                {additionalCriteria} Additional Criteria
+                {minorCriteria} Minor Criteria
               </Typography>
             </div>
           </CardContent>
