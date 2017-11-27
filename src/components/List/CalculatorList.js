@@ -11,7 +11,7 @@ const styles = theme => ({
   }
 })
 
-function CalculatorList (props) {
+const CalculatorList = (props) => {
   const { classes } = props
   return (
     <div className={classes.root}>
