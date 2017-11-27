@@ -105,6 +105,9 @@ const styles = theme => ({
   },
   textField: {
     width: '100%'
+  },
+  input: {
+    padding: '12px 16px'
   }
 })
 
