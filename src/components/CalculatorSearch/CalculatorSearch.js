@@ -138,6 +138,10 @@ class CalculatorSearch extends Component {
     })
   }
 
+  onSuggestionSelected = () => {
+    const id = this.props.data.filter(item => (item.title === this.state.value ? item.id : null))[0].id
+  }
+
   render () {
     const { classes } = this.props
 
@@ -156,6 +160,7 @@ class CalculatorSearch extends Component {
         renderSuggestionsContainer={renderSuggestionsContainer}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
+        onSuggestionSelected={this.onSuggestionSelected}
         inputProps={{
           autoFocus: true,
           classes,
