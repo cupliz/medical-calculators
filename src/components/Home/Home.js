@@ -13,7 +13,7 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <CalculatorSearch />
+        <CalculatorSearch data={this.props.data} />
         <CalculatorList data={this.props.data} />
       </div>
     )
