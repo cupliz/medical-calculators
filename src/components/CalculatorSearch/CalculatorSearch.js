@@ -64,7 +64,7 @@ const renderInput = (inputProps) => {
   )
 }
 
-function renderSuggestion (suggestion, { query, isHighlighted }) {
+const renderSuggestion = (suggestion, { query, isHighlighted }) => {
   const matches = match(suggestion.label, query)
   const parts = parse(suggestion.label, matches)
 
