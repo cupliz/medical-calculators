@@ -4553,8 +4553,8 @@
         }
       ],
       "results": {
-        "0 - 1": ["X-Ray not indicated"],
-        "2 - 6": ["X-Ray is indicated"]
+        "0": ["X-Ray not indicated"],
+        "1 - 6": ["X-Ray is indicated"]
       },
       "notes": {
         "type": "unordered-list",
