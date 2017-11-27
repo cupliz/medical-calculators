@@ -20,7 +20,7 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <CalculatorList />
+        <CalculatorList data={this.props.data} />
         <ul>{this.renderList(this.props.data)}</ul>
       </div>
     )
