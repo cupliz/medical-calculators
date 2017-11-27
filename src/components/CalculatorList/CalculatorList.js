@@ -14,7 +14,7 @@ const styles = theme => ({
     padding: 0
   },
   listItem: {
-    // display: ''
+    border: '1px solid red'
   }
 })
 
