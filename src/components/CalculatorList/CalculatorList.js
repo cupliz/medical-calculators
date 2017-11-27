@@ -21,7 +21,13 @@ const styles = theme => ({
 const renderList = (list, classes) => {
   return list.map(listItem => (
     <div>
-      <ListItem key={listItem.id} button component={Link} to={`/${listItem.id}`} className={classes.listItem}>
+      <ListItem
+        key={listItem.id}
+        button
+        component={Link}
+        to={`/${listItem.id}`}
+        className={classes.listItem}
+      >
         <ListItemText primary={listItem.title} />
       </ListItem>
     </div>
