@@ -76,7 +76,7 @@ const getSuggestions = (value, data) => {
     ? []
     : data.filter(suggestion => {
       const keep =
-          count < 5 &&
+          count < 10 &&
           suggestion.title.toLowerCase().slice(0, inputLength) === inputValue
 
       if (keep) {
@@ -138,6 +138,10 @@ class CalculatorSearch extends Component {
     })
   }
 
+  onSuggestionSelected = () => {
+    console.log('selected')
+  }
+
   render () {
     const { classes } = this.props
 
@@ -156,6 +160,7 @@ class CalculatorSearch extends Component {
         renderSuggestionsContainer={renderSuggestionsContainer}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
+        onSuggestionSelected={this.onSuggestionSelected}
         inputProps={{
           autoFocus: true,
           classes,
