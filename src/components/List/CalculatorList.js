@@ -11,26 +11,24 @@ const styles = theme => ({
     background: theme.palette.background.paper
   }
 })
+// <li key={listItem.id}>
+//   <Link to={`/${listItem.id}`}>{listItem.title}</Link>
+// </li>
 
 const renderList = list => {
   return list.map(listItem => (
-    <li key={listItem.id}>
-      <Link to={`/${listItem.id}`}>{listItem.title}</Link>
-    </li>
+    <ListItem key={listItem.id} button component='a' href={`/${listItem.id}`}>
+      <ListItemText primary={listItem.title} />
+    </ListItem>
   ))
 }
 
 const CalculatorList = (props) => {
-  const { classes } = props
+  const { classes, data } = props
   return (
     <div className={classes.root}>
       <List>
-        <ListItem button>
-          <ListItemText primary='Trash' />
-        </ListItem>
-        <ListItem button component='a' href='#simple-list'>
-          <ListItemText primary='Spam' />
-        </ListItem>
+        {renderList(data)}
       </List>
     </div>
   )
