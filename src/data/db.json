@@ -4445,7 +4445,7 @@
       ],
       "results": {
         "0": ["Very low risk for bacterial meningitis. Consider discharge with close follow-up within 24-48 hr"],
-        "1 - 5": ["Not very low risk for bacterial meningitis. Consider admission for parenteral antibiotics and observation while awaiting CSF culture results."]
+        "1 - 6": ["Not very low risk for bacterial meningitis. Consider admission for parenteral antibiotics and observation while awaiting CSF culture results."]
       },
       "notes": {
         "type": "unordered-list",
