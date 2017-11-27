@@ -35,7 +35,7 @@ const renderSuggestion = (suggestion, { query, isHighlighted }) => {
   const parts = parse(suggestion.title, matches)
 
   return (
-    <Link to={`/${suggestion.id}`}>
+    <Link to={`/${suggestion.id}`} style={{textDecoration: 'none'}}>
       <MenuItem selected={isHighlighted} component='div'>
         <div>
           {parts.map((part, index) => {
