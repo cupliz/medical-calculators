@@ -11,13 +11,10 @@ const styles = theme => ({
     background: theme.palette.background.paper
   }
 })
-// <li key={listItem.id}>
-//   <Link to={`/${listItem.id}`}>{listItem.title}</Link>
-// </li>
 
 const renderList = list => {
   return list.map(listItem => (
-    <ListItem key={listItem.id} button component='a' href={`/${listItem.id}`}>
+    <ListItem key={listItem.id} button component={Link} to={`/${listItem.id}`}>
       <ListItemText primary={listItem.title} />
     </ListItem>
   ))
