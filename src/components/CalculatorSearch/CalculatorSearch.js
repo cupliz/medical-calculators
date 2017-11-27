@@ -101,10 +101,13 @@ const getSuggestionValue = (suggestion) => {
   return suggestion.label
 }
 
-const getSuggestions = (value) => {
+const getSuggestions = (value, data) => {
   const inputValue = value.trim().toLowerCase()
   const inputLength = inputValue.length
   let count = 0
+
+  console.log(data)
+  console.log(suggestions)
 
   return inputLength === 0
     ? []
@@ -153,7 +156,7 @@ class CalculatorSearch extends Component {
 
   handleSuggestionsFetchRequested = ({ value }) => {
     this.setState({
-      suggestions: getSuggestions(value)
+      suggestions: getSuggestions(value, this.props.data)
     })
   }
 
