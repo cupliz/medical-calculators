@@ -45,7 +45,7 @@ const suggestions = [
   { label: 'Brunei Darussalam' }
 ]
 
-function renderInput (inputProps) {
+const renderInput = (inputProps) => {
   const { classes, autoFocus, value, ref, ...other } = inputProps
 
   return (
