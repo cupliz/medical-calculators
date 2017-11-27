@@ -7,8 +7,9 @@ import { MenuItem } from 'material-ui/Menu'
 import match from 'autosuggest-highlight/match'
 import parse from 'autosuggest-highlight/parse'
 import { withStyles } from 'material-ui/styles'
+import { Link } from 'react-router-dom'
 
-const renderInput = (inputProps) => {
+const renderInput = inputProps => {
   const { classes, autoFocus, value, ref, ...other } = inputProps
 
   return (
@@ -32,25 +33,27 @@ const renderSuggestion = (suggestion, { query, isHighlighted }) => {
   const parts = parse(suggestion.title, matches)
 
   return (
-    <MenuItem selected={isHighlighted} component='div'>
-      <div>
-        {parts.map((part, index) => {
-          return part.highlight ? (
-            <span key={index} style={{ fontWeight: 300 }}>
-              {part.text}
-            </span>
-          ) : (
-            <strong key={index} style={{ fontWeight: 500 }}>
-              {part.text}
-            </strong>
-          )
-        })}
-      </div>
-    </MenuItem>
+    <Link to={`/${suggestion.id}`}>
+      <MenuItem selected={isHighlighted} component='div'>
+        <div>
+          {parts.map((part, index) => {
+            return part.highlight ? (
+              <span key={index} style={{ fontWeight: 300 }}>
+                {part.text}
+              </span>
+            ) : (
+              <strong key={index} style={{ fontWeight: 500 }}>
+                {part.text}
+              </strong>
+            )
+          })}
+        </div>
+      </MenuItem>
+    </Link>
   )
 }
 
-const renderSuggestionsContainer = (options) => {
+const renderSuggestionsContainer = options => {
   const { containerProps, children } = options
 
   return (
@@ -60,7 +63,7 @@ const renderSuggestionsContainer = (options) => {
   )
 }
 
-const getSuggestionValue = (suggestion) => {
+const getSuggestionValue = suggestion => {
   return suggestion.title
 }
 
