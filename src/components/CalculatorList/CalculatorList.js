@@ -12,12 +12,15 @@ const styles = theme => ({
   },
   list: {
     padding: 0
+  },
+  listItem: {
+    // display: ''
   }
 })
 
-const renderList = list => {
+const renderList = (list, classes) => {
   return list.map(listItem => (
-    <ListItem key={listItem.id} button component={Link} to={`/${listItem.id}`}>
+    <ListItem key={listItem.id} button component={Link} to={`/${listItem.id}`} className={classes.listItem}>
       <ListItemText primary={listItem.title} />
     </ListItem>
   ))
@@ -28,7 +31,7 @@ const CalculatorList = props => {
   return (
     <div className={classes.root}>
       <List component='div' className={classes.list}>
-        {renderList(data)}
+        {renderList(data, classes)}
       </List>
     </div>
   )
