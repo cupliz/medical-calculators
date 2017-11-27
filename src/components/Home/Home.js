@@ -2,17 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { cleanCalculator } from '../../store/modules/calculator'
-import CalculatorList from '../List/CalculatorList'
+import CalculatorList from '../CalculatorList/CalculatorList'
+import CalculatorSearch from '../CalculatorSearch/CalculatorSearch'
 
 class Home extends Component {
-  renderList = list => {
-    return list.map(listItem => (
-      <li key={listItem.id}>
-        <Link to={`/${listItem.id}`}>{listItem.title}</Link>
-      </li>
-    ))
-  }
-
   componentDidMount () {
     this.props.cleanCalculator()
   }
@@ -20,8 +13,8 @@ class Home extends Component {
   render () {
     return (
       <div>
+        <CalculatorSearch />
         <CalculatorList data={this.props.data} />
-        <ul>{this.renderList(this.props.data)}</ul>
       </div>
     )
   }
