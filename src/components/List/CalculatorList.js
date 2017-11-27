@@ -22,9 +22,10 @@ const renderList = list => {
 
 const CalculatorList = props => {
   const { classes, data } = props
+  console.log(data)
   return (
     <div className={classes.root}>
-      <List>{renderList(data)}</List>
+      <List component='div'>{renderList(data)}</List>
     </div>
   )
 }
