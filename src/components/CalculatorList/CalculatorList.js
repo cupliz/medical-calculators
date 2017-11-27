@@ -14,15 +14,17 @@ const styles = theme => ({
     padding: 0
   },
   listItem: {
-    border: '1px solid red'
+    display: 'inline-flex'
   }
 })
 
 const renderList = (list, classes) => {
   return list.map(listItem => (
-    <ListItem key={listItem.id} button component={Link} to={`/${listItem.id}`} className={classes.listItem}>
-      <ListItemText primary={listItem.title} />
-    </ListItem>
+    <div>
+      <ListItem key={listItem.id} button component={Link} to={`/${listItem.id}`} className={classes.listItem}>
+        <ListItemText primary={listItem.title} />
+      </ListItem>
+    </div>
   ))
 }
 
