@@ -4,6 +4,7 @@ import CalculatorBody from './body/CalculatorBody'
 import { connect } from 'react-redux'
 import { fetchCalcData } from '../../store/modules/calculator'
 import Loader from '../Loader/Loader'
+import ResultCard from './body/calculate/results/ResultCard'
 
 const LoadingView = () => <Loader />
 
@@ -17,6 +18,7 @@ class ComponentView extends Component {
       <div className='calculator'>
         <CalculatorHeader title={this.props.data.title} />
         <CalculatorBody data={this.props.data} />
+        <ResultCard />
       </div>
     )
   }
