@@ -192,7 +192,7 @@ class CalculatorSearch extends Component {
         inputProps={{
           autoFocus: true,
           classes,
-          placeholder: 'Search a country (start with a)',
+          placeholder: 'Search a calculator',
           value: this.state.value,
           onChange: this.handleChange
         }}
