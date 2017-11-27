@@ -4,7 +4,7 @@ import CalculatorBody from './body/CalculatorBody'
 import { connect } from 'react-redux'
 import { fetchCalcData } from '../../store/modules/calculator'
 import Loader from '../Loader/Loader'
-import ResultCard from './body/calculate/results/ResultCard'
+import ResultCard from './results/ResultCard'
 
 const LoadingView = () => <Loader />
 

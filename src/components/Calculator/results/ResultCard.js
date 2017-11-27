@@ -71,7 +71,7 @@ class ResultCard extends Component {
   componentDidMount () {
     const { type, id } = this.props
     if (type === 'formula') {
-      import(`../../../../../formulas/${id}.js`)
+      import(`../../../formulas/${id}.js`)
         .then(module => {
           const formulaModule = module.default
           this.setState({ formulaModule })
