@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import List, { ListItem, ListItemText } from 'material-ui/List'
 import { Link } from 'react-router-dom'
+import Divider from 'material-ui/es/Divider/Divider'
 
 const styles = theme => ({
   root: {
@@ -16,15 +17,18 @@ const styles = theme => ({
 
 const renderList = (list, classes) => {
   return list.map(listItem => (
-    <ListItem
-      key={listItem.id}
-      button
-      component={Link}
-      to={`/${listItem.id}`}
-      className={classes.listItem}
-    >
-      <ListItemText primary={listItem.title} />
-    </ListItem>
+    <div>
+      <ListItem
+        key={listItem.id}
+        button
+        component={Link}
+        to={`/${listItem.id}`}
+        className={classes.listItem}
+      >
+        <ListItemText primary={listItem.title} />
+      </ListItem>
+      <Divider />
+    </div>
   ))
 }
 
