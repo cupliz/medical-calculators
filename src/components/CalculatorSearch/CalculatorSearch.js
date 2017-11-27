@@ -101,7 +101,7 @@ const getSuggestionValue = (suggestion) => {
   return suggestion.label
 }
 
-function getSuggestions (value) {
+const getSuggestions = (value) => {
   const inputValue = value.trim().toLowerCase()
   const inputLength = inputValue.length
   let count = 0
