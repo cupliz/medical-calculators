@@ -78,7 +78,7 @@ const getSuggestions = (value, data) => {
     ? []
     : data.filter(suggestion => {
       const keep =
-          count < 10 &&
+          count < 5 &&
           suggestion.title.toLowerCase().slice(0, inputLength) === inputValue
 
       if (keep) {
