@@ -87,7 +87,7 @@ const renderSuggestion = (suggestion, { query, isHighlighted }) => {
   )
 }
 
-function renderSuggestionsContainer (options) {
+const renderSuggestionsContainer = (options) => {
   const { containerProps, children } = options
 
   return (
