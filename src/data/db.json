@@ -207,6 +207,70 @@
     {
       "id": "vancouver-chest-pain-rule",
       "title": "Vancouver Chest Pain Rule"
+    },
+    {
+      "id": "behcets-syndrome-diagnostic-criteria",
+      "title": "Bechet's Syndrome Diagnostic Criteria"
+    },
+    {
+      "id": "kawasaki-disease-diagnostic-criteria",
+      "title": "Kawasaki Disease Diagnostic Criteria"
+    },
+    {
+      "id": "irritable-bowel-syndrome-diagnostic-criteria-manning",
+      "title": "Irritable Bowel Syndrome Diagnostic Criteria (Manning Criteria)"
+    },
+    {
+      "id": "multiple-myeloma-diagnostic-criteria",
+      "title": "Multiple Myeloma Diagnostic Criteria"
+    },
+    {
+      "id": "bacterial-meningitis-score-children",
+      "title": "Bacterial Meningitis Score for Children"
+    },
+    {
+      "id": "ottawa-foot-rule-for-the-use-of-x-ray-in-foot-injury",
+      "title": "Ottawa Foot Rule for the Use of X-Ray in Foot Injury"
+    },
+    {
+      "id": "ottawa-knee-rule-x-ray-knee-injury",
+      "title": "Ottawa Knee Rule for use of X-Ray in Knee Injury"
+    },
+    {
+      "id": "rockall-score-upper-gi-bleeding",
+      "title": "Rockall Score for Upper GI Bleeding"
+    },
+    {
+      "id": "aims65-score-upper-gi-bleeding",
+      "title": "AIMS65 Score for Upper GI Bleeding Mortality"
+    },
+    {
+      "id": "lower-gi-bleeding-risk-severe-bleeding",
+      "title": "Lower GI Bleeding and Risk of Severe Bleeding"
+    },
+    {
+      "id": "pancreatitis-prognosis-criteria-disease-gallstones",
+      "title": "Pancreatitis Prognosis Criteria When Disease Due to Gallstones"
+    },
+    {
+      "id": "breast-cancer-recurrence-risk-after-mastectomy",
+      "title": "Breast Cancer Recurrence Risk After Mastectomy"
+    },
+    {
+      "id": "pneumonia-risk-post-operative-period-non-cardiac-surgery",
+      "title": "Pneumonia Risk in Post Operative Period of Non-Cardiac Surgery"
+    },
+    {
+      "id": "bleeding-risk-major-complication-warfarin-therapy",
+      "title": "Bleeding Risk (Major Complication) on Warfarin Therapy"
+    },
+    {
+      "id": "bleeding-risk-index-warfarin-therapy",
+      "title": "Bleeding Risk Index for Warfarin Therapy"
+    },
+    {
+      "id": "myelodysplastic-syndrome-international-prognostic-scoring-system",
+      "title": "Myelodysplastic Syndrome International Prognostic Scoring System"
     }
   ],
   "calculators": [
@@ -4031,6 +4095,1144 @@
         "type": "ordered-list",
         "content": [
           "Scheuermeyer FX, Wong H, Yu E, Boychuk B, Innes G, Grafstein E, Gin K, Christenson J.Development and validation of a prediction rule for early discharge of low-risk emergency department patients with potential ischemic chest pain. CJEM. 2014 Mar;16(2):106-19."
+        ]
+      }
+    },
+    {
+      "id": "behcets-syndrome-diagnostic-criteria",
+      "title": "Bechet's Syndrome Diagnostic Criteria",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Required Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label":
+              "Recurrent oral ulcerations: minor aphthous, major aphtous or herpetiform ulceration observed by physician or patient, which recurred at least 3 times in one 12 month period",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Minor Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Eye lesion: anterior uveitis, posterior uveitis, or cells in vitreous on slit lamp examination or retinal vasculitis observed by ophthalmologist",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Recurrent genital ulceration: aphthous ulceration or scarring observed by physician or patient",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label":
+              "Skin lesions: erythema nodosum observed by physician or patient, pseudofolliculitis or papulopustular lesions, or acneform nodules observed by physician in post-adolescent patients not on corticosteroid treatment",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label":
+              "Immunologic phenomena: glomerulonephritis, Osler nodes, Roth spots, rheumatoid factor",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label":
+              "Positive pathergy test (Behcetine test) read by physician 24-48 hours",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Diagnostic : 1 Required Criteria and 2 Minor Criteria"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "International Study Group for Behcet's Disease. Criteria for diagnosis of Behcet's disease. Lancet. 1990 May 5;335(8697):1078-80."
+        ]
+      }
+    },
+    {
+      "id": "kawasaki-disease-diagnostic-criteria",
+      "title": "Kawasaki Disease Diagnostic Criteria",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Required Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label":
+              "Fever for at least five days generally high and spiking (often to 40° C or more), persisting for one to two weeks or longer in untreated patients.",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Additional Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Acute changes in arms or legs: redness, swelling and erythema of the palms and soles.",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Polymorphic exanthem involving the trunk and extremities.",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Painless, nonexudative bilateral bulbar conjunctival injection",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Changes in lips and oral cavity. Strawberry tongue, redness and cracking of the lips, and erythema of the oropharyngeal mucosa. No mouth ulcers.",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Cervical lymphadenopathy: often unilateral, slightly tender, firm nodes >1.5cm in diameter.",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Exclusion of other diseases with similar findings",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Diagnostic : 1 Required Criteria and 4 Additional Criteria"
+        ]
+      },
+      "notes:": {
+        "type": "unordered-list",
+        "content": [
+          "Use to diagnose pediatric patients with several days of unexplained fever associated with any of the principal clinical features of Kawasaki Disease",
+          "If the diagnosis of Kawasaki Disease is made in the acute phase, prompt treatment is essential with intravenous immunoglobulin (IVIG) and aspirin to prevent CA abnormalities",
+          "Treatment should be initiated within the first 10 days of the disease and if possible within 7 days of the disease"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Dajani AS, Taubert KA, Gerber MA, Shulman ST, Ferrieri P, Freed M, et al. Diagnosis and therapy of Kawasaki disease in children. Circulation. 1993;87:1776-80.",
+          "Newburger JW, Takahashi M, Gerber MA, et al. Diagnosis, treatment, and long-term management of Kawasaki disease: a statement for health professionals from the Committee on Rheumatic Fever, Endocarditis and Kawasaki Disease, Council on Cardiovascular Disease in the Young, American Heart Association. Circulation. 2004 Oct 26;110(17):2747-71."
+        ]
+      }
+    },
+    {
+      "id": "irritable-bowel-syndrome-diagnostic-criteria-manning",
+      "title": "Irritable Bowel Syndrome Diagnostic Criteria (Manning Criteria)",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Required Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label":
+              "Persistence or recurrence of the following symptoms for at least 3 months time: Abdominal pain / discomfort, relieved with BM or associated with a change in the frequency or consistency of stool",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Additional Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "A varying or irregular pattern of defecation at least 25% of the time with 2 or more of the following:",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Altered Bowel Movement frequency",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label":
+              "Altered Bowel Movement form (hard, loose or watery stool)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label":
+              "Altered stool passage (straining, urgency, or incomplete evacuation sensation)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label":
+              "Diarrhea with mucus >25% of the time",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Diagnostic : 1 Required Criteria and 2 Additional Criteria"
+        ]
+      },
+      "notes:": {
+        "type": "unordered-list",
+        "content": [
+          "Manning Criteria determines the likelihood of irritable bowel syndrome diagnosis",
+          "IBS is a rule-out diagnosis which means that all other possibilities must be ruled out first",
+          "If red flag signs are present, IBS is not likely. These include: patient's age >50 years, weight loss, blood in stools, anemia and fever"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Drossman DA, Funch-Jensen P, Janssens J, et al. Identification of subgroups of functional bowel disorders. Gastroenterol International. 1990;3:15."
+        ]
+      }
+    },
+    {
+      "id": "multiple-myeloma-diagnostic-criteria",
+      "title": "Multiple Myeloma Diagnostic Criteria",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Major Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Plasmacytoma on tissue biopsy",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Bone marrow plasmacytosis of > 30%",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "M Protein: IgG > 3.5 g/L; IgA > 2.0 g/L",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Urinary kappa or lambda chain excretion of > 1g / 24 hours in absence of amyloidosis",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Minor Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Marrow plasmacytosis of 10-30%",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Evidence of a monoclonal protein but lessor amounts than above",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Lytic bone lesions",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Hypoglobulinemia of normal proteins: IgM < 500 mg/L, IgA < 1 g/L or IgG < 6g/L",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Diagnostic: 1 Major Criteria and 1 Minor Criteria",
+          "Diagnostic: 0 Major Criteria and 3 Minor Criteria"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Durie BG, Salmon SE. A clinical staging system for multiple myeloma. Cancer. 1975; 36:842-854."
+        ]
+      }
+    },
+    {
+      "id": "bacterial-meningitis-score-children",
+      "title": "Bacterial Meningitis Score for Children",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "CSF Gram Stain Positive",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "CSF Absolute Neutrophil Count ≥1000 cells/µL",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "CSF protein ≥80 mg/dL (800 mg/L)",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Peripheral blood Absolute Neutrophil Count ≥10,000 cells/µL",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Seizure at or prior to initial presentation",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Leukocytosis WBC >10,000",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        }
+      ],
+      "results": {
+        "0": ["Very low risk for bacterial meningitis. Consider discharge with close follow-up within 24-48 hr"],
+        "1 - 5": ["Not very low risk for bacterial meningitis. Consider admission for parenteral antibiotics and observation while awaiting CSF culture results."]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "This calculator can be used on pediatric patients (aged 29 days to 19 years) with suspected meningitis to rule out bacterial meningitis",
+          "Do not use on patients who are critically ill requiring respiratory or vasopressor support, or who have received antibiotics <72h prior to lumbar puncture",
+          "Do not use on patients with a Ventriculoperitoneal shunt or recent neurosurgery or are immunosuppressed",
+          "Do not use on patients who have known active Lyme Disease or proof or another bacterial infection (e.g. UTI, bone infection, bacteremia) that requires antibiotic therapy"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Nigrovic LE, Kupperman N, Macias CG, Cannavino CR et al. Clinical prediction rule for identifying children with cerebrospinal fluid pleocytosis at very low risk of bacterial meningitis. JAMA. 2007 Jan 3;297(1):52-60.",
+          "Nigrovic LE, Malley R, Kuppermann N. Meta-analysis of bacterial meningitis score validation studies. Arch Dis Child. 2012 Sep;97(9):799-805."
+        ]
+      }
+    },
+    {
+      "id": "ottawa-foot-rule-for-the-use-of-x-ray-in-foot-injury",
+      "title": "Ottawa Foot Rule for the Use of X-Ray in Foot Injury",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Required Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Pain in the midfoot",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Major Criteria",
+          "showPoints": false,
+          "data": [
+            {
+              "type": "checkbox",
+              "label":
+              "Inability to bear weight right after the injury as well as in the emergency department (4 steps)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label":
+              "Bone tenderness at the navicular or the base of the fifth metatarsal",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "X-Ray Indicated : 1 Required Criteria and 1 Major Criteria"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Stiell IG, McKnight RD, Greenberg GH, et. al. Implementation of the Ottawa ankle rules. JAMA. 1994 Mar 16;271(11):827-832.",
+          "Stiell IG, Greenberg GH, McKnight RD, et.al. Decision rules for the use of radiography in acute ankle injuries. Refinement and prospective validation. . JAMA. 1993 Mar 3;269(9):1127-32.",
+          "Stiell IG, Greenberg GH, McKnight RD, et. al. A study to develop clinical decision rules for the use of radiography in acute ankle injuries. Ann Emerg Med. 1992 Apr;21(4):384-90."
+        ]
+      }
+    },
+    {
+      "id": "ottawa-knee-rule-x-ray-knee-injury",
+      "title": "Ottawa Knee Rule for use of X-Ray in Knee Injury",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria:",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Age ≥ 55yrs",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Isolated tenderness of patella (no bone tenderness of knee other than patella)",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Tenderness of head of fibula",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Inability to flex to 90°",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Inability to bear weight both immediately and in the Emergency department for 4 steps",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": ["X-Ray not indicated"],
+        "2 - 6": ["X-Ray is indicated"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Ottawa Knee Rule describes criteria for low risk knee trauma patients that do not require knee imaging ",
+          "Patients who do not have any of the Ottawa Knee Rules criteria present do not require an X-Ray. If one or more of the criteria is met, then an X-Ray is recommended."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Stiell IG, Greenberg GH, Wells GA, et. al. Prospective validation of a decision rule for the use of radiography in acute knee injuries. JAMA. 1996 Feb 28;275(8):611-615.",
+          "Stiell IG, Wells GA, McDowell I, et. al. Use of radiography in acute knee injuries: need for clinical decision rules. Acad Emerg Med. 1995 Nov;2(11):966-73."
+        ]
+      }
+    },
+    {
+      "id": "rockall-score-upper-gi-bleeding",
+      "title": "Rockall Score for Upper GI Bleeding",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Patient Age",
+          "data": {
+            "type": "radio",
+            "options": "<60 years | 60-79 years | ≥80 years",
+            "points": "0/1/2"
+          }
+        },
+        {
+          "group": "Shock",
+          "data": {
+            "type": "radio",
+            "options": "No shock | Tachycardia (SBP≥100mmHg and HR≥100bpm) | Hypotension (SBP<100mmHg)",
+            "points": "0/1/2"
+          }
+        },
+        {
+          "group": "Co-morbidities",
+          "data": {
+            "type": "radio",
+            "options": "No major co-morbidity | Any co-morbidity except renal failure, liver failure and/or disseminated malignancy | Renal failure, Liver failure, and/or disseminated malignancy",
+            "points": "0/2/3"
+          }
+        },
+        {
+          "group": "Diagnosis",
+          "data": {
+            "type": "radio",
+            "options": "Mallory-Weiss tear | No lesion identified and no stigmata of recent hemorrhage | All other diagnoses | Malignancy of upper GI tract",
+            "points": "0/0/1/2"
+          }
+        },
+        {
+          "group": "Major stigmata of recent hemorrhage",
+          "data": {
+            "type": "radio",
+            "options": "None | Dark spot only | Blood in upper GI tract | Adherent clot | Visibile or spurting vessel",
+            "points": "0/0/2/2/2"
+          }
+        }
+      ],
+      "results": {
+        "0": ["Low risk; 4.9% rebleeding risk with 0% mortality risk"],
+        "1": ["Low risk, 3.4% rebleeding risk with 0% mortality risk"],
+        "2": ["Moderate risk 5.3% rebleeding risk with 0.2% mortality risk"],
+        "3": ["Moderate risk 11.2% rebleeding risk with 2.9% mortality risk"],
+        "4": ["Moderate risk 14.1% rebleeding risk with 5.3% mortality risk"],
+        "5": ["High risk 24.1% rebleeding risk with 10.8% mortality risk"],
+        "6": ["High risk 32.9% rebleeding risk with 17.3% mortality risk"],
+        "7": ["High risk 43.8% rebleeding risk with 27% mortality risk"],
+        "8 - 11": ["High risk 41.8% rebleeding risk with 41.1% mortality risk"]
+
+      },
+      "notes": [
+        {
+          "type": "unordered-list",
+          "content": [
+            "Rockall Score is used for known upper GI bleed patients with a completed endoscopy",
+            "Patients who have not yet had endoscopy should be assessed wiht the Pre-Endoscopy Rockall Score",
+            "The Rockall score predicts mortality better than chance alone but should be interpreted with caution. Other scores such as the Glasgow-Blatchford Score may perform better especially for identifying very low risk patients.",
+            "Consider diagnostic endoscopy for patients with high risk of mortality from upper GI bleeding",
+            "Consider ICU care for patients who are hemodynamically unstable from upper GI bleeding"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "type": "ordered-list",
+          "content": [
+            "Rockall TA, Logan RF, Devlin HB, Northfield TC. Risk assessment after acute upper gastrointestinall haemorrhage. Gut. 1996 Mar;38(3):316-21.",
+            "Vreeburg EM, Terwee CB, et al. Validation of the Rockall risk scoring system in up per gastrointestinal bleeding. Gut 1999;44:331-335"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aims65-score-upper-gi-bleeding",
+      "title": "AIMS65 Score for Upper GI Bleeding Mortality",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Albumin <3g/dL (30g/L)",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "INR >1.5",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Alteration in mental status",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Systolic BP ≤90mmHg",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        },
+        {
+          "group": "Age ≥65 years",
+          "data": {
+            "type": "radio",
+            "options": "No | Yes",
+            "points": "0/1"
+          }
+        }
+      ],
+      "results": {
+        "0": ["0.3% in-hospital mortality risk"],
+        "1": ["1.2% in-hospital mortality risk"],
+        "2": ["5.3% in-hospital mortality risk"],
+        "3": ["10.3% in-hospital mortality risk"],
+        "4": ["16.5% in-hospital mortality risk"],
+        "5": ["24.5% in-hospital mortality risk"]
+      },
+      "notes": [
+        {
+          "type": "unordered-list",
+          "content": [
+            "AIMS65 Score can be used to determine the risk of in-hospital mortality for patients wiht acute upper GI bleeding",
+            "The score was derived retrospectively by Saltzman et al in a 2011 study from a population of >29K patients from 187 hospitals who were admitted with acute upper GI bleeding from 2004-2005 ",
+            "The AIMS65 score is superior to the Glasgow-Blatchford Score in predicting mortality but the GBS is superior in predicting need for transfusion (Hyett 2013)",
+            "Validation studies (Robertson 2016) demonstrate that the AIMS65 score is superior to the Glasgow-Blatchford and Pre-endoscopy Rockall Score for predicting in-hospital mortality, ICU admission and length of stay"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "type": "ordered-list",
+          "content": [
+            "Saltzman JR, Tabak YP, Hyett BH, Sun X et al. A simple risk score accurately predicts in-hospital mortality, length of stay and cost in acute upper GI bleeding. Gastroinste Endosc. 2011;74:1215-1224",
+            "Robertson M, et al. Risk stratification in acute upper GI bleeding: comparison of the AIMS65 score with the Glasgow-Blatchford and Rockall scoring systems. Gastrointestinal Endosc. 83.6(2016):1151-1160",
+            "Thandassery RB, Sharma M, John AK, et al. Clinical Application of AIMS65 Scores to Predict Outcomes in Patients wiht Upper Gastrointestinal Hemorrhage. Clinical Endoscopy. 2015;48(5):380-384."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lower-gi-bleeding-risk-severe-bleeding",
+      "title": "Lower GI Bleeding and Risk of Severe Bleeding",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria:",
+          "data": [
+            {
+              "type": "checkbox",
+              "label":
+              "Pulse ≥100bpm",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Systolic Blood Pressure ≤115mmHg",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Patient had associated syncope",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Blood per rectum during first 4h of evaluation",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Patient on aspirin",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Patient has ≥3 comorbid conditions",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": ["Risk of Severe Bleeding: 9%"],
+        "1 - 3": ["Risk of Severe Bleeding: 43%"],
+        "4 - 6": ["Risk of Severe Bleeding: 84%"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Strate LL, Orav EJ, Syngal S. Early predictors of severity in acute lower intestinal tract bleeding. Arch Intern Med. 2003; 163: 838-43."
+        ]
+      }
+    },
+    {
+      "id": "pancreatitis-prognosis-criteria-disease-gallstones",
+      "title": "Pancreatitis Prognosis Criteria When Disease Due to Gallstones",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria at time of patient admission:",
+          "data": [
+            {
+              "type": "checkbox",
+              "label":
+              "Age >70yrs",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Glucose > 220 mg/dL",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "WBC > 18,000",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "AST > 250",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "LDH > 400",
+              "points": "1"
+            }
+          ]
+        },
+        {
+          "group": "Criteria that may develop over first 2 hospital days:",
+          "data": [
+            {
+              "type": "checkbox",
+              "label":
+              "BUN rises >2mg/dL",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Base deficit >5",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Hct drop ≥10% ",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Calcium < 8mg/dL",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Fluid sequestration >4L",
+              "points": "1"
+            }
+          ]
+        }
+
+      ],
+      "results": {
+        "0 - 2": ["Pancreatitis Mortality Risk is 1.8%"],
+        "3 - 4": ["Pancreatitis Mortality Risk is 11%"],
+        "5 - 6": ["Pancreatitis Mortality Risk is 33%"],
+        "7 - 10": ["Pancreatitis Mortality Risk is almost 100%"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Ranson JH, Rifkind KM, Turner JW. Prognostic signs and nonoperative peritoneal lavage in acute pancreatitis. Surg Gyne Ob. 143:209, 1976.",
+          "Ranson JH. Etiological and prognostic factors in human acute pancreatitis: a review. Am J Gastroenterol. 1982 Sep;77(9):633-8."
+        ]
+      }
+    },
+    {
+      "id": "breast-cancer-recurrence-risk-after-mastectomy",
+      "title": "Breast Cancer Recurrence Risk After Mastectomy",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Grade of tumor",
+          "data": {
+            "type": "radio",
+            "options": "I | II | III",
+            "points": "6/12/18"
+          }
+        },
+        {
+          "group": "Lymph nodes",
+          "data": {
+            "type": "radio",
+            "options": "Negative | Positive",
+            "points": "6/12"
+          }
+        },
+        {
+          "group": "Lymphatic or Vascular Invasion",
+          "data": {
+            "type": "radio",
+            "options": "No | Present",
+            "points": "4/8"
+          }
+        }
+      ],
+      "results": {
+        "16": ["Recurrence risk of 8.5%"],
+        "20": ["Recurrence risk of 12.5%"],
+        "22": ["Recurrence risk of 15.8%"],
+        "26": ["Recurrence risk of 10%"],
+        "28": ["Recurrence risk of 15.5%"],
+        "32": ["Recurrence risk of 33%"],
+        "34": ["Recurrence risk of 38.5%"],
+        "38": ["Recurrence risk of 48%"]
+      },
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "In this study, 23% of all patients developed a local recurrence of breast cancer"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "O'Rourke S, Galea MH, Morgan D, et. al. Local recurrence after simple mastectomy. Br J Surg. 1994 Mar;81(3):386-389."
+        ]
+      }
+    },
+    {
+      "id": "pneumonia-risk-post-operative-period-non-cardiac-surgery",
+      "title": "Pneumonia Risk in Post Operative Period of Non-Cardiac Surgery",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria:",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": ">10% weight loss over 6 months",
+              "points": "7"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of COPD",
+              "points": "4"
+            },
+            {
+              "type": "checkbox",
+              "label": "General anesthetic used",
+              "points": "4"
+            },
+            {
+              "type": "checkbox",
+              "label": "Sensorium impariment",
+              "points": "4"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of CVA",
+              "points": "4"
+            },
+            {
+              "type": "checkbox",
+              "label": ">4 units blood transfusion",
+              "points": "3"
+            },
+            {
+              "type": "checkbox",
+              "label": "Emergency operation",
+              "points": "3"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of chronic corticosteroid use",
+              "points": "3"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of smoking within 1 year",
+              "points": "3"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of alcohol use (>2 drinks/day within last 2 weeks)",
+              "points": "2"
+            }
+          ]
+        },
+        {
+          "group": "Type of Surgery",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "AAA repair",
+              "points": "15"
+            },
+            {
+              "type": "checkbox",
+              "label": "Thoracic surgery",
+              "points": "14"
+            },
+            {
+              "type": "checkbox",
+              "label":
+              "Upper abdominal surgery",
+              "points": "10"
+            },
+            {
+              "type": "checkbox",
+              "label": "Neck surgery",
+              "points": "8"
+            },
+            {
+              "type": "checkbox",
+              "label": "Neurosurgery",
+              "points": "8"
+            },
+            {
+              "type": "checkbox",
+              "label": "Vascular surgery",
+              "points": "3"
+            }
+          ]
+        },
+        {
+          "group": "Patient Age",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": ">80 years",
+              "points": "17"
+            },
+            {
+              "type": "checkbox",
+              "label": "70-79 years",
+              "points": "13"
+            },
+            {
+              "type": "checkbox",
+              "label": "60-69 years",
+              "points": "9"
+            },
+            {
+              "type": "checkbox",
+              "label": "50-59 years",
+              "points": "4"
+            },
+            {
+              "type": "checkbox",
+              "label": "<50 years",
+              "points": "0"
+            }
+          ]
+        },
+        {
+          "group": "Patient's Functional status",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Dependent",
+              "points": "10"
+            },
+            {
+              "type": "checkbox",
+              "label": "Partially dependent",
+              "points": "6"
+            },
+            {
+              "type": "checkbox",
+              "label": "Independent",
+              "points": "0"
+            }
+          ]
+        },
+        {
+          "group": "BUN concentration",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "< 8mg% (2.86 mmol/L)",
+              "points": "4"
+            },
+            {
+              "type": "checkbox",
+              "label": "22-29 mg% (7.85-10.6 mmol/L)",
+              "points": "2"
+            },
+            {
+              "type": "checkbox",
+              "label": "≥ 30mg% (10.7 mmol/L)",
+              "points": "3"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0 - 15": ["Risk of pneumonia 0.24%"],
+        "16 - 25": ["Risk of pneumonia 1.19%"],
+        "26 - 40": ["Risk of pneumonia 4%"],
+        "41 - 55": ["Risk of pneumonia 9.4%"],
+        "56 - 84": ["Risk of pneumonia 15.8%"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Arozullah AM, Khuri SF, Henderson WG, et. al. Development and validation of a multifactorial risk index for predicting postoperative pneumonia after major noncardiac surgery. Ann Intern Med. 2001 Nov 20;135(10):847-57."
+        ]
+      }
+    },
+    {
+      "id": "bleeding-risk-major-complication-warfarin-therapy",
+      "title": "Bleeding Risk (Major Complication) on Warfarin Therapy",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Age ≥60yrs",
+              "points": "1.6"
+            },
+            {
+              "type": "checkbox",
+              "label": "Malignancy Present",
+              "points": "2.2"
+            }
+          ]
+        },
+        {
+          "group": "Age",
+          "data": {
+            "type": "radio",
+            "options": "Female/Male",
+            "points": "1.3/0"
+          }
+        }
+      ],
+      "results": {
+        "0": ["Risk of any bleeding complications: 0-1%"],
+        "1.3 - 3": ["Risk of any bleeding complications: 1-2%"],
+        "3.1 - 5.1": ["Risk of any bleeding complications: 7-14%"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Kuijer PM, Hutten BA, Prins MH, Buller HR. Prediction of the risk of bleeding during anticoagulant treatment for venous thromboembolism. Arch Intern Med. 1999; 159: 457-60."
+        ]
+      }
+    },
+    {
+      "id": "bleeding-risk-index-warfarin-therapy",
+      "title": "Bleeding Risk Index for Warfarin Therapy",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Criteria",
+          "data": [
+            {
+              "type": "checkbox",
+              "label": "Patient Age ≥65yrs",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of CVA",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "History of GI bleeding",
+              "points": "1"
+            },
+            {
+              "type": "checkbox",
+              "label": "Recent Myocardial Infarction, Anemia with HCT <30%, Creatinine 1.5 or Diabetes",
+              "points": "1"
+            }
+          ]
+        }
+      ],
+      "results": {
+        "0": ["Risk of Major Bleeding: 2% @ 3 months, 3% at 12 months"],
+        "1 - 2": ["Risk of Major Bleeding: 5% @ 3 months, 12% at 12 months"],
+        "3 - 4": ["Risk of Major Bleeding: 23% @ 3 months, 48% at 12 months"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Wells PS, Forgie MA, Simms M, et al. The outpatient bleeding risk index: validation of a tool for predicting bleeding rates in patients treated for DVT and PE. Arch Intern Med. 2003; 163: 917-20.",
+          "Beyth RJ, Quinn LM, Landefeld CS. Prospective evaluation of an index for predicting the risk of major bleeding in outpatients treated with warfarin. Am J Med. 1998 Aug;105(2):91-99."
+        ]
+      }
+    },
+    {
+      "id": "myelodysplastic-syndrome-international-prognostic-scoring-system",
+      "title": "Myelodysplastic Syndrome International Prognostic Scoring System",
+      "type": "points",
+      "points": 0,
+      "questions": [
+        {
+          "group": "Percentage of Bone Marrow Blasts",
+          "data": {
+            "type": "radio",
+            "options": "<5% | 5-10% | 11-20% | 21-30%",
+            "points": "0/0.5/1.5/2"
+          }
+        },
+        {
+          "group": "Karyotype",
+          "data": {
+            "type": "radio",
+            "options": "Normal, Y-, 5q-, 20q- | Abnormal chromosome 7 or ≥3 more abnormalities | All other cytogenic abnormalities ",
+            "points": "0/1/0.5"
+          }
+        },
+        {
+          "group": "Cytopenias (Hemoglobin <10g/dL, ANS < 1,800/µL, Platelet count < 100,000/µL",
+          "data": {
+            "type": "radio",
+            "options": "No cytopenia/Cytopenia of 1 cell type | Cytonpenia of 2 or 3 cell types",
+            "points": "0/0.5"
+          }
+        }
+      ],
+      "results": {
+        "0": ["Prognostic Score: Low (Median survival of 5.7 years)"],
+        "0.5 - 1": ["Prognostic Score: Intermediate 1 (Median survival of 3.5 years)"],
+        "1.5 - 2": ["Prognostic Score: Intermediate 2 (Median survival of 1.2 years)"],
+        "2.5 - 3.5": ["Prognostic Score: High (Median survival of 0.4 years)"]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Greenberg P, Cox C, LeBeau MM et. al. International Scoring System for Evaluating Prognosis in Myelodysplastic Syndromes. Blood. 1997; 89;6: 2079 - 2088. Erratum in Blood 1998; 91:1100.",
+          "Greenberg P, Cox C, LeBeau MM et. al. International Scoring System for Evaluating Prognosis in Myelodysplastic Syndromes. Blood. 1997; 89;6: 2079 - 2088. Erratum in Blood 1998; 91:1100."
         ]
       }
     }
