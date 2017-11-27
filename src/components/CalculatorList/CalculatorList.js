@@ -7,29 +7,24 @@ import { Link } from 'react-router-dom'
 const styles = theme => ({
   root: {
     width: '100%',
-    maxWidth: 500,
     background: theme.palette.background.paper
   },
   list: {
     padding: 0
-  },
-  listItem: {
-    display: 'inline-flex'
   }
 })
 
 const renderList = (list, classes) => {
   return list.map(listItem => (
-    <div key={listItem.id}>
-      <ListItem
-        button
-        component={Link}
-        to={`/${listItem.id}`}
-        className={classes.listItem}
-      >
-        <ListItemText primary={listItem.title} />
-      </ListItem>
-    </div>
+    <ListItem
+      key={listItem.id}
+      button
+      component={Link}
+      to={`/${listItem.id}`}
+      className={classes.listItem}
+    >
+      <ListItemText primary={listItem.title} />
+    </ListItem>
   ))
 }
 
