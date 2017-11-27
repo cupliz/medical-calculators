@@ -8,43 +8,6 @@ import match from 'autosuggest-highlight/match'
 import parse from 'autosuggest-highlight/parse'
 import { withStyles } from 'material-ui/styles'
 
-const suggestions = [
-  { label: 'Afghanistan' },
-  { label: 'Aland Islands' },
-  { label: 'Albania' },
-  { label: 'Algeria' },
-  { label: 'American Samoa' },
-  { label: 'Andorra' },
-  { label: 'Angola' },
-  { label: 'Anguilla' },
-  { label: 'Antarctica' },
-  { label: 'Antigua and Barbuda' },
-  { label: 'Argentina' },
-  { label: 'Armenia' },
-  { label: 'Aruba' },
-  { label: 'Australia' },
-  { label: 'Austria' },
-  { label: 'Azerbaijan' },
-  { label: 'Bahamas' },
-  { label: 'Bahrain' },
-  { label: 'Bangladesh' },
-  { label: 'Barbados' },
-  { label: 'Belarus' },
-  { label: 'Belgium' },
-  { label: 'Belize' },
-  { label: 'Benin' },
-  { label: 'Bermuda' },
-  { label: 'Bhutan' },
-  { label: 'Bolivia, Plurinational State of' },
-  { label: 'Bonaire, Sint Eustatius and Saba' },
-  { label: 'Bosnia and Herzegovina' },
-  { label: 'Botswana' },
-  { label: 'Bouvet Island' },
-  { label: 'Brazil' },
-  { label: 'British Indian Ocean Territory' },
-  { label: 'Brunei Darussalam' }
-]
-
 const renderInput = (inputProps) => {
   const { classes, autoFocus, value, ref, ...other } = inputProps
 
@@ -65,8 +28,8 @@ const renderInput = (inputProps) => {
 }
 
 const renderSuggestion = (suggestion, { query, isHighlighted }) => {
-  const matches = match(suggestion.label, query)
-  const parts = parse(suggestion.label, matches)
+  const matches = match(suggestion.title, query)
+  const parts = parse(suggestion.title, matches)
 
   return (
     <MenuItem selected={isHighlighted} component='div'>
@@ -98,7 +61,7 @@ const renderSuggestionsContainer = (options) => {
 }
 
 const getSuggestionValue = (suggestion) => {
-  return suggestion.label
+  return suggestion.title
 }
 
 const getSuggestions = (value, data) => {
@@ -106,15 +69,12 @@ const getSuggestions = (value, data) => {
   const inputLength = inputValue.length
   let count = 0
 
-  console.log(data)
-  console.log(suggestions)
-
   return inputLength === 0
     ? []
-    : suggestions.filter(suggestion => {
+    : data.filter(suggestion => {
       const keep =
           count < 5 &&
-          suggestion.label.toLowerCase().slice(0, inputLength) === inputValue
+          suggestion.title.toLowerCase().slice(0, inputLength) === inputValue
 
       if (keep) {
         count += 1
