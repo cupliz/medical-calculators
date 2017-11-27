@@ -12,9 +12,9 @@ const getCalculateGroupPoints = calculate => {
 class FormulaComponent extends Component {
   state = {}
 
-  handleFormulaCalc = (requiredCriteria, additionalCriteria, classes) => {
-    // 1 Required Criteria and 4 Additional Criteria
-    if (requiredCriteria >= 1 && additionalCriteria >= 4) {
+  handleFormulaCalc = (primaryCriteria, additionalCriteria, classes) => {
+    // 1 Primary Criteria and 2 Additional Criteria
+    if (primaryCriteria >= 1 && additionalCriteria >= 2) {
       return (
         <Typography type='title' className={classes.contentText}>
           Diagnostic with:
@@ -34,14 +34,14 @@ class FormulaComponent extends Component {
     const { questions } = data
 
     // extract needed field vars
-    let requiredCriteria = 0
+    let primaryCriteria = 0
     let additionalCriteria = 0
 
     questions.map((question, index) => {
       const { calculate } = question
       if (calculate) {
         if (index === 0) {
-          requiredCriteria = getCalculateGroupPoints(calculate)
+          primaryCriteria = getCalculateGroupPoints(calculate)
         }
         if (index === 1) {
           additionalCriteria = getCalculateGroupPoints(calculate)
@@ -50,14 +50,14 @@ class FormulaComponent extends Component {
       return calculate
     })
 
-    if (requiredCriteria || additionalCriteria) {
+    if (primaryCriteria || additionalCriteria) {
       return (
         <ResultCardHeader classes={classes}>
           <CardContent className={classes.content}>
-            {this.handleFormulaCalc(requiredCriteria, additionalCriteria, classes)}
+            {this.handleFormulaCalc(primaryCriteria, additionalCriteria, classes)}
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultTextNoBold}>
-                {requiredCriteria} Required Criteria
+                {primaryCriteria} Primary Criteria
               </Typography>
             </div>
             <div className={classes.resultWrapper}>
