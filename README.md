@@ -8,6 +8,8 @@ Formula based calculators are like point based, they have base data inside `db.j
 
 In this file you receive the data from inputs, checkboxes, selects, radio buttons for the calculators of `type` `formula`.
 
+There you receive `redux` data and need to implement logic for calculation (formula) and how it should look like in terms of `react`. Also, there are units for each select to be convertable.
+
 ## Project notes
 
 You can check `package.json` file with `scripts` of it.
