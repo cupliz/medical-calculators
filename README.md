@@ -30,7 +30,7 @@ http://medical-calc.surge.sh/
 
 Dev web version I am working on. Keep in mind that this is not updating constantly as I usually don't need to check how web app behaves remotely and can work locally:
 
-http://medical-calc.surge.sh/
+http://medical-calc-dev.surge.sh
 
 Now.sh Database:
 
