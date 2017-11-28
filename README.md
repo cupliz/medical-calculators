@@ -4,6 +4,10 @@ Point based calculators are simply reusable through `db.json`
 
 Keep in mind, that you need to update URLs in `fetchListData` and `fetchCalcData` inside `src/store/modules/` to match the backend you need.
 
+For the new types of data-grabbers (like new `date` based selects, or maybe tables) you need to create a new component inside `src/components/Calculator/body/calculate/fields`. Check `QuestionField.js` and `QuestionGroup.js` and teach new component to communicate with `redux` through calculator reducer. In the same way that other calculators behave. 
+
+After that you parse this result for formula based calculators in split javascript file.
+
 Formula based calculators are like point based, they have base data inside `db.json` but you need to have `src/formulas/calculator-id.js` to be loaded dynamically.
 
 In this file you receive the data from inputs, checkboxes, selects, radio buttons for the calculators of `type` `formula`.
