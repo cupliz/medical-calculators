@@ -6,6 +6,8 @@ Keep in mind, that you need to update URLs in `fetchListData` and `fetchCalcData
 
 Formula based calculators are like point based, they have base data inside `db.json` but you need to have `src/formulas/calculator-id.js` to be loaded dynamically.
 
+In this file you receive the data from inputs, checkboxes, selects, radio buttons for the calculators of `type` `formula`.
+
 ## Project notes
 
 You can check `package.json` file with `scripts` of it.
