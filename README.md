@@ -1,3 +1,9 @@
+## Next steps for the next developer
+
+Point based calculators are simply reusable through `db.json`
+
+Keep in mind, that you need to update URLs in `fetchListData` and `fetchCalcData` inside `src/store/modules/` to match the backend you need.
+
 ## Project notes
 
 You can check `package.json` file with `scripts` of it.
