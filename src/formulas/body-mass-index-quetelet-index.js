@@ -6,11 +6,14 @@ import Decimal from '../components/Decimal/Decimal'
 
 const unitData = {
   height: [
-    { value: 0.393700787401575, unit: 'cm' },
-    { value: 1, unit: 'in' },
-    { value: 39.3700787401575, unit: 'm' }
+    { value: 0.01, unit: 'cm' },
+    { value: 0.0254, unit: 'in' },
+    { value: 1, unit: 'm' }
   ],
-  weight: [{ value: 2.20462262184878, unit: 'kg' }, { value: 1, unit: 'lb' }]
+  weight: [
+    { value: 1, unit: 'kg' },
+    { value: 0.453592, unit: 'lb' }
+  ]
 }
 
 const filterUnit = (arr, select) =>
@@ -23,7 +26,8 @@ class FormulaComponent extends Component {
 
   handleCalc = (height, weight) => {
     // BMI = (Weight/2.205) / (Height/39.37)^2
-    const bmi = weight / 2.205 / Math.pow(height / 39.37, 2)
+    // Note that yc changed the formula to use SI units by default
+    const bmi = weight / (height * height)
     let label = ''
     if (bmi < 18.5) {
       label = 'Below normal weight'

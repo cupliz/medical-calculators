@@ -2050,7 +2050,7 @@
             {
               "type": "input/select",
               "placeholder": "Please enter Height",
-              "values": ["in", "cm", "m"]
+              "values": ["m", "in", "cm"]
             }
           ]
         },
@@ -2060,7 +2060,7 @@
             {
               "type": "input/select",
               "placeholder": "Please enter Weight",
-              "values": ["lb", "kg"]
+              "values": ["kg", "lb"]
             }
           ]
         }
@@ -2069,7 +2069,7 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "The default unit of measure for weight is pounds. Please verify that the correct unit of measure has been selected."
+          "The default unit of measure for weight is kilograms and height is meters."
         ]
       },
       "references": {
@@ -2081,7 +2081,7 @@
       },
       "formula": {
         "type": "paragraph",
-        "content": ["BMI = (Weight/2.205) / (Height/39.37)^2"]
+        "content": ["BMI = Weight / (Height * Height)"]
       }
     },
     {
