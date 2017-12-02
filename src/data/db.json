@@ -2,7 +2,7 @@
   "list": [
     {
       "id": "chads2-score-for-atrial-fibrillation-stroke-risk",
-      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk",
+      "title": "CHADS₂ Score for Atrial Fibrillation Stroke Risk",
       "subtitle": "Stroke risk in AFib"
     },
     {
@@ -22,8 +22,8 @@
     },
     {
       "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
-      "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk",
-      "subtitle": "Stroke risk in AFib, better than CHADS2 score"
+      "title": "Atrial Fibrillation CHA₂DS₂-VASc Score for Stroke Risk",
+      "subtitle": "Stroke risk in AFib, better than CHADS₂ score"
     },
     {
       "id": "glasgow-coma-scale",
@@ -369,7 +369,7 @@
   "calculators": [
     {
       "id": "chads2-score-for-atrial-fibrillation-stroke-risk",
-      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk",
+      "title": "CHADS₂ Score for Atrial Fibrillation Stroke Risk",
       "type": "points",
       "points": 0,
       "questions": [
@@ -450,8 +450,8 @@
         "type": "unordered-list",
         "content": [
           "Estimates stroke risk in patients with atrial fibrillation",
-          "The CHADS2 score is one of several risk stratification schemes that can help determine the 1 year risk of an ischemic stroke in a non-anticoagulated patient with non-valvular atrial fibrillation and determine which antithrombotic therapy is most appropriate",
-          "The CHA2-DS2-VASC score may be a better tool to assess stroke risk in patients with atrial fibrillation.  It risk stratifies these patients better than the CHADS2 score"
+          "The CHADS₂ score is one of several risk stratification schemes that can help determine the 1 year risk of an ischemic stroke in a non-anticoagulated patient with non-valvular atrial fibrillation and determine which antithrombotic therapy is most appropriate",
+          "The CHA₂-DS₂-VASC score may be a better tool to assess stroke risk in patients with atrial fibrillation.  It risk stratifies these patients better than the CHADS2 score"
         ]
       },
       "references": {
@@ -727,7 +727,7 @@
     },
     {
       "id": "atrial-fibrillation-cha2ds2-vasc-score-for-stroke-risk",
-      "title": "Atrial Fibrillation CHA2DS2-VASc Score for Stroke Risk",
+      "title": "Atrial Fibrillation CHA₂DS₂-VASc Score for Stroke Risk",
       "type": "points",
       "points": 0,
       "questions": [
@@ -824,8 +824,8 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "The CHA2DS2-VASc score was developed after identifying additional stroke risk factors in patients with Atrial Fibrillation",
-          "The Lip-Halperin Chest publication seeks to refine the the CHADS(2) risk stratification score by adding more points for patients ≥75 yrs and for vascular disease.",
+          "The CHA₂DS₂-VASc score was developed after identifying additional stroke risk factors in patients with Atrial Fibrillation",
+          "The Lip-Halperin Chest publication seeks to refine the the CHADS₂ risk stratification score by adding more points for patients ≥75 yrs and for vascular disease.",
           "A 0 score is a low risk and may not require anticoagulation therapy, a 1 score is of low to moderate risk and one may consider antiplatelet or anticoagulation and a score of 2 or more is moderate high risk and patients should be put on anticoagulation therapy"
         ]
       },
