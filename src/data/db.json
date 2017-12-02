@@ -277,6 +277,10 @@
     {
       "id": "creatinine-clearance-cockcroft-gault",
       "title": "Creatinine Clearance Cockcroft Gault"
+    },
+    {
+      "id": "oxygen-content-venous-blood",
+      "title": "Oxygen Content of Venous Blood"
     }
   ],
   "calculators": [
@@ -5330,6 +5334,56 @@
         "type": "paragraph",
         "content": [
           "CreatClear = Sex ⨉ ((140-Age)/(Serum Creatinine))⨉(Weight/72)"
+        ]
+      }
+    },
+    {
+      "id": "oxygen-content-venous-blood",
+      "title": "Oxygen Content of Venous Blood",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Hemoglobin (Hgb)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter Hgb",
+              "values": ["mg/dL", "g/dL", "g/L", "mcg/dL", "mcg/mL", "mg%", "mg/mL", "ng/mL"]
+            }
+          ]
+        },
+        {
+          "group": "Venous Oxygen Saturation",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter O2vSat",
+              "values": ["%", "fraction", "ratio"]
+            }
+          ]
+        },
+        {
+          "group": "Mixed Venous Oxygen Tension (PvO2)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter PvO2",
+              "values": ["mmHg", "psi", "atm", "Pa", "torr"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Calculates patient venous blood oxygen content"
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "CvO2 = ( Hgb ⨉ 13.4 ⨉ O2vSat / 100 ) + ( PvO2 ⨉ 0.031 )"
         ]
       }
     }
