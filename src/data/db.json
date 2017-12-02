@@ -2,7 +2,8 @@
   "list": [
     {
       "id": "chads2-score-for-atrial-fibrillation-stroke-risk",
-      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk"
+      "title": "CHADS2 Score for Atrial Fibrillation Stroke Risk",
+      "subtitle": "Stroke risk in Atrial Fibrillation"
     },
     {
       "id": "curb-65-pneumonia-severity-score",
@@ -272,6 +273,10 @@
       "id": "myelodysplastic-syndrome-international-prognostic-scoring-system",
       "title":
         "Myelodysplastic Syndrome International Prognostic Scoring System"
+    },
+    {
+      "id": "creatinine-clearance-cockcroft-gault",
+      "title": "Creatinine Clearance Cockcroft Gault"
     }
   ],
   "calculators": [
@@ -5258,6 +5263,73 @@
         "content": [
           "Greenberg P, Cox C, LeBeau MM et. al. International Scoring System for Evaluating Prognosis in Myelodysplastic Syndromes. Blood. 1997; 89;6: 2079 - 2088. Erratum in Blood 1998; 91:1100.",
           "Greenberg P, Cox C, LeBeau MM et. al. International Scoring System for Evaluating Prognosis in Myelodysplastic Syndromes. Blood. 1997; 89;6: 2079 - 2088. Erratum in Blood 1998; 91:1100."
+        ]
+      }
+    },
+    {
+      "id": "creatinine-clearance-cockcroft-gault",
+      "title": "Creatinine Clearance Cockcroft Gault",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Gender",
+          "data": [
+            {
+              "type": "radio",
+              "options": "Male | Female",
+              "points": "1/0.85"
+            }
+          ]
+        },
+        {
+          "group": "Patient's Age",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter Age",
+              "values": ["yr", "mo"]
+            }
+          ]
+        },
+        {
+          "group": "Serum Creatinine",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter Serum Creatinine",
+              "values": ["mg/dL", "mg/mL", "mg%", "gm/dL", "gm/L"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter Weight",
+              "values": ["kg", "lb"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Weight is the estimated lean body weight of the patient. Default unit for weight is kg.",
+          "This calculator provides an estimate of the creatinine clearance if patient's plasma creatinine concentration is stable"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41."
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "CreatClear = Sex ⨉ ((140-Age)/(Serum Creatinine))⨉(Weight/72)"
         ]
       }
     }
