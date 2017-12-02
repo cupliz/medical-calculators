@@ -359,6 +359,11 @@
       "id": "oxygen-content-arterial-blood",
       "title": "Oxygen Content of Arterial Blood",
       "subtitle": "Calculates arterial blood oxygen content"
+    },
+    {
+      "id": "estimated-blood-volume",
+      "title": "Estimated Blood Volume",
+      "subtitle": "Estimated Blood volume for different patient groups"
     }
   ],
   "calculators": [
@@ -5563,6 +5568,53 @@
         "type": "paragraph",
         "content": [
           "CaO2 = ( Hgb ⨉ 13.4 ⨉ O2Sat / 100 ) + ( PaO2 ⨉ 0.031 )"
+        ]
+      }
+    },
+    {
+      "id": "estimated-blood-volume",
+      "title": "Estimated Blood Volume",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Average Blood Volume",
+          "data": [
+            {
+              "type": "radio",
+              "options": "Male | Female | Infants | Neonates | Premature Neonates",
+              "points": "75/65/80/85/96"
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter Weight",
+              "values": ["kg", "lb", "g", "mg"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "This calculator provides an estimate of blood volume for different patient weights and average blood volumes",
+          "Average blood volume values are given in mL/kg for the different patient groups. Numbers next to each patient group represent the values that are used. For example average blood volume for Males is 75mL/kg"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Morgan, Mikhail, and Murray. Clinical Anesthesiology. 3rd Edition."
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "Blood Volume = Weight ⨉ Average Blood Volume "
         ]
       }
     }
