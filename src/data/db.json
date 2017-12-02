@@ -354,6 +354,11 @@
       "id": "dose-adjustment-body-surface-area",
       "title": "Dose Adjustment for Body Surface Area",
       "subtitle": "Adjusted dose based on BSA"
+    },
+    {
+      "id": "oxygen-content-arterial-blood",
+      "title": "Oxygen Content of Arterial Blood",
+      "subtitle": "Calculates arterial blood oxygen content"
     }
   ],
   "calculators": [
@@ -5436,7 +5441,7 @@
           ]
         },
         {
-          "group": "Mixed Venous Oxygen Tension (PvO2)",
+          "group": "Partial Pressure of Oxygen in Venous Blood (PvO2)",
           "data": [
             {
               "type": "input/select",
@@ -5508,6 +5513,56 @@
         "content": [
           "BSA = 0.007184 ⨉ Height^0.725 ⨉ Weight^0.425",
           "AdjustedDose = StandardDose * BSA / 1.73"
+        ]
+      }
+    },
+    {
+      "id": "oxygen-content-arterial-blood",
+      "title": "Oxygen Content of Arterial Blood",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Hemoglobin (Hgb)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter Hgb",
+              "values": ["mg/dL", "g/dL", "g/L", "mcg/dL", "mcg/mL", "mg%", "mg/mL", "ng/mL"]
+            }
+          ]
+        },
+        {
+          "group": "Oxygen Saturation (O2Sat)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter O2Sat",
+              "values": ["%", "fraction", "ratio"]
+            }
+          ]
+        },
+        {
+          "group": "Partial Pressure of Oxygen in Arterial Blood (PaO2)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter PaO2",
+              "values": ["mmHg", "psi", "atm", "Pa", "torr"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Calculates patient arterial blood oxygen content"
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "CaO2 = ( Hgb ⨉ 13.4 ⨉ O2Sat / 100 ) + ( PaO2 ⨉ 0.031 )"
         ]
       }
     }
