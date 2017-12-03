@@ -5760,7 +5760,7 @@
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter heart rate, Normal 60-100 bpm",
+              "placeholder": "Enter heart rate, Norm 60-100bpm",
               "values": ["bpm"]
             }
           ]
@@ -5770,7 +5770,7 @@
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter QT interval value, Normal 360-440 msec",
+              "placeholder": "Enter QT interval value, Norm 360-440msec",
               "values": ["msec", "sec"]
             }
           ]
