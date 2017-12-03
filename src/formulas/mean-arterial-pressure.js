@@ -8,16 +8,11 @@ import Decimal from '../components/Decimal/Decimal'
 
 
 const unitData = {
-    neutrophils: [
-        { value: 1, unit: '%' }
+    systolicBP: [
+        { value: 1, unit: 'mmHg' }
     ],
-    bands: [
-        { value: 1, unit: '%' }
-    ],
-    WBC_count: [
-        { value: 1, unit: '⨉10³/µL' },
-        { value: 1000, unit: '/µL' },
-        { value: 1, unit: '⨉10⁹/L' }
+    diastolicBP: [
+        { value: 1, unit: 'mmHg' }
     ]
 }
 
@@ -30,23 +25,12 @@ class FormulaComponent extends Component {
     }
 
     handleCalc = (
-        neutrophils,
-        bands,
-        WBC_count
+        systolicBP,
+        diastolicBP
     ) => {
-        // Absolute Neutrophil Count = 10 * WBC count in 1000s * (% PMNs + % Bands)
-        const ANC = 10 * WBC_count * (neutrophils + bands)
-        let label = ''
-        if (ANC >= 1.5) {
-            label = 'Unlikely Neutropenia'
-        } else if (ANC >= 1.0 && ANC < 1.5) {
-            label = 'Mild neutropenia'
-        } else if (ANC >= 0.50 && ANC < 1.0) {
-            label = 'Moderate neutropenia'
-        } else if (ANC < 0.5) {
-            label = 'Severe neutropenia'
-        }
-        return `${ANC.toFixed(this.state.decimal)} ⨉10³/µL - ${label}`
+        // Mean Arterial Pressure = (⅓ ⨉ Systolic BP) + (⅔ ⨉ Diastolic BP)
+        const map = (1/3 * systolicBP) + (2/3 * diastolicBP)
+        return `${map.toFixed(this.state.decimal)} mmHg`
     }
 
 
@@ -55,46 +39,39 @@ class FormulaComponent extends Component {
         const { questions } = data
 
         // extract needed field vars
-        let neutrophilsValue = null
-        let neutrophilsUnitValue = null
-        let bandsValue = null
-        let bandsUnitValue = null
-        let WBC_countValue = null
-        let WBC_countUnitValue = null
+        let systolicBPValue = null
+        let systolicBPUnitValue = null
+        let diastolicBPValue = null
+        let diastolicBPUnitValue = null
 
         questions.map((question, index) => {
             const { calculate } = question
             if (calculate) {
                 const { input, select } = calculate
                 if (index === 0) {
-                    neutrophilsValue = input
-                    neutrophilsUnitValue = filterUnit(unitData.neutrophils, select)
+                    systolicBPValue = input
+                    systolicBPUnitValue = filterUnit(unitData.systolicBP, select)
                 }
                 if (index === 1) {
-                    bandsValue = input
-                    bandsUnitValue = filterUnit(unitData.bands, select)
-                }
-                if (index === 2) {
-                    WBC_countValue = input
-                    WBC_countUnitValue = filterUnit(unitData.WBC_count, select)
+                    diastolicBPValue = input
+                    diastolicBPUnitValue = filterUnit(unitData.diastolicBP, select)
                 }
             }
             return calculate
         })
 
-        if (neutrophilsValue && bandsValue && WBC_countValue) {
+        if (systolicBPValue && diastolicBPValue) {
             return (
                 <ResultCardHeader classes={classes}>
                     <CardContent className={classes.content}>
                         <Typography type='caption' className={classes.contentText}>
-                            Absolute Neutrophil Count
+                            Mean Arterial Pressure
                         </Typography>
                         <div className={classes.resultWrapper}>
                             <Typography type='title' className={classes.resultText}>
                                 {this.handleCalc(
-                                    neutrophilsValue * neutrophilsUnitValue,
-                                    bandsValue * bandsUnitValue,
-                                    WBC_countValue * WBC_countUnitValue
+                                    systolicBPValue * systolicBPUnitValue,
+                                    diastolicBPValue * diastolicBPUnitValue
                                 )}
                             </Typography>
 
