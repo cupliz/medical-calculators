@@ -117,7 +117,7 @@
     },
     {
       "id": "body-mass-index-quetelet-index",
-      "title": "Body Mass Index",
+      "title": "Body Mass Index (BMI)",
       "subtitle": "Calculate BMI"
     },
     {
@@ -2148,7 +2148,7 @@
     },
     {
       "id": "body-mass-index-quetelet-index",
-      "title": "Body Mass Index",
+      "title": "Body Mass Index (BMI)",
       "type": "formula",
       "questions": [
         {
