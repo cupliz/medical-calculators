@@ -374,6 +374,11 @@
       "id": "sodium-deficit-hyponatremia",
       "title": "Sodium Deficit in Hyponatremia",
       "subtitle": "Total sodium missing in hyponatremia"
+    },
+    {
+      "id": "qt-interval-correction-ecg",
+      "title": "QT Interval Correction (ECG)",
+      "subtitle": "Corrects QT interval for heart rate extremes"
     }
   ],
   "calculators": [
@@ -5742,6 +5747,55 @@
         "type": "paragraph",
         "content": [
           "Sodium Deficit = Gender * Weight * (Desired Na - Serum Na)"
+        ]
+      }
+    },
+    {
+      "id": "qt-interval-correction-ecg",
+      "title": "QT Interval Correction (ECG)",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Heart Rate",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter heart rate, Normal 60-100 bpm",
+              "values": ["bpm"]
+            }
+          ]
+        },
+        {
+          "group": "QT interval",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter QT interval value, Normal 360-440 msec",
+              "values": ["msec", "sec"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Calculates the corrected QT interval (QTc) for heart rate extremes",
+          "Normal QTc ≤ 440msec. A longer QTc increases the risk of Torsade de pointes.",
+          "Common causes for prolonged QT intervals include electrolyte abnormalities, central causes, medications and intrinsic cardiac causes"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Bazett HC. An analysis of the time relationships of electrocardiograms. Heart. 1920;7:355-70."
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "RR Interval = 60/HeartRate",
+          "Corrected QT Interval = QTInterval/√(RR Interval)"
         ]
       }
     }
