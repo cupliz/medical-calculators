@@ -5770,7 +5770,7 @@
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter QT interval value, Norm 360-440msec",
+              "placeholder": "Enter QT interval, Norm 360-440msec",
               "values": ["msec", "sec"]
             }
           ]
