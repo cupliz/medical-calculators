@@ -18,9 +18,6 @@ const unitData = {
         { value: 1, unit: '⨉10³/µL' },
         { value: 1000, unit: '/µL' },
         { value: 1, unit: '⨉10⁹/L' }
-    ],
-    ANC: [
-        { value: 1, unit: '⨉10³/µL' }
     ]
 }
 
@@ -29,8 +26,6 @@ const filterUnit = (arr, select) =>
 
 class FormulaComponent extends Component {
     state = {
-        ANCSelectUnit: '⨉10³/µL',
-        ANCSelectValue: 1,
         decimal: 0
     }
 
@@ -52,26 +47,9 @@ class FormulaComponent extends Component {
         } else if (ANC < 0.5) {
             label = 'Severe neutropenia'
         }
-        return `${(ANC / selectValue).toFixed(this.state.decimal)} - ${label}`
+        return `${ANC.toFixed(this.state.decimal)} ⨉10³/µL - ${label}`
     }
 
-    handleSelectChange = event => {
-        const { value } = event.target
-        let selectValue = filterUnit(unitData.ANC, value)
-        this.setState({ ANCSelectUnit: value, ANCSelectValue: selectValue })
-    }
-
-    handleDecimalChange = action => {
-        const oldDecimal = this.state.decimal
-        if (action === '+') {
-            this.setState({ decimal: oldDecimal + 1 })
-        } else {
-            if (oldDecimal === 0) {
-                return
-            }
-            this.setState({ decimal: oldDecimal - 1 })
-        }
-    }
 
     render () {
         const { classes, data } = this.props
@@ -117,29 +95,11 @@ class FormulaComponent extends Component {
                                 {this.handleCalc(
                                     neutrophilsValue * neutrophilsUnitValue,
                                     bandsValue * bandsUnitValue,
-                                    WBC_countValue * WBC_countUnitValue,
-                                    this.state.ANCSelectValue
+                                    WBC_countValue * WBC_countUnitValue
                                 )}
                             </Typography>
-                            <TextField
-                                select
-                                value={this.state.ANCSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.ANC.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
+
                         </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
                     </CardContent>
                 </ResultCardHeader>
             )
