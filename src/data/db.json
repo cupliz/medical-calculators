@@ -389,6 +389,11 @@
       "id": "mean-arterial-pressure",
       "title": "Mean Arterial Pressure",
       "subtitle": "Calculates mean arterial pressure"
+    },
+    {
+      "id": "fractional-excretion-sodium",
+      "title": "Fractional Excretion of Sodium (FeNa)",
+      "subtitle": "Determine if kidney failure is due to pre-renal, intrinsic or post-renal pathology"
     }
   ],
   "calculators": [
@@ -5644,37 +5649,27 @@
       }
     },
     {
-      "id": "absolute-neutrophil-count",
-      "title": "Absolute Neutrophil Count",
+      "id": "sodium-correction-hyperglycemia",
+      "title": "Sodium Correction in Hyperglycemia",
       "type": "formula",
       "questions": [
         {
-          "group": "Polymorphonuclear Neutrophils (PMNs)",
+          "group": "Measured Na",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter value",
-              "values": ["%"]
+              "placeholder": "Enter sodium value",
+              "values": ["mEq/L", "mmol/L"]
             }
           ]
         },
         {
-          "group": "Bands",
+          "group": "Glucose",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter value",
-              "values": ["%"]
-            }
-          ]
-        },
-        {
-          "group": "White Blood Cell Count (WBC)",
-          "data": [
-            {
-              "type": "input/select",
-              "placeholder": "Enter WBC count",
-              "values": ["⨉10³/µL", "/µL", "⨉10⁹/L"]
+              "placeholder": "Enter glucose value",
+              "values": ["mmol/L", "mg/dL", "mg%", "g/L", "g/dL","mcg/dL", "mcg/mL"]
             }
           ]
         }
@@ -5683,23 +5678,21 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Used to assess if neutropenenic fever in chemotherapy patients",
-          "Neutropenia is present when ANC < 1500 cells /mm³",
-          "Neutropenia can be classified as mild, moderate or severe",
-          "If diagnosis is suggestive of neutropenic fever, appropriate cultures and infectious disease workout should be instituted with prompt initiation of broad spectrum antibiotic therapy"
+          "Calculates the actual sodium level in patients with hyperglycemia based on Katz's sodium factor",
+          "The corrected sodium factor in the 1976 Katz publication was 1.6 mEq/L. However, in 1999 Hillier et. al evaluated 6 healthy subjects, induced hyperglycemia and measured actual sodium levels. They found that a sodium correction factor of 2.4 mEq/L was more accurate."
         ]
       },
       "references": {
         "type": "ordered-list",
         "content": [
-          "Al-Gwaiz LA, Babay HH. The diagnostic value of absolute neutrophil count, band count and morphologic changes of neutrophils in predicting bacterial infections. Med Princ Pract. 2007;16(5):344-7.",
-          "Thomas BN, Karen MP, et al. Interpreting Complete Blood Counts Soon After Birth in Newborns at Risk for Sepsis. Pediatrics. 2010 Nov; 126(5): 903–909."
+          "Katz MA. Hyperglycemia-induced hyponatremia calculation of expected serum sodium depression. N Engl J Med. 1973 Oct 18;289(16):843-4.",
+          "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med. 1999 Apr;106(4):399-403."
         ]
       },
       "formula": {
         "type": "paragraph",
         "content": [
-          "Absolute Neutrophil Count (ANC) = 10 ⨉ WBC count ⨉ (%PMNs + %Bands)"
+          "Na = MeasuredSodium + 0.016 ⨉ (Glucose - 100)"
         ]
       }
     },
@@ -5822,27 +5815,37 @@
       }
     },
     {
-      "id": "sodium-correction-hyperglycemia",
-      "title": "Sodium Correction in Hyperglycemia",
+      "id": "absolute-neutrophil-count",
+      "title": "Absolute Neutrophil Count",
       "type": "formula",
       "questions": [
         {
-          "group": "Measured Na",
+          "group": "Polymorphonuclear Neutrophils (PMNs)",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter sodium value",
-              "values": ["mEq/L", "mmol/L"]
+              "placeholder": "Enter value",
+              "values": ["%"]
             }
           ]
         },
         {
-          "group": "Glucose",
+          "group": "Bands",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter glucose value",
-              "values": ["mmol/L", "mg/dL", "mg%", "g/L", "g/dL","mcg/dL", "mcg/mL"]
+              "placeholder": "Enter value",
+              "values": ["%"]
+            }
+          ]
+        },
+        {
+          "group": "White Blood Cell Count (WBC)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter WBC count",
+              "values": ["⨉10³/µL", "/µL", "⨉10⁹/L"]
             }
           ]
         }
@@ -5851,21 +5854,23 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Calculates the actual sodium level in patients with hyperglycemia based on Katz's sodium factor",
-          "The corrected sodium factor in the 1976 Katz publication was 1.6 mEq/L. However, in 1999 Hillier et. al evaluated 6 healthy subjects, induced hyperglycemia and measured actual sodium levels. They found that a sodium correction factor of 2.4 mEq/L was more accurate."
+          "Used to assess if neutropenenic fever in chemotherapy patients",
+          "Neutropenia is present when ANC < 1500 cells /mm³",
+          "Neutropenia can be classified as mild, moderate or severe",
+          "If diagnosis is suggestive of neutropenic fever, appropriate cultures and infectious disease workout should be instituted with prompt initiation of broad spectrum antibiotic therapy"
         ]
       },
       "references": {
         "type": "ordered-list",
         "content": [
-          "Katz MA. Hyperglycemia-induced hyponatremia calculation of expected serum sodium depression. N Engl J Med. 1973 Oct 18;289(16):843-4.",
-          "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med. 1999 Apr;106(4):399-403."
+          "Al-Gwaiz LA, Babay HH. The diagnostic value of absolute neutrophil count, band count and morphologic changes of neutrophils in predicting bacterial infections. Med Princ Pract. 2007;16(5):344-7.",
+          "Thomas BN, Karen MP, et al. Interpreting Complete Blood Counts Soon After Birth in Newborns at Risk for Sepsis. Pediatrics. 2010 Nov; 126(5): 903–909."
         ]
       },
       "formula": {
         "type": "paragraph",
         "content": [
-          "Na = MeasuredSodium + 0.016 ⨉ (Glucose - 100)"
+          "Absolute Neutrophil Count (ANC) = 10 ⨉ WBC count ⨉ (%PMNs + %Bands)"
         ]
       }
     },
@@ -5915,6 +5920,75 @@
         "type": "paragraph",
         "content": [
           "Mean Arterial Pressure = (⅓ ⨉ Systolic BP) + (⅔ ⨉ Diastolic BP)"
+        ]
+      }
+    },
+    {
+      "id": "fractional-excretion-sodium",
+      "title": "Fractional Excretion of Sodium (FeNa)",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Serum Sodium",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter value",
+              "values": ["mEq/L", "mmol/L"]
+            }
+          ]
+        },
+        {
+          "group": "Serum Creatinine",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter value",
+              "values": ["mg/dL", "µmol/L"]
+            }
+          ]
+        },
+        {
+          "group": "Urine Sodium",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter value",
+              "values": ["mEq/L", "mmol/L"]
+            }
+          ]
+        },
+        {
+          "group": "Urine Creatinine",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter value",
+              "values": ["mg/dL", "µmol/L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Helps to determine if kidney failure is due to pre-renal,intrinsic, or post-renal pathology",
+          "This calculator should not be used in patients who are taking diuretics or who have known CKD, urinary tract obstruction or acute glomerular disease"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Espinel CH. The FENa test. Use in the differential diagnosis of acute renal failure. JAMA. 1976 Aug 9;236(6):579-81.",
+          "Steiner RW. Intepreting the fractional excretion of sodium. Am J Med. 1984 Oct;77(4):699-702.",
+          "Miller TR, Andreson RJ, Linas SL, et al. Urinary diagnostic indices in acute renal failure: a prospective study. Ann Intern Med. 1978 Jul;89(1):47-50."
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "Fractional Excretion of Sodium = (Urine Sodium / Serum Sodium) / (Urine Creatinine / Serum Creatinine) ⨉ 100 "
         ]
       }
     }
