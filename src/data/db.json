@@ -379,6 +379,12 @@
       "id": "qt-interval-correction-ecg",
       "title": "QT Interval Correction (ECG)",
       "subtitle": "Corrects QT interval for heart rate extremes"
+    },
+    {
+      "id": "absolute-neutrophil-count",
+      "title": "Absolute Neutrophil Count",
+      "subtitle": "Assess neutropenic fever in chemo patients"
+
     }
   ],
   "calculators": [
@@ -5634,27 +5640,37 @@
       }
     },
     {
-      "id": "sodium-correction-hyperglycemia",
-      "title": "Sodium Correction in Hyperglycemia",
+      "id": "absolute-neutrophil-count",
+      "title": "Absolute Neutrophil Count",
       "type": "formula",
       "questions": [
         {
-          "group": "Measured Na",
+          "group": "Polymorphonuclear Neutrophils (PMNs)",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter sodium value",
-              "values": ["mEq/L", "mmol/L"]
+              "placeholder": "Enter value",
+              "values": ["%"]
             }
           ]
         },
         {
-          "group": "Glucose",
+          "group": "Bands",
           "data": [
             {
               "type": "input/select",
-              "placeholder": "Enter glucose value",
-              "values": ["mmol/L", "mg/dL", "mg%", "g/L", "g/dL","mcg/dL", "mcg/mL"]
+              "placeholder": "Enter value",
+              "values": ["%"]
+            }
+          ]
+        },
+        {
+          "group": "White Blood Cell Count (WBC)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter WBC count",
+              "values": ["⨉10³/µL", "/µL", "⨉10⁹/L"]
             }
           ]
         }
@@ -5663,21 +5679,23 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Calculates the actual sodium level in patients with hyperglycemia based on Katz's sodium factor",
-          "The corrected sodium factor in the 1976 Katz publication was 1.6 mEq/L. However, in 1999 Hillier et. al evaluated 6 healthy subjects, induced hyperglycemia and measured actual sodium levels. They found that a sodium correction factor of 2.4 mEq/L was more accurate."
+          "Used to assess if neutropenenic fever in chemotherapy patients",
+          "Neutropenia is present when ANC < 1500 cells /mm³",
+          "Neutropenia can be classified as mild, moderate or severe",
+          "If diagnosis is suggestive of neutropenic fever, appropriate cultures and infectious disease workout should be instituted with prompt initiation of broad spectrum antibiotic therapy"
         ]
       },
       "references": {
         "type": "ordered-list",
         "content": [
-          "Katz MA. Hyperglycemia-induced hyponatremia calculation of expected serum sodium depression. N Engl J Med. 1973 Oct 18;289(16):843-4.",
-          "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med. 1999 Apr;106(4):399-403."
+          "Al-Gwaiz LA, Babay HH. The diagnostic value of absolute neutrophil count, band count and morphologic changes of neutrophils in predicting bacterial infections. Med Princ Pract. 2007;16(5):344-7.",
+          "Thomas BN, Karen MP, et al. Interpreting Complete Blood Counts Soon After Birth in Newborns at Risk for Sepsis. Pediatrics. 2010 Nov; 126(5): 903–909."
         ]
       },
       "formula": {
         "type": "paragraph",
         "content": [
-          "Na = MeasuredSodium + 0.016 ⨉ (Glucose - 100)"
+          "Absolute Neutrophil Count (ANC) = 10 ⨉ WBC count ⨉ (%PMNs + %Bands)"
         ]
       }
     },
@@ -5796,6 +5814,54 @@
         "content": [
           "RR Interval = 60/HeartRate",
           "Corrected QT Interval = QTInterval/√(RR Interval)"
+        ]
+      }
+    },
+    {
+      "id": "sodium-correction-hyperglycemia",
+      "title": "Sodium Correction in Hyperglycemia",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Measured Na",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter sodium value",
+              "values": ["mEq/L", "mmol/L"]
+            }
+          ]
+        },
+        {
+          "group": "Glucose",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter glucose value",
+              "values": ["mmol/L", "mg/dL", "mg%", "g/L", "g/dL","mcg/dL", "mcg/mL"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Calculates the actual sodium level in patients with hyperglycemia based on Katz's sodium factor",
+          "The corrected sodium factor in the 1976 Katz publication was 1.6 mEq/L. However, in 1999 Hillier et. al evaluated 6 healthy subjects, induced hyperglycemia and measured actual sodium levels. They found that a sodium correction factor of 2.4 mEq/L was more accurate."
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Katz MA. Hyperglycemia-induced hyponatremia calculation of expected serum sodium depression. N Engl J Med. 1973 Oct 18;289(16):843-4.",
+          "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med. 1999 Apr;106(4):399-403."
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "Na = MeasuredSodium + 0.016 ⨉ (Glucose - 100)"
         ]
       }
     }
