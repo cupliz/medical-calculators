@@ -399,6 +399,16 @@
       "id": "solitary-pulmonary-nodule-malignancy-risk",
       "title": "Solitary Pulmonary Nodule Malignancy Risk (Mayo Clinic)",
       "subtitle": "Risk of malignancy in Solitary pulmonary nodules"
+    },
+    {
+      "id": "ideal-body-weight",
+      "title": "Ideal Body Weight",
+      "subtitle": "Estimates ideal body weight for dosing"
+    },
+    {
+      "id": "calcium-correction-hypoalbuminemia",
+      "title": "Calcium Correction for Hypoalbuminemia",
+      "subtitle": "Corrected Calcium level for patients with hypoalbuminemia"
     }
   ],
   "calculators": [
@@ -6087,6 +6097,118 @@
           "Malignancy Probability = ( 100 ⨉ e^X ) / ( 1 + (e^X) )"
         ]
       }
+    },
+    {
+      "id": "ideal-body-weight",
+      "title": "Ideal Body Weight",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Gender",
+          "data": [
+            {
+              "type": "radio",
+              "options": "Male | Female",
+              "points": "50/45.5"
+            }
+          ]
+        },
+        {
+          "group": "Height",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter Height",
+              "values": ["cm", "in", "m", "ft"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "This calculator provides an estimate of ideal body weight for Male and Female patients based on the Devine formula",
+          "Some medication doses require Ideal Body Weight while others require Total Body Weight so make sure to confirm with pharmacy before dosing",
+          "This formula is an approximation, and is generally only applicable for people who are >1.5m (5ft) tall",
+          "For Gentamicin dosing, use ideal body weight vs actual body weight as gentamicin distributes poorly in fat"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Devine BJ. Gentamicin therapy. Drug Intell Clin Pharm. 1974;8:650–655.",
+          "Pai MP. Paloucek FP. The origin of the ideal body weight equations. Ann Pharmacother. 2000 Sep;34(9):1066-9."
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "Ideal Body Weight (Men) = 50kg + 2.3kg ⨉ ( Height (inches) - 60 )",
+          "Ideal Body Weight (Women) = 45.5kg + 2.3kg ⨉ ( Height(inches) - 60 )"
+        ]
+      }
+    },
+    {
+      "id": "calcium-correction-hypoalbuminemia",
+      "title": "Calcium Correction for Hypoalbuminemia",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Calcium",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter calcium values",
+              "values": ["mg/dL", "mmol/L"]
+            }
+          ]
+        },
+        {
+          "group": "Albumin",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter albumin values",
+              "values": ["g/L", "g/dL"]
+            }
+          ]
+        },
+        {
+          "group": "Normal Albumin",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter normal albumin value e.g. 4 g/dL or 40 g/L",
+              "values": ["g/L", "g/dL"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Calculates the corrected calcium level for patients with hypoalbuminemia",
+          "Some patients with suspected hypercalcemia may appear to have a normal calcium level result if their albumin is low. Conisder an alternative or additional confirmatory test such as an ionized calcium level",
+          "Patients with hypercalcemia may require initial volume resuscitation in hypovolemic patients, loop diuretics can help with renal excretion of calcium. Biphosphonates are also effective in malignancy related hypercalcemia"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Payne RB, Little AJ, Williams RB, Milner JR. Interpretation of Serum Calcium in Patients with Abnormal Serum Proteins. Br Med J. 1973 Dec 15; 4(5893): 643–646.",
+          "Parent X, Spielmann C, hanser AM. Corrected calcium: calcium status underestimation in non-hypoalbuminemic patients and in hypercalcemic patients. Ann Biol Clin (Paris). 2009 Jul-Aug;67(4):411-8."
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "Corrected Calcium = (0.8 ⨉ (Normal Albumin - Patient Albumin)) + Serum Calcium",
+          "Formula assumes albumin units in g/dL"
+        ]
+      }
     }
+
   ]
 }

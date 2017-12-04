@@ -165,3 +165,7 @@
     ]
   }
 }
+
+if (index === 0) {
+  genderValue = calculate["points"]
+}
