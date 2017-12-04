@@ -409,6 +409,11 @@
       "id": "calcium-correction-hypoalbuminemia",
       "title": "Calcium Correction for Hypoalbuminemia",
       "subtitle": "Corrected Calcium level for patients with hypoalbuminemia"
+    },
+    {
+      "id": "oxygen-consumption",
+      "title": "Oxygen Consumption",
+      "subtitle": "Calculates oxygen consumption"
     }
   ],
   "calculators": [
@@ -6208,7 +6213,66 @@
           "Formula assumes albumin units in g/dL"
         ]
       }
+    },
+    {
+      "id": "oxygen-consumption",
+      "title": "Oxygen Consumption",
+      "type": "formula",
+      "questions": [
+        {
+          "group": "Volume Expired over 1 min",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter value",
+              "values": ["mL/min", "mL/sec", "mL/h","L/min", "L/sec"]
+            }
+          ]
+        },
+        {
+          "group": "Fraction of Inspired Oxygen (FIO2)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter FIO2 value, Norm 0.2095 or 21%",
+              "values": ["%", "fraction"]
+            }
+          ]
+        },
+        {
+          "group": "Fraction of Expired Oxygen (FEO2)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter FEO2 value",
+              "values": ["%", "fraction"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Calculates the volume of oxygen consumed per unit time",
+          "FIO2 is the fractional volume of Oxygen in ambient air, usually assumed to be 0.2095 or 21%",
+          "FEO2 is the fractional volume of Oxygen in the effluent air. Note that oxygen analyzers records %O2 of the effluent air"
+        ]
+      },
+      "references": {
+        "type": "ordered-list",
+        "content": [
+          "Hieronymi U, Mrochen H. Errors in the determination of oxygen consumption using the analysis of respiratory gases. Anaesthesiol Reanim. 1989;14(3):167-74."
+        ]
+      },
+      "formula": {
+        "type": "paragraph",
+        "content": [
+          "Oxygen Consumed = Volume Expired ⨉ (FIO2 - FEO2)"
+        ]
+      }
     }
+
 
   ]
 }
