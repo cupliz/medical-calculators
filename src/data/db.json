@@ -6350,7 +6350,7 @@
             {
               "type": "input/select",
               "placeholder": "Enter dose value",
-              "values": ["mg/kg/min", "g/kg/min", "mcg/kg/min"]
+              "values": ["mcg/kg/min", "g/kg/min", "mg/kg/min"]
             }
           ]
         },
