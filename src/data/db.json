@@ -425,6 +425,7 @@
       "title": "Dose Driven IV Drip Rate Calculator",
       "subtitle": "Calculates IV drip rate for desired doses"
     }
+    }
   ],
   "calculators": [
     {
@@ -4495,13 +4496,13 @@
             },
             {
               "type": "checkbox",
-              "label": "M Protein: IgG > 3.5 g/L; IgA > 2.0 g/L",
+              "label": "Monoclonal Protein (M Protein): IgG > 3.5 g/L; IgA > 2.0 g/L",
               "points": "1"
             },
             {
               "type": "checkbox",
               "label":
-                "Urinary kappa or lambda chain excretion of > 1g / 24 hours in absence of amyloidosis",
+                "Urinary kappa or lambda chain excretion of > 1g per 24 hours in the absence of amyloidosis",
               "points": "1"
             }
           ]
@@ -4518,7 +4519,7 @@
             {
               "type": "checkbox",
               "label":
-                "Evidence of a monoclonal protein but lessor amounts than above",
+                "Evidence of M protein but in lesser amounts than above (i.e. IgG < 3.5 g/L; IgA < 2.0 g/L)",
               "points": "1"
             },
             {
