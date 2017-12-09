@@ -425,7 +425,6 @@
       "title": "Dose Driven IV Drip Rate Calculator",
       "subtitle": "Calculates IV drip rate for desired doses"
     }
-    }
   ],
   "calculators": [
     {
@@ -6392,12 +6391,6 @@
         "content": [
           "Calculates the IV drip rate required to achieve a desired dose",
           "Default unit of measure for weight is in kg."
-        ]
-      },
-      "references": {
-        "type": "ordered-list",
-        "content": [
-          "K "
         ]
       },
       "formula": {
