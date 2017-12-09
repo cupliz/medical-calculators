@@ -191,6 +191,9 @@ class FormulaComponent extends Component {
                 ))}
               </TextField>
             </div>
+              <Typography type='caption' className={classes.contentText}>
+                  Liquid Dose
+              </Typography>
             <div className={classes.resultWrapper}>
               <Typography type='title' className={classes.resultText}>
                 {this.handleDoseCalc(
