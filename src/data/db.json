@@ -424,6 +424,11 @@
       "id": "dose-driven-iv-drip-rate-calculator",
       "title": "Dose Driven IV Drip Rate Calculator",
       "subtitle": "Calculates IV drip rate for desired doses"
+    },
+    {
+      "id": "amoxicillin-pediatric-acute-otitis-media",
+      "title": "Amoxicillin Pediatric - Acute Otitis Media",
+      "subtitle": "Drug dosage calculator"
     }
   ],
   "calculators": [
@@ -770,20 +775,7 @@
           ]
         }
       ],
-      "results": {},
-      "notes": {
-        "type": "unordered-list",
-        "content": [
-          "Estimates mortality of patients with pancreatitis based on initial and 48 hour lab values",
-          "The BISAP score is another alternative to estimate pancreatitis mortality with fewer variables that is as accurate"
-        ]
-      },
-      "references": {
-        "type": "ordered-list",
-        "content": [
-          "Ranson JH, Rifkind KM, Turner JW. Prognostic signs and nonoperative peritoneal lavage in acute pancreatitis. Surg Gyne Ob. 143:209, 1976."
-        ]
-      }
+      "results": {}
     },
     {
       "id": "cha2ds2-vasc-score-for-stroke-risk",
@@ -6399,6 +6391,68 @@
           "IV Drip Rate = (60 ⨉ Desired Dose ⨉ Weight ⨉ Bag Volume) / (1000 ⨉ Drug in Bag)"
         ]
       }
+    },
+    {
+      "id": "amoxicillin-pediatric-acute-otitis-media",
+      "title": "Amoxicillin Pediatric - Acute Otitis Media",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Acute Otitis Media | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Mild to Moderate infections",
+            "content": [
+              ">3 months and <40kg: 80-90 mg/kg/day PO divided q8-12 hr",
+              ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
+
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {}
     }
 
 
