@@ -429,6 +429,11 @@
       "id": "amoxicillin-pediatric-acute-otitis-media",
       "title": "Amoxicillin Pediatric - Acute Otitis Media",
       "subtitle": "Drug dosage calculator"
+    },
+    {
+      "id": "amoxicillin-pediatric-lower-respiratory-tract-infections",
+      "title": "Amoxicillin Pediatric - Lower Respiratory Tract Infections",
+      "subtitle": "Drug dosage calculator"
     }
   ],
   "calculators": [
@@ -6453,8 +6458,80 @@
         }
       ],
       "results": {}
+    },
+    {
+      "id": "amoxicillin-pediatric-lower-respiratory-tract-infections",
+      "title": "Amoxicillin Pediatric - Lower Respiratory Tract Infections",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Lower Respiratory Tract Infections | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Mild, Moderate or Severe infections",
+            "content": [
+              "<3 months: ≤30mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections",
+              ">3 months and <40kg: 45mg/kg/day PO divided q12 hr or 40mg/kg/day divided q8hr",
+              ">40kg: 875 mg PO q12hr or 500 mg PO q8hr for 10-14 days"
+            ]
+          },
+          {
+            "title": "Pneumonia, Community-acquired (Off-label)",
+            "content": [
+              "<3 months: Safety and efficacy is not established",
+              "≥3 months - Immediate release:",
+              "Empiric treatment: 90 mg/kg/day PO divided q12 hr for 10 days; not to exceed 4,000 mg/day",
+              "Group A Streptococcus: 50-75 mg/kg/day PO divided q12hr for 10 days; not to exceed 4,000 mg/day",
+              "H. influenza: 75-100 mg/kg/day PO divided q8hr for 10 days; not to exceed 4,000 mg/day",
+              "S. pneumoniae (mild infection or step-down therapy or when MICs to penicillin ≤2.0 mcg/mL): 90 mg/kg/day PO divided q12hr or 45 mg/kg/day divided q8hr for 10 days; not to exceed 4,000 mg/day"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {}
     }
-
 
   ]
 }
