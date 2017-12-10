@@ -434,6 +434,31 @@
       "id": "amoxicillin-pediatric-lower-respiratory-tract-infections",
       "title": "Amoxicillin Pediatric - Lower Respiratory Tract Infections",
       "subtitle": "Drug dosage calculator"
+    },
+    {
+      "id": "amoxicillin-pediatric-anthrax",
+      "title": "Amoxicillin Pediatric - Anthrax",
+      "subtitle": "Drug dosage calculator"
+    },
+    {
+      "id": "amoxicillin-pediatric-infective-endocarditis",
+      "title": "Amoxicillin Pediatric - Infective Endocarditis",
+      "subtitle": "Drug dosage calculator"
+    },
+    {
+      "id": "amoxicillin-pediatric-lyme-disease",
+      "title": "Amoxicillin Pediatric - Lyme Disease",
+      "subtitle": "Drug dosage calculator"
+    },
+    {
+      "id": "amoxicillin-pediatric-renal-dosing",
+      "title": "Amoxicillin Pediatric - Renal Dosing",
+      "subtitle": "Drug dosage calculator"
+    },
+    {
+      "id": "amoxicillin-pediatric-upper-respiratory-tract-infections",
+      "title": "Amoxicillin Pediatric - Upper Respiratory Tract Infections",
+      "subtitle": "Drug dosage calculator"
     }
   ],
   "calculators": [
@@ -780,7 +805,17 @@
           ]
         }
       ],
-      "results": {}
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Drug Administration: Take without regard to meals",
+          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
+          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
+          "Shake suspension well before using; any unused portion must be discarded after 14 days",
+          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+        ]
+      }
     },
     {
       "id": "cha2ds2-vasc-score-for-stroke-risk",
@@ -6408,9 +6443,10 @@
           {
             "title": "Mild to Moderate infections",
             "content": [
-              ">3 months and <40kg: 80-90 mg/kg/day PO divided q8-12 hr",
-              ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days"
-
+              "<2 months: 30 mg/kg/day PO divided q12h x10 days",
+              ">3 months and <40kg: 80-90 mg/kg/day PO divided q8-12 hr; Max: 1000 mg/dose; Info: give 40-50 mg/kg/day PO divided q8-12h x10 days for PCN-sensitive pneumococcal strains",
+              ">40kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days",
+              "6-12 years: Dose: 80-90 mg/kg/day PO divided q12h x5-10 days; Max: 1000 mg/dose; Info: give 40-50 mg/kg/day PO divided q8-12h x10 days for PCN-sensitive pneumococcal strains"
             ]
           }
         ]
@@ -6457,7 +6493,17 @@
           ]
         }
       ],
-      "results": {}
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Drug Administration: Take without regard to meals",
+          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
+          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
+          "Shake suspension well before using; any unused portion must be discarded after 14 days",
+          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+        ]
+      }
     },
     {
       "id": "amoxicillin-pediatric-lower-respiratory-tract-infections",
@@ -6479,11 +6525,13 @@
             "title": "Pneumonia, Community-acquired (Off-label)",
             "content": [
               "<3 months: Safety and efficacy is not established",
-              "≥3 months - Immediate release:",
-              "Empiric treatment: 90 mg/kg/day PO divided q12 hr for 10 days; not to exceed 4,000 mg/day",
-              "Group A Streptococcus: 50-75 mg/kg/day PO divided q12hr for 10 days; not to exceed 4,000 mg/day",
-              "H. influenza: 75-100 mg/kg/day PO divided q8hr for 10 days; not to exceed 4,000 mg/day",
-              "S. pneumoniae (mild infection or step-down therapy or when MICs to penicillin ≤2.0 mcg/mL): 90 mg/kg/day PO divided q12hr or 45 mg/kg/day divided q8hr for 10 days; not to exceed 4,000 mg/day"
+              "≥3 months - Immediate release (Max: 500 mg/dose):",
+              "-Empiric treatment: 90 mg/kg/day PO divided q12 hr for 10 days; not to exceed 4,000 mg/day",
+              "-Group A Streptococcus: 50-75 mg/kg/day PO divided q12hr for 10 days; not to exceed 4,000 mg/day",
+              "-H. influenza: 75-100 mg/kg/day PO divided q8hr for 10 days; not to exceed 4,000 mg/day",
+              "-S. pneumoniae (mild infection or step-down therapy or when MICs to penicillin ≤2.0 mcg/mL): 90 mg/kg/day PO divided q12hr or 45 mg/kg/day divided q8hr for 10 days; not to exceed 4,000 mg/day",
+              ">5years - Immediate release (Max: 4000 mg/day):",
+              "Dose: 90 mg/kg/day PO divided q12h x5-10 days"
             ]
           }
         ]
@@ -6530,7 +6578,394 @@
           ]
         }
       ],
-      "results": {}
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Drug Administration: Take without regard to meals",
+          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
+          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
+          "Shake suspension well before using; any unused portion must be discarded after 14 days",
+          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+        ]
+      }
+    },
+    {
+      "id": "amoxicillin-pediatric-anthrax",
+      "title": "Amoxicillin Pediatric - Anthrax",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Anthrax (Off-Label) | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Post-exposure inhalational prophylaxis",
+            "content": [
+              "<40 kg: 15 mg/kg PO q8hr (minimum recommended dose; should not be <45 mg/kg/day or >q8hr",
+              ">40 kg: 500 mg PO q8hr",
+              "80 mg/kg/day PO divided q8hr for 4 weeks (with concomitant vaccine) or for 60 days (without vaccine)"
+            ]
+          },
+          {
+            "title": "Cutaneous",
+            "content": [
+              "Neonates > 32wk gestation: Dose: 50-75 mg/kg/day PO divided q8-12h x7-10 days; Info: for penicillin-susceptible B. anthracis non-systemic infection; dose, frequency depend on gestational and post-natal age; give abx x60 days total if bioterrorism suspected",
+              ">1 month: Dose: 75 mg/kg/day PO divided q8h x7-10 days; Max: 1 g/dose; Info: for penicillin-susceptible B. anthracis non-systemic infection; give abx x60 days total if bioterrorism suspected"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Drug Administration: Take without regard to meals",
+          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
+          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
+          "Shake suspension well before using; any unused portion must be discarded after 14 days",
+          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+        ]
+      }
+    },
+    {
+      "id": "amoxicillin-pediatric-infective-endocarditis",
+      "title": "Amoxicillin Pediatric - Infective Endocarditis",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Infective Endocarditis (Off-Label) | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Prophylaxis",
+            "content": [
+              "50 mg/kg PO 30-60 min before procedure",
+              "Dosing considerations: AHA guidelines recommend prophylaxis only in high-risk patients undergoing invasive procedures with history of cardiac conditions that predispose them to infection"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Drug Administration: Take without regard to meals",
+          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
+          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
+          "Shake suspension well before using; any unused portion must be discarded after 14 days",
+          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+        ]
+      }
+    },
+    {
+      "id": "amoxicillin-pediatric-lyme-disease",
+      "title": "Amoxicillin Pediatric - Lyme Disease",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Lyme Disease (Off-Label) | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Erythema migrans and other symptoms of early dissemination",
+            "content": [
+              "<3 months: Safety and efficacy not established",
+              ">3 months and 40 kg: 25-50 mg/kg/day divided q8hr; not to exceed 500 mg"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Drug Administration: Take without regard to meals",
+          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
+          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
+          "Shake suspension well before using; any unused portion must be discarded after 14 days",
+          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+        ]
+      }
+    },
+    {
+      "id": "amoxicillin-pediatric-renal-dosing",
+      "title": "Amoxicillin Pediatric - Renal Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Renal Dosing | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Immediate Release Form",
+            "content": [
+              "CrCl 10-30: give q12h",
+              "CrCl <10: give q24h",
+              "HD: give supplement, PD: no supplement",
+              "Do not use 875 mg tab if CrCl <30"
+            ]
+          },
+          {
+            "title": "Extended Release Form",
+            "content": [
+              "CrCl <30: Avoid use"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Drug Administration: Take without regard to meals",
+          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
+          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
+          "Shake suspension well before using; any unused portion must be discarded after 14 days",
+          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+        ]
+      }
+    },
+    {
+      "id": "amoxicillin-pediatric-upper-respiratory-tract-infections",
+      "title": "Amoxicillin Pediatric - Upper Respiratory Tract Infections",
+      "type": "formula",
+      "info": {
+        "drugName": "Amoxicillin",
+        "drugIndication": "Upper Respiratory Tract Infections | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Pharyngitis, Streptococcal",
+            "content": [
+              "Immediate release form: Dose: 50 mg/kg PO q24h x10 days; Max: 1000 mg/day; Alt: 25 mg/kg PO q12h x10 days",
+              "Extended release form (>12 yo): Dose: 775 mg ER PO q24h x10 days; Info: give w/ in 1h of a meal; do not cut/crush/chew ER tab"
+            ]
+          },
+          {
+            "title": "Sinusitis, Acute bacterial",
+            "content": [
+              ">3 months: Dose: 90 mg/kg/day PO divided q8-12h x10 days; Max: 1000 mg/dose; Info: not recommended per IDSA guidelines"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Drug Administration: Take without regard to meals",
+          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
+          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
+          "Shake suspension well before using; any unused portion must be discarded after 14 days",
+          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+        ]
+      }
     }
 
   ]
