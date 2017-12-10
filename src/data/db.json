@@ -463,7 +463,22 @@
     {
       "id": "metoclopramide-pediatric-dosing",
       "title": "Metoclopramide Pediatric Dosing",
-      "subtitle": "Dosing for multiple indications"
+      "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "paracetamol-acetaminophen-pediatric-dosing",
+      "title": "Paracetamol/Acetaminophen Pediatric Dosing",
+      "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "diclofenac-sodium-pediatric-dosing",
+      "title": "Diclofenac Sodium Pediatric Dosing",
+      "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "diclofenac-potassium-pediatric-dosing",
+      "title": "Diclofenac Potassium Pediatric Dosing",
+      "subtitle": "Pediatric dosing for multiple indications"
     }
   ],
   "calculators": [
@@ -7067,11 +7082,244 @@
       "notes": {
         "type": "unordered-list",
         "content": [
-          "Drug Administration: Take without regard to meals",
-          "Mixing oral suspension: Tap bottle until all powder flows freely; add approximately one third of the total amount of water for reconstitution and shake vigorously to wet powder; add remainder of water and shake vigorously again",
-          "After reconstitution, place required amount of suspension directly on child’s tongue for swallowing; if taste is unacceptable, required amount of suspension can be added to formula, milk, fruit juice, water, ginger ale, or other cold drinks; preparation must be taken immediately",
-          "Shake suspension well before using; any unused portion must be discarded after 14 days",
-          "Dosage forms:  CAP: 250 mg, 500 mg; TAB: 500 mg, 875 mg; ER TAB: 775 mg; CHEWABLE: 125 mg, 250 mg; SUSP: 125 mg per 5 mL, 200 mg per 5 mL, 250 mg per 5 mL, 400 mg per 5 mL"
+          "Dosage forms:  TAB: 5 mg, 10 mg; ODT: 5 mg, 10 mg; SOL: 5 mg per 5 mL; INJ (pre-filled syringe): 10 mg per 2 mL; INJ (vial): 5 mg per mL"
+        ]
+      }
+    },
+    {
+      "id": "paracetamol-acetaminophen-pediatric-dosing",
+      "title": "Paracetamol/Acetaminophen Pediatric Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Paracetamol or Acetaminophen",
+        "drugIndication": "Multiple Indications | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Pain & Fever relief",
+            "content": [
+              "Neonates 28-31 weeks gestation: 10-15 mg/kg/dose PO/PR q12hr prn; may administer an initial load of 20 mg/kg PO; not to exceed 40 mg/kg/day or 48 hr (consecutive) of maximum dose",
+              "Neonates 32-37 weeks gestation: 10-15 mg/kg/dose PO/PR q8hr prn; may administer an initial load of 20 mg/kg PO; not to exceed 60 mg/kg/day or 48 hr (consecutive) of maximum dose",
+              "Neonates 0-9 days: 10-15 mg/kg/dose PO/PR q6-8hr prn; may administer an initial load of 20 mg/kg PO; not to exceed 60 mg/kg/day; or 48 hr (consecutive) of maximum dose",
+              "Neonates 10-29 days: 10-15 mg/kg/dose PO/PR q4-8hr prn; may administer an initial load of 20 mg/kg PO; not to exceed 90 mg/kg/day; or 48 hr (consecutive) of maximum dose",
+              "Infants: 10-15 mg/kg/dose PO/PR q4-6hr prn; not to exceed 15 mg/kg/dose or 75 mg/kg/day",
+              "Children and adolescents <60 kg: 10-15 mg/kg/dose PO/PR q4-6hr prn; not to exceed 15 mg/kg/dose or 1,000 mg/dose, whichever is less or 75 mg/kg/day or 4,000 mg/day, whichever is less"
+            ]
+          },
+          {
+            "title": "Renal Dosing",
+            "content": [
+              "CrCl 10-50: give q6h",
+              "CrCl <10: give q8h",
+              "HD/PD: no supplement"
+            ]
+          },
+          {
+            "title": "Hepatic Dosing",
+            "content": [
+              "Consider decreasing dose"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Dosage forms:  CAP: 325 mg, 500 mg; TAB: 325 mg, 500 mg, 650 mg; CHEWABLE: 80 mg, 160 mg; SUSP: 100 mg per mL, 120 mg per 5 mL, 160 mg per 5 mL, SOL: 160 mg per 5 mL, 500 mg per 15 mL"
+        ]
+      }
+    },
+    {
+      "id": "diclofenac-sodium-pediatric-dosing",
+      "title": "Diclofenac Sodium Pediatric Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Diaclofenac Sodium",
+        "drugIndication": "Multiple Indications | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Juvenile Idiopathic Arthritis",
+            "content": [
+              "Delayed Release Form:",
+              ">3 years: 2-3 mg/kg/day PO divided bid-qid; Max: 150 mg/day; Info: use lowest effective dose, shortest effective tx duration; give w/ food if GI upset occurs; D/C if abnormal liver or renal tests persist or worsen"
+            ]
+          },
+          {
+            "title": "Post-operative Pain",
+            "content": [
+              "Dose: 1 mg/kg/day PO divided bid-tid; Max: 150 mg/day; Info: use lowest effective dose, shortest effective tx duration; give w/ food if GI upset occurs; D/C if abnormal liver or renal tests persist or worsen"
+            ]
+          },
+          {
+            "title": "Renal & Hepatic Dosing",
+            "content": [
+              "Delayed Release Form:",
+              "Renal/Hepatic Impairment: No specific pediatric dosing, see adjust dosing adjustments for guidance"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Dosage forms:  Delayed Release (DR) TAB: 25 mg, 50 mg, 75 mg"
+        ]
+      }
+    },
+    {
+      "id": "diclofenac-potassium-pediatric-dosing",
+      "title": "Diclofenac Potassium Pediatric Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Diaclofenac Potassium",
+        "drugIndication": "Multiple Indications | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Juvenile Idiopathic Arthritis",
+            "content": [
+              "Dose: 75-100 mg/day PO divided bid-tid; Max: 150 mg/day; Info: use lowest effective dose, shortest effective tx duration; give w/ food if GI upset occurs; D/C if abnormal liver or renal tests persist or worsen"
+            ]
+          },
+          {
+            "title": "Renal & Hepatic Dosing",
+            "content": [
+              "Renal/Hepatic Impairment: No specific pediatric dosing, see adjust dosing adjustments for guidance"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Dosage forms: TAB 50 mg"
         ]
       }
     }
