@@ -499,6 +499,31 @@
       "id": "ceftibuten-pediatric-dosing",
       "title": "Ceftibuten Pediatric Dosing",
       "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "azithromycin-pediatric-dosing",
+      "title": "Azithromycin Pediatric Dosing",
+      "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "cefaclor-pediatric-dosing",
+      "title": "Cefaclor Pediatric Dosing",
+      "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "dexamethasone-pediatric-dosing",
+      "title": "Dexamethasone Pediatric Dosing",
+      "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "clarithromycin-pediatric-dosing",
+      "title": "Clarithromycin Pediatric Dosing",
+      "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "cefepime-pediatric-dosing",
+      "title": "Cefepime Pediatric Dosing",
+      "subtitle": "Pediatric dosing for multiple indications"
     }
   ],
   "calculators": [
@@ -7769,7 +7794,642 @@
           "Dosage forms:  CAP: 400 mg; SUSPENSION (SUSP): 180 mg per 5 mL"
         ]
       }
-    }
+    },
+    {
+      "id": "azithromycin-pediatric-dosing",
+      "title": "Azithromycin Pediatric Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Azithromycin",
+        "drugIndication": "Multiple Indications | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Acute Otitis Media",
+            "content": [
+              "<6 months: Safety and efficacy not established",
+              "≥6 months: 30 mg/kg of oral suspension once or 10 mg/kg PO once daily for 3 days or 10 mg/kg once on day 1 followed by 5 mg/kg on days 2-5"
+            ]
+          },
+          {
+            "title": "Pharyngitis/Tonsillitis, Streptococcal",
+            "content": [
+              "<2 years: Safety and efficacy not established",
+              ">2 years: 12 mg/kg PO once daily for 5 days; not to exceed 500 mg/day"
+            ]
+          },
+          {
+            "title": "Community-Acquired Pneumonia, Atypical",
+            "content": [
+              "<6 months: Safety and efficacy not established",
+              "Mild infection > 6 months: 10 mg/kg PO x1 on day 1, then 5 mg/kg PO q24h x4 days; Max: 500 mg for 1st dose, 250 mg for subsequent doses ",
+              "Moderate to Severe infection > 6 months: 10 mg/kg IV q24h x2 days, then 5 mg/kg PO q24h x3 days; Max: 500 mg/dose IV; 250 mg/dose PO"
+            ]
+          },
+          {
+            "title": "Acute Bacterial Sinusitis",
+            "content": [
+              "10 mg/kg of oral suspension PO once daily for 3 days"
+            ]
+          },
+          {
+            "title": "Endocarditis Prophylaxis, Dental",
+            "content": [
+              "15mg/kg PO x 1",
+              "Start: 30-60min before procedure; Max: 500 mg/dose"
+            ]
+          },
+          {
+            "title": "Chlamydial Infections",
+            "content": [
+              "Infants: 20 mg/kg PO qd x3 days; Info: for ophthalmia neonatorum or pneumonia; Not a 1st-line agent",
+              "Children < 8 years and ≤45 kg: 20 mg/kg PO x1; Max: 1 g/dose; Not 1st-line agent",
+              "Children/Adolescents > 8 years or > 45kg: Dose 1 g PO x 1",
+              "Presumptive Tx, pre-adolescents ≤45 kg: 20 mg/kg PO x1; For sexual assault victims; part of multi-drug regimen",
+              "Presumptive Tx, pre-adolescents >45 kg:1 g PO x1; For sexual assault victims; part of multi-drug regimen"
+            ]
+          },
+          {
+            "title": "Mycobacterium Avium Complex Infection (MAC)",
+            "content": [
+              "<6 years: Safety and efficacy not established",
+              "Primary Prophylaxis for ≥6 years: 20 mg/kg PO once weekly; Not to exceed 1200 mg/week or 5mg/kg/day qDay; Not to exceed 250 mg/day",
+              "Secondary Prophylaxis for ≥6 years: 5 mg/kg/day PO qDay; Not to exceed 250 mg/day in combination with Ethambutol with or w/o Rifabutin",
+              "Treatment: 10-12 mg/kg/day PO; not to exceed 500 mg; used in combination with Ethambutol; if severe disease patient should also receive Rifabutin"
+            ]
+          },
+          {
+            "title": "Acute Salmonellosis",
+            "content": [
+              "Dose: 10 mg/kg PO q24h x3-7 days",
+              "Max: 500 mg/day; May extend treatment x 1 week if patient is immunocompromised"
+            ]
+          },
+          {
+            "title": "Typhoid Fever, Adjunct Tx",
+            "content": [
+              "Dose: 10 mg/kg PO q24h x1 week"
+            ]
+          },
+          {
+            "title": "Babesiosis, Mild to Moderate",
+            "content": [
+              "Immunocompetent patients: 10 mg/kg PO x1 on day 1, then 5 mg/kg PO q24h x6-9 days; Max: 500 mg on day 1; 250 mg/day on days 2-10; Use w/ Atovaquone",
+              "Immunocompromised patients: 12 mg/kg PO q24h x7-10 days; Max: 600 mg/day; Use w/ Atovaquone"
+            ]
+          },
+          {
+            "title": "Chancroid",
+            "content": [
+              "Preadolescents ≤45 kg: 20 mg/kg PO x1; Max: 1 g/dose",
+              "Preadolescents > 45 kg & Adolescents: 1 g PO x1"
+            ]
+          },
+          {
+            "title": "Non-gonococcal Urethritis",
+            "content": [
+              "Adolescents, initial infection: 1 g PO x1",
+              "Adolescents, recurrent/persistent infection: 1 g PO x1 w/ metronidazole or tinidazole; Info: for use only if single-dose azithromycin not used for initial infection"
+            ]
+          },
+          {
+            "title": "Renal & Hepatic Dosing",
+            "content": [
+              "Renal Impairment (No adjustment); CrCl <10: Caution Advised; HD/PD: No supplement",
+              "Hepatic Impairment - Caution Advised"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Dosage forms:  TAB: 250 mg, 500 mg, 600 mg; Powder: 1 g per pkt; Suspension: 100 mg per 5 mL, 200 mg per 5 mL; Injectable: various"
+        ]
+      }
+    },
+    {
+      "id": "cefaclor-pediatric-dosing",
+      "title": "Cefaclor Pediatric Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Cefaclor",
+        "drugIndication": "Multiple Indications | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Bacterial Infections",
+            "content": [
+              "< 1 month: Safety and efficacy not established",
+              "> 1 month: Start: 20-40 mg/kg/day PO divided q8-12h; Max Dose: 1 g/day",
+              "Dose & treatment duration varies with infection type and severity"
+            ]
+          },
+          {
+            "title": "Renal Dosing",
+            "content": [
+              "CrCl <10: decrease dose 50%",
+              " HD: give dose after dialysis; PD: no supplement"
+            ]
+          },
+          {
+            "title": "Hepatic Dosing",
+            "content": [
+              "Not defined"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Dosage forms:  CAP: 250 mg, 500 mg; SUSP: 125 mg per 5 mL, 250 mg per 5 mL, 375 mg per 5 mL"
+        ]
+      }
+    },
+    {
+      "id": "dexamethasone-pediatric-dosing",
+      "title": "Dexamethasone Pediatric Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Dexamethasone",
+        "drugIndication": "Multiple Indications | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Airway Edema",
+            "content": [
+              "Dose: 0.5-2 mg/kg/day PO/IV/IM divided q6hr, starting 24 hours before extubation and continued for 4-6 doses afterward"
+            ]
+          },
+          {
+            "title": "Adrenal Insufficiency",
+            "content": [
+              "Dose: 0.03-0.3 mg/kg/day PO divided q6-12h",
+              "Give with food; taper dose gradually to discontinue"
+            ]
+          },
+          {
+            "title": "Croup",
+            "content": [
+              "Dose: 0.6 mg/kg PO/IV/IM once",
+              "Max Dose: 20 mg/dose",
+              "May use 0.15-0.3 mg/kg PO x1 for mild-moderate croup; give with food"
+            ]
+          },
+          {
+            "title": "Altitude Sickness",
+            "content": [
+              "Dose: 0.15 mg/kg PO q6h",
+              "Max Dose: 4 mg/dose; Info: give w/ food"
+            ]
+          },
+          {
+            "title": "Inflammation",
+            "content": [
+              "0.08-0.3 mg/kg/day IV/PO/IM divided q6hr or q12hr"
+            ]
+          },
+          {
+            "title": "Respiratory Distress Syndrome in Premature Infants (Off Label)",
+            "content": [
+              "Prophylaxis: 4 mg IM q8hr administered to mother for 2 days before delivery"
+            ]
+          },
+          {
+            "title": "Spinal Cord Compression",
+            "content": [
+              "Dose: 2 mg/kg/day IV divided q6hr"
+            ]
+          },
+          {
+            "title": "Cerebral Edema Associated with Brain Tumor",
+            "content": [
+              "Dose: 1-2 mg/kg IV/IM once; maintenance: 1-1.5 mg/kg/day IV/IM divided q4-6hr; not to exceed 16 mg/day "
+            ]
+          },
+          {
+            "title": "Meningitis",
+            "content": [
+              ">6 weeks: 0.6 mg/kg/day IV divided q6hr for first 2-4 days of antibiotic therapy, starting 10-20 minutes before or simultaneously with first antibiotic dose "
+            ]
+          },
+          {
+            "title": "Corticosteroid-responsive conditions",
+            "content": [
+              "Dose: 0.08-0.3 mg/kg/day PO divided q6-12h",
+              "Dose and frequency varies by condition; give with food",
+              "Taper dose gradually to discontinue if high dose or long-term use"
+            ]
+          },
+          {
+            "title": "Bronchopulmonary Dysplasia",
+            "content": [
+              "Dose: 0.5-0.6 mg/kg/day PO divided q12h x3-7 days",
+              "Give with food; taper dose over 1-6 weeks to discontinue"
+            ]
+          },
+          {
+            "title": "Renal & Hepatic Dosing",
+            "content": [
+              "Renal Impairment: No adjustment",
+              "Hepatic Impairment: No adjustment"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Dosage forms:  TAB: 0.5 mg, 0.75 mg, 1 mg, 1.5 mg, 2 mg, 4 mg, 6 mg; SOL: 0.5 mg per 5 mL, 1 mg per mL"
+        ]
+      }
+    },
+    {
+      "id": "clarithromycin-pediatric-dosing",
+      "title": "Clarithromycin Pediatric Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Clarithromycin",
+        "drugIndication": "Multiple Indications | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Acute Otitis Media",
+            "content": [
+              "2 - 5 months: 15 mg/kg/day PO divided q12h x10 days",
+              "6 months to 12 years: 15 mg/kg/day PO divided q12h x5-10 days"
+            ]
+          },
+          {
+            "title": "Pharyngitis/Tonsillitis, Streptococcal",
+            "content": [
+              "≥6 months: 15 mg/kg/day PO divided q12h x10 days; Max: 250 mg/dose"
+            ]
+          },
+          {
+            "title": "Community-Acquired Pneumonia, Sinusitis, Bronchitis, Skin Infections",
+            "content": [
+              ">3 months: 15 mg/kg/day PO divided q12h x7-10 days"
+            ]
+          },
+          {
+            "title": "Bacterial Infections",
+            "content": [
+              "15 mg/kg/day PO divided q12h; Max: 1000 mg/day",
+              "Treatment duration varies with infection type, severity",
+              "Not recommended for sinusitis per IDSA guidelines"
 
+            ]
+          },
+          {
+            "title": "Endocarditis Prophylaxis, Dental",
+            "content": [
+              "15mg/kg PO x 1",
+              "Start: 30-60min before procedure; Max: 500 mg/dose"
+            ]
+          },
+          {
+            "title": "H. Pylori Infections",
+            "content": [
+              "15-24 kg: 250 mg PO bid x10-14 days; Info: part of multi-drug regimen; see H. pylori Tx Regimens, Pediatric 15-24 kg table",
+              "25-34 kg: 500 mg PO qam and 250 mg PO qpm x10-14 days; Info: part of multi-drug regimen; see H. pylori Tx Regimens, Pediatric 25-34 kg table",
+              ">35 kg: 500 mg PO bid x10-14 days; Info: part of multi-drug regimen; see H. pylori Tx Regimens, Pediatric >35 kg table"
+            ]
+          },
+          {
+            "title": "Mycobacterium Avium Complex Infection (MAC)",
+            "content": [
+              "Primary prophylaxis (HIV):",
+              "20 month to 12 years: 15 mg/kg/day PO divided q12h; Max: 500 mg/dose",
+              "≥13 years: 500 mg PO q12h",
+              "",
+              "Secondary prophylaxis (HIV):",
+              "20 month to 12 years: 15 mg/kg/day PO divided q12h; Max: 500 mg/dose; use w/ ethambutol",
+              "≥13 years: 500 mg PO q12h; use w/ ethambutol",
+              "",
+              "Treatment:",
+              "20 month to 12 years: 15-30 mg/kg/day PO divided q12h; Max: 500 mg/dose; use w/ ethambutol",
+              "≥13 years: 500 mg PO q12h; Info: use w/ ethambutol"
+            ]
+          },
+          {
+            "title": "Pertussis",
+            "content": [
+              "<1 month: Safety and efficacy not established",
+              "1-6 months: 7.5 mg/kg/dose PO q12hr for 7 days",
+              ">6 months: 7.5 mg/kg/dose PO q12hr for 7 days"
+            ]
+          },
+          {
+            "title": "Renal Dosing",
+            "content": [
+              "Renal Impairment: all uses without ritonavir, atazanavir, or delavirdine",
+              "CrCl <30: decr. dose 50% or give q24h",
+              "HD/PD: no supplement"
+            ]
+          },
+          {
+            "title": "Hepatic Dosing",
+            "content": [
+              "No adjustment"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Dosage forms:  TAB: 250 mg, 500 mg; SUSP: 125 mg per 5 mL, 250 mg per 5 mL"
+        ]
+      }
+    },
+    {
+      "id": "cefepime-pediatric-dosing",
+      "title": "Cefepime Pediatric Dosing",
+      "type": "formula",
+      "info": {
+        "drugName": "Cefepime",
+        "drugIndication": "Multiple Indications | Pediatric",
+        "drugDosageInformation": [
+          {
+            "title": "Bacterial Infections",
+            "content": [
+              "≥ 2 months: 50 mg/kg IV/IM q8-12h; Max: 2 g/dose; Info: frequency, duration vary w/ infection type, severity; IM only for mild-mod. UTI due to E. coli; for mod-severe pseudomonal infections give q8h"
+            ]
+          },
+          {
+            "title": "Febrile Neutropenia",
+            "content": [
+              "≥ 2 months: 50 mg/kg IV q8h; Max: 2 g/dose"
+            ]
+          },
+          {
+            "title": "Respiratory infections, Cystic Fibrosis",
+            "content": [
+              "≥ 2 months: 50 mg/kg IV q8h x2wk; Max: 2 g/dose"
+            ]
+          },
+          {
+            "title": "Pneumonia, Moderate to Severe",
+            "content": [
+              "50 mg/kg IV q12hr for 10 days; not to exceed 2 g q12hr"
+            ]
+          },
+          {
+            "title": "Skin/Skin Structure Infections, Uncomplicated",
+            "content": [
+              "50 mg/kg IV q12hr for 10 days; not to exceed 2 g q12hr"
+            ]
+          },
+          {
+            "title": "Urinary Tract Infections",
+            "content": [
+              "50 mg/kg IV/IM q12hr for 7-10 days; not to exceed 2 g q12hr"
+            ]
+          },
+          {
+            "title": "Renal Dosing",
+            "content": [
+              "CrCl 30-60: 50 mg/kg q12h",
+              "CrCl 11-29: 50 mg/kg q24h",
+              "CrCl <11: 50 mg/kg x1, then 25 mg/kg q24h",
+              "HD: 25 mg/kg q24h, give after dialysis; PD: 50 mg/kg q48h",
+              "",
+              "All other infections:",
+              "CrCl 30-60: 50 mg/kg q24h",
+              "CrCl 11-29: 50 mg/kg x1, then 25-50 mg/kg q24h",
+              "CrCl <11: 50 mg/kg x1, then 12.5-25 mg/kg q24h",
+              "HD: 50 mg/kg x1, then 25 mg/kg q24h, give after dialysis; PD: 50 mg/kg q48h"
+            ]
+          },
+          {
+            "title": "Hepatic Dosing",
+            "content": [
+              "No adjustment"
+            ]
+          }
+        ]
+      },
+      "questions": [
+        {
+          "group": "Dosage",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter drug dose",
+              "values": ["mg/kg", "gm/kg", "mcg/kg"]
+            }
+          ]
+        },
+        {
+          "group": "Weight",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter patient weight",
+              "values": ["kg", "lbs"]
+            }
+          ]
+        },
+        {
+          "group": "Liquid Formulation (optional)",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication amount",
+              "values": ["mg", "gm", "mcg"]
+            }
+          ]
+        },
+        {
+          "group": "Per Volume",
+          "data": [
+            {
+              "type": "input/select",
+              "placeholder": "Enter medication volume",
+              "values": ["mL", "L"]
+            }
+          ]
+        }
+      ],
+      "results": {},
+      "notes": {
+        "type": "unordered-list",
+        "content": [
+          "Dosage forms:",
+          "Powder for injection 1g, 2g",
+          "Infusion solution 1g/50mL, 2g/100mL"
+        ]
+      }
+    }
   ]
 }
