@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import { withStyles } from 'material-ui/styles'
 import PropTypes from 'prop-types'
-import SwipeableViews from 'react-swipeable-views'
-import MobileStepper from 'material-ui/MobileStepper'
-import Button from 'material-ui/Button'
-import KeyboardArrowLeft from 'material-ui-icons/KeyboardArrowLeft'
-import KeyboardArrowRight from 'material-ui-icons/KeyboardArrowRight'
+import Slider from 'react-slick'
 import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
@@ -17,11 +13,8 @@ const styles = theme => ({
   },
   content: {
     margin: `${theme.spacing.unit * 2}px`,
+    marginBottom: `${theme.spacing.unit * 3}px`,
     flexGrow: 1
-  },
-  stepper: {
-    maxWidth: 300,
-    margin: '0 auto'
   },
   drugName: {},
   drugIndication: {
@@ -31,29 +24,9 @@ const styles = theme => ({
 })
 
 class InfoGroup extends Component {
-  state = {
-    stepIndex: 0
-  }
-
-  handleNext = () => {
-    this.setState({
-      stepIndex: this.state.stepIndex + 1
-    })
-  }
-
-  handleBack = () => {
-    this.setState({
-      stepIndex: this.state.stepIndex - 1
-    })
-  }
-
-  handleChangeIndex = index => {
-    this.setState({ stepIndex: index })
-  }
-
   renderContentViews = (drugDosageInformation, classes) => {
     return drugDosageInformation.map((item, index) => (
-      <div key={item.title}>
+      <div key={index}>
         <Typography
           type='body2'
           gutterBottom
@@ -61,7 +34,7 @@ class InfoGroup extends Component {
         >
           {item.title}
         </Typography>
-        {item.content.map(content => <p key={content}>{content}</p>)}
+        {item.content.map((content, index) => <p key={index}>{content}</p>)}
       </div>
     ))
   }
@@ -82,52 +55,14 @@ class InfoGroup extends Component {
           >
             {this.props.drugIndication}
           </Typography>
-          <SwipeableViews
-            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-            index={this.state.stepIndex}
-            onChangeIndex={this.handleChangeIndex}
+          <Slider
+            dots={true}
+            infinite={true}
+            rtl={theme.direction === 'rtl'}
+            arrows={false}
           >
             {this.renderContentViews(drugDosageInformation, classes)}
-          </SwipeableViews>
-          {drugDosageInformation.length > 1 && (
-            <MobileStepper
-              type='dots'
-              steps={drugDosageInformation.length}
-              position='static'
-              activeStep={this.state.stepIndex}
-              className={classes.stepper}
-              nextButton={
-                <Button
-                  dense
-                  onClick={this.handleNext}
-                  disabled={
-                    this.state.stepIndex === drugDosageInformation.length - 1
-                  }
-                >
-                  Next
-                  {theme.direction === 'rtl' ? (
-                    <KeyboardArrowLeft />
-                  ) : (
-                    <KeyboardArrowRight />
-                  )}
-                </Button>
-              }
-              backButton={
-                <Button
-                  dense
-                  onClick={this.handleBack}
-                  disabled={this.state.stepIndex === 0}
-                >
-                  {theme.direction === 'rtl' ? (
-                    <KeyboardArrowRight />
-                  ) : (
-                    <KeyboardArrowLeft />
-                  )}
-                  Back
-                </Button>
-              }
-            />
-          )}
+          </Slider>
         </div>
       </div>
     )

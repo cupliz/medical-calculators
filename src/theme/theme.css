@@ -3,3 +3,14 @@ body {
     'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
 }
+
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .slick-dots li {
+    margin: 0;
+  }
+}
