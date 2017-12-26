@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import CalculatorHeader from './header/CalculatorHeader'
 import CalculatorBody from './body/CalculatorBody'
 import { connect } from 'react-redux'
 import { fetchCalcData } from '../../store/modules/calculator'
@@ -16,7 +15,6 @@ class ComponentView extends Component {
   render () {
     return (
       <div className='calculator'>
-        <CalculatorHeader title={this.props.data.title} />
         <CalculatorBody data={this.props.data} />
         <ResultCard />
       </div>
