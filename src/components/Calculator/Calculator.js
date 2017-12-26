@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { fetchCalcData } from '../../store/modules/calculator'
 import Loader from '../Loader/Loader'
 import ResultCard from './results/ResultCard'
+import DocumentTitle from 'react-document-title'
 
 const LoadingView = () => <Loader />
 
@@ -14,10 +15,12 @@ const ErrorView = props => (
 class ComponentView extends Component {
   render () {
     return (
-      <div className='calculator'>
-        <CalculatorBody data={this.props.data} />
-        <ResultCard />
-      </div>
+      <DocumentTitle title={this.props.data.title}>
+        <div className='calculator'>
+          <CalculatorBody data={this.props.data} />
+          <ResultCard />
+        </div>
+      </DocumentTitle>
     )
   }
 }

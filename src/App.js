@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { fetchListData } from './store/modules/list'
 import Loader from './components/Loader/Loader'
 import FOF from './components/FOF/FOF'
+import DocumentTitle from 'react-document-title'
 
 const LoadingView = () => <Loader />
 
@@ -15,24 +16,26 @@ const ErrorView = props => (
 
 const ComponentView = props => (
   <main className='app'>
-    <Switch>
-      <Route
-        exact
-        path='/'
-        render={routeProps => <Home data={props.data} {...routeProps} />}
-      />
-      {props.data.map(calculator => (
+    <DocumentTitle title='Doc Bot Calculators'>
+      <Switch>
         <Route
           exact
-          key={calculator.id}
-          path={`/${calculator.id}`}
-          render={routeProps => (
-            <Calculator data={props.data} calculatorId={calculator.id} {...routeProps} />
-          )}
+          path='/'
+          render={routeProps => <Home data={props.data} {...routeProps} />}
         />
-      ))}
-      <Route render={() => <FOF />} />
-    </Switch>
+        {props.data.map(calculator => (
+          <Route
+            exact
+            key={calculator.id}
+            path={`/${calculator.id}`}
+            render={routeProps => (
+              <Calculator data={props.data} calculatorId={calculator.id} {...routeProps} />
+            )}
+          />
+        ))}
+        <Route render={() => <FOF />} />
+      </Switch>
+    </DocumentTitle>
   </main>
 )
 
