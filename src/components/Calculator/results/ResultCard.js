@@ -24,9 +24,14 @@ const styles = theme => ({
     fontSize: 14,
     fontWeight: 'bold'
   },
-  shareIcon: {
-    width: 16,
-    height: 16
+  expand: {
+    transform: 'rotate(0deg)',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
   },
   content: {
     paddingTop: 10
