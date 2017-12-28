@@ -1,14 +1,14 @@
 import React from 'react'
 import Typography from 'material-ui/Typography'
 import ResultCardHeader from './ResultCardHeader'
-import ResultCardPointsRow from './ResultCardPointsRow'
+import ResultCardPointsFragment from './ResultCardPointsFragment'
 
 const ResultCardPoints = ({classes, points, results, showPointsInResults}) => {
   const renderPoints = () => {
     if (showPointsInResults === false) {
       return null
     } else {
-      return <ResultCardPointsRow classes={classes} content={points} />
+      return <ResultCardPointsFragment classes={classes} content={points} />
     }
   }
   if (points === 0 && !results) {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Typography from 'material-ui/Typography'
 
-const ResultCardPointsRow = props => {
+const ResultCardPointsFragment = props => {
   const { classes, content, short } = props
   if (short) {
     return (
@@ -23,4 +23,4 @@ const ResultCardPointsRow = props => {
   }
 }
 
-export default ResultCardPointsRow
+export default ResultCardPointsFragment
