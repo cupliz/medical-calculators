@@ -6,10 +6,8 @@ import ResultCardPoints from './ResultCardPoints'
 
 const styles = theme => ({
   card: {
-    minWidth: 275,
-    position: 'fixed',
+    zIndex: 1,
     width: '100%',
-    bottom: 0
   },
   header: {
     paddingBottom: 0

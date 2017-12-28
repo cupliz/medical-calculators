@@ -18,7 +18,21 @@ TabContainer.propTypes = {
 
 const styles = theme => ({
   calculatorBody: {
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    maxHeight: '100%',
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  calculatorBodyList: {
+    maxHeight: '100%',
+    width: '100%',
+    flex: 1,
+    padding: 0,
+    overflow: 'auto',
+  },
+  appBar: {
+    boxShadow: 'none'
   },
   tabs: {
     backgroundColor: '#fff'
@@ -46,7 +60,7 @@ class CalculatorBody extends Component {
 
     return (
       <div className={classes.calculatorBody}>
-        <AppBar position='static' color='default'>
+        <AppBar position='static' color='default' className={classes.appBar}>
           <Tabs
             value={this.state.tabIndex}
             className={classes.tabs}
@@ -78,6 +92,7 @@ class CalculatorBody extends Component {
           index={this.state.tabIndex}
           onChangeIndex={this.handleChangeIndex}
           disabled={true}
+          className={classes.calculatorBodyList}
         >
           <TabContainer dir={theme.direction}>
             <CalculateContainer
