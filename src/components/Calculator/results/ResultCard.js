@@ -7,7 +7,8 @@ import ResultCardPoints from './ResultCardPoints'
 const styles = theme => ({
   card: {
     minWidth: 275,
-    position: 'sticky',
+    position: 'fixed',
+    width: '100%',
     bottom: 0
   },
   header: {
@@ -25,13 +26,13 @@ const styles = theme => ({
     fontWeight: 'bold'
   },
   expand: {
-    transform: 'rotate(0deg)',
+    transform: 'rotate(180deg)',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: 'rotate(0deg)',
   },
   content: {
     paddingTop: 10

@@ -77,6 +77,7 @@ class CalculatorBody extends Component {
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={this.state.tabIndex}
           onChangeIndex={this.handleChangeIndex}
+          disabled={true}
         >
           <TabContainer dir={theme.direction}>
             <CalculateContainer

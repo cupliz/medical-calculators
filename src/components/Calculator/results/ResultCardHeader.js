@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import Card, { CardHeader } from 'material-ui/Card'
+import Collapse from 'material-ui/transitions/Collapse';
+import Card, { CardHeader, CardContent } from 'material-ui/Card'
 import IconButton from 'material-ui/IconButton'
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore'
 import Typography from 'material-ui/Typography'
@@ -13,7 +14,7 @@ class ResultCardHeader extends Component {
   handleExpandClick = () => this.setState({ expanded: !this.state.expanded })
 
   render() {
-    const { children, classes } = this.props
+    const { classes, children } = this.props
 
     return (
       <Card className={classes.card}>
@@ -35,7 +36,14 @@ class ResultCardHeader extends Component {
             </div>
           }
         />
-        {children}
+        <CardContent className={classes.content}>
+          <Collapse in={!this.state.expanded} timeout="auto" unmountOnExit>
+            {React.cloneElement(children[0], { short: true })}
+          </Collapse>
+          <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+            {children}
+          </Collapse>
+        </CardContent>
       </Card>
     )
   }
