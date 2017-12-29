@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../components/Calculator/results/ResultCardHeader'
-import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
-import Decimal from '../components/Decimal/Decimal'
-
+import { ResultCardFormulaValueFragment } from '../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     neutrophils: [
@@ -85,21 +80,15 @@ class FormulaComponent extends Component {
         if (neutrophilsValue && bandsValue && WBC_countValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Absolute Neutrophil Count
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    neutrophilsValue * neutrophilsUnitValue,
-                                    bandsValue * bandsUnitValue,
-                                    WBC_countValue * WBC_countUnitValue
-                                )}
-                            </Typography>
-
-                        </div>
-                    </CardContent>
+                    <ResultCardFormulaValueFragment
+                        classes={classes}
+                        caption='Absolute Neutrophil Count'
+                        value={this.handleCalc(
+                            neutrophilsValue * neutrophilsUnitValue,
+                            bandsValue * bandsUnitValue,
+                            WBC_countValue * WBC_countUnitValue
+                        )}
+                    />
                 </ResultCardHeader>
             )
         } else {

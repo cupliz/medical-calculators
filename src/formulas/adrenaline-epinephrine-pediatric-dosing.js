@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     dosage: [
@@ -164,68 +162,50 @@ class FormulaComponent extends Component {
         if (dosageValue && weightValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Dose
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleDoseCalc(
-                                    'dose',
-                                    dosageValue * dosageUnitValue,
-                                    weightValue * weightUnitValue,
-                                    this.state.doseSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.doseSelectUnit}
-                                onChange={this.handleDoseSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.dose.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Typography type='caption' className={classes.contentText}>
-                            Liquid Dose
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleDoseCalc(
-                                    'liquidDose',
-                                    dosageValue * dosageUnitValue,
-                                    weightValue * weightUnitValue,
-                                    this.state.doseSelectValue,
-                                    medAmountValue * medAmountUnitValue,
-                                    perVolumeValue * perVolumeUnitValue,
-                                    this.state.liquidDoseSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.liquidDoseSelectUnit}
-                                onChange={this.handleLiquidDoseSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.liquidDose.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Dose'
+                        value={this.handleDoseCalc(
+                            'dose',
+                            dosageValue * dosageUnitValue,
+                            weightValue * weightUnitValue,
+                            this.state.doseSelectValue
+                        )}
+                        selectValue={this.state.doseSelectUnit}
+                        selectOnChange={this.handleDoseSelectChange}
+                    >
+                        {unitData.dose.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Dose'
+                        value={this.handleDoseCalc(
+                            'liquidDose',
+                            dosageValue * dosageUnitValue,
+                            weightValue * weightUnitValue,
+                            this.state.doseSelectValue,
+                            medAmountValue * medAmountUnitValue,
+                            perVolumeValue * perVolumeUnitValue,
+                            this.state.liquidDoseSelectValue
+                        )}
+                        selectValue={this.state.liquidDoseSelectUnit}
+                        selectOnChange={this.handleLiquidDoseSelectChange}
+                    >
+                        {unitData.liquidDose.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {

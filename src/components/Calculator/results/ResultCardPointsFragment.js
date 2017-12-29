@@ -5,7 +5,7 @@ const ResultCardPointsFragment = props => {
   const { classes, content, short } = props
   if (short) {
     return (
-      <Typography className={classes.contentText}>
+      <Typography className={`${classes.contentText} ${classes.shortFragment}`}>
         {`Points: ${content}`}
       </Typography>
     )

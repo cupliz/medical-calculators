@@ -38,7 +38,7 @@ class ResultCardHeader extends Component {
         />
         <CardContent className={classes.content}>
           <Collapse in={!this.state.expanded} timeout="auto" unmountOnExit>
-            {React.cloneElement(children[0], { short: true })}
+            {children[0] ? React.cloneElement(children[0], { short: true }) : React.cloneElement(children, { short: true })}
           </Collapse>
           <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
             {children}
