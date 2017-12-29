@@ -32,6 +32,11 @@ const styles = theme => ({
   expandOpen: {
     transform: 'rotate(0deg)',
   },
+  shortFragment: {
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis'
+  },
   content: {
     paddingTop: 10
   },

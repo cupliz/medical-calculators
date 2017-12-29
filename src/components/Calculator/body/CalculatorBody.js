@@ -28,7 +28,6 @@ const styles = theme => ({
     maxHeight: '100%',
     width: '100%',
     flex: 1,
-    padding: 0,
     overflow: 'auto',
   },
   appBar: {
@@ -93,6 +92,7 @@ class CalculatorBody extends Component {
           onChangeIndex={this.handleChangeIndex}
           disabled={true}
           className={classes.calculatorBodyList}
+          animateHeight={true}
         >
           <TabContainer dir={theme.direction}>
             <CalculateContainer
