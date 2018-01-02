@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
-import ResultCardHeader from '../components/Calculator/results/ResultCardHeader'
+import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
-import Decimal from '../components/Decimal/Decimal'
+import Decimal from '../../components/Decimal/Decimal'
 //values": ["mL/min", "mL/sec", "mL/h","L/min", "L/sec"
 const unitData = {
     volExp: [

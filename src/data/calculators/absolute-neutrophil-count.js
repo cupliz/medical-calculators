@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ResultCardHeader from '../components/Calculator/results/ResultCardHeader'
-import { ResultCardFormulaValueFragment } from '../components/Calculator/results/ResultCardFormulaFragments'
+import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
+import { ResultCardFormulaValueFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     neutrophils: [

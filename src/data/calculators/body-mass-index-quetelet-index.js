@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
-import ResultCardHeader from '../components/Calculator/results/ResultCardHeader'
-import Decimal from '../components/Decimal/Decimal'
+import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
+import Decimal from '../../components/Decimal/Decimal'
 
 const unitData = {
   height: [
