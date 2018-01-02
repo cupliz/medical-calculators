@@ -182,7 +182,7 @@ class FormulaComponent extends Component {
                     </ResultCardFormulaValueSelectFragment>
                     <ResultCardFormulaValueSelectFragment
                         classes={classes}
-                        caption='Dose'
+                        caption='Liquid Dose'
                         value={this.handleDoseCalc(
                             'liquidDose',
                             dosageValue * dosageUnitValue,
