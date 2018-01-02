@@ -43,15 +43,12 @@ const styles = theme => ({
 
 class CalculatorBody extends Component {
   state = {
-    tabIndex: 0
+    tabIndex: 0,
+    customizeHeight: false
   }
 
   handleChange = (event, value) => {
-    this.setState({ tabIndex: value })
-  }
-
-  handleChangeIndex = index => {
-    this.setState({ tabIndex: index })
+    this.setState({ tabIndex: value, customizeHeight: true })
   }
 
   render () {
@@ -89,10 +86,10 @@ class CalculatorBody extends Component {
         <SwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={this.state.tabIndex}
-          onChangeIndex={this.handleChangeIndex}
+          onChangeIndex={this.handleChange}
           disabled={true}
           className={classes.calculatorBodyList}
-          animateHeight={true}
+          animateHeight={this.state.customizeHeight}
         >
           <TabContainer dir={theme.direction}>
             <CalculateContainer
