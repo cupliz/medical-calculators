@@ -44,7 +44,7 @@ const styles = theme => ({
     marginBottom: 15
   },
   resultWrapper: { display: 'flex', alignItems: 'baseline' },
-  resultText: { marginRight: 15, minWidth: 300 },
+  resultText: { marginRight: 15, flexGrow: 1 },
   resultTextNoBold: { marginRight: 15, minWidth: 300, fontWeight: 'normal' },
   decimalPrecisionWrapper: {
     borderTop: `1px solid ${theme.brand.colors.separatorGrey}`,
@@ -53,7 +53,8 @@ const styles = theme => ({
     alignItems: 'center'
   },
   decimalPrecision: {
-    marginTop: 25, marginRight: 15, minWidth: 300
+    marginTop: 25,
+    flexGrow: 1
   },
   decimalButtonsWrapper: {
     marginTop: 25,
@@ -61,11 +62,6 @@ const styles = theme => ({
     alignItems: 'center'
   },
   select: { width: 'auto' },
-  decimalButton: {
-    width: 36,
-    height: 36,
-    boxShadow: 'none'
-  },
   decimalPoint: {
     display: 'inline',
     margin: '0 10px'

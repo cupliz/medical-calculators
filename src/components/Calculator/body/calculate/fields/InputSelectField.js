@@ -38,7 +38,6 @@ class InputSelectField extends Component {
           onChange={this.handleChange('input')}
           margin='normal'
           type='number'
-          fullWidth
         />
         <TextField
           select

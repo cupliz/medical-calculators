@@ -14,7 +14,7 @@ const Decimal = ({ classes, decimal, onDecimalChange }) => (
         fab
         color='primary'
         aria-label='add'
-        className={classes.decimalButton}
+        style={{width: 36, height: 36, boxShadow: 'none'}}
         onClick={() => onDecimalChange('-')}
       >
         <RemoveIcon />
@@ -26,7 +26,7 @@ const Decimal = ({ classes, decimal, onDecimalChange }) => (
         fab
         color='primary'
         aria-label='add'
-        className={classes.decimalButton}
+        style={{width: 36, height: 36, boxShadow: 'none'}}
         onClick={() => onDecimalChange('+')}
       >
         <AddIcon />
