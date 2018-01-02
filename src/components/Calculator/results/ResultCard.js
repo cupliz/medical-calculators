@@ -69,34 +69,12 @@ const styles = theme => ({
 })
 
 class ResultCard extends Component {
-  state = {
-    formulaModule: null
-  }
-
-  componentDidMount () {
-    const { type, id } = this.props
-    if (type === 'formula') {
-      import(`../../../formulas/${id}.js`)
-        .then(module => {
-          const formulaModule = module.default
-          this.setState({ formulaModule })
-        })
-        .catch(err => {
-          console.log(err.message)
-        })
-    }
-  }
-
   render () {
     const { classes, type, points, results, calculatorData, showPointsInResults } = this.props
 
     if (type === 'formula') {
-      const { formulaModule: FormulaComponent } = this.state
-      return (
-        FormulaComponent && (
-          <FormulaComponent classes={classes} data={calculatorData} />
-        )
-      )
+      const FormulaComponent = this.props.formula
+      return <FormulaComponent classes={classes} data={calculatorData} />
     } else if (type === 'points') {
       // if object has that property (result for points) then pass results[points]
       if (results.hasOwnProperty(points)) {

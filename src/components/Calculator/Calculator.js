@@ -3,6 +3,8 @@ import CalculatorBody from './body/CalculatorBody'
 import Loader from '../Loader/Loader'
 import ResultCard from './results/ResultCard'
 import DocumentTitle from 'react-document-title'
+import { connect } from 'react-redux'
+import { fetchCalcDataSuccess } from '../../store/modules/calculator'
 
 const LoadingView = () => <Loader />
 
@@ -32,6 +34,7 @@ class Calculator extends Component {
 
   componentDidMount () {
     import(`../../data/calculators/${this.props.calculatorId}.js`).then(module => {
+      this.props.fetchCalcDataSuccess(module.config)
       this.setState({ loading: false, formula: module.default, config: module.config })
     }).catch(err => {
       console.log(err.message)
@@ -51,4 +54,8 @@ class Calculator extends Component {
   }
 }
 
-export default Calculator
+const mapDispatchToProps = {
+  fetchCalcDataSuccess
+}
+
+export default connect(null, mapDispatchToProps)(Calculator)

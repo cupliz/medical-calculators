@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "autosuggest-highlight": "^3.1.1",
-    "axios": "^0.17.1",
     "history": "^4.7.2",
     "material-ui": "^1.0.0-beta.25",
     "material-ui-icons": "^1.0.0-beta.17",
@@ -24,7 +23,6 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "json-server": "^0.12.1",
     "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2"
   },
@@ -34,15 +32,13 @@
     "build:200": "mv build/index.html build/200.html",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "dev": "npm-run-all -p start server",
+    "dev": "npm-run-all -p start",
     "clean": "yarn rimraf build",
     "surge": "surge build -d medical-calc.surge.sh",
     "surge:dev": "surge build -d medical-calc-dev.surge.sh",
     "deploy": "npm-run-all -s build build:200 surge clean",
     "deploy:dev": "npm-run-all -s build build:200 surge:dev clean",
-    "deploy:full": "npm-run-all -s build build:200 surge surge:dev clean",
-    "server": "json-server --watch --port 3001 ./src/data/db.json",
-    "now": "now --public && now alias && now remove medical-calc --safe"
+    "deploy:full": "npm-run-all -s build build:200 surge surge:dev clean"
   },
   "standard": {
     "parser": "babel-eslint",
