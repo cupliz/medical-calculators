@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import CalculatorBody from './body/CalculatorBody'
-import { connect } from 'react-redux'
-import { fetchCalcData } from '../../store/modules/calculator'
 import Loader from '../Loader/Loader'
 import ResultCard from './results/ResultCard'
 import DocumentTitle from 'react-document-title'
@@ -18,41 +16,39 @@ class ComponentView extends Component {
       <DocumentTitle title={this.props.data.title}>
         <div className='calculator'>
           <CalculatorBody data={this.props.data} />
-          <ResultCard />
+          <ResultCard data={this.props.data} formula={this.props.formula} />
         </div>
       </DocumentTitle>
     )
   }
 }
 
-const CalculatorBranch = props => {
-  if (props.loading) {
-    return <LoadingView />
-  } else if (props.data) {
-    return <ComponentView data={props.data} />
-  } else if (props.errorMessage) {
-    return <ErrorView errorMessage={props.errorMessage} />
-  } else {
-    return null
-  }
-}
-
 class Calculator extends Component {
+  state = {
+    loading: true,
+    config: null,
+    formula: null
+  }
+
   componentDidMount () {
-    this.props.fetchCalcData(this.props.calculatorId)
+    import(`../../data/calculators/${this.props.calculatorId}.js`).then(module => {
+      this.setState({ loading: false, formula: module.default, config: module.config })
+    }).catch(err => {
+      console.log(err.message)
+    })
   }
 
   render () {
-    return <CalculatorBranch {...this.props.calculator} />
+    if (this.state.loading) {
+      return <LoadingView />
+    } else if (this.state.config) {
+      return <ComponentView data={this.state.config} formula={this.state.formula} />
+    } else if (this.state.errorMessage) {
+      return <ErrorView errorMessage={this.state.errorMessage} />
+    } else {
+      return null
+    }
   }
 }
 
-const mapStateToProps = state => ({
-  calculator: state.calculator
-})
-
-const mapDispatchToProps = {
-  fetchCalcData
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Calculator)
+export default Calculator
