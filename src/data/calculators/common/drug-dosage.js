@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
+import ResultCardHeader from '../../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import Decimal from '../../components/Decimal/Decimal'
-import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
+import Decimal from '../../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     dosage: [
