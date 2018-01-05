@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     weight: [
@@ -113,40 +111,30 @@ class FormulaComponent extends Component {
         if (genderValue && weightValue && serumNaValue && desiredNaValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Sodium Deficit
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    genderValue,
-                                    weightValue * weightUnitValue,
-                                    serumNaValue * serumNaUnitValue,
-                                    desiredNaValue * desiredNaUnitValue,
-                                    this.state.NaDeficitSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.NaDeficitSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.NaDeficit.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Sodium Deficit'
+                        value={this.handleCalc(
+                            genderValue,
+                            weightValue * weightUnitValue,
+                            serumNaValue * serumNaUnitValue,
+                            desiredNaValue * desiredNaUnitValue,
+                            this.state.NaDeficitSelectValue
+                        )}
+                        selectValue={this.state.NaDeficitSelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.NaDeficit.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -155,3 +143,73 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "sodium-deficit-hyponatremia",
+  "title": "Sodium Deficit in Hyponatremia",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Gender",
+      "data": [
+        {
+          "type": "radio",
+          "options": "Male | Female | Child | Elderly Male | Elderly Female",
+          "points": "0.6/0.5/0.6/0.5/0.45"
+        }
+      ]
+    },
+    {
+      "group": "Weight",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Weight",
+          "values": ["kg", "lb", "g", "mg"]
+        }
+      ]
+    },
+    {
+      "group": "Serum Na",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter sodium value",
+          "values": ["mEq/L", "mmol/L"]
+        }
+      ]
+    },
+    {
+      "group": "Desired Na",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter sodium value",
+          "values": ["mEq/L", "mmol/L"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "This calculator calculates the sodium quantity missing in hyponatremia",
+      "Gender x Weight represents the normal total body water (TBW) which is gender specific",
+      "Use the Sodium Correction Rate calculator to pick an appropriate fluid and volume. Remember not to correct too rapidly to avoid central pontine myelinosis"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Adrogué HJ, Madias NE. Hyponatremia. N Engl J Med. 2000 May 25;342(21):1581-9.",
+      "Oh MS, Uribarri J, Barrido D, Landman E, Choi KC, Carroll HJ. Danger of central pontine myelinolysis in hypotonic dehydration and recommendation for treatment. Am J Med Sci. 1989 Jul;298(1):41-3."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Sodium Deficit = Gender * Weight * (Desired Na - Serum Na)"
+    ]
+  }
+}

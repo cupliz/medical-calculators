@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 //values": ["mL/min", "mL/sec", "mL/h","L/min", "L/sec"
 const unitData = {
     volExp: [
@@ -105,39 +103,29 @@ class FormulaComponent extends Component {
         if (volExpValue && fiO2Value && feO2Value) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Oxygen Consumption
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    volExpValue * volExpUnitValue,
-                                    fiO2Value * fiO2UnitValue,
-                                    feO2Value * feO2UnitValue,
-                                    this.state.volO2SelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.volO2SelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.volO2.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Oxygen Consumption'
+                        value={this.handleCalc(
+                            volExpValue * volExpUnitValue,
+                            fiO2Value * fiO2UnitValue,
+                            feO2Value * feO2UnitValue,
+                            this.state.volO2SelectValue
+                        )}
+                        selectValue={this.state.volO2SelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.volO2.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -146,3 +134,62 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "oxygen-consumption",
+  "title": "Oxygen Consumption",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Volume Expired over 1 min",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter value",
+          "values": ["mL/min", "mL/sec", "mL/h","L/min", "L/sec"]
+        }
+      ]
+    },
+    {
+      "group": "Fraction of Inspired Oxygen (FIO2)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter FIO2 value, Norm 0.2095 or 21%",
+          "values": ["%", "fraction"]
+        }
+      ]
+    },
+    {
+      "group": "Fraction of Expired Oxygen (FEO2)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter FEO2 value",
+          "values": ["%", "fraction"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates the volume of oxygen consumed per unit time",
+      "FIO2 is the fractional volume of Oxygen in ambient air, usually assumed to be 0.2095 or 21%",
+      "FEO2 is the fractional volume of Oxygen in the effluent air. Note that oxygen analyzers records %O2 of the effluent air"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Hieronymi U, Mrochen H. Errors in the determination of oxygen consumption using the analysis of respiratory gases. Anaesthesiol Reanim. 1989;14(3):167-74."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Oxygen Consumed = Volume Expired ⨉ (FIO2 - FEO2)"
+    ]
+  }
+}

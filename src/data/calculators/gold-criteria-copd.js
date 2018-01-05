@@ -159,3 +159,61 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "gold-criteria-copd",
+  "title": "GOLD Criteria for COPD",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "FEV₁% of predicted",
+      "showPoints": false,
+      "data": [
+        {
+          "type": "radio",
+          "options": "≥80 | 50-79 | 30-49 | <30",
+          "points": "1/2/3/4"
+        }
+      ]
+    },
+    {
+      "group": "Symptom burden (mMRC 2 = Walks slower than people of same age because of dyspnea; CAT 10 = COPD symptoms have a low-medium impact on patient's life)",
+      "showPoints": false,
+      "data": [
+        {
+          "type": "radio",
+          "options": "Lower (mMRC < 2 or CAT Score <10) | Higher (mMRC ≥ 2 or CAT Score ≥ 10)",
+          "points": "1/2"
+        }
+      ]
+    },
+    {
+      "group": "Exacerbation history",
+      "showPoints": false,
+      "data": [
+        {
+          "type": "radio",
+          "options": "No exacerbations | 1 exacerbation w/o hosp admission | ≥1 exacerbation with hospital admission | ≥2 exacerbations",
+          "points": "1/1/2/2"
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "The Global Initiative for Chronic Obstructive Lung Disease (GOLD) calculator should be used in patients >18 yrs with already-diagnosed COPD by spirometry (FEV₁/FVC <0.7) with baseline symptoms and lung function",
+      "Do not use this calculator to diagnose COPD",
+      "Do not use this calculator in patients with acute exacerbation",
+      "GOLD 1-4 refers to the grade of airflow obstruction, GOLD A-D are the groups on which treatment recommendations are based"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Global Initiative for Chronic Obstructive Lung Disease. Global Strategy for Diagnosis, Management of Chronic Obstructive Pulmonary Disease; NHLBI Workshop Report 2017",
+      "Global Initiative for Chronic Obstructive Lung Disease. Global Strategy for Diagnosis, Management of Chronic Obstructive Pulmonary Disease; NHLBI Workshop Report 2003"
+    ]
+  }
+}

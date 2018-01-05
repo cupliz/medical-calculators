@@ -83,11 +83,11 @@ class FormulaComponent extends Component {
                     <ResultCardFormulaValueFragment
                         classes={classes}
                         caption='Absolute Neutrophil Count'
-                        value={this.handleCalc(
+                        values={[this.handleCalc(
                             neutrophilsValue * neutrophilsUnitValue,
                             bandsValue * bandsUnitValue,
                             WBC_countValue * WBC_countUnitValue
-                        )}
+                        )]}
                     />
                 </ResultCardHeader>
             )
@@ -97,3 +97,64 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "absolute-neutrophil-count",
+  "title": "Absolute Neutrophil Count",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Polymorphonuclear Neutrophils (PMNs)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter value",
+          "values": ["%"]
+        }
+      ]
+    },
+    {
+      "group": "Bands",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter value",
+          "values": ["%"]
+        }
+      ]
+    },
+    {
+      "group": "White Blood Cell Count (WBC)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter WBC count",
+          "values": ["⨉10³/µL", "/µL", "⨉10⁹/L"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Used to assess if neutropenenic fever in chemotherapy patients",
+      "Neutropenia is present when ANC < 1500 cells /mm³",
+      "Neutropenia can be classified as mild, moderate or severe",
+      "If diagnosis is suggestive of neutropenic fever, appropriate cultures and infectious disease workout should be instituted with prompt initiation of broad spectrum antibiotic therapy"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Al-Gwaiz LA, Babay HH. The diagnostic value of absolute neutrophil count, band count and morphologic changes of neutrophils in predicting bacterial infections. Med Princ Pract. 2007;16(5):344-7.",
+      "Thomas BN, Karen MP, et al. Interpreting Complete Blood Counts Soon After Birth in Newborns at Risk for Sepsis. Pediatrics. 2010 Nov; 126(5): 903–909."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Absolute Neutrophil Count (ANC) = 10 ⨉ WBC count ⨉ (%PMNs + %Bands)"
+    ]
+  }
+}

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     desiredDose: [
@@ -117,40 +115,30 @@ class FormulaComponent extends Component {
         if (desiredDoseValue && weightValue && drugValue && bagVolValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            IV Drip Rate
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    desiredDoseValue * desiredDoseUnitValue,
-                                    weightValue * weightUnitValue,
-                                    drugValue * drugUnitValue,
-                                    bagVolValue * bagVolUnitValue,
-                                    this.state.ivdriprateSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.ivdriprateSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.ivdriprate.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='IV Drip Rate'
+                        value={this.handleCalc(
+                            desiredDoseValue * desiredDoseUnitValue,
+                            weightValue * weightUnitValue,
+                            drugValue * drugUnitValue,
+                            bagVolValue * bagVolUnitValue,
+                            this.state.ivdriprateSelectValue
+                        )}
+                        selectValue={this.state.ivdriprateSelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.ivdriprate.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -159,3 +147,65 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "dose-driven-iv-drip-rate-calculator",
+  "title": "Dose Driven IV Drip Rate Calculator",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Desired Dose",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter dose value",
+          "values": ["mcg/kg/min", "g/kg/min", "mg/kg/min"]
+        }
+      ]
+    },
+    {
+      "group": "Weight",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter weight",
+          "values": ["kg", "lb"]
+        }
+      ]
+    },
+    {
+      "group": "Drug in Bag",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter drug amount",
+          "values": ["mg", "g", "mcg"]
+        }
+      ]
+    },
+    {
+      "group": "Bag Volume",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter bag volume",
+          "values": ["mL", "L"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates the IV drip rate required to achieve a desired dose",
+      "Default unit of measure for weight is in kg."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "IV Drip Rate = (60 ⨉ Desired Dose ⨉ Weight ⨉ Bag Volume) / (1000 ⨉ Drug in Bag)"
+    ]
+  }
+}

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 //"values": "mmHg", "psi", "atm", "Pa", "torr"
 
 const unitData = {
@@ -112,39 +110,29 @@ class FormulaComponent extends Component {
         if (hemoglobinValue && o2satValue && pao2Value) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            CvO2
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    hemoglobinValue * hemoglobinUnitValue,
-                                    o2satValue * o2satUnitValue,
-                                    pao2Value * pao2UnitValue,
-                                    this.state.CaO2SelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.CaO2SelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.CaO2.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='CvO2'
+                        value={this.handleCalc(
+                            hemoglobinValue * hemoglobinUnitValue,
+                            o2satValue * o2satUnitValue,
+                            pao2Value * pao2UnitValue,
+                            this.state.CaO2SelectValue
+                        )}
+                        selectValue={this.state.CaO2SelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.CaO2.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -153,3 +141,54 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "oxygen-content-arterial-blood",
+  "title": "Oxygen Content of Arterial Blood",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Hemoglobin (Hgb)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Hgb",
+          "values": ["mg/dL", "g/dL", "g/L", "mcg/dL", "mcg/mL", "mg%", "mg/mL", "ng/mL"]
+        }
+      ]
+    },
+    {
+      "group": "Oxygen Saturation (O2Sat)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter O2Sat",
+          "values": ["%", "fraction", "ratio"]
+        }
+      ]
+    },
+    {
+      "group": "Partial Pressure of Oxygen in Arterial Blood (PaO2)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter PaO2",
+          "values": ["mmHg", "psi", "atm", "Pa", "torr"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates patient arterial blood oxygen content"
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "CaO2 = ( Hgb ⨉ 13.4 ⨉ O2Sat / 100 ) + ( PaO2 ⨉ 0.031 )"
+    ]
+  }
+}

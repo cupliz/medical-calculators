@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueFragment, ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
   weight: [{ value: 1, unit: 'kg' }, { value: 0.45359237, unit: 'lb' }],
@@ -94,49 +94,36 @@ class FormulaComponent extends Component {
     if (weightValue) {
       return (
         <ResultCardHeader classes={classes}>
-          <CardContent className={classes.content}>
-            <Typography type='caption' className={classes.contentText}>
-              Daily Volume
-            </Typography>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleFormulaCalc(
-                  'daily volume',
-                  weightValue * weightUnitValue
-                )}
-              </Typography>
-            </div>
-            <Typography type='caption' className={classes.contentText}>
-              Fluid Rate
-            </Typography>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleFormulaCalc(
-                  'fluid rate',
-                  weightValue * weightUnitValue,
-                  this.state.fluidRateSelectValue
-                )}
-              </Typography>
-              <TextField
-                select
-                value={this.state.fluidRateSelectUnit}
-                onChange={this.handleFluidRateSelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.fluidRate.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </div>
-            <Decimal
-              classes={classes}
-              decimal={this.state.decimal}
-              onDecimalChange={this.handleDecimalChange}
-            />
-          </CardContent>
+          <ResultCardFormulaValueFragment
+            classes={classes}
+            caption='Daily Volume'
+            values={[this.handleFormulaCalc(
+              'daily volume',
+              weightValue * weightUnitValue
+            )]}
+          />
+          <ResultCardFormulaValueSelectFragment
+            classes={classes}
+            caption='Fluid Rate'
+            value={this.handleFormulaCalc(
+              'fluid rate',
+              weightValue * weightUnitValue,
+              this.state.fluidRateSelectValue
+            )}
+            selectValue={this.state.fluidRateSelectUnit}
+            selectOnChange={this.handleFluidRateSelectChange}
+          >
+            {unitData.fluidRate.map(option => (
+              <MenuItem key={option.unit} value={option.unit}>
+                {option.unit}
+              </MenuItem>
+            ))}
+          </ResultCardFormulaValueSelectFragment>
+          <Decimal
+            classes={classes}
+            decimal={this.state.decimal}
+            onDecimalChange={this.handleDecimalChange}
+          />
         </ResultCardHeader>
       )
     } else {
@@ -145,3 +132,41 @@ class FormulaComponent extends Component {
   }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "maintenance-fluid-calculation-for-children",
+  "title": "Maintenance Fluid Calculation for Children",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Weight",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter Weight",
+          "values": ["kg", "lb"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "For infants 3.5 — 10kg the daily fluid requirement is 100mL/kg",
+      "For children between 11—20 kg the daily fluid requirement is 1,000 mL + 50mL/kg for every kg over 10",
+      "For children between >20 kg the daily fluid requirement is 1,500 mL + 20mL/kg for every kg over 20, up to a maximum of 2,400mL daily",
+      "This calculation does not apply to newborn infants (i.e. from 0 to 28 days after full term delivery)"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Holliday MA, Segar WE. The maintenance need for water in parenteral fluid therapy. Pediatrics. Vol. 19, 1957 823-832."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": ["Fluid Rate = Daily Volume/24"]
+  }
+}

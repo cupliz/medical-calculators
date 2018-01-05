@@ -3,11 +3,11 @@ import Typography from 'material-ui/Typography'
 import TextField from 'material-ui/TextField'
 
 export const ResultCardFormulaValueFragment = props => {
-  const { classes, caption, value, short } = props
+  const { classes, caption, values, short } = props
   if (short) {
     return (
       <Typography className={`${classes.contentText} ${classes.shortFragment}`}>
-        {`${caption}: ${value}`}
+        {`${caption}: ${values.join(', ')}`}
       </Typography>
     )
   } else {
@@ -16,11 +16,13 @@ export const ResultCardFormulaValueFragment = props => {
         <Typography type='caption' className={classes.contentText}>
           {caption}
         </Typography>
-        <div className={classes.resultWrapper}>
-          <Typography type='title' className={classes.resultText}>
-            {value}
-          </Typography>
-        </div>
+        {values.map((value, index) => (
+          <div key={index} className={classes.resultWrapper}>
+            <Typography type='title' className={classes.resultText}>
+              {value}
+            </Typography>
+          </div>
+        ))}
       </React.Fragment>
     )
   }

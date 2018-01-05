@@ -5,6 +5,7 @@ import ResultCardHeader from '../../components/Calculator/results/ResultCardHead
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     age: [
@@ -117,40 +118,30 @@ class FormulaComponent extends Component {
         if (genderValue && ageValue && serumCreatinineValue && weightValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Creatinine Clearance
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    genderValue,
-                                    ageValue * ageUnitValue,
-                                    serumCreatinineValue * serumCreatinineUnitValue,
-                                    weightValue * weightUnitValue,
-                                    this.state.creatClearSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.creatClearSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.creatClear.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Creatinine Clearance'
+                        value={this.handleCalc(
+                            genderValue,
+                            ageValue * ageUnitValue,
+                            serumCreatinineValue * serumCreatinineUnitValue,
+                            weightValue * weightUnitValue,
+                            this.state.creatClearSelectValue
+                        )}
+                        selectValue={this.state.creatClearSelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.creatClear.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -159,3 +150,71 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "creatinine-clearance-cockcroft-gault",
+  "title": "Creatinine Clearance Cockcroft Gault",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Gender",
+      "data": [
+        {
+          "type": "radio",
+          "options": "Male | Female",
+          "points": "1/0.85"
+        }
+      ]
+    },
+    {
+      "group": "Patient's Age",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Age",
+          "values": ["yr", "mo"]
+        }
+      ]
+    },
+    {
+      "group": "Serum Creatinine",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Serum Creatinine",
+          "values": ["mg/dL", "mg/mL", "mg%", "gm/dL", "gm/L"]
+        }
+      ]
+    },
+    {
+      "group": "Weight",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Weight",
+          "values": ["kg", "lb"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Weight is the estimated lean body weight of the patient. Default unit for weight is kg.",
+      "This calculator provides an estimate of the creatinine clearance if patient's plasma creatinine concentration is stable"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "CreatClear = Sex ⨉ ((140-Age)/(Serum Creatinine))⨉(Weight/72)"
+    ]
+  }
+}

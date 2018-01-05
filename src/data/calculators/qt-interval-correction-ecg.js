@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 
 const unitData = {
@@ -89,38 +87,28 @@ class FormulaComponent extends Component {
         if (heartRateValue && qtIntervalValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Corrected QT Interval
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    heartRateValue * heartRateUnitValue,
-                                    qtIntervalValue * qtIntervalUnitValue,
-                                    this.state.correctedQTISelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.correctedQTISelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.correctedQTI.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Corrected QT Interval'
+                        value={this.handleCalc(
+                            heartRateValue * heartRateUnitValue,
+                            qtIntervalValue * qtIntervalUnitValue,
+                            this.state.correctedQTISelectValue
+                        )}
+                        selectValue={this.state.correctedQTISelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.correctedQTI.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -129,3 +117,53 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "qt-interval-correction-ecg",
+  "title": "QT Interval Correction (ECG)",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Heart Rate",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter heart rate, Norm 60-100bpm",
+          "values": ["bpm"]
+        }
+      ]
+    },
+    {
+      "group": "QT interval",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter QT interval, Norm 360-440msec",
+          "values": ["msec", "sec"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates the corrected QT interval (QTc) for heart rate extremes",
+      "Normal QTc ≤ 440msec. A longer QTc increases the risk of Torsade de pointes.",
+      "Common causes for prolonged QT intervals include electrolyte abnormalities, central causes, medications and intrinsic cardiac causes"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Bazett HC. An analysis of the time relationships of electrocardiograms. Heart. 1920;7:355-70."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "RR Interval = 60/HeartRate",
+      "Corrected QT Interval = QTInterval/√(RR Interval)"
+    ]
+  }
+}

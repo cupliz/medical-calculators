@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     calcium: [
@@ -99,39 +97,29 @@ class FormulaComponent extends Component {
         if (calciumValue && albuminValue && normAlbValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Corrected Calcium
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    calciumValue * calciumUnitValue,
-                                    albuminValue * albuminUnitValue,
-                                    normAlbValue * normAlbUnitValue,
-                                    this.state.correctedCaSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.correctedCaSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.correctedCa.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Corrected Calcium'
+                        value={this.handleCalc(
+                            calciumValue * calciumUnitValue,
+                            albuminValue * albuminUnitValue,
+                            normAlbValue * normAlbUnitValue,
+                            this.state.correctedCaSelectValue
+                        )}
+                        selectValue={this.state.correctedCaSelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.correctedCa.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -140,3 +128,64 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "calcium-correction-hypoalbuminemia",
+  "title": "Calcium Correction for Hypoalbuminemia",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Calcium",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter calcium values",
+          "values": ["mg/dL", "mmol/L"]
+        }
+      ]
+    },
+    {
+      "group": "Albumin",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter albumin values",
+          "values": ["g/L", "g/dL"]
+        }
+      ]
+    },
+    {
+      "group": "Normal Albumin",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter normal albumin value e.g. 4 g/dL or 40 g/L",
+          "values": ["g/L", "g/dL"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates the corrected calcium level for patients with hypoalbuminemia",
+      "Some patients with suspected hypercalcemia may appear to have a normal calcium level result if their albumin is low. Conisder an alternative or additional confirmatory test such as an ionized calcium level",
+      "Patients with hypercalcemia may require initial volume resuscitation in hypovolemic patients, loop diuretics can help with renal excretion of calcium. Biphosphonates are also effective in malignancy related hypercalcemia"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Payne RB, Little AJ, Williams RB, Milner JR. Interpretation of Serum Calcium in Patients with Abnormal Serum Proteins. Br Med J. 1973 Dec 15; 4(5893): 643–646.",
+      "Parent X, Spielmann C, hanser AM. Corrected calcium: calcium status underestimation in non-hypoalbuminemic patients and in hypercalcemic patients. Ann Biol Clin (Paris). 2009 Jul-Aug;67(4):411-8."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Corrected Calcium = (0.8 ⨉ (Normal Albumin - Patient Albumin)) + Serum Calcium",
+      "Formula assumes albumin units in g/dL"
+    ]
+  }
+}

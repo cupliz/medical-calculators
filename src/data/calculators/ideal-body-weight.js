@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     height: [
@@ -94,38 +92,28 @@ class FormulaComponent extends Component {
         if (genderValue && heightValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Ideal Body Weight
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    genderValue,
-                                    heightValue * heightUnitValue,
-                                    this.state.idealbodyweightSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.idealbodyweightSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.idealbodyweight.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Ideal Body Weight'
+                        value={this.handleCalc(
+                            genderValue,
+                            heightValue * heightUnitValue,
+                            this.state.idealbodyweightSelectValue
+                        )}
+                        selectValue={this.state.idealbodyweightSelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.idealbodyweight.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -134,3 +122,55 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "ideal-body-weight",
+  "title": "Ideal Body Weight",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Gender",
+      "data": [
+        {
+          "type": "radio",
+          "options": "Male | Female",
+          "points": "50/45.5"
+        }
+      ]
+    },
+    {
+      "group": "Height",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Height",
+          "values": ["cm", "in", "m", "ft"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "This calculator provides an estimate of ideal body weight for Male and Female patients based on the Devine formula",
+      "Some medication doses require Ideal Body Weight while others require Total Body Weight so make sure to confirm with pharmacy before dosing",
+      "This formula is an approximation, and is generally only applicable for people who are >1.5m (5ft) tall",
+      "For Gentamicin dosing, use ideal body weight vs actual body weight as gentamicin distributes poorly in fat"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Devine BJ. Gentamicin therapy. Drug Intell Clin Pharm. 1974;8:650–655.",
+      "Pai MP. Paloucek FP. The origin of the ideal body weight equations. Ann Pharmacother. 2000 Sep;34(9):1066-9."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Ideal Body Weight (Men) = 50kg + 2.3kg ⨉ ( Height (inches) - 60 )",
+      "Ideal Body Weight (Women) = 45.5kg + 2.3kg ⨉ ( Height(inches) - 60 )"
+    ]
+  }
+}

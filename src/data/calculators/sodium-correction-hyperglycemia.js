@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 //"values": ["mmol/L", "mg/dL", "g/L", "g/dL","mcg/dL", "mcg/mL"]
 
 const unitData = {
@@ -95,38 +93,28 @@ class FormulaComponent extends Component {
         if (measuredNaValue && glucoseValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Na
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    measuredNaValue * measuredNaUnitValue,
-                                    glucoseValue * glucoseUnitValue,
-                                    this.state.NaSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.NaSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.Na.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Na'
+                        value={this.handleCalc(
+                            measuredNaValue * measuredNaUnitValue,
+                            glucoseValue * glucoseUnitValue,
+                            this.state.NaSelectValue
+                        )}
+                        selectValue={this.state.NaSelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.Na.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -135,3 +123,52 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "sodium-correction-hyperglycemia",
+  "title": "Sodium Correction in Hyperglycemia",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Measured Na",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter sodium value",
+          "values": ["mEq/L", "mmol/L"]
+        }
+      ]
+    },
+    {
+      "group": "Glucose",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter glucose value",
+          "values": ["mmol/L", "mg/dL", "mg%", "g/L", "g/dL","mcg/dL", "mcg/mL"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates the actual sodium level in patients with hyperglycemia based on Katz's sodium factor",
+      "The corrected sodium factor in the 1976 Katz publication was 1.6 mEq/L. However, in 1999 Hillier et. al evaluated 6 healthy subjects, induced hyperglycemia and measured actual sodium levels. They found that a sodium correction factor of 2.4 mEq/L was more accurate."
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Katz MA. Hyperglycemia-induced hyponatremia calculation of expected serum sodium depression. N Engl J Med. 1973 Oct 18;289(16):843-4.",
+      "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med. 1999 Apr;106(4):399-403."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Na = MeasuredSodium + 0.016 ⨉ (Glucose - 100)"
+    ]
+  }
+}

@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
-import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
-import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 
 const unitData = {
@@ -63,20 +61,14 @@ class FormulaComponent extends Component {
         if (systolicBPValue && diastolicBPValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Mean Arterial Pressure
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    systolicBPValue * systolicBPUnitValue,
-                                    diastolicBPValue * diastolicBPUnitValue
-                                )}
-                            </Typography>
-
-                        </div>
-                    </CardContent>
+                    <ResultCardFormulaValueFragment
+                        classes={classes}
+                        caption='Mean Arterial Pressure'
+                        values={[this.handleCalc(
+                            systolicBPValue * systolicBPUnitValue,
+                            diastolicBPValue * diastolicBPUnitValue
+                        )]}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -85,3 +77,53 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "mean-arterial-pressure",
+  "title": "Mean Arterial Pressure",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Systolic Blood Pressure",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Normal 100-120 mmHg",
+          "values": ["mmHg"]
+        }
+      ]
+    },
+    {
+      "group": "Diastolic Blood Pressure",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Normal 60-80 mmHg",
+          "values": ["mmHg"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates the Mean Arterial Pressure (MAP) for patients",
+      "MAP is often used as a surrogate clinical indicator of blood flow and is believed to be better than Systolic BP at indicating tissue perfusion since it accounts for the fact that two thirds of the cardiac cycle are spent in diastole.",
+      "Some clinical guidelines may use either Systolic BP or MAP as a blood pressure goal."
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Magder SA. The highs and lows of blood pressure: toward meaningful clinical targets in patients with shock. Crit Care Med. 2014 May;42(5):1241-51.",
+      "Walsh M, Devereaux PJ, et. al. Relationship between intraoperative mean arterial pressure and clinical outcomes after noncardiac surgery: toward an empirical definition of hypotension. Anesthesiology. 2013 Sep;119(3):507-15."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Mean Arterial Pressure = (⅓ ⨉ Systolic BP) + (⅔ ⨉ Diastolic BP)"
+    ]
+  }
+}

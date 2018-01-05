@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     weight: [
@@ -87,38 +85,28 @@ class FormulaComponent extends Component {
         if (avgBloodVolValue && weightValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Blood Volume
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    avgBloodVolValue,
-                                    weightValue * weightUnitValue,
-                                    this.state.bloodVolSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.bloodVolSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.bloodVol.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Blood Volume'
+                        value={this.handleCalc(
+                            avgBloodVolValue,
+                            weightValue * weightUnitValue,
+                            this.state.bloodVolSelectValue
+                        )}
+                        selectValue={this.state.bloodVolSelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.bloodVol.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -127,3 +115,51 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "estimated-blood-volume",
+  "title": "Estimated Blood Volume",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Average Blood Volume",
+      "data": [
+        {
+          "type": "radio",
+          "options": "Male | Female | Infants | Neonates | Premature Neonates",
+          "points": "75/65/80/85/96"
+        }
+      ]
+    },
+    {
+      "group": "Weight",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Weight",
+          "values": ["kg", "lb", "g", "mg"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "This calculator provides an estimate of blood volume for different patient weights and average blood volumes",
+      "Average blood volume values are given in mL/kg for the different patient groups. Numbers next to each patient group represent the values that are used. For example average blood volume for Males is 75mL/kg"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Morgan, Mikhail, and Murray. Clinical Anesthesiology. 3rd Edition."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Blood Volume = Weight ⨉ Average Blood Volume "
+    ]
+  }
+}

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
   urine: [
@@ -105,39 +103,29 @@ class FormulaComponent extends Component {
     if (urineValue && serumValue && daysValue) {
       return (
         <ResultCardHeader classes={classes}>
-          <CardContent className={classes.content}>
-            <Typography type='caption' className={classes.contentText}>
-              Creat Clear
-            </Typography>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleCalc(
-                  urineValue * urineUnitValue,
-                  serumValue * serumUnitValue,
-                  daysValue * daysUnitValue,
-                  this.state.creatClearSelectValue
-                )}
-              </Typography>
-              <TextField
-                select
-                value={this.state.creatClearSelectUnit}
-                onChange={this.handleSelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.creatClear.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </div>
-            <Decimal
-              classes={classes}
-              decimal={this.state.decimal}
-              onDecimalChange={this.handleDecimalChange}
-            />
-          </CardContent>
+          <ResultCardFormulaValueSelectFragment
+            classes={classes}
+            caption='Creat Clear'
+            value={this.handleCalc(
+              urineValue * urineUnitValue,
+              serumValue * serumUnitValue,
+              daysValue * daysUnitValue,
+              this.state.creatClearSelectValue
+            )}
+            selectValue={this.state.creatClearSelectUnit}
+            selectOnChange={this.handleSelectChange}
+          >
+            {unitData.creatClear.map(option => (
+              <MenuItem key={option.unit} value={option.unit}>
+                {option.unit}
+              </MenuItem>
+            ))}
+          </ResultCardFormulaValueSelectFragment>
+          <Decimal
+            classes={classes}
+            decimal={this.state.decimal}
+            onDecimalChange={this.handleDecimalChange}
+          />
         </ResultCardHeader>
       )
     } else {
@@ -146,3 +134,48 @@ class FormulaComponent extends Component {
   }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "creatinine-clearance-measured",
+  "title": "Creatinine Clearance (measured)",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Urine Creat",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter Urine Creat",
+          "values": ["mg/dL", "mcmol/L", "mg%"]
+        }
+      ]
+    },
+    {
+      "group": "Serum Creat",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter Serum Creat",
+          "values": ["mg/dL", "mcmol/L", "mg%"]
+        }
+      ]
+    },
+    {
+      "group": "Days Urine Volume",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter Days Urine Volume",
+          "values": ["mL", "L", "fL"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "CreatClear = UrineCreatinine* DaysUrineVolume/ SerumCreatinine/1440"
+    ]
+  }
+}

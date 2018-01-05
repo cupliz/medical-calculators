@@ -5,6 +5,7 @@ import ResultCardHeader from '../../components/Calculator/results/ResultCardHead
 import MenuItem from 'material-ui/Menu/MenuItem'
 import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 //"values": "mmHg", "psi", "atm", "Pa", "torr"
 
 const unitData = {
@@ -112,39 +113,29 @@ class FormulaComponent extends Component {
         if (hemoglobinValue && o2vsatValue && pvo2Value) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            CvO2
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    hemoglobinValue * hemoglobinUnitValue,
-                                    o2vsatValue * o2vsatUnitValue,
-                                    pvo2Value * pvo2UnitValue,
-                                    this.state.CvO2SelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.CvO2SelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.CvO2.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='CvO2'
+                        value={this.handleCalc(
+                            hemoglobinValue * hemoglobinUnitValue,
+                            o2vsatValue * o2vsatUnitValue,
+                            pvo2Value * pvo2UnitValue,
+                            this.state.CvO2SelectValue
+                        )}
+                        selectValue={this.state.CvO2SelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.CvO2.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -153,3 +144,54 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "oxygen-content-venous-blood",
+  "title": "Oxygen Content of Venous Blood",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Hemoglobin (Hgb)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Hgb",
+          "values": ["mg/dL", "g/dL", "g/L", "mcg/dL", "mcg/mL", "mg%", "mg/mL", "ng/mL"]
+        }
+      ]
+    },
+    {
+      "group": "Venous Oxygen Saturation",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter O2vSat",
+          "values": ["%", "fraction", "ratio"]
+        }
+      ]
+    },
+    {
+      "group": "Partial Pressure of Oxygen in Venous Blood (PvO2)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter PvO2",
+          "values": ["mmHg", "psi", "atm", "Pa", "torr"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates patient venous blood oxygen content"
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "CvO2 = ( Hgb ⨉ 13.4 ⨉ O2vSat / 100 ) + ( PvO2 ⨉ 0.031 )"
+    ]
+  }
+}

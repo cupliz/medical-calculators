@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
-import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
-import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 
 const unitData = {
@@ -95,22 +91,16 @@ class FormulaComponent extends Component {
         if (serumNaValue && serumCrValue && urineNaValue && urineCrValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Fractional Excretion of Sodium (FeNa)
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    serumNaValue * serumNaUnitValue,
-                                    serumCrValue * serumCrUnitValue,
-                                    urineNaValue * urineNaUnitValue,
-                                    urineCrValue * urineCrUnitValue
-                                )}
-                            </Typography>
-
-                        </div>
-                    </CardContent>
+                    <ResultCardFormulaValueFragment
+                        classes={classes}
+                        caption='Fractional Excretion of Sodium (FeNa)'
+                        values={[this.handleCalc(
+                            serumNaValue * serumNaUnitValue,
+                            serumCrValue * serumCrUnitValue,
+                            urineNaValue * urineNaUnitValue,
+                            urineCrValue * urineCrUnitValue
+                        )]}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -119,3 +109,73 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "fractional-excretion-sodium",
+  "title": "Fractional Excretion of Sodium (FeNa)",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Serum Sodium",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter value",
+          "values": ["mEq/L", "mmol/L"]
+        }
+      ]
+    },
+    {
+      "group": "Serum Creatinine",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter value",
+          "values": ["mg/dL", "µmol/L"]
+        }
+      ]
+    },
+    {
+      "group": "Urine Sodium",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter value",
+          "values": ["mEq/L", "mmol/L"]
+        }
+      ]
+    },
+    {
+      "group": "Urine Creatinine",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter value",
+          "values": ["mg/dL", "µmol/L"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Helps to determine if kidney failure is due to pre-renal,intrinsic, or post-renal pathology",
+      "This calculator should not be used in patients who are taking diuretics or who have known CKD, urinary tract obstruction or acute glomerular disease"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Espinel CH. The FENa test. Use in the differential diagnosis of acute renal failure. JAMA. 1976 Aug 9;236(6):579-81.",
+      "Steiner RW. Intepreting the fractional excretion of sodium. Am J Med. 1984 Oct;77(4):699-702.",
+      "Miller TR, Andreson RJ, Linas SL, et al. Urinary diagnostic indices in acute renal failure: a prospective study. Ann Intern Med. 1978 Jul;89(1):47-50."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "Fractional Excretion of Sodium = (Urine Sodium / Serum Sodium) / (Urine Creatinine / Serum Creatinine) ⨉ 100 "
+    ]
+  }
+}

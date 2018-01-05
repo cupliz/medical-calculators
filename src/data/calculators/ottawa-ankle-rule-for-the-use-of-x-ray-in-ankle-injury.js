@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
+import { ResultCardFormulaValueFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const getCalculateGroupPoints = calculate => {
   return calculate
@@ -12,20 +11,12 @@ const getCalculateGroupPoints = calculate => {
 class FormulaComponent extends Component {
   state = {}
 
-  handleFormulaCalc = (requiredCriteria, majorCriteria, classes) => {
+  handleFormulaCalc = (requiredCriteria, majorCriteria) => {
     // X-Ray Indicated : 1 Required Criteria and 1 Major Criteria
     if (requiredCriteria >= 1 && majorCriteria >= 1) {
-      return (
-        <Typography type='title' className={classes.contentText}>
-          Diagnostic with:
-        </Typography>
-      )
+      return 'Diagnostic with'
     } else {
-      return (
-        <Typography type='title' className={classes.contentText}>
-          Insufficient with:
-        </Typography>
-      )
+      return 'Insufficient with'
     }
   }
 
@@ -53,19 +44,11 @@ class FormulaComponent extends Component {
     if (requiredCriteria || majorCriteria) {
       return (
         <ResultCardHeader classes={classes}>
-          <CardContent className={classes.content}>
-            {this.handleFormulaCalc(requiredCriteria, majorCriteria, classes)}
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultTextNoBold}>
-                {requiredCriteria} Required Criteria
-              </Typography>
-            </div>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultTextNoBold}>
-                {majorCriteria} Major Criteria
-              </Typography>
-            </div>
-          </CardContent>
+          <ResultCardFormulaValueFragment
+            classes={classes}
+            caption={this.handleFormulaCalc(requiredCriteria, majorCriteria)}
+            values={[`${requiredCriteria} Required Criteria`, `${majorCriteria} Major Criteria`]}
+          />
         </ResultCardHeader>
       )
     } else {
@@ -75,3 +58,56 @@ class FormulaComponent extends Component {
 }
 
 export default FormulaComponent
+
+export const config = {
+  "id": "ottawa-ankle-rule-for-the-use-of-x-ray-in-ankle-injury",
+  "title": "Ottawa Ankle Rule for the Use of X-Ray in Ankle Injury",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Required Criteria",
+      "showPoints": false,
+      "data": [
+        {
+          "type": "checkbox",
+          "label": "Pain near the malleous",
+          "points": "1"
+        }
+      ]
+    },
+    {
+      "group": "Major Criteria",
+      "showPoints": false,
+      "data": [
+        {
+          "type": "checkbox",
+          "label":
+            "Inability to bear wieght right after the injury as well as in the emergency department (4 steps)",
+          "points": "1"
+        },
+        {
+          "type": "checkbox",
+          "label":
+            "Bone tenderness at the posterior edge or tip of either malleolus",
+          "points": "1"
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "X-Ray Indicated : 1 Required Criteria and 1 Major Criteria"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Stiell IG, McKnight RD, Greenberg GH, et. al. Implementation of the Ottawa ankle rules. JAMA. 1994 Mar 16;271(11):827-832.",
+      "Stiell IG, Greenberg GH, McKnight RD, et.al. Decision rules for the use of radiography in acute ankle injuries. Refinement and prospective validation. . JAMA. 1993 Mar 3;269(9):1127-32.",
+      "Stiell IG, Greenberg GH, McKnight RD, et. al. A study to develop clinical decision rules for the use of radiography in acute ankle injuries. Ann Emerg Med. 1992 Apr;21(4):384-90.",
+      "Stiell IG, McKnight RD, Greenberg GH, et. al. Interobserver agreement in the examination of acute ankle injury patients. Am J Emerg Med. 1992 Jan;10(1):14-17."
+    ]
+  }
+}

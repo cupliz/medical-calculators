@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
-import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
-import Decimal from '../../components/Decimal/Decimal'
-
+import { ResultCardFormulaValueFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 const unitData = {
     age: [
         { value: 1, unit: 'yr' },
@@ -88,25 +83,18 @@ class FormulaComponent extends Component {
         if (ageValue && smokerValue && cancerValue && noduleDiameterValue && spiculationValue && upperlobeValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Malignancy Probability %
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    ageValue * ageUnitValue,
-                                    smokerValue,
-                                    cancerValue,
-                                    noduleDiameterValue * noduleDiameterUnitValue,
-                                    spiculationValue,
-                                    upperlobeValue
-                                )}
-                            </Typography>
-
-                        </div>
-
-                    </CardContent>
+                     <ResultCardFormulaValueFragment
+                         classes={classes}
+                         caption='Malignancy Probability %'
+                         values={[this.handleCalc(
+                             ageValue * ageUnitValue,
+                             smokerValue,
+                             cancerValue,
+                             noduleDiameterValue * noduleDiameterUnitValue,
+                             spiculationValue,
+                             upperlobeValue
+                         )]}
+                     />
                 </ResultCardHeader>
             )
         } else {
@@ -115,3 +103,95 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "solitary-pulmonary-nodule-malignancy-risk",
+  "title": "Solitary Pulmonary Nodule Malignancy Risk (Mayo Clinic)",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Patient's Age",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter Age",
+          "values": ["yr", "mo"]
+        }
+      ]
+    },
+    {
+      "group": "Smoking History",
+      "data": [
+        {
+          "type": "radio",
+          "options": "Yes | No",
+          "points": "1/0"
+        }
+      ]
+    },
+    {
+      "group": "Cancer",
+      "data": [
+        {
+          "type": "radio",
+          "options": "Extrathoracic cancer > 5 yrs prior | No ",
+          "points": "1/0"
+        }
+      ]
+    },
+    {
+      "group": "Nodule diameter",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter value",
+          "values": ["mm", "cm", "in", "mcm", "nm"]
+        }
+      ]
+    },
+    {
+      "group": "Spiculation",
+      "data": [
+        {
+          "type": "radio",
+          "options": "Yes | No",
+          "points": "1/0"
+        }
+      ]
+    },
+    {
+      "group": "Upper Lobe",
+      "data": [
+        {
+          "type": "radio",
+          "options": "Yes | No",
+          "points": "1/0"
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculator is not useful or validated in patients with prior lung cancer or some other cancer history within last 5 years",
+      "The formula is derived based on data from 629 patients in the mid-1980s who were found to have a solitary pulmonary nodule (4-30mm).",
+      "Prediction rule by Swensen has been externally validated in a study of 106 patients with similar characteristics but a higher incidence of malignancy (Herder et al, 2005)"
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "Swensen SJ, Silverstein MD, Ilstrup DM, et. al. The probability of malignancy in solitary pulmonary nodules. Application to small radiologically indeterminate nodules. Arch Intern Med. 1997 Apr 28;157(8):849-55.",
+      "Herder GJ et al. Clinical Prediction Model To Characterize Pulmonary Nodules: Validation and Added Value of 18F-Fluorodeoxyglucose Positron Emission Tomography. Chest 2005;128:2490",
+      "Swensen SJ et al. Solitary pulmonary nodules: clinical prediction model versus physicians. Mayo Clin Proc 1999;74:319."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": [
+      "X = (0.0391 ⨉ Age) + (0.7917 ⨉ Smoker) + (1.3388 ⨉ Cancer) + (0.1274 ⨉ NoduleDiameter) + (1.0407 ⨉ Spiculation) + (0.7838 ⨉ UpperLobe) - 6.8272",
+      "Malignancy Probability = ( 100 ⨉ e^X ) / ( 1 + (e^X) )"
+    ]
+  }
+}

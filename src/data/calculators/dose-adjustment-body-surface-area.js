@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     standardDose: [
@@ -107,39 +105,29 @@ class FormulaComponent extends Component {
         if (standardDoseValue && heightValue && weightValue) {
             return (
                 <ResultCardHeader classes={classes}>
-                    <CardContent className={classes.content}>
-                        <Typography type='caption' className={classes.contentText}>
-                            Adjusted Dose
-                        </Typography>
-                        <div className={classes.resultWrapper}>
-                            <Typography type='title' className={classes.resultText}>
-                                {this.handleCalc(
-                                    standardDoseValue * standardDoseUnitValue,
-                                    heightValue * heightUnitValue,
-                                    weightValue * weightUnitValue,
-                                    this.state.adjustedDoseSelectValue
-                                )}
-                            </Typography>
-                            <TextField
-                                select
-                                value={this.state.adjustedDoseSelectUnit}
-                                onChange={this.handleSelectChange}
-                                SelectProps={{ classes: { root: this.props.classes.select } }}
-                                margin='normal'
-                            >
-                                {unitData.adjustedDose.map(option => (
-                                    <MenuItem key={option.unit} value={option.unit}>
-                                        {option.unit}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </div>
-                        <Decimal
-                            classes={classes}
-                            decimal={this.state.decimal}
-                            onDecimalChange={this.handleDecimalChange}
-                        />
-                    </CardContent>
+                    <ResultCardFormulaValueSelectFragment
+                        classes={classes}
+                        caption='Adjusted Dose'
+                        value={this.handleCalc(
+                            standardDoseValue * standardDoseUnitValue,
+                            heightValue * heightUnitValue,
+                            weightValue * weightUnitValue,
+                            this.state.adjustedDoseSelectValue
+                        )}
+                        selectValue={this.state.adjustedDoseSelectUnit}
+                        selectOnChange={this.handleSelectChange}
+                    >
+                        {unitData.adjustedDose.map(option => (
+                            <MenuItem key={option.unit} value={option.unit}>
+                                {option.unit}
+                            </MenuItem>
+                        ))}
+                    </ResultCardFormulaValueSelectFragment>
+                    <Decimal
+                        classes={classes}
+                        decimal={this.state.decimal}
+                        onDecimalChange={this.handleDecimalChange}
+                    />
                 </ResultCardHeader>
             )
         } else {
@@ -148,3 +136,55 @@ class FormulaComponent extends Component {
     }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "dose-adjustment-body-surface-area",
+  "title": "Dose Adjustment for Body Surface Area",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Standard dose",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter dose",
+          "values": ["mg", "g", "mcg"]
+        }
+      ]
+    },
+    {
+      "group": "Height",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter height",
+          "values": ["cm", "m", "in"]
+        }
+      ]
+    },
+    {
+      "group": "Weight",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Enter weight",
+          "values": ["kg", "lb"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "Calculates the adjusted dose based on the DuBois method for body surface area (BSA)"
+    ]
+  },
+  "formula": {
+    "type": "unordered-list",
+    "content": [
+      "BSA = 0.007184 ⨉ Height^0.725 ⨉ Weight^0.425",
+      "AdjustedDose = StandardDose * BSA / 1.73"
+    ]
+  }
+}

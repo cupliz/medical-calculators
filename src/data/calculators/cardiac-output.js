@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
   o2consumption: [
@@ -216,106 +214,80 @@ class FormulaComponent extends Component {
     ) {
       return (
         <ResultCardHeader classes={classes}>
-          <CardContent className={classes.content}>
-            <Typography type='caption' className={classes.contentText}>
-              Arterial Oxygen Content CaO2
-            </Typography>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleFormulaCalc(
-                  'cao2',
-                  o2Value * o2UnitValue,
-                  hgbValue * hgbUnitValue,
-                  o2satValue * o2satUnitValue,
-                  pao2Value * pao2UnitValue,
-                  o2vsatValue * o2vsatUnitValue,
-                  pvo2Value * pvo2UnitValue,
-                  this.state.cao2SelectValue
-                )}
-              </Typography>
-              <TextField
-                select
-                value={this.state.cao2SelectUnit}
-                onChange={this.handleCaO2SelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.cao2.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </div>
-            <Typography type='caption' className={classes.contentText}>
-              Venous Oxygen Content CvO2
-            </Typography>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleFormulaCalc(
-                  'cvo2',
-                  o2Value * o2UnitValue,
-                  hgbValue * hgbUnitValue,
-                  o2satValue * o2satUnitValue,
-                  pao2Value * pao2UnitValue,
-                  o2vsatValue * o2vsatUnitValue,
-                  pvo2Value * pvo2UnitValue,
-                  this.state.cao2SelectValue,
-                  this.state.cvo2SelectValue
-                )}
-              </Typography>
-              <TextField
-                select
-                value={this.state.cvo2SelectUnit}
-                onChange={this.handleCvO2SelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.cvo2.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </div>
-            <Typography type='caption' className={classes.contentText}>
-              Cardiac Output
-            </Typography>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleFormulaCalc(
-                  'co',
-                  o2Value * o2UnitValue,
-                  hgbValue * hgbUnitValue,
-                  o2satValue * o2satUnitValue,
-                  pao2Value * pao2UnitValue,
-                  o2vsatValue * o2vsatUnitValue,
-                  pvo2Value * pvo2UnitValue,
-                  this.state.cao2SelectValue,
-                  this.state.cvo2SelectValue,
-                  this.state.coSelectValue
-                )}
-              </Typography>
-              <TextField
-                select
-                value={this.state.coSelectUnit}
-                onChange={this.handleCOSelectChange}
-                SelectProps={{ classes: { root: this.props.classes.select } }}
-                margin='normal'
-              >
-                {unitData.co.map(option => (
-                  <MenuItem key={option.unit} value={option.unit}>
-                    {option.unit}
-                  </MenuItem>
-                ))}
-              </TextField>
-            </div>
-            <Decimal
-              classes={classes}
-              decimal={this.state.decimal}
-              onDecimalChange={this.handleDecimalChange}
-            />
-          </CardContent>
+          <ResultCardFormulaValueSelectFragment
+            classes={classes}
+            caption='Arterial Oxygen Content CaO2'
+            value={this.handleFormulaCalc(
+              'cao2',
+              o2Value * o2UnitValue,
+              hgbValue * hgbUnitValue,
+              o2satValue * o2satUnitValue,
+              pao2Value * pao2UnitValue,
+              o2vsatValue * o2vsatUnitValue,
+              pvo2Value * pvo2UnitValue,
+              this.state.cao2SelectValue
+            )}
+            selectValue={this.state.cao2SelectUnit}
+            selectOnChange={this.handleCaO2SelectChange}
+          >
+            {unitData.cao2.map(option => (
+              <MenuItem key={option.unit} value={option.unit}>
+                {option.unit}
+              </MenuItem>
+            ))}
+          </ResultCardFormulaValueSelectFragment>
+          <ResultCardFormulaValueSelectFragment
+            classes={classes}
+            caption='Venous Oxygen Content CvO2'
+            value={this.handleFormulaCalc(
+              'cvo2',
+              o2Value * o2UnitValue,
+              hgbValue * hgbUnitValue,
+              o2satValue * o2satUnitValue,
+              pao2Value * pao2UnitValue,
+              o2vsatValue * o2vsatUnitValue,
+              pvo2Value * pvo2UnitValue,
+              this.state.cao2SelectValue,
+              this.state.cvo2SelectValue
+            )}
+            selectValue={this.state.cvo2SelectUnit}
+            selectOnChange={this.handleCvO2SelectChange}
+          >
+            {unitData.cvo2.map(option => (
+              <MenuItem key={option.unit} value={option.unit}>
+                {option.unit}
+              </MenuItem>
+            ))}
+          </ResultCardFormulaValueSelectFragment>
+          <ResultCardFormulaValueSelectFragment
+            classes={classes}
+            caption='Cardiac Output'
+            value={this.handleFormulaCalc(
+              'co',
+              o2Value * o2UnitValue,
+              hgbValue * hgbUnitValue,
+              o2satValue * o2satUnitValue,
+              pao2Value * pao2UnitValue,
+              o2vsatValue * o2vsatUnitValue,
+              pvo2Value * pvo2UnitValue,
+              this.state.cao2SelectValue,
+              this.state.cvo2SelectValue,
+              this.state.coSelectValue
+            )}
+            selectValue={this.state.coSelectUnit}
+            selectOnChange={this.handleCOSelectChange}
+          >
+            {unitData.co.map(option => (
+              <MenuItem key={option.unit} value={option.unit}>
+                {option.unit}
+              </MenuItem>
+            ))}
+          </ResultCardFormulaValueSelectFragment>
+          <Decimal
+            classes={classes}
+            decimal={this.state.decimal}
+            onDecimalChange={this.handleDecimalChange}
+          />
         </ResultCardHeader>
       )
     } else {
@@ -324,3 +296,119 @@ class FormulaComponent extends Component {
   }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "cardiac-output",
+  "title": "Cardiac Output",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Oxygen Consumption (O2)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter Oxygen Consumption (O2)",
+          "values": ["mL/min", "L/min", "L/sec", "mL/hr", "mL/sec"]
+        }
+      ]
+    },
+    {
+      "group": "Hemoglobin (Hgb)",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter Hemoglobin (Hgb)",
+          "values": [
+            "gm/dL",
+            "gm/L",
+            "mcg/dL",
+            "mcg/mL",
+            "mg%",
+            "mg/dL",
+            "mg/mL",
+            "ng/mL"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "O2 Saturation",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter O2 Saturation",
+          "values": ["%", "fraction", "ratio"]
+        }
+      ]
+    },
+    {
+      "group": "PaO2",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter PaO2",
+          "values": [
+            "mmHg",
+            "Pascal",
+            "atm",
+            "bar",
+            "cmH2O",
+            "cmHg",
+            "ftH2O",
+            "gm/sqcm",
+            "inH2O",
+            "inHg",
+            "kPa",
+            "mbar",
+            "psi",
+            "torr"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "O2vSat",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter O2vSat",
+          "values": ["%", "fraction", "ratio"]
+        }
+      ]
+    },
+    {
+      "group": "PvO2",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter PvO2",
+          "values": [
+            "mmHg",
+            "Pascal",
+            "atm",
+            "bar",
+            "cmH2O",
+            "cmHg",
+            "ftH2O",
+            "gm/sqcm",
+            "inH2O",
+            "inHg",
+            "kPa",
+            "mbar",
+            "psi",
+            "torr"
+          ]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "formula": {
+    "type": "unordered-list",
+    "content": [
+      "CaO2 = (Hgb*13.4*O2Sat/100) + (PaO2*0.031)",
+      "CvO2 = (Hgb*13.4*O2vSat/100) + (PvO2*0.031)",
+      "CO = O2Consumption/(CaO2-CvO2)"
+    ]
+  }
+}

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import Decimal from '../../components/Decimal/Decimal'
+import { ResultCardFormulaValueFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
   height: [
@@ -86,24 +85,19 @@ class FormulaComponent extends Component {
     if (heightValue && weightValue) {
       return (
         <ResultCardHeader classes={classes}>
-          <CardContent className={classes.content}>
-            <Typography type='caption' className={classes.contentText}>
-              BMI
-            </Typography>
-            <div className={classes.resultWrapper}>
-              <Typography type='title' className={classes.resultText}>
-                {this.handleCalc(
-                  heightValue * heightUnitValue,
-                  weightValue * weightUnitValue
-                )}
-              </Typography>
-            </div>
-            <Decimal
+          <ResultCardFormulaValueFragment
               classes={classes}
-              decimal={this.state.decimal}
-              onDecimalChange={this.handleDecimalChange}
-            />
-          </CardContent>
+              caption='BMI'
+              values={[this.handleCalc(
+                heightValue * heightUnitValue,
+                weightValue * weightUnitValue
+              )]}
+          />
+          <Decimal
+            classes={classes}
+            decimal={this.state.decimal}
+            onDecimalChange={this.handleDecimalChange}
+          />
         </ResultCardHeader>
       )
     } else {
@@ -112,3 +106,49 @@ class FormulaComponent extends Component {
   }
 }
 export default FormulaComponent
+
+export const config = {
+  "id": "body-mass-index-quetelet-index",
+  "title": "Body Mass Index (BMI)",
+  "type": "formula",
+  "questions": [
+    {
+      "group": "Height",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter Height",
+          "values": ["m", "in", "cm"]
+        }
+      ]
+    },
+    {
+      "group": "Weight",
+      "data": [
+        {
+          "type": "input/select",
+          "placeholder": "Please enter Weight",
+          "values": ["kg", "lb"]
+        }
+      ]
+    }
+  ],
+  "results": {},
+  "notes": {
+    "type": "unordered-list",
+    "content": [
+      "The default unit of measure for weight is kilograms and height is meters."
+    ]
+  },
+  "references": {
+    "type": "ordered-list",
+    "content": [
+      "National Institutes of Health (NIH), National Heart, Lung, and Blood Institute (NHLBI). The practical guide: identification, evaluation, and treatment of overweight and obesity in adults. Bethesda: National Institutes of Health. 2000, NIH publication 00-4084.",
+      "Khosla T, Lowe CR. Indices of obesity derived from body weight and height. Br J Prev Soc Med. 1967; 21: 122-128."
+    ]
+  },
+  "formula": {
+    "type": "paragraph",
+    "content": ["BMI = Weight / (Height * Height)"]
+  }
+}
