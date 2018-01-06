@@ -23,22 +23,14 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:200": "mv build/index.html build/200.html",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "dev": "npm-run-all -p start",
-    "clean": "yarn rimraf build",
-    "surge": "surge build -d medical-calc.surge.sh",
-    "surge:dev": "surge build -d medical-calc-dev.surge.sh",
-    "deploy": "npm-run-all -s build build:200 surge clean",
-    "deploy:dev": "npm-run-all -s build build:200 surge:dev clean",
-    "deploy:full": "npm-run-all -s build build:200 surge surge:dev clean"
+    "clean": "yarn rimraf build"
   },
   "standard": {
     "parser": "babel-eslint",
