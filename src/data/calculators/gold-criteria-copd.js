@@ -3,11 +3,11 @@ import { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 
-const getCalculateGroupPoints = calculate => {
+/*const getCalculateGroupPoints = calculate => {
     return calculate
         .map(item => parseFloat(item.points))
         .reduce((previousValue, currentValue) => previousValue + currentValue)
-}
+}*/
 
 class FormulaComponent extends Component {
     state = {}
