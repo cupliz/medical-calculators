@@ -5,11 +5,9 @@ import Decimal from '../../components/Decimal/Decimal'
 import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
-    height: [
-        { value: 1, unit: 'cm' },
-        { value: 100, unit: 'm' },
-        { value: 2.54, unit: 'in' },
-        { value: 30.48, unit: 'ft' }
+    age: [
+        { value: 1, unit: 'yrs' },
+        { value: 0.0833334, unit: 'mos' }
     ],
     serumCr: [
         { value: 1, unit: 'mg/dL' },
@@ -31,12 +29,14 @@ class FormulaComponent extends Component {
     }
 
     handleCalc = (
-        height,
+        gender,
+        black,
+        age,
         serumCr,
         selectValue
     ) => {
-        // eGFR = 0.413 * height in cm/ serumCr in mg/dL
-        const eGfr = 0.413 * (height / serumCr)
+        // GFR = 175 × Serum Cr-1.154 × age-0.203 × 1.212 (if patient is black) × 0.742 (if female)
+        const eGfr = 175 * Math.pow(serumCr,-1.154) * Math.pow(age,-0.203) * black * gender
         return (eGfr / selectValue).toFixed(this.state.decimal)
     }
 
@@ -63,35 +63,47 @@ class FormulaComponent extends Component {
         const { questions } = data
 
         // extract needed field vars
-        let heightValue = null
-        let heightUnitValue = null
+        let genderValue = null
+        let blackValue = null
+        let ageValue = null
+        let ageUnitValue = null
         let serumCrValue = null
         let serumCrUnitValue = null
 
         questions.map((question, index) => {
             const { calculate } = question
             if (calculate) {
-                const { input, select } = calculate
                 if (index === 0) {
-                    heightValue = input
-                    heightUnitValue = filterUnit(unitData.height, select)
+                    genderValue = calculate["points"]
                 }
-                if (index === 1) {
-                    serumCrValue = input
-                    serumCrUnitValue = filterUnit(unitData.serumCr, select)
+                if (index ===1) {
+                    blackValue = calculate["points"]
+                }
+                else {
+                    const { input, select } = calculate
+                    if (index === 2) {
+                        ageValue = input
+                        ageUnitValue = filterUnit(unitData.age, select)
+                    }
+                    if (index === 3) {
+                        serumCrValue = input
+                        serumCrUnitValue = filterUnit(unitData.serumCr, select)
+                    }
                 }
             }
             return calculate
         })
 
-        if (heightValue && serumCrValue) {
+        if (genderValue && blackValue && ageValue && serumCrValue) {
             return (
                 <ResultCardHeader classes={classes}>
                     <ResultCardFormulaValueSelectFragment
                         classes={classes}
                         caption='Estimated GFR'
                         value={this.handleCalc(
-                            heightValue * heightUnitValue,
+                            genderValue,
+                            blackValue,
+                            ageValue * ageUnitValue,
                             serumCrValue * serumCrUnitValue,
                             this.state.eGfrSelectValue
                         )}
@@ -119,55 +131,76 @@ class FormulaComponent extends Component {
 export default FormulaComponent
 
 export const config = {
-    "id": "bedside-schwartz-pediatric-gfr-calculator",
-    "title": "Bedside Schwartz Pediatric GFR Calculator",
+    "id": "mdrd-gfr-equation",
+    "title": "MDRD GFR Equation",
     "type": "formula",
     "questions": [
         {
-            "group": "Patient Height",
+            "group": "Gender",
             "data": [
                 {
-                    "type": "input/select",
-                    "placeholder": "Enter Height",
-                    "values": ["cm", "m", "in", "ft"]
+                    "type": "radio",
+                    "options": "Male | Female",
+                    "points": "1/0.742"
                 }
             ]
         },
         {
-            "group": "Serum Creatinine",
+            "group": "Black race",
+            "data": [
+                {
+                    "type": "radio",
+                    "options": "No | Yes",
+                    "points": "1/1.212"
+                }
+            ]
+        },
+        {
+            "group": "Age",
             "data": [
                 {
                     "type": "input/select",
-                    "placeholder": "Enter Value",
-                    "values": ["mg/dL", "mmol/L"]
+                    "placeholder": "Enter Age",
+                    "values": ["yrs", "mos"]
+                }
+            ]
+        },
+        {
+            "group": "Creatinine",
+            "data": [
+                {
+                    "type": "input/select",
+                    "placeholder": "Enter Creatinine Value",
+                    "values": ["mg/dL", "µmol/L"]
                 }
             ]
         }
-
     ],
     "results": {},
     "notes": {
         "type": "unordered-list",
         "content": [
-            "This calculator provides an estimate of glomerular filtration rate in children ages 1-18 years",
-            "For patients 19 and older, use the GFR calculator for adults",
-            "The formula was updated in 2009 and is currently considered the best method for estimating GFR in children. It is known as the “Bedside Schwartz” formula",
-            'Using the original Schwartz equation with a creatinine value from a method with calibration traceable to IDMS will overestimate GFR by 20 to 40%',
-            "The NKDEP presently recommends reporting estimated GFR values for children greater than or equal to 75 mL/min/1.73 m² simply as “≥ 75 mL/min/1.73 m²,” not an exact number"
+            "This calculator provides an estimate of glomerular filtration rate based on creatinine and patient characteristics",
+            "Only for chronic kidney disease (CKD), not accurate for acute renal failure",
+            "Studies show that the MDRD is more accurate than creatinine clearance measured from 24-hr urine collections or estimated by the Cockcroft-Gault formula.",
+            "Was re-expressed in 2005 for use with a standardized serum creatinine assay which yields 5% percent lower values for serum creatinine concentration.\n"
         ]
     },
     "references": {
         "type": "ordered-list",
         "content": [
-            "Schwartz GJ and Work DF. Measurement and estimation of GFR in children and adolescents. J Am Soc Nephrol. 2009; Nov; 4(11): 1832-643",
-            "Schwartz GJ and Work DF. Measurement and estimation of GFR in children and adolescents. J Am Soc Nephrol. 2009; Nov; 4(11): 1832-643",
-            "Staples A, LeBlond R, Watkins S, Wong C, Brandt J. Validation of the revised Schwartz estimating equation in a predominantly non-CKD population. Pediatr Nephrol. 2010 Nov;25(11):2321-6"
+            "Stevens LA, Manzi J, Levey AS, et al. Impact of creatinine calibration on performance of GFR estimating equations in a pooled individual patient database. Am J Kidney Dis. Jul 2007;50(1):21-35.",
+            "Levey AS, Coresh J, Greene T, et al. Using standardized serum creatinine values in the modification of diet in renal disease study equation for estimating glomerular filtration rate. Ann Intern Med. 2006;145(4):247-254.",
+            "Levey AS, Coresh J, Greene T, et al. Expressing the Modification of Diet in Renal Disease Study equation for estimating glomerular filtration rate with standardized serum creatinine values. Clin Chem. Apr 2007;53(4):766-772."
         ]
     },
     "formula": {
         "type": "paragraph",
         "content": [
-            "Schwartz GFR (mL/min/1.73m²) = (0.413 × height in cm)/ Serum Creatinine in mg/dL"
+            "GFR = 175 × Serum Cr^-1.154 × age^-0.203 × 1.212 (if patient is black) × 0.742 (if female)",
+            "GFR units are mL/min/1.73m²",
+            "Creatinine units are in mg/dL",
+            "Age is in years"
         ]
     }
 }

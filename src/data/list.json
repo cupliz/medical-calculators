@@ -573,6 +573,10 @@
       "id": "bedside-schwartz-pediatric-gfr-calculator",
       "title": "Bedside Schwartz Pediatric GFR Calculator",
       "subtitle": "Estimating glomerular filtration rate in infants, children, and adolescents"
-
-    }
+    },
+  {
+    "id": "mdrd-gfr-equation",
+    "title": "MDRD GFR Equation",
+    "subtitle": "Estimates glomerular filtration rate based on creatinine and patient characteristics"
+  }
 ]
