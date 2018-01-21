@@ -568,5 +568,11 @@
       "id": "adrenaline-epinephrine-pediatric-dosing",
       "title": "Adrenaline/Epinephrine Pediatric Dosing",
       "subtitle": "Pediatric dosing for multiple indications"
+    },
+    {
+      "id": "bedside-schwartz-pediatric-gfr-calculator",
+      "title": "Bedside Schwartz Pediatric GFR Calculator",
+      "subtitle": "Estimating glomerular filtration rate in infants, children, and adolescents"
+
     }
 ]
