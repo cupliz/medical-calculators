@@ -18,7 +18,7 @@ Once, you have the pre-requisites above set up and sucessfully cloned the [Git r
 ### Subsequent times
 
     cd medical-calculators
-    npm run dev
+    npm run start
 
 ## Govard's Notes
 
