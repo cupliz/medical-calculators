@@ -578,5 +578,10 @@
     "id": "mdrd-gfr-equation",
     "title": "MDRD GFR Equation",
     "subtitle": "Estimates glomerular filtration rate based on creatinine and patient characteristics"
+  },
+  {
+    "id": "pediatric-drug-dosage-calculator",
+    "title": "Pediatric Drug Dosage Calculator",
+    "subtitle": "Calculate drug dosage for pediatric patients"
   }
 ]
