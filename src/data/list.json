@@ -593,6 +593,11 @@
     "id": "sequential-organ-failure-assessment-score",
     "title": "Sequential Organ Failure Assessment (SOFA) Score",
     "subtitle": "SOFA predicts ICU mortality based on lab results and clinical data"
+  },
+  {
+    "id": "serum-osmolarity-calculator",
+    "title": "Serum Osmolarity Calculator",
+    "subtitle": "Calculates expected serum osmolarity vs measured osmolarity to detect unmeasured compounds in serum"
   }
 
 ]
