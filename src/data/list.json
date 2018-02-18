@@ -583,5 +583,16 @@
     "id": "pediatric-drug-dosage-calculator",
     "title": "Pediatric Drug Dosage Calculator",
     "subtitle": "Calculate drug dosage for pediatric patients"
+  },
+  {
+    "id": "nutrition-risk-critically-ill",
+    "title": "Nutrition Risk in the Critically Ill",
+    "subtitle": "Identifies which critically ill patients can benefit from nutrition therapy"
+  },
+  {
+    "id": "sequential-organ-failure-assessment-score",
+    "title": "Sequential Organ Failure Assessment (SOFA) Score",
+    "subtitle": "SOFA predicts ICU mortality based on lab results and clinical data"
   }
+
 ]
