@@ -598,6 +598,11 @@
     "id": "serum-osmolarity-calculator",
     "title": "Serum Osmolarity Calculator",
     "subtitle": "Calculates expected serum osmolarity vs measured osmolarity to detect unmeasured compounds in serum"
+  },
+  {
+    "id": "asthma-predictive-index",
+    "title": "Asthma Predictive Index",
+    "subtitle": "Determines likelihood of pediatric patients developing childhood asthma"
   }
 
 ]
