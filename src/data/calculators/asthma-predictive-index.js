@@ -19,10 +19,10 @@ class FormulaComponent extends Component {
         // Strict Criteria: >= 3 episodes of wheezing per year, AND >=1 major criteria OR >=2 minor criteria
         // Loose Criteria: < 3 episodes of wheezing per year, AND >=1 major criteria OR >=2 minor criteria
         if (
-            (wheezingCriteria ===3 && majorCriteria >=1 || minorCriteria >= 2)
+            (wheezingCriteria === 3 && (majorCriteria >=1 || minorCriteria >= 2))
         ) {
             return 'Positive Strict Index, 75% of children had active asthma at 15 years'
-        } else if (wheezingCriteria ===1 && majorCriteria >=1 || minorCriteria >=2) {
+        } else if (wheezingCriteria === 1 && (majorCriteria >=1 || minorCriteria >=2)) {
             return 'Positive Loose Index, 59% of children had active asthma at 15 years'
         } else {
             return 'Unlikely to develop active asthma'
