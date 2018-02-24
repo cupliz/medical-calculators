@@ -1,7 +1,7 @@
 export { default } from './common/drug-dosage';
 export const config = {
-    "id": "pediatric-drug-dosage-calculator",
-    "title": "Pediatric Drug Dosage Calculator",
+    "id": "drug-dosage-calculator",
+    "title": "Drug Dosage Calculator",
     "type": "formula",
     "info": {
         "drugName": "Pediatric Drug Dosage Calculator",

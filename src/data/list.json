@@ -580,9 +580,9 @@
     "subtitle": "Estimates glomerular filtration rate based on creatinine and patient characteristics"
   },
   {
-    "id": "pediatric-drug-dosage-calculator",
-    "title": "Pediatric Drug Dosage Calculator",
-    "subtitle": "Calculate drug dosage for pediatric patients"
+    "id": "drug-dosage-calculator",
+    "title": "Drug Dosage Calculator",
+    "subtitle": "Calculate drug dosage based on weight"
   },
   {
     "id": "nutrition-risk-critically-ill",
