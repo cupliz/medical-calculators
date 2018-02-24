@@ -568,5 +568,41 @@
       "id": "adrenaline-epinephrine-pediatric-dosing",
       "title": "Adrenaline/Epinephrine Pediatric Dosing",
       "subtitle": "Pediatric dosing for multiple indications"
-    }
+    },
+    {
+      "id": "bedside-schwartz-pediatric-gfr-calculator",
+      "title": "Bedside Schwartz Pediatric GFR Calculator",
+      "subtitle": "Estimating glomerular filtration rate in infants, children, and adolescents"
+    },
+  {
+    "id": "mdrd-gfr-equation",
+    "title": "MDRD GFR Equation",
+    "subtitle": "Estimates glomerular filtration rate based on creatinine and patient characteristics"
+  },
+  {
+    "id": "drug-dosage-calculator",
+    "title": "Drug Dosage Calculator",
+    "subtitle": "Calculate drug dosage based on weight"
+  },
+  {
+    "id": "nutrition-risk-critically-ill",
+    "title": "Nutrition Risk in the Critically Ill",
+    "subtitle": "Identifies which critically ill patients can benefit from nutrition therapy"
+  },
+  {
+    "id": "sequential-organ-failure-assessment-score",
+    "title": "Sequential Organ Failure Assessment (SOFA) Score",
+    "subtitle": "SOFA predicts ICU mortality based on lab results and clinical data"
+  },
+  {
+    "id": "serum-osmolarity-calculator",
+    "title": "Serum Osmolarity Calculator",
+    "subtitle": "Calculates expected serum osmolarity vs measured osmolarity to detect unmeasured compounds in serum"
+  },
+  {
+    "id": "asthma-predictive-index",
+    "title": "Asthma Predictive Index",
+    "subtitle": "Determines likelihood of pediatric patients developing childhood asthma"
+  }
+
 ]
