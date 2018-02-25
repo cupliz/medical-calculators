@@ -4,7 +4,7 @@ export const config = {
     "title": "Drug Dosage Calculator",
     "type": "formula",
     "info": {
-        "drugName": "Pediatric Drug Dosage Calculator",
+        "drugName": "Drug Dosage Calculator",
         "drugDosageInformation": []
     },
     "questions": [
