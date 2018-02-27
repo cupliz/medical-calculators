@@ -2,462 +2,546 @@
     {
       "id": "chads2-score-for-atrial-fibrillation-stroke-risk",
       "title": "CHADS₂ Score for Atrial Fibrillation Stroke Risk",
-      "subtitle": "Stroke risk in AFib"
+      "search_tags": ["CHADS2 score", "AF stroke risk", "AFib stroke risk"]
     },
     {
       "id": "curb-65-pneumonia-severity-score",
       "title": "CURB-65 Pneumonia Severity Score",
-      "subtitle": "Mortality estimate for Community Acquired Pneumonia"
+      "subtitle": "Mortality estimate for Community Acquired Pneumonia",
+      "search_tags": ["pneumonia severity", "CURB65 score"]
     },
     {
       "id": "ransons-criteria-for-pancreatitis-mortality",
       "title": "Ranson's Criteria for Pancreatitis Mortality",
-      "subtitle": "Mortality estimate for Pancreatitis"
+      "subtitle": "Mortality estimate for Pancreatitis",
+      "search_tags": ["ranson's criteria", "ranson's score", "pancreatitis mortality", "pancreatitis mortality", "ransons score", "ransons criteria"]
     },
     {
       "id": "amoxicillin-pediatric-ear-nose-throat",
       "title": "Amoxicillin Pediatric - Ear, Nose, & Throat Infections",
-      "subtitle": "Drug dose calculator"
+      "subtitle": "Drug dose",
+      "search_tags": ["amoxicillin pediatric drug dose", "drug dosage for amoxicillin", "amoxicillin drug dosage"]
     },
     {
       "id": "cha2ds2-vasc-score-for-stroke-risk",
       "title": "CHA₂DS₂-VASc Score for Stroke Risk",
-      "subtitle": "Stroke risk in AFib, better than CHADS₂ score"
+      "subtitle": "Stroke risk in AFib, better than CHADS₂ score",
+      "search_tags": ["cha2ds2vasc score", "cha2ds2 score", "cha2ds2vasc score", "AF stroke risk", "AFib stroke risk", "AF stroke risk", "AFib stroke risk"]
     },
     {
       "id": "glasgow-coma-scale",
       "title": "Glasgow Coma Scale",
-      "subtitle": "Objective level of consciousness"
+      "subtitle": "Objective level of consciousness",
+      "search_tags": ["glasgow coma score", "GCS", "glasgow coma scale", "GCS"]
     },
     {
       "id": "apgar-score",
       "title": "Apgar Score",
-      "subtitle": "Assesses Neonates 1 & 5 mins after birth"
+      "subtitle": "Assesses Neonates 1 & 5 mins after birth",
+      "search_tags": ["apgar score", "apgar", "apgar score"]
     },
     {
       "id": "metabolic-syndrome-criteria-aha-nhlbi-2005",
       "title": "Metabolic Syndrome Criteria (AHA/NHLBI 2005)",
-      "subtitle": "Diagnosis for Metabolic Syndrome"
+      "subtitle": "Diagnosis for Metabolic Syndrome",
+      "search_tags": ["metabolic syndrome", "metabolic syndrome criteria", "criteria for metabolic syndrome", "diagnose metabolic syndrome"]
     },
     {
       "id": "dvt-probability-wells-score-system",
       "title": "DVT Probability: Wells Score System",
-      "subtitle": "Risk for DVT"
+      "subtitle": "Risk for DVT",
+      "search_tags": ["wells score", "risk for dvt", "DVT risk", "wells score", "probability of DVT"]
     },
     {
       "id": "tia-prognosis-risk-of-stroke-by-90-days-after-presentation",
       "title": "TIA Prognosis: Risk of Stroke by 90 Days After Presentation",
-      "subtitle": "90-day Stroke risk after TIA"
+      "subtitle": "90-day Stroke risk after TIA",
+      "search_tags": ["stroke risk after TIA", "TIA stroke risk", "prognosis of TIA", "TIA prognosis", "TIA stroke risk"]
     },
     {
       "id": "timi-risk-score-for-stemi",
       "title": "TIMI Risk Score for STEMI",
-      "subtitle": "Mortality risk after STEMI"
+      "subtitle": "Mortality risk after STEMI",
+      "search_tags": ["TIMI risk STEMI", "timi risk for stemi", "TIMI risk for STEMI", "TIMI risk score for STEMI", "TIMI risk score"]
     },
     {
       "id": "timi-risk-score-for-unstable-angina-nstemi",
       "title": "TIMI Risk Score for Unstable Angina/NSTEMI",
-      "subtitle": "Mortality risk after Unstable Angina/NSTEMI"
+      "subtitle": "Mortality risk after Unstable Angina/NSTEMI",
+      "search_tags": ["TIMI risk NSTEMI", "TIMI NSTEMI risk", "timi risk for nstemi", "TIMI risk for NSTEMI", "TIMI risk score for NSTEMI", "TIMI risk score"]
     },
     {
       "id": "nih-stroke-score",
       "title": "NIH Stroke Score",
-      "subtitle": "Quantifies stroke severity"
+      "subtitle": "Quantifies stroke severity",
+      "search_tags": ["stroke severity", "stroke severity", "NIH stroke score", "NIH stroke score", "NIH stroke score"]
     },
     {
       "id": "bleeding-risk-on-warfarin-therapy-any-bleeding-complication",
       "title": "Bleeding Risk on Warfarin Therapy (Any Bleeding Complication)",
-      "subtitle": "Bleeding risk from warfarin"
+      "subtitle": "Bleeding risk from warfarin",
+      "search_tags": ["warfarin bleeding risk", "wafarin risk", "warfarin bleeding risk", "coumadin bleeding risk", "coumadin risk", "coumadin bleeding risk"]
     },
     {
       "id": "abcd2-score-for-tia",
       "title": "ABCD² Score for TIA",
-      "subtitle": "Risk of stroke after TIA"
+      "subtitle": "Risk of stroke after TIA",
+      "search_tags": ["risk of stroke post TIA", "TIA stroke risk", "stroke risk", "stroke ABCD2", "risk of stroke after tia"]
     },
     {
       "id": "has-bled-score-for-major-bleeding-risk",
       "title": "HAS-BLED Score for Major Bleeding Risk",
-      "subtitle": "Bleeding risk with AFib anticoagulation"
+      "subtitle": "Bleeding risk with AFib anticoagulation",
+      "search_tags": ["AF anticoagulant bleeding risk", "AF bleeding risk", "bleeding risk in AF", "HAS BLED score", "HAS BLED score"]
     },
     {
       "id": "cardiac-risk-index-aaa-surgery",
       "title": "Cardiac Risk Index for AAA Surgery",
-      "subtitle": "Cardiac Complication risk in AAA surgery"
+      "subtitle": "Cardiac Complication risk in AAA surgery",
+      "search_tags": ["cardiac complication risk in AAA surgery", "AAA surgery complication risk", "cardiac risk index for AAA surgery", "cardiac risk for surgery"]
     },
     {
       "id": "cardiac-risk-index-abdominal-surgery",
       "title": "Cardiac Risk Index for Abdominal Surgery",
-      "subtitle": "Cardiac Complication risk in abdominal surgery"
+      "subtitle": "Cardiac Complication risk in abdominal surgery",
+      "search_tags": ["cardiac complication risk in abdominal surgery", "abdominal surgery complication risk", "cardiac risk index for abdominal surgery", "cardiac risk for surgery"]
     },
     {
       "id": "cardiac-risk-index-non-aaa-vascular-surgery",
       "title": "Cardiac Risk Index for Non-AAA Vascular Surgery",
-      "subtitle": "Cardiac Complication risk in non-ASS vascular surgery"
+      "subtitle": "Cardiac Complication risk in non-ASS vascular surgery",
+      "search_tags": ["cardiac complication risk in non aaa surgery", "non aaa surgery complication risk", "cardiac risk index for non aaa surgery", "cardiac risk for surgery"]
     },
     {
       "id": "jones-criteria-for-diagnosis-of-rheumatic-fever",
       "title": "Jones Criteria for Diagnosis of Rheumatic Fever",
-      "subtitle": "Diagnose rheumatic fever"
+      "subtitle": "Diagnose rheumatic fever",
+      "search_tags": ["criteria for rheumatic fever", "jones criteria", "jones criteria", "diagnose rheumatic fever", "rheumatic fever jones criteria", "jones criteria", "jones score", "jones score", "diagnostic criteria for rheumatic fever"]
     },
     {
       "id": "endocarditis-diagnostic-criteria-duke-criteria",
       "title": "Endocarditis Diagnostic Criteria - Duke Criteria",
-      "subtitle": "Diagnose endocarditis"
+      "subtitle": "Diagnose endocarditis",
+      "search_tags": ["criteria for endocarditis", "duke criteria for endocarditis", "duke criteria", "diagnose endocarditis", "diagnostic criteria for endocarditis"]
     },
     {
       "id": "ottawa-ankle-rule-for-the-use-of-x-ray-in-ankle-injury",
       "title": "Ottawa Ankle Rule for the Use of X-Ray in Ankle Injury",
-      "subtitle": "Rule out imaging in ankle injury"
+      "subtitle": "Rule out imaging in ankle injury",
+      "search_tags": ["ottawa ankle rule", "ottawa ankle rule"]
     },
     {
       "id": "creatinine-clearance-measured",
       "title": "Creatinine Clearance (measured)",
-      "subtitle": "Direct measure of renal function"
+      "subtitle": "Direct measure of renal function",
+      "search_tags": ["creatinine clearance", "creatinine clearance", "measured creatine clearance", "creatinine clearance measured"]
     },
     {
       "id": "body-mass-index-quetelet-index",
       "title": "Body Mass Index (BMI)",
-      "subtitle": "Calculate BMI"
+      "subtitle": "Calculate BMI",
+      "search_tags": ["bmi", "BMI", "body mass index", "body mass index"]
     },
     {
       "id": "anion-gap",
       "title": "Anion Gap",
-      "subtitle": "Evaluates states of metabolic acidosis"
+      "subtitle": "Evaluates states of metabolic acidosis",
+      "search_tags": ["anion gap", "anion gap", "assess metabolic acidosis", "metabolic acidosis"]
     },
     {
       "id": "parkland-formula-for-burns",
       "title": "Parkland Formula for Burns",
-      "subtitle": "Fluid requirements after burns"
+      "subtitle": "Fluid requirements after burns",
+      "search_tags": ["parkland formula for burns", "parkland formula", "fluid requirements for burn patients"]
     },
     {
       "id": "maintenance-fluid-calculation-for-children",
       "title": "Maintenance Fluid Calculation for Children",
-      "subtitle": "Fluid maintenance for children"
+      "subtitle": "Fluid maintenance for children",
+      "search_tags": ["fluid maintenance for kids", "maintenance fluid calculation", "fluid maintenance", "pediatric fluid maintenance", "pediatric maintenance fluid calculation", "fluid maintenance for pediatric patients"]
     },
     {
       "id": "cardiac-output",
       "title": "Cardiac Output",
-      "subtitle": "Assess cardiac output"
+      "subtitle": "Assess cardiac output",
+      "search_tags": ["cardiac output", "cardiac output"]
     },
     {
       "id": "pediatric-glasgow-coma-scale",
       "title": "Pediatric Glasgow Coma Scale",
-      "subtitle": "Assess mental state of pediatric patients"
+      "subtitle": "Assess mental state of pediatric patients",
+      "search_tags": ["pediatric gcs", "pediatric gcs", "pediatric glasgow coma score", "pediatric glasgow coma scale", "pediatric glasgow coma", "pediatric glasgow coma criteria", "pediatric gcs criteria"]
     },
     {
       "id": "bode-index-copd",
       "title": "BODE Index for COPD Survival Prediction",
-      "subtitle": "Estimate COPD survival"
+      "subtitle": "Estimate COPD survival",
+      "search_tags": ["bode index", "bode index", "copd survival", "predict copd survival", "estimate copd survival", "copd bode index", "copd bode score", "BODE score"]
     },
     {
       "id": "pulmonary-embolism-wells-score",
       "title": "Pulmonary Embolism Wells Score",
-      "subtitle": "Estimate risk of Pulmonary Embolism"
+      "subtitle": "Estimate risk of Pulmonary Embolism",
+      "search_tags": ["risk of pulmonary embolism", "wells score", "wells score", "wells score for pulmonary embolism", "pulmonary embolism risk"]
     },
     {
       "id": "heart-score-major-cardiac-events",
       "title": "HEART Score for Major Cardiac Events",
-      "subtitle": "6 week risk of cardiac event"
+      "subtitle": "6 week risk of cardiac event",
+      "search_tags": ["HEART score", "HEART score", "HEART score", "risk of cardiac event"]
     },
     {
       "id": "quick-sofa-score-sepsis",
       "title": "qSOFA Score for Sepsis",
-      "subtitle": "In-hospital mortality in non-ICU patients with infections"
+      "subtitle": "In-hospital mortality in non-ICU patients with infections",
+      "search_tags": ["qSOFA score", "qSOFA sepsis score", "qSOFA score", "qSOFA", "qSOFA", "sepsis mortality"]
     },
     {
       "id": "child-pugh-score-cirrhosis-mortality",
       "title": "Child-Pugh Score for Cirrhosis Mortality",
-      "subtitle": "Prognosis for cirrhosis, guides treatment"
+      "subtitle": "Prognosis for cirrhosis, guides treatment",
+      "search_tags": ["child pugh score", "child pugh score", "child pugh", "prognosis for cirrhosis mortality", "prognosis for cirrhosis mortality"]
     },
     {
       "id": "intracranial-bleeding-risk-thrombolytic-therapy-of-mi",
       "title": "Intracranial Bleeding Risk From Thrombolytic Therapy of MI",
-      "subtitle": "Hemorrhage risk after tPA"
+      "subtitle": "Hemorrhage risk after tPA",
+      "search_tags": ["hemorrhage risk after tpa", "tpa risk", "bleeding risk after tpa", "tpa bleeding risk"]
     },
     {
       "id": "killip-class-heart-failure",
       "title": "Killip Classification for Heart Failure",
-      "subtitle": "Mortality risk for Acute Coronary Syndrome"
+      "subtitle": "Mortality risk for Acute Coronary Syndrome",
+      "search_tags": ["killip classification", "killip", "killip class", "killip class"]
     },
     {
       "id": "mods-score-multiple-organ-dysfunction",
       "title": "MODS Score: Multiple Organ Dysfunction",
-      "subtitle": "ICU/In-hospital Mortality risk and LOS for MODS patients"
+      "subtitle": "ICU/In-hospital Mortality risk and LOS for MODS patients",
+      "search_tags": ["mods score", "mods score", "icu risk for multiple organ failure", "mortality risk for organ failure"]
     },
     {
       "id": "centor-score-strep-pharyngitis",
       "title": "Centor Score for Strep Pharyngitis (Modified McIsaac)",
-      "subtitle": "Diagnosis and treatment of strep throat"
+      "subtitle": "Diagnosis and treatment of strep throat",
+      "search_tags": ["centor score", "centor score", "strep pharyngitis score", "diagnosis of strep throat", "strep throat centor score"]
     },
     {
       "id": "perc-rule-pulmonary-embolism",
       "title": "PERC Rule for Pulmonary Embolism",
-      "subtitle": "Rules out Pulmonary Embolism (<2%)"
+      "subtitle": "Rules out Pulmonary Embolism (<2%)",
+      "search_tags": ["perc rule for pe", "pulmonary embolism perc rule", "how to rule out pulmonary embolism", "when to rule out pe", "perc rule"]
     },
     {
       "id": "ada-diabetes-risk-calculator",
       "title": "ADA Diabetes Risk Calculator",
-      "subtitle": "Estimates T2D Risk"
+      "subtitle": "Estimates T2D Risk",
+      "search_tags": ["diabetes risk", "diabetes risk", "ada diabetes risk", "ada diabetes risk"]
     },
     {
       "id": "fall-risk-elderly-hospitalized-patients",
       "title": "Fall Risk in Elderly Hospitalized Patients",
-      "subtitle": "Estimates risk of falls for elderly inpatients"
+      "subtitle": "Estimates risk of falls for elderly inpatients",
+      "search_tags": ["fall risk in elderly patients", "risk of falls in elderly", "fall risk", "estimate fall risk"]
     },
     {
       "id": "abc-score-massive-blood-transfusion",
       "title": "ABC Score for Massive Blood Transfusion",
-      "subtitle": "Predicts need for massive transfusion in trauma patients"
+      "subtitle": "Predicts need for massive transfusion in trauma patients",
+      "search_tags": ["abc score for blood transfusion", "abc score trauma patients", "abc trauma patients score"]
     },
     {
       "id": "acute-gout-diagnosis-rule",
       "title": "Acute Gout Diagnosis Rule",
-      "subtitle": "Diagnose acute gout"
+      "subtitle": "Diagnose acute gout",
+      "search_tags": ["diagnose acute gout", "criteria for acute gout diagnosis", "acute gout rule", "diagnostic criteria for acute gout", "acute gout diagnostic criteria"]
     },
     {
       "id": "bishop-score-vaginal-delivery-labor",
       "title": "Bishop Score for Vaginal Delivery and Induction of Labor",
-      "subtitle": "Likelihood of successful vaginal delivery"
+      "subtitle": "Likelihood of successful vaginal delivery",
+      "search_tags": ["bishop score", "bishop score", "bishop score for labor", "bishop"]
     },
     {
       "id": "chalice-rule-child-head-injury",
       "title": "CHALICE Rule for Child Head Injury",
-      "subtitle": "Clinically significant head injuries in pediatric patients"
+      "subtitle": "Clinically significant head injuries in pediatric patients",
+      "search_tags": ["chalice rule", "chalice score", "pediatric chalice score", "pediatric chalice rule"]
     },
     {
       "id": "burch-wartofsky-point-scale-thyrotoxicosis",
       "title": "Burch-Wartofsky Point Scale for Thyrotoxicosis",
-      "subtitle": "Determines likelihood of thyrotoxicosis"
+      "subtitle": "Determines likelihood of thyrotoxicosis",
+      "search_tags": ["burch wartofsky point scale", "burch wartofsky score", "thyrotoxicosis", "likelihood of thyrotoxicosis", "assess probability of thyrotoxicosis", "assess risk of thyrotoxicosis"]
     },
     {
       "id": "mmrc-dyspnea-scale",
       "title": "mMRC Dyspnea Scale",
-      "subtitle": "Dyspnea severity"
+      "subtitle": "Dyspnea severity",
+      "search_tags": ["dyspnea severity", "mmrc scale", "mmrc dyspnea severity score", "mmrc dyspnea severity", "mmrc dyspnea", "mmrc dyspnea score"]
     },
     {
       "id": "rule-of-sevens-lyme-meningitis",
       "title": "Rule of 7s for Lyme Meningitis",
-      "subtitle": "Diagnosis of lyme meningitis"
+      "subtitle": "Diagnosis of lyme meningitis",
+      "search_tags": ["rule of 7s", "diagnose lyme meningitis rule of 7s", "diagnosis for lyme meningitis", "diagnostic criteria for lyme meningitis", "lyme meningitis rule of 7"]
     },
     {
       "id": "san-francisco-syncope-rule",
       "title": "San Francisco Syncope Rule",
-      "subtitle": "Defines low risk syncope"
+      "subtitle": "Defines low risk syncope",
+      "search_tags": ["SF syncope rule", "SF syncope score", "define risk of syncope", "estimate risk of syncope", "san francisco syncope rule", "SF syncope score"]
     },
     {
       "id": "pediatric-appendicitis-score",
       "title": "Pediatric Appendicitis Score",
-      "subtitle": "Predicts appendicitis in pediatric patients"
+      "subtitle": "Predicts appendicitis in pediatric patients",
+      "search_tags": ["pediatric appendicitis score", "risk of pediatric appendicitis", "appendicitis risk in kids"]
     },
     {
       "id": "dragon-score-post-tpa-stroke-outcome",
       "title": "DRAGON Score for Post-TAP Stroke Outcome",
-      "subtitle": "Calculate before tPA, predicts long term outcome"
+      "subtitle": "Calculate before tPA, predicts long term outcome",
+      "search_tags": ["dragon score", "dragon score", "dragon score", "post tap stroke outcome", "estimate post tap stroke outcome"]
     },
     {
       "id": "vancouver-chest-pain-rule",
       "title": "Vancouver Chest Pain Rule",
-      "subtitle": "2 hr rule out for low risk chest pain"
+      "subtitle": "2 hr rule out for low risk chest pain",
+      "search_tags": ["vancouver chest pain rule", "rule out for chest pain", "criteria for chest pain rule out", "chest pain rule out", "chest pain ruling out criteria"]
     },
     {
       "id": "behcets-syndrome-diagnostic-criteria",
       "title": "Bechet's Syndrome Diagnostic Criteria",
-      "subtitle": "Diagnose Bechet's syndrome"
+      "subtitle": "Diagnose Bechet's syndrome",
+      "search_tags": ["bechet syndrome criteria", "criteria for bechet's syndrome", "bechet's criteria", "bechet's syndrome diagnostic criteria", "diagnostic criteria for bechet's syndrome", "diagnostic criteria bechet syndrome"]
     },
     {
       "id": "kawasaki-disease-diagnostic-criteria",
       "title": "Kawasaki Disease Diagnostic Criteria",
-      "subtitle": "Diagnose Kawasaki Disease"
+      "subtitle": "Diagnose Kawasaki Disease",
+      "search_tags": ["kawasaki disease diagnostic criteria", "diagnostic criteria for kawasaki disease", "diagnose kawasaki disease", "kawasaki disease diagnosis"]
     },
     {
       "id": "irritable-bowel-syndrome-diagnostic-criteria-manning",
       "title": "Irritable Bowel Syndrome Diagnostic Criteria (Manning Criteria)",
-      "subtitle": "Diagnose IBS"
+      "subtitle": "Diagnose IBS",
+      "search_tags": ["diagnose ibs", "ibs diagnostic criteria", "manning criteria", "manning ibs criteria", "diagnose irritable bowel syndrome", "irritable bowel syndrome diagnostic criteria"]
     },
     {
       "id": "multiple-myeloma-diagnostic-criteria",
       "title": "Multiple Myeloma Diagnostic Criteria",
-      "subtitle": "Diagnose multiple myeloma"
+      "subtitle": "Diagnose multiple myeloma",
+      "search_tags": ["diagnose multiple myeloma", "multiple myeloma diagnostic criteria", "multiple myeloma diagnostic"]
     },
     {
       "id": "bacterial-meningitis-score-children",
       "title": "Bacterial Meningitis Score for Children",
-      "subtitle": "Likelihood of bacterial meningitis in pediatric patients"
+      "subtitle": "Likelihood of bacterial meningitis in pediatric patients",
+      "search_tags": ["bacterial meningitis score", "bacterial meningitis", "meningitis score", "pediatric meningitis risk score", "pediatric meningitis score"]
     },
     {
       "id": "ottawa-foot-rule-for-the-use-of-x-ray-in-foot-injury",
       "title": "Ottawa Foot Rule for the Use of X-Ray in Foot Injury",
-      "subtitle": "Rule out imaging in foot injury"
+      "subtitle": "Rule out imaging in foot injury",
+      "search_tags": ["ottawa foot rule", "ottawa foot criteria", "ottawa foot score", "ottawa score", "ottawa foot"]
     },
     {
       "id": "ottawa-knee-rule-x-ray-knee-injury",
       "title": "Ottawa Knee Rule for use of X-Ray in Knee Injury",
-      "subtitle": "Rule out imaging in knee injury"
+      "subtitle": "Rule out imaging in knee injury",
+      "search_tags": ["ottawa knee rule", "ottawa knee criteria", "ottawa knee score", "ottawa score", "ottawa knee"]
     },
     {
       "id": "rockall-score-upper-gi-bleeding",
       "title": "Rockall Score for Upper GI Bleeding",
-      "subtitle": "Determines severity of GI bleeding"
+      "subtitle": "Determines severity of GI bleeding",
+      "search_tags": ["rockall score", "rockall score", "rockall", "gi bleeding severity", "gi bleeding severity score"]
     },
     {
       "id": "aims65-score-upper-gi-bleeding",
       "title": "AIMS65 Score for Upper GI Bleeding Mortality",
-      "subtitle": "Determines in-hospital mortality from upper GI bleeding"
+      "subtitle": "Determines in-hospital mortality from upper GI bleeding",
+      "search_tags": ["aims65 score", "aims65 score", "aims65" , "upper gi bleeding mortality risk", "estimate mortality of upper gi bleeding", "mortality risk for upper gi bleeding", "upper gi bleeding risk"]
     },
     {
       "id": "lower-gi-bleeding-risk-severe-bleeding",
       "title": "Lower GI Bleeding and Risk of Severe Bleeding",
-      "subtitle": "Evaluates severe bleeding risk"
+      "subtitle": "Evaluates severe bleeding risk",
+      "search_tags": ["lower gi bleeding risk", "estimate lower gi bleeding risk", "risk of lower gi bleeding", "lower gi bleeding risk", "risk of gi bleeding", "gi bleeding risk"]
     },
     {
       "id": "pancreatitis-prognosis-criteria-disease-gallstones",
       "title": "Pancreatitis Prognosis Criteria When Disease Due to Gallstones",
-      "subtitle": "Prognosis for pancreatitis due to gallstones"
+      "subtitle": "Prognosis for pancreatitis due to gallstones",
+      "search_tags": ["prognosis for gallstone pancreatitis", "prognostic criteria for gallstone pancreatitis", "prognosis criteria for gallstone pancreatitis"]
     },
     {
       "id": "breast-cancer-recurrence-risk-after-mastectomy",
       "title": "Breast Cancer Recurrence Risk After Mastectomy",
-      "subtitle": "Breast cancer recurrence risk post-mastectomy"
+      "subtitle": "Breast cancer recurrence risk post-mastectomy",
+      "search_tags": ["breast cancer recurrence risk after mastectomy", "post mastectomy breast cancer risk", "estimate breast cancer recurrence risk", "estimate post mastectomy breast cancer risk"]
     },
     {
       "id": "pneumonia-risk-post-operative-period-non-cardiac-surgery",
       "title": "Pneumonia Risk in Post Operative Period of Non-Cardiac Surgery",
-      "subtitle": "Estimates post-op pneumonia risk"
+      "subtitle": "Estimates post-op pneumonia risk",
+      "search_tags": ["pneumonia risk in post op patients", "pneumonia risk", "pneumonia risk"]
     },
     {
       "id": "bleeding-risk-major-complication-warfarin-therapy",
       "title": "Bleeding Risk (Major Complication) on Warfarin Therapy",
-      "subtitle": "Risk of major bleeding complications for patients on warfarin"
+      "subtitle": "Risk of major bleeding complications for patients on warfarin",
+      "search_tags": ["risk of bleeding for warfarin", "risk of bleeding for coumadin", "warfarin bleeding risk index", "coumadin bleeding risk index", "bleeding risk of patients on warfarin"]
     },
     {
       "id": "bleeding-risk-index-warfarin-therapy",
       "title": "Bleeding Risk Index for Warfarin Therapy",
-      "subtitle": "Risk of bleeding based on various risk factors"
+      "subtitle": "Risk of bleeding based on various risk factors",
+      "search_tags": ["risk of bleeding for warfarin", "risk of bleeding for coumadin", "warfarin bleeding risk index", "coumadin bleeding risk index", "bleeding risk of patients on warfarin"]
     },
     {
       "id": "myelodysplastic-syndrome-international-prognostic-scoring-system",
       "title": "Myelodysplastic Syndrome International Prognostic Scoring System",
-      "subtitle": "Myelodysplastic Syndrome staging"
+      "subtitle": "Myelodysplastic Syndrome staging",
+      "search_tags": ["myelodysplastic syndrome score", "Myelodysplastic Syndrome staging", "Myelodysplastic Syndrome prognosis"]
     },
     {
       "id": "creatinine-clearance-cockcroft-gault",
       "title": "Creatinine Clearance Cockcroft Gault",
-      "subtitle": "Predicts creatinine clearance from serum creatinine"
+      "subtitle": "Predicts creatinine clearance from serum creatinine",
+      "search_tags": ["creatinine clearance", "creatinine clearance", "creatine clearance cockcroft gault", "cockcroft gault", "cockcroft gault creatinine clearance"]
     },
     {
       "id": "oxygen-content-venous-blood",
       "title": "Oxygen Content of Venous Blood",
-      "subtitle": "Calculates venous blood oxygen content"
+      "subtitle": "Calculates venous blood oxygen content",
+      "search_tags": ["o2 content in venous blood", "venous blood oxygen content", "oxygen content in venous blood", "venous blood oxygen"]
     },
     {
       "id": "dose-adjustment-body-surface-area",
       "title": "Dose Adjustment for Body Surface Area",
-      "subtitle": "Adjusted dose based on BSA"
+      "subtitle": "Adjusted dose based on BSA",
+      "search_tags": ["dose based on body surface area", "body surface area dose", "bsa dose", "bsa dosing", "dosing based on bsa"]
     },
     {
       "id": "oxygen-content-arterial-blood",
       "title": "Oxygen Content of Arterial Blood",
-      "subtitle": "Calculates arterial blood oxygen content"
+      "subtitle": "Calculates arterial blood oxygen content",
+      "search_tags": ["o2 in arterial blood", "o2 in arterial blood", "oxygen content in arterial blood", "arterial blood o2 content", "arterial blood oxygen"]
     },
     {
       "id": "estimated-blood-volume",
       "title": "Estimated Blood Volume",
-      "subtitle": "Estimated Blood volume for different patient groups"
+      "subtitle": "Estimated Blood volume for different patient groups",
+      "search_tags": ["estimated blood volume"]
     },
     {
       "id": "sodium-correction-hyperglycemia",
       "title": "Sodium Correction in Hyperglycemia",
-      "subtitle": "Calculates sodium in hyperglycemia"
+      "subtitle": "Calculates sodium in hyperglycemia",
+      "search_tags": ["sodium in hyperglycemia", "sodium correction", "sodium correction", "hyperglycemia sodium", "hyperglycemia sodium correction", "sodium correction in hyperglycemia"]
     },
     {
       "id": "sodium-deficit-hyponatremia",
       "title": "Sodium Deficit in Hyponatremia",
-      "subtitle": "Total sodium missing in hyponatremia"
+      "subtitle": "Total sodium missing in hyponatremia",
+      "search_tags": ["sodium deficit in hyponatremia", "sodium deficit", "sodium deficit", "hyponatremia", "na deficit in hyponatremia"]
     },
     {
       "id": "qt-interval-correction-ecg",
       "title": "QT Interval Correction (ECG)",
-      "subtitle": "Corrects QT interval for heart rate extremes"
+      "subtitle": "Corrects QT interval for heart rate extremes",
+      "search_tags": ["qt interval correction", "qt interval"]
     },
     {
       "id": "absolute-neutrophil-count",
       "title": "Absolute Neutrophil Count",
-      "subtitle": "Assess neutropenic fever in chemo patients"
+      "subtitle": "Assess neutropenic fever in chemo patients",
+      "search_tags": ["absolute neutrophil count", "absolute neutrophil count", "assess neutropenic fever in chemo patients", "neutropenic fever assessment"]
     },
     {
       "id": "mean-arterial-pressure",
       "title": "Mean Arterial Pressure",
-      "subtitle": "Calculates mean arterial pressure"
+      "subtitle": "Calculates mean arterial pressure",
+      "search_tags": ["map", "map", "mean arterial pressure", "mean arterial pressure"]
     },
     {
       "id": "fractional-excretion-sodium",
       "title": "Fractional Excretion of Sodium (FeNa)",
-      "subtitle": "Determine if kidney failure is due to pre-renal, intrinsic or post-renal pathology"
+      "subtitle": "Determine if kidney failure is due to pre-renal, intrinsic or post-renal pathology",
+      "search_tags": ["fractional excretion of sodium", "FeNa", "fractional excretion of Na", "fractional excretion of Na", "kidney failure", "kidney failure FeNa"]
     },
     {
       "id": "solitary-pulmonary-nodule-malignancy-risk",
       "title": "Solitary Pulmonary Nodule Malignancy Risk (Mayo Clinic)",
-      "subtitle": "Risk of malignancy in Solitary pulmonary nodules"
+      "subtitle": "Risk of malignancy in Solitary pulmonary nodules",
+      "search_tags": ["risk of malignancy in pulmonary nodules", "pulmonary nodule malignancy risk", "pulmonary nodule malignancy risk"]
     },
     {
       "id": "ideal-body-weight",
       "title": "Ideal Body Weight",
-      "subtitle": "Estimates ideal body weight for dosing"
+      "subtitle": "Estimates ideal body weight for dosing",
+      "search_tags": ["ideal body weight", "ideal body weight", "ideal body weight for dosing", "ideal body weight dosing", "ideal body weight dosing"]
     },
     {
       "id": "calcium-correction-hypoalbuminemia",
       "title": "Calcium Correction for Hypoalbuminemia",
-      "subtitle": "Corrected Calcium level for patients with hypoalbuminemia"
+      "subtitle": "Corrected Calcium level for patients with hypoalbuminemia",
+      "search_tags": ["calcium correction", "hypoalbuminemia calcium correction", "hypoalbuminemia calcium correction"]
     },
     {
       "id": "oxygen-consumption",
       "title": "Oxygen Consumption",
-      "subtitle": "Calculates oxygen consumption"
+      "subtitle": "Calculates oxygen consumption",
+      "search_tags": ["o2 consumption", "oxygen consumption", "o2 consumption", "oxygen consumption"]
     },
     {
       "id": "gold-criteria-copd",
       "title": "GOLD Criteria for COPD",
-      "subtitle": "Assess severity of COPD and provide treatment recommendations"
+      "subtitle": "Assess severity of COPD and provide treatment recommendations",
+      "search_tags": ["GOLD criteria", "GOLD criteria", "assess severity of COPD", "COPD GOLD criteria assessment", "COPD GOLD criteria"]
     },
     {
       "id": "dose-driven-iv-drip-rate-calculator",
       "title": "Dose Driven IV Drip Rate Calculator",
-      "subtitle": "Calculates IV drip rate for desired doses"
+      "subtitle": "Calculates IV drip rate for desired doses",
+      "search_tags": ["iv drip rate", "iv drip rate", "iv drip rate dose", "dose driven iv drip rate", "iv drip", "iv drip"]
     },
     {
       "id": "amoxicillin-pediatric-acute-otitis-media",
       "title": "Amoxicillin Pediatric - Acute Otitis Media",
-      "subtitle": "Drug dosage calculator"
+      "subtitle": "Drug dosage"
     },
     {
       "id": "amoxicillin-pediatric-lower-respiratory-tract-infections",
       "title": "Amoxicillin Pediatric - Lower Respiratory Tract Infections",
-      "subtitle": "Drug dosage calculator"
+      "subtitle": "Drug dosage"
     },
     {
       "id": "amoxicillin-pediatric-anthrax",
       "title": "Amoxicillin Pediatric - Anthrax",
-      "subtitle": "Drug dosage calculator"
+      "subtitle": "Drug dosage"
     },
     {
       "id": "amoxicillin-pediatric-infective-endocarditis",
       "title": "Amoxicillin Pediatric - Infective Endocarditis",
-      "subtitle": "Drug dosage calculator"
+      "subtitle": "Drug dosage"
     },
     {
       "id": "amoxicillin-pediatric-lyme-disease",
       "title": "Amoxicillin Pediatric - Lyme Disease",
-      "subtitle": "Drug dosage calculator"
+      "subtitle": "Drug dosage"
     },
     {
       "id": "amoxicillin-pediatric-renal-dosing",
       "title": "Amoxicillin Pediatric - Renal Dosing",
-      "subtitle": "Drug dosage calculator"
+      "subtitle": "Drug dosage"
     },
     {
       "id": "amoxicillin-pediatric-upper-respiratory-tract-infections",
       "title": "Amoxicillin Pediatric - Upper Respiratory Tract Infections",
-      "subtitle": "Drug dosage calculator"
+      "subtitle": "Drug dosage"
     },
     {
       "id": "metoclopramide-pediatric-dosing",
@@ -562,47 +646,56 @@
     {
       "id": "duloxetine-pediatric-dosing",
       "title": "Duloxetine Pediatric Dosing",
-      "subtitle": "Pediatric dosing for multiple indications"
+      "subtitle": "Pediatric dosing for multiple indications",
+      "search_tags": ["pediatric dose for duloxetine", "pediatric duloxetine dosage", "pediatric duloxetine dosage", "duloxetine pediatric dosing"]
     },
     {
       "id": "adrenaline-epinephrine-pediatric-dosing",
       "title": "Adrenaline/Epinephrine Pediatric Dosing",
-      "subtitle": "Pediatric dosing for multiple indications"
+      "subtitle": "Pediatric dosing for multiple indications",
+      "search_tags": ["pediatric dose for adrenaline", "pediatric epi dosage", "pediatric epi dosage", "pediatric adrenaline dosage", "adrenaline dosage for pediatric patients", "epi dosage for kids", "adrenaline dosage for kids", "epinephrine dosage for kids", "adrenaline dosage for kids"]
     },
     {
       "id": "bedside-schwartz-pediatric-gfr-calculator",
       "title": "Bedside Schwartz Pediatric GFR Calculator",
-      "subtitle": "Estimating glomerular filtration rate in infants, children, and adolescents"
+      "subtitle": "Estimating glomerular filtration rate in infants, children, and adolescents",
+      "search_tags": ["GFR for pediatric", "pediatric GFR", "pediatric GFR", "bedside schwartz pediatric GFR", "bedside schwartz"]
     },
   {
     "id": "mdrd-gfr-equation",
     "title": "MDRD GFR Equation",
-    "subtitle": "Estimates glomerular filtration rate based on creatinine and patient characteristics"
+    "subtitle": "Estimates glomerular filtration rate based on creatinine and patient characteristics",
+    "search_tags": ["GFR", "GFR", "MDRD GFR", "MDRD GFR"]
   },
   {
     "id": "drug-dosage-calculator",
     "title": "Drug Dosage Calculator",
-    "subtitle": "Calculate drug dosage based on weight"
+    "subtitle": "Calculate drug dosage based on weight",
+    "search_tags": ["drug dose", "drug dosage", "drug dosage", "drug dose", "weight based dosage", "drug dosing", "drug dosing", "pediatric drug dosage", "pediatric dosing", "pediatric drug dose"]
   },
   {
     "id": "nutrition-risk-critically-ill",
     "title": "Nutrition Risk in the Critically Ill",
-    "subtitle": "Identifies which critically ill patients can benefit from nutrition therapy"
+    "subtitle": "Identifies which critically ill patients can benefit from nutrition therapy",
+    "search_tags": ["nutrition risk in ICU patients", "ICU patient nutrition risk", "nutrition risk", "ICU nutrition risk"]
   },
   {
     "id": "sequential-organ-failure-assessment-score",
     "title": "Sequential Organ Failure Assessment (SOFA) Score",
-    "subtitle": "SOFA predicts ICU mortality based on lab results and clinical data"
+    "subtitle": "SOFA predicts ICU mortality based on lab results and clinical data",
+    "search_tags": ["SOFA", "organ failure", "assessment of organ failure", "score to assess organ failure", "organ failure assessment score", "sequential organ failure assessment"]
   },
   {
     "id": "serum-osmolarity-calculator",
     "title": "Serum Osmolarity Calculator",
-    "subtitle": "Calculates expected serum osmolarity vs measured osmolarity to detect unmeasured compounds in serum"
+    "subtitle": "Calculates expected serum osmolarity vs measured osmolarity to detect unmeasured compounds in serum",
+    "search_tags": ["serum osmolarity", "serum osmolarity", "serum osmolality", "serum osmolality"]
   },
   {
     "id": "asthma-predictive-index",
     "title": "Asthma Predictive Index",
-    "subtitle": "Determines likelihood of pediatric patients developing childhood asthma"
+    "subtitle": "Determines likelihood of pediatric patients developing childhood asthma",
+    "search_tags": ["pediatric asthma risk", "pediatric asthma risk", "pediatric asthma risk", "asthma risk"]
   }
 
 ]
