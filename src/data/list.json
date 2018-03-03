@@ -234,7 +234,7 @@
     },
     {
       "id": "ada-diabetes-risk-calculator",
-      "title": "ADA Diabetes Risk Calculator",
+      "title": "ADA Diabetes Risk",
       "subtitle": "Estimates T2D Risk",
       "search_tags": ["diabetes risk", "diabetes risk", "ada diabetes risk", "ada diabetes risk"]
     },
@@ -504,7 +504,7 @@
     },
     {
       "id": "dose-driven-iv-drip-rate-calculator",
-      "title": "Dose Driven IV Drip Rate Calculator",
+      "title": "Dose Driven IV Drip Rate",
       "subtitle": "Calculates IV drip rate for desired doses",
       "search_tags": ["iv drip rate", "iv drip rate", "iv drip rate dose", "dose driven iv drip rate", "iv drip", "iv drip"]
     },
@@ -657,7 +657,7 @@
     },
     {
       "id": "bedside-schwartz-pediatric-gfr-calculator",
-      "title": "Bedside Schwartz Pediatric GFR Calculator",
+      "title": "Bedside Schwartz Pediatric GFR",
       "subtitle": "Estimating glomerular filtration rate in infants, children, and adolescents",
       "search_tags": ["GFR for pediatric", "pediatric GFR", "pediatric GFR", "bedside schwartz pediatric GFR", "bedside schwartz"]
     },
@@ -687,7 +687,7 @@
   },
   {
     "id": "serum-osmolarity-calculator",
-    "title": "Serum Osmolarity Calculator",
+    "title": "Serum Osmolarity",
     "subtitle": "Calculates expected serum osmolarity vs measured osmolarity to detect unmeasured compounds in serum",
     "search_tags": ["serum osmolarity", "serum osmolarity", "serum osmolality", "serum osmolality"]
   },
