@@ -12,7 +12,7 @@ variables:
   S3_BUCKET_NAME: $STAGING_S3_BUCKET_NAME
   MEDICALCALCS_WEB_URI: $STAGING_MEDICALCALCS_WEB_URI
 
-Build and deploy medicalcalcs to S3 staging:
+  Build and deploy medicalcalcs:
   stage: deploy
   image: python:3.6-stretch
 
@@ -35,6 +35,10 @@ Build and deploy medicalcalcs to S3 staging:
     name: staging
     url: $MEDICALCALCS_WEB_URI
 
+  artifacts:
+    paths:
+      - build/
+
   only:
     - staging
   when: on_success
@@ -42,6 +46,8 @@ Build and deploy medicalcalcs to S3 staging:
 Test public deployment of medicalcalcs:
   stage: test
   image: alpine:3.6
+  dependencies:
+    - Build and deploy medicalcalcs
 
   before_script:
     - apk add --no-cache curl grep
