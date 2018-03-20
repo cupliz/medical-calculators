@@ -16,6 +16,10 @@ Build and deploy staging:
   stage: deploy
   image: python:3.6-stretch
 
+  variables:
+    S3_BUCKET_NAME: $STAGING_S3_BUCKET_NAME
+    MEDICALCALCS_WEB_URI: $STAGING_MEDICALCALCS_WEB_URI
+
   before_script:
     - pip install awscli
     - curl -sL https://deb.nodesource.com/setup_9.x | bash -
@@ -46,6 +50,9 @@ Build and deploy staging:
 Test staging deployment:
   stage: test
   image: alpine:3.6
+  variables:
+    MEDICALCALCS_WEB_URI: $STAGING_MEDICALCALCS_WEB_URI
+
   dependencies:
     - Build and deploy staging
 
