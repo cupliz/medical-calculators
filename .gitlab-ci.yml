@@ -9,8 +9,6 @@ services:
 
 variables:
   DOCKER_DRIVER: overlay2
-  S3_BUCKET_NAME: $STAGING_S3_BUCKET_NAME
-  MEDICALCALCS_WEB_URI: $STAGING_MEDICALCALCS_WEB_URI
 
 Build and deploy staging:
   stage: deploy
@@ -61,9 +59,10 @@ Test staging deployment:
 
   script:
     - cd build
+    - echo "MEDICALCALCS_WEB_URI is ${MEDICALCALCS_WEB_URI}"
     - find static/js -name 'main.*.js' -exec curl "${MEDICALCALCS_WEB_URI}{}" -o _main.js \;
     - cat static/js/main.*.js | sha512sum > _main.sha512
-    - cat _main.js | sha512sum --check _main.sha512
+    - cat _main.js | sha512sum -c _main.sha512
 
   only:
     - staging
