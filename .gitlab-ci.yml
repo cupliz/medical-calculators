@@ -64,5 +64,7 @@ Test staging deployment:
     - cat static/js/main.*.js | sha512sum > _main.sha512
     - cat _main.js | sha512sum -c _main.sha512
 
+  environment: staging
+
   only:
     - staging
