@@ -9,11 +9,13 @@ services:
 
 variables:
   DOCKER_DRIVER: overlay2
+  S3_BUCKET_NAME: $STAGING_S3_BUCKET_NAME
+  MEDICALCALCS_WEB_URI: $STAGING_MEDICALCALCS_WEB_URI
 
 Build and deploy medicalcalcs to S3 staging:
   stage: deploy
-
   image: python:3.6-stretch
+
   before_script:
     - pip install awscli
     - curl -sL https://deb.nodesource.com/setup_9.x | bash -
@@ -23,7 +25,7 @@ Build and deploy medicalcalcs to S3 staging:
   script:
     - npm run build
 
-    - aws s3 cp ./build s3://$S3_BUCKET_NAME/ --recursive --acl public-read
+    - aws s3 sync ./build s3://$S3_BUCKET_NAME/ --delete --acl public-read
     - export DISTRIBUTION_ID=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] | contains("medicalcalcs.staging.docbot.md")) | .Id')
     - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /index.html
 
