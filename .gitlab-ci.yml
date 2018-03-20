@@ -38,11 +38,11 @@ Test public deployment of medicalcalcs:
     - apk add --no-cache curl grep
     
   script:
-    - curl $WEB_URI | grep 'You need to enable JavaScript to run this app'
+    - curl $MEDICALCALCS_WEB_URI | grep 'You need to enable JavaScript to run this app'
     
   environment:
     name: staging
-    url: $WEB_URI
+    url: $MEDICALCALCS_WEB_URI
     
   only:
     - staging
