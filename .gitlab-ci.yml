@@ -1,7 +1,7 @@
 image: docker:latest
 
 stages:
-  - build
+  - deploy
   - test
 
 services:
@@ -11,7 +11,7 @@ variables:
   DOCKER_DRIVER: overlay2
 
 Build and deploy medicalcalcs to S3 staging:
-  stage: build
+  stage: deploy
 
   image: python:3.6-stretch
   before_script:
@@ -29,7 +29,10 @@ Build and deploy medicalcalcs to S3 staging:
 
     - aws s3 cp src/data/list.json s3://$S3_BUCKET_NAME/calculators-list.json --acl private
 
-  environment: staging
+  environment:
+    name: staging
+    url: $MEDICALCALCS_WEB_URI
+
   only:
     - staging
   when: on_success
@@ -46,10 +49,6 @@ Test public deployment of medicalcalcs:
     - find static/js -name 'main.*.js' -exec curl "${MEDICALCALCS_WEB_URI}{}" -o _main.js \;
     - cat static/js/main.*.js | sha512sum > _main.sha512
     - cat _main.js | sha512sum --check _main.sha512
-
-  environment:
-    name: staging
-    url: $MEDICALCALCS_WEB_URI
 
   only:
     - staging
