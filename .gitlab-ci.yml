@@ -17,12 +17,16 @@ Build and deploy medicalcalcs to S3 staging:
   before_script:
     - pip install awscli
     - curl -sL https://deb.nodesource.com/setup_9.x | bash -
-    - apt-get install -y nodejs
+    - apt-get install -y nodejs jq
     - npm install
 
   script:
     - npm run build
+
     - aws s3 cp ./build s3://$S3_BUCKET_NAME/ --recursive --acl public-read
+    - export DISTRIBUTION_ID=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] | contains("medicalcalcs.staging.docbot.md")) | .Id')
+    - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /index.html
+
     - aws s3 cp src/data/list.json s3://$S3_BUCKET_NAME/calculators-list.json --acl private
 
   environment: staging
@@ -33,16 +37,19 @@ Build and deploy medicalcalcs to S3 staging:
 Test public deployment of medicalcalcs:
   stage: test
   image: alpine:3.6
-  
+
   before_script:
     - apk add --no-cache curl grep
-    
+
   script:
-    - curl $MEDICALCALCS_WEB_URI | grep 'You need to enable JavaScript to run this app'
-    
+    - cd build
+    - find static/js -name 'main.*.js' -exec curl "${MEDICALCALCS_WEB_URI}{}" -o _main.js \;
+    - cat static/js/main.*.js | sha512sum > _main.sha512
+    - cat _main.js | sha512sum --check _main.sha512
+
   environment:
     name: staging
     url: $MEDICALCALCS_WEB_URI
-    
+
   only:
     - staging
