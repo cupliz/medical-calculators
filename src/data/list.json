@@ -723,6 +723,12 @@
     "title": "Asthma Predictive Index",
     "subtitle": "Determines likelihood of pediatric patients developing childhood asthma",
     "search_tags": ["pediatric asthma risk", "asthma predictive index"]
+  },
+  {
+    "id": "canadian-ct-head-injury-trauma-rule",
+    "title": "Canadian CT Head Injury/Trauma Rule",
+    "subtitle": "Clears head injury without imaging",
+    "search_tags": ["ct canadian head rule", "canadian head injury rule", "canada head rule", "canadian ct rule"]
   }
 
 ]
