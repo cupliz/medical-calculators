@@ -7,7 +7,7 @@ import { ResultCardFormulaValueSelectFragment } from '../../components/Calculato
 const unitData = {
     age: [
         { value: 1, unit: 'yrs' },
-        { value: 0.0833334, unit: 'mos' }
+        { value: 0.0833334, unit: 'mos'}
     ],
     bladderCapacity: [
         { value: 1, unit: 'mL' },
@@ -60,7 +60,6 @@ class FormulaComponent extends Component {
         let ageValue = null
         let ageUnitValue = null
 
-
         questions.map((question, index) => {
             const { calculate } = question
             if (calculate) {
@@ -78,7 +77,7 @@ class FormulaComponent extends Component {
                 <ResultCardHeader classes={classes}>
                     <ResultCardFormulaValueSelectFragment
                         classes={classes}
-                        caption='Adjusted Dose'
+                        caption='Estimated Bladder Capacity'
                         value={this.handleCalc(
                             ageValue * ageUnitValue,
                             this.state.bladderCapacitySelectValue
@@ -126,7 +125,7 @@ export const config = {
     "notes": {
         "type": "unordered-list",
         "content": [
-            "In general, the normal bladder will accomodate a predicted volume of urine based on the child's age at a low or safe detrusor pressure",
+            "In general, the normal bladder will accommodate a predicted volume of urine based on the child's age at a low or safe detrusor pressure",
             "A newborn bladder has a predicted capacity of approximately 20 to 30mL"
         ]
     },

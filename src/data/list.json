@@ -741,5 +741,11 @@
     "title": "Pediatric Bladder Capacity",
     "subtitle": "Estimates bladder capacity in children",
     "search_tags": ["child bladder capacity", "pediatric bladder capacity", "child bladder volume", "pediatric bladder volume"]
+  },
+  {
+    "id": "adult-bladder-capacity",
+    "title": "Pediatric Bladder Capacity",
+    "subtitle": "Estimates bladder capacity in children",
+    "search_tags": ["child bladder capacity", "pediatric bladder capacity", "child bladder volume", "pediatric bladder volume"]
   }
 ]
