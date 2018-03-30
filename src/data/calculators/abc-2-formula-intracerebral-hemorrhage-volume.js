@@ -41,7 +41,7 @@ class FormulaComponent extends Component {
         length,
         width,
         slices,
-        thickness
+        thickness,
         selectValue
     ) => {
         // hemVol = length * width * thickness * # slices / hemorrahge shape
@@ -85,39 +85,40 @@ class FormulaComponent extends Component {
         questions.map((question, index) => {
             const { calculate } = question
             if (calculate) {
-                if (index === 0) {
-                    shape = calculate["points"]
+              if (index === 0) {
+                shape = calculate["points"]
+              }
+              else {
+                const {input, select} = calculate
+                if (index === 1) {
+                  lengthValue = input
+                  lengthUnitValue = filterUnit(unitData.length, select)
                 }
-                else {
-                    const { input, select } = calculate
-                    if (index === 1) {
-                        lengthValue = input
-                        lengthUnitValue = filterUnit(unitData.length, select)
-                    }
-                    if (index === 2) {
-                        widthValue = input
-                        widthUnitValue = filterUnit(unitData.width, select)
-                    }
-                    if (index === 3) {
-                        slicesValue = input
-                        slicesUnitValue = filterUnit(unitData.slices, select)
-                    }
-                    if (index === 4) {
-                        thicknessValue = input
-                        thicknessUnitValue = filterUnit(unitData.thickness, select)
-                    }
+                if (index === 2) {
+                  widthValue = input
+                  widthUnitValue = filterUnit(unitData.width, select)
+                }
+                if (index === 3) {
+                  slicesValue = input
+                  slicesUnitValue = filterUnit(unitData.slices, select)
+                }
+                if (index === 4) {
+                  thicknessValue = input
+                  thicknessUnitValue = filterUnit(unitData.thickness, select)
+                }
+              }
             }
             return calculate
         })
 
-        if (shapeValue && lengthValue && widthValue && slicesValue && thicknessValue) {
+        if (shape && lengthValue && widthValue && slicesValue && thicknessValue) {
             return (
                 <ResultCardHeader classes={classes}>
                     <ResultCardFormulaValueSelectFragment
                         classes={classes}
                         caption='Estimated Hemorrhage Volume'
                         value={this.handleCalc(
-                            shapeValue,
+                            shape,
                             lengthValue * lengthUnitValue,
                             widthValue * widthUnitValue,
                             slicesValue * slicesUnitValue,
