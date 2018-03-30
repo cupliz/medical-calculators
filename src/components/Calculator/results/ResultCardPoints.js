@@ -6,7 +6,7 @@ import ResultCardPointsFragment from './ResultCardPointsFragment'
 const ResultCardPoints = ({classes, points, results, showPointsInResults}) => {
   const renderPoints = () => {
     if (showPointsInResults === false) {
-      return null
+      return <React.Fragment />
     } else {
       return <ResultCardPointsFragment classes={classes} content={points} />
     }

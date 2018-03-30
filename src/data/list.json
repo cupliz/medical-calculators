@@ -723,5 +723,29 @@
     "title": "Asthma Predictive Index",
     "subtitle": "Determines likelihood of pediatric patients developing childhood asthma",
     "search_tags": ["pediatric asthma risk", "asthma predictive index"]
+  },
+  {
+    "id": "canadian-ct-head-injury-trauma-rule",
+    "title": "Canadian CT Head Injury/Trauma Rule",
+    "subtitle": "Clears head injury without imaging",
+    "search_tags": ["ct canadian head rule", "canadian head injury rule", "canada head rule", "canadian ct rule"]
+  },
+  {
+    "id": "abc-2-formula-intracerebral-hemorrhage-volume",
+    "title": "ABC/2 Formula for Intracerebral Hemorrhage Volume",
+    "subtitle": "Predicts volume of intracranial hemorrhage from CT measurements",
+    "search_tags": ["abc/2 intracerebral hemorrhage", "abc2 intracerebral hemorrhage"]
+  },
+  {
+    "id": "pediatric-bladder-capacity",
+    "title": "Pediatric Bladder Capacity",
+    "subtitle": "Estimates bladder capacity in children",
+    "search_tags": ["child bladder capacity", "pediatric bladder capacity", "child bladder volume", "pediatric bladder volume"]
+  },
+  {
+    "id": "adult-estimated-bladder-capacity",
+    "title": "Estimated Bladder Capacity",
+    "subtitle": "Estimates bladder capacity in adults",
+    "search_tags": ["estimated bladder capacity", "adult bladder capacity", "estimation bladder capacity", "estimate bladder capacity"]
   }
 ]
