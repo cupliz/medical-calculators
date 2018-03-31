@@ -16,6 +16,13 @@ class ResultCardHeader extends Component {
   render() {
     const { classes, children } = this.props
 
+    let shortResultElement = null
+
+    React.Children.map(children, (child, i) => {
+      if (!shortResultElement && typeof child.type !== "symbol") {
+        shortResultElement = React.cloneElement(child, { short: true });
+      }
+    })
     return (
       <Card className={classes.card}>
         <CardHeader
@@ -38,7 +45,7 @@ class ResultCardHeader extends Component {
         />
         <CardContent className={classes.content}>
           <Collapse in={!this.state.expanded} timeout="auto" unmountOnExit>
-            {children[0] ? React.cloneElement(children[0], { short: true }) : React.cloneElement(children, { short: true })}
+            {shortResultElement}
           </Collapse>
           <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
             {children}
