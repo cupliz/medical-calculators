@@ -24,14 +24,14 @@ Build and deploy staging:
     - npm run build
 
     - aws s3 sync ./build s3://$S3_BUCKET_NAME/ --delete --acl public-read
-    - export DISTRIBUTION_ID=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] | contains("medicalcalcs.staging.docbot.md")) | .Id')
+    - export DISTRIBUTION_ID=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] | contains("${WEBSITE_FQDN}")) | .Id')
     - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /index.html
 
     - aws s3 cp src/data/list.json s3://$S3_BUCKET_NAME/calculators-list.json --acl private
 
   environment:
     name: staging
-    url: $MEDICALCALCS_WEB_URI
+    url: http://${WEBSITE_FQDN}
 
   artifacts:
     paths:
@@ -53,8 +53,8 @@ Test staging deployment:
 
   script:
     - cd build
-    - echo "MEDICALCALCS_WEB_URI is ${MEDICALCALCS_WEB_URI}"
-    - find static/js -name 'main.*.js' -exec curl "${MEDICALCALCS_WEB_URI}{}" -o _main.js \;
+    - echo "WEBSITE_FQDN is ${WEBSITE_FQDN}"
+    - find static/js -name 'main.*.js' -exec curl "${WEBSITE_FQDN}{}" -o _main.js \;
     - cat static/js/main.*.js | sha512sum > _main.sha512
     - cat _main.js | sha512sum -c _main.sha512
 
