@@ -54,7 +54,7 @@ Test staging deployment:
   script:
     - cd build
     - echo "MEDICALCALCS_FQDN is ${MEDICALCALCS_FQDN}"
-    - find static/js -name 'main.*.js' -exec curl "${MEDICALCALCS_FQDN}{}" -o _main.js \;
+    - find static/js -name 'main.*.js' -exec curl "https://${MEDICALCALCS_FQDN}{}" -o _main.js \;
     - cat static/js/main.*.js | sha512sum > _main.sha512
     - cat _main.js | sha512sum -c _main.sha512
 
