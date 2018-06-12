@@ -24,7 +24,7 @@ Build and deploy staging:
     - npm run build
 
     - aws s3 sync ./build s3://$S3_BUCKET_NAME/ --delete --acl public-read
-    - export DISTRIBUTION_ID=$(aws cloudfront list-distributions | jq -r '.DistributionList.Items[] | select(.Aliases.Items[] | contains("${WEBSITE_FQDN}")) | .Id')
+    - export DISTRIBUTION_ID=$(aws cloudfront list-distributions | jq -r ".DistributionList.Items[] | select(.Aliases.Items[] | contains(\"$WEBSITE_FQDN\")) | .Id")
     - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /index.html
 
     - aws s3 cp src/data/list.json s3://$S3_BUCKET_NAME/calculators-list.json --acl private
