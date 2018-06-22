@@ -8,7 +8,7 @@ import calculatorsList from './data/list'
 
 const App = () => (
   <main className='app'>
-    <DocumentTitle title='Doc Bot Calculators'>
+    <DocumentTitle title='BotMD Calculators'>
       <Switch>
         <Route
           exact
