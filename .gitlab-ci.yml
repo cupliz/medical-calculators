@@ -14,20 +14,26 @@ Build and deploy staging:
   stage: deploy
   image: python:3.6-stretch
 
-  before_script:
+  variables:
+    MEDICALCALCS_FQDN: ${STAGING_MEDICALCALCS_FQDN}
+    AWS_ACCESS_KEY_ID: ${STAGING_AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY: ${STAGING_AWS_SECRET_ACCESS_KEY}
+    S3_BUCKET_NAME: ${STAGING_S3_BUCKET_NAME}
+
+  before_script: &build_before
     - pip install awscli
     - curl -sL https://deb.nodesource.com/setup_9.x | bash -
     - apt-get install -y nodejs jq
     - npm install
 
-  script:
+  script: &build_script
     - npm run build
 
-    - aws s3 sync ./build s3://$S3_BUCKET_NAME/ --delete --acl public-read
+    - aws s3 sync ./build s3://${S3_BUCKET_NAME}/ --delete --acl public-read
     - export DISTRIBUTION_ID=$(aws cloudfront list-distributions | jq -r ".DistributionList.Items[] | select(.Aliases.Items[] | contains(\"$MEDICALCALCS_FQDN\")) | .Id")
     - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /index.html
 
-    - aws s3 cp src/data/list.json s3://$S3_BUCKET_NAME/calculators-list.json --acl private
+    - aws s3 cp src/data/list.json s3://${S3_BUCKET_NAME}/calculators-list.json --acl private
 
   environment:
     name: staging
@@ -40,25 +46,67 @@ Build and deploy staging:
   only:
     - staging
   when: on_success
+#end Build
+
+Build and deploy production:
+  stage: deploy
+  image: python:3.6-stretch
+
+  variables:
+    MEDICALCALCS_FQDN: ${PRODUCTION_MEDICALCALCS_FQDN}
+    AWS_ACCESS_KEY_ID: ${PRODUCTION_AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY: ${PRODUCTION_AWS_SECRET_ACCESS_KEY}
+    S3_BUCKET_NAME: ${PRODUCTION_S3_BUCKET_NAME}
+
+  before_script: *build_before
+
+  script: *build_script
+
+  environment:
+    name: production
+    url: https://${MEDICALCALCS_FQDN}
+
+  artifacts:
+    paths:
+      - build/
+
+  only:
+    - production
+  when: on_success
+#end Build
 
 Test staging deployment:
   stage: test
   image: alpine:3.6
 
-  dependencies:
-    - Build and deploy staging
+  variables:
+    MEDICALCALCS_FQDN: ${STAGING_MEDICALCALCS_FQDN}
 
-  before_script:
+  before_script: &test_before
     - apk add --no-cache curl grep
 
-  script:
+  script: &test_script
     - cd build
     - echo "MEDICALCALCS_FQDN is ${MEDICALCALCS_FQDN}"
     - find static/js -name 'main.*.js' -exec curl "https://${MEDICALCALCS_FQDN}/{}" -o _main.js \;
     - cat static/js/main.*.js | sha512sum > _main.sha512
     - cat _main.js | sha512sum -c _main.sha512
 
-  environment: staging
-
   only:
     - staging
+#end Test
+
+Test production deployment:
+  stage: test
+  image: alpine:3.6
+
+  variables:
+    MEDICALCALCS_FQDN: ${PRODUCTION_MEDICALCALCS_FQDN}
+
+  before_script: *test_before
+
+  script: *test_script
+
+  only:
+    - production
+#end Test
