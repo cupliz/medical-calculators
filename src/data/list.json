@@ -747,5 +747,11 @@
     "title": "Estimated Bladder Capacity",
     "subtitle": "Estimates bladder capacity in adults",
     "search_tags": ["estimated bladder capacity", "adult bladder capacity", "estimation bladder capacity", "estimate bladder capacity"]
+  },
+  {
+    "id": "acr-ti-rads",
+    "title": "ACR Thyroid Imaging Reporting and Data System",
+    "subtitle": "ACR thyroid imaging reporting and data system",
+    "search_tags": ["thyroid imaging reporting"]
   }
 ]
