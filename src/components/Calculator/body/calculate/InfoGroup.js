@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
-import Typography from 'material-ui/Typography'
+import Typography from '@material-ui/core/Typography'
 
 const styles = theme => ({
   infoGroup: {

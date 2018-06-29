@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import Collapse from 'material-ui/transitions/Collapse';
-import Card, { CardHeader, CardContent } from 'material-ui/Card'
-import IconButton from 'material-ui/IconButton'
-import ExpandMoreIcon from 'material-ui-icons/ExpandMore'
-import Typography from 'material-ui/Typography'
+import Collapse from '@material-ui/core/Collapse';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import Card from '@material-ui/core/Card';
+import IconButton from '@material-ui/core/IconButton'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Typography from '@material-ui/core/Typography'
 
 class ResultCardHeader extends Component {
   state = {

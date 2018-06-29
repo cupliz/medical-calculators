@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
-import MenuItem from 'material-ui/Menu/MenuItem'
+import MenuItem from '@material-ui/core/MenuItem';
 import Decimal from '../../components/Decimal/Decimal'
 import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 //"values": "mmHg", "psi", "atm", "Pa", "torr"

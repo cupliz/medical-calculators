@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Typography from 'material-ui/Typography'
+import Typography from '@material-ui/core/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import { ResultCardFormulaValueFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Typography from 'material-ui/Typography'
-import TextField from 'material-ui/TextField'
+import Typography from '@material-ui/core/Typography'
+import TextField from '@material-ui/core/TextField'
 
 export const ResultCardFormulaValueFragment = props => {
   const { classes, caption, values, short } = props

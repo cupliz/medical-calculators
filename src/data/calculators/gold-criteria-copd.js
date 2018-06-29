@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 
 /*const getCalculateGroupPoints = calculate => {
