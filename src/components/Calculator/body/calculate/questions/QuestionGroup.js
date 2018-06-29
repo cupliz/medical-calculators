@@ -31,7 +31,7 @@ const renderQuestionFields = (data, group, showPoints) => {
   if (Array.isArray(data)) {
     return data.map(question => {
       if (question.points) {
-        return <QuestionField key={question.label} group={group} showPoints={showPoints} {...question} />
+        return <QuestionField key={question.label || question.options} group={group} showPoints={showPoints} {...question} />
       } else if (question.values) {
         return <QuestionField key={question.placeholder} group={group} showPoints={showPoints} {...question} />
       } else {
