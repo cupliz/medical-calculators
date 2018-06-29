@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import MenuItem from 'material-ui/Menu/MenuItem'
-import TextField from 'material-ui/TextField'
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField'
 import { typePickInputSelect } from '../../../../../store/modules/calculator'
 import { connect } from 'react-redux'
 

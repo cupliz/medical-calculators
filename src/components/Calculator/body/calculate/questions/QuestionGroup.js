@@ -1,6 +1,7 @@
 import React from 'react'
-import { FormLabel, FormControl } from 'material-ui/Form'
-import { withStyles } from 'material-ui/styles'
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControl from '@material-ui/core/FormControl';
+import { withStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import QuestionField from './QuestionField'
 

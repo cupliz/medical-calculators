@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import SwipeableViews from 'react-swipeable-views'
-import AppBar from 'material-ui/AppBar'
-import Tabs, { Tab } from 'material-ui/Tabs'
+import AppBar from '@material-ui/core/AppBar'
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 import CalculateContainer from './calculate/CalculateContainer'
 import ReferencesContainer from './references/ReferencesContainer'
 
@@ -37,6 +38,7 @@ const styles = theme => ({
     backgroundColor: '#fff'
   },
   tabSelected: { color: '#000' },
+  tabInactive: { color: 'rgba(0, 0, 0, 0.54)' },
   labelContainer: { textTransform: 'capitalize' },
   label: { fontSize: 17 }
 })
@@ -68,7 +70,7 @@ class CalculatorBody extends Component {
             <Tab
               label='Calculate'
               classes={{
-                rootPrimarySelected: classes.tabSelected,
+                textColorPrimary: this.state.tabIndex === 0 ? classes.tabSelected : classes.tabInactive,
                 labelContainer: classes.labelContainer,
                 label: classes.label
               }}
@@ -76,7 +78,7 @@ class CalculatorBody extends Component {
             <Tab
               label='References'
               classes={{
-                rootPrimarySelected: classes.tabSelected,
+                textColorPrimary: this.state.tabIndex === 1 ? classes.tabSelected : classes.tabInactive,
                 labelContainer: classes.labelContainer,
                 label: classes.label
               }}
