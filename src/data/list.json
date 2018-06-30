@@ -750,8 +750,8 @@
   },
   {
     "id": "acr-ti-rads",
-    "title": "ACR Thyroid Imaging Reporting and Data System",
-    "subtitle": "ACR thyroid imaging reporting and data system",
-    "search_tags": ["thyroid imaging reporting"]
+    "title": "ACR TI-RADS",
+    "subtitle": "Informs which thyroid nodules warrant biopsy",
+    "search_tags": ["ti-rads calculator", "tirads calculator", "acr ti-rads", "ti-rads", "tirads", "acr tirads"]
   }
 ]
