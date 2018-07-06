@@ -752,6 +752,12 @@
     "id": "acr-ti-rads",
     "title": "ACR TI-RADS",
     "subtitle": "Informs which thyroid nodules warrant biopsy",
-    "search_tags": ["ti-rads calculator", "tirads calculator", "acr ti-rads", "ti-rads", "tirads", "acr tirads"]
+    "search_tags": ["ti-rads", "tirads", "acr ti-rads", "ti-rads", "tirads", "acr tirads"]
+  },
+  {
+    "id": "transtubular-potassium-gradient",
+    "title": "Transtubular Potassium Gradient",
+    "subtitle": "Index that reflects conservation of potassium",
+    "search_tags": ["transtubular potassium gradient", "ttkg", "transtubular potassium gradient ccd", "transtubular k gradient"]
   }
 ]
