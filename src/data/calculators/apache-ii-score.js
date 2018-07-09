@@ -34,8 +34,8 @@ const unitData = {
         { value: 1, unit: 'mEq/L' }
     ],
     creatinine: [
-        { value: 1, unit: 'µmol/L' },
-        { value: 88.4, unit: 'mg/dL' }
+        { value: 1, unit: 'mg/dL' },
+        { value: 0.011312217194570135, unit: 'µmol/L' }
     ],
     hematocrit: [
         { value: 1, unit: '%' }
@@ -82,14 +82,14 @@ class FormulaComponent extends Component {
         // apacheII =  Sum of all the points https://www.mdcalc.com/apache-ii-score#evidence
         // GCS points = GCS Score - 15
         const ageScore = age <= 44 ? 0 : age <= 54 ? 2 : age <= 64 ? 3 : age <= 74 ? 5 : 6
-        const tempScore = temp <= 29.9 ? 4 : temp <= 31.9 ? 3 : temp <= 33.9 ? 2 : temp <= 35.9 ? 1 : temp <= 38.4 ? 0 : temp <= 38.9 ? 1 : temp <= 40.9 ? 3 : 4
-        const meanArtPScore = meanArtP <= 49 ? 4 : meanArtP <= 69 ? 2 : meanArtP <= 109 ? 0 : meanArtP <= 129 ? 2 : meanArtP <= 159 ? 3 : 4
+        const tempScore = temp < 30 ? 4 : temp <= 31.9 ? 3 : temp <= 33.9 ? 2 : temp <= 35.9 ? 1 : temp <= 38.4 ? 0 : temp <= 38.9 ? 1 : temp <= 40.9 ? 3 : 4
+        const meanArtPScore = meanArtP < 50 ? 4 : meanArtP <= 69 ? 2 : meanArtP <= 109 ? 0 : meanArtP <= 129 ? 2 : meanArtP <= 159 ? 3 : 4
         const pHScore = pH < 7.15 ? 4 : pH <= 7.24 ? 3 : pH <= 7.32 ? 2 : pH <= 7.49 ? 0 : pH <= 7.59 ? 1 : pH <= 7.69 ? 3 : 4
-        const heartRateScote = heartRate <= 39 ? 4 : heartRate <= 54 ? 3 : heartRate <= 69 ? 2 : heartRate <= 109 ? 0 : heartRate <= 139 ? 2 : heartRate <= 179 ? 3 : 4
-        const respRateScore = respRate <= 5 ? 4 : respRate <= 9 ? 2 : respRate <= 11 ? 1 : respRate <= 24 ? 0 : respRate <= 34 ? 1 : respRate <= 49 ? 3 : 4
-        const sodiumScore = sodium <= 110 ? 4 : sodium <= 119 ? 3 : sodium <= 129 ? 2 : sodium <= 149 ? 0 : sodium <= 154 ? 1 : sodium <= 159 ? 2 : sodium <= 179 ? 3 : 4
+        const heartRateScote = heartRate < 40 ? 4 : heartRate <= 54 ? 3 : heartRate <= 69 ? 2 : heartRate <= 109 ? 0 : heartRate <= 139 ? 2 : heartRate <= 179 ? 3 : 4
+        const respRateScore = respRate < 6 ? 4 : respRate <= 9 ? 2 : respRate <= 11 ? 1 : respRate <= 24 ? 0 : respRate <= 34 ? 1 : respRate <= 49 ? 3 : 4
+        const sodiumScore = sodium < 111 ? 4 : sodium <= 119 ? 3 : sodium <= 129 ? 2 : sodium <= 149 ? 0 : sodium <= 154 ? 1 : sodium <= 159 ? 2 : sodium <= 179 ? 3 : 4
         const potassiumScore = potassium < 2.5 ? 4 : potassium <= 2.9 ? 2 : potassium <= 3.4 ? 1 : potassium <= 5.4 ? 0 : potassium <= 5.9 ? 1 : potassium <= 6.9 ? 3 : 4
-        const creatinineScore = creatinine < 0.6 ? 2 : creatinine <= 1.4 ? 0 : creatinine <= 1.9 && raf ? 4 : creatinine <= 1.9 ? 2 : creatinine <= 3.4 && raf ? 6 : creatinine <= 3.4 ? 3 : creatinine > 3.5 && raf ? 8 : 4
+        const creatinineScore = creatinine < 0.6 ? 2 : creatinine <= 1.4 ? 0 : creatinine <= 1.9 && raf ? 4 : creatinine <= 1.9 ? 2 : creatinine <= 3.4 && raf ? 6 : creatinine <= 3.4 ? 3 : creatinine > 3.4 && raf ? 8 : 4
         const hematocritScore = hematocrit < 20 ? 4 : hematocrit <= 29.9 ? 2 : hematocrit <= 45.9 ? 0 : hematocrit <= 49.9 ? 1 : hematocrit <= 59.9 ? 2 : 4
         const wbcScore = wbc < 1 ? 4 : wbc <= 2.9 ? 2 : wbc <= 14.9 ? 0 : wbc <= 19.9 ? 1 : wbc <= 39.9 ? 2 : 4
         const gcsScore = 15 - gcs;
@@ -221,11 +221,11 @@ export const config = {
     "type": "formula",
     "questions": [
         {
-            "group": "History of severe organ failure or immunocompromise",
+            "group": "History of severe organ failure or immunocompromised?",
             "data": [
                 {
                     "type": "radio",
-                    "options": "Yes (+ s/p emergency surgery) | Yes (+ s/p elective surgery) | Yes (but not post-op) | No",
+                    "options": "Yes (Emergency Post-Op) | Yes (Elective Post-Op) | Yes, and non-operative | No",
                     "points": "5/2/5/0"
                 }
             ]
@@ -241,7 +241,7 @@ export const config = {
             ]
         },
         {
-            "group": "Temperature",
+            "group": "Rectal Temperature",
             "data": [
                 {
                     "type": "input/select",
@@ -261,7 +261,7 @@ export const config = {
             ]
         },
         {
-            "group": "pH",
+            "group": "Arterial pH",
             "data": [
                 {
                     "type": "input/select",
@@ -291,7 +291,7 @@ export const config = {
             ]
         },
         {
-            "group": "Sodium",
+            "group": "Serum Sodium",
             "data": [
                 {
                     "type": "input/select",
@@ -301,7 +301,7 @@ export const config = {
             ]
         },
         {
-            "group": "Potassium",
+            "group": "Serum Potassium",
             "data": [
                 {
                     "type": "input/select",
@@ -322,12 +322,12 @@ export const config = {
             ]
         },
         {
-            "group": "Creatinine",
+            "group": "Serum Creatinine",
             "data": [
                 {
                     "type": "input/select",
                     "placeholder": "Enter Creatinine",
-                    "values": ["µmol/L", "mg/dL"]
+                    "values": ["mg/dL", "µmol/L"]
                 }
             ]
         },
@@ -362,23 +362,32 @@ export const config = {
             ]
         },
         {
-            "group": "A-aPO2(FiO2>50%) or PaO2(FiO2<50%)",
+            "group": "A-a gradient(if FiO2>50%) or PaO2(if FiO2<50%)",
             "data": [
                 {
                     "type": "radio",
-                    "options": ">= 500 | 350-499 | 200-349 | < 200 or PaO2 > 70 | PaO2 61-70 | PaO2 55-60 | PaO2 < 55",
+                    "options": "A-a gradient >= 500 | A-a gradient 350-499 |  A-a gradient 200-349 | A-a gradient < 200 or PaO2 > 70 | PaO2 = 61-70 | PaO2 = 55-60 | PaO2 < 55",
                     "points": "4/3/2/0/1/3/4"
                 }
             ]
         }
     ],
-    "results": {},
+    "results": {
+        "0 - 4": ["4% non-op mortality rate, 1% post-op mortality rate"],
+        "5 - 9": ["8% non-op mortality rate, 3% post-op mortality rate"],
+        "10 - 14": ["15% non-op mortality rate, 7% post-op mortality rate"],
+        "15 - 19": ["24% non-op mortality rate, 12% post-op mortality rate"],
+        "20 - 24": ["40% non-op mortality rate, 30% post-op mortality rate"],
+        "25 - 29": ["55% non-op mortality rate, 35% post-op mortality rate"],
+        "30 - 34": ["Approx 73% on both non-op and post-op mortality rates"],
+        "35 - 100": ["85% non-op mortality rate, 88% post-op mortality rate"],
+    },
     "notes": {
         "type": "unordered-list",
         "content": [
+            "APACHE II calculator provides an estimate of ICU mortality based on a number of lab values and patient signs",
             "For the APACHE II score to be correct, a value must be selected for every variable.",
-            "Chronic Dx includes biopsy proven cirrhosis and documented portal hypertension; past upper GI bleeding attributed to portal hypertension; prior hepatic failure; prior hepatic encephalopathy; NYHA class IV; chronic restrictive, obstructive, or vascular lung disease resulting in severe exercise restriction; documented hypoxemia or hypercapnia; secondary polycythemia; severe pulmonary hypertension (>40 mmHg); ventilator dependence; chronic hemodialysis.",
-            "Chronic Dx also includes immunosuppression from chemotherapy, radiation therapy, long-term or recent high-dose steroids, immunodeficiency (eg, leukemia, lymphoma, AIDS)."
+            "Data should be used from the first 24 hours in the ICU and the worst value (i.e. furthest from baseline/normal) should be used"
         ]
     },
     "references": {
@@ -390,7 +399,7 @@ export const config = {
     "formula": {
         "type": "paragraph",
         "content": [
-            "Addition of the selected points."
+            "Addition of the selected points; *Note that points for GCS are calculated by 15 - GCS Score"
         ]
     }
 }
