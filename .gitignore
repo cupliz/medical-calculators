@@ -32,5 +32,3 @@ chrome-user-data
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-src/data/calculators/expected-spleen-size.js
-src/data/calculators/apache-ii-score.js
