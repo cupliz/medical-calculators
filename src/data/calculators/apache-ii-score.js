@@ -182,7 +182,7 @@ class FormulaComponent extends Component {
             return calculate
         })
 
-        if (history && ageValue && tempValue && meanArtPValue && pHValue && heartRateValue && respRateValue && sodiumValue && potassiumValue && raf && creatinineValue && hematocritValue && wbcValue && gcsValue && aaGradOrPaO2) {
+        if (history !== null && ageValue && tempValue && meanArtPValue && pHValue && heartRateValue && respRateValue && sodiumValue && potassiumValue && raf!== null && creatinineValue && hematocritValue && wbcValue && gcsValue && aaGradOrPaO2!== null) {
             return (
                 <ResultCardHeader classes={classes}>
                     <ResultCardFormulaValueFragment
