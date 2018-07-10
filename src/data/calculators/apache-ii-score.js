@@ -94,7 +94,7 @@ class FormulaComponent extends Component {
         const wbcScore = wbc < 1 ? 4 : wbc <= 2.9 ? 2 : wbc <= 14.9 ? 0 : wbc <= 19.9 ? 1 : wbc <= 39.9 ? 2 : 4
         const gcsScore = 15 - gcs;
         const aaGradOrPaO2Score = aaGradOrPaO2
-        const apacheII = ageScore + tempScore + meanArtPScore + pHScore + heartRateScote + respRateScore + sodiumScore + potassiumScore + creatinineScore + hematocritScore + wbcScore + gcsScore + aaGradOrPaO2Score;
+        const apacheII = history + ageScore + tempScore + meanArtPScore + pHScore + heartRateScote + respRateScore + sodiumScore + potassiumScore + creatinineScore + hematocritScore + wbcScore + gcsScore + aaGradOrPaO2Score;
         return apacheII;
     }
 
@@ -191,7 +191,7 @@ class FormulaComponent extends Component {
                         values={[this.handleCalc(
                             history,
                             ageValue,
-                            tempValue * tempUnitValue,
+                            tempValue,
                             meanArtPValue,
                             pHValue,
                             heartRateValue,
