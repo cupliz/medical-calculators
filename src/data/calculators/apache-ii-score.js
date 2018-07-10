@@ -76,8 +76,7 @@ class FormulaComponent extends Component {
         hematocrit,
         wbc,
         gcs,
-        aaGradOrPaO2,
-        selectValue
+        aaGradOrPaO2
     ) => {
         // apacheII =  Sum of all the points https://www.mdcalc.com/apache-ii-score#evidence
         // GCS points = GCS Score - 15
@@ -140,7 +139,6 @@ class FormulaComponent extends Component {
         let history = null
         let ageValue = null
         let tempValue = null
-        let tempUnitValue = null
         let meanArtPValue = null
         let pHValue = null
         let heartRateValue = null
