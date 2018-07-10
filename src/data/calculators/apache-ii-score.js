@@ -306,7 +306,7 @@ export const config = {
                 {
                     "type": "input/select",
                     "placeholder": "Enter pH",
-                    "values": ["points"]
+                    "values": ["-"]
                 }
             ]
         },
