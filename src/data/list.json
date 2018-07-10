@@ -765,5 +765,11 @@
     "title": "APACHE II Score",
     "subtitle": "Estimate of ICU mortality ",
     "search_tags": ["apache", "apache II score", "apache II", "apache score"]
+  },
+  {
+    "id": "adult-maintenance-fluid",
+    "title": "Adult Maintenance Fluid Calculator",
+    "subtitle": "Calculates maintenance fluid requirements by weight",
+    "search_tags": ["adult maintenance fluids", "maintenance fluids", "adult maintenance fluid", "maintenance fluid"]
   }
 ]
