@@ -759,5 +759,11 @@
     "title": "Transtubular Potassium Gradient",
     "subtitle": "Index that reflects conservation of potassium",
     "search_tags": ["transtubular potassium gradient", "ttkg", "transtubular potassium gradient ccd", "transtubular k gradient"]
+  },
+  {
+    "id": "apache-ii-score",
+    "title": "APACHE II Score",
+    "subtitle": "Estimate of ICU mortality ",
+    "search_tags": ["apache", "apache II score", "apache II", "apache score"]
   }
 ]
