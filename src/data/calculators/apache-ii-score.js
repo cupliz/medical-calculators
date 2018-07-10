@@ -98,6 +98,40 @@ class FormulaComponent extends Component {
         return apacheII;
     }
 
+    handleResults = results => {
+        let postop, nonop
+        if (results <= 4) {
+            nonop = 4
+            postop = 1
+        } else if (results <= 9) {
+            nonop = 8
+            postop = 3
+        } else if (results <= 14) {
+            nonop = 15
+            postop = 7
+        } else if (results <= 19) {
+            nonop = 24
+            postop = 12
+        } else if (results <= 24) {
+            nonop = 40
+            postop = 30
+        } else if (results <= 29) {
+            nonop = 55
+            postop = 35
+        } else if (results <= 34) {
+            nonop = 73
+            postop = 73
+        } else if (results <= 100) {
+            nonop = 85
+            postop = 88
+        }
+        if (nonop !== postop) {
+            return `${nonop}% non-op mortality rate, ${postop}% post-op mortality rate`
+        } else {
+            return `Approx ${nonop}% on both non-op and post-op mortality rates`
+        }
+    };
+
     render () {
         const { classes, data } = this.props
         const { questions } = data
@@ -183,28 +217,34 @@ class FormulaComponent extends Component {
         })
 
         if (history !== null && ageValue && tempValue && meanArtPValue && pHValue && heartRateValue && respRateValue && sodiumValue && potassiumValue && raf!== null && creatinineValue && hematocritValue && wbcValue && gcsValue && aaGradOrPaO2!== null) {
+            const results = this.handleCalc(
+                history,
+                ageValue,
+                tempValue,
+                meanArtPValue,
+                pHValue,
+                heartRateValue,
+                respRateValue,
+                sodiumValue * sodiumUnitValue,
+                potassiumValue * potassiumUnitValue,
+                raf,
+                creatinineValue * creatinineUnitValue,
+                hematocritValue,
+                wbcValue * wbcUnitValue,
+                gcsValue,
+                aaGradOrPaO2
+            );
             return (
                 <ResultCardHeader classes={classes}>
                     <ResultCardFormulaValueFragment
                         classes={classes}
-                        caption='APACHE II Score'
-                        values={[this.handleCalc(
-                            history,
-                            ageValue,
-                            tempValue,
-                            meanArtPValue,
-                            pHValue,
-                            heartRateValue,
-                            respRateValue,
-                            sodiumValue * sodiumUnitValue,
-                            potassiumValue * potassiumUnitValue,
-                            raf,
-                            creatinineValue * creatinineUnitValue,
-                            hematocritValue,
-                            wbcValue * wbcUnitValue,
-                            gcsValue,
-                            aaGradOrPaO2
-                        )]}
+                        caption="APACHE II Score"
+                        values={[results]}
+                    />
+                    <ResultCardFormulaValueFragment
+                        classes={classes}
+                        caption=""
+                        values={[this.handleResults(results)]}
                     />
                 </ResultCardHeader>
             )
