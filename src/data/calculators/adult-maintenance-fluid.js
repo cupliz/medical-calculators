@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ResultCardHeader from '../../components/Calculator/results/ResultCardHeader'
 import MenuItem from '@material-ui/core/MenuItem';
 import Decimal from '../../components/Decimal/Decimal'
-import { ResultCardFormulaValueFragment, ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
+import { ResultCardFormulaValueSelectFragment } from '../../components/Calculator/results/ResultCardFormulaFragments'
 
 const unitData = {
     weight: [{ value: 1, unit: 'kg' }, { value: 0.45359237, unit: 'lb' }],
