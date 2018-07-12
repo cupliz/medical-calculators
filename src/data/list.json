@@ -771,5 +771,11 @@
     "title": "Adult Maintenance Fluid Calculator",
     "subtitle": "Calculates maintenance fluid requirements by weight",
     "search_tags": ["adult maintenance fluids", "maintenance fluids", "adult maintenance fluid", "maintenance fluid"]
+  },
+  {
+    "id": "sgarbossa-criteria-mi",
+    "title": "Sgarbossa Criteria for MI in Left Bundle Branch Block (LBBB)",
+    "subtitle": "Criteria to diagnose acute myocardial infarction in patients with LBBB",
+    "search_tags": ["sgarbossa criteria", "sgarbossa", "sgarbossa's criteria", "sgarbossa lbbb"]
   }
 ]
