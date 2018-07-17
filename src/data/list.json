@@ -783,5 +783,11 @@
     "title": "Body Surface Area (Children)",
     "subtitle": "Estimates the surface area of a child's body based on body weight and height",
     "search_tags": []
+  },
+  {
+    "id": "bun-calculator",
+    "title": "BUN Calculator",
+    "subtitle": "Used in the differential diagnosis of Acute Renal Failure",
+    "search_tags": []
   }
 ]
