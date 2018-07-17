@@ -779,6 +779,12 @@
     "search_tags": ["sgarbossa criteria", "sgarbossa", "sgarbossa's criteria", "sgarbossa lbbb"]
   },
   {
+    "id": "body-surface-area-children",
+    "title": "Body Surface Area (Children)",
+    "subtitle": "Estimates the surface area of a child's body based on body weight and height",
+    "search_tags": []
+  },
+  {
     "id": "fractional-excretion-of-urea",
     "title": "Fractional Excretion of Urea (FEUrea)",
     "subtitle": "Determines the cause of renal failure. Similar to the FENa, but can be used on patients on diuretics.",
