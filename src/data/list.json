@@ -783,5 +783,11 @@
     "title": "Body Surface Area (Children)",
     "subtitle": "Estimates the surface area of a child's body based on body weight and height",
     "search_tags": []
+  },
+  {
+    "id": "alvarado-score-for-appendicitis",
+    "title": "Alvarado Score for Acute Appendicitis",
+    "subtitle": "Determines the likelihood of appendicitis based on symptoms, signs, and lab data",
+    "search_tags": []
   }
 ]
