@@ -789,5 +789,11 @@
     "title": "BUN Calculator",
     "subtitle": "Used in the differential diagnosis of Acute Renal Failure",
     "search_tags": []
+  },
+  {
+    "id": "koos-calculator",
+    "title": "KOOS Calculator",
+    "subtitle": "",
+    "search_tags": []
   }
 ]
