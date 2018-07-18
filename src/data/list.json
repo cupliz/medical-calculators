@@ -785,6 +785,18 @@
     "search_tags": []
   },
   {
+    "id": "bun-calculator",
+    "title": "BUN Calculator",
+    "subtitle": "Used in the differential diagnosis of Acute Renal Failure",
+    "search_tags": []
+  },
+  {
+    "id": "koos-calculator",
+    "title": "KOOS Calculator",
+    "subtitle": "",
+    "search_tags": []
+  },
+  {
     "id": "alvarado-score-for-appendicitis",
     "title": "Alvarado Score for Acute Appendicitis",
     "subtitle": "Determines the likelihood of appendicitis based on symptoms, signs, and lab data",
