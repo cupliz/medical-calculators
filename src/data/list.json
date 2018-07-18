@@ -782,30 +782,30 @@
     "id": "body-surface-area-children",
     "title": "Body Surface Area (Children)",
     "subtitle": "Estimates the surface area of a child's body based on body weight and height",
-    "search_tags": []
+    "search_tags": ["bsa pediatric", "bsa child", "body surface area pediatric", "body surface area child"]
   },
   {
     "id": "bun-calculator",
     "title": "BUN Calculator",
     "subtitle": "Used in the differential diagnosis of Acute Renal Failure",
-    "search_tags": []
+    "search_tags": ["BUN", "blood urea nitrogen"]
   },
   {
     "id": "koos-calculator",
     "title": "KOOS Calculator",
     "subtitle": "",
-    "search_tags": []
+    "search_tags": ["koos", "knee injury and osteoarthritis outcome score", "knee injury osteoarthritis score"]
   },
   {
     "id": "alvarado-score-for-appendicitis",
     "title": "Alvarado Score for Acute Appendicitis",
     "subtitle": "Determines the likelihood of appendicitis based on symptoms, signs, and lab data",
-    "search_tags": []
+    "search_tags": ["alvarado score", "alvarado", "acute appendicitis score", "alvarado appendicitis"]
   },
   {
     "id": "fractional-excretion-of-urea",
     "title": "Fractional Excretion of Urea (FEUrea)",
     "subtitle": "Determines the cause of renal failure. Similar to the FENa, but can be used on patients on diuretics.",
-    "search_tags": []
+    "search_tags": ["feurea", "fe urea", "fractional excretion of urea", "fractional excretion urea"]
   }
 ]
