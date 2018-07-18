@@ -795,5 +795,11 @@
     "title": "KOOS Calculator",
     "subtitle": "",
     "search_tags": []
+  },
+  {
+    "id": "alvarado-score-for-appendicitis",
+    "title": "Alvarado Score for Acute Appendicitis",
+    "subtitle": "Determines the likelihood of appendicitis based on symptoms, signs, and lab data",
+    "search_tags": []
   }
 ]
