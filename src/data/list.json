@@ -783,5 +783,11 @@
     "title": "Body Surface Area (Children)",
     "subtitle": "Estimates the surface area of a child's body based on body weight and height",
     "search_tags": []
+  },
+  {
+    "id": "koos-calculator",
+    "title": "KOOS Calculator",
+    "subtitle": "",
+    "search_tags": []
   }
 ]
