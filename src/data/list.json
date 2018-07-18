@@ -801,5 +801,11 @@
     "title": "Alvarado Score for Acute Appendicitis",
     "subtitle": "Determines the likelihood of appendicitis based on symptoms, signs, and lab data",
     "search_tags": []
+  },
+  {
+    "id": "fractional-excretion-of-urea",
+    "title": "Fractional Excretion of Urea (FEUrea)",
+    "subtitle": "Determines the cause of renal failure. Similar to the FENa, but can be used on patients on diuretics.",
+    "search_tags": []
   }
 ]
