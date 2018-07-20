@@ -1,6 +1,7 @@
 image: docker:latest
 
 stages:
+  - build
   - deploy
   - test
 
@@ -45,6 +46,23 @@ Build and deploy staging:
 
   only:
     - staging
+  when: on_success
+#end Build
+
+Build only:
+  stage: build
+  image: python:3.6-stretch
+
+  before_script: *build_before
+
+  script:
+    - npm run build
+
+  except:
+    - staging
+    - production
+    - master
+
   when: on_success
 #end Build
 
