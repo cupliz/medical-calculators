@@ -4,8 +4,6 @@ import { ResultCardFormulaValueFragment } from '../../components/Calculator/resu
 
 const maxScore = [28, 36, 68, 20, 16]
 
-const filterUnit = (arr, select) =>
-    arr.filter(item => (item.unit === select ? item.value : null))[0].value
 
 class FormulaComponent extends Component {
     state = {
@@ -23,7 +21,7 @@ class FormulaComponent extends Component {
         
         for (i=0; i<answer.length; i++){
           // Symptoms && Stiffness
-          if(i < 7 && (answer[i] || answer[i]==0)){
+          if(i < 7 && (answer[i] || answer[i]===0)){
             scores[0] += answer[i];
             scores[1] += answer[i];
             answerCount++

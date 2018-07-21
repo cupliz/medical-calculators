@@ -90,7 +90,7 @@ class FormulaComponent extends Component {
                 <ResultCardHeader classes={classes}>
                     <ResultCardFormulaValueSelectFragment
                         classes={classes}
-                        caption='BSA(m²) '
+                        caption='BSA'
                         value={this.handleCalc(
                             heightValue * heightUnitValue,
                             weightValue * weightUnitValue,
