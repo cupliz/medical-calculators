@@ -4,13 +4,7 @@ import { ResultCardFormulaValueFragment } from '../../components/Calculator/resu
 
 const maxScore = [28, 36, 68, 20, 16]
 
-
 class FormulaComponent extends Component {
-    state = {
-        apacheIISelectUnit: 'points',
-        apacheIISelectValue: 1
-    }
-
     handleCalc = (
         answer
     ) => {
@@ -18,7 +12,7 @@ class FormulaComponent extends Component {
         let scores = [0,0,0,0,0,0]
         let answerCount = 0
         let totsalResult = 0
-        
+
         for (i=0; i<answer.length; i++){
           // Symptoms && Stiffness
           if(i < 7 && (answer[i] || answer[i]===0)){
