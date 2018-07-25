@@ -807,5 +807,11 @@
     "title": "Fractional Excretion of Urea (FEUrea)",
     "subtitle": "Determines the cause of renal failure. Similar to the FENa, but can be used on patients on diuretics.",
     "search_tags": ["feurea", "fe urea", "fractional excretion of urea", "fractional excretion urea"]
+  },
+  {
+    "id": "basal-energy-expenditure-calculator",
+    "title": "Basal Energy Expenditure",
+    "subtitle": "Calculates daily energy expenditure.",
+    "search_tags": []
   }
 ]
