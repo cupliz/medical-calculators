@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script>
-      function customScaleThisScreen() {
+      (function customScaleThisScreen() {
         var contentWidth = document.body.scrollWidth,
           windowWidth = window.innerWidth,
           newScale = windowWidth / contentWidth;
         document.body.style.zoom = newScale;
-      }
+      })();
     </script>
     <meta name="theme-color" content="#000000">
     <!--
