@@ -49,7 +49,7 @@ class FormulaComponent extends Component {
         questions.map((question, index) => {
             const { calculate } = question
             if (calculate) {
-                const {input, select} = calculate
+                const {input} = calculate
                 if (index === 0) {
                     sex = calculate["points"]
                 }
