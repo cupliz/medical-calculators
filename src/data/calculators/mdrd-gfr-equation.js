@@ -166,11 +166,11 @@ export const config = {
             ]
         },
         {
-            "group": "Creatinine",
+            "group": "Serum Creatinine",
             "data": [
                 {
                     "type": "input/select",
-                    "placeholder": "Enter Creatinine Value",
+                    "placeholder": "Enter Serum Creatinine",
                     "values": ["mg/dL", "µmol/L"]
                 }
             ]
