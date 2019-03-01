@@ -11,6 +11,7 @@ const unitData = {
     ],
     serumCreatinine: [
         { value: 100, unit: 'mg/mL' },
+        { value: 0.011312217194570135, unit: 'µmol/L'},
         { value: 1, unit: 'mg%' },
         { value: 1, unit: 'mg/dL' },
         { value: 100, unit: 'g/L'},
@@ -179,7 +180,7 @@ export const config = {
         {
           "type": "input/select",
           "placeholder": "Enter Serum Creatinine",
-          "values": ["mg/dL", "mg/mL", "mg%", "gm/dL", "gm/L"]
+          "values": ["mg/dL", "µmol/L", "mg/mL", "mg%", "gm/dL", "gm/L"]
         }
       ]
     },
