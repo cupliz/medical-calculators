@@ -807,11 +807,17 @@
     "title": "Fractional Excretion of Urea (FEUrea)",
     "subtitle": "Determines the cause of renal failure. Similar to the FENa, but can be used on patients on diuretics.",
     "search_tags": ["feurea", "fe urea", "fractional excretion of urea", "fractional excretion urea"]
-  },  
+  },
   {
     "id": "ckd-epi-gfr-equation",
     "title": "CKD-EPI GFR Equation",
     "subtitle": "Estimates GFR using the CKD-EPI equation.",
-    "search_tags": ["GFR", "CKD-EPI", "CKD", "EPI", "CKD-EPI GFR equation", "glomerular filtration rate", "glomerular filtration equation"]
+    "search_tags": ["CKD-EPI", "CKD-EPI GFR equation", "glomerular filtration rate", "glomerular filtration equation"]
+  },
+  {
+    "id": "renal_function_calculators_combined",
+    "title": "Renal Function Calculators (CKD-EPI, MDRD, Cockcroft-Gault)",
+    "subtitle": "Estimates renal function (GFR or CrCl) using desired equation.",
+    "search_tags": ["GFR", "renal", "ckd", "ckd-epi", "scr", "creatinine", "clearance", "crcl", "clcr", "kidney", "mdrd", "kidney function", "renal function"]
   }
 ]
