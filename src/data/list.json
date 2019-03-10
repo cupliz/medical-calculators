@@ -407,12 +407,6 @@
     "search_tags": ["myelodysplastic syndrome score", "Myelodysplastic Syndrome prognosis", "Myelodysplastic Syndrome prognostic score"]
   },
   {
-    "id": "creatinine-clearance-cockcroft-gault",
-    "title": "Creatinine Clearance Cockcroft Gault",
-    "subtitle": "Predicts creatinine clearance from serum creatinine",
-    "search_tags": ["creatinine clearance", "creatine clearance cockcroft gault", "cockcroft gault"]
-  },
-  {
     "id": "oxygen-content-venous-blood",
     "title": "Oxygen Content of Venous Blood",
     "subtitle": "Calculates venous blood oxygen content",
@@ -689,12 +683,6 @@
     "search_tags": ["GFR pediatric", "bedside schwartz pediatric GFR", "bedside schwartz"]
   },
   {
-    "id": "mdrd-gfr-equation",
-    "title": "MDRD GFR Equation",
-    "subtitle": "Estimates glomerular filtration rate based on creatinine and patient characteristics",
-    "search_tags": ["GFR", "MDRD", "MDRD GFR equation", "glomerular filtration rate", "glomerular filtration equation"]
-  },
-  {
     "id": "drug-dosage-calculator",
     "title": "Drug Dosage",
     "subtitle": "Calculate drug dosage based on weight",
@@ -809,15 +797,9 @@
     "search_tags": ["feurea", "fe urea", "fractional excretion of urea", "fractional excretion urea"]
   },
   {
-    "id": "ckd-epi-gfr-equation",
-    "title": "CKD-EPI GFR Equation",
-    "subtitle": "Estimates GFR using the CKD-EPI equation.",
-    "search_tags": ["CKD-EPI", "CKD-EPI GFR equation", "glomerular filtration rate", "glomerular filtration equation"]
-  },
-  {
     "id": "renal_function_calculators_combined",
-    "title": "Renal Function Calculators (CKD-EPI, MDRD, Cockcroft-Gault)",
+    "title": "Renal Function (CKD-EPI, MDRD, Cockcroft-Gault)",
     "subtitle": "Estimates renal function (GFR or CrCl) using desired equation.",
-    "search_tags": ["GFR", "renal", "ckd", "ckd-epi", "scr", "creatinine", "clearance", "crcl", "clcr", "kidney", "mdrd", "kidney function", "renal function"]
+    "search_tags": ["GFR", "ckd", "ckd-epi", "scr", "creatinine clearance", "crcl", "clcr", "kidney", "renal", "mdrd", "kidney function", "renal function"]
   }
 ]
