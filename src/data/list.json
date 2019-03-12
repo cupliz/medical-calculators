@@ -768,7 +768,7 @@
   },
   {
     "id": "adult-maintenance-fluid",
-    "title": "Adult Maintenance Fluid Calculator",
+    "title": "Adult Maintenance Fluid",
     "subtitle": "Calculates maintenance fluid requirements by weight",
     "search_tags": ["adult maintenance fluids", "maintenance fluids", "adult maintenance fluid", "maintenance fluid"]
   },
@@ -786,14 +786,14 @@
   },
   {
     "id": "bun-calculator",
-    "title": "BUN Calculator",
+    "title": "BUN",
     "subtitle": "Used in the differential diagnosis of Acute Renal Failure",
     "search_tags": ["BUN", "blood urea nitrogen"]
   },
   {
     "id": "koos-calculator",
-    "title": "KOOS Calculator",
-    "subtitle": "",
+    "title": "KOOS",
+    "subtitle": "Calculate the knee injury and osteoarthritis outcome score (KOOS).",
     "search_tags": ["koos", "knee injury and osteoarthritis outcome score", "knee injury osteoarthritis score"]
   },
   {
