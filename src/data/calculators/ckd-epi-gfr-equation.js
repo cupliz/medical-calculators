@@ -33,10 +33,22 @@ class FormulaComponent extends Component {
         black,
         age,
         serumCr,
-        selectValue
+        selectValue,
     ) => {
-        // GFR = 175 × Serum Cr-1.154 × age-0.203 × 1.212 (if patient is black) × 0.742 (if female)
-        const eGfr = 175 * Math.pow(serumCr,-1.154) * Math.pow(age,-0.203) * black * gender
+        // CKD-EPI GFR = 141 × min(Scr/κ, 1)^α × max(Scr/κ, 1)^-1.209 × 0.993^Age × 1.018 [if female] _ 1.159 [if black]
+        // if male, α = -0.411, κ = 0.9
+        // if female, α = -0.329, κ = 0.7
+        let kap, alpha
+        if (gender === 1.018) {
+            alpha = -0.329
+            kap = 0.7
+            //assign α = -0.329, κ = 0.7
+        } else {
+            alpha = -0.411
+            kap = 0.9
+            // male, α = -0.411, κ = 0.9
+        }
+        const eGfr = 141 * Math.pow(Math.min(serumCr/kap,1),alpha) * Math.pow(Math.max(serumCr/kap,1),-1.209) * Math.pow(0.993, age) * black * gender
         return (eGfr / selectValue).toFixed(this.state.decimal)
     }
 
@@ -131,8 +143,8 @@ class FormulaComponent extends Component {
 export default FormulaComponent
 
 export const config = {
-    "id": "mdrd-gfr-equation",
-    "title": "MDRD GFR Equation",
+    "id": "ckd-epi-gfr-equation",
+    "title": "CKD-EPI GFR Equation",
     "type": "formula",
     "questions": [
         {
@@ -141,7 +153,7 @@ export const config = {
                 {
                     "type": "radio",
                     "options": "Male | Female",
-                    "points": "1/0.742"
+                    "points": "1/1.018"
                 }
             ]
         },
@@ -151,7 +163,7 @@ export const config = {
                 {
                     "type": "radio",
                     "options": "No | Yes",
-                    "points": "1/1.212"
+                    "points": "1/1.159"
                 }
             ]
         },
@@ -180,27 +192,22 @@ export const config = {
     "notes": {
         "type": "unordered-list",
         "content": [
-            "This calculator provides an estimate of glomerular filtration rate based on creatinine and patient characteristics",
-            "Only for chronic kidney disease (CKD), not accurate for acute renal failure",
-            "Studies show that the MDRD is more accurate than creatinine clearance measured from 24-hr urine collections or estimated by the Cockcroft-Gault formula.",
-            "Was re-expressed in 2005 for use with a standardized serum creatinine assay which yields 5% percent lower values for serum creatinine concentration.\n"
+            "This calculator estimates glomerular filtration rate (GFR) using an equation developed by the Chronic Kidney Disease Epidemiology (CKD-EPI) Collaboration.",
+            "It was developed by Levy et al. in 2009, using GFR measurements from 8254 participants"
         ]
     },
     "references": {
         "type": "ordered-list",
         "content": [
-            "Stevens LA, Manzi J, Levey AS, et al. Impact of creatinine calibration on performance of GFR estimating equations in a pooled individual patient database. Am J Kidney Dis. Jul 2007;50(1):21-35.",
-            "Levey AS, Coresh J, Greene T, et al. Using standardized serum creatinine values in the modification of diet in renal disease study equation for estimating glomerular filtration rate. Ann Intern Med. 2006;145(4):247-254.",
-            "Levey AS, Coresh J, Greene T, et al. Expressing the Modification of Diet in Renal Disease Study equation for estimating glomerular filtration rate with standardized serum creatinine values. Clin Chem. Apr 2007;53(4):766-772."
+            "Levey AS, Stevens LA, Schmid CH, et al. for the CKD-EPI (Chronic Kidney Disease Epidemiology Collaboration). A New Equation to Estimate Glomerular Filtration Rate. Ann Intern Med 2009; 150:604."
         ]
     },
     "formula": {
-        "type": "paragraph",
+        "type": "unordered-list",
         "content": [
-            "GFR = 175 × Serum Cr^-1.154 × age^-0.203 × 1.212 (if patient is black) × 0.742 (if female)",
-            "GFR units are mL/min/1.73m²",
-            "Creatinine units are in mg/dL",
-            "Age is in years"
+            "GFR =  141 x min(sCr/κ, 1)^α x max(sCr/κ, 1)^-1.209 x 0.993^Age x 1.018 (if female) x 1.159 (if patient is black)",
+            "GFR units are mL/min/1.73m². Serum creatinine (sCr) units are in mg/dL, Age is in years.",
+            "For females: α = -0.329; κ = 0.7. For males: α = -0.411; κ = 0.9."
         ]
     }
 }
