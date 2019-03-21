@@ -800,6 +800,6 @@
     "id": "renal_function_calculators_combined",
     "title": "Renal Function (CKD-EPI, MDRD, Cockcroft-Gault)",
     "subtitle": "Estimates renal function (GFR or CrCl) using desired equation.",
-    "search_tags": ["GFR", "ckd", "ckd-epi", "scr", "creatinine clearance", "crcl", "clcr", "kidney", "renal", "mdrd", "kidney function", "renal function"]
+    "search_tags": ["GFR", "ckd", "ckd-epi", "scr", "creatinine clearance", "crcl", "clcr", "kidney", "renal", "mdrd", "kidney function", "renal function", "ms-ID:ginjal fungsi", "ms-ID:fungsi ginjal"]
   }
 ]
