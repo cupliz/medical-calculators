@@ -14,13 +14,13 @@
     "id": "ransons-criteria-for-pancreatitis-mortality",
     "title": "Ranson's Criteria for Pancreatitis Mortality",
     "subtitle": "Mortality estimate for Pancreatitis",
-    "search_tags": ["ranson's criteria", "ranson's score", "pancreatitis mortality", "ransons score", "ransons criteria"]
+    "search_tags": ["ranson's criteria", "ranson's score", "pancreatitis mortality"]
   },
   {
     "id": "amoxicillin-pediatric-ear-nose-throat",
     "title": "Amoxicillin Pediatric - Ear, Nose, & Throat Infections",
     "subtitle": "Drug dose",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin", "pediatric dose amoxicillin ENT"]
+    "search_tags": ["pediatric dose amoxicillin ENT"]
   },
   {
     "id": "cha2ds2-vasc-score-for-stroke-risk",
@@ -32,25 +32,25 @@
     "id": "glasgow-coma-scale",
     "title": "Glasgow Coma Scale",
     "subtitle": "Objective level of consciousness",
-    "search_tags": ["glasgow coma scale", "GCS", "glasgow coma score"]
+    "search_tags": ["GCS", "glasgow coma score"]
   },
   {
     "id": "apgar-score",
     "title": "Apgar Score",
     "subtitle": "Assesses Neonates 1 & 5 mins after birth",
-    "search_tags": ["apgar score", "apgar"]
+    "search_tags": ["apgar score"]
   },
   {
     "id": "metabolic-syndrome-criteria-aha-nhlbi-2005",
     "title": "Metabolic Syndrome Criteria (AHA/NHLBI 2005)",
     "subtitle": "Diagnosis for Metabolic Syndrome",
-    "search_tags": ["metabolic syndrome", "metabolic syndrome criteria", "criteria for metabolic syndrome", "diagnose metabolic syndrome"]
+    "search_tags": ["metabolic syndrome", "metabolic syndrome criteria"]
   },
   {
     "id": "dvt-probability-wells-score-system",
     "title": "DVT Probability: Wells Score System",
     "subtitle": "Risk for DVT",
-    "search_tags": ["wells score", "DVT risk", "probability of DVT"]
+    "search_tags": ["wells score", "DVT risk"]
   },
   {
     "id": "tia-prognosis-risk-of-stroke-by-90-days-after-presentation",
@@ -62,7 +62,7 @@
     "id": "timi-risk-score-for-stemi",
     "title": "TIMI Risk Score for STEMI",
     "subtitle": "Mortality risk after STEMI",
-    "search_tags": ["TIMI risk STEMI", "TIMI risk score STEMI", "TIMI risk score", "TIMI risk"]
+    "search_tags": ["TIMI risk STEMI", "TIMI risk score"]
   },
   {
     "id": "timi-risk-score-for-unstable-angina-nstemi",
@@ -350,7 +350,7 @@
     "id": "ottawa-knee-rule-x-ray-knee-injury",
     "title": "Ottawa Knee Rule for use of X-Ray in Knee Injury",
     "subtitle": "Rule out imaging in knee injury",
-    "search_tags": ["ottawa knee rule", "ottawa knee criteria", "ottawa score", "ottawa knee"]
+    "search_tags": ["ottawa knee criteria", "ottawa score"]
   },
   {
     "id": "rockall-score-upper-gi-bleeding",
@@ -374,7 +374,7 @@
     "id": "pancreatitis-prognosis-criteria-disease-gallstones",
     "title": "Pancreatitis Prognosis Criteria When Disease Due to Gallstones",
     "subtitle": "Prognosis for pancreatitis due to gallstones",
-    "search_tags": ["pancreatitis prognosis criteria", "prognosis gallstone pancreatitis", "pancreatitis prognosis"]
+    "search_tags": ["pancreatitis prognosis criteria", "prognosis gallstone pancreatitis"]
   },
   {
     "id": "breast-cancer-recurrence-risk-after-mastectomy",
@@ -407,12 +407,6 @@
     "search_tags": ["myelodysplastic syndrome score", "Myelodysplastic Syndrome prognosis", "Myelodysplastic Syndrome prognostic score"]
   },
   {
-    "id": "creatinine-clearance-cockcroft-gault",
-    "title": "Creatinine Clearance Cockcroft Gault",
-    "subtitle": "Predicts creatinine clearance from serum creatinine",
-    "search_tags": ["creatinine clearance", "creatine clearance cockcroft gault", "cockcroft gault"]
-  },
-  {
     "id": "oxygen-content-venous-blood",
     "title": "Oxygen Content of Venous Blood",
     "subtitle": "Calculates venous blood oxygen content",
@@ -434,19 +428,19 @@
     "id": "estimated-blood-volume",
     "title": "Estimated Blood Volume",
     "subtitle": "Estimated Blood volume for different patient groups",
-    "search_tags": ["estimated blood volume", "estimate blood volume"]
+    "search_tags": ["estimated blood volume"]
   },
   {
     "id": "sodium-correction-hyperglycemia",
     "title": "Sodium Correction in Hyperglycemia",
     "subtitle": "Calculates sodium in hyperglycemia",
-    "search_tags": ["sodium correction hyperglycemia", "sodium correction"]
+    "search_tags": ["sodium correction"]
   },
   {
     "id": "sodium-deficit-hyponatremia",
     "title": "Sodium Deficit in Hyponatremia",
     "subtitle": "Total sodium missing in hyponatremia",
-    "search_tags": ["sodium deficit hyponatremia", "hyponatremia", "na deficit in hyponatremia"]
+    "search_tags": ["hyponatremia", "na deficit in hyponatremia"]
   },
   {
     "id": "qt-interval-correction-ecg",
@@ -512,175 +506,175 @@
     "id": "amoxicillin-pediatric-acute-otitis-media",
     "title": "Amoxicillin Pediatric - Acute Otitis Media",
     "subtitle": "Drug dosage",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin acute otitis media"]
+    "search_tags": []
   },
   {
     "id": "amoxicillin-pediatric-lower-respiratory-tract-infections",
     "title": "Amoxicillin Pediatric - Lower Respiratory Tract Infections",
     "subtitle": "Drug dosage",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin respiratory", "pediatric dose amoxicillin lower respiratory"]
+    "search_tags": []
   },
   {
     "id": "amoxicillin-pediatric-anthrax",
     "title": "Amoxicillin Pediatric - Anthrax",
     "subtitle": "Drug dosage",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin anthrax"]
+    "search_tags": []
   },
   {
     "id": "amoxicillin-pediatric-infective-endocarditis",
     "title": "Amoxicillin Pediatric - Infective Endocarditis",
     "subtitle": "Drug dosage",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin endocarditis"]
+    "search_tags": []
   },
   {
     "id": "amoxicillin-pediatric-lyme-disease",
     "title": "Amoxicillin Pediatric - Lyme Disease",
     "subtitle": "Drug dosage",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin lyme"]
+    "search_tags": []
   },
   {
     "id": "amoxicillin-pediatric-renal-dosing",
     "title": "Amoxicillin Pediatric - Renal Dosing",
     "subtitle": "Drug dosage",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin renal"]
+    "search_tags": []
   },
   {
     "id": "amoxicillin-pediatric-upper-respiratory-tract-infections",
-    "title": "Amoxicillin Pediatric - Upper Respiratory Tract Infections",
+    "title": "Amoxicillin Pediatric Dose - Upper Respiratory Tract Infections",
     "subtitle": "Drug dosage",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin respiratory", "pediatric dose amoxicillin upper respiratory"]
+    "search_tags": []
   },
   {
     "id": "metoclopramide-pediatric-dosing",
     "title": "Metoclopramide Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin metoclopramide"]
+    "search_tags": []
   },
   {
     "id": "paracetamol-acetaminophen-pediatric-dosing",
     "title": "Paracetamol/Acetaminophen Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin acetaminophen"]
+    "search_tags": []
   },
   {
     "id": "diclofenac-sodium-pediatric-dosing",
     "title": "Diclofenac Sodium Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin diclofenac na", "pediatric dose amoxicillin diclofenac sodium", "pediatric dose amoxicillin diclofenac"]
+    "search_tags": ["pediatric dose diclofenac na"]
   },
   {
     "id": "diclofenac-potassium-pediatric-dosing",
     "title": "Diclofenac Potassium Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage amoxicillin", "pediatric dose amoxicillin diclofenac potassium", "pediatric dose amoxicillin diclofenac"]
+    "search_tags": ["pediatric dose diclofenac potassium", "pediatric dose diclofenac"]
   },
   {
     "id": "diazepam-pediatric-dosing",
     "title": "Diazepam Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage diazepam", "pediatric dose diazepam"]
+    "search_tags": []
   },
   {
     "id": "cefadroxil-pediatric-dosing",
     "title": "Cefadroxil Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage cefadroxil", "pediatric dose cefadroxil"]
+    "search_tags": []
   },
   {
     "id": "cefixime-pediatric-dosing",
     "title": "Cefixime Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage cefixime", "pediatric dose cefixime"]
+    "search_tags": []
   },
   {
     "id": "ceftibuten-pediatric-dosing",
     "title": "Ceftibuten Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage ceftibuten", "pediatric dose ceftibuten"]
+    "search_tags": []
   },
   {
     "id": "azithromycin-pediatric-dosing",
     "title": "Azithromycin Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage azithromycin", "pediatric dose azithromycin"]
+    "search_tags": []
   },
   {
     "id": "cefaclor-pediatric-dosing",
     "title": "Cefaclor Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage cefaclor", "pediatric dose cefaclor"]
+    "search_tags": []
   },
   {
     "id": "dexamethasone-pediatric-dosing",
     "title": "Dexamethasone Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage dexamethasone", "pediatric dose dexamethasone"]
+    "search_tags": []
   },
   {
     "id": "clarithromycin-pediatric-dosing",
     "title": "Clarithromycin Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage clarithromycin", "pediatric dose clarithromycin"]
+    "search_tags": []
   },
   {
     "id": "cefepime-pediatric-dosing",
     "title": "Cefepime Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage cefepime", "pediatric dose cefepime"]
+    "search_tags": []
   },
   {
     "id": "ceftriaxone-pediatric-dosing",
     "title": "Ceftriaxone Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage ceftriaxone", "pediatric dose ceftriaxone"]
+    "search_tags": []
   },
   {
     "id": "vancomycin-pediatric-dosing",
     "title": "Vancomycin Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage vancomycin", "pediatric dose vancomycin"]
+    "search_tags": []
   },
   {
     "id": "cefotaxime-pediatric-dosing",
     "title": "Cefotaxime Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage cefotaxime", "pediatric dose cefotaxime"]
+    "search_tags": []
   },
   {
     "id": "ciprofloxacin-pediatric-dosing",
     "title": "Ciprofloxacin Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage ciprofloxacin", "pediatric dose ciprofloxacin"]
+    "search_tags": []
   },
   {
     "id": "ceftazidime-sodium-pediatric-dosing",
     "title": "Ceftazidime Sodium Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage ceftazidime", "pediatric dose ceftazidime", "pediatric dose ceftazidime sodium"]
+    "search_tags": []
   },
   {
     "id": "imipenem-cilastatin-pediatric-dosing",
     "title": "Imipenem/Cilastatin Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage imipenem", "pediatric dose imipenem", "pediatric dosage cilastatin", "pediatric dose cilastatin"]
+    "search_tags": []
   },
   {
     "id": "celebrex-pediatric-dosing",
     "title": "Celebrex Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage celebrex", "pediatric dose celebrex"]
+    "search_tags": []
   },
   {
     "id": "duloxetine-pediatric-dosing",
     "title": "Duloxetine Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage duloxetine", "pediatric dose duloxetine"]
+    "search_tags": []
   },
   {
     "id": "adrenaline-epinephrine-pediatric-dosing",
     "title": "Adrenaline/Epinephrine Pediatric Dosing",
     "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dosage epinephrine", "pediatric dose epinephrine", "pediatric dosage adrenaline", "pediatric dose adrenaline", "epi pediatric dosage", "epi pediatric dose"]
+    "search_tags": ["epi pediatric dose", "epi pediatric dose"]
   },
   {
     "id": "bedside-schwartz-pediatric-gfr-calculator",
@@ -689,16 +683,10 @@
     "search_tags": ["GFR pediatric", "bedside schwartz pediatric GFR", "bedside schwartz"]
   },
   {
-    "id": "mdrd-gfr-equation",
-    "title": "MDRD GFR Equation",
-    "subtitle": "Estimates glomerular filtration rate based on creatinine and patient characteristics",
-    "search_tags": ["GFR", "MDRD", "MDRD GFR equation", "glomerular filtration rate", "glomerular filtration equation"]
-  },
-  {
     "id": "drug-dosage-calculator",
     "title": "Drug Dosage",
     "subtitle": "Calculate drug dosage based on weight",
-    "search_tags": ["drug dose", "drug dosage", "drug dosage", "drug dose", "weight based dosage", "drug dosing", "drug dosing", "pediatric drug dosage", "pediatric dosing", "pediatric drug dose"]
+    "search_tags": ["drug dose", "weight based dosage"]
   },
   {
     "id": "nutrition-risk-critically-ill",
@@ -716,7 +704,7 @@
     "id": "serum-osmolarity-calculator",
     "title": "Serum Osmolarity",
     "subtitle": "Calculates expected serum osmolarity vs measured osmolarity to detect unmeasured compounds in serum",
-    "search_tags": ["serum osmolarity", "serum osmolality"]
+    "search_tags": ["serum osmolality"]
   },
   {
     "id": "asthma-predictive-index",
@@ -728,7 +716,7 @@
     "id": "canadian-ct-head-injury-trauma-rule",
     "title": "Canadian CT Head Injury/Trauma Rule",
     "subtitle": "Clears head injury without imaging",
-    "search_tags": ["ct canadian head rule", "canadian head injury rule", "canada head rule", "canadian ct rule"]
+    "search_tags": ["ct canadian head rule", "canada head rule", "canadian ct rule"]
   },
   {
     "id": "abc-2-formula-intracerebral-hemorrhage-volume",
@@ -756,7 +744,7 @@
   },
   {
     "id": "transtubular-potassium-gradient",
-    "title": "Transtubular Potassium Gradient",
+    "title": "Transtubular Potassium Gradient (TTKG)",
     "subtitle": "Index that reflects conservation of potassium",
     "search_tags": ["transtubular potassium gradient", "ttkg", "transtubular potassium gradient ccd", "transtubular k gradient"]
   },
@@ -768,9 +756,9 @@
   },
   {
     "id": "adult-maintenance-fluid",
-    "title": "Adult Maintenance Fluid Calculator",
+    "title": "Adult Maintenance Fluid",
     "subtitle": "Calculates maintenance fluid requirements by weight",
-    "search_tags": ["adult maintenance fluids", "maintenance fluids", "adult maintenance fluid", "maintenance fluid"]
+    "search_tags": ["adult maintenance fluid"]
   },
   {
     "id": "sgarbossa-criteria-mi",
@@ -786,21 +774,21 @@
   },
   {
     "id": "bun-calculator",
-    "title": "BUN Calculator",
+    "title": "BUN",
     "subtitle": "Used in the differential diagnosis of Acute Renal Failure",
     "search_tags": ["BUN", "blood urea nitrogen"]
   },
   {
     "id": "koos-calculator",
-    "title": "KOOS Calculator",
-    "subtitle": "",
+    "subtitle": "Calculate the knee injury and osteoarthritis outcome score (KOOS).",
+    "title": "KOOS",
     "search_tags": ["koos", "knee injury and osteoarthritis outcome score", "knee injury osteoarthritis score"]
   },
   {
     "id": "alvarado-score-for-appendicitis",
     "title": "Alvarado Score for Acute Appendicitis",
     "subtitle": "Determines the likelihood of appendicitis based on symptoms, signs, and lab data",
-    "search_tags": ["alvarado score", "alvarado", "acute appendicitis score", "alvarado appendicitis"]
+    "search_tags": ["alvarado", "acute appendicitis score", "alvarado appendicitis"]
   },
   {
     "id": "fractional-excretion-of-urea",
@@ -809,15 +797,9 @@
     "search_tags": ["feurea", "fe urea", "fractional excretion of urea", "fractional excretion urea"]
   },
   {
-    "id": "ckd-epi-gfr-equation",
-    "title": "CKD-EPI GFR Equation",
-    "subtitle": "Estimates GFR using the CKD-EPI equation.",
-    "search_tags": ["CKD-EPI", "CKD-EPI GFR equation", "glomerular filtration rate", "glomerular filtration equation"]
-  },
-  {
     "id": "renal_function_calculators_combined",
-    "title": "Renal Function Calculators (CKD-EPI, MDRD, Cockcroft-Gault)",
+    "title": "Renal Function (CKD-EPI, MDRD, Cockcroft-Gault)",
     "subtitle": "Estimates renal function (GFR or CrCl) using desired equation.",
-    "search_tags": ["GFR", "renal", "ckd", "ckd-epi", "scr", "creatinine", "clearance", "crcl", "clcr", "kidney", "mdrd", "kidney function", "renal function", "ginjal fungsi", "fungsi ginjal", "ginjal"]
+    "search_tags": ["GFR", "ckd", "ckd-epi", "scr", "creatinine clearance", "crcl", "clcr", "kidney", "renal", "mdrd", "kidney function", "renal function", "ms-ID:ginjal fungsi", "ms-ID:fungsi ginjal"]
   }
 ]
