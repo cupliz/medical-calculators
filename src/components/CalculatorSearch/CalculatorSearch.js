@@ -31,7 +31,7 @@ const renderInput = inputProps => {
 }
 
 const renderSuggestion = (suggestion, { query, isHighlighted }) => {
-  const matches = match(suggestion.title, query)
+  const matches = match(suggestion.title, query, {insideWords: true, findAllOccurrences: true})
   const parts = parse(suggestion.title, matches)
 
   return (
@@ -40,11 +40,11 @@ const renderSuggestion = (suggestion, { query, isHighlighted }) => {
         <div>
           {parts.map((part, index) => {
             return part.highlight ? (
-              <span key={index} style={{ fontWeight: 300 }}>
+              <span key={index} style={{ fontWeight: 500 }}>
                 {part.text}
               </span>
             ) : (
-              <strong key={index} style={{ fontWeight: 500 }}>
+              <strong key={index} style={{ fontWeight: 300 }}>
                 {part.text}
               </strong>
             )
@@ -79,7 +79,7 @@ const getSuggestions = (value, data) => {
     : data.filter(suggestion => {
       const keep =
           count < 5 &&
-          suggestion.title.toLowerCase().slice(0, inputLength) === inputValue
+          suggestion.title.toLowerCase().includes(inputValue)
 
       if (keep) {
         count += 1
