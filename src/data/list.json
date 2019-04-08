@@ -17,12 +17,6 @@
     "search_tags": ["ranson's criteria", "ranson's score", "pancreatitis mortality"]
   },
   {
-    "id": "amoxicillin-pediatric-ear-nose-throat",
-    "title": "Amoxicillin Pediatric - Ear, Nose, & Throat Infections",
-    "subtitle": "Drug dose",
-    "search_tags": ["pediatric dose amoxicillin ENT"]
-  },
-  {
     "id": "cha2ds2-vasc-score-for-stroke-risk",
     "title": "CHA₂DS₂-VASc Score for Stroke Risk",
     "subtitle": "Stroke risk in AFib, better than CHADS₂ score",
@@ -413,12 +407,6 @@
     "search_tags": ["o2 content venous blood", "oxygen content in venous blood", "venous blood oxygen"]
   },
   {
-    "id": "dose-adjustment-body-surface-area",
-    "title": "Dose Adjustment for Body Surface Area",
-    "subtitle": "Adjusted dose based on BSA",
-    "search_tags": ["adjusted dose body surface area", "BSA dose adjustment", "BSA dose", "bsa dosing"]
-  },
-  {
     "id": "oxygen-content-arterial-blood",
     "title": "Oxygen Content of Arterial Blood",
     "subtitle": "Calculates arterial blood oxygen content",
@@ -503,190 +491,10 @@
     "search_tags": ["iv drip rate", "iv drip rate", "iv drip rate dose", "dose driven iv drip rate", "iv drip", "iv drip", "infusion rate", "iv rate"]
   },
   {
-    "id": "amoxicillin-pediatric-acute-otitis-media",
-    "title": "Amoxicillin Pediatric - Acute Otitis Media",
-    "subtitle": "Drug dosage",
-    "search_tags": []
-  },
-  {
-    "id": "amoxicillin-pediatric-lower-respiratory-tract-infections",
-    "title": "Amoxicillin Pediatric - Lower Respiratory Tract Infections",
-    "subtitle": "Drug dosage",
-    "search_tags": []
-  },
-  {
-    "id": "amoxicillin-pediatric-anthrax",
-    "title": "Amoxicillin Pediatric - Anthrax",
-    "subtitle": "Drug dosage",
-    "search_tags": []
-  },
-  {
-    "id": "amoxicillin-pediatric-infective-endocarditis",
-    "title": "Amoxicillin Pediatric - Infective Endocarditis",
-    "subtitle": "Drug dosage",
-    "search_tags": []
-  },
-  {
-    "id": "amoxicillin-pediatric-lyme-disease",
-    "title": "Amoxicillin Pediatric - Lyme Disease",
-    "subtitle": "Drug dosage",
-    "search_tags": []
-  },
-  {
-    "id": "amoxicillin-pediatric-renal-dosing",
-    "title": "Amoxicillin Pediatric - Renal Dosing",
-    "subtitle": "Drug dosage",
-    "search_tags": []
-  },
-  {
-    "id": "amoxicillin-pediatric-upper-respiratory-tract-infections",
-    "title": "Amoxicillin Pediatric Dose - Upper Respiratory Tract Infections",
-    "subtitle": "Drug dosage",
-    "search_tags": []
-  },
-  {
-    "id": "metoclopramide-pediatric-dosing",
-    "title": "Metoclopramide Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "paracetamol-acetaminophen-pediatric-dosing",
-    "title": "Paracetamol/Acetaminophen Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "diclofenac-sodium-pediatric-dosing",
-    "title": "Diclofenac Sodium Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dose diclofenac na"]
-  },
-  {
-    "id": "diclofenac-potassium-pediatric-dosing",
-    "title": "Diclofenac Potassium Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["pediatric dose diclofenac potassium", "pediatric dose diclofenac"]
-  },
-  {
-    "id": "diazepam-pediatric-dosing",
-    "title": "Diazepam Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "cefadroxil-pediatric-dosing",
-    "title": "Cefadroxil Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "cefixime-pediatric-dosing",
-    "title": "Cefixime Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "ceftibuten-pediatric-dosing",
-    "title": "Ceftibuten Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "azithromycin-pediatric-dosing",
-    "title": "Azithromycin Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "cefaclor-pediatric-dosing",
-    "title": "Cefaclor Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "dexamethasone-pediatric-dosing",
-    "title": "Dexamethasone Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "clarithromycin-pediatric-dosing",
-    "title": "Clarithromycin Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "cefepime-pediatric-dosing",
-    "title": "Cefepime Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "ceftriaxone-pediatric-dosing",
-    "title": "Ceftriaxone Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "vancomycin-pediatric-dosing",
-    "title": "Vancomycin Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "cefotaxime-pediatric-dosing",
-    "title": "Cefotaxime Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "ciprofloxacin-pediatric-dosing",
-    "title": "Ciprofloxacin Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "ceftazidime-sodium-pediatric-dosing",
-    "title": "Ceftazidime Sodium Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "imipenem-cilastatin-pediatric-dosing",
-    "title": "Imipenem/Cilastatin Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "celebrex-pediatric-dosing",
-    "title": "Celebrex Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "duloxetine-pediatric-dosing",
-    "title": "Duloxetine Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": []
-  },
-  {
-    "id": "adrenaline-epinephrine-pediatric-dosing",
-    "title": "Adrenaline/Epinephrine Pediatric Dosing",
-    "subtitle": "Pediatric dosing for multiple indications",
-    "search_tags": ["epi pediatric dose", "epi pediatric dose"]
-  },
-  {
     "id": "bedside-schwartz-pediatric-gfr-calculator",
     "title": "Bedside Schwartz Pediatric GFR",
     "subtitle": "Estimating glomerular filtration rate in infants, children, and adolescents",
     "search_tags": ["GFR pediatric", "bedside schwartz pediatric GFR", "bedside schwartz"]
-  },
-  {
-    "id": "drug-dosage-calculator",
-    "title": "Drug Dosage",
-    "subtitle": "Calculate drug dosage based on weight",
-    "search_tags": ["drug dose", "weight based dosage"]
   },
   {
     "id": "nutrition-risk-critically-ill",
@@ -798,7 +606,7 @@
   },
   {
     "id": "renal_function_calculators_combined",
-    "title": "Renal Function (CKD-EPI, MDRD, Cockcroft-Gault)",
+    "title": "Renal Function (CKD-EPI, MDRD, Cockcroft-Gault - GFR / CrCl)",
     "subtitle": "Estimates renal function (GFR or CrCl) using desired equation.",
     "search_tags": ["GFR", "ckd", "ckd-epi", "scr", "creatinine clearance", "crcl", "clcr", "kidney", "renal", "mdrd", "kidney function", "renal function", "ms-ID:ginjal fungsi", "ms-ID:fungsi ginjal"]
   }
