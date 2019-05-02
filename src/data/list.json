@@ -801,5 +801,11 @@
     "title": "Renal Function (CKD-EPI, MDRD, Cockcroft-Gault)",
     "subtitle": "Estimates renal function (GFR or CrCl) using desired equation.",
     "search_tags": ["GFR", "ckd", "ckd-epi", "scr", "creatinine clearance", "crcl", "clcr", "kidney", "renal", "mdrd", "kidney function", "renal function"]
+  },
+  {
+    "id": "pediatric-smart-calculator",
+    "title": "Pediatric Smart Calculator",
+    "subtitle": "Pediatric Smart Calculator",
+    "search_tags": ["pediatric smart calculator", "calculator", "pediatric calculator"]
   }
 ]

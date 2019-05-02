@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles'
 import RadioField from '../fields/RadioField'
 import CheckboxField from '../fields/CheckboxField'
 import InputSelectField from '../fields/InputSelectField'
+import InputSearchField from '../fields/InputSearchField'
+import SelectField from '../fields/SelectField'
 
 const styles = theme => ({
   group: {
@@ -80,6 +82,22 @@ const renderInputSelectField = props => (
   />
 )
 
+const renderInputSearchField = props => (
+  <InputSearchField 
+    placeholder={props.placeholder}
+    group={props.group}
+    values={props.values}
+  />
+)
+
+const renderSelectField = props => (
+  <SelectField 
+    placeholder={props.placeholder}
+    group={props.group}
+    values={props.values}
+  />
+)
+
 const QuestionField = props => {
   if (props.type === 'radio') {
     return renderRadioField(props)
@@ -87,6 +105,10 @@ const QuestionField = props => {
     return renderCheckboxField(props)
   } else if (props.type === 'input/select') {
     return renderInputSelectField(props)
+  } else if (props.type === 'input/search') {
+    return renderInputSearchField(props)
+  } else if (props.type === 'select') {
+    return renderSelectField(props)
   } else {
     return null
   }

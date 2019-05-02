@@ -13,6 +13,8 @@ export const FETCH_CALC_DATA_ERROR = 'calculator/FETCH_CALC_DATA_ERROR'
 export const PICK_RADIO_ANSWER = 'calculator/PICK_RADIO_ANSWER'
 export const PICK_CHECKBOX_ANSWER = 'calculator/PICK_CHECKBOX_ANSWER'
 export const TYPE_PICK_INPUT_SELECT = 'calculator/TYPE_PICK_INPUT_SELECT'
+export const TYPE_INPUT_SEARCH = 'calculator/TYPE_INPUT_SEARCH'
+export const PICK_SELECT_OPTION = 'calculator/PICK_SELECT_OPTION'
 export const CLEAN_CALCULATOR = 'calculator/CLEAN_CALCULATOR'
 
 // ------------------------------------
@@ -97,6 +99,34 @@ export const typePickInputSelect = (
   }
 }
 
+export const typeInputSearch = (
+  group = '',
+  inputValue = '',
+) => {
+  return {
+    type: TYPE_INPUT_SEARCH,
+    payload: {
+      group,
+      inputValue,
+      receivedAt: new Date().toISOString()
+    }
+  }
+}
+
+export const pickSelectOption = (
+  group = '',
+  selectValue = '',
+) => {
+  return {
+    type: PICK_SELECT_OPTION,
+    payload: {
+      group,
+      selectValue,
+      receivedAt: new Date().toISOString()
+    }
+  }
+}
+
 export const cleanCalculator = () => {
   return {
     type: CLEAN_CALCULATOR,
@@ -162,6 +192,39 @@ export default (state = initialState, action) => {
           )
         }
       }
+
+    case TYPE_INPUT_SEARCH:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          questions: createCalculateObject(
+            state.data.questions,
+            action,
+            'group',
+            {
+              input: action.payload.inputValue
+            }
+          )
+        }
+      }
+
+    case PICK_SELECT_OPTION:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+          questions: createCalculateObject(
+            state.data.questions,
+            action,
+            'group',
+            {
+              select: action.payload.selectValue
+            }
+          )
+        }
+      }
+    
 
     case CLEAN_CALCULATOR:
       return {}
