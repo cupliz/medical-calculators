@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import { getSheetData } from '../../../../../utils/gapi'
+// import { getSheetData } from '../../../../../utils/gapi'
 import { pickSelectOption } from '../../../../../store/modules/calculator'
 
 const styles = theme => ({
@@ -21,7 +21,6 @@ class SelectField extends React.Component {
   state = {
     age: '',
     open: false,
-    options: [],
     title: ''
   };
 
@@ -38,18 +37,19 @@ class SelectField extends React.Component {
   handleOpen = () => {
     this.setState({ open: true });
   };
-  componentDidMount = async () => {
-    const output = await getSheetData(this.props.values)
-    output.splice(0,1)
-    let data = output.map((d)=>d[0])
-    const sortedData = _.uniq(data)
-    const options = sortedData.map((d)=>({value: d}))
-    await this.setState({options})
-  }
 
   render() {
-    const { classes } = this.props;
-
+    const { classes, calculator} = this.props;
+    const {calculate} = calculator.data.questions[0]
+    let options = []
+    if(calculate){
+      const drugName = calculate && calculate.input
+      const filteredData = calculator.database && calculator.database.filter(d=>d.drug===drugName)
+      const indicationGroups = filteredData && _.uniq(filteredData.map(f=>f.indicationGroup))
+      if(indicationGroups){
+        options = indicationGroups
+      }
+    }
     return (
       <form autoComplete="off">
         <FormControl className={classes.formControl}>
@@ -61,9 +61,11 @@ class SelectField extends React.Component {
             value={this.state.age}
             onChange={this.handleChange}
           >
-          {this.state.options.map(({value},index) => (
-            <MenuItem value={value} key={index}>{value}</MenuItem>
-          ))}
+          {
+            options.map((value,index) => (
+              <MenuItem value={value} key={index}>{value}</MenuItem>
+            ))
+          }
           </Select>
         </FormControl>
       </form>
@@ -74,6 +76,8 @@ class SelectField extends React.Component {
 SelectField.propTypes = {
   classes: PropTypes.object.isRequired,
 };
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  ...state
+})
 
 export default connect(mapStateToProps, { pickSelectOption })(withStyles(styles)(SelectField));

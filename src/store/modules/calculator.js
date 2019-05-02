@@ -15,6 +15,7 @@ export const PICK_CHECKBOX_ANSWER = 'calculator/PICK_CHECKBOX_ANSWER'
 export const TYPE_PICK_INPUT_SELECT = 'calculator/TYPE_PICK_INPUT_SELECT'
 export const TYPE_INPUT_SEARCH = 'calculator/TYPE_INPUT_SEARCH'
 export const PICK_SELECT_OPTION = 'calculator/PICK_SELECT_OPTION'
+export const FETCH_DATABASE = 'calculator/FETCH_DATABASE'
 export const CLEAN_CALCULATOR = 'calculator/CLEAN_CALCULATOR'
 
 // ------------------------------------
@@ -127,6 +128,15 @@ export const pickSelectOption = (
   }
 }
 
+export const fetchDatabase = (
+  payload = [],
+) => {
+  return {
+    type: FETCH_DATABASE,
+    payload
+  }
+}
+
 export const cleanCalculator = () => {
   return {
     type: CLEAN_CALCULATOR,
@@ -223,6 +233,12 @@ export default (state = initialState, action) => {
             }
           )
         }
+      }
+
+    case FETCH_DATABASE:
+      return {
+        ...state,
+        database: action.payload
       }
     
 

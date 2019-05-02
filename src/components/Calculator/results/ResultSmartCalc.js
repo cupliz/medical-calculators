@@ -29,7 +29,7 @@ const ResultText = ({ data }) => {
           const d = data.recom[key];
           return (
             <div style={{ fontWeight: "bold", fontSize: 20 }} key={index}>
-              {d.caption} : {d.value} <br/> <br/>
+              {d.caption} {d.value} <br /> <br />
             </div>
           );
         })}
@@ -59,29 +59,32 @@ class ControlledExpansionPanels extends React.Component {
           <ResultText data={data} />
           <br />
           <div className={classes.root}>
-            {Object.keys(data.info).length &&
-              Object.keys(data.info).map((key, index) => {
-                const { title, bgColor, html } = data.info[key];
-                return (
-                  <ExpansionPanel
-                    key={index}
-                    expanded={expanded === key}
-                    onChange={this.handleChange(key)}
-                  >
-                    <ExpansionPanelSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      style={{ backgroundColor: bgColor }}
+            {Object.keys(data.info).length
+              ? Object.keys(data.info).map((key, index) => {
+                  const { title, bgColor, html } = data.info[key];
+                  return (
+                    <ExpansionPanel
+                      key={index}
+                      expanded={expanded === key}
+                      onChange={this.handleChange(key)}
                     >
-                      <Typography className={classes.heading}>
-                        {title} - See Details
-                      </Typography>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                      <Typography dangerouslySetInnerHTML={{__html: html}}></Typography>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                );
-              })}
+                      <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        style={{ backgroundColor: bgColor }}
+                      >
+                        <Typography className={classes.heading}>
+                          {title} - See Details
+                        </Typography>
+                      </ExpansionPanelSummary>
+                      <ExpansionPanelDetails>
+                        <Typography
+                          dangerouslySetInnerHTML={{ __html: html }}
+                        />
+                      </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                  );
+                })
+              : ""}
           </div>
         </div>
       );
