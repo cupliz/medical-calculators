@@ -76,71 +76,35 @@ class FormulaComponent extends Component {
           const indicationDB = indicationGroupDB.filter(
             igdb => igdb.indication === indication
           );
+          dosingRecom[j] = { value: "" };
           if (indication) {
             // if (indication === "Severe infections") {
             if (indicationDB.length) {
-              dosingRecom[j] = { value: "" };
-              const tbl = this.getDosingRecomendation(
-                indicationDB,
-                input_age_mth,
-                input_wt_kg
-              );
-              const daily_dose = tbl.dailymgperkgHigh
-                ? input_wt_kg * tbl.dailymgperkgHigh
-                : tbl.fixedDose;
-              let single_dose = daily_dose / tbl.divisor;
-              tbl.maxSigleDose = tbl.maxSigleDose
-                ? tbl.maxSigleDose
-                : tbl.fixedDose;
-              single_dose =
-                single_dose > tbl.maxSigleDose ? tbl.maxSigleDose : single_dose;
-              const final_output = `${indication}: ${tbl.route} ${single_dose &&
-                daily_dose + "mg"} ${tbl.frequency}${tbl.duration &&
-                ", " + tbl.duration} <br> ${tbl.additionalInfo}`;
-              dosingRecom[j].value = final_output;
+              const tbl = this.getDosingRecomendation( indicationDB, input_age_mth, input_wt_kg );
+              dosingRecom[j].value = this.calculateDosingRecomendation(indication, tbl, input_wt_kg) 
 
-              dosingInfo[j] = { title: indication };
-              const acc = this.getDosingInformation(
-                indicationDB,
-                input_age_mth,
-                input_wt_kg
-              );
-              dosingInfo[j].bgColor = blue[(j + 4) * 100];
-              dosingInfo[j].html = acc;
+              // dosingInfo[j] = { title: indication };
+              // const acc = this.getDosingInformation(
+              //   indicationDB,
+              //   input_age_mth,
+              //   input_wt_kg
+              // );
+              // dosingInfo[j].bgColor = blue[(j + 4) * 100];
+              // dosingInfo[j].html = acc;
             }
             // }
           } else {
-            dosingRecom[j] = { value: "" };
-            const tbl = this.getDosingRecomendation(
-              indicationGroupDB,
-              input_age_mth,
-              input_wt_kg
-            );
-            const daily_dose = tbl.dailymgperkgHigh
-              ? input_wt_kg * tbl.dailymgperkgHigh
-              : tbl.fixedDose;
-            let single_dose = daily_dose ? daily_dose / tbl.divisor : 0;
-            tbl.maxSigleDose = tbl.maxSigleDose
-              ? tbl.maxSigleDose
-              : tbl.fixedDose;
-            single_dose =
-              single_dose > tbl.maxSigleDose ? tbl.maxSigleDose : single_dose;
-            if (single_dose) {
-              dosingRecom[j].value = `${indicationGroup}: ${tbl.route} ${single_dose &&
-                daily_dose + "mg"} ${tbl.frequency} ${tbl.duration &&
-                "±" + tbl.duration}`;
-            } else {
-              dosingRecom[j].value = "Safety and efficacy not established";
-            }
-
-            dosingInfo[j] = { title: indicationGroup };
-            const acc = this.getDosingInformation(
-              indicationGroupDB,
-              input_age_mth,
-              input_wt_kg
-            );
-            dosingInfo[j].bgColor = blue[(j + 4) * 100];
-            dosingInfo[j].html = acc;
+            const tbl = this.getDosingRecomendation( indicationGroupDB, input_age_mth, input_wt_kg );
+            dosingRecom[j].value = this.calculateDosingRecomendation(indicationGroup, tbl, input_wt_kg)
+            
+            // dosingInfo[j] = { title: indicationGroup };
+            // const acc = this.getDosingInformation(
+            //   indicationGroupDB,
+            //   input_age_mth,
+            //   input_wt_kg
+            // );
+            // dosingInfo[j].bgColor = blue[(j + 4) * 100];
+            // dosingInfo[j].html = acc;
           }
         }
       }
@@ -148,6 +112,14 @@ class FormulaComponent extends Component {
     const result = { info: dosingInfo, recom: dosingRecom };
     return result;
   };
+  calculateDosingRecomendation = (indication, tbl, input_wt_kg) => {
+    const daily_dose = tbl.dailymgperkgHigh ? input_wt_kg * tbl.dailymgperkgHigh : tbl.fixedDose;
+    const single_dose = daily_dose / tbl.divisor;
+    tbl.maxSigleDose = tbl.maxSigleDose ? tbl.maxSigleDose : tbl.fixedDose;
+    const final_dose = single_dose > parseInt(tbl.maxSigleDose) ? tbl.maxSigleDose : single_dose;
+    return `${indication}: ${tbl.route} ${final_dose + "mg"} ${tbl.frequency}${tbl.duration &&
+      ", " + tbl.duration} <br> ${tbl.additionalInfo}`;
+  }
   getDosingInformation = array => {
     let html = "";
     let u40t = "";
@@ -227,7 +199,7 @@ class FormulaComponent extends Component {
       return calculate;
     });
 
-    if (drugName && indicationGroup && age && weight) {
+    if (drugName && indicationGroup) {
       const calcFormula = this.handleFormulaCalc(indicationGroup, age, weight);
       return (
         <ResultCardHeader classes={classes}>
