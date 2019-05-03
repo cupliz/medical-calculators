@@ -72,7 +72,7 @@ class ControlledExpansionPanels extends React.Component {
                         style={{ backgroundColor: bgColor }}
                       >
                         <Typography className={classes.heading}>
-                          {title} - See Details
+                          See Details
                         </Typography>
                       </ExpansionPanelSummary>
                       <ExpansionPanelDetails>

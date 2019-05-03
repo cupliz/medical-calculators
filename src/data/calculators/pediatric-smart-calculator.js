@@ -18,14 +18,34 @@ const filterUnit = (arr, select) => {
 };
 
 class FormulaComponent extends Component {
-  state = {};
+  state = {
+    sourceString: []
+  };
 
   componentDidMount = async () => {
     let database = await getSheetData("All");
-    database = this.xls2json(database);
+    let sourceString = await getSheetData("Source Strings");
+    sourceString = await this.sourceString2json(sourceString)
+    database = this.database2json(database);
     this.props.fetchDatabase(database);
+    this.setState({sourceString})
   };
-  xls2json = database => {
+  sourceString2json = async (sourceString)=>{
+    const output = [];
+    if (sourceString.length) {
+      sourceString.splice(0, 1);
+      await sourceString.map(ss => {
+        output.push({
+          drug: ss[0],
+          sn: ss[1],
+          title: ss[2],
+          string: ss[3]
+        })
+      })
+    }
+    return output
+  }
+  database2json = database => {
     if (database.length) {
       database.splice(0, 1);
       const output = [];
@@ -60,10 +80,11 @@ class FormulaComponent extends Component {
     }
   };
 
-  handleFormulaCalc = (indicationGroup, input_age_mth, input_wt_kg) => {
+  handleFormulaCalc = (drugName, indicationGroup, input_age_mth, input_wt_kg) => {
     let dosingInfo = {};
     let dosingRecom = {};
     const { database } = this.props.calculator;
+    const {sourceString} = this.state
     if (database) {
       const indicationGroupDB = database.filter(
         db => db.indicationGroup === indicationGroup
@@ -96,7 +117,7 @@ class FormulaComponent extends Component {
           } else {
             const tbl = this.getDosingRecomendation( indicationGroupDB, input_age_mth, input_wt_kg );
             dosingRecom[j].value = this.calculateDosingRecomendation(indicationGroup, tbl, input_wt_kg)
-            
+
             // dosingInfo[j] = { title: indicationGroup };
             // const acc = this.getDosingInformation(
             //   indicationGroupDB,
@@ -105,6 +126,17 @@ class FormulaComponent extends Component {
             // );
             // dosingInfo[j].bgColor = blue[(j + 4) * 100];
             // dosingInfo[j].html = acc;
+          }
+        }
+      }
+      for (let i = 0; i < sourceString.length; i++) {
+        const ss = sourceString[i];
+        if(ss.drug===drugName && ss.title===indicationGroup){
+          console.log(ss.string)
+          dosingInfo[ss.title] = {
+            title: ss.title,
+            bgColor: blue[500],
+            html: ss.string.replace(/(?:\r\n|\r|\n)/g, '<br>')
           }
         }
       }
@@ -117,38 +149,38 @@ class FormulaComponent extends Component {
     const single_dose = daily_dose / tbl.divisor;
     tbl.maxSigleDose = tbl.maxSigleDose ? tbl.maxSigleDose : tbl.fixedDose;
     const final_dose = single_dose > parseInt(tbl.maxSigleDose) ? tbl.maxSigleDose : single_dose;
-    return `${indication}: ${tbl.route} ${final_dose + "mg"} ${tbl.frequency}${tbl.duration &&
-      ", " + tbl.duration} <br> ${tbl.additionalInfo}`;
+    return `${indication}: ${tbl.route} ${final_dose.toFixed(2) + "mg"} ${tbl.frequency}${tbl.duration &&
+      ", " + tbl.duration} <br /> ${tbl.additionalInfo} <br />`;
   }
-  getDosingInformation = array => {
-    let html = "";
-    let u40t = "";
-    let o40t = "";
-    let under40 = [];
-    let over40 = [];
-    for (let y = 0; y < array.length; y++) {
-      const t = array[y];
-      if (t.ageMax) {
-        html += `${"≤" + t.ageMax} months: ≤${t.dailymgperkgHigh} mg/kg/day ${
-          t.route
-        } divided ${t.frequency} for ${t.duration}; ${
-          t.additionalInfo
-        } <br /><br/ >`;
-      } else {
-        if (t.weightMax) {
-          u40t = `${">" + t.ageMin} months and <${t.weightMax} kg: `;
-          under40.push( `${t.dailymgperkgHigh} mg/kg/day ${t.route} divided ${t.frequency}`
-          );
-        } else {
-          o40t = `>${t.weightMin} kg: `;
-          over40.push(`${t.fixedDose}mg ${t.route} ${t.frequency}`);
-        }
-      }
-    }
-    html += under40.length ? u40t + under40.join(" or ") + "<br/ ><br/ >" : "";
-    html += over40.length ? o40t + over40.join(" or ") + "<br/ ><br/ >" : "";
-    return html;
-  };
+  // getDosingInformation = array => {
+  //   let html = "";
+  //   let u40t = "";
+  //   let o40t = "";
+  //   let under40 = [];
+  //   let over40 = [];
+  //   for (let y = 0; y < array.length; y++) {
+  //     const t = array[y];
+  //     if (t.ageMax) {
+  //       html += `${"≤" + t.ageMax} months: ≤${t.dailymgperkgHigh} mg/kg/day ${
+  //         t.route
+  //       } divided ${t.frequency} for ${t.duration}; ${
+  //         t.additionalInfo
+  //       } <br /><br/ >`;
+  //     } else {
+  //       if (t.weightMax) {
+  //         u40t = `${">" + t.ageMin} months and <${t.weightMax} kg: `;
+  //         under40.push( `${t.dailymgperkgHigh} mg/kg/day ${t.route} divided ${t.frequency}`
+  //         );
+  //       } else {
+  //         o40t = `>${t.weightMin} kg: `;
+  //         over40.push(`${t.fixedDose}mg ${t.route} ${t.frequency}`);
+  //       }
+  //     }
+  //   }
+  //   html += under40.length ? u40t + under40.join(" or ") + "<br/ ><br/ >" : "";
+  //   html += over40.length ? o40t + over40.join(" or ") + "<br/ ><br/ >" : "";
+  //   return html;
+  // };
   getDosingRecomendation = (array, input_age_mth, input_wt_kg) => {
     let tbl = {};
     for (let x = 0; x < array.length; x++) {
@@ -200,7 +232,7 @@ class FormulaComponent extends Component {
     });
 
     if (drugName && indicationGroup) {
-      const calcFormula = this.handleFormulaCalc(indicationGroup, age, weight);
+      const calcFormula = this.handleFormulaCalc(drugName, indicationGroup, age, weight);
       return (
         <ResultCardHeader classes={classes}>
           <ResultSmartCalc data={calcFormula} />

@@ -14,6 +14,9 @@ export const getSheetData = async (type) =>{
     case 'Indication':
       range = 'Database!E:E'
       break;
+    case 'Source Strings':
+      range = 'Source Strings!A:D'
+      break;
     default:
       range = 'Database!A:X'
       break;
