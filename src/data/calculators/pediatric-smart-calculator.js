@@ -47,7 +47,7 @@ class FormulaComponent extends Component {
           dailymgperkgLow: data[14] || 0,
           dailymgperkgHigh: data[15] || 0,
           divisor: data[16] || 0,
-          frequency: data[17] || "",
+          frequency: isNaN(data[17]) ? data[17] : `q${data[17]}hr`,
           maxSigleDose: data[18] || "",
           duration: data[19] || "",
           additionalInfo: data[20] || "",
@@ -79,7 +79,7 @@ class FormulaComponent extends Component {
           if (indication) {
             // if (indication === "Severe infections") {
             if (indicationDB.length) {
-              dosingRecom[j] = { caption: indication, value: "" };
+              dosingRecom[j] = { value: "" };
               const tbl = this.getDosingRecomendation(
                 indicationDB,
                 input_age_mth,
@@ -94,10 +94,9 @@ class FormulaComponent extends Component {
                 : tbl.fixedDose;
               single_dose =
                 single_dose > tbl.maxSigleDose ? tbl.maxSigleDose : single_dose;
-              const final_output = `${tbl.route} ${single_dose &&
-                daily_dose + "mg"} ${tbl.frequency &&
-                "q" + tbl.frequency + "hr"} ${tbl.duration &&
-                "±" + tbl.duration}`;
+              const final_output = `${indication}: ${tbl.route} ${single_dose &&
+                daily_dose + "mg"} ${tbl.frequency}${tbl.duration &&
+                ", " + tbl.duration} <br> ${tbl.additionalInfo}`;
               dosingRecom[j].value = final_output;
 
               dosingInfo[j] = { title: indication };
@@ -111,7 +110,7 @@ class FormulaComponent extends Component {
             }
             // }
           } else {
-            dosingRecom[j] = { caption: indicationGroup, value: "" };
+            dosingRecom[j] = { value: "" };
             const tbl = this.getDosingRecomendation(
               indicationGroupDB,
               input_age_mth,
@@ -127,12 +126,11 @@ class FormulaComponent extends Component {
             single_dose =
               single_dose > tbl.maxSigleDose ? tbl.maxSigleDose : single_dose;
             if (single_dose) {
-              dosingRecom[j].value = `${tbl.route} ${single_dose &&
-                daily_dose + "mg"} ${tbl.frequency &&
-                "q" + tbl.frequency + "hr"} ${tbl.duration &&
+              dosingRecom[j].value = `${indicationGroup}: ${tbl.route} ${single_dose &&
+                daily_dose + "mg"} ${tbl.frequency} ${tbl.duration &&
                 "±" + tbl.duration}`;
             } else {
-              dosingRecom[j].value = "-";
+              dosingRecom[j].value = "Safety and efficacy not established";
             }
 
             dosingInfo[j] = { title: indicationGroup };
@@ -161,20 +159,17 @@ class FormulaComponent extends Component {
       if (t.ageMax) {
         html += `${"≤" + t.ageMax} months: ≤${t.dailymgperkgHigh} mg/kg/day ${
           t.route
-        } divided q${t.frequency}hr for ${t.duration}; ${
+        } divided ${t.frequency} for ${t.duration}; ${
           t.additionalInfo
         } <br /><br/ >`;
       } else {
         if (t.weightMax) {
           u40t = `${">" + t.ageMin} months and <${t.weightMax} kg: `;
-          under40.push(
-            `${t.dailymgperkgHigh} mg/kg/day ${t.route} divided q${
-              t.frequency
-            }hr`
+          under40.push( `${t.dailymgperkgHigh} mg/kg/day ${t.route} divided ${t.frequency}`
           );
         } else {
           o40t = `>${t.weightMin} kg: `;
-          over40.push(`${t.fixedDose}mg ${t.route} q${t.frequency}hr`);
+          over40.push(`${t.fixedDose}mg ${t.route} ${t.frequency}`);
         }
       }
     }
@@ -186,7 +181,7 @@ class FormulaComponent extends Component {
     let tbl = {};
     for (let x = 0; x < array.length; x++) {
       const t = array[x];
-      if (input_age_mth <= t.ageMax) {
+      if (input_age_mth < t.ageMax) {
         tbl = t;
         break;
       } else {

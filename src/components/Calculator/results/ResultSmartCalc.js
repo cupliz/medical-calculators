@@ -12,24 +12,23 @@ const styles = theme => ({
     width: "100%"
   },
   heading: {
-    fontSize: theme.typography.pxToRem(18),
+    // fontSize: theme.typography.pxToRem(12),
     color: "white"
   },
-  secondaryHeading: {
-    fontSize: theme.typography.pxToRem(15),
+  result: {
+    // fontSize: theme.typography.pxToRem(12),
     color: theme.palette.text.secondary,
-    textAlign: "right"
+    fontWeight: "bold"
   }
 });
-const ResultText = ({ data }) => {
+const ResultText = ({ data, classes}) => {
   return (
     <div>
       {Object.keys(data.recom).length &&
         Object.keys(data.recom).map((key, index) => {
           const d = data.recom[key];
           return (
-            <div style={{ fontWeight: "bold", fontSize: 20 }} key={index}>
-              {d.caption} {d.value} <br /> <br />
+            <div className={classes.result} key={index} dangerouslySetInnerHTML={{ __html: d.value }}>
             </div>
           );
         })}
@@ -52,11 +51,11 @@ class ControlledExpansionPanels extends React.Component {
     const { classes, data, short } = this.props;
     const { expanded } = this.state;
     if (short) {
-      return <ResultText data={data} />;
+      return <ResultText data={data} classes={classes}/>;
     } else {
       return (
         <div>
-          <ResultText data={data} />
+          <ResultText data={data} classes={classes}/>
           <br />
           <div className={classes.root}>
             {Object.keys(data.info).length
