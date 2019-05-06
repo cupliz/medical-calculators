@@ -58,7 +58,7 @@ class FormulaComponent extends Component {
           indication: data[4],
           subIndication: data[5],
           doseStage: data[7],
-          weightMin: data[8] ? parseInt(data[9].split(">").join("")) : 0,
+          weightMin: data[8] || 0,
           weightMax: data[9] ? parseInt(data[9].split("<").join("")) : 0,
           ageMin: data[10] || 0,
           ageMax: data[11] ? parseInt(data[11].split("<").join("")) : 0,
@@ -131,22 +131,22 @@ class FormulaComponent extends Component {
     return result;
   };
   calculateDosingRecomendation = (tbl, input_wt_kg) => {
-    console.log('calculateDosingRecomendation...')
+    // console.log('calculateDosingRecomendation...')
     let final_output = ''
     if(tbl.dailymgperkgLow){
-      console.log('dailymgperkgLow')
+      // console.log('dailymgperkgLow')
       let ddLow = tbl.dailymgperkgLow*input_wt_kg/tbl.divisor
       let ddHigh = tbl.dailymgperkgHigh*input_wt_kg/tbl.divisor
       ddLow = ddLow > parseInt(tbl.maxSigleDose) ? tbl.maxSigleDose : this.toFloat(ddLow)
       ddHigh = ddHigh > parseInt(tbl.maxSigleDose) ? tbl.maxSigleDose : this.toFloat(ddHigh)
       final_output = `${tbl.route} ${ddLow}mg to ${ddHigh}mg ${tbl.frequency}${tbl.duration && ", " + tbl.duration}` 
     } else if (tbl.dailymgperkgHigh){
-      console.log('dailymgperkgHigh', tbl.sn)
+      // console.log('dailymgperkgHigh', tbl.sn)
       let ddHigh = tbl.dailymgperkgHigh*input_wt_kg/tbl.divisor
       ddHigh = ddHigh > parseInt(tbl.maxSigleDose) ? tbl.maxSigleDose : this.toFloat(ddHigh)
       final_output = `${tbl.route} ${ddHigh}mg ${tbl.frequency}${tbl.duration && ", " + tbl.duration}` 
     } else if (tbl.fixedDose){
-      console.log('fixedDose')
+      // console.log('fixedDose')
       final_output = `${tbl.route} ${tbl.fixedDose}mg ${tbl.frequency}${tbl.duration && ", " + tbl.duration}` 
     }
     final_output += tbl.additionalInfo ? `; ${tbl.additionalInfo}` : ''
@@ -156,30 +156,27 @@ class FormulaComponent extends Component {
     let output = ''
     let u40or = []
     let o40or = []
-    let show=false
     for (let x = 0; x < array.length; x++) {
       const t = array[x];
       // console.log(t.drug, t.sn, input_age_mth, t.ageMax)
       if (input_age_mth < t.ageMax) {
-        console.log('<3months')
+        // console.log('<3months')
         output = this.calculateDosingRecomendation(t, input_wt_kg)
-        show = true
         break;
-      }else if(input_age_mth >= t.ageMin){
+      }
+      if(input_age_mth >= t.ageMin){
         const checkUnderWeightLimit = t.weightMax && input_wt_kg<t.weightMax
         const checkOverWeightLimit = t.weightMin && input_wt_kg>=t.weightMin
         if(checkUnderWeightLimit && !t.weightMin){
-          console.log('under <40')
+          // console.log('under <40')
           if(t.doseStage.includes('or1') || t.doseStage.includes('or2')){
             u40or.push(this.calculateDosingRecomendation(t, input_wt_kg))
           }
-          show = true
         }else if(checkOverWeightLimit && !t.weightMax){
-          console.log('over >40', input_wt_kg, t.weightMin, t.weightMax)
+          // console.log('over >40', input_wt_kg, t.weightMin, t.weightMax)
           if(t.doseStage.includes('or1') || t.doseStage.includes('or2')){
             o40or.push(this.calculateDosingRecomendation(t, input_wt_kg))
           }
-          show = true
         }else{
           console.log('weight filled', t.weightMin, t.weightMax)
         }
@@ -189,13 +186,9 @@ class FormulaComponent extends Component {
         // }
       }
     }
-    if(show){
-      output += u40or.length ? u40or.join(' or '): ''
-      output += o40or.length ? o40or.join(' or '): ''
-      return `${indication}: ${output} <br /><br />`
-    }else{
-      return ''
-    }
+    output += u40or.length ? u40or.join(' or '): ''
+    output += o40or.length ? o40or.join(' or '): ''
+    return `${indication}: ${output} <br /><br />`
   };
 
   render() {
