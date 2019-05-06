@@ -9,7 +9,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const styles = theme => ({
   root: {
-    width: "100%"
+    width: "100%",
   },
   heading: {
     // fontSize: theme.typography.pxToRem(12),
@@ -60,7 +60,7 @@ class ControlledExpansionPanels extends React.Component {
           <div className={classes.root}>
             {Object.keys(data.info).length
               ? Object.keys(data.info).map((key, index) => {
-                  const { title, bgColor, html } = data.info[key];
+                  const { bgColor, html } = data.info[key];
                   return (
                     <ExpansionPanel
                       key={index}
