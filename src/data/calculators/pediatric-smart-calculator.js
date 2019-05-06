@@ -178,7 +178,7 @@ class FormulaComponent extends Component {
             o40or.push(this.calculateDosingRecomendation(t, input_wt_kg))
           }
         }else{
-          console.log('weight filled', t.weightMin, t.weightMax)
+          // console.log('weight filled', t.weightMin, t.weightMax)
         }
         // if(checkOverWeightLimit && checkUnderWeightLimit){
         //   console.log('wieght both filled')
@@ -220,7 +220,7 @@ class FormulaComponent extends Component {
       return calculate;
     });
 
-    if (drugName && indicationGroup) {
+    if (drugName && indicationGroup && age && weight) {
       const calcFormula = this.handleFormulaCalc(drugName, indicationGroup, age, parseFloat(weight));
       return (
         <ResultCardHeader classes={classes}>
