@@ -5,20 +5,20 @@ const apiKey = 'AIzaSyD8k4EJEdB4rdpIT2NMrZGIeqkDCm8uTyw'
 export const getSheetData = async (type) =>{
   let range = ''
   switch (type) {
-    case 'Drug':
-      range = 'Database!A:A'
-      break;
-    case 'Indication Group':
-      range = 'Database!D:D'
-      break;
-    case 'Indication':
-      range = 'Database!E:E'
-      break;
     case 'Source Strings':
       range = 'Source Strings!A:D'
       break;
+    case 'Drug':
+      range = 'NEW_Database!A:A'
+      break;
+    case 'Indication Group':
+      range = 'NEW_Database!D:D'
+      break;
+    case 'Indication':
+      range = 'NEW_Database!E:E'
+      break;
     default:
-      range = 'Database!A:X'
+      range = 'NEW_Database!A:X'
       break;
   }
   if(range) {
