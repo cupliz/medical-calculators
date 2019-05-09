@@ -59,9 +59,9 @@ class FormulaComponent extends Component {
           subIndication: data[5],
           doseStage: data[7],
           weightMin: data[8] || 0,
-          weightMax: data[9] ? parseInt(data[9].split("<").join("")) : 0,
+          weightMax: data[9] ? parseFloat(data[9].split("<").join("")) : 0,
           ageMin: data[10] || 0,
-          ageMax: data[11] ? parseInt(data[11].split("<").join("")) : 0,
+          ageMax: data[11] ? parseFloat(data[11].split("<").join("")) : 0,
           route: data[12],
           fixedDose: data[13] || 0,
           dailymgperkgLow: data[14] || 0,
@@ -149,46 +149,84 @@ class FormulaComponent extends Component {
       // console.log('fixedDose')
       final_output = `${tbl.route} ${tbl.fixedDose}mg ${tbl.frequency}${tbl.duration && ", " + tbl.duration}` 
     }
-    final_output += tbl.additionalInfo ? `; ${tbl.additionalInfo}` : ''
+    final_output += tbl.additionalInfo ? ` ${tbl.additionalInfo}` : ''
     return final_output
   }
   getDosingRecomendation = (indication, array, input_age_mth, input_wt_kg) => {
     let output = ''
-    let u40or = []
-    let o40or = []
+    let underOR = []
+    let overOR = []
+    let otherDS = []
     for (let x = 0; x < array.length; x++) {
       const t = array[x];
-      // console.log(t.drug, t.sn, input_age_mth, t.ageMax)
-      if (input_age_mth < t.ageMax) {
-        // console.log('<3months')
-        output = this.calculateDosingRecomendation(t, input_wt_kg)
-        break;
-      }
-      if(input_age_mth >= t.ageMin){
-        const checkUnderWeightLimit = t.weightMax && input_wt_kg<t.weightMax
-        const checkOverWeightLimit = t.weightMin && input_wt_kg>=t.weightMin
-        if(checkUnderWeightLimit && !t.weightMin){
-          // console.log('under <40')
-          if(t.doseStage.includes('or1') || t.doseStage.includes('or2')){
-            u40or.push(this.calculateDosingRecomendation(t, input_wt_kg))
-          }
-        }else if(checkOverWeightLimit && !t.weightMax){
-          // console.log('over >40', input_wt_kg, t.weightMin, t.weightMax)
-          if(t.doseStage.includes('or1') || t.doseStage.includes('or2')){
-            o40or.push(this.calculateDosingRecomendation(t, input_wt_kg))
-          }
-        }else{
-          // console.log('weight filled', t.weightMin, t.weightMax)
+      if(t.ageMax && t.ageMin){
+        // console.log('both age filled')
+      }else if (t.ageMax) {
+        if(input_age_mth < t.ageMax && input_age_mth > t.ageMin){
+          // console.log(`<${t.ageMax}`, t.sn)
+          output = this.calculateDosingRecomendation(t, input_wt_kg) 
         }
-        // if(checkOverWeightLimit && checkUnderWeightLimit){
-        //   console.log('wieght both filled')
-        //   output += `<br>${t.doseStage} ${this.calculateDosingRecomendation(t, input_wt_kg)}, `          
-        // }
+      }else if(!t.ageMax){
+        if(input_age_mth >= t.ageMin){
+          if(t.weightMax && !t.weightMin && input_wt_kg<t.weightMax){
+            // console.log(`under <${t.weightMin}`, t.sn, input_wt_kg, t.weightMin, t.weightMax)
+            if(t.doseStage.includes('or1') || t.doseStage.includes('or2')){
+              let dotComma = t.doseStage.split(';')
+              if(dotComma.length > 1){
+                underOR.push(`${dotComma[1] && dotComma[1]} ${this.calculateDosingRecomendation(t, input_wt_kg)}, `)
+              }else{
+                underOR.push(`${this.calculateDosingRecomendation(t, input_wt_kg)} `)
+              }
+            } else if(t.doseStage){
+              otherDS.push(`${t.doseStage} ${this.calculateDosingRecomendation(t, input_wt_kg)} `) 
+            }else{
+              output = this.calculateDosingRecomendation(t, input_wt_kg)
+            }
+          }
+          if(!t.weightMax && t.weightMin && input_wt_kg>=t.weightMin){
+            // console.log(`over >${t.weightMax}`, t.sn, input_wt_kg, t.weightMin, t.weightMax)
+            if(t.doseStage.includes('or1') || t.doseStage.includes('or2')){
+              let dotComma = t.doseStage.split(';')
+              if(dotComma.length > 1){
+                overOR.push(`${dotComma[1] && dotComma[1]} ${this.calculateDosingRecomendation(t, input_wt_kg)}, `)
+              }else{
+                overOR.push(`${this.calculateDosingRecomendation(t, input_wt_kg)} `)
+              }
+            } else if(t.doseStage){
+              otherDS.push(`${t.doseStage} ${this.calculateDosingRecomendation(t, input_wt_kg)} `) 
+            }else{
+              output = this.calculateDosingRecomendation(t, input_wt_kg)
+            }
+          }
+          if(t.weightMax && t.weightMin){
+            if(input_wt_kg > t.weightMin && input_wt_kg < t.weightMax){
+              // console.log('weight filled', input_wt_kg, t.weightMin, t.weightMax)
+              output = this.calculateDosingRecomendation(t, input_wt_kg)
+            }
+          }
+          if (!t.weightMax && !t.weightMin){
+            // console.log('weight empty', t.sn, input_wt_kg, t.weightMin, t.weightMax)
+            if(t.doseStage.includes('or1') || t.doseStage.includes('or2')){
+              let dotComma = t.doseStage.split(';')
+              if(dotComma.length > 1){
+                overOR.push(`${dotComma[1] && dotComma[1]} ${this.calculateDosingRecomendation(t, input_wt_kg)}, `)
+              }else{
+                overOR.push(`${this.calculateDosingRecomendation(t, input_wt_kg)} `)
+              }
+            } else if(t.doseStage){
+              otherDS.push(`${t.doseStage} ${this.calculateDosingRecomendation(t, input_wt_kg)} `) 
+            }else{
+              output = this.calculateDosingRecomendation(t, input_wt_kg)
+            }
+          }  
+        }
       }
+      
     }
-    output += u40or.length ? u40or.join(' or '): ''
-    output += o40or.length ? o40or.join(' or '): ''
-    return `${indication}: ${output} <br /><br />`
+    output += underOR.length ? underOR.join(' or '): ''
+    output += overOR.length ? overOR.join(' or '): ''
+    output += otherDS.length ? otherDS.join(', '): ''
+    return output ? `<b>${indication}:</b> ${output} <br /><br />` : ''
   };
 
   render() {
@@ -220,8 +258,8 @@ class FormulaComponent extends Component {
       return calculate;
     });
 
-    if (drugName && indicationGroup && age && weight) {
-      const calcFormula = this.handleFormulaCalc(drugName, indicationGroup, age, parseFloat(weight));
+    if (drugName && indicationGroup && (age || weight)) {
+      const calcFormula = this.handleFormulaCalc(drugName, indicationGroup, parseFloat(age), parseFloat(weight));
       return (
         <ResultCardHeader classes={classes}>
           <ResultSmartCalc data={calcFormula} />
