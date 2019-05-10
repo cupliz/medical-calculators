@@ -98,28 +98,15 @@ class FormulaComponent extends Component {
     if (tbl.dailymgperkgLow) {
       let ddLow = (tbl.dailymgperkgLow * input_wt_kg) / tbl.divisor;
       let ddHigh = (tbl.dailymgperkgHigh * input_wt_kg) / tbl.divisor;
-      ddLow =
-        ddLow > parseFloat(tbl.maxSigleDose)
-          ? tbl.maxSigleDose
-          : this.toFloat(ddLow);
-      ddHigh =
-        ddHigh > parseFloat(tbl.maxSigleDose)
-          ? tbl.maxSigleDose
-          : this.toFloat(ddHigh);
-      final_output = `${tbl.route} ${ddLow}${tbl.doseUnit} to ${ddHigh}${
-        tbl.doseUnit
-      } ${tbl.frequency}${tbl.duration && ", " + tbl.duration}`;
+      ddLow = ddLow > parseFloat(tbl.maxSigleDose) ? tbl.maxSigleDose : this.toFloat(ddLow);
+      ddHigh = ddHigh > parseFloat(tbl.maxSigleDose) ? tbl.maxSigleDose : this.toFloat(ddHigh);
+      final_output = `${tbl.route} ${ddLow}${tbl.doseUnit} to ${ddHigh}${ tbl.doseUnit } ${tbl.frequency}${tbl.duration && ", " + tbl.duration}`;
     } else if (tbl.dailymgperkgHigh) {
       let ddHigh = (tbl.dailymgperkgHigh * input_wt_kg) / tbl.divisor;
-      ddHigh =
-        ddHigh > parseFloat(tbl.maxSigleDose)
-          ? tbl.maxSigleDose
-          : this.toFloat(ddHigh);
-      final_output = `${tbl.route} ${ddHigh}mg ${tbl.frequency}${tbl.duration &&
-        ", " + tbl.duration}`;
+      ddHigh = ddHigh > parseFloat(tbl.maxSigleDose) ? tbl.maxSigleDose : this.toFloat(ddHigh);
+      final_output = `${tbl.route} ${ddHigh}mg ${tbl.frequency}${tbl.duration && ", " + tbl.duration} `;
     } else if (tbl.fixedDose) {
-      final_output = `${tbl.route} ${tbl.fixedDose}mg ${
-        tbl.frequency
+      final_output = `${tbl.route} ${tbl.fixedDose}mg ${ tbl.frequency
       }${tbl.duration && ", " + tbl.duration}`;
     }
     final_output += tbl.additionalInfo ? ` ${tbl.additionalInfo}` : "";
@@ -130,101 +117,143 @@ class FormulaComponent extends Component {
     let underOR = [];
     let overOR = [];
     let otherDS = [];
+    let subIndicationArr = {}
+    let subIndicationOR = []
     for (let x = 0; x < array.length; x++) {
       const t = array[x];
-      if (t.ageMax && t.ageMin) {
-        // console.log('both age filled')
-      } else if (t.ageMax) {
-        if (input_age_mth < t.ageMax && input_age_mth > t.ageMin) {
-          output = this.calculateDosingRecomendation(t, input_wt_kg);
-          break;
+      if (t.ageMax) {
+        if (!t.ageMin) {
+          if(input_age_mth < t.ageMax){
+            // console.log(`ageMax 1, ageMin 0; ${input_age_mth}<${t.ageMax}=${input_age_mth < t.ageMax}`, t.sn)
+            output = `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} `
+          }
+        }else if(t.ageMin){
+          if(input_age_mth >= t.ageMin && input_age_mth < t.ageMax){
+            // console.log('ageMax 1, ageMin 1; both AGE filled', t.sn)
+            if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+              let dotComma = t.doseStage.split(";");
+              if (dotComma.length > 1) {
+                overOR.push( `${dotComma[1] && dotComma[1]} ${this.calculateDosingRecomendation( t, input_wt_kg )}, `
+                );
+              } else {
+                overOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
+              }
+            } else if (t.doseStage) {
+              otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} ` );
+            } else {
+              output = this.calculateDosingRecomendation(t, input_wt_kg);
+            }
+          }
         }
       } else if (!t.ageMax) {
         if (input_age_mth >= t.ageMin) {
-          if (t.weightMax && !t.weightMin && input_wt_kg < t.weightMax) {
-            if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
-              let dotComma = t.doseStage.split(";");
-              if (dotComma.length > 1) {
-                underOR.push(
-                  `${dotComma[1] &&
-                    dotComma[1]} ${this.calculateDosingRecomendation(
-                    t,
-                    input_wt_kg
-                  )}, `
-                );
-              } else {
-                underOR.push(
-                  `${this.calculateDosingRecomendation(t, input_wt_kg)} `
-                );
+          if (t.weightMax && !t.weightMin) {
+            if(input_wt_kg < t.weightMax){
+              // console.log(`weightMin 0, weightMax 1 - under <${t.weightMax}`)
+              if(t.subIndication){
+                if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+                  subIndicationOR.push(this.calculateDosingRecomendation(t, input_wt_kg));
+                  subIndicationArr[t.subIndication] = subIndicationOR.join(' or ')
+                }else{
+                  subIndicationArr[t.subIndication] = this.calculateDosingRecomendation(t, input_wt_kg)
+                }
+              }else{
+                if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+                  let dotComma = t.doseStage.split(";");
+                  if (dotComma.length > 1) {
+                    underOR.push( `${dotComma[1] && dotComma[1]} ${this.calculateDosingRecomendation( t, input_wt_kg )}, `
+                    );
+                  } else {
+                    underOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
+                  }
+                } else if (t.doseStage) {
+                  otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} ` );
+                } else {
+                  output = this.calculateDosingRecomendation(t, input_wt_kg);
+                }
               }
-            } else if (t.doseStage) {
-              otherDS.push(
-                `${t.doseStage} ${this.calculateDosingRecomendation(
-                  t,
-                  input_wt_kg
-                )} `
-              );
-            } else {
-              output = this.calculateDosingRecomendation(t, input_wt_kg);
             }
           }
-          if (!t.weightMax && t.weightMin && input_wt_kg >= t.weightMin) {
-            if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
-              let dotComma = t.doseStage.split(";");
-              if (dotComma.length > 1) {
-                overOR.push(
-                  `${dotComma[1] &&
-                    dotComma[1]} ${this.calculateDosingRecomendation(
-                    t,
-                    input_wt_kg
-                  )}, `
-                );
-              } else {
-                overOR.push(
-                  `${this.calculateDosingRecomendation(t, input_wt_kg)} `
-                );
+          if (!t.weightMax && t.weightMin ) {
+            if(input_wt_kg >= t.weightMin){
+              // console.log(`weightMin 1, weightMax 0; over >${t.weightMax}`)
+              if(t.subIndication){
+                if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+                  subIndicationOR.push(this.calculateDosingRecomendation(t, input_wt_kg));
+                  subIndicationArr[t.subIndication] = subIndicationOR.join(' or ')
+                }else{
+                  subIndicationArr[t.subIndication] = this.calculateDosingRecomendation(t, input_wt_kg)
+                }
+              }else{
+                if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+                  let dotComma = t.doseStage.split(";");
+                  if (dotComma.length > 1) {
+                    overOR.push( `${dotComma[1] && dotComma[1]} ${this.calculateDosingRecomendation( t, input_wt_kg )}, `
+                    );
+                  } else {
+                    overOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
+                  }
+                } else if (t.doseStage) {
+                  otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} ` );
+                } else {
+                  output = this.calculateDosingRecomendation(t, input_wt_kg);
+                }
               }
-            } else if (t.doseStage) {
-              otherDS.push(
-                `${t.doseStage} ${this.calculateDosingRecomendation(
-                  t,
-                  input_wt_kg
-                )} `
-              );
-            } else {
-              output = this.calculateDosingRecomendation(t, input_wt_kg);
             }
           }
           if (t.weightMax && t.weightMin) {
-            if (input_wt_kg > t.weightMin && input_wt_kg < t.weightMax) {
-              output = this.calculateDosingRecomendation(t, input_wt_kg);
+            if (input_wt_kg >= t.weightMin && input_wt_kg < t.weightMax) {
+              // console.log(`weightMax 1, weightMin 1; both weight filled`, t.sn)
+              if(t.subIndication){
+                if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+                  subIndicationOR.push(this.calculateDosingRecomendation(t, input_wt_kg));
+                  subIndicationArr[t.subIndication] = subIndicationOR.join(' or ')
+                }else{
+                  subIndicationArr[t.subIndication] = this.calculateDosingRecomendation(t, input_wt_kg)
+                }
+              }else{
+                if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+                  let dotComma = t.doseStage.split(";");
+                  if (dotComma.length > 1) {
+                    overOR.push( `${dotComma[1] && dotComma[1]} ${this.calculateDosingRecomendation( t, input_wt_kg )}, `
+                    );
+                  } else {
+                    overOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
+                  }
+                } else if (t.doseStage) {
+                  otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} ` );
+                } else {
+                  output = this.calculateDosingRecomendation(t, input_wt_kg);
+                }
+              }
             }
           }
           if (!t.weightMax && !t.weightMin) {
-            if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
-              let dotComma = t.doseStage.split(";");
-              if (dotComma.length > 1) {
-                overOR.push(
-                  `${dotComma[1] &&
-                    dotComma[1]} ${this.calculateDosingRecomendation(
-                    t,
-                    input_wt_kg
-                  )}, `
+            // console.log(`weightMax 0, weightMin 0; both weight empty`, t.sn)
+            if(t.subIndication){
+              if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+                subIndicationOR.push(this.calculateDosingRecomendation(t, input_wt_kg));
+                subIndicationArr[t.subIndication] = subIndicationOR.join(' or ')
+              }else{
+                subIndicationArr[t.subIndication] = this.calculateDosingRecomendation(t, input_wt_kg)
+              }
+            }else{
+              if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
+                let dotComma = t.doseStage.split(";");
+                if (dotComma.length > 1) {
+                  // console.log('OR with ;', t.sn)
+                  overOR.push( `${dotComma[1] && dotComma[1]} ${this.calculateDosingRecomendation( t, input_wt_kg )}, ` );
+                } else {
+                  // console.log('OR without ;', t.sn)
+                  overOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
+                }
+              } else if (t.doseStage) {
+                // console.log('other dose stage')
+                otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} `
                 );
               } else {
-                overOR.push(
-                  `${this.calculateDosingRecomendation(t, input_wt_kg)} `
-                );
+                output = this.calculateDosingRecomendation(t, input_wt_kg);
               }
-            } else if (t.doseStage) {
-              otherDS.push(
-                `${t.doseStage} ${this.calculateDosingRecomendation(
-                  t,
-                  input_wt_kg
-                )} `
-              );
-            } else {
-              output = this.calculateDosingRecomendation(t, input_wt_kg);
             }
           }
         }
@@ -233,33 +262,30 @@ class FormulaComponent extends Component {
     output += underOR.length ? underOR.join(" or ") : "";
     output += overOR.length ? overOR.join(" or ") : "";
     output += otherDS.length ? otherDS.join(", ") : "";
+    if(Object.keys(subIndicationArr).length){
+      for (let i = 0; i < Object.keys(subIndicationArr).length; i++) {
+        const subIndication = Object.keys(subIndicationArr)[i];
+        output += `<br>${subIndication}: ${subIndicationArr[subIndication]}`
+      }
+    }
     return output ? `<b>${indication}:</b> ${output} <br /><br />` : "";
   };
-  handleFormulaCalc = (
-    drugName,
-    indicationGroup,
-    input_age_mth,
-    input_wt_kg
-  ) => {
+  handleFormulaCalc = ( drugName, indicationGroup, input_age_mth, input_wt_kg ) => {
     let dosingInfo = [];
     let dosingRecom = [];
     const { database } = this.props.calculator;
     const { sourceString } = this.state;
     if (database) {
-      const indicationGroupDB = database.filter(
-        db => db.indicationGroup === indicationGroup && db.drug === drugName
-      );
+      const indicationGroupDB = database.filter( db => db.indicationGroup === indicationGroup && db.drug === drugName );
       let indications = indicationGroupDB.map(igdb => igdb.indication);
       indications = _.uniq(indications);
       if (indications.length) {
         for (let j = 0; j < indications.length; j++) {
           const indication = indications[j];
-          const indicationDB = indicationGroupDB.filter(
-            igdb => igdb.indication === indication
-          );
+          const indicationDB = indicationGroupDB.filter( igdb => igdb.indication === indication );
           let dosingRecomValue = "";
           if (indication) {
-            // if (indication === "Severe infections") {
+            // if (indication === "Prophylaxis") {
             if (indicationDB.length) {
               dosingRecomValue = this.getDosingRecomendation(
                 indication,
@@ -303,7 +329,6 @@ class FormulaComponent extends Component {
       backgroundColor: blue[700]
     };
     const { questions } = data;
-    // extract needed field vars
     let drugName = null;
     let indicationGroup = null;
     let age = 0;
@@ -329,8 +354,7 @@ class FormulaComponent extends Component {
       return calculate;
     });
 
-    if (drugName && indicationGroup) {
-      //&& (age || weight)
+    if (drugName && indicationGroup && (age || weight)) {
       const calcFormula = this.handleFormulaCalc(
         drugName,
         indicationGroup,

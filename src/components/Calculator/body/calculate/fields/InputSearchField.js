@@ -61,8 +61,8 @@ function renderInputComponent(inputProps) {
 }
 
 function renderSuggestion(suggestion, { query, isHighlighted }) {
-  const matches = match(suggestion.label, query);
-  const parts = parse(suggestion.label, matches);
+  const matches = match(suggestion, query);
+  const parts = parse(suggestion, matches);
 
   return (
     <MenuItem selected={isHighlighted} component="div">
@@ -87,13 +87,12 @@ function getSuggestions(suggestions, value) {
   const inputValue = deburr(value.trim()).toLowerCase();
   const inputLength = inputValue.length;
   let count = 0;
-
   return inputLength === 0
     ? []
     : suggestions.filter(suggestion => {
         const keep =
           count < 5 &&
-          suggestion.label.slice(0, inputLength).toLowerCase() === inputValue;
+          suggestion.slice(0, inputLength).toLowerCase() === inputValue;
 
         if (keep) {
           count += 1;
@@ -104,7 +103,7 @@ function getSuggestions(suggestions, value) {
 }
 
 function getSuggestionValue(suggestion) {
-  return suggestion.label;
+  return suggestion;
 }
 
 class IntegrationAutosuggest extends React.Component {
@@ -115,9 +114,8 @@ class IntegrationAutosuggest extends React.Component {
   };
 
   handleSuggestionsFetchRequested = ({ value }) => {
-    this.setState({
-      suggestions: getSuggestions(this.state.suggestionsList, value)
-    });
+    const suggestions = getSuggestions(this.state.suggestionsList, value)
+    this.setState({ suggestions });
   };
 
   handleSuggestionsClearRequested = () => {
@@ -135,11 +133,11 @@ class IntegrationAutosuggest extends React.Component {
   };
 
   componentDidMount = async () => {
-    const output = await getSheetData(this.props.values)
-    output.splice(0,1)
-    let data = output.map((d)=>d[0])
-    const sortedData = _.uniq(data)
-    const suggestionsList = sortedData.map(d=>({label:d}))
+    const rawData = await getSheetData(this.props.values)
+    rawData.splice(0,1)
+    let data = rawData.map((d)=>d[0])
+    let sortedData = _.uniq(data)
+    const suggestionsList = _.compact(sortedData)
     await this.setState({suggestionsList})
   }
   render() {
