@@ -8,7 +8,6 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import blue from "@material-ui/core/colors/blue";
 
 export const ResultCardText = ({ data }) => {
-  // console.log(data)
   return (
     <div>
       {data.length ? (
@@ -68,13 +67,13 @@ class ControlledExpansionPanels extends React.Component {
   };
 
   render() {
-    const { panels } = this.props;
+    const { data } = this.props;
     const { expanded } = this.state;
     return (
       <div>
-        {panels.length &&
-          panels.map((panel, index) => {
-            const { title, html } = panel;
+        {data.length &&
+          data.map((value, index) => {
+            const { title, html } = value;
             return (
               <ExpansionPanel
                 key={index}

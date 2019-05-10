@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import _ from "lodash";
-import blue from "@material-ui/core/colors/blue";
-import ResultCardHeader from "../../components/Calculator/results/ResultCardHeader";
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import Card from '@material-ui/core/Card';
+import Typography from "@material-ui/core/Typography";
 import {
   ResultCardText,
   ResultCardDropDown
@@ -20,8 +22,7 @@ const unitData = {
 };
 
 const filterUnit = (arr, select) => {
-  return arr.filter(item => (item.unit === select ? item.value : null))[0]
-    .value;
+  return arr.filter(item => (item.unit === select ? item.value : null))[0].value;
 };
 
 class FormulaComponent extends Component {
@@ -313,7 +314,6 @@ class FormulaComponent extends Component {
         if (ss.drug === drugName && ss.title === indicationGroup) {
           dosingInfo.push({
             title: ss.title,
-            bgColor: blue[500],
             html: ss.string.replace(/(?:\r\n|\r|\n)/g, "<br>")
           });
         }
@@ -325,9 +325,6 @@ class FormulaComponent extends Component {
 
   render() {
     const { classes, data } = this.props;
-    classes.ExpansionPanelSummary = {
-      backgroundColor: blue[700]
-    };
     const { questions } = data;
     let drugName = null;
     let indicationGroup = null;
@@ -362,12 +359,18 @@ class FormulaComponent extends Component {
         parseFloat(weight)
       );
       return (
-        <div>
-          <ResultCardHeader classes={classes}>
+        <Card>
+          <CardHeader 
+            className={classes.header}
+            title={ 
+              <Typography className={classes.title}> Result </Typography> 
+            } 
+          />
+          <CardContent>
             <ResultCardText data={calcFormula.recom} />
-          </ResultCardHeader>
-          <ResultCardDropDown classes={classes} panels={calcFormula.info} />
-        </div>
+          </CardContent>
+          <ResultCardDropDown data={calcFormula.info} />
+        </Card>
       );
     } else {
       return null;
@@ -432,21 +435,22 @@ export const config = {
   notes: {
     // type: "unordered-list",
     // content: [
-    //   "Calculated using the 4-2-1 rule",
-    //   "For the first 10 kg of body weight, 4 mL of fluid is administered per kg",
-    //   "For the second 10 kg, 2 mL/kg/hr is administered",
-    //   "For each additional kg over 20kg, 1mL/kg/hr should be given",
-    //   "The formula comes from elegant work done in the 1950s that correlated caloric expenditure with fluid loss"
+    //   "Content Notes 1",
+    //   "Content Notes 2",
     // ]
   },
   references: {
     // type: "ordered-list",
     // content: [
-    //   "Holliday MA, Segar WE. The maintenance need for water in parenteral fluid therapy. Pediatrics. Vol. 19, 1957 823-832."
+    //   "Content References 1",
+    //   "Content References 2",
     // ]
   },
   formula: {
     // type: "paragraph",
-    // content: ["Calculated using the 4-2-1 rule; see notes"]
+    // content: [
+    //   "Content Formula 1",
+    //   "Content Formula 2",
+    // ]
   }
 };
