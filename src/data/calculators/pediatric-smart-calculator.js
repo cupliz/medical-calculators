@@ -88,9 +88,9 @@ class FormulaComponent extends Component {
       return [];
     }
   };
-  toFloat(input, zero = 2) {
+  toFloat(input) {
     if (Math.round(input) !== input) {
-      input = input.toFixed(zero);
+      input = (Math.round(input * 100)/100);
     }
     return input;
   }
@@ -105,9 +105,9 @@ class FormulaComponent extends Component {
     } else if (tbl.dailymgperkgHigh) {
       let ddHigh = (tbl.dailymgperkgHigh * input_wt_kg) / tbl.divisor;
       ddHigh = ddHigh > parseFloat(tbl.maxSigleDose) ? tbl.maxSigleDose : this.toFloat(ddHigh);
-      final_output = `${tbl.route} ${ddHigh}mg ${tbl.frequency}${tbl.duration && ", " + tbl.duration} `;
+      final_output = `${tbl.route} ${ddHigh} ${tbl.doseUnit} ${tbl.frequency}${tbl.duration && ", " + tbl.duration} `;
     } else if (tbl.fixedDose) {
-      final_output = `${tbl.route} ${tbl.fixedDose}mg ${ tbl.frequency
+      final_output = `${tbl.route} ${tbl.fixedDose} ${tbl.doseUnit} ${ tbl.frequency
       }${tbl.duration && ", " + tbl.duration}`;
     }
     final_output += tbl.additionalInfo ? ` ${tbl.additionalInfo}` : "";
@@ -126,7 +126,7 @@ class FormulaComponent extends Component {
         if (!t.ageMin) {
           if(input_age_mth < t.ageMax){
             // console.log(`ageMax 1, ageMin 0; ${input_age_mth}<${t.ageMax}=${input_age_mth < t.ageMax}`, t.sn)
-            output = `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} `
+            output = `${t.doseStage}: ${this.calculateDosingRecomendation( t, input_wt_kg )} `
           }
         }else if(t.ageMin){
           if(input_age_mth >= t.ageMin && input_age_mth < t.ageMax){
@@ -140,7 +140,7 @@ class FormulaComponent extends Component {
                 overOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
               }
             } else if (t.doseStage) {
-              otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} ` );
+              otherDS.push( `${t.doseStage}: ${this.calculateDosingRecomendation( t, input_wt_kg )}` );
             } else {
               output = this.calculateDosingRecomendation(t, input_wt_kg);
             }
@@ -168,7 +168,7 @@ class FormulaComponent extends Component {
                     underOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
                   }
                 } else if (t.doseStage) {
-                  otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} ` );
+                  otherDS.push( `${t.doseStage}: ${this.calculateDosingRecomendation( t, input_wt_kg )}` );
                 } else {
                   output = this.calculateDosingRecomendation(t, input_wt_kg);
                 }
@@ -195,7 +195,7 @@ class FormulaComponent extends Component {
                     overOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
                   }
                 } else if (t.doseStage) {
-                  otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} ` );
+                  otherDS.push( `${t.doseStage}: ${this.calculateDosingRecomendation( t, input_wt_kg )}` );
                 } else {
                   output = this.calculateDosingRecomendation(t, input_wt_kg);
                 }
@@ -222,7 +222,7 @@ class FormulaComponent extends Component {
                     overOR.push( `${this.calculateDosingRecomendation(t, input_wt_kg)} ` );
                   }
                 } else if (t.doseStage) {
-                  otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} ` );
+                  otherDS.push( `${t.doseStage}: ${this.calculateDosingRecomendation( t, input_wt_kg )}` );
                 } else {
                   output = this.calculateDosingRecomendation(t, input_wt_kg);
                 }
@@ -250,7 +250,7 @@ class FormulaComponent extends Component {
                 }
               } else if (t.doseStage) {
                 // console.log('other dose stage')
-                otherDS.push( `${t.doseStage} ${this.calculateDosingRecomendation( t, input_wt_kg )} `
+                otherDS.push( `${t.doseStage}: ${this.calculateDosingRecomendation( t, input_wt_kg )}`
                 );
               } else {
                 output = this.calculateDosingRecomendation(t, input_wt_kg);
@@ -262,7 +262,7 @@ class FormulaComponent extends Component {
     }
     output += underOR.length ? underOR.join(" or ") : "";
     output += overOR.length ? overOR.join(" or ") : "";
-    output += otherDS.length ? otherDS.join(", ") : "";
+    output += otherDS.length ? otherDS.join("; ") : "";
     if(Object.keys(subIndicationArr).length){
       for (let i = 0; i < Object.keys(subIndicationArr).length; i++) {
         const subIndication = Object.keys(subIndicationArr)[i];
@@ -351,7 +351,7 @@ class FormulaComponent extends Component {
       return calculate;
     });
 
-    if (drugName && indicationGroup && (age || weight)) {
+    if (drugName && indicationGroup && age && weight) {
       const calcFormula = this.handleFormulaCalc(
         drugName,
         indicationGroup,
@@ -363,7 +363,7 @@ class FormulaComponent extends Component {
           <CardHeader 
             className={classes.header}
             title={ 
-              <Typography className={classes.title}> Result </Typography> 
+              <Typography className={classes.title}> Calculated Dose(s) </Typography> 
             } 
           />
           <CardContent>

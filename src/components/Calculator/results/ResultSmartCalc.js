@@ -10,14 +10,6 @@ import blue from "@material-ui/core/colors/blue";
 export const ResultCardText = ({ data }) => {
   return (
     <div>
-      {data.length ? (
-        <Typography style={{ color: "grey", fontSize: "14px" }}>
-          Dosing Recommendations
-        </Typography>
-      ) : (
-        ""
-      )}
-      <br />
       {data.length
         ? data.map((value, index) => {
             return (
@@ -69,27 +61,20 @@ class ControlledExpansionPanels extends React.Component {
   render() {
     const { data } = this.props;
     const { expanded } = this.state;
+
+    const { title, html } = data.length ? data[0] : '';
     return (
-      <div>
-        {data.length &&
-          data.map((value, index) => {
-            const { title, html } = value;
-            return (
-              <ExpansionPanel
-                key={index}
-                expanded={expanded === title}
-                onChange={this.handleChange(title)}
-              >
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                  See Details
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  <Typography dangerouslySetInnerHTML={{ __html: html }} />
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-            );
-          })}
-      </div>
+      <ExpansionPanel
+        expanded={expanded === title}
+        onChange={this.handleChange(title)}
+      >
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          See Details
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <Typography dangerouslySetInnerHTML={{ __html: html }} />
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
     );
   }
 }

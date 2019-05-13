@@ -26,7 +26,7 @@ class InputSelectField extends Component {
 
   render () {
     return (
-      <form
+      <form onSubmit={e => { e.preventDefault(); }}
         noValidate
         autoComplete='off'
         className={this.props.classes.inputWrapper}
