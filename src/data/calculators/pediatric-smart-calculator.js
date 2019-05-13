@@ -125,10 +125,21 @@ class FormulaComponent extends Component {
       if (t.ageMax) {
         if (!t.ageMin) {
           if(input_age_mth < t.ageMax){
-            // console.log(`ageMax 1, ageMin 0; ${input_age_mth}<${t.ageMax}=${input_age_mth < t.ageMax}`, t.sn)
-            output = `${t.doseStage}: ${this.calculateDosingRecomendation( t, input_wt_kg )} `
+            if(t.weightMin && input_wt_kg>=t.weightMin){
+              output = this.calculateDosingRecomendation(t, input_wt_kg);
+            }
+            if(t.weightMax && input_wt_kg<t.weightMax){
+              output = this.calculateDosingRecomendation(t, input_wt_kg);
+            }
+            if(t.weightMax && t.weightMin && input_wt_kg<t.weightMax && input_wt_kg>=t.weightMin){
+              output = this.calculateDosingRecomendation(t, input_wt_kg);
+            }
+            if(!t.weightMax && !t.weightMin){
+              output = this.calculateDosingRecomendation(t, input_wt_kg);
+            }
           }
-        }else if(t.ageMin){
+        }
+        if(t.ageMin){
           if(input_age_mth >= t.ageMin && input_age_mth < t.ageMax){
             // console.log('ageMax 1, ageMin 1; both AGE filled', t.sn)
             if (t.doseStage.includes("or1") || t.doseStage.includes("or2")) {
