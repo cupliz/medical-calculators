@@ -125,10 +125,10 @@ class FormulaComponent extends Component {
       if (t.ageMax) {
         if (!t.ageMin) {
           if(input_age_mth < t.ageMax){
-            if(t.weightMin && input_wt_kg>=t.weightMin){
+            if(t.weightMin && !t.weightMax && input_wt_kg>=t.weightMin){
               output = this.calculateDosingRecomendation(t, input_wt_kg);
             }
-            if(t.weightMax && input_wt_kg<t.weightMax){
+            if(t.weightMax && !t.weightMin && input_wt_kg<t.weightMax){
               output = this.calculateDosingRecomendation(t, input_wt_kg);
             }
             if(t.weightMax && t.weightMin && input_wt_kg<t.weightMax && input_wt_kg>=t.weightMin){
