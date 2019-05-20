@@ -1,4 +1,4 @@
-Drug,SN,Title,"String (where the line starts with ""-"", display as nested bullet point",
+Drug,SN,Title,String,
 Amoxicillin,1,"Ear, Nose, & Throat Infections","Mild to moderate infections
 <3 months: ≤30 mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections
 >3 months and <40 kg: 25 mg/kg/day PO divided q12hr or 20 mg/kg/day PO divided q8hr 

@@ -8,32 +8,16 @@ export const csvToJSON = async (type) => {
   let data = []
   switch (type) {
     case 'Source Strings':
-      const sourceStrings = await d3.csv(sourceStringsCSV)
-      data = parseSourceStrings(sourceStrings)
+      data = await d3.csv(sourceStringsCSV)
       break;
     case 'Drug':
       data = parseDrugs(newDatabase)
-      break;
-    case 'Indication Group':
-      break;
-    case 'Indication':
       break;
     default:
       data = parseNewDatabase(newDatabase)
       break;
   }
   return data
-}
-const parseSourceStrings = (database) => {
-  const output = database.map(ss => {
-    return {
-      drug: ss['Drug'],
-      sn: ss['SN'],
-      title: ss['Title'],
-      string: ss['String (where the line starts with "-", display as nested bullet point']
-    };
-  });
-  return output
 }
 const parseNewDatabase = (database) => {
   const output = database.map((data)=>{
@@ -51,8 +35,8 @@ const parseNewDatabase = (database) => {
       route: data['route'],
       doseUnit: data['dose_unit'],
       fixedDose: data['fixed dose'] || 0,
-      dailymgperkgLow: data['daily_doseperkg_high'] || 0,
-      dailymgperkgHigh: data['daily_doseperkg_low'] || 0,
+      dailymgperkgLow: data['daily_doseperkg_low'] || 0,
+      dailymgperkgHigh: data['daily_doseperkg_high'] || 0,
       divisor: data['divisor'] || 0,
       maxSigleDose: data['max_single_dose'] || "",
       frequency: isNaN(data['frequency']) ? data['frequency'] : `q${data['frequency']}hr`,
