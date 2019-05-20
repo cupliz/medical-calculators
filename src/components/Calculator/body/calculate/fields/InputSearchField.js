@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import deburr from "lodash/deburr";
-import _ from "lodash";
 import Autosuggest from "react-autosuggest";
 import match from "autosuggest-highlight/match";
 import parse from "autosuggest-highlight/parse";
@@ -10,7 +9,7 @@ import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import MenuItem from "@material-ui/core/MenuItem";
 import { withStyles } from "@material-ui/core/styles";
-import { getSheetData } from '../../../../../utils/gapi'
+import { csvToJSON } from '../../../../../utils/gapi'
 import { typeInputSearch } from '../../../../../store/modules/calculator'
 
 const styles = theme => ({
@@ -133,11 +132,7 @@ class IntegrationAutosuggest extends React.Component {
   };
 
   componentDidMount = async () => {
-    const rawData = await getSheetData(this.props.values)
-    rawData.splice(0,1)
-    let data = rawData.map((d)=>d[0])
-    let sortedData = _.uniq(data)
-    const suggestionsList = _.compact(sortedData)
+    const suggestionsList = await csvToJSON(this.props.values)
     await this.setState({suggestionsList})
   }
   render() {

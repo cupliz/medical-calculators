@@ -10,7 +10,7 @@ import {
   ResultCardDropDown
 } from "../../components/Calculator/results/ResultSmartCalc";
 import { fetchDatabase } from "../../store/modules/calculator";
-import { getSheetData } from "../../utils/gapi";
+import { csvToJSON } from "../../utils/gapi";
 
 const unitData = {
   age: [
@@ -32,62 +32,10 @@ class FormulaComponent extends Component {
   };
 
   componentDidMount = async () => {
-    let database = await getSheetData("NEW_Database");
-    let sourceString = await getSheetData("Source Strings");
-    sourceString = await this.sourceString2json(sourceString);
-    database = this.database2json(database);
+    const database = await csvToJSON('NEW_Database')
+    const sourceString = await csvToJSON('Source Strings')
     this.props.fetchDatabase(database);
     this.setState({ sourceString });
-  };
-  sourceString2json = async sourceString => {
-    let output = [];
-    if (sourceString.length) {
-      sourceString.splice(0, 1);
-      output = await sourceString.map(ss => {
-        return {
-          drug: ss[0],
-          sn: ss[1],
-          title: ss[2],
-          string: ss[3]
-        };
-      });
-    }
-    return output;
-  };
-  database2json = database => {
-    if (database.length) {
-      database.splice(0, 1);
-      const output = [];
-      for (let i = 0; i < database.length; i++) {
-        const data = database[i];
-        output.push({
-          drug: data[0],
-          sn: data[1],
-          indicationGroup: data[3],
-          indication: data[4],
-          subIndication: data[5],
-          doseStage: data[7],
-          weightMin: data[8] || 0,
-          weightMax: data[9] ? parseFloat(data[9].split("<").join("")) : 0,
-          ageMin: data[10] || 0,
-          ageMax: data[11] ? parseFloat(data[11].split("<").join("")) : 0,
-          route: data[12],
-          doseUnit: data[13],
-          fixedDose: data[14] || 0,
-          dailymgperkgLow: data[15] || 0,
-          dailymgperkgHigh: data[16] || 0,
-          divisor: data[17] || 0,
-          maxSigleDose: data[18] || "",
-          frequency: isNaN(data[19]) ? data[19] : `q${data[19]}hr`,
-          duration: data[20] || "",
-          additionalInfo: data[21] || "",
-          outputString: data[22] || ""
-        });
-      }
-      return output;
-    } else {
-      return [];
-    }
   };
   toFloat(input) {
     if (Math.round(input) !== input) {

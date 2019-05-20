@@ -1,0 +1,343 @@
+Drug,SN,Title,"String (where the line starts with ""-"", display as nested bullet point",
+Amoxicillin,1,"Ear, Nose, & Throat Infections","Mild to moderate infections
+<3 months: ≤30 mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections
+>3 months and <40 kg: 25 mg/kg/day PO divided q12hr or 20 mg/kg/day PO divided q8hr 
+>40 kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days
+
+Severe infections
+<3 months: ≤30 mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections
+>3 months and <40 kg: 45 mg/kg/day PO divided q12hr or 40 mg/kg/day PO divided q8hr  
+>40 kg: 875 mg PO q12hr or 500 mg PO q8hr for 10-14 days",
+Amoxicillin,2,Acute Otitis Media,">3 months and <40kg: 80-90 mg/kg/day PO divided q8-12hr 
+>40 kg: 500 mg PO q12hr or 250 mg PO q8hr for 10-14 days",
+Amoxicillin,3,Lower Respiratory Tract Infections,"Mild, moderate, or severe infections
+<3 months: ≤30 mg/kg/day PO divided q12hr for 48-72 hours; for ≥10 days for S pyogenes infections  
+>3 months and <40 kg: 45 mg/kg/day PO divided q12hr or 40 mg/kg/day PO divided q8hr
+>40kg: 875 mg PO q12hr or 500 mg PO q8hr for 10-14 days
+
+Pneumonia, community-acquired (Off-label)
+<3 months: Safety and efficacy not established
+≥3 months:
+Immediate release
+Empiric treatment: 90 mg/kg/day PO divided q12 hr for 10 days; not to exceed 4,000 mg/day
+Group A Streptococcus: 50-75 mg/kg/day PO divided q12hr for 10 days; not to exceed 4,000 mg/day
+H. influenza: 75-100 mg/kg/day PO divided q8hr for 10 days; not to exceed 4,000 mg/day
+S. pneumoniae (mild infection or step-down therapy or when MICs to penicillin ≤2.0 mcg/mL): 90 mg/kg/day PO divided q12hr or 45 mg/kg/day divided q8hr for 10 days; not to exceed 4,000 mg/day",
+Amoxicillin,4,Infective Endocarditis (Off-label),"50 mg/kg PO 30-60 min before procedure 
+
+Dosing considerations
+- AHA guidelines recommend prophylaxis only in high-risk patients undergoing invasive procedures with history of cardiac conditions that predispose them to infection",
+Ibuprofen,1,Fever,"<6 months: Safety and efficacy not established
+≥6 months: 5-10 mg/kg/dose PO q6-8hr; not to exceed 400 mg/dose or 40 mg/kg/day",
+Ibuprofen,2,Pain,4-10 mg/kg/dose PO q6-8hr; not to exceed 40 mg/kg/day,
+Ibuprofen,3,Juvenile Idiopathic Arthritis,30-50 mg/kg/24hr PO divided q8hr; not to exceed 2.4 g/day,
+Ibuprofen,4,Patent Ductus Arteriosus,"Indicated to close a clinically significant patent ductus arteriosus (PDA) in premature infants weighing between 500-1500 g, who are no more than 32 weeks gestational age when usual medical management is ineffective
+Initial dose: 10 mg/kg IV, THEN  
+Additional 2 doses of 5 mg/kg each, at 24 and 48 hr
+If renal dysfunction, withhold 2nd/3rd dose until renal function normal
+If ductus arteriosus fails to close, then a second course of ibuprofen IV, alternative pharmacological therapy, or surgery may be needed",
+Acetaminophen,1,Pain & Fever Relief,"Weight-based dosing (Oral solution)
+Neonates 28-31 weeks gestation: 10-15 mg/kg/dose PO q12hr prn; may administer an initial load of 20 mg/kg PO; not to exceed 40 mg/kg/day or 48 hr (consecutive) of maximum dose  
+Neonates 32-37 weeks gestation: 10-15 mg/kg/dose PO q8hr prn; may administer an initial load of 20 mg/kg PO; not to exceed 60 mg/kg/day or 48 hr (consecutive) of maximum dose
+Neonates 0-9 days: 10-15 mg/kg/dose PO q6-8hr prn; may administer an initial load of 20 mg/kg PO; not to exceed 60 mg/kg/day; or 48 hr (consecutive) of maximum dose
+Neonates 10-29 days: 10-15 mg/kg/dose PO q4-8hr prn; may administer an initial load of 20 mg/kg PO; not to exceed 90 mg/kg/day; or 48 hr (consecutive) of maximum dose
+Infants: 10-15 mg/kg/dose PO q4-6hr prn; not to exceed 15 mg/kg/dose or 75 mg/kg/day
+Children and adolescents <60 kg: 10-15 mg/kg/dose PO q4-6hr prn; not to exceed 15 mg/kg/dose or 1,000 mg/dose, whichever is less or 75 mg/kg/day or 4,000 mg/day, whichever is less
+
+Fixed dosing
+<6 years: Ask a healthcare provider
+6-12 years: 325-650 mg PO q4-6hr; not to exceed 1.625 g/day for not more than 5 days unless directed by healthcare provider
+>12 years
+Regular strength: 325-650 mg q4-6hr; not to exceed 3.25 g/day; under supervision of healthcare professional, doses of up to 4 g/day may be used
+Extra strength: 1000 mg q6hr; not to exceed 3 g/24hr; under supervision of healthcare professional, doses of up to 4 g/day may be used
+Extended release: 1.3 g q8hr; not to exceed 3.9 g/24hr",
+Cetirizine,1,"Allergies, Hay Fever, Urticaria","<2 years: Safety and efficacy not established
+2-6 years: 2.5 mg (0.5 teaspoon) oral solution PO qDay; can increase to 5 mg PO qDay or 2.5 mg PO twice daily; not to exceed 5 mg qDay
+>6 years: 5-10 mg PO qDay, depending on severity of symptoms; not to exceed 10 mg qDay",
+Azithromycin,1,Community-Acquired Pneumonia,"<6 months: Safety and efficacy not established
+≥6 months: 10 mg/kg PO on day 1, followed by 5 mg/kg PO on days 2 through 5",
+Azithromycin,2,Acute Otitis Media,"<6 months: Safety and efficacy not established
+≥6 months: 30 mg/kg of oral suspension once or 10 mg/kg PO once daily for 3 days or 10 mg/kg once on day 1 followed by 5 mg/kg on days 2-5",
+Azithromycin,3,Acute Bacterial Sinusitis,10 mg/kg of oral suspension PO once daily for 3 days,
+Azithromycin,4,Pharyngitis/Tonsilitis,"<2 years: Safety and efficacy not established
+≥2 years: 12 mg/kg PO once daily for 5 days; not to exceed 500 mg/day",
+Azithromycin,5,Mycobacterium Avium Complex Infection,"Prophylaxis:
+<6 years: Safety and efficacy not established
+≥6 years primary prophylaxis: 20 mg/kg PO once weekly; not to exceed 1200 mg or 5mg/kg/day qDay; not to exceed 250 mg/day
+≥6 years secondary prophylaxis: 5 mg/kg/day PO qDay; not to exceed 250 mg/day in combination with ethambutol with or without rifabutin
+
+Treatment: 10-12 mg/kg/day PO; not to exceed 500 mg; used in combination with ethambutol; if severe disease patient should also receive rifabutin",
+Azithromycin,6,Chlamydia Trachomatis Infection (off-label),"Treatment of cervicitis or urethritis
+Children and adolescents ≥45 kg: 1 g PO as single dose",
+Amoxicillin and Clavulanic Acid,1,General Doses,"Dosages based on amoxicillin
+
+<3 months old: 30 mg/kg/day PO (125 mg/5 mL) divided q12hr
+>3 months old
+Less severe infections: 20 mg/kg/day PO (125 mg/5 mL or 250 mg/5 mL) divided q8hr or 25 mg/kg/day PO (200 mg or 400 mg chewable tablets; 200 mg/5 mL or 400 mg/5 mL) divided q12hr
+Severe infections, lower respiratory tract infections, sinusitis, otitis media: 40 mg/kg/day PO (125 mg/5 mL or 250 mg/5 mL) divided q8hr or 45 mg/kg/day PO (200 mg or 400 mg chewable tablets; 200 mg/5 mL or 400 mg/5 mL) divided q12hr
+Acute otitis media (S pneumoniae, nontypeable H influenzae, M catarrhalis): 80-90 mg/kg/day PO divided q12hr for 10 days (may be 5-7 days for children >6 years old with mild-to-moderate disease)",
+Amoxicillin and Clavulanic Acid,2,Community-acquired Pneumonia,"Empiric therapy / High Dose: Oral: 90 mg amoxicillin/kg/day in divided doses twice daily; maximum daily dose: 4,000 mg/day
+
+H. influenzae, beta-lactamase positive strains, mild infection, or step-down therapy: Oral:
+Standard dose: 45 mg amoxicillin/kg/day in divided doses 3 times daily
+High dose: 90 mg amoxicillin/kg/day in divided doses twice daily",
+Cephalexin,1,Genitourinary Tract Infections,25-50 mg/kg/day PO divided q6-8hr for 10 days; not to exceed 4 g/day,
+Cephalexin,2,Beta-Hemolytic Streptococcal Infections,25-50 mg/kg/day PO divided q6-8hr for 10 days; not to exceed 4 g/day,
+Cephalexin,3,Bone Infections,25-50 mg/kg/day PO divided q6-8hr for 10 days; not to exceed 4 g/day,
+Cephalexin,4,Skin/Skin Structure Infections,25-50 mg/kg/day PO divided q6-8hr for 10 days; not to exceed 4 g/day,
+Cephalexin,5,Respiratory Tract Infections,25-50 mg/kg/day PO divided q6-8hr for 10 days; not to exceed 4 g/day,
+Cephalexin,6,Streptococcal Pharyngitis,25-50 mg/kg PO q12hr for 10 days; not to exceed 500 mg q12hr,
+Cephalexin,7,Otitis Media,75-100 mg/kg/day PO divided q6hr for 10 days; not to exceed 4 g/day,
+Cefuroxime,,Acute Bacterial Maxillary Sinusitis,"<3 months: Safety and efficacy not established
+3 months-12 years: 30 mg/kg/day suspension PO divided q12hr for 10 days; not to exceed 1000 mg/day; alternatively, 75-150 mg/kg/day IV/IM divided q8hr; not to exceed 6 g/day 
+>12 years: 250 mg tablet PO q12hr for 10 days",
+Cefuroxime,,Acute Otitis Media,"<3 months: Safety and efficacy not established
+3 months-12 years: 30 mg/kg/day suspension PO divided q12hr for 10 days; not to exceed 1000 mg/day; alternatively, 75-150 mg/kg/day IV/IM divided q8hr; not to exceed 6 g/day 
+Alternativley: 125-250 mg PO q12hr for 10 days
+>12 years: 250-500 mg tablet PO q12hr for 10 days",
+Cefuroxime,,Impetigo,"<3 months: Safety and efficacy not established
+3 months-12 years: 30 mg/kg/day suspension PO divided q12hr for 10 days; not to exceed 1000 mg/day or 75-100mg/kg/day IV/IM divided q8hr; not to exceed 6 g/day 
+Alternativley: 125-250 mg PO q12hr for 10 days
+>12 years: 250-500 mg tablet PO q12hr for 10 days",
+Cefuroxime,,Pharyngitis/Tonsillitis,"<3 months: Safety and efficacy not established
+3 months-12 years: 20 mg/kg/day PO divided q12hr for 10 days; not to exceed 500 mg/day or 75-150 mg/kg/day IV/IM divided q8hr; not to exceed 6 g/day 
+Alternativley: 125-250 mg PO q12hr for 10 days
+>12 years: 250 mg PO q12hr for 10 days",
+Cefuroxime,,Severe or Serious Infections (Off-label),"<6 days, <2 kg: 100 mg/kg/day IV/IM divided q12hr  
+<6 days, >2 kg: 150 mg/kg/day IV/IM divided q8hr
+>7 days: 150 mg/kg/day IV/IM divided q8hr",
+Cefdinir,,Acute Bacterial Otitis Media,"Disease caused by H influenzae (including beta-lactamase-producing strains), S pneumoniae (penicillin-susceptible strains only), or M catarrhalis (including beta-lactamase-producing strains)
+<6 months: Safety and efficacy not established
+6 months-12 years: 7 mg/kg PO q12hr for 5-10 days or 14 mg/kg PO q24hr for 10 days",
+Cefdinir,,Pharyngitis/Tonsillitis,"Disease caused by S pyogenes
+<6 months: Safety and efficacy not established
+6 months-12 years: 7 mg/kg PO q12hr for 5-10 days or 14 mg/kg PO q24hr for 10 days  
+>12 years or >43 kg: 300 mg PO q12hr for 5-10 days or 600 mg PO q24hr for 10 days",
+Cefdinir,,Acute Maxillary Sinusitis,"Disease caused by H influenzae (including beta-lactamase-producing strains), S pneumoniae (penicillin-susceptible strains only), or M catarrhalis (including beta-lactamase-producing strains)
+<6 months: Safety and efficacy not established
+6 months-12 years: 7 mg/kg PO q12hr or 14 mg/kg PO q24hr for 10 days  
+>12 years or >43 kg: 300 mg PO q12hr or 600 mg PO q24hr for 10 days",
+Cefdinir,,Skin/Skin Structure Infections,"Uncomplicated infections caused by S aureus (including beta-lactamase-producing strains) or S pyogenes
+<6 months: Safety and efficacy not established
+6 months-12 years: 7 mg/kg PO q12hr for 10 days 
+>12 years or >43 kg: 300 mg PO q12hr for10 days",
+Metronidazole,,Neonatal (<28 Days) Anaerobic Infection,"<1.2 kg: 7.5 mg/kg IV/PO q48hr 
+<7 days:
+- 1.2-2 kg: 7.5 mg/kg IV/PO qDay
+- >2 kg: 15 mg/kg/day IV/PO divided q12hr
+>7 days:
+- 1.2-2 kg: 15 mg/kg/day IV/PO divided q12hr
+- >2 kg: 30 mg/kg/day IV/PO divided q12hr
+Infants and Children:
+30 mg/kg/day PO/IV divided q6hr; not to exceed 4 g/day",
+Metronidazole,,Clostridium Difficile Colitis,30 mg/kg/day IV/PO divided q6hr IV/PO for 7-10 days (American Academy of Pediatrics),
+Metronidazole,,Amebiasis,35-50 mg/kg PO divided q8hr for 10 days,
+Metronidazole,,Giardiasis,15 mg/kg/day IV/PO divided q8hr for 5 days,
+Metronidazole,,Trichomoniasis,< 45 kg body weight: 15 mg/kg/day IV/PO divided q8hr for 7 days; not to exceed 2 g/day,
+Promethazine,,Allergic Conditions (Off-label),"<2 years old: Contraindicated
+≥2 years old: 25 mg PO/PR at bedtime or 12.5 mg q6hr; alternatively, 6.25-12.5 mg PO/PR q8hr
+
+Source: https://reference.medscape.com/drug/phenergan-phenadoz-promethazine-342056#0",
+Promethazine,,Nausea & Vomiting,"<2 years old: Contraindicated
+≥2 years old: 0.25-1 mg/kg PO/PR q4-6hr PRN; not to exceed 25 mg
+
+Source: https://reference.medscape.com/drug/phenergan-phenadoz-promethazine-342056#0",
+Promethazine,,Motion Sickness,"<2 years: Contraindicated
+≥2 years: 12.5-25 mg PO/PR administered 30-60 minutes before departure and q8-12hr PRN or 0.5 mg/kg PO q12hr PRN
+Succeeding days of travel: 12.5-25 mg twice daily (upon arising or before evening meals)
+
+Source: https://reference.medscape.com/drug/phenergan-phenadoz-promethazine-342056#0",Source: https://reference.medscape.com/drug/phenergan-phenadoz-promethazine-342056#0
+Promethazine,,Sedation,"<2 years: Contraindicated
+≥2 years: 12.5-25 mg PO/IM/PR at bedtime
+
+Source: https://reference.medscape.com/drug/phenergan-phenadoz-promethazine-342056#0",
+Promethazine,,Preoperative Sedation,"<2 years: Contraindicated
+≥2 years: 1 mg/kg PO/PR with reduced dose of analgesic and appropriate dose of atropinelike drug
+
+Source: https://reference.medscape.com/drug/phenergan-phenadoz-promethazine-342056#0",
+Promethazine,,Postoperative Sedation,"<2 years: Contraindicated
+≥2 years: 12.5-25 mg with reduced dose of analgesic and appropriate dose of atropinelike drug
+
+Source: https://reference.medscape.com/drug/phenergan-phenadoz-promethazine-342056#0",
+Diphenhydramine,,Allergic Reaction,"2-6 years: 6.25 mg q4-6hr; not to exceed 37.5 mg/day
+6-12 years: 12.5-25 mg PO q4-6hr; not to exceed 150 mg/day
+>12 years: 25-50 mg PO q4-6hr; not to exceed 300 mg/day
+
+Source: https://reference.medscape.com/drug/benadryl-nytol-diphenhydramine-343392#0",
+Diphenhydramine,,Occasional Insomnia (off-label),"< 12 years (off-label): 1 mg/kg; not to exceed 50 mg; 30 min before bedtime
+>12 years: 50 mg PO 30 minutes before bedtime
+
+Source: https://reference.medscape.com/drug/benadryl-nytol-diphenhydramine-343392#0",
+Diphenhydramine,,Cough,"<12 years: Safety and efficacy not established
+>12 years: 25-50 mg PO q4-6hr; not to exceed 300 mg/day
+
+Source: https://reference.medscape.com/drug/benadryl-nytol-diphenhydramine-343392#0",
+Diphenhydramine,,Motion Sickness,"Administer 30 min before motion
+12.5-25 mg PO q6-8hr or 150 mg/m²; not to exceed 300 mg/day
+
+Source: https://reference.medscape.com/drug/benadryl-nytol-diphenhydramine-343392#0",
+Clarithromycin,,Otitis Media,"Indicated for treatment of acute otitis media caused by H influenzae, M catarrhalis, or S pneumoniae
+Because of increased resistance to S Pneumoniae and H Influenzae, not routinely recommended as treatment option
+
+<6 months: Safety and efficacy not established
+≥6 months: 15 mg/kg/day PO divided q12hr for 10 days; not to exceed 500 mg/dose
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0
+Clarithromycin,,Community-Acquired Pneumonia,"Indicated for community-acquired pneumonia caused by Mycoplasma pneumoniae, S pneumoniae, or Chlamydophila pneumoniae 
+
+<3 months: Safety and efficacy not established 
+≥3 months: 15 mg/kg/day PO divided q12hr for 10 days; not to exceed 500 mg/dose
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",
+Clarithromycin,,Sinusitis,"Indicated for the treatment of mild-to-moderate infections caused by susceptible isolates caused by Haemophilus influenzae, Moraxella catarrhalis, or Streptococcus pneumoniae
+
+<6 months: Safety and efficacy not established
+≥6 months: 15 mg/kg/day PO divided q12hr for 10 days; not to exceed 500 mg/dose
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",
+Clarithromycin,,Bronchitis,"Indicated for treatment of mild-to-moderate infections caused by susceptible isolates caused by Haemophilus influenzae, Haemophilus parainfluenzae, Moraxella catarrhalis, or Streptococcus pneumoniae
+
+<6 months: Safety and efficacy not established
+≥6 months: 15 mg/kg/day PO divided q12hr for 10 days; not to exceed 500 mg/dose
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",
+Clarithromycin,,Skin Infections,"Indicated for uncomplicated skin and skin structure infection caused by S aureus or S pyogenes
+
+<6 months: Safety and efficacy not established
+≥6 months: 15 mg/kg/day PO divided q12hr for 10 days; not to exceed 250 mg/dose
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",
+Clarithromycin,,Mycobacterial Infection,"Indicated treatment and prophylaxis of mycobacterial infections
+When used for treatment of disseminated infection caused by mycobacterium avium complex (MAC), administer in combination with other antimycobacterial drugs (eg, ethambutol)
+
+<20 months: Safety and efficacy not established
+≥20 months: 7.5 mg/kg PO q12hr; individual dose not to exceed 500 mg
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",
+Clarithromycin,,Streptococcal Pharyngitis,"Indicated for pharyngitis/tonsillitis caused by susceptible S pyogenes
+
+<6 months: Safety and efficacy not established
+≥6 months: 7.5 mg/kg q12hr for 10 days; individual dose not to exceed 250 mg
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",
+Clarithromycin,,Endocarditis (Off-label),"Used off-label for bacterial endocarditis prophylaxis
+
+15 mg/kg PO 30-60 minutes before procedure; individual dose not to exceed 500 mg
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",
+Clarithromycin,,Pertussis (Off-label),"Used off-label for treatment of pertussis or for postexposure prophylaxis
+
+<1 month: Safety and efficacy not established
+1-6 months: 7.5 mg/kg/dose PO q12hr for 7 days
+>6 months: 7.5 mg/kg/dose PO q12hr for 7 days
+
+Source: https://reference.medscape.com/drug/biaxin-xl-clarithromycin-342524#0",
+Ceftriaxone,,Acute Bacterial Otitis Media,"50 mg/kg IM in single dose; not to exceed 1 g
+
+Source: https://reference.medscape.com/drug/rocephin-ceftriaxone-342510#0",https://reference.medscape.com/drug/rocephin-ceftriaxone-342510#0
+Ceftriaxone,,Epiglottitis (Off-label),"100 mg/kg/day IV on first day; follow with 50 mg/kg on day 2 or 75 mg/kg qDay for 10-14 days
+
+Source: https://reference.medscape.com/drug/rocephin-ceftriaxone-342510#0",
+Ceftriaxone,,Meningitis,"100 mg/kg/day IV/IM in single daily dose or divided q12hr for 7-14 days; not to exceed 4 g/day
+
+Source: https://reference.medscape.com/drug/rocephin-ceftriaxone-342510#0",
+Ceftriaxone,,Serious Infections Other Than Meningitis,"50-75 mg/kg/day IV/IM divided q12hr for 7-14 days
+
+Source: https://reference.medscape.com/drug/rocephin-ceftriaxone-342510#0",
+Ceftriaxone,,Skin/Skin Structure Infections,">12 years: 1-2 g/day IV/IM in single daily dose or divided q12hr for 7-14 days, depending on type and severity of infection
+
+Source: https://reference.medscape.com/drug/rocephin-ceftriaxone-342510#0",
+Ceftriaxone,,Gonococcal Infections (Neonates),"Ophthalmia neonatorum: 25-50 mg/kg IV/IM once; not to exceed 125 mg 
+Disseminated gonococcal infections and gonococcal scalp abscesses: 25-50 mg/kg/day IV/IM in single daily dose for 7 days; if meningitis is documented, treat for 10-14 days
+Prophylaxis for infants of mothers with gonococcal infection: 25-50 mg/kg IV/IM once; not to exceed 125 mg
+
+Source: https://reference.medscape.com/drug/rocephin-ceftriaxone-342510#0","note these two were joined in medscape as one indication ""Gonococcal Infections"" - split them up for ease of programming"
+Ceftriaxone,,Gonococcal Infections (Children),"<45 kg with uncomplicated gonococcal vulvovaginitis, cervicitis, urethritis, pharyngitis, or proctitis: 125 mg IM once
+<45 kg with bacteremia or arthritis: 50 mg/kg/day IM/IV in single daily dose for 7 days; daily dose not to exceed 1 g
+>45 kg with bacteremia or arthritis: 50 mg/kg/day IM/IV in single daily dose for 7 days
+>45 kg: 1-2 g IV q12hr
+
+Source: https://reference.medscape.com/drug/rocephin-ceftriaxone-342510#0",
+Furosemide,,Edema,"Infants and children: 1-2 mg/kg IV/IM/PO once initially; increased by 1-2 mg/kg q6-8hr (PO) or 1 mg/kg q2hr (IV/IM); individual dose not to exceed 6 mg/kg 
+Neonates (<28 days): 0.5-1 mg/kg IV/IM q8-24hr; individual dose not to exceed 2 mg/kg
+
+Source: https://reference.medscape.com/drug/lasix-furosemide-342423#0",
+Furosemide,,Resistant Hypertension,"<1 year: Safety and efficacy not established
+1-17 years: 0.5-2 mg/kg PO q24hr or q12hr; individual dose not to exceed 6 mg/kg/dose
+
+Source: https://reference.medscape.com/drug/lasix-furosemide-342423#0",
+Loratadine,,Allergic Rhinitis,"<2 years: Safety and efficacy not established
+2-6 years: 5 mg PO qDay
+>6 years: 10 mg PO qDay; not to exceed 10 mg qDay
+
+Source: https://reference.medscape.com/drug/claritin-reditabs-loratadine-343397#0",
+Loratadine,,Urticaria,"<6 years: Safety and efficacy not established
+> 6 years: 10 mg PO qDay
+
+Source: https://reference.medscape.com/drug/claritin-reditabs-loratadine-343397#0",
+Pseudoephedrine,,Nasal Congestion,"<2 years: Safety and efficacy not established
+2-6 years: 5-30 mg PO q4-6hr PRN
+6-12 years: 30 mg PO q4-6hr, OR 4 mg/kg/day divided q6hr; not to exceed 120 mg/day 
+>12 years: 60 mg PO q6hr PRN (immediate release); alternatively, 120 mg PO q12hr (extended release) or 240 mg PO q24hr (extended release)
+
+https://reference.medscape.com/drug/sudafed-nexafed-pseudoephedrine-343412#0",
+Trimethoprim and Sulfamethoxazole,,Mild to Moderate Infections,"<2 months: Contraindicated
+>2 months: 8 mg TMP/kg/day PO divided q12hr
+
+Source: https://reference.medscape.com/drug/bactrim-trimethoprim-sulfamethoxazole-342543#0",
+Trimethoprim and Sulfamethoxazole,,Serious Infections,"<2 months: Contraindicated
+>2 months:
+15-20 mg TMP/kg qDay PO divided q6hr 
+8-12 mg TMP/kg/day IV divided q6-12hr
+
+Source: https://reference.medscape.com/drug/bactrim-trimethoprim-sulfamethoxazole-342543#0",
+Trimethoprim and Sulfamethoxazole,,Acute Otitis Media,"Acute otitis media in pediatric patients due to susceptible strains of Streptococcus pneumoniae or Haemophilus influenzae
+<2 months: Contraindicated
+>2 months: 6-10 mg TMP/kg/day PO divided q12hr for 10 days
+
+Source: https://reference.medscape.com/drug/bactrim-trimethoprim-sulfamethoxazole-342543#0",
+Trimethoprim and Sulfamethoxazole,,Pneumocystis (Carinii) Jiroveci Pneumonia,"<2 months: Contraindicated
+>2 months
+Treatment: 15-20 mg TMP/kg/day PO/IV divided q6-8hr for 21 days 
+Prophylaxis: 150 mg TMP/m²/day PO divided q12 hr for 3 days/week on consecutive or alternate days
+
+Source: https://reference.medscape.com/drug/bactrim-trimethoprim-sulfamethoxazole-342543#0",
+Trimethoprim and Sulfamethoxazole,,Shigellosis,"<2 months: Contraindicated
+>2 months
+8 mg TMP/kg/day PO divided q12hr for 5 days 
+8-10 mg TMP/kg/day IV divided q6-12hr for 5 days
+
+Source: https://reference.medscape.com/drug/bactrim-trimethoprim-sulfamethoxazole-342543#0",
+Trimethoprim and Sulfamethoxazole,,Urinary Tract Infection,"<2 months: Contraindicated
+>2 months
+8 mg TMP/kg/day PO divided q12hr for 7-14 days if serious infection 
+8-10 mg TMP/kg/day IV divided q6-12hr for 14 days if serious infection
+Prophylaxis: 2 mg TMP/kg/dose PO qDay or 5 mg TMP/kg/dose twice weekly
+
+Source: https://reference.medscape.com/drug/bactrim-trimethoprim-sulfamethoxazole-342543#0",
+Trimethoprim and Sulfamethoxazole,,Skin/soft Tissue Infection Due to Community Acquired MRSA (Off-label),"8-12 mg TMP/kg/day PO q12hr for 5-10 days; add beta-lactam antibiotic to regimen if beta-hemolytic Streptococcus spp also suspected
+
+Source: https://reference.medscape.com/drug/bactrim-trimethoprim-sulfamethoxazole-342543#0",
+Cefixime,,Acute Bronchitis & Acute Exacerbations of Chronic Bronchitis,"<6 months: Safety and efficacy not established
+6 months-12 years, ≤45 kg: 8 mg/kg/day PO in single daily dose or divided q12hr 
+>12 years, >45 kg: 400 mg/day PO in single daily dose or divided q12hr
+
+Source: https://reference.medscape.com/drug/suprax-cefixime-342503#0",
+Cefixime,,Otitis Media,"<6 months: Safety and efficacy not established
+6 months-12 years, ≤45 kg: 8 mg/kg/day PO in single daily dose or divided q12hr 
+>12 years, >45 kg: 400 mg/day PO in single daily dose or divided q12hr
+
+Source: https://reference.medscape.com/drug/suprax-cefixime-342503#0",
+Cefixime,,Pharyngitis/Tonsillitis,"<6 months: Safety and efficacy not established
+6 months-12 years, ≤45 kg: 8 mg/kg/day PO in single daily dose or divided q12hr 
+>12 years, >45 kg: 400 mg/day PO in single daily dose or divided q12hr
+
+Source: https://reference.medscape.com/drug/suprax-cefixime-342503#0",
+Cefixime,,Uncomplicated Urinary Tract Infections,"<6 months: Safety and efficacy not established
+6 months-12 years, ≤45 kg: 8 mg/kg/day PO in single daily dose or divided q12hr 
+>12 years, >45 kg: 400 mg/day PO in single daily dose or divided q12hr
+
+Source: https://reference.medscape.com/drug/suprax-cefixime-342503#0",
+Cefixime,,Typhoid Fever (Off-label),"5-20 mg/kg/day PO divided q12hr for 7-14 days; not to exceed 400 mg/day
+
+Source: https://reference.medscape.com/drug/suprax-cefixime-342503#0",

@@ -7,7 +7,6 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-// import { getSheetData } from '../../../../../utils/gapi'
 import { pickSelectOption } from '../../../../../store/modules/calculator'
 
 const styles = theme => ({
